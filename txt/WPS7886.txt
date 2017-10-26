@@ -1,0 +1,1835 @@
+                                                        WPS7886
+
+
+Policy Research Working Paper                          7886
+
+
+
+
+                   Socioeconomic Resilience
+             Multi-Hazard Estimates in 117 Countries
+
+                                 Stephane Hallegatte
+                                   Mook Bangalore
+                                 Adrien Vogt-Schilb
+
+
+
+
+Global Facility for Disaster Reduction and Recovery
+ &
+Climate Policy Team
+November 2016
+Policy Research Working Paper 7886
+
+
+  Abstract
+ This paper presents a model to assess the socioeconomic                            in the affected country’s national income, on average. The
+ resilience to natural disasters of an economy, defined as                          model also assesses policy levers to reduce welfare losses in
+ its capacity to mitigate the impact of disaster-related asset                      each country. It shows that considering asset losses is insuf-
+ losses on welfare. The paper proposes a tool to help deci-                         ficient to assess disaster risk management policies. The same
+ sion makers identify the most promising policy options to                          reduction in asset losses results in different welfare gains
+ reduce welfare losses from natural disasters. Applied to riv-                      depending on who (especially poor or nonpoor households)
+ erine and storm surge floods, earthquakes, windstorms, and                         benefits. And some policies, such as adaptive social protec-
+ tsunamis in 117 countries, the model provides estimates of                         tion, do not reduce asset losses, but still reduce welfare losses.
+ country-level socioeconomic resilience. Because hazards dis-                       Post-disaster transfers bring an estimated benefit of at least
+ proportionally affect poor people, each $1 of global natural                       $1.30 per dollar disbursed in the 117 countries studied,
+ disaster-related asset loss is equivalent to a $1.6 reduction                      and their efficiency is not very sensitive to targeting errors.
+
+
+
+
+  This paper is a product of the Global Facility for Disaster Reduction and Recovery (GFDRR) and the Climate Policy Team
+  of the World Bank, and a background paper to the GFDRR and World Bank report “Unbreakable: Building the Resilience
+  of the Poor in the Face of Natural Disaster.” It is part of a larger effort by the World Bank to provide open access to its
+  research and make a contribution to development policy discussions around the world. Policy Research Working Papers
+  are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at shallegatte@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+Socioeconomic Resilience: Multi‐Hazard Estimates in 117 Countries 
+
+                                            Stephane Hallegatte 
+                       Global Facility for Disaster Reduction and Recovery (GFDRR) 
+                                               The World Bank  
+                                         shallegatte@worldbank.org 
+
+                                         Mook Bangalore 
+ Grantham Research Institute on Climate Change and the Environment, Department of Geography and 
+                           Environment, London School of Economics and 
+                                          The World Bank 
+                                      M.Bangalore@lse.ac.uk
+
+                                            Adrien Vogt‐Schilb 
+                           Climate Change and Sustainable Development Division 
+                                    Inter‐American Development Bank 
+                                           avogtschilb@iadb.org 
+
+
+
+
+JEL: Q54, I31, I32, Q50 
+
+Keywords: Natural disasters, vulnerability, poverty, wellbeing, climate change 
+    1. Introduction 
+The  most  immediate  consequences  of  natural  hazards  are  the  fatalities  and  casualties,  and  the  first 
+priority  of  disaster  risk  management  is  to  save  lives.  But  natural  disasters  also  have  economic 
+consequences, which affect wellbeing and need to be accounted for and managed (Cavallo and Noy, 2011; 
+Rose, 2009; Skoufias, 2003). These economic consequences and wellbeing losses depend on the value of 
+what  is  lost  or  damaged,  and  on  many  other  factors,  including  how  long  it  takes  to  rebuild,  how  asset 
+losses translate into income losses, and how coping mechanisms and ex‐post support (from insurance to 
+social  protection)  protect  the  victims  and  help  smooth  consumption  losses  (Carter  et  al.,  2007;  Le  De  et 
+al.,  2013).  In  addition,  wellbeing  losses  are  larger  when  losses  are  concentrated,  especially  when 
+concentrated  on  poor  people  –  as  is  often  the  case  (Hallegatte  et  al.,  2016a).  Disasters  can  also  have 
+irreversible and long‐term health consequences, particularly on children (Dercon, 2004; Maccini and Yang, 
+2009).  
+
+Many policies can minimize wellbeing losses and protect the population: from building dikes and restoring 
+mangroves to better land‐use planning and early warning, to evacuation, insurance and social safety nets. 
+Risk  management  policies  are  best  designed  as  holistic  strategies  that  combine  many  of  these  levers 
+(World Bank, 2013).  
+
+Designing such a consistent policy  package is challenging;  here we build on Hallegatte et al. (2016b) and 
+propose an approach and a model to support this process. In this work‐in‐progress, we combine data on 
+natural hazards, population and asset location, asset vulnerability, and socioeconomic characteristics and 
+combine  insights  from  natural  and  social  sciences  to  assess  how  natural  disasters  affect  wellbeing, 
+measured using a social welfare function (welfare is the metric used by economists to measure wellbeing). 
+We first present the model, and the global data used to calibrate it. We then use the model to define and 
+assess  the  socioeconomic  resilience  of  117  countries  to  natural  disasters,  identify  policy  priorities  to 
+reduce  the  impact  of  disasters  on  wellbeing,  with  a  focus  on  adaptive  social  protection,  and  help  design 
+holistic risk management strategies tailored to each country. The model and the data are available online.1  
+
+We propose a new quantifiable definition of socioeconomic resilience, the ratio of asset losses to welfare 
+losses2:  
+
+                                                                        Asset	losses
+                                  Socioeconomic	resilience         	                   
+                                                                       Welfare	losses
+
+With  this  definition,  socioeconomic  resilience  can  be  considered  as  a  driver  of  the  risk  to  wellbeing  – 
+measured  through  the  expected  welfare  losses  due  to  natural  disasters  –  along  with  the  three  usual 
+drivers,  hazard  (the  probability  an  event  occurs),  exposure  (the  population  and  assets  located  in  the 
+affected area) and asset vulnerability (the fraction of asset value lost when affected by a flood): 
+
+
+                                                            
+1
+   The code and data set are available at  github.com/adrivsh/resilience_indicator_public/  
+2
+    This  definition  combines  the  notions  of  macroeconomic  and  microeconomic  resilience  previously 
+proposed by Hallegatte (2014).   
+
+                                                           2 
+ 
+                              Expected	asset	losses             Hazard 	∙	 Exposure 	∙	 Asset	vulnerability
+    Risk	to	wellbeing                                                                                        
+                            Socioeconomic	resilience                    Socioeconomic	resilience
+
+Socioeconomic  resilience  (resilience  for  short  in  this  paper)  measures  the  ability  of  an  economy  to 
+minimize  the  impact  of  asset  losses  on  wellbeing  and  is  one  part  of  the  ability  to  resist,  absorb, 
+accommodate  and  recover  in  a  timely  and  efficient  manner  to  asset  losses  (the  qualitative  definition  of 
+resilience from the United Nations). In an idealized case of perfect risk‐sharing across the population, no 
+irreversible  impacts  on  human  capital,  and  no  pre‐existing  inequality,  welfare  losses  are  equal  to  asset 
+losses. Socioeconomic resilience at 50% means that welfare losses are twice as large as asset losses, and 
+could be reduced by half if inequality disappeared, losses were perfectly shared, and irreversible impacts 
+were avoided.   
+
+We develop and use a model to estimate expected asset losses and expected welfare losses, and quantify 
+socioeconomic  resilience  in  117  countries.  The  model  builds  on  Hallegatte  et  al.  (2016b),  which  only 
+considered river floods and 90 countries. Here we add new countries thanks to new socioeconomic data, 
+and  we  introduce  additional  hazards  –  coastal  floods  and  storm  surge,  windstorm,  earthquakes,  and 
+tsunamis – using the risk assessment provided in the Global Assessment Report (UN‐ISDR 2015). We also 
+simplify  the  model  –  focusing  on  the  factors  that  were  found  to  have  most  influence  on  our  previous 
+assessment and disregarding other factors – and improve our modeling of insurance and social protection. 
+
+Like all models, ours is incomplete and our assessment provides a partial view of resilience. For instance, 
+we  do  not  include  many  non‐economic  components  such  as  the  link  between  disasters,  conflicts,  and 
+state  fragility.  Nevertheless,  our  quantification  informs  on  the  ability  of  economies  to  deal  with  natural 
+disasters and on the prioritization of policy options to improve resilience. 
+
+We find that some policy options can reduce welfare losses by increasing socioeconomic resilience, from 
+an  unchanged  amount  of  asset  losses.  Adaptive  social  protection  is  a  particularly  promising  one.  In  all 
+countries,  every  dollar  spent  on  post‐disaster  support  yields  at  least  $1.30  of  increased  welfare.  In  11 
+countriesAngola,  Bolivia,  Botswana,  Brazil,  Central  African  Republic,  Colombia,  Honduras,  Lesotho, 
+Panama,  South  Africa,  and  Zambiaevery  $1  spent  on  post‐disaster  transfers  yields  well‐being  benefits 
+of more than $4. Our simulations also suggest that uniform transfers may be preferable. Indeed, wealthier 
+households  may  receive  most  of  the  available  resources  if  transfers  are  proportional  to  losses,  leaving 
+little  for  those  most  in  need.  There  is  thus  a  complementarity  between  premium‐funded  insurance 
+programs  for  wealthier  households  who  can  afford  the  transaction  costs,  and  publicly‐funded  adaptive 
+social protection for the poorer. 
+
+Resilience  gains  from  poverty  reduction  can  even  offset  increased  asset  losses.  Increasing  by  10 
+percentage points the share of income of the bottom 20 percent in the 117 countries would increase asset 
+losses by 1%, since more wealth would be at risk. But it would also reduce the impact of income losses on 
+wellbeing, increasing resilience by 0.6% on average, and ultimately reduce welfare losses by $500 million 
+per year.  
+
+These  findings  suggest  that  the  common  practice  of  tracking  only  asset  losses  (IPCC,  2012)  may  give  an 
+overly  pessimistic  view  of  progress  made  by  countries  in  terms  of  disaster  risk  management;  and  that 
+
+                                                           3 
+ 
+taking  into  account  distributional  impacts  and  ex‐post  support  mechanisms  can  better  inform  policy 
+recommendations.  
+
+We also use the model to assess a set of policy levers in 117 countries, according to their country‐specific 
+efficacy to reduce risk to welfare through its four drivers. We display this information using country‐level 
+policy cards, which report in each country how improving each sub‐indicator would impact risk, resilience 
+and therefore asset and welfare losses for that country. In contrast, existing indicators for resilience, risk, 
+or  vulnerability  attribute  the  same  weights  to  each  sub‐indicator  in  every  country  (we  compare  our 
+indicator with other existing indicators in the appendix). Our approach provides an innovative framework 
+to assess in a consistent manner the benefits from hard measures (e.g., dikes, building norms) and softer 
+options (e.g., post‐disaster support, financial inclusion). These assessments provide an input to the cost‐
+benefit analysis of these options and can be used to support a dialogue on the priority actions for disaster 
+risk management in different countries, regions or cities. 
+
+    2. From asset losses to welfare losses 
+
+    2.1.      Reconstruction dynamics 
+This section explains our model. The first step of the assessment is to compute how asset losses translate 
+into discounted consumption losses.  
+
+
+
+
+                                                                                            
+
+Figure  1  Schematic  view  of  the  economic  output  dynamics.  The  variable    is  the  average  productivity  of  capital 
+and N is the reconstruction period duration (until 95% of damages are repaired).  
+
+According  to  Hallegatte  and  Vogt‐Schilb  (2016),  if  95%  of  reconstruction  is  done  exponentially  over  N 
+years,  the  discount  factor  is    and  the  average  productivity  of  capital  is      ,  then  the  present  value  of 
+consumption losses ∆ 	is linked to asset losses at the moment of the disaster ∆  by a factor Γ : 
+
+
+
+
+                                                              4 
+ 
+                                                        ∆      ∆       ΓΔ           Equation 1 
+The  relation  involves  average,  not  marginal  productivity  of  capital,  because  natural  disasters  do  not 
+destroy  the  least  productive  assets  first,  but  affect  random  sectors  and  random  portions  of  the  existing 
+capital  (Hallegatte  and  Vogt‐Schilb  2016).  Note  that  if  the  productivity  of  the  affected  capital  was  equal 
+to the marginal productivity of capital, that is             , then the loss of consumption would simply be equal 
+to the loss of capital (and would thus be independent of the reconstruction duration).  
+
+Then, to estimate the welfare impact of a macroeconomic loss in consumption, it is necessary to account 
+for the distributional impacts of the disaster, that is whether it impacts poor or nonpoor people, and for 
+the ability of the population to cope with the shock. Our framework is flexible regarding the definitions of 
+“poor”  and  “non‐poor.”3  In  particular,  one  can  decide  to  focus  on  extreme  poverty  by  defining  the  poor 
+following national or international poverty lines; through a Multidimensional Poverty Index; using a given 
+fraction  of  the  population  (e.g.,  the  bottom  20  or  40%  of  the  income  distribution);  or  using  a  broader 
+definition  of  poor  people  that  is  relevant  for  disaster  analysis  (e.g.,  the  population  with  no  access  to 
+financial instruments, or the population that is “vulnerable” to falling back into poverty4). In what follows, 
+we define the poor as the people in the bottom 20% of the consumption distribution. All the calculations 
+that are proposed in this section are nonetheless possible in a more complex framework with more than 
+two categories.  
+
+       2.2.           Distribution of asset and consumption losses 
+The distribution of losses from a disaster depends on poverty, assets used, affected individuals and capital, 
+and consumption losses, as each section of the framework below describes. 
+
+       2.2.1.         Income categories 
+In  each  country,  there  are    individuals,  partitioned  in    poor  people  and                non‐poor  people.  We  call 
+poverty headcount   the share of poor people in the economy: 
+
+                                                                                 Equation 2 
+
+The aggregate national consumption, income and assets are noted  , Y	and  . The variables  ,  , and   
+are the per capita consumption of poor, nonpoor and average individuals, respectively.  
+
+       2.2.2.         Affected and non‐affected people  
+To calculate the welfare impact of the disaster, we start by identifying the number of poor and non‐poor 
+people that are directly affected by the shock, and the number of those that are not directly affected (but 
+are affected by indirect impacts). 
+
+
+
+                                                            
+3
+    However,  since  the  main  difference  between  poor  and  non‐poor  will  be  the  marginal  utility  of  income,  monetary 
+definitions of poverty appear more appropriate than non‐monetary definitions, in this very context.  
+4
+   See a discussion on the World Bank website: http://go.worldbank.org/R048B34JF0. 
+
+                                                                            5 
+ 
+The  disaster  affects  a  proportion            / ,  of  the  population,  where    is  the  number  of  directly 
+affected  persons.  The  variables    and    represent  the  number  of  poor  and  non‐poor  people  in  the 
+affected  area.  The  fraction  of  poor  people  affected  is         /   and  the  fraction  of  non‐poor  people 
+affected is            / .  
+
+We sometimes also use the poverty‐exposure bias for population, given by                              1.  The parameter 
+     measures  how  the  share  of  the  poor  in  the  affected  area  compares  to  the  share  of  the  poor  in  the 
+entire  country.  If  PE  is  larger  than  zero,  poor  people  are  more  affected  than  the  rest  of  the  population, 
+the disaster is biased and affects the poor disproportionally. If the disaster affects only the poor, then   
+reaches a maximum of  ⁄ ‐1; if the disaster affects only the non‐poor, if reaches a minimum of ‐1.  
+
+These parameters allow counting the population in each category (Table 1). 
+
+                                     Directly affected                               Non directly affected 
+    Poor                                                                                       1          
+    Non‐poor                                1                                              1         1            
+
+    Table 1: Estimating exposure to a disaster for four categories, based on poverty status and exposure 
+                                     of the poor and non‐poor people. 
+
+      2.2.3.    Labor income and transfers 
+Consumption  comes  from  two  income  sources:  labor  income–assumed  generated  locally  and  thus 
+vulnerable  to local asset losses—and transfers from social protection, capital income, and remittances  – 
+assumed perfectly shared at the national level and thus vulnerable to losses at the national level.  
+
+                                                1                         Equation 3 
+
+Where    represents  consumption,    is  the  average  productivity  of  capital,     is  the  capital  used  by  the 
+poor (       ) or the non‐poor (        ),   is the share of production that is diverted to fund transfers, and    
+are transfers received. The assets “used” by an individual are the assets that participate in generating his 
+or  her  income.  They  include  the  assets  people  own  (e.g.  a  cow,  a  sewing  machine  or  a  saving  financial 
+asset); the infrastructure the individual uses to access transport, water, and energy services (e.g., roads); 
+the assets owned by others but that the individual uses to work (e.g., factory equipment); and the assets 
+that  produce  the  resources  that  are  redistributed  through  social  protection.  The  distinction  matters 
+because many poor people do not own many physical assets, but may lose income because they use assets 
+that belong to other individuals or to the government.  
+
+The other source of income,  , is the transfers, i.e. income diversified at the national level. It comes from 
+social transfers, remittances, or capital that is invested in a diversified manner (e.g., through a bank saving 
+account).  Note  that  we  do  not  represent  explicitly  the  income  generated  outside  the  affected  country, 
+such as international investments and foreign remittances for simplicity.  
+
+
+
+
+                                                               6 
+ 
+We  define    as  an  effective  tax  rate  on  capital,  which  captures  average  income  diversification  in  the 
+economy.  It is the share of local production that benefits the rest of the economy. The budget constraint 
+for transfers reflects the fact that all transfers must come from such diversion:  
+
+                                                                Σ      Σ                 Equation 4
+In  a  traditional  economy  without  transfers  or  social  protection  (or  with  only  local  community‐level 
+transfers)  and  little  international  openness,    0;  in  a  modern  economy  in  which  transfers  and  capital 
+gain play a larger role,    is much higher. 
+
+We also define   as the share of total transfers that go to category	 , that is 
+
+                                                                           	 Σ        Equation 5
+
+       2.2.4.         Asset and consumption losses 
+We  define  parameters    and  	as  the  physical  vulnerability  of  affected  capital  for  poor  and  non‐poor 
+people, respectively. It is defined as the fraction of the affected capital that is lost because of the disaster.  
+The  assets  that  generate  the  income  of  poor  people  are  generally  more  vulnerable  than  the  assets  used 
+by non‐poor people (e.g., lower quality houses that can be completely wiped out by wind),                     .  
+
+From  these  capital  losses,  taking  into  account  reconstruction  dynamics  (previous  section,  assuming 
+uniform reconstruction duration) gives the net present value of consumption losses by multiplying by Γ. 5 
+Taking into account the effect through income diversification one gets: 
+
+                                                ∆              Γ[ 1   τ Δ        ΣΔ                Equation 6 
+
+       2.2.5.         Insurance, and scale‐up of remittances and social protection 
+To  assess  the  ex‐post  situation  and  the  final  impact  on  people’s  welfare,  we  need  to  account  for  the 
+possibility  that  the  affected  population  relies  on  increased  public  and  private  transfers,  as  well  as 
+withdrawal from saving accounts to smooth the impact of asset losses on welfare losses. Here, we focus 
+on  the  willingness  and  ability  of  the  government  to  scale  up  social  transfers  to  compensate  for  asset 
+losses, and we compare that to premium‐financed private insurance. 
+
+One  issue  with  post‐disaster  support  is  imperfect  targeting.   Ex‐post  support  may  suffer  from  inclusion 
+errors,  where  nonaffected  people  are  wrongly  provided  support,  and  exclusion  errors,  where  affected 
+people do not receive the aid they should. To track this, we classify the population in 8 categories, using 
+the 4 previous categories, plus whether they receive support. The number in each category is given by the 
+following table: 
+
+ 
+
+ 
+
+                                                            
+5
+  All values noted with a tilde (like    are for the net present value of the future flux, not the instantaneous value at 
+time t. 
+
+                                                                                 7 
+ 
+                                   	                                            	             	         
+                 Support received  Support not received             Support received         Support not received 
+    Poor             	 1 e 	                  e                              e	                      1 e  
+ Non‐poor           1 e 	                   e                         e	                               1    e  
+Where the exclusion error parameter is e  and e 	is the inclusion error parameter.  
+
+Two  other  issues  are  the  amount  of  support  distributed,  and  how  the  support  is  funded.  In  general,  for 
+each category of household, total consumption losses after post‐disaster support are given by 
+
+                            ∆       Γ[ 1    τ Δ           ΣΔ                	 Equation 7
+Where    is  the  support  received  per  capita,  and    is  the  amount  paid  per  capita  to  fund  the  support 
+(Σ    Σ      . Figure 2 illustrates the previous equation. 
+
+
+
+
+                                                                                                                   
+
+    Figure 2 Income of one category (poor or non‐poor) before the disaster, after the disaster but before 
+                   the response to the disaster, and after the disaster and the response. 
+
+
+        2.3.   Welfare impacts from consumption losses 
+We assume the welfare in the affected country is given by:  
+
+
+
+
+                                                          8 
+ 
+                                                                                                         Equation 8 
+
+The  function    is  a  “welfare  function”  that  links  the  net  present  value  of  consumption  (   and  )  with 
+individual  welfare.6  Using  the  net  present  values  of  consumption  to  assess  welfare  is  a  simplification, 
+which  is  acceptable  if  individuals  can  smooth  the  shock  over  time  and  if  the  shock  remains  relatively 
+limited compared with consumption. The change in social welfare is the sum of the change in welfare for 
+the 8 categories of individuals. 
+
+After the disaster, the welfare is given by: 
+
+                                                                   ∆                             ∆           Equation 9 
+The net present value of consumption in the baseline – without disaster – is given by the discounted sum 
+of current consumption, assumed constant in the future: 
+
+                                                                   ̃                          Equation 10 
+
+Further, we use a constant relative risk aversion welfare function: 
+
+                                                                       ̃
+                                                               ̃                                 Equation 11 
+
+Where   measures both risk aversion and aversion to inequality, and is the inverse of the elasticity of the 
+marginal  utility  of  consumption.  Here,  the  parameter  is  the  degree  of  aversion  to  inequality  in 
+consumption,  which  represents  the  diminishing  marginal  utility  of  consumption  (i.e.,  the  lesser 
+importance  of  consumption  as  one  gets  richer).  Indeed,  differences  in  pre‐disaster  consumption  levels 
+translate into differences in the marginal utility of consumption: consumption losses of poorer people will 
+matter more than those of richer people. These differences can be interpreted as a distributional weight, 
+classically  used  to  compare  losses  and  benefits  that  affect  individuals  of  different  incomes  and  wealth 
+(Fleurbaey and Hammond 2004).  
+
+With    equal  to  one,  a  10‐percent  consumption  loss  for  poor  people  “weights”  as  much  as  a  10‐percent 
+consumption  loss  for  non‐poor  people,  even  though  the  latter  is  much  larger  in  monetary  terms.  Higher 
+values  of    give  more  weight  to  what  happens  to  poor  people,  vs.  non‐poor  people.  In  this  analysis,  we 
+take       1.5,  which  is  consistent  with  a  focus  on  poverty  (a  value  larger  than  one  is  consistent  with  the 
+preference  for  a  progressive  tax  system  in  which  richer  individuals  pay  a  larger  share  of  their  income). 
+Since  there  are  disagreements  on  the  appropriate  value  for  ,  we  propose  in  Hallegatte  et  al.  (2016b)  a 
+sensitivity analysis on this parameter. 
+
+
+
+
+                                                            
+6
+  The net present value of future consumption can be understood as the wealth of the individual, i.e. the value of all 
+his or her assets, including human capital. 
+
+                                                                                        9 
+ 
+    3. Data and calibration 
+This  section  explores  how  we  assess  socioeconomic  resilience  at  the  national  level.  To  ensure 
+transparency  and  replicability  –  and  to  allow  the  reader  to  test  various  assumptions  –  the  code  that 
+calculates the resilience indicators based on various data sets and that creates all figures presented below 
+is available online.  
+
+    3.1.      Poverty definition 
+We need first to describe inequality and poverty levels in the affected region. We define the poor as the 
+individuals  in  the  bottom  quintile  in  terms  of  consumption  or  income.  Therefore,  the  parameter    is 
+equal to 20%. To estimate	 	and	 , we use the World Development Indicators database, which provides 
+the  income  share  of  the  bottom  20%.   Figure  3  shows  the  result,  highlighting  the  large  variability  –  and 
+lack of correlation – between inequality and national income level. 
+
+
+
+
+                                                                                          
+
+       Figure 3. Income share of the bottom 20 percent, in percent of GDP, as a function of GDP. 
+
+    3.2.      Asset vulnerability 
+A  few  household  surveys  have  examined  the  percentage  of  asset  losses  (that  is,  asset  vulnerability)  for 
+households  at  different  income  levels.  Several  caveats  are  needed  before  interpreting  the  above 
+estimates  of  asset  vulnerabilities.  First,  each  study  has  a  different  definition  of  “poor”  and  “non‐poor”, 
+which does not always fit our 20/80 categorization. Second, vulnerability depends on the type of hazard 
+and  context  in  which  it  occurs.  Even  within  the  same  country  (e.g.  Bangladesh  in  the  table  below), 
+measures vary greatly. Third, the methods through which vulnerability estimates are captured also differ 
+in each study (hence the range of vulnerabilities varies widely across studies).  
+
+ 
+
+
+                                                           10 
+ 
+    Country        Hazard             Year     Vp          Vr        Source 
+    Bangladesh     Flood              2005     42%         17%       Brouwer et al. (2007) 
+    Bangladesh     Flood/cyclone      2009     74%         45%       Rabbani et al. (2013) 
+    Bangladesh     Flood/cyclone      2009     10%         6%        Akter & Mallick (2013) 
+    Honduras       Hurricane          2001     31%         11%       Carter et al. (2007) 
+Table 2: Estimates of the poverty vulnerability bias from prior studies. 
+Moreover,  these  studies  only  look  at  the  capital  owned  by  households,  not  at  the  capital  they  depend 
+upon  to  generate  their  income.  This  includes  also  infrastructure  (e.g.,  roads,  electricity  network)  and 
+productive capital (e.g., factories, supply chains). Here, we assume that the vulnerability of housing capital 
+is comparable to the vulnerability of the rest of the capital – for instance, if poor people’s buildings are 20 
+percent  more  vulnerable,  then  we  assume  that  the  capital  they  use  to  generate  an  income  is  also  20 
+percent more vulnerable.  
+
+      3.2.1.   Vulnerability estimates based on housing data 
+In  this  national‐level  analysis,  and  consistent  with  our  focus  on  the  socioeconomic  drivers  of  resilience, 
+we use a very simple methodology. We use the Global Building Inventory database from PAGER, by USGS, 
+which  provides  a  distribution  of  building  types  (buildings  only,  not  contents)  within  countries  across  the 
+world (USGS 2015). This typology has been developed to assess vulnerability to earthquakes but here we 
+use it for all hazards.  
+
+There  are  106  building  types  in  PAGER,  which  we  aggregate  into  three  categories,  by  vulnerability  level 
+(see  Appendix).  Then,  we  apply  simple  depth‐damage  functions  for  each  of  the  three  aggregated 
+categories,  inspired  Hallegatte  et  al.  (2013).  The  most  vulnerable  buildings  are  aggregated  into  one 
+“fragile” category, and we assume that 70 percent of the building value is lost if a building in this category 
+is affected. In addition, we have a “median” and a “robust” category, for which losses are equal to 30 and 
+10 percent. The PAGER data do not tell who is living in buildings of different categories. Here, we assume 
+that the poorest live in the most vulnerable buildings; a very reasonable assumption in most cases. These 
+loss ratios, developed for buildings, are also applied to the rest of the capital, including infrastructure and 
+factories. The underlying assumption is that if individuals are living in fragile homes – for instance a mud 
+wall house – they are also serviced by fragile infrastructure and work in fragile factories and buildings.  
+
+
+
+
+                                                          11 
+ 
+                                                                                            
+
+                   Figure 4: Asset vulnerability of poor and non‐poor people against GDP per capita. 
+The result of this analysis is shown in Figure 4, with the asset vulnerability – the fraction of assets that is 
+lost in case of a natural disaster, for the poor and the non‐poor, in the 117 countries, and as a function of 
+the  GDP  per  capita.  It  shows  that  in  most  low‐income  countries,  all  poor  people  are  living  in  fragile 
+buildings, while in rich countries even the poor have less vulnerable housing. The situation is very diverse 
+across  countries  for  the  non‐poor.  But  overall,  housing  vulnerability  is  decreasing  with  income,  as  is 
+probably  capital  vulnerability  in  general.  Moreover,  dispersion  is  grossly  decreasing  when  income 
+increases, meaning that on average asset vulnerability bias decreases with income.  
+
+       3.2.2.         Vulnerability and early warning systems 
+Capital losses can be reduced significantly thanks to early warning systems (Hallegatte 2012). For instance, 
+(Kreibich et al., 2005) report on the Elbe and Danube floods in 2002. They show that 31% of the population 
+of flooded areas implemented preventive measures. These measures include moving goods to the second 
+floor of buildings (applied by more than 50% of the inhabitants who implemented prevention measures), 
+moving vehicles outside the flood zone (more than 40%), protecting important documents and valuables 
+(more than 30%), disconnecting electricity and gas supplies and unplugging electric appliances (more than 
+25%) and installation of water pumps (between 2 and 10%). 
+
+In our national indicator, we include  the role of early warning system  using data reported in the context 
+of  the  Hyogo  Framework  for  Action7  (UN‐ISDR,  2015a).  The  priority  for  action  #2  (“Identify,  assess  and 
+monitor disaster risks and enhance early warning”) includes an indicator (P2‐C3) related to “Early warning 
+
+
+
+                                                            
+7
+     http://www.unisdr.org/we/coordinate/hfa.  
+
+                                                                 12 
+ 
+systems are in place for all major hazards, with outreach to communities” with a score between 0 and 5. 
+We attribute a score equal to zero to countries that did not contribute to the HFA monitoring system.  
+
+We assume that individuals with access to early warning can reduce capital losses by        20%, and that 
+the fraction of the population with access depends linearly on the HFA indicator: 0% for a score of 0, 20% 
+for a score of 1, up to 100% for a score equal to 5. So actual vulnerability is equal to: 
+
+                                                       1                   
+                                                                   5
+
+                                                      Equation 12 
+Where HFA_P2C3 is the HFA indicator related to “Early warning systems are in place for all major hazards, 
+with outreach to communities.” 
+
+    3.3.     Exposure 
+    3.3.1.   Computing population and asset exposure by hazard and return period 
+The exposure of the population and assets to natural disasters is derived from UN estimates of expected 
+asset  losses  and  our  estimates  of  asset  vulnerability.  The  Global  Assessment  Report  (UN‐ISDR  2015), 
+referred  to  as  the  GAR  report,  provides  for  each  country  and  hazard  (riverine  floods,  windstorms,  storm 
+surge,  earthquakes  and  tsunamis)  asset  losses  per  return  periods  (from  20  to  1,500  years)  as  well  as 
+average annual losses (AAL). We first estimate frequent asset losses per country and hazard (for the one 
+year  return  period  event)  such  that  averaging  events  over  return  period  matches  average  annual  losses 
+provided by the GAR.  
+
+Then,  we  derive  the  exposure  per  country,  hazard  and  return  period  that  is  consistent  with  these  asset 
+losses and the vulnerability derived before, that is: 
+
+                                           Δ      	              Equation 13
+Where   is asset vulnerability as computed in the previous section,	Δ  is the value reported in the GAR, 
+and   is the fraction of assets affected (that is the exposure) we solve for. 
+
+    3.3.2.   Summing over return periods  
+To  aggregate  asset  and  welfare  losses,  taking  into  account  that  exposure  depends  on  the  return  period, 
+we  proceed  as  follows.  First,  we  assume  that  no  other  parameter  than  total  exposure  depends  on  the 
+return  period  (the  model  structure  allows  to  make  arbitrary  parameters  depend  on  the  return  period). 
+Second, we compute asset losses and welfare losses in each country for each return period independently. 
+And  third,  we  aggregate  the  resulting  asset  and  welfare  losses,  weighting  them  with  the  probability  of 
+each event occurring.  
+
+    3.3.3.   Exposure bias 
+For riverine and coastal floods, we specify a different exposure for poor and nonpoor people. To calibrate 
+the  exposure  bias,  we  use  the  estimates  published  in  (Hallegatte  et  al.  2017).  This  World  Bank  study 
+
+                                                           13 
+ 
+overlays flood maps from the GLOFRIS global model and poverty maps from the World Bank. For countries 
+where  this  study  does  not  provide  data,  we  use  an  older,  similar  study  by  (Winsemius  et  al.  2015).  This 
+other  World  Bank  study  overlays  the  same  GLOFRIS  flood  maps  as  above  with  geo‐localized  household 
+surveys (using the Demographic and Health Surveys8) to assess the exposure of poor people to river floods 
+relative to the exposure of non‐poor people.  
+
+Where  neither  study  provides  data,  we  use  the  average  for  countries  which  do  have  data  weighted  by 
+their  population  (the  average  is  8%).  This  average  is  conservative,  when  compared  with  the  few 
+estimations found in published case studies (Table 3).  
+
+    Country                    Hazard                          Year    Poor    Nonpoor    Bias    Source 
+    Bangladesh                 Flood/cyclone                   2009    25%       14%      56%     Akter & Mallick (2013) 
+    Mumbai                         Flood                       2010    41%       24%      71%     Patankar and Patwardhan 
+    Kenya                          Flood                       2012    99%       96%       1%     Opondo(2013) 
+    Guyana                         Flood                       1997    40%       28%      18%     Pelling (1997) 
+    Vietnam                        Flood                       2011    38%       29%      17%     Nguyen and James (2013) 
+                              Table 3: Exposure of poor and nonpoor people in selected case studies 
+We  assume  there  is  no  exposure  bias  for  other  hazards,  due  to  the  large  scale  of  these  events.  This  is  a 
+simplification  considering  for  instance  that  local  soil  characteristics  have  an  impact  on  earthquake 
+vulnerability. 
+
+       3.4.           Macroeconomic characteristics  
+First,  we  translate  the  population  exposure  (separated  into  poor  and  non‐poor  people)  into  asset 
+exposures for the two categories. To do so, we assume that the capital used by an individual to generate 
+his or her labor income is the ratio of this labor income by the average capital productivity. Since we have 
+the  labor  income  of  the  poor  and  non‐poor,  we  can  translate  those  into  the  exposed  non‐diversified 
+capital of the poor and non‐poor. We calculate the average capital productivity as output‐side GDP divided 
+by total reproducible capital within a country, both variables from Penn World Tables. 
+
+Figure 5 shows the average  productivity of capital against income level.  In spite of a large  variance, high 
+income countries tend to have more capital and as a result their capital is on average less productive. As 
+shown in Hallegatte and Vogt‐Schilb (2016), countries with a high average productivity of capital have in 
+general less to spend (in proportion of their income) in reconstruction, and this increases their resilience. 
+This effect mitigates the effect of all other drivers, which tend to make richer countries more resilient than 
+poorer ones. 
+
+
+
+
+                                                            
+8
+     http://www.dhsprogram.com/.  
+
+                                                                               14 
+ 
+                                                                                                    
+
+                                 Figure 5: The average productivity of capital, for the 117 countries. 
+We assume that reconstruction takes place in three years, regardless of the extent of the event.9  
+
+       3.5.           Asset diversification 
+To  estimate  the  fraction  of  income  of  the  poor  and  non‐poor  that  comes  from  social  protection  and 
+transfers,  we  calibrate    using  the  “average  per  capita  transfer  from  all  social  protection  and  labor  (for 
+beneficiaries)” and the coverage in each quintile from the ASPIRE database10 :  
+
+                                                                 	20% 	       bottom	20%
+                                                                                             
+
+
+                                                               Equation 14 
+                                                                     
+                                                                 	80% 	       top	80%
+                                                                                         
+
+                                                               Equation 15 
+Where        is  the  share  of  income  sources  which  comes  from  social  protection  and  remittances  among 
+people  receive  a  transfer,  and          is  the  coverage,  that  is  the  fraction  of  people  receiving  a  transfer  in 
+
+                                                            
+9
+   More  work  would  be  required  to  identify  the  drivers  of  the  reconstruction  duration.  In  previous  work,  it  was 
+suggested that the reconstruction duration is dependent on the size of the construction sector (which supports most 
+of the reconstruction effort in many cases) and on the ability to mobilize resources for the reconstruction.   
+10
+     The  Atlas  of  Social  Protection:  Indicators  of  Resilience  and  Equity  (ASPIRE). 
+http://datatopics.worldbank.org/aspire/  
+
+                                                                   15 
+ 
+that quintile. Poor and non‐poor correspond to the bottom 20% and the top 80% respectively. ASPIRE at 
+present  does  not  cover  developed  countries,  so  we  use  data  from  the  US  Consumer  Expenditure  Survey 
+(CES, 2015), Canadian National Household Survey (CNHS, 2015), Australian Household Wealth and Wealth 
+Distribution  Survey  (AWWDS,  2015),  and  European  Union  Survey  of  Income  and  Living  Conditions  (EU‐
+SILC, 2015).   
+
+ASPIRE does not cover all countries in the world. To expand the set of countries in this study, we proceed 
+as follows. First, we estimate an econometric model that explains the share of income from transfers, for 
+poor and nonpoor people in each country by the share of GDP spent on social protection at the national 
+level  (from  the  International  Labour  Organization),  an  indicator  of  government  effectiveness  (from  the 
+Worldwide  Governance  Indicators),  and  whether  the  country  used  to  be  in  the  Soviet  Union.  (Other 
+explanatory  variables  we  tested  include  World  Bank  income  category  of  the  country,  region,  and  GINI 
+coefficient,  but  they  turn  out  to  have  no  explanatory  power.)  This  provides  an  estimate  of  income  from 
+transfers in 26 additional countries (from 98 using only ASPIRE data). 
+
+Diversification also comes from financial inclusion. We use the fraction of the population with savings at 
+a financial institution, from the Global Financial Inclusion Database (FINDEX, 2015). The  Findex  database 
+provides these values for the bottom 40% and for the top 60%, which we use for poor and nonpoor people 
+respectively.  We  assume  that  the  fraction  of  income  that  is  diversified  increases  by  10%  for  people  who 
+have bank accounts.  
+
+Figure 6 shows the diversification of income thanks to remittances and social protection for poor and non‐
+poor people as a function of GDP per capita. It shows that generally, poor people receive a large share of 
+their  income  from  transfers  (which  sounds  logical  but  is  not  the  case  in  all  countries).  Here,  we  see  that 
+most  countries  below  $10,000  GDP  per  capita  have  limited  social  protection  systems,  but  there  are 
+exceptions, and a large variability for countries above this level. The figure also show the fraction of poor 
+and  nonpoor  people  with  bank  accounts,  showing  that  financial  inclusion  is  still  very  low  in  low  income 
+countries. 
+
+
+
+
+                                                            16 
+ 
+                                                                                                                     
+
+                              Figure 6: Diversification of income for poor and non‐poor households. 
+
+       3.6.           Sharing losses across individuals – Insurance and scalable social protection 
+Insurance,  scalable  social  protection  and  social  networks  may  transfer  some  of  the  losses  from  the 
+affected to the non‐affected and from the poor to the non‐poor. It is the case if lost income is replaced by 
+cash transfers (or cash‐for‐work programs) for the most affected, paid by the rest of the population, or in 
+the presence of subsidized insurance.  
+
+In  many  countries,  assuming  that  insurance  is  not  present  is  an  acceptable  assumption.  There  are  some 
+exceptions,  especially  in  countries  where  flood  insurance  is  subsidized  (e.g.,  the  US)  or  subsidized  and 
+mandatory  (e.g.,  France).  In  the  absence  of  a  global  database  of  insurance  coverage,  we  assume  that 
+insurance is negligible.  
+
+In  every  country,  the  government  or  local  authorities  intervene  to  insure  implicitly  the  population.  In  a 
+first simple analysis, we assume that the government would like to issue a lump sum payment to people 
+affected,  covering  80%  of  average  losses  of  poor  people.  But  doing  so  may  be  impossible,  for  two  main 
+reasons, which limit this risk sharing mechanism:  
+
+       ‐      The  social  protection  system  may  not  be  designed  to  respond  to  natural  disasters  by  increasing 
+              the volume of support and targeting the affected households (Kuriakose et al. 2013; World Bank 
+              2013). In some cases, specific changes have been introduced to social protection systems, to make 
+              sure they can accommodate the needs from disasters, such as the Productive Safety Net Program 
+              in  Ethiopia  (World  Bank,  2013b,  Spotlight  2).  To  account  for  these  elements,  we  use  the  HFA 
+              reporting system, in the priority for actions #4 and #5, with three indicators that describe how a 
+              country  is  prepared  to  act  in  the  post‐disaster  phase.11  We  take  the  average  of  these  three 
+
+                                                            
+11
+      The three indicators are: 
+        ‐ P4C2: Do social safety nets exist to increase the resilience of risk prone households and communities? 
+
+                                                               17 
+ 
+              indicators (divided by 5 to remain between zero and one) as an indicator   of the ability to scale 
+              up support to the affected population after the disaster:                   4 2       5 2     4 5 ⁄3/5. 
+               
+       ‐      The  additional  cost  may  be  too  high  for  the  country  and  cannot  be  financed,  unless  reserves  or 
+              special  funds  have  been  created,  or  emergency  borrowing  can  take  place.  Melecky  and  Raddatz 
+              (2011)  find  that  government  deficits  increase  by  25%  after  a  climatic  disaster,  due  to  increased 
+              expenditure  (15%)  and  reduced  revenues  (10%).  They  also  find  that  the  increase  in  expenditure 
+              and deficit does not depend on pre‐existing debt (one explanation proposed by the authors is that 
+              countries  with  higher  debt  also  have  higher  borrowing  capacity).  This  is  why  we  do  not  account 
+              for  the  debt‐to‐GDP  ratio  in  the  ability  of  countries  to  support  affected  population.  Rather,  we 
+              proxy the ability of a country to borrow with sovereign credit rating, using the average (long‐term) 
+              rating  of  from  three  agencies:  S&P,  Moody’s  and  Fitch.  Before  taking  the  average,  we  convert 
+              alphabetical  ratings  to  numerical  values  linearly  (assigning  default  a  0  score).  To  account  for 
+              Sovereign Disaster Risk Financing (SDRF) instruments such as contingency credit lines (Cat‐DDO), 
+              Cat‐Bonds,  Sovereign  insurance  or  dedicated  rainy  day  funds,  we  use  the  third  indicator  of  the 
+              HFA priority for action #5 (“Financial reserves and contingency mechanisms are in place to enable 
+              effective response and recovery when required”). We define an indicator for the ability to finance 
+              the scale‐up, defined as                                  5 3⁄5 .  
+
+Specifically, we assume the ability to scale up to affect inclusion and exclusion errors as follows: 
+
+                                                               1
+                                                                             	        
+                                                                   2             1
+
+                                                                       	 Equation 16
+So that if the country has 100% of ability to scale up, both errors are null, and if it has no ability at all, then 
+half the aid is given to non‐affected instead of affected people. 
+
+Concerning financing of the aid, we assume that if a country rates 100% in its ability to borrow, then the 
+maximum spending in post disaster support is 5% of GDP. Otherwise, that maximum spending decreases 
+proportionally  to  1     .  Actual  payments    then  are  scaled  down  linearly  to  meet  this  maximum 
+budget.  
+
+Figure 7 shows the ability to scale up and borrow across the sample.  
+
+
+
+
+                                                            
+        ‐ P5C2: Disaster preparedness plans and contingency plans are in place at all administrative levels, and regular 
+        training drills and rehearsals are held to test and develop disaster response programs. 
+        ‐ P4C5: Disaster risk reduction measures are integrated into post‐disaster recovery and rehabilitation processes. 
+ 
+
+                                                                       18 
+ 
+                                                                                                                           
+
+Figure 7: Ability of the government to mobilize fund and increase social spending in the aftermath of a 
+                                                disaster 
+We  then  run  several  alternative  simulations  to  understand  the  importance  of  targeting  errors,  funding 
+constraints, and disbursement calibration. These simulations and their results are presented below. 
+
+    4. The socioeconomic resilience to natural disasters in 117 countries 
+
+    4.1.     A global look at risk and socioeconomic resilience  
+The  resulting  risks  to  welfare  are  presented  in  Map  1  and  Figure  8.  Risk  to  wellbeing  (expected  welfare 
+losses  in  percent  of  GDP)  decreases  rapidly  with  income  per  capita  mostly  due  to  better  protection  and 
+lower asset vulnerability.  
+
+
+
+
+                                                                                                                       
+
+                    Map 1: Map of welfare risk in the countries included in the analysis 
+
+                                                          19 
+ 
+                                                                                                                           
+
+
+                                                               Figure 8: Welfare risk  
+Resilience averages 63% across our sample, ranging from 25% to 81%. Resilience in Malawi is 60%, which 
+means  that  $1  of  asset  losses  in  Malawi  has  the  same  impact  on  welfare  as  a  reduction  of  Malawi’s 
+national income by $1.7.12 The resilience of all 117 countries is shown in Map 2. 
+
+
+
+
+                                                                                                                       
+
+Map 2: Socioeconomic resilience in 117 countries.  
+
+Resilience  varies  across  countries  of  similar  wealth  (Figure  9)  because  welfare  consequences  depend  on 
+a  multitude  of  factors,  including  preexisting  inequality  and  safety  nets  to  reduce  the  instantaneous 
+
+
+                                                            
+12
+   Our measure of socioeconomic resilience does not include the fact that a reduction of national income by $1.7 has 
+a  larger  impact  in  a  low‐income  country  than  in  a  high‐income  country.  While  including  this  fact  would  be 
+straightforward, it would imply to make inter‐country welfare comparisons, which is not required in our analysis, and 
+would lead average GDP per capital to dominate our estimates of resilience.  
+
+                                                                         20 
+ 
+impacts  of  a  disaster.  This  finding  suggests  that  all  countries  –  regardless  of  their  geography  or  income 
+level – can act to reduce risk by increasing resilience.  
+
+
+
+
+                                                                                       
+
+Figure 9 Socioeconomic resilience against GDP per capita 
+The lowest socioeconomic resilience in our sample is Guatemala, at 25% (i.e. $1 in natural disaster asset 
+losses  are  equivalent  to  a  $4  reduction  in  national  income).  This  is  due  to  the  combination  of  high 
+inequality  (the  bottom  20%  receives  only  3.8%  of  national  income),  a  large  vulnerability  differential 
+between  the  poor  and  the  non‐poor  (poor  people  are  almost  six  times  more  vulnerable  than  the  rest  of 
+the population), and a relatively low level of social protection and access to finance, for the poor and non‐
+poor.   
+
+The highest resilience is Denmark, at 81 percent (that is, well‐being losses are only 25 percent larger than 
+asset  losses).  This  high  resilience  is  mostly  attributable  to  relatively  low  inequality  (the  income  share  of 
+the bottom 20 percent is 9.1 percent) and large transfers from social protection, especially for the bottom 
+20 percent (poor people receive 68 percent of their income from transfers). 
+
+Interestingly, resilience is  uncorrelated  to the risk to  assets, suggesting  that  countries  did  not build their 
+socioeconomic  resilience  in  response  to  asset  risks.  The  reason  is  that  many  drivers  of  resilience  are 
+socioeconomic  conditions  that  are  outside  the  domain  of  traditional  disaster  risk  management,  which 
+focuses  on  asset  losses.  No  country  has  ever  decided  to  reduce  income  inequality  because  of  high 
+exposure to natural hazards, even though inequality is a major driver of socioeconomic resilience. 
+
+Reducing  poverty  increases  well‐being,  but  because  it  increases  wealth  and  the  asset  stock,  it  also 
+increases  asset  losses  from  natural  disasters.  Many  studies  have  looked  at  the  effect  of  GDP  growth  on 
+disaster losses, using regression or normalization techniques to separate the effect of growth from other 
+drivers  of  disaster  risk  (Barredo  2009;  Mendelsohn  et  al.  2012;  Pielke  et  al.  2008;  Simmons,  Sutter,  and 
+Pielke  2012).  They  all  conclude  that  losses  increase  with  income,  even  though  it  is  still  debated  whether 
+disaster losses increase more slowly than income (and thus whether disaster losses decrease or increase 
+over time when expressed in percentage of GDP). And while richer countries experience larger economic 
+
+
+                                                            21 
+ 
+losses,  they  suffer  fewer  casualties  and  fatalities  than  poorer  countries  (Guha‐Sapir  et  al.,  2013;  Kahn, 
+2005).  
+
+Our  analysis  suggests  that  even  if  it  increases  asset  losses,  poverty  reduction  also  increases  global 
+resilience such that well‐being losses are virtually unchanged. Increasing the wealth of poor people by 10 
+percent  in  our  model  increases  global  asset  losses  by  $3  billion  per  year  (a  1  percent  increase),  but  also 
+increases  resilience  by  1  percent.  The  net  effect  is  a  decrease  in  well‐being  losses  due  to  disasters, 
+equivalent to a $500 million gain in consumption. Thus, poverty reduction not only increases average well‐
+being, but also reduces the loss of well‐being from natural disasters.  
+
+    4.2.      Policy options to reduce welfare losses from natural disasters 
+We  now  use  the  model  to  assess  how  much  different  policy  actions  can  increase  resilience  and  reduce 
+welfare losses at the global level. We test 12 different policies.  
+
+To assess the potential benefits of better land‐use plans or investments in infrastructure that protect the 
+population against hazards such as drainage systems or dikes, we consider two policy experiments. In the 
+first  experiment,  we  reduce  the  fraction  of  the  population  exposed  to  natural  hazards  by  10  percent, 
+targeting  only  poor  people  (among  the  bottom  20  percent  in  each  country).  If  the  entire  world  did  so, 
+asset losses would be reduced by about $14 billion a year, but the gain in well‐being would be much larger, 
+equivalent  to  an  $82  billion  increase  in  global  income.  In  the  second  experiment,  we  still  reduce  the 
+fraction of the population exposed to natural hazards by 10 percent, but this time targeting only nonpoor 
+people (among the top 80 percent). In that case, avoided asset losses are much larger, $38 billion. But the 
+well‐being gains are smaller, equivalent to a $45 billion increase in global income. 
+
+To measure the benefits of constructing buildings that are more resistant to natural hazards, we explore 
+the effect of reducing asset vulnerability. As for exposure, we look at two policies. In the first, we reduce 
+by  30  percent  the  asset  vulnerability  of  10  percent  of  the  population  among  the  bottom  20  percent.  In 
+the  second,  we  reduce  by  30  percent  the  asset  vulnerability  of  10  percent  of  the  population  among  the 
+top 80 percent. Like exposure, focusing on poor people generates smaller benefits in terms of asset losses 
+($4.3 billion instead of $11 billion at the global level), but much larger benefits in terms of well‐being ($28 
+billion instead of $13 billion).  
+
+We also evaluate the benefits of providing universal access to early warning systems globally, considering 
+the  impact  on  assets  and  disregarding  the  (large)  benefits  in  terms  of  lives  saved.  Asset  losses  would  be 
+reduced by about $13 billion a year, and the well‐being gain would be equivalent to an increase in income 
+of $22 billion.  
+
+The  seven  other  policies  reduce  welfare  losses  by  increasing  socioeconomic  resilience,  not  by  reducing 
+asset losses.  We test the impact of increasing income diversification through universal financial inclusion. 
+It  does  not  reduce  the  quantity  or  vulnerability  of  physical  assets,  but  reduces  the  impact  of  a  natural 
+disaster on well‐being, equivalent to an increase of $14 billion in consumption globally. 
+
+
+
+
+                                                            22 
+ 
+Financial  inclusionespecially  access  to  borrowing  and  financial  instrumentssuch  as  disaster 
+fundscan also facilitate and accelerate reconstruction (de Janvry, del Valle, and Sadoulet 2016). We test 
+this  by  reducing  reconstruction  duration  by  one‐third.  Globally,  the  loss  of  well‐being  from  a  disaster 
+decreases,  leading  to  a  gain  equivalent  to  $32  billion  in  consumptionthat  is,  a  6  percent  reduction  in 
+the global cost of disasters.  
+
+Stronger social protection is another way to increase income diversification. We tested an increase to at 
+least 33 percent of share of the income from transfers for poor people, keeping their income unchanged 
+(so we affect only the source of an unchanged income). Resilience would increase by 2.7 percentage points 
+globally and global losses of well‐being would fall by $17 billion a year (a 3.2 percent decrease).  
+
+Insurance  products  can  provide  protection  at  a  lower  cost  and  deliver  large  benefits  through  better  risk 
+diversification.  However,  providing  everybody  with  access  to  market  insurance  is  a  long‐term  objective 
+that faces multiple challenges, including weak institutional and legal capacity, and high transaction costs, 
+especially  for  poor  people.  We  tested  premium‐financed  universal  access  for  insurance  to  the  nonpoor 
+(the  top  80  percent  in  each  country)  so  that  25  percent  of  their  losses  is  covered.  That  would  increase 
+resilience by 2.4 percentage points, to 63.4 percent, and would produce well‐being gains worth $19 billion 
+a year.  
+
+Finally, a growing body of evidence indicates that social insurance and social safety nets are efficient tools 
+to support poor people affected by disasters, especially when these tools are designed to adjust and scale 
+up quickly. To assess the potential benefits from generalizing such instruments, we tested a policy package 
+that  includes  (1)  financial  instruments  (reserve  fund,  contingent  finance,  risk‐sharing  instrument,  or 
+insurance  product)  so  that  the  government  has  access  to  enough  liquidity  and  resources  for  the  post‐
+disaster  response;  and  (2)  a  preparation  and  contingency  plan  so  that  the  budget  can  be  reallocated  to 
+disaster victims in a timely fashion, with the objective of providing all victims with a uniform cash transfer 
+that is calibrated to cover 80 percent of the losses suffered by the bottom 20 percent. Resilience increases 
+2 percentage points on average compared with the current situation. This would represent an additional 
+gain  in  well‐being  of  almost  $13  billion.  Our  analysis  also  shows  the  complementarity  between 
+interventions  that  facilitate  access  to  financial  resources  in  the  aftermath  of  disasters  and  interventions 
+that  improve  preparedness  (such  as  registries  and  automatic  scaling‐up  mechanisms).  Combined,  these 
+interventions produce much larger benefits than the sum of the two performed independently. The next 
+section provides more insights on the economics of insurance products and adaptive social protection. 
+
+In  addition  to  the  global  assessments  presented  previously,  we  tested  these  policies  in  each  country,  as 
+shown in Figure 10 for Malawi and Figure 11 for Sweden (all 117 policy cards are available online). In both 
+countries, the most efficient policy action to reduce welfare losses is to reduce exposure of poor people. 
+But  in  Malawi,  increasing  social  transfers  for  poor  people  to  33%  comes  second  (while  in  Sweden,  this 
+share is already above 33%), followed by reducing asset vulnerability for poor people (it is already low in 
+Sweden).  
+
+
+
+
+                                                           23 
+ 
+                                                                                                          
+ 
+Figure 10 Policy card for Malawi. 
+
+
+
+
+                                                                                                          
+Figure 11: Policy card for Sweden.  
+These  estimates  can  serve  as  an  input  to  a  cost‐benefit  analysis  that  would  also  need  to  account  for  the 
+cost of these options and their benefits unrelated to resilience. For instance, developing social protection 
+brings benefits that go beyond increased resilience and include economic benefits even in the absence of 
+
+
+                                                           24 
+ 
+shocks:  an  analysis  of  resilience  cannot  alone  determine  the  desirability  of  such  a  policy.  However,  the 
+policy cards can contribute to a discussion on a broad set of options to reduce natural risks and increase 
+resilience,  and  ensure  all  options  are  discussed,  from  preventive  actions  like  flood  zoning  to  ex‐post 
+options  like  insurance,  contingent  finance  and  social  protection.  The  scorecard  provides  an  integrated 
+framework to discuss and compare these options, and could even help break the silos in governments and 
+local  authorities,  where  ministries  or  departments  in  charge  of  social  protection,  building  norms  and 
+urban planning may not work well together or not even consider flood risks in their decisions.    
+
+Our analysis of Malawi and Sweden – and the 115 other countries – is a first‐round estimate using globally 
+open  data.  It  is  a  starting  point  for  policy  design  and  should  be  complemented  by  local  studies  (Aerts  et 
+al.,  2014;  Keating  et  al.,  2014;  Michel‐Kerjan  et  al.,  2013).  At  the  local  or  national  level,  for  instance,  the 
+flood  risks  from  the  global  model  can  be  replaced  by  results  from  local  analyses  at  higher  resolution, 
+including flash floods and small basins. Local data on flood protection and better exposure data can often 
+be  mobilized  (Aerts  et  al.,  2014).  And  socioeconomic  characteristics  can  be  refined,  accounting  for 
+instance  for  the  institutional  capacity  to  scale‐up  social  protection  beyond  what  a  global  database  can 
+reasonably aim at providing (Pelham et al., 2011). But in spite of all these limits, our global approach may 
+contribute to the monitoring of country and global progress in terms of resilience, and our findings already 
+provide  insights  into  promising  policy  options,  such  as  adaptive  and  well‐targeted  social  protection,  and 
+show  that  “good  development”  increases  resilience,  especially  if  it  reduces  poverty  and  improves  social 
+safety nets. 
+
+The  comparison  between  Sweden  and  Malawi  illustrates  that  our  results  are  country‐specific:  some 
+factors  are  more  important  in  some  countries  that  in  others.  For  instance,  a  low  exposure  is  even  more 
+important  in  countries  with  a  weak  social  protection  system.  Or  a  good  post‐disaster  support  delivery 
+mechanism matters only where the government has resources to distribute after a shock. This variability 
+supports the choice of using a model to assess resilience, instead of a weighted average of sub‐indicators, 
+such as most other indicators for vulnerability or resilience, in which the weights are global and cannot be 
+adjusted to local circumstances.  
+
+    4.3.      Comparison with other indicators  
+Several other indicators measure resilience and risk at the country and sub‐national level, work which our 
+analysis has built on. Importantly, these indicators have different boundaries: some of them (e.g., InfoRM) 
+include  fragility  and  conflicts.  Others  –  such  as  ND‐GAIN  –  try  to  measure  the  ability  to  adapt  to  climate 
+change, and thus include long‐term trends that may not materialize through natural hazards and disasters 
+(e.g.,  increasing  water  scarcity).  As  a  result,  these  indicators  cannot  be  directly  compared  among  each 
+other or with the indicator proposed in this paper. However, all these indicators tend to measure similar 
+socioeconomic  “capacities,”  namely  the  ability  to  avoid,  resist  and  absorb  shocks,  and  are  thus  closely 
+related.   
+
+In this sub‐section, we review existing indicators and compare our results on resilience and risk with three 
+well‐known country‐level indicators, ND‐GAIN, InfoRM, and WRI, for which data are available online.  
+
+
+
+                                                               25 
+ 
+       4.3.1.         Existing indicators 
+UNISDR – HFA2 Indicator System. The HFA2 indicator system, which was proposed for discussion in 2014, 
+aims  to  revise  the  22  existing  HFA  core  indicators  on  disaster  risk  management  and  link  input  indicators 
+to outputs and outcome. At the Third UN World Conference on Disaster Risk Reduction in Sendai in March 
+2015, seven global targets for disaster risk reduction were agreed upon to guide indicator development.13  
+
+EU‐JRC  –  InfoRM.  InfoRM,  released  in  2015,  measures  the  risk  of  humanitarian  crisis  and  disasters  and 
+how the conditions that lead to them affect sustainable development. It is global and open‐source. Risk is 
+calculated  as  the  product  of  three,  equally  weighted  components:  (1)  hazard  and  exposure,  (2) 
+vulnerability, and (3) lack of coping capacity. Hazard and exposure is sub‐divided into natural and human 
+sub‐indicators.  Vulnerability  is  sub‐divided  into  socioeconomic  vulnerability  and  vulnerable  groups,  and 
+lack of coping capacity is sub‐divided into institutional and infrastructure. Results are available online.14   
+
+ND‐GAIN – Index. A country’s ND‐GAIN score is the readiness score minus the vulnerability score for each 
+country.  Vulnerability  measures  a  country’s  exposure,  sensitivity,  and  capacity  to  adapt  to  the  negative 
+effects  of  climate  change  looking  at  six  sectors:  food,  water,  health,  ecosystem  services,  human  habitat, 
+and infrastructure. Each of the six sectors provides a measure, and the vulnerability score takes the simple 
+mean  of  these  six  scores.  Readiness  measures  a  country’s  ability  to  leverage  investments  and  convert 
+them  into  adaptation  actions,  looking  at  three  components:  economic  readiness,  governance  readiness, 
+and social readiness. For the calculation, each sub‐indicator of vulnerability and resilience is scaled to give 
+a  score  between  0  and  1,  with  all  components  weighted  equally.  Results  from  ND‐GAIN  can  be  viewed 
+online.15  
+
+OECD  –  Guidelines  for  Resilience  Systems  Analysis.  The  OECD  has  completed  a  “how‐to‐guide”  for  a 
+Resilience  Analysis  Tool,  which  has  been  piloted  in  3  countries,  and  allows  users  to  design  roadmaps  for 
+boosting resilience in a system, community or state. Indicators are based on the status of assets identified 
+for resilience, with type/status of assets context‐specific (OECD 2014). The relevant indicators depend on 
+the resilience strategy followed in a given country. The process is based on a consultation process in the 
+country (initial pilot took 5 weeks – 2 weeks preparation and 3 weeks in‐country; consultations to follow 
+will likely take less time). The methodology was first developed through a pilot in the Democratic Republic 
+of  Congo,  and  has  since  also  been  piloted  in  Lebanon  and  Somalia.  The  results  from  the  three  pilot 
+countries can be viewed online.16  
+
+GIZ  –  Two  indicator‐based  approaches.  Germany’s  Development  Agency,  the  GIZ,  has  developed  a 
+Vulnerability Assessment Sourcebook, which provides guidelines for developing vulnerability indexes and 
+for  using  this  index  to  measure  changes  over  time  (GIZ  2014).  The  GIZ  is  also  currently  developing  a 
+methodology  on  Climate  Resilience  Indicators,  which  aims  to  assess  resilience  at  country‐level  based  on 
+globally  available  data  complemented  by  country‐specific  data.  An  example  of  a  Climate  Resilience 
+
+                                                            
+13
+    http://www.wcdrr.org/uploads/Sendai_Framework_for_Disaster_Risk_Reduction_2015‐2030.pdf 
+14
+    http://inform.jrc.ec.europa.eu/Results/Global 
+15
+    http://index.gain.org/ 
+16
+    http://www.oecd.org/dac/risk‐resilience.htm 
+
+                                                               26 
+ 
+Indicator  for  Mexico  is  calculated  as  the  sum  of  three,  equally  weighted  components:  (1)  absorptive 
+capacity, (2) adaptive capacity, and (3) transformative capacity. Absorptive capacity measures the ability 
+to  prepare  for,  mitigate  or  recover  from  the  impacts  of  negative  events  using  predetermined  coping 
+responses (e.g. early warning systems). Adaptive capacity measures the ability to adjust to better respond 
+to  future  shocks  (e.g.  adjusted  planting  behavior).  Transformative  capacity  measures  the  ability  to 
+fundamentally  change  when  existing  conditions  become  untenable  (e.g.  livelihood  transformation).  The 
+report on climate resilience indicators can be viewed online.17  
+
+IDB  –  Disaster  Indicators.  The  Inter‐American  Development  Bank  has  developed  several  indicators, 
+including the (1) Disaster Deficit Index (DDI), (2) Local Disaster Index (LDI), (3) Prevalent Vulnerability Index 
+(PVI),  (4)  Risk  Management  Index  (RMI),  and  the  (5)  Index  of  Governance  and  Public  Policy  for  DRM 
+(iGOPP). The (1) DDI measures the economic loss a country could suffer when a catastrophic event takes 
+place, and implications in terms of resources needed to address the situation. It is calculated by dividing 
+the  losses  from  a  maximum  considered  event  by  the  economic  resilience  of  a  government  (that  is,  the 
+availability of internal and external funds). The (2) LDI measures the propensity of a country to experience 
+small‐scale disasters and their cumulative impact on local development. It is calculated as the sum of three 
+local  sub  indicators  on  the  number  of  deaths,  people  affected,  and  economic  losses,  with  associated 
+weights.  The  (3)  PVI  measures  vulnerability  conditions  by  measuring  exposure  in  prone  areas, 
+socioeconomic  fragility  and  lack  of  social  resilience.  It  is  calculated  as  the  average  of  three  types  of 
+composite  indicators  –  on  exposure,  fragility,  and  resilience,  with  associated  weights.  The  (4)  RMI 
+measures  risk  management  performance.  It  is  calculated  as  the  average  of  four  composite  indicators  – 
+risk  identification,  risk  reduction,  response  and  recovery,  and  governance  and  financial  protection,  with 
+associated  weights.  The  new  indicator,  iGOPP,  which  is  a  combination  of  246  binary  indicators,  is  used 
+principally  for  verifying  the  status  of  public  policy.  Application  of  RMI,  DDI,  LDI,  PVI  to  countries  in  Latin 
+America  and  the  Caribbean  can  be  viewed  HERE.18  Application  of  IGOPP  to  six  countries  can  be  found 
+HERE.19  
+
+Zurich  Flood  Resilience  Alliance  –  Measuring  community  resilience.  Zurich  Bank,  along  with  the 
+International  Institute  for  Applied  Systems  Analysis  (IIASA),  the  University  of  Pennsylvania  –  Wharton, 
+INGO,  and  the  Red  Cross,  have  joined  a  project  to  estimate  the  resilience  of  communities  in  Nepal, 
+Bangladesh,  and Peru.  The research  program, which has only just started, will  develop a methodological 
+framework  based  on  systems  analysis  to  measure  community  resilience  and  address  the  behavioral, 
+economic  and  policy  obstacles  to  effective  community  flood  resilience.  The  approach  will  be  piloted  in 
+many developing countries, for example in Bangladesh (see more HERE). More information on the Flood 
+Resilience Alliance can be viewed HERE and HERE.  
+
+World  Development  Report  2014  –  Indicator  of  Risk  Preparedness.  As  part  of  the  World  Bank’s  World 
+Development Report 2014, an indicator of risk preparedness was developed, which comprises measures 
+
+                                                            
+17
+                    https://gc21.giz.de/ibt/var/app/wp342deP/1443/wp‐content/uploads/filebase/me/national‐level‐
+me(2)/giz2014‐en‐assessing‐resilience‐discussion‐paper.pdf 
+18
+    http://www.iadb.org/en/topics/natural‐disasters/disaster‐risk‐indicators/disaster‐risk‐indicators,1456.html 
+19
+    http://publications.iadb.org/handle/11319/6738?locale‐attribute=es 
+
+                                                               27 
+ 
+of assets and services across four categories – human capital, physical and financial assets, social support, 
+and state support (Foa 2013; World Bank 2013). 
+
+The  Center  for  Global  Development’s  Vulnerability  to  Climate  Change  Index.  This  index  provides  an 
+accounting  of  climate  change  vulnerability,  by  developing  a  Climate  Drivers  Index  for  233  states,  and 
+quantifies  vulnerability  to  climate  change  as  a  result  of  (1)  weather‐related  disasters,  (2)  sea‐level  rise, 
+and  (3)  reduced  agricultural  productivity.  This  Climate  Drivers  Index  is  also  combined  with  data  on 
+governance  and  per  capita  income  to  incorporate  measures  of  resilience,  and  with  data  on  project 
+effectiveness within countries. The full paper outlining the methodology by Wheeler (2011) can be found 
+HERE.  
+
+Barr et  al (2010) – Climate Change Impact Rankings. This paper provides an indicator of climate  change 
+impact in 131 countries and discusses how adaptation funding might be allocated based on this measure. 
+The indicator includes dimensions of physical impact, adaptive capacity, and implementation capacity. On 
+physical impact, four sub‐indicators are included, on agriculture, disasters, health, and coastal zones. On 
+adaptive  capacity,  separate  scores  are  developed  which  incorporate  sub‐indicators  such  as  the  age 
+dependency  ratio  and  the  Gini  coefficient.  For  implementation  capacity,  data  from  the  World  Bank’s 
+Country  Policy  and  Institutional  Assessment  and  Annual  Review  of  Portfolio  Performance  are  used.  An 
+overall  vulnerability  score  is  derived  by  subtracting  the  score  for  adaptive  capacity  from  the  score  for 
+impact. The full paper can be found HERE.  
+
+DARA’s  Climate  Vulnerability  Monitor.  The  Climate  Vulnerability  Monitor  provides  an  assessment  of 
+climate  change  impact  in  184  countries.  The  Monitor  provides  an  assessment  of  socioeconomic 
+vulnerability,  covering  four  impact  areas,  including  (1)  habitat  change,  (2)  health  impact,  (3)  industry 
+stress,  and  (4)  environmental  disasters.  Each  of  the  four  impact  areas  is  composed  of  several  sub‐
+indicators. The Monitor assesses vulnerability in  terms of the impact of climate change on  each of these 
+sub‐indicators,  with  the  impact  expressed  as  higher  mortality  (health),  costs  relative  to  GDP  (for  habitat 
+change  and  industry  stress),  or  both  (for  environmental  disasters),  in  2010  and  2030.  More  information 
+can be found HERE.  
+
+UN  University  and  University  of  Bonn’s  World  Risk  Index.  The  World  Risk  Index  is  a  tool  used  to  assess 
+the disaster risk of a country. The objective of this index is to measure the vulnerability to natural disasters 
+in  171  countries,  and  is  composed  of  four  main  indicators:  (1)  exposure  to  natural  hazards;  (2) 
+susceptibility which depends on socioeconomic conditions, (3) coping capacity which is dependent upon 
+preparedness,  governance,  and  security,  and  (4)  adaptive  capacity  relating  to  future  natural  events.  The 
+Index  is  calculated  from  28  sub‐indicators  from  openly  available  data.  More  information  can  be  found 
+HERE.  
+
+GermanWatch’s  Global  Climate  Risk  Index.  The  Global  Climate  Risk  Index,  published  annually,  analyzes 
+to  what  extent  countries  have  been  affected  by  the  impacts  of  weather‐related  loss  events,  including 
+storms,  floods,  and  heatwaves.  The  Index  is  populated  using  data  from  Munich  Re’s  NatCatSErVICE  and 
+the International Monetary Fund, among other sources. The following indicators were used in the Global 
+Climate  Risk  Index:  number  of  deaths,  number  of  deaths  (population‐adjusted),  the  sum  of  losses,  and 
+
+
+                                                           28 
+ 
+losses per unit of GDP. Each country’s index score is derived from the country’s ranking in each category, 
+based on weighting. More information on the methodology can be found HERE.  
+
+    4.3.2.    Comparison of our results with ND‐GAIN, InfoRM, and the World Risk Index 
+The figure below provides a series of scatter‐plots, comparing our indicators of resilience and risk to ND‐
+GAIN, World Risk Index and InfoRM’s indicators. We also plot against GDP per capita for reference. 
+
+These  scatterplots  provide  two  notable  observations.  First,  our  resilience  indicator  is  broadly  consistent 
+with existing indicators. This is interesting considering the different boundaries and time horizons of these 
+three  indicators.  This  correlation  suggests  that  our  resilience  is  linked  to  basic  economic  characteristics 
+that are also considered important by  other groups  for the vulnerability to  climate  change  (ND‐GAIN) or 
+humanitarian crises (InfoRM).  
+
+The  second  observation  is  that  while  ND‐GAIN,  InfoRM  and  WRI  include  hazard  and  exposure  in  their 
+modules, they are not well correlated with our risk measure – in fact they appear better correlated with 
+our  resilience  measure.  This  is  of  course  a  product  of  how  risk  is  measured  in  each  initiative.  But  it  may 
+also imply that ND‐GAIN, WRI, and InfoRM may better capture the socioeconomic dimensions related to 
+“resilience” (e.g. adaptive capacity, readiness), rather than the overall risk (and in particular the fact that 
+exposure and hazard vary by orders of magnitude across countries, which our risk measure is the only to 
+capture).  An  important  implication  is  that  these  indicators  are  likely  to  underestimate  the  difference  in 
+risk levels across countries.  
+
+
+
+
+                                                             29 
+ 
+                                                                                                                       
+
+           Figure 12: Comparison our measures of risk and resilience to InfoRM and ND‐GAIN
+
+    5. The role of adaptive social protection in reducing welfare losses due 
+       to natural disasters 
+This  section  takes  a  closer  look  at  the  benefits  from  post‐disaster  government  transfers  and  adaptive 
+social protection in terms of resilience and well‐being. We look at adaptive schemes (like in Ethiopia during 
+the  2015  drought)  and  at  ad  hoc  government  or  international  transfers  (like  in  Pakistan  after  the  2010 
+floods), and how they can affect our estimate of resilience.  
+
+
+
+                                                         30 
+ 
+              5.1 Post‐disaster transfers are good economics 
+We first calculate the benefits of post‐disaster support (including the supplementary amounts transferred 
+as part of an adaptation social protection system). To do that, we look at the benefit of transferring $1 to 
+each affected individual. In this simulation, we include targeting errors, assuming that 33% of the affected 
+individuals are “missed” by the support; and that the same number of people are wrongly compensated. 
+(This  is  close  to  the  performance  of  the  phase  II  of  the  Pakistan’s  Citizen’s  Damage  Compensation 
+Program,  which  had  a  30‐32%  exclusion  error.)  The  benefit‐cost  ratio  represents  the  average  benefit  in 
+welfare  that  is  generated  by  $1  used  for  the  program.  If  the  ratio  is  higher  than  one,  it  means  that  the 
+benefit is larger than an equivalent increase in GDP in the country.   
+
+The  analysis  suggests  that  these  transfers  are  a  good  economic  choice,  even  with  targeting  errors:  the 
+benefit‐cost ratio is higher than 1.3 in all countries and its average value across countries is 2.2 (weighting 
+countries  by  their  population,  see  Figure  13).  And  in  11  countriesAngola,  Bolivia,  Botswana,  Brazil, 
+Central  African  Republic,  Colombia,  Honduras,  Lesotho,  Panama,  South  Africa,  and  Zambiaevery  $1 
+spent on post‐disaster transfers yields well‐being benefits of more than $4 (Table 4).  
+
+Post‐disaster support makes sense in poor and rich countries, but countries with the highest benefit‐cost 
+ratios have an income per capita below $25,000 per year (in PPP USD). In general, post‐disaster transfers 
+are  most  desirable  where  the  exposed  population  is  the  poorest,  and  where  poor  people  have  a  high 
+vulnerability  (for  instance  because  of  building  quality  or  low  income  diversification);  this  is  for  instance 
+the  case in South Africa or Honduras. In some countries, the benefit‐cost ratio is relatively low – such as 
+in Slovak Republic – because the better‐off people are more exposed; in that case, post‐disaster transfers 
+are going toward the better‐off whose income after the shock is still larger than the income of unaffected 
+poor people.  Overall, targeting  errors have only a limited impact on the benefit‐cost ratio. This question 
+is explored in more detail below.  
+
+Figure 13: Post‐disaster transfers are good economics – the benefit‐cost ratio is often much larger than 
+one.
+(Benefit‐cost ratio of post‐disaster support, assuming that transfers are proportional to losses, and under 
+two assumptions regarding targeting.) 
+
+
+
+
+                                                            31 
+ 
+                                                                                            
+
+If raising these resources has a cost – for instance if the collection and distribution of $1 leads to 25 cents 
+in  losses  or  because  raising  more  taxes  creates  a  cost  for  the  economy  –  then  the  benefit‐cost  ratio  is 
+reduced  by  the  same  amount.  These  losses  are  different  from  poor  targeting:  instead  of  being  received 
+by  the  wrong  person,  these  25  cents  are  wasted,  for  instance  through  administrative  costs  or  because 
+higher  tax  collection  reduces  economic  activity.  Here  for  instance,  if  the  cost  of  $1  of  public  resource  is 
+more  than  $1.30,  then  the  benefit‐cost  of  post‐disaster  transfers  in  Niger  becomes  lower  than  one. 
+Estimates  for  the  cost  of  public  resources  vary  widely  (Table  5),  and  estimates  are  made  difficult  by 
+multiple  conceptual  and  practical  issues  (Massiani  and  Picco  2013;  Browning  1976;  Dahlby  2008).  But  in 
+countries  where  raising  taxes  is  particularly  costly  –  because  of  administrative  cost  or  because  of  the 
+impact  of  labor  supply  or  investment  –  the  benefit‐cost  ratio  of  post‐disaster  support  is  reduced 
+accordingly.  (In  this  model,  we  assume  proportional  taxation,  which  is  not  optimal  with  our  assumption 
+regarding the decreasing return of consumption.) 
+
+Table  4  –  Top  20  countries  where  the  benefit‐cost  ratio  of  post‐disaster  transfers  are  the  highest  and 
+the lowest (assuming 33% targeting error). 
+    Countries with highest benefit                             Countries with lowest benefit  
+
+    Country                     Benefit‐cost ratio             Country                         Benefit‐cost ratio 
+    South Africa                          5.6                  Niger                                     1.3 
+    Honduras                              5.5                  Sweden                                    1.3 
+    Lesotho                               5.4                  Mali                                      1.3 
+    Botswana                              5.2                  Cambodia                                  1.3 
+    Zambia                                4.9                  Kazakhstan                                1.4 
+    Panama                                4.7                  Slovenia                                  1.4 
+    Central African                       4.6                  Denmark                                   1.4 
+    Republic 
+    Brazil                                  4.3                Belarus                                    1.4 
+
+                                                            32 
+ 
+    Colombia                           4.2             Ukraine                                  1.4 
+    Angola                             4.2             Armenia                                  1.4 
+    Bolivia                            4.0             Slovak Republic                          1.4 
+    Swaziland                          3.4             Moldova                                  1.4 
+    Kenya                              3.4             Germany                                  1.4 
+    Paraguay                           3.2             Czech Republic                           1.4 
+    Guatemala                          3.2             Pakistan                                 1.4 
+    Venezuela, RB                      3.2             Romania                                  1.4 
+    Congo, Dem. Rep.                   3.2             Azerbaijan                               1.4 
+    Ecuador                            3.1             Tajikistan                               1.5 
+    Peru                               3.0             Belgium                                  1.5 
+    Costa Rica                         2.9             Netherlands                              1.5 
+ 
+
+Table 5– Estimates of the opportunity cost of public funds differ widely 
+(Estimates of the opportunity cost of public fund in difference countries, from (Massiani and Picco 2013). 
+
+
+
+
+                                                                                                  
+
+             5.2 Uniform transfers are often more cost‐effective than proportional transfers 
+There  are  different  ways  of  allocating  post‐disaster  support.  Some  countries  allocate  support 
+proportionally to the losses, with a budget constraint. In Vietnam, for instance, the post‐disaster support 
+system is based on an estimate of damages per household. The Emergency Assistance Program is the main 
+social assistance response to disaster.  Introduced in 2007, the program provides cash and rice to disaster‐
+
+                                                     33 
+ 
+affected  households,  as  a  function  of  their  losses.  Compensation  for  destruction  or  serious  damage  to 
+housing  or  relocation  following  landslides  or  floods  is  VND  5  million  per  household  (USD  235).  Similarly, 
+agricultural  losses  are  compensated  in  a  proportional  manner  (see  Box  1).  Richer  households  who  lose 
+more in absolute terms are therefore likely to receive a larger compensation.  
+
+Such a distribution rule mimics insurance. Because rich people usually lose more in absolute terms, such 
+a  scheme  tends  to  transfer  more  resources  to  rich  than  to  poor  people.  And  because  the  resources 
+available for post‐disaster support are usually small compared to the total losses, a proportional scheme 
+leads to a situation where compensation represents  a very small share of individual losses, reducing the 
+usefulness of the compensation.  
+
+Box 1: MARD Disaster Benefits 
+Support for Crops (30% or more) 
+ Plain  rice  cultivation  area  damaged  more  than  70%,1  million  VND/ha  (about  USD  48);  damage  from  30‐70%, 
+   500,000 Dong/ha (USD 24); 
+ Hybrid rice acreage damaged more than 70%, 1.5 million/ha (USD 70); damage from 30‐70%, 750,000/ha (USD 
+   35) 
+ Corn/vegetable  acreage  damaged  more  than  70%,  1  million  VND/ha  (USD  48);  damage  from  30‐70%,  500,000 
+   Dong/ha (USD 24) 
+ Industrial  crops/fruit  trees,  perennial  damage  more  than  70%,  2  million/ha  (USD  94);  damage  from  30‐70%,  1 
+   million VND/ha (USD 48) 
+ 
+Support for Lost Livestock: 
+
+ Bird, from 7,000‐15,000 Dong/animal (USD 0.3 to USD 0.7) 
+ Pig, 500,000 Dong/hatchling (USD 24) 
+ Bovine, equine, 2 million VND/animal breeds (USD 94) 
+ Deer, sheep, goats, 1 million VND/hatchling (USD 48) 
+ 
+Support for Aquaculture, Seafood Losses (30% or More) 
+ Area suffered more than 70%, 3 million ‐ 5 million/ha; damage from 30 ‐70%, 1 million‐3 million/ha (USD 48 to 
+     USD to USD 144) 
+ Cages suffer damage more than 70%, from 3 million ‐ 5 million VND/100 m3 cages (USD 144 to USD 240); damage 
+     from 30‐70%, 1 million ‐3 million Dong/100 m3 cages (USD 48 to USD 144) 
+ 
+Source: Decision No.: 187/2010/TT‐BTC (2009) Circular Provisions on the Mechanism, Policy Support Plant Breeding, 
+Livestock, Aquatic Production to Recover the Losses Due to Natural Disasters, Disease 
+
+Another  option  to  distribute  post‐disaster  support  is  to  provide  a  uniform  amount  to  all  people  being 
+affected. Considering how difficult and costly it is to measure individual losses after a disaster, a uniform 
+transfer to those affected represents a welcome simplification of the targeting mechanism. In India, post‐
+disaster  support  often  takes  the  form  of  an  ad  hoc  financial  transfer,  such  as  the  5,000  rupees  provided 
+to  victims  of  the  2005  floods  in  Mumbai.  In  Pakistan  after  the  2010  floods,  eligible  households  also 
+received  uniform  amounts  from  the  federal  government’s  Citizen’s  Damage  Compensation  Program 
+(CDCP), a rapid response cash grant program. In phase one, eligible households were given a one‐off cash 
+grant  in  the  amount  of  PRK  20,000  (about  US$213),  based  on  funds  available  to  cope  with  the  urgent 
+needs  of  a  very  large  flood‐affected  target  population.  In  phase  two,  the  size  of  the  grant  to  eligible 
+
+                                                            34 
+ 
+households  was  doubled  to  PRK  40,000  (around  US$  426),  a  more  suitable  amount  to  support  recovery, 
+provided in two installments of PRK 20,000 each.  
+
+The amount provided is often very small – maybe significant for poor people, but negligible for the richer 
+part of the population. In Mumbai after the 2005 floods, average losses were around 50,000 rupees, and 
+the  post‐disaster  transfer  was  only  5,000  rupees.  In  Bangladesh  following  the  1998  Great  Flood,  for 
+instance,  post‐flood  transfer  amounts  were  too  small  to  make  a  difference:  they  represented  only  4 
+percent  of  total  household  monthly  expenditure  for  poor  households,  and  2  percent  for  all  households. 
+Household  borrowing  highlights  this  limit:  poor  households  affected  by  the  flood  borrowed  about  six  to 
+eight  times  more  compared  to  the  level  of  government  transfers.  It  means  that  post‐disaster  does  not 
+replace insurance, and do not cover the loss of the middle‐class (see also below).   
+
+If we assume that the same budget ‐ $1 per affected individual – is used for post‐disaster support, we can 
+compare the benefit‐cost ratio with the two approaches. The results are presented in Figure 14. In most 
+countries,  the  welfare  benefit  from  $1  per  affected  individual  in  post‐disaster  support  is  higher  if  the 
+support  is  distributed  uniformly  to  the  population.  On  average,  the  benefit‐cost  ratio  is  higher  by  0.9  if 
+support  is  distributed  equally.  The  six  exceptions  (Cambodia,  Greece,  Mali,  Mauritania,  Niger,  Thailand) 
+are countries where poor people lose more than non‐poor people even in absolute terms. This is the case 
+where poor people are much more vulnerable than the rest of the population, and/or where inequality is 
+low (so that the difference in vulnerability dominates the difference in pre‐disaster wealth).  
+
+Even  though  benefit‐cost  ratios  are  lower  if  support  is  proportional  to  losses,  only  four  countries  have  a 
+benefit‐cost  ratio  lower  than  one  in  that  case  (Azerbaijan,  Georgia,  Hungary,  Ireland),  and  only  Georgia 
+has a ratio below 0.9. These countries are countries where poor people have a highly diversified income 
+– especially due to social protection transfers – that makes them less vulnerable.  
+
+The  ten  countries  where  the  difference  between  uniform  and  proportional  transfers  is  the  largest  –  in 
+favor  of  uniform  transfers  –  are  South  Africa,  Lesotho,  Botswana,  Honduras,  Panama,  Central  African 
+Republic,  Zambia,  Brazil,  Bolivia,  and  Angola.  They  are  countries  with  large  inequality  (in  terms  of  pre‐
+disaster  income  and  in  terms  of  vulnerability),  where  post‐disaster  support  would  go  disproportionally 
+toward the better‐off with a proportional scheme.  
+
+Figure  14:  Uniform  post‐disaster  transfers  often  have  higher  benefit‐cost  ratios  than  transfers  that  are 
+proportional to losses, because the later lead to higher transfers for the better‐off.
+(Benefit‐cost ratio of post‐disaster support when transfers are uniform, compared with then transfers are 
+proportional to losses) 
+
+
+
+
+                                                           35 
+ 
+                                                                                              
+
+These  results  however  make  the  important  simplification  that  the  amount  of  losses  is  mostly  driven  by 
+vulnerability  and  wealth  –  and  thus  by  the  income  level  of  the  affected  household.  It  disregards  the 
+variance in hazard and assumes  that all individuals of the same  income  class that are affected are losing 
+the same fraction of their income. In the presence of a large variability of losses – e.g., after a windstorm, 
+some houses are completely destroyed while others have minor damages to roof and windows –the value 
+of post‐disaster transfers that are proportional to losses would increase.  
+
+              5.3 Post‐disaster transfers and adaptive social protection do not replace insurance  
+This analysis starts from the assumption that post‐disaster government transfers are designed to support 
+the  most  in  need.  Under  this  assumption,  it  is  preferable  to  support  a  non‐affected  person  than  an 
+affected  person,  if  the  non‐affected  person  is  poorer  than  the  affected  one  after  the  shock.  This  is  a 
+fundamental  difference  with  insurance,  which  is  designed  to  compensate  for  a  fraction  of  the  losses, 
+irrespective  of  the  income  level  or  the  level  of  need.  This  difference  is  justified  by  (1)  who  pays  for  the 
+protection  (the  taxpayer  for  government  transfers  vs.  the  protected  individual  in  case  of  insurance);  (2) 
+how  the  price  is  calculated  (taxes  are  usually  determined  by  income  and  consumption  levels,  while 
+insurance premium depends on the average losses).  
+
+But governments in post‐disaster situations cannot only support the poorest, especially if even the better‐
+off have no access to risk management instruments such as borrowing and insurance.  
+
+There is an economic rationale to help the population – even the relatively wealthy – to repair and rebuild: 
+their  position  in  the  economic  system  makes  it  important  that  they  get  back  to  work  and  restore  their 
+productivity as soon as possible. Evidence from the floods in Thailand in 2011 shows that people with no 
+direct damages from the flood saw a reduction in income similar to the reduction of income for directly‐
+affected  people,  due  to  spill‐overs  in  the  economic  system  (Noy  and  Patel  2014).  These  spill‐overs  –  at 
+least those through reduced demand – are likely to be mostly dependent on the impact on the better‐off, 
+since they represent a large fraction of overall demand.  
+
+                                                             36 
+ 
+There is also a political economy rationale: governments cannot stay idle as some people struggle to cope 
+with  and  repair  damages,  even  if  these  people  are  not  the  worst‐off  in  the  country.  There  is  usually  a 
+strong demand for support after disasters, and the better‐off have often more political influence and voice 
+to lobby for support.  
+
+These  two  reasons  explain  why  post‐disaster  transfers  or  adaptive  social  protection  are  not  substitutes 
+for  market  insurance.  If  social  protection  is  designed  to  help  the  poorest  and  most  vulnerable,  it  cannot 
+provide  an  insurance  service  to  the  middle‐class  and  the  better‐off,  unless  the  government  is  ready  to 
+spend  extremely  large  resources.  In  practice,  governments  face  the  double  objective  of  helping  the 
+poorest  and  most  vulnerable  and  compensating  the  affected  population,  and  scarce  resources  makes  it 
+difficult or impossible to meet these two goals. 
+
+The classical indemnity insurance products are commonplace in high‐income countries and are based on 
+the observation of losses, with insurance payments triggered once losses occur. Since premiums are paid 
+by the beneficiaries, they create much less fairness and distributional issues (even though premiums are 
+often subsidized in practice). Classical indemnity insurance requires that robust data be available for the 
+insurer  to  assess  risks  ex‐ante  –  something  that  is  often  lacking  in  developing  countries  (Rogers  and 
+Tsirkunov 2013). And loss assessment may be costly if it requires that an expert visits every victim.  
+
+High penetration of market insurance removes the trade‐off for the government between compensating 
+the  victims  and  supporting  the  poorest,  especially  with  scarce  resources.  So  policies  to  increase  market 
+insurance penetration are also important for the poor, even if they do not benefit directly from insurance. 
+They benefit indirectly if the government – who do not need to compensate the middle‐class anymore – 
+can concentrate resources on them after a disaster.  
+
+Making  market  insurance  available  is  often  not  enough;  even  in  developed  countries,  penetration  of 
+indemnity insurance against natural hazards remains low in the absence of additional policies and actions. 
+Countries with high insurance  penetration are countries (i) where insurance is subsidized, as with floods 
+in  the  US  with  the  National  Flood  Insurance  Program;  (ii)  where  insurance  is  mandatory  and  backed  by 
+the  government  –  such  as  the    Turkish  insurance  against  earthquakes  and  fires,  which  is  an  excellent 
+example of how insurance access can be increased in middle‐income countries; or (iii) where insurance is 
+mandatory,  cross‐subsidized  and  backed  by  the  government,  the  case  of  France’s  Cat‐Nat  flood  and 
+drought insurance (Paudel 2012).  
+
+              5.4 Post‐disaster transfers increase resilience – even if they are imperfect 
+Figure  15  shows  the  resilience  gain  thanks  to  post‐disaster  transfers  modeled  in  resilience  estimation:  a 
+uniform  transfer calibrated on the losses of the poor people, taking into account  the limits in borrowing 
+and ability to reallocate resources that countries face.  
+
+On  average,  resilience  increases  by  1.4  percentage  points  thanks  to  such  post‐disaster  support.  At  the 
+global level, on the 117 countries covered by our analysis, it is a gain of $11.8 billion per year, in terms of 
+welfare.  These  gains  in  welfare  are  achieved  by  transferring  –  though  post‐disaster  support  and  special 
+taxes – $11 billion per year. 
+
+
+                                                           37 
+ 
+Resilience gains are growing with the GDP level, because richer countries tend to have higher capacity to 
+fund and deliver post disaster transfers. But there are countries at all GDP levels without the capacity to 
+mobilize resources after disasters (either because they lack access to liquidity or because they are unable 
+to  reallocate  resources  toward  emergency  support).  All  countries  where  resilience  is  not  increased  by 
+post‐disaster transfers are countries where (1) the government cannot access or reallocate the financing 
+(i.e.  low  credit  rating  and  no  contingent  finance  arrangement  in  place);  and/or  (2)  the  government  does 
+not  have  any  plan  for  post‐disaster  support.  These  include  countries  which  have  not  reported  anything 
+under  the  Hyogo  Framework  for  Action,  and  which  might  actually  have  better  capacity  than  what  we 
+modeled. 
+
+Figure  15:  Current  capacities  to  provide  post‐disaster  support  to  the  population  already  increase 
+countries’ resilience. 
+(Resilience  gains  with  estimates  of  the  current  ability  of  countries  to  distribute  post‐disaster  support, 
+compared  with  a  situation  with  no  post‐disaster  support,  assuming  that  transfers  are  proportional  to 
+losses) 
+
+
+
+
+                                                                        
+
+    6. Discussion 
+Our  socioeconomic  resilience  remains  an  imperfect  metric,  in  the  sense  that  it  does  not  include  all  the 
+dimensions  discussed  in  the  resilience  field  (Barrett  and  Constas,  2014;  Engle  et  al.,  2013;  Keating  et  al., 
+2014).  Our  framework  looks  at  the  socioeconomic  resilience,  but  disregards  direct  human  and  welfare 
+effects  (death,  injuries,  psychological  impacts,  etc.),  cultural  and  heritage  losses  (e.g.,  the  destruction  of 
+historical  assets),  social  and  political  destabilization,  and  environmental  degradation  (for  instance  when 
+
+
+                                                            38 
+ 
+disasters  affect  industrial  facilities  and  create  local  pollution).  The  framework  proposed  here  is  for 
+socioeconomic resilience, not for a broader concept of resilience.  
+
+Issues  related  to  conflicts  and  government  stability  are  not  explicitly  recognized,  even  though  they 
+indirectly influence our results since fragile governments usually provide little social protection and have 
+limited  ability  to  respond  to  shocks.  We  also  do  not  account  for  the  possibility  that  a  disaster  (or  the 
+response to it) magnifies pre‐existing conflicts.  
+
+Average  losses  for  poor  and  non‐poor  people  may  not  capture  the  full  impact  of  the  disaster:  in  each 
+category, losses are heterogeneous and some households may lose everything, and experience long‐term 
+effects  or  fall  into  poverty  traps.  During  the  July  2005  floods  in  Mumbai,  India,  household  surveys  show 
+that the median asset and income loss per capita was approximately Rs. 9,300, while the average loss was 
+substantially higher at around Rs. 13,700 (Patankar and Patwardhan 2016). Losses across the population 
+follow  a  lognormal  distribution  with  a  long  tail:  median  losses  are  moderate,  but  some  households  lost 
+almost  all  their  income.  For  the  people  experiencing  large  losses,  the  welfare  impact  of  the  shock  is  not 
+only  related  to  the  net  present  value  of  the  flow  of  consumption  losses,  but  also  to  possible  long‐term 
+effects,  such  as  reduction  in  food  intake,  health  effects  and  disability,  and  exclusion  from  job  markets, 
+which  can  lead  households  to  fall  into  poverty  traps  (Barnett  et  al.,  2008;  Carter  et  al.,  2007;  Kraay  and 
+McKenzie,  2014;  Maccini  and  Yang,  2009).  The  risk  of  poverty  traps  is  particularly  acute  for  children,  as 
+severe health impacts or interruptions in education can have lifelong impacts on earnings. We disregard 
+this  risk  as  it  is  difficult  to  monetize.  (Barrett  and  Constas,  2014)  propose  a  definition  of  development 
+resilience that focuses on the capacity of people to avoid such poverty traps. 
+
+Also,  the  ability  of  individual  firms  to  cope  with  the  shock  and  continue  to  produce  in  the  disaster 
+aftermath – the static resilience of (Rose, 2009) – depends on many factors that would need to be included 
+in  the  analysis.  Various  methodologies  have  been  proposed  to  assess  these  parameters,  using  input‐
+output or general equilibrium models (Santos and Haimes, 2004; Rose and Wei, 2013; Hallegatte, 2014b) 
+or explicit modeling of supply‐chains (Battiston et al., 2007; Henriet et al., 2012). But more work is needed 
+to assess this resilience based on the data and indicators that are available in all countries. 
+
+We  have  disregarded  the  impact  on  natural  capital,  in  spite  of  its  importance  for  the  income  of  poor 
+people  across  the  world  (Angelsen  et  al.,  2014)  and  the  impact  of  natural  disasters  on  soils  (through 
+salinization or erosion), fish stocks, or trees. Including natural capital in the assessment would meet many 
+data related issues, on the local importance of natural capital in income and on the vulnerability of natural 
+capital to disasters.  
+
+Further,  our  framework  does  not  address  the  ability  to  “build  back  better”  after  a  disaster  and  the 
+possibility  for  reconstruction  to  lead  to  an  improved  situation.  It  also  takes  the  current  exposure  and 
+vulnerability as a given, and investigates policy options without accounting for feedback in terms of risk‐
+taking decisions. Better ability to manage risks – e.g., through access to insurance and social protection – 
+could  indeed  have  further  positive  economic  impacts  through  more  risk‐taking,  innovation,  and 
+specialization  (Elbers  et  al.,  2007;  World  Bank,  2013).  It  can  also  have  negative  impacts  through  moral 
+hazard  and  excessive  risk‐taking  (Michel‐Kerjan,  2010).  These  feedbacks  and  relationships  have  to  be 
+
+
+                                                            39 
+ 
+explored before any risk management policy is implemented, but they often depend on implementation 
+details and cannot be assessed through a global analysis. 
+
+The  response  to  a  shock  is  not  fully  native  to  a  country,  but  is  also  driven  by  foreign  development 
+assistance  (Hochrainer,  2009),  which  is  not  explicitly  taken  into  account  in  the  indicator.  We  do  capture 
+some aspects of development assistance. For instance, countries may be able to provide social protection 
+thanks to budget support from abroad (for instance, Ethiopia receives significant support for its Productive 
+Safety Nets Program). Also, the ability to scale up support after disasters as included in the HFA reporting 
+– depends on concessional resources and international support  (e.g.,  through CAT‐DDOs). Humanitarian 
+and  emergency  response  is  not  included  in  our  analysis,  however.  This  may  create  a  “resilience  bias” 
+towards  middle‐income  countries  that  need  less  to  rely  on  overseas  assistance.  However,  one  positive 
+aspect of not including humanitarian assistance is that countries with low resilience can be highlighted as 
+potential targets for development assistance.   
+
+Climate change is affecting the frequency and intensity of weather hazards, and there is a growing interest 
+in defining metrics related to the ability to adapt to these changes. Combining new hazard scenarios with 
+our socioeconomic resilience can be one of the building blocks of an indicator of climate change resilience 
+(Engle  et  al.,  2013).  Finally,  many  of  the  countries  that  are  likely  to  be  the  most  vulnerable  to  climate 
+change  are  also  those  where  data  are  lacking.  Producing  an  exhaustive  map  of  socioeconomic  resilience 
+would  require  data  collection  in  these  countries  or  developing  a  reduced,  less  data  intensive,  version  of 
+the model presented here (for instance based only on the parameters identified in Figures 6 to 8).   
+
+Our approach adds to the literature and existing indicators because (1) it is based on a formal theoretical 
+framework and on a formal and quantified definition of resilience (the ratio of asset and welfare losses); 
+(2)  it  adds  a  focus  on  the  poorest  and  most  vulnerable  by  distinguishing  between  the  characteristics  of 
+the poorest 20 percent and the rest of the population; and (3) it provides an associated tool to assess the 
+benefits  from  various  risk  management  policies,  such  as  adaptive  social  protection  or  early  warning 
+systems.   
+
+     7. Acknowledgements 
+This  and  previous  versions  of  this  article  benefited  from  comments  and  suggestions  from  anonymous  referees  and  from  Paolo 
+Bazzurro, Charlotte Benson, David Bevan, Laura Bonzanigo, Sebastian Boreux, Daniel Clarke, Carlo del Ninno, Patrice Dumas, Nate 
+Engle,  Marianne  Fay,  Chico  Ferreira,  Chris  Field,  Francis  Ghesquiere,  Ruth  Hill,  Maddalena  Honorati,  Kazuko  Ishigaki,  Brenden 
+Jongman, Tamaro Kane, Kouassi Kouadio, Norman Loayza, Hugh MacLeman, Reinhard Mechler, Martin Melecky, Rick Murnane, 
+Ulf  Narloch,  James  Newman,  Ilan  Noy,  James  Orr,  Richard  Poulter,  Valentin  Przyluski,  Rob  Reid,  Adam  Rose,  Rae  Rosen,  Julie 
+Rozenberg, Alanna Simpson, Emmanuel Skoufias, Vladimir Stenek, Tse‐Ling The, Maarten van Aalst, Sebastian von Dahlen, Claudio 
+Volonte, and Ruslan Yemtsov. This paper benefited from support from DFID and the GFDRR. 
+
+
+     8. References  
+Aerts,  J.C.J.H.,  Botzen,  W.J.W.,  Emanuel,  K.,  Lin,  N.,  Moel,  H.  de,  Michel‐Kerjan,  E.O.,  2014.  Evaluating 
+          Flood Resilience Strategies for Coastal Megacities. Science 344, 473–475. 
+Albala‐Bertrand, J.M., 2013. Disasters and the Networked Economy. Routledge. 
+
+                                                                    40 
+ 
+Angelsen,  A.,  Jagger,  P.,  Babigumira,  R.,  Belcher,  B.,  Hogarth,  N.J.,  Bauch,  S.,  Börner,  J.,  Smith‐Hall,  C., 
+         Wunder,  S.,  2014.  Environmental  Income  and  Rural  Livelihoods:  A  Global‐Comparative  Analysis. 
+         World Dev., Forests, Livelihoods, and Conservation 64, Supplement 1, S12–S28. 
+Barnett, B.J., Barrett, C.B., Skees, J.R., 2008. Poverty Traps and Index‐Based Risk Transfer Products. World 
+         Dev., Special Section (pp. 2045‐2102). The Volatility of Overseas Aid 36, 1766–1785. 
+Barrett,  C.B.,  Constas,  M.A.,  2014.  Toward  a  theory  of  resilience  for  international  development 
+         applications. Proc. Natl. Acad. Sci. 111, 14625–14630. 
+Barrett,  C.B.,  Reardon,  T.,  Webb,  P.,  2001.  Non‐agricultural  Income  Diversification  and  Household 
+         Livelihood Strategies in Rural Africa: Concepts, Dynamics and Policy Implications. Food Policy 26, 
+         315–331. 
+Battiston, S., Delli Gatti, D., Gallegati, M., Greenwald, B., Stiglitz, J.E., 2007. Credit chains and bankruptcy 
+         propagation in production networks. J. Econ. Dyn. Control 31, 2061–2084. 
+Brouwer,  R.,  Akter,  S.,  Brander,  L.,  Haque,  E.,  2007.  Socioeconomic  vulnerability  and  adaptation  to 
+         environmental  risk:  a  case  study  of  climate  change  and  flooding  in  Bangladesh.  Risk  Anal.  Off. 
+         Publ. Soc. Risk Anal. 27, 313–326. 
+Browning, Edgar K. 1976. “The Marginal Cost of Public Funds.” The Journal of Political Economy, 283–98. 
+Cardenas, V., Hochrainer, S., Mechler, R., Pflug, G., Linnerooth‐Bayer, J., 2007. Sovereign financial disaster 
+         risk management: the case of Mexico. Environ. Hazards 7, 40–53. 
+Carter,  M.R.,  Little,  P.D.,  Mogues,  T.,  Negatu,  W.,  2007.  Poverty  Traps  and  Natural  Disasters  in  Ethiopia 
+         and Honduras. World Dev. 35, 835–856. 
+Cavallo, E., Noy, I., 2011. Natural disasters and the economy–a survey. Int. Rev. Environ. Resour. Econ. 5, 
+         63–102. 
+Dahlby, Bev. 2008. The Marginal Cost of Public Funds: Theory and Applications. MIT press. 
+Davies, M., Béné, C., Arnall, A., Tanner, T., Newsham, A., Coirolo, C., 2013. Promoting Resilient Livelihoods 
+         through Adaptive Social Protection: Lessons from 124 programmes in South Asia. Dev. Policy Rev. 
+         31, 27–58. 
+Dercon, S., 2004. Growth and shocks: evidence from rural Ethiopia. J. Dev. Econ. 74, 309–329. 
+de  Janvry,  Alain,  Alejandro  del  Valle,  and  Elisabeth  Sadoulet.  2016.  “Insuring  Growth:  The  Impact  of 
+         Disaster Funds on Economic Reconstruction in Mexico.” 
+de  Janvry,  Alain,  Alejandro  del  Valle,  and  Elisabeth  Sadoulet.  2016.  “Insuring  Growth:  The  Impact  of 
+         Disaster Funds on Economic Reconstruction in Mexico.” 
+Elbers, C., Gunning, J.W., Kinsey, B., 2007. Growth and Risk: Methodology and Micro Evidence. World Bank 
+         Econ. Rev. 21, 1–20. 
+Engle, N.L., Bremond, A. de, Malone, E.L., Moss, R.H., 2013. Towards a resilience indicator framework for 
+         making climate‐change adaptation decisions. Mitig. Adapt. Strateg. Glob. Change 19, 1295–1312. 
+Fleurbaey,  Marc,  and  Peter  J.  Hammond.  2004.  “Interpersonally  Comparable  Utility.”  In  Handbook  of 
+         Utility  Theory,  edited  by  Salvador  Barberà,  Peter  J.  Hammond,  and  Christian  Seidl,  1179–1285. 
+         Springer US. http://link.springer.com.gate3.inist.fr/chapter/10.1007/978‐1‐4020‐7964‐1_8. 
+Foa, Roberto. 2013. “Household Risk Preparation Indices—Construction and Diagnostics.” 
+G7,  2015.  Leadersʼ  Declara on  G7  Summit  Germany  [WWW  Document].  URL 
+         http://www.international.gc.ca/g8/g7_germany_declaration‐
+         g7_allemagne_declaration.aspx?lang=eng (accessed 6.14.15). 
+Geographic  Information  Science  and  Technology,  2015.  Landscan  Population  Data.  Oak  Ridge  National 
+         Laboratory. 
+GIZ.  2014.  “The  Vulnerability  Sourcebook:  Concept  and  Guidelines  for  Standardised  Vulnerability 
+         Assessments.” 
+         https://gc21.giz.de/ibt/var/app/wp342deP/1443/index.php/knowledge/vulnerability‐
+         assessment/vulnerability‐sourcebook/. 
+
+                                                            41 
+ 
+Guha‐Sapir,  D.,  Santos,  I.,  Borde,  A.,  2013.  The  economic  impacts  of  natural  disasters.  Oxford  University 
+         Press. 
+Hallegatte, S., 2012. A Cost Effective Solution  to  Reduce Disaster  Losses in Developing Countries: Hydro‐
+         Meteorological  Services,  Early  Warning,  and  Evacuation.  World  Bank  Policy  Res.  Work.  Pap.  No 
+         6058. 
+Hallegatte,  S.,  2014a.  Economic  Resilience:  definition  and  measurement.  World  Bank  Policy  Res.  Work. 
+         Pap. No 6852. 
+Hallegatte,  S.,  2014b.  Modeling  the  role  of  inventories  and  heterogeneity  in  the  assessment  of  the 
+         economic costs of natural disasters. Risk Anal. 34, 152–167. 
+Hallegatte, S., Green, C., Nicholls, R.J., Corfee‐Morlot, J., 2013. Future flood losses in major coastal cities. 
+         Nat. Clim. Change 3, 802–806. 
+Hallegatte,  S.,  Hourcade,  J.C.,  Dumas,  P.,  2007.  Why  economic  dynamics  matter  in  assessing  climate 
+         change damages: illustration on extreme events. Ecol. Econ. 62, 330–340. 
+Hallegatte, S., Bangalore, M., Bonzanigo, L., Fay, M., Kane, T., Narloch, U., Rozenberg, J., Treguer, D., Vogt‐
+         Schilb, A. 2016a. Shock Waves: Managing the Impacts of Climate Change on Poverty. Washington, 
+         DC: World Bank 
+Hallegatte,  Stéphane,  Mook  Bangalore,  and  Adrien  Vogt‐Schilb.  2016b.  “Assessing  Socioeconomic 
+         Resilience to Floods in 90 Countries.” World Bank Policy Research Working Paper 7663  
+Hallegatte, S., and A. Vogt‐Schilb. 2016. “Are Losses from Natural Disasters More Than Just Asset Losses? 
+         The  Role  of  Capital  Aggregation,  Sector  Interactions,  and  Investment  Behaviors.”  Background 
+         paper, World Bank, Washington, DC. 
+Hallegatte, S., Vogt‐Schilb, A., Bangalore M., Rozenberg, J., 2017 “Unbreakable: Building the Resilience of 
+         the Poor in the Face of Natural Disasters” World Bank, Washington, DC 
+Henriet,  F.,  Hallegatte,  S.,  Tabourier,  L.,  2012.  Firm‐network  characteristics  and  economic  robustness 
+         to natural disasters. J. Econ. Dyn. Control 36, 150–167. 
+Hochrainer,  S.,  2009.  Assessing  the  Macroeconomic  Impacts  of  Natural  Disasters:  Are  there  any?  World 
+         Bank Policy Res. Work. Pap. Ser. Vol. 
+Hochrainer‐Stigler,  S.,  Mechler,  R.,  Pflug,  G.,  Williges,  K.,  2014.  Funding  public  adaptation  to  climate‐
+         related disasters. Estimates for a global fund. Glob. Environ. Change 25, 87–96. 
+IPCC,  2012.  Special  Report  on  Managing  the  Risks  of  Extreme  Events  and  Disasters  to  Advance  Climate 
+         Change Adaptation: Summary for Policymakers: a Report of Working Groups I and II of the IPCC., 
+         Published for the Intergovernmental Panel on Climate Change. 
+Jongman,  B.,  Hochrainer‐Stigler,  S.,  Feyen,  L.,  Aerts,  J.C.J.H.,  Mechler,  R.,  Botzen,  W.J.W.,  Bouwer,  L.M., 
+         Pflug, G., Rojas, R., Ward, P.J., 2014. Increasing stress on disaster‐risk finance due to large floods. 
+         Nat. Clim. Change 4, 264–268. 
+Jongman, B., Ward, P.J., Aerts, J.C., 2012. Global exposure to river and coastal flooding: Long term trends 
+         and changes. Glob. Environ. Change 22, 823–835. 
+Jongman,  B.,  Winsemius,  H.C.,  Aerts,  J.C.J.H.,  Perez,  E.C.  de,  Aalst,  M.K.  van,  Kron,  W.,  Ward,  P.J.,  2015. 
+         Declining vulnerability to river floods and the global benefits of adaptation. Proc. Natl. Acad. Sci. 
+         112, E2271–E2280. 
+Kahn, M.E., 2005. The Death Toll from Natural Disasters: The Role of Income, Geography, and Institutions. 
+         Rev. Econ. Stat. 87, 271–284. 
+Keating,  A.,  Campbell,  K.,  Mechler,  R.,  Michel‐Kerjan,  E.,  Mochizuki,  J.,  Howard,  K.,  Bayer,  J.,  Hanger,  S., 
+         McCallum,  I.,  See,  L.,  Keith,  W.,  Atreya,  A.,  Botzen,  W.,  Collier,  B.,  Czajkowski,  J.,  Hochrainer,  S., 
+         Egan,  C.,  2014.  Operationalizing  Resilience  Against  Natural  Disaster  Risk:  Opportunities,  Barriers 
+         and A Way Forward. 
+Kocornik‐Mina, A., McDermott, T.K., Michaels, G., Rauch, F., 2015. Flooded Cities. 
+
+
+                                                             42 
+ 
+Kraay, A., McKenzie, D., 2014. Do poverty traps exist? 
+Kreibich,  H.,  Thieken,  A.H.,  Petrow,  T.,  Müller,  M.,  Merz,  B.,  2005.  Flood  loss  reduction  of  private 
+          households  due  to  building  precautionary  measures  –  lessons  learned  from  the  Elbe  flood  in 
+          August 2002. Nat Hazards Earth Syst Sci 5, 117–126. 
+Kunreuther,  H.,  Ginsberg,  R.,  Miller,  L.,  Sagi,  P.,  Slovic,  P.,  Borkan,  B.,  Katz,  N.,  1978.  Disaster  insurance 
+          protection: Public policy lessons. Wiley New York. 
+Kuriakose,  Anne  T.,  Rasmus  Heltberg,  William  Wiseman,  Cecilia  Costella,  Rachel  Cipryk,  and  Sabine 
+          Cornelius.  2013.  “Climate‐Responsive  Social  Protection.”  Development  Policy  Review  31 
+          (November): o19–34. doi:10.1111/dpr.12037. 
+Le De, L., Gaillard, J.C., Friesen, W., 2013. Remittances and disaster: a review. Int. J. Disaster Risk Reduct. 
+          4, 34–43. 
+Maccini, S., Yang, D., 2009. Under the Weather: Health, Schooling, and Economic Consequences of Early‐
+          Life Rainfall. Am. Econ. Rev. 99, 1006–26. 
+Massiani, Jérôme, and Gabriele Picco. 2013. “The Opportunity Cost of Public Funds: Concepts and Issues.” 
+          SSRN  Scholarly  Paper  ID  2321977.  Rochester,  NY:  Social  Science  Research  Network. 
+          http://papers.ssrn.com/abstract=2321977. 
+Melecky,  Martin,  and  Claudio  Raddatz.  2011.  “How  Do  Governments  Respond  after  Catastrophes? 
+          Natural‐Disaster Shocks and the Fiscal Stance.” 
+Michel‐Kerjan, E., Hochrainer‐Stigler, S., Kunreuther, H., Linnerooth‐Bayer, J., Mechler, R., Muir‐Wood, R., 
+          Ranger,  N.,  Vaziri,  P.,  Young,  M.,  2013.  Catastrophe  Risk  Models  for  Evaluating  Disaster  Risk 
+          Reduction Investments in Developing Countries. Risk Anal. 33, 984–999. 
+Michel‐Kerjan,  E.O.,  2010.  Catastrophe  economics:  the  national  flood  insurance  program.  J.  Econ. 
+          Perspect. 165–186. 
+Noy, I., 2009. The macroeconomic consequences of disasters. J. Dev. Econ. 88, 221–231. 
+Noy,  Ilan,  and  Pooja  Patel.  2014.  “Floods  and  Spillovers:  Households  after  the  2011  Great  Flood  in 
+          Thailand.” Working Paper Series 3609. Victoria University of Wellington, School of Economics and 
+          Finance.  
+Noy, I., Yonson, R., 2016. A survey of the theory and measurement of economic vulnerability and resilience 
+          to natural hazards. 
+OECD. 2014. “Guidelines for Resilience Systems Analysis.” 
+Paudel, Youbaraj. 2012. “A Comparative Study of Public—Private Catastrophe Insurance Systems: Lessons 
+          from Current Practices.” The Geneva Papers on Risk and Insurance‐Issues and Practice 37 (2): 257–
+          85. 
+Patankar, A., Patwardhan, A., 2016. Estimating the Uninsured Losses due to Extreme Weather Events and 
+          Implications for Informal Sector Vulnerability: A Case Study of Mumbai, India. Natural Hazards 80 
+          (1): 285–310. 
+Pelham, L., Clay, E., Braunholz, T., 2011. Natural disasters: what is the role for social safety nets? Overseas 
+          Development Institute, London. 
+Ranger, N., Hallegatte, S., Bhattacharya, S., Bachu, M., Priya, S., Dhore, K., Rafique, F., Mathur, P., Naville, 
+          N.,  Henriet,  F.,  others,  2011.  An  assessment  of  the  potential  impact  of  climate  change  on  flood 
+          risk in Mumbai. Clim. Change 104, 139–167. 
+Rogers, David P., and Vladimir V. Tsirkunov. 2013. Weather and Climate Resilience: Effective Preparedness 
+          through National Meteorological and Hydrological Services. World Bank Publications. 
+Rose,  A.,  2009.  Economic  Resilience  to  Disasters  (CARRI  Research  Report  8).  Community  and  Regional 
+          Resilience Institute. 
+Rose,  A.,  Krausmann,  E.,  2013.  An  economic  framework  for  the  development  of  a  resilience  index  for 
+          business recovery. Int. J. Disaster Risk Reduct. 5, 73–83. 
+
+
+                                                             43 
+ 
+Rose,  A.,  Wei,  D.,  2013.  Estimating  the  economic  consequences  of  a  port  shutdown:  the  special  role  of 
+         resilience. Econ. Syst. Res. 25, 212–232. 
+Santos, J.R., Haimes, Y.Y., 2004. Modeling the Demand Reduction Input‐Output (I‐O) Inoperability Due to 
+         Terrorism of Interconnected Infrastructures*. Risk Anal. 24, 1437–1451. 
+Scussolini, P., Aerts, J., Jongman, B., Bouwer, L., Winsemius, H.C., de Moel, H., Ward, P.J., 2015. FLOPROS: 
+         An evolving global database of flood protection standards. 
+Siegel, P., de la Fuente, A., 2010. Mainstreaming natural disaster risk management into social protection 
+         policies (and vice versa) in Latin America and the Caribbean. Well‐ Soc. Policy 6, 131–159. 
+Skoufias, E., 2003. Economic Crises and Natural Disasters: Coping Strategies and Policy Implications. World 
+         Dev., Economic Crises, Natural Disasters, and Poverty 31, 1087–1102. 
+Surminski,  S.,  Bouwer,  L.M.,  Linnerooth‐Bayer,  J.,  2016.  How  insurance  can  support  climate  resilience. 
+         Nat. Clim. Change 6, 333–334. 
+UN‐ISDR, 2015. Global Assessment Report on Disaster Risk Reduction. 
+USGS,  2015.  USGS.  2015.  “PAGER  (Prompt  Assessment  of  Global  Earthquakes  for  Response).” 
+         http://earthquake.usgs.gov/research/pager/. 
+Winsemius, Hessel C., Brenden Jongman, Ted I. E. Veldkamp, Stephane Hallegatte, Mook Bangalore, and 
+         Philip J. Ward. 2015. “Disaster Risk, Climate Change, and Poverty : Assessing the Global Exposure 
+         of  Poor  People  to  Floods  and  Droughts.”  World  Bank  Policy  Research  Working  Paper  7480 
+         (November): 1–35. 
+World Bank, 2013. Risk and Opportunity: Managing Risk for Development (World Development Report). 
+
+ 
+
+
+
+
+                                                         44 
+ 
+                    Appendix. PAGER building categories aggregated into three general categories to representing differential vulnerability. 
+    Agg. Cat.                                                                PAGER building category                                                                                               Vuln. 
+    Fragile  Adobe blocks (unbaked sundried mud block) walls Adobe block, mud mortar, wood roof and floors Adobe block, mud mortar, bamboo, straw, and thatch roof; A                              70% 
+             block, straw, and thatch roof cement‐sand mortar; Adobe block, mud mortar, reinforced concrete bond beam, cane and mud roof; Adobe block, mud mortar
+             bamboo  or  rope  reinforcement;  Rectangular  cut‐stone  masonry  block;  Rectangular  cut  stone  masonry  block  with  mud  mortar,  timber  roof  and  floors;  Inf
+             constructions;  Mud  walls;  Mud  walls  without  horizontal  wood  elements;  Mud  walls  with  horizontal  wood  elements;  Mobile  homes;  Rubble  stone  (field  s
+             masonry; Local field stones dry stacked (no mortar) with timber floors, earth, or metal roof; Local field stones with mud mortar; Local field stones with lime m
+             Local  field  stones  with  cement mortar,  vaulted brick  roof  and  floors;  Unreinforced  fired  brick  masonry;  Unreinforced  brick  masonry  in  mud  mortar  without  t
+             posts; Unreinforced brick masonry in mud mortar with timber posts; Wood light unbraced post and beam frame; Wood panel or log construction; Wattle and 
+             (Walls with bamboo/light timber log/reed mesh and post); Wood unbraced heavy post and beam frame with mud or other infill material; Wood braced frame
+             load‐bearing infill wall system 
+    Median  Rectangular  cut  stone  masonry  block  with  lime  mortar;  Rectangular  cut  stone  masonry  block  with  cement  mortar;  Local  field  stones  with  cement  mortar  a            30% 
+             reinforced  concrete  bond  beam;  Ductile  reinforced  concrete  moment  frame  with  or  without  infill  low‐rise;  Reinforced  concrete  shear  walls  low‐rise;  Nonduc
+             reinforced concrete frame with masonry infill walls low‐rise; Nonductile reinforced concrete frame without masonry infill walls low‐rise; Steel reinforced concr
+             (Steel members encased in reinforced concrete) low‐rise; Concrete moment resisting frame with shear wall ‐ dual system low‐rise; Rectangular cut stone maso
+             block  with  reinforced  concrete  floors  and  roof;  Massive  stone  masonry  in  lime  or  cement  mortar;  Precast  concrete  frames  with  concrete  shear  walls  low‐r
+             Precast  reinforced  concrete  moment  resisting  frame  with  masonry  infill  walls  low‐rise;  Rammed  Earth/Pneumatically  impacted  stabilized  earth;  Concrete  bl
+             unreinforced masonry with lime or cement mortar; Unreinforced brick masonry in lime mortar;  Unreinforced fired brick masonry, cement mortar; Unreinfor
+             fired  brick  masonry,  cement  mortar,  but  with  reinforced  concrete  floor  and  roof  slabs;  Not  specified  (unknown/default);  Wood;  Wood  stud‐wall  frame  w
+             plywood/gypsum board sheathing; Wood frame, heavy members (with area > 5000 sq. ft.) 
+    Rosbust  Reinforced concrete; Ductile reinforced concrete moment frame with or without infill; Ductile reinforced concrete moment frame with or without infill high‐r                          10% 
+             Ductile reinforced concrete moment frame with or without infill mid‐rise; Reinforced concrete shear walls; Reinforced concrete shear walls high‐rise; Reinfor
+             concrete shear walls mid‐rise; Nonductile reinforced concrete frame with masonry infill walls; Nonductile reinforced concrete frame with masonry infill walls hi
+             rise;  Nonductile  reinforced  concrete  frame  with  masonry  infill  walls  mid‐rise;  Nonductile  reinforced  concrete  frame  without  masonry  infill  walls;  Nonduc
+             reinforced  concrete  frame  without  masonry  infill  walls  high‐rise;  Nonductile  reinforced  concrete  frame  without  masonry  infill  walls  mid‐rise;  Steel  reinfor
+             concrete  (Steel  members  encased  in  reinforced  concrete);  Steel  reinforced  concrete  (Steel  members  encased  in  reinforced  concrete)  high‐rise;  Steel  reinfor
+             concrete  (Steel  members  encased  in  reinforced  concrete)  mid‐rise;  Concrete  moment  resisting  frame  with  shear  wall ‐  dual  system;  Concrete  moment  resist
+             frame  with  shear  wall ‐  dual  system  high‐rise;  Concrete  moment  resisting  frame  with  shear  wall ‐  dual  system  mid‐rise;  Flat  slab  structure;  Confined  mason
+             Confined masonry high‐rise; Confined masonry low‐rise; Confined masonry mid‐rise; Precast concrete tilt‐up walls; Precast concrete frames with concrete sh
+             walls;  Precast  concrete  frames  with  concrete  shear  walls  high‐rise;  Precast  concrete  frames  with  concrete  shear  walls  mid‐rise;  Precast  reinforced  concr
+             moment  resisting  frame  with  masonry  infill  walls;  Precast  reinforced  concrete  moment  resisting  frame  with  masonry  infill  walls  high‐rise;  Precast  reinfor
+             concrete moment resisting frame with masonry infill walls mid‐rise; Precast panels (wall made of number of horizontal precast panels, construction from form
+             Soviet  Union  countries);  Reinforced  masonry;  Reinforced  masonry  bearing  walls  with  wood  or  metal  deck  diaphragms;  Reinforced  masonry  bearing  walls  w
+             wood or metal deck diaphragms low‐rise; Reinforced masonry bearing walls with wood or metal deck diaphragms mid‐rise (4+ stories); Reinforced masonry bear
+             walls  with  concrete  diaphragms;  Reinforced  masonry  bearing  walls  with  concrete  diaphragms  high‐rise;  Reinforced  masonry  bearing  walls  with  concr
+             diaphragms  low‐rise;  Reinforced  masonry  bearing  walls  with  concrete  diaphragms  mid‐rise;  Steel;  Steel  moment  frame;  Steel  moment  frame  high‐rise;  St
+             moment frame low‐rise; Steel moment frame mid‐rise; Steel braced frame; Steel braced frame high‐rise; Steel braced frame low‐rise; Steel braced frame mid‐r
+             Steel light frame; Steel frame with cast‐in‐place concrete shear walls; Steel frame with cast‐in‐place concrete shear walls high‐rise; Steel frame with cast‐in‐pl
+             concrete  shear  walls  low‐rise;  Steel  frame  with  cast‐in‐place  concrete  shear  walls  mid‐rise;  Steel  frame  with  unreinforced  masonry  infill  walls;  Steel  frame  w
+             unreinforced masonry infill walls high‐rise; Steel frame with unreinforced masonry infill walls low‐rise; Steel frame with unreinforced masonry infill walls mid‐
+
+
+
+                                                                                                  45 
+ 
+

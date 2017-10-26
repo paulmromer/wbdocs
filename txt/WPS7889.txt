@@ -1,0 +1,1449 @@
+                                                  WPS7889
+
+
+Policy Research Working Paper                    7889
+
+
+
+
+       Benefits of Electrification and the Role
+                    of Reliability
+                           Evidence from India
+
+                                Hussain Samad
+                                 Fan Zhang
+
+
+
+
+South Asia Region
+Office of the Chief Economist
+November 2016
+Policy Research Working Paper 7889
+
+
+  Abstract
+ This paper estimates the welfare impact of rural electrifi-                        during the sample period, but gaining access to electric-
+ cation in India using nationally representative household                          ity alone is associated with only a 9.6 percent increase in
+ panel survey data for 2005 and 2012. Analysis based on                             income. The net gain from both increasing the access rate
+ a propensity-score-weighted fixed-effects model finds that                         and reducing power outages in rural India is estimated to
+ while electrification is associated with a broad range of                          be US$11 billion a year. Moreover, India’s rural electrifica-
+ social and economic benefits, the size of the effects depends                      tion policy appears to be progressive because lower-income
+ importantly on the reliability of electricity service. Gain-                       households benefit more from access to electricity than
+ ing access to electricity combined with a reliable power                           higher-income households during the sample period.
+ supply is associated with a 17 percent increase in income
+
+
+
+
+  This paper is a product of the Office of the Chief Economist, South Asia Region. It is part of a larger effort by the World
+  Bank to provide open access to its research and make a contribution to development policy discussions around the world.
+  Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted
+  at fzhang1@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+                                                                             
+
+                                                                             
+
+                                                                             
+
+                    Benefits of Electrification and the Role of Reliability: Evidence from India1 
+
+                                                               Hussain Samad and Fan Zhang 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Key Words: Rural Electrification, Reliability of Electricity, Distributional Impact, Quantile Regression     
+
+JEL:  D6, Q4, R2 
+
+
+
+
+                                                            
+1
+  This  paper  is  part  of  a  broader  analytical  effort  to  assess  the  cost  of  power  sector  distortions  in  South  Asia 
+conducted  by  Office  of  the  Chief  Economist  of  the  South  Asia  Region.  We  thank  Junaid  Kamal  Ahmad  and  Martin 
+Rama for helpful comments on earlier drafts. All errors remain those of the authors’. 
+I.  Introduction 
+More  than  a  billion  people  around  the  world  still  lack  access  to  electricity.  For  untold  others  who  are 
+nominally  connected  to  the  grid,  access  to  electricity  is  often  uneven  and  unreliable,  characterized  by 
+frequent,  long‐lasting  power  outages.2 Outages  often  occur  because  of  technical  failures.  In  many 
+developing  countries,  they  also  reflect  the  efforts  of  utilities  to  cope  with  persistent  power  shortages 
+through  load  shedding  (or  rolling  blackouts).  According  to  business  surveys,  firms  in  about  a  third  of 
+developing  countries  experience  at  least  20  hours  of  power  outages  a  month  on  average.  The  situation 
+is  even  worse  in  South  Asia,  where  firms  report  almost  one  outage  a  day,  with  an  average  duration  of 
+5.7 hours.3  
+
+Providing  access  to  reliable  electricity  is  vital  for  ending  extreme  poverty  and  boosting  shared 
+prosperity.  Many  studies  have  examined  the  welfare  effects  of  grid  connections  on  households  (for 
+example,  Dinkelman  2011;  Khandker,  Barnes,  and  Samad  2012; Lipscomb,  Mobarak,  and  Barham  2013; 
+Banerjee  et  al.,  2015,  and  Chakravorty,  Emerick,  and  Ravago  2016).  While  earlier  analyses  focused  on 
+credibly  estimating  the  causal  relationship  between  household  welfare  and  a  binary  variable  of 
+electricity  access,  few  have  taken  into  account  whether  the  “connected”  household  actually  receives  an 
+adequate level of service.  
+
+Going  beyond  basic  connectivity  is  essential  to  understanding  the  effects  of  modern  energy  in  the 
+developing world. Even where electrical wires are present, children cannot study in the evenings if there 
+is no power to provide light—nor can  people keep  their businesses open. Poor‐quality electricity service 
+also  means  that  households  must  continue  to  rely  on  costly  backup  services.  And  because  consumers 
+often  pay  a  fixed  monthly  charge  regardless  of  their  actual  consumption,  long  power  outages  increase 
+their  effective  electricity  tariff.  All  this  suggests  that  models  ignoring  the  quality  of  electricity  service 
+may  underestimate  the  net  benefits  associated  with  reliable  electricity  supply.    A  recent  World  Bank 
+study  concluded  that  reliable  supply  is  the  defining  issue  in  achieving  the  economic  benefits  of  grid‐
+connection  (Pargal and Banerjee 2014). 
+
+The  purpose  of  this  paper  is  to  examine  the  impact  of  rural  electrification  on  household  welfare  while 
+paying  special  attention  to  how  the  quality  of  electricity  supply  affects  the  results.  Our  study  takes 
+advantage  of  newly  available  panel  data  from  the  Indian  Human  Development  Survey  (IHDS),  which 
+includes a  question asking  households to estimate the daily average duration of outages. Using hours of 
+                                                            
+2
+     In the following, we use the terms “access” and “grid‐connection” interchangeably.
+3
+     World Bank Enterprise Surveys (http://www.enterprisesurveys.org). 
+
+                                                               2 
+ 
+availability  as  a  measure  of  the  reliability  of  electricity  supply,  we  find  that  outages  have  a  negative 
+effect  on  economic  outcomes  and  that  the  effects  of  gaining  access  to  electricity  become  stronger  after 
+controlling  for  outages.  For  example,  per  capita  income  decreases  by  0.5  percent  for  each  additional 
+hour  of  outages.  And  while  electrification  combined  with  a  24‐hour‐a‐day  power  supply  is  associated 
+with a 17 percent increase in income, electrification alone (with outages not controlled for) is associated 
+with  only  an  11  percent  increase.  The  aggregate  benefit  of  obtaining  reliable  electricity  in  rural  India  is 
+estimated  to  be  US$11  billion  a  year,  with  US$4.7  billion  from  increasing  the  access  rate  and  US$6.5 
+billion from improving the reliability of existing supply. 
+
+Several studies have examined the benefits of rural electrification in India. For example, van de Walle et 
+al.  (2015)  estimate  the  long‐run  effects  of  electrification  on  household  consumption  in  rural  India  based 
+on  data  for  1981–98;  Burlig  and  Preonas  (2016)  investigate  the  effect  of  India’s  national  rural 
+electrification  program  on  labor  force  participation,  living  standards,  and  other  village‐wide  outcomes 
+using  census  data  for  2001  and  2011;  and  Khandker  et  al.  (2014)  estimate  the  benefits  of  electrification 
+projects  in  rural  India  based  on  cross‐sectional  data  for  2005.  A  study  by  Chakravorty,  Pelli,  and 
+Marchand  (2014)  is  one  exception  that  examines  the  effects  of  reliability  on  the  benefits  of 
+electrification.  Also  relying  on  IHDS  data,  the  authors  find  that  a  grid  connection  and  a  higher  quality  of 
+electricity  increased  nonfarm  income  by  28  percent  during  1994–2005,  while  a  grid  connection  alone 
+increased nonfarm income by 9 percent.  
+
+Our  study  differs  from  the  one  by  Chakravorty,  Pelli,  and  Marchand  (2014)  in  several  ways.  First,  we 
+analyze  the  effects  of  rural  electrification  based  on  a  more  recent  two‐round  panel  survey  conducted  in 
+2005  and  2012.  In  addition  to  providing  updated  evidence,  the  survey  data  for  this  period  are 
+particularly  interesting  for  understanding  rural  electrification  in  India.  An  important  reason  is  that  2005 
+was  the  year  in  which  the  Indian  government  launched  its  national  rural  electrification  program 
+committed  to  connecting  all  100,000  unelectrified  villages.  By  2010  the  program  had  connected  283 
+million  people  to  the  grid.  But  despite  the  improvement  in  the  connection  rate,  fewer  homes  benefited 
+from  uninterrupted  power  supply  in  2012  than  in  2005,  suggesting  that  outages  became  more  common 
+during  this  period.  The  relatively  large  variation  in  both  connection  rates  and  reliability  over  time 
+provides a unique opportunity to identify how lack of reliability interferes with  achieving  the benefits of 
+electrification.  In  addition  to  analyzing  the  effect  of  electrification  on  households’  income,  as  done  in 
+Chakravorty,  Pelli,  and  Marchand  (2014),  we  also  analyze  its  effect  on  a  broad  range  of  households’ 
+social and economic outcomes, including expenditure, education, employment, and poverty status. 
+
+
+                                                             3 
+ 
+Second,  we  estimate  a  two‐stage  propensity‐score‐weighted  fixed‐effects  model  to  control  for  time‐
+invariant and time‐varying heterogeneity between treatment and control groups. Our approach is based 
+on  the  literature  that  suggests  that  time‐varying  heterogeneity  is  correlated  with  initial  conditions 
+(Heckman 1981; Chamberlain 1984; Arulampalam, Booth, and Taylor 2000), and follows Hirano, Imbens, 
+and Ridder (2003) which explores how initial conditions can be controlled for.  
+
+Third,  we  also  investigate  the  distributional  impact  of  electrification  across  income  groups.  Specifically, 
+following Gamper‐Rabindran, Khan, and Timmins (2010), we use a semiparametric approach to examine 
+the  quantile  distributional  effects  of  nonrandom  treatment  from  electricity  supply.  We  find  that  the 
+marginal  impact  of  electrification  increases  as  one  moves  from  higher‐income  to  lower‐income 
+quantiles—that is, that poorer households benefit more than wealthier ones. 
+
+The rest of the paper proceeds as follows: Section II discusses the mechanisms through which electricity 
+provides  development  benefits  and  provides  a  brief  overview  of  rural  electrification  in  India.  Section  III 
+describes  the  data.  Section  IV  discusses  the  estimation  strategies.  Section  V  presents  the  main 
+estimation  results.  Section  VI  estimates  the  distributional  impact  of  rural  electrification  based  on 
+quantile regression. Section VII concludes the paper.  
+
+ 
+
+II. Development benefits of electricity and rural electrification in India 
+Electricity  brings  a  broad  range  of  social  and  economic  benefits  to  households.  For  many  rural 
+households in India, however, these benefits have been slow to come. 
+
+    A. Benefits of electricity 
+Once households are connected to electricity, the first and most immediate benefit is more lighting. This 
+enables  children  to  spend  more  time  studying  in  the  evening,  gives  adults  more  time  and  flexibility  for 
+completing  household  chores,  and  allows  home‐based  income‐generating  activities  (such  as  shops)  to 
+continue  later  into  the  evening  (Khandker  et  al.  2014;  Khandker,  Barnes,  and  Samad  2012;  Barnes, 
+Peskin,  and  Fitzgerald  2003;  Nieuwenhout,  van  de  Rijt,  and  Wiggelinkhuizen  1998;  van  der  Plas  and  de 
+Graaff  1988;  Filmer  and  Pritchett  1998).  More  study  time  for  children  can  lead  to  higher  school 
+enrollment  and  grade  attainment  (Khandker  and  others  2014;  Khandker,  Barnes,  and  Samad  2012, 
+2013).  In  addition,  electric  lighting  reduces  households’  dependence  on  alternative  lighting  sources, 
+most  notably  kerosene,  thereby  lowering  smoke  and  indoor  air  pollution  and  the  probability  of  various 
+respiratory  diseases.  After  electrification,  households  acquire  such  things  as  radios,  television  sets,  fans, 
+
+                                                           4 
+ 
+air  conditioners,  space  heaters,  and  refrigerators—increasing  exposure  to  knowledge  and  information 
+and improving comfort, food storage, and hygiene. Given the substantial benefits of electricity, access to 
+modern  energy  has  been  identified  as  key  to  fulfilling  the  United  Nations  Millennium  Development 
+Goals (UNDP 2005). 
+
+The  gains  from  electrification  often  materialize  through  multiple  and  interrelated  pathways,  leading  to 
+substantial  accumulated  benefits  (figure  1).  Take  the  income‐related  benefits  of  electrification  as  an 
+example: Improved lighting allows shops and other businesses to operate for more hours in the evening, 
+leading  to  higher  revenue  and  profits.  Electricity‐powered  tools  and  machinery  also  help  increase 
+business  profits,  because  they  are  more  productive  and  cost‐effective  than  mechanical  ones  in  the  long 
+run.  Moreover,  greater  exposure  to  knowledge  and  information  (through  radio,  television,  and  the 
+internet)  can  empower  business  owners  with  up‐to‐date  business  knowledge  and  technology,  allowing 
+them  to  run  their  businesses  more  profitably.  And  the  health  and  education  benefits  of  electrification 
+can lead to greater long‐run income potential.  
+
+    B. Rural electrification in India
+
+The  pace  of  rural  electrification  in  India  was  slow  in  the  early  years  after  independence  in  1947.  The 
+government  put  more  emphasis  on  developing  industrial  capacity  and  infrastructure.  As  a  result,  only 
+around 10 percent of villages were electrified by 1965. In the mid‐1960s, however, famine prompted the 
+government  to  shift  its  focus  from  developing  the  industrial  sector  to  connecting  more  farmers  to  the 
+grid so as to exploit groundwater pumping and increase agricultural production. The Rural Electrification 
+Corporation  was  established  in  1969  with  a  mandate  to  accelerate  the  pace  of  rural  electrification  and 
+facilitate  the  use  of  electric  pump  sets  to  provide  irrigation  water.  While  this  pro‐agriculture  policy 
+increased  the  number  of  electrified  villages,  it  did  not  promote  household  adoption  of  electricity.  In 
+1991  about  two‐thirds  of  rural  households  in  India  still  had  no  access  to  electricity  (India,  Bureau  of 
+Census 1993; World Bank 2001).  
+
+Electricity  used  by  the  agricultural  sector  was  heavily  subsidized.  As  the  sector’s  share  of  electricity 
+consumption  rose,  the  financial  difficulties  of  the  State  Electricity  Boards  worsened.  To  deal  with  these 
+financial  problems,  along  with  poor  service  quality  and  the  low  household  connectivity  rate,  the 
+government  launched  a  major  policy  initiative  to  make  electricity  generation  and  supply  commercially 
+viable.  In  April  1998,  it  issued  the  Electricity  Regulatory  Commissions  Ordinance  to  set  up  the  Central 
+Electricity  Regulatory  Commission  and  the  State  Electricity  Regulatory  Commissions  for  tariff 
+
+
+                                                          5 
+ 
+rationalization and other activities. The central commission sets the bulk tariffs for all central generation 
+and  transmission  utility  companies  and  decides  on  issues  relating  to  interstate  exchange  of  electricity. 
+The  state  commissions  have  the  authority  to  set  tariffs  for  all  types  of  electricity  customers  in  their 
+respective  states;  however,  state  governments  are  entitled  to  set  policies  on  the  subsidies  allowed  for 
+electricity  supply  to  any  consumer  class  and  are  authorized  to  cross‐subsidize.  With  this  administrative 
+setup  in  place,  the  government  outlined  an  ambitious  plan  for  achieving  100  percent  electrification  of 
+villages  by  the  end  of  2007  and  universal  coverage  of  households  by  2012  (Cust,  Singh,  and  Neuhoff 
+2007). 
+
+In 2005 the government launched the Rajiv Gandhi Grameen Vidyutikaran Yojana (RGGVY) program, the 
+national  program  aimed  at  electrifying  all  100,000  unelectrified  villages  of  more  than  100  people.  The 
+program  was  also  to  provide  free  electricity  connections  to  more  than  23  million  rural  households  living 
+below  the  poverty  line.  The  program  has  led  to  substantial  progress:  according  to  a  recent  World  Bank 
+report  (Pargal  and  Banerjee  2014),  India’s  official  electrification  rate  rose  by  15  percentage  points  in  10 
+years,  from  59  percent  in  2000  to  74  percent  in  2010.  Most  of  the  new  customers  were  located  in  rural 
+areas.  The  new  targeted  timeline  for  100  percent  connectivity  is  during  the  12th  five‐year  plan  (2013–
+17).  
+
+While  the  electrification  rate  has  risen,  the  quality  and  reliability  of  electricity  service  vary  considerably. 
+For  example,  using  night  lights  data,  Min  and  Gaba  (2016)  show  that  many  villages  in  India  that  were 
+officially  classified  as  electrified  under  the  RGGVY  program  remained  in  the  dark  for  years  after  the 
+completion  of  electrification  projects.  In  addition,  India  continues  to  face  widespread  power  outages.  In 
+July  2012,  the  country  experienced  the  largest  blackout  in  world  history,  with  more  than  600  million 
+people  unexpectedly  losing  power  for  two  days.  The  scale  of  this  blackout  highlights  the  challenges  that 
+India  faces  in  keeping  the  lights  on.    The  government  has  made  achieving  universal  and  fully  reliable 
+electricity  supply  an  important  policy  priority.  In  2014,  the  Government  of  India  and  State  Governments 
+launched  a  “24×7  Power  for  All”  Joint  Initiative  with  the  objective  to  provide  24×7  power  across  the 
+country  by  2019.  Several  important  policy  decisions  have  since  been  implemented  to  strengthen 
+generation,  transmission  and  distribution,  as  well  as  to  improve  the  financial  viability  of  state 
+distribution companies.   
+
+ 
+
+
+
+
+                                                             6 
+ 
+III. Data                      
+
+The  study  is  based  on  two‐period  panel  data  collected  by  the  IHDS,  which  was  jointly  carried  out  by 
+researchers  from  the  University  of  Maryland  and  the  National  Council  of  Applied  Economic  Research 
+(NCAER)  in  New  Delhi.  This  nationally  representative  survey  covers  a  wide‐ranging  set  of  topics, 
+including energy use, income, expenditure, education, health, and employment. The survey covers all of 
+India’s key states and union  territories  except Andaman and Nicobar Islands  and Lakshadweep. The first 
+round  of  the  survey  was  carried  out  in  2004–05  (mostly  in  2005)  and  collected  information  on  41,554 
+households  in  33  states  and  union  territories,  383  districts,  1,503  villages,  and  971  urban  blocks.  The 
+second  one,  conducted  in  2011–12  (mostly  in  2012),  re‐interviewed  83  percent  of  the  original 
+households and split households (if located within the same village or town), and interviewed 2,134 new 
+households, for a total of 42,152 households.4  
+
+Besides  collecting  detailed  information  on  income,  consumption,  and  other  household‐level  welfare 
+measures,  the  IHDS  includes  elaborate  questions  on  household  energy  consumption  behavior,  such  as 
+fuel  use,  cash  expenditures  for  fuels,  time  spent  collecting  biomass  fuels,  and  types  of  stoves  and 
+electric appliances used in the household. It also asks questions related to the reliability of power supply 
+and  the  source  of  household  electricity.  These  detailed  questions  allow  us  to  analyze  the  impact  of 
+electricity supply and its quality on a broad range of household economic outcomes. 
+
+The  survey  also  covers  key  features  of  the  villages  where  surveyed  households  are  located.  It  is 
+important  to  control  for  village‐level  characteristics  in  the  analysis  because  they  can  directly  affect  both 
+the  outcomes  of  interest  (such  as  employment,  income,  and  poverty  status)  and  the  probability  of 
+electricity  being  present  in  the  village.  While  the  survey  was  carried  out  in  both  urban  and  rural  areas, 
+community  characteristics  are  available  only  for  the  rural  sample.  In  the  analysis,  we  therefore  use  only 
+the rural sample, consisting of more than 24,000 original households.  
+
+The  2005  sample  had  24,191  households.  Because  many  of  these  split  into  multiple  households  over 
+time,  the  number  of  households  increased  to  28,446  in  2012.  Table  1  shows  the  distribution  of  sample 
+households  among  six  geographic  regions  as  well  as  union  territories  as  a  group.  North  India  accounts 
+for the largest share of households in the sample (more than 30 percent), followed by South India.  
+
+Data  on  the  rural  electrification  rate  among  sample  households  in  2005  and  2012  show  large  variation 
+by  region  and  year  (table  2).  The  union  territories  and  the  rural  vicinity  of  the  national  capital,  New 
+                                                            
+4
+     For a detailed description of the IHDS, see the IHDS website at http://www.ihds.umd.edu.  
+
+                                                               7 
+ 
+Delhi, have the highest electrification rate (almost 100 percent in 2012). Among the regions, South India 
+has  the  highest  electrification  rate—about  87  percent  in  2005  and  96  percent  in  2012.  East  India,  which 
+includes the states of Bihar, Jharkhand, Orissa, and West Bengal, has the lowest rate among the regions. 
+But  electrification  increased  quite  a  bit  in  these  states  during  the  seven  years  from  2005  to  2012,  rising 
+from  a  rate  of  37  percent  to  almost  65  percent.  Overall  in  rural  India,  the  electrification  rate  increased 
+from 62 percent in 2005 to 77 percent in 2012, implying annual growth of about 2 percentage points.  
+
+Data  on  the  duration  of  power  outages  (in  hours  per  day)  for  the  two  survey  years  show  that  outages 
+worsened  during  the  sample  period:  While  9  percent  of  connected  households  reported  no  outages  in 
+2005,  that  share  dropped  to  7  percent  in  2012  (table  3).  And  while  about  35  percent  of  the  households 
+reported  power  outages  of  at  least  13  hours  a  day  in  2005,  almost  45  percent  experienced  outages  of 
+similar  duration  in  2012.  The  average  duration  of  outages  was  9.3  hours  a  day  in  2005  and  10.7  hours  a 
+day  in  2012.  The  hours  of  electricity  availability  per  day  vary  substantially  across  states  (figure  2).  While 
+connected households in union territories such as Daman and Diu have more than 20 hours of electricity 
+per day on average, those in such states as Arunachal Pradesh and Assam have less than 6 hours per day 
+on average.  
+
+Summary  statistics  for  outcome  variables  show  that  grid‐connected  households  consume  less  kerosene 
+and  spend  less  time  collecting  fuel  than  off‐grid  households  do  (table  4).  They  also  have  higher  incomes 
+and  expenditures  and  a  lower  poverty  rate.  In  households  with  an  electricity  connection  both  boys  and 
+girls  spend  more  time  studying  and  complete  higher  grades.  Labor  force  participation  is  lower  among 
+adults  in  grid‐connected  households  than  among  those  in  off‐grid  households—for  both  men  and 
+women.  But  when  employment  is  measured  by  hours  worked  per  month  (in  both  wage  and  self‐
+employment  activities),  grid‐connected  households  have  more  hours  of  employment  than  their  off‐grid 
+counterparts.  These  results  are  statistically  significant  and  hold  in  both  survey  years.  Also  noticeable  is 
+that  the  trend  in  outcome  variables  differs  between  grid  and  off‐grid  households.  For  example,  while 
+kerosene consumption drops over time for all households, it drops more for grid‐connected households.  
+
+Another  way  to  look  at  the  summary  statistics  for  outcome  variables  is  by  duration  of  electricity 
+availability.  We  compare  two  groups  of  households:  those  that  have  access  to  electricity  for  at  least  20 
+hours  a  day  and  those  that  do  not  (table  5).  Unsurprisingly,  households  with  more  hours  of  electricity 
+available  spend  less  on  kerosene,  have  higher  incomes  and  expenditures,  and  see  their  children  achieve 
+better  education  outcomes.  Employment  outcomes  are  somewhat  mixed.  Men  in  households  with 
+shorter electricity outages have higher labor force participation and fewer hours of employment in 2005 
+
+                                                             8 
+ 
+than  those  in  households  with  longer  outages;  the  opposite  is  true  in  2012.  Women  in  households  with 
+more  reliable  electricity  supply  have  lower  labor  force  participation  and  6.1  fewer  hours  a  month  of 
+employment  in  2005  than  their  counterparts.  The  difference  in  women’s  labor  force  participation  and 
+hours  of  employment  decreases  slightly  between  2005  and  2012  but  the  sign  remains  the  same.  In  the 
+next section we explore the relationship between hours of electricity and households’ welfare outcomes 
+in more detail. 
+
+Anecdotal  evidence  suggests  that  many  households  have  illegal  connections  especially  in  rural  areas.  
+IHDS reports both official and non‐standard connections. As a result, the access rate reported by IHDS is 
+higher  than  that  by  official  records.  Since  IHDS  inquires  about  the  mode  of  payment  for  electric 
+connections  and  the  amount  of  payment,  we  are  able  to  estimate  the  percentage  of  non‐standard 
+connections,  which  include  those  who  reported  having  access  to  electricity  but  did  not  receive  bills  and 
+did  not  make  a  payment  or  paid  to  neighbors.  We  find  that  about  15  percent  connections  were  non‐
+standard  in  2005.  The  number  reduces  to  9  percent  in  2012.  There  is  also  a  strong  correlation  between 
+non‐standard  connection  and  service  unavailability.   Overall,  households  who  are  unofficially  connected 
+experience  12  hours  of  power  outages  per  day,  compared  to  10  hours  for  those  with  official 
+connections.    This  result  suggests  that  illegal  connections  could  make  service availability  worse,  and 
+thereby,  adversely  affects  the  effects  of  electrification.   It  should  be  noted  that  illegal  connection  could 
+still  be  underreported  by  IHDS.  If  that  is  the  case,  then  benefits  of  electrification  based  on  IHDS  data 
+could also be underestimated.  
+
+ 
+
+IV. Estimation model 
+
+A base model for estimating the impact of electrification is described by equation 1: 
+
+                                                         ∗                                       (1) 
+
+where  Yit  denotes  the  outcome  variables  of  interest  for  household  i  in  year  t,  such  as  kerosene 
+consumption,  income  and  expenditure,  time  spent  on  studies  by  children,  and  labor  force  participation 
+by  men  and  women.  Xit is  a  vector  of  household‐  and  community‐level  characteristics.  Household‐level 
+control  variables  include  the  age,  gender,  and  education  of  the  head  of  household;  the  number  of  adult 
+males  and  females  in  the  household;  the  amount  of  household  agricultural  land;  and  measures  of  the 
+household’s  sanitation  status,  such  as  access  to  running  water,  a  flush  toilet,  and  a  separate  kitchen. 
+Community‐level  control  variables  include  dummy  variables  measuring  the  presence  of  paved  roads, 
+
+                                                             9 
+ 
+schools,  markets,  banks,  nongovernmental  organizations  (NGOs),  and  development  programs;  and 
+village  prices  of  alternative  fuels  (firewood,  kerosene,  and  liquefied  petroleum  gas  [LPG])  and  of 
+essential food items (staples, meat, fish, vegetables, and so on).  
+
+Eit is a dummy variable measuring the household’s electricity connection status, with 1 indicating having 
+electricity  and  0  otherwise.  Dit  is  a  continuous  variable  measuring  the  daily  average  hours  of  power 
+outages  reported  by  the  household.  Tt  is  year  fixed  effects  controlling  for  shocks  common  to  all 
+households in the sample.  
+
+ui represents unobserved, time‐invariant household‐ and community‐level determinants of the outcome. 
+εit  is  the  idiosyncratic  error  term. β, γ,  and δ  are  unknown  parameters  to  be  estimated.  Specifically, γ 
+measures the impact of electrification while δ measures the effect of power outages. 
+
+An  OLS  estimation  of  equation  1  is  likely  to  be  biased  because  of  the  endogeneity  of  Eit  and  Dit.  The 
+endogeneity arises from both nonrandom grid expansion at the village level and nonrandom adoption of 
+electricity  at  the  household  level  such  that  the  unobserved  household‐  and  community‐level 
+characteristics  (ui)  are  correlated  with  both  outcome  and  treatment.  For  example,  the  government  may 
+target electrification projects to areas that are more easily accessible and have greater growth potential. 
+Conversely,  once  connected,  less  developed  villages  are  more  likely  to  experience  load  shedding.  In 
+addition,  when  electricity  becomes  available  in  a  village,  better‐off  households  are  more  likely  to  obtain 
+grid connections first.  
+
+If  the  unobserved  factors  are  time‐invariant,  we  can  address  the  endogeneity  concern  using  a 
+household‐level  fixed‐effects  regression  that  eliminates  ui  by  taking  the  difference  of  equation  (1) 
+between the two periods (0 represents the year 2005, and 1 the year 2012):  
+
+                                                        ∗                ∗                                               
+
+or                                          ∗                                   (2) 
+
+Since  there  is  no  unobserved  component,  equation  (2)  gives  an  unbiased  estimate  of  the  impact  of 
+electrification.  
+
+It  is  possible,  however,  that  the  unobserved  factors  are  not  fixed  over  time.  For  example,  the  perceived 
+benefits of electrification may change over time. This could affect both households’ decision on whether 
+to be connected to the grid and the outcome variables.  
+
+
+
+                                                            10 
+ 
+Taking into account the existence of time‐varying heterogeneity, we rewrite equation (1) as follows: 
+
+                                                         ∗                                         (3)
+
+where  ηit  is  the  time‐varying  unobserved  household‐  or  village‐level  characteristics  (or  both).  Taking  the 
+difference of equation (3) between the two periods yields the following:  
+
+                        ∆         ∆        ∆        ∆        ∗      ∆      ∆       ∆              (4) 
+
+Equation  (4)  shows  that  the  unobserved  factors  are  not  eliminated  and  the  simple  fixed‐effects 
+estimation  based  on  equation  (2)  will  be  biased.  One  way  to  resolve  the  time‐varying  effects  of  the 
+unobserved factors is to find instrumental variables as exogenous sources of variation in the adoption of 
+electricity  (Ei)  and  the  reliability  of  electricity  service  (Di).  In  the  absence  of  suitable  instrumental 
+variables,  we  exploit  the  potential  correlation  between  initial  characteristics  and  unobserved 
+heterogeneity  as  suggested  in  the  literature  (Heckman  1981;  Chamberlain  1984;  Arulampalam,  Booth, 
+and  Taylor  2000).  More  specifically,  following  Hirano,  Imbens,  and  Ridder  (2003),  we  control  for  the 
+effects  of  initial  characteristics  by  estimating  a  two‐stage  propensity‐score‐weighted  fixed‐effects 
+regression  model.  In  the  first  stage  the  conditional  probability  of  being  connected  to  the  grid  (the 
+propensity score) is estimated using a probit function controlling for a set of household‐ and village‐level 
+characteristics  observed  in  2005.  In  the  second  stage  each  household  is  assigned  a  weight  derived  from 
+the  propensity  score;  that  is,  the  weight  is  equal  to  1  for  households  with  electricity  and  1/(1 −  p)  for 
+those without electricity, where p is the propensity score. The impact of electrification is then estimated 
+using the household‐level fixed‐effects model with the weight. Using the propensity score as a weight in 
+this  way  can  be  thought  of  as  providing  an  estimate  of  the  counterfactual  outcome:  households  that 
+look more similar to connected households in 2005 receive more weight.  
+
+ 
+
+V. Results  
+
+Tables  6–9  report  the  estimation  results.  Panel  1  in  each  table  shows  findings  from  estimating  a  model 
+that  ignores  the  variation  in  electricity  availability;  that  is,  the  model  does  not  include  the  interaction 
+term  between  access  and  hours  of  electricity  outages.  The  results  reported  in  panel  2  of  each  table 
+reflect  the  effects  of  both  access  and  reliability.  Panel  3  in  each  table  reports  the  estimated  aggregate 
+impact of electrification conditional on hours of availability of electricity reported in the sample.  In each 
+
+
+
+                                                             11 
+ 
+panel  the  first  column  presents  estimations  of  a  simple  fixed‐effects  model,  while  the  second  column 
+reports propensity‐score‐weighted fixed‐effects estimators.  
+
+There  are  noticeable  discrepancies  in  all  three  panels  between  the  fixed‐effects  estimators  and  the 
+propensity‐score‐weighted  estimators,  with  the  latter  generally  resulting  in  larger  effects.  This  is 
+consistent with findings in the literature. For example, Chakravorty, Pelli, and Marchand (2014) find that 
+instrumental  variable  models  that  correct  for  unobserved  heterogeneity  reveal  larger  effects  of 
+electrification  than  OLS  models  do.  The  following  discussions  are  based  on  propensity‐score‐weighted 
+estimators. 
+
+Without  electricity,  households  rely  mostly  on  inefficient  and  polluting  kerosene‐fueled  lamps  or 
+burning  biomass  fuels  (such  as  dung,  wood)  to  meet  basic  lighting  needs.  An  immediate  benefit  of 
+household  electrification  is  a  reduction  in  the  consumption  of  kerosene  and  time  spent  on  collecting 
+biomass  fuels.  As  table  6  shows,  electrification  leads  to  a  12  percent  reduction  in  household  kerosene 
+consumption,  and  1.6  hours  less  time  spent  on  collecting  biomass  fuel  every  month  when  the  reliability 
+of  electricity  service  is  not  controlled  for.  But  when  reliability  is  controlled  for,  electrification  is 
+associated  with  a  14  percent  reduction  in  kerosene  consumption,  and  3.5  hours  less  time  spent  on  fuel 
+collection  per  month  on  average.  It  is  not  surprising  that  the  impact  increases  when  the  quality  of 
+electricity  service  is  taken  into  account.  Given  persistent  power  shortages,  many  households  in  rural 
+India  continue  to  use  kerosene  and  biomass  fuel  as  backup  sources  of  lighting  even  after  gaining  access 
+to the grid. The longer the power outage, the more the traditional fuel is consumed. On average, gaining 
+access  to  the  grid  conditional  on  the  prevailing  reliability  of  electricity  service  is  associated  with  a  12.6 
+percent  reduction  in  kerosene  consumption  and  1.8  hours  per  month  less  time  spent  on  fuel  collection 
+(panel  3).  Notably,  the  estimated  aggregate  effects  of  electrification  conditional  on  the  quality  of 
+electricity  supply  (panel  3)  are  larger  than  the  estimated  effect  from  a  model  ignoring  quality  (panel  1). 
+This  suggests  that  omitting  the  quality  of  electricity  supply  in  the  model  could  lead  to  biased  estimates 
+of both the net effect of gaining access to the grid and the aggregate effects of rural electrification given 
+existing reliability levels.  
+
+Household  income  and  expenditure  both  show  significant  growth  after  electrification  (table  7).  The 
+impact  becomes  stronger  after  the  duration  of  electricity  outages  is  controlled  for.  While  electrification 
+does  not  have  a  statistically  significant  effect  on  per  capita  farm  income,  it  is  associated  with  a  15 
+percent  increase  in  per  capita  nonfarm  income  and  an  11  percent  increase  in  per  capita  total  (farm  and 
+nonfarm)  income  when  outages  are  not  taken  into  account.  When  outages  are  controlled  for,  gaining 
+
+                                                             12 
+ 
+access  to  the  grid  is  associated  with  a  37  percent  increase  in  per  capita  nonfarm  income  and  a  17 
+percent increase in per capita total income. That is, controlling for the effect of power outages increases 
+the impact of grid access on total income by 6 percentage points. And each one‐hour increase in outages 
+per  day  is  associated  with  a  2  percent  reduction  in  nonfarm  income  and  a  0.5  percent  reduction  in  total 
+income  on  average.  This  large  impact  of  power  outages  shows  that  unreliable  electricity  supply  has  led 
+to  the  loss  of  a  great  deal  of  the  potential  benefits  from  electrification.  Conditional  on  the  average 
+duration of  power outages, the aggregate impact of  electrification on  per  capita total income is only 9.6 
+percent.  
+
+Similarly, after controlling for the duration of outages, gaining access to the grid is associated with an 8.4 
+percent  increase  in  households’  per  capita  food  expenditure,  a  14.9  percent  increase  in  their  per  capita 
+nonfood  expenditure,  and  a  12  percent  increase  in  their  per  capita  total  expenditure.   Every  one‐hour 
+increase  in  power  outages  is  associated  with  a  0.2  percent  reduction  in  food  expenditure  on  average. 
+The aggregate effects of electrification conditional on both access and quality are thus generally smaller: 
+a  5.6  percent  increase  in  food  expenditure,  a  16.4  percent  increase  in  nonfood  expenditure,  and  a  10.5 
+percent increase in total expenditure. A comparison of the results reported in panel 1 with those shown 
+in  panels  2  and  3  again  reveals  considerable  omitted  variable  bias  resulting  from  not  controlling  for  the 
+quality of power supply.  
+
+Corresponding  to  the  increases  in  income  and  expenditure,  the  household  poverty  rate  decreases  after 
+connection  to  the  grid.  After  controlling  for  outages,  gaining  access  to  the  grid  is  associated  with  a  9.5 
+percentage  point  reduction  in  the  household  poverty  rate;  an  extra  hour  of  power  outages  per  day  is 
+associated  with  a  0.2  percentage  point  increase  in  the  poverty  rate.  The  aggregate  effect  of 
+electrification  conditional  on  outages  reported  in  the  sample  is  a  6.8  percentage  point  reduction  in  the 
+poverty  rate.  By  comparison,  a  model  omitting  the  effect  of  outages  suggests  a  7.4  percent  point 
+reduction in the poverty rate.  
+
+Among  the  long‐term  benefits  of  electricity  is  its  potential  to  improve  households’  education  outcomes. 
+As  shown  in  table  8,  when  outages  are  not  controlled  for,  access  to  electricity  increases  boys’  and  girls’ 
+study  time  in  the  evening  by  0.35  hours  (or  about  21  minutes)  a  week  on  average.  But  this  increase  in 
+study  hours  does  not  translate  into  higher  school  attainment.  When  outages  are  not  controlled  for, 
+electrification has no statistically significant impact on grade completion by either boys or girls.  
+
+
+
+
+                                                            13 
+ 
+When the interaction term between access and electricity outages is incorporated, the results show that 
+boys’  study  time  increases  by  1  hour  a  week  and  girls’  study  time  by  0.64  hour  given  access  and  no 
+power  outages.  In  addition,  boys’  grade  completion  increases  by  0.14  years  on  average.  The  effect  on 
+girls’  grade  completion  is  positive  by  not  statistically  significant.  In  all  cases  outages  are  found  to  have  a 
+statistically  significant  negative  effect  on  schooling.  Every  additional  hour  of  outages  per  day  is 
+associated  with  a  reduction  of  0.05  hour  a  week  in  boys’  study  time,  0.02  hour  a  week  in  girls’  study 
+time,  0.01  year  in  boys’  grade  completion,  and  0.009  year  in  girls’  grade  completion.  As  a  result,  the 
+aggregate  effects  of  electrification  after  taking  into  account  the  negative  impact  of  power  outages  are 
+much  smaller:  boys’  study  time  increases  by  0.27  hour  (or  about  16  minutes)  a  week,  and  girls’  study 
+time  by  0.30  hour  (or  about  18  minutes)  a  week;  neither  of  these  increases  results  in  a  significant 
+improvement in grade completion.  
+
+The effect of electrification on employment is also gender sensitive. As table 9 shows, electrification has 
+a  significant  positive  effect  on  women’s  hours  of  employment,  increasing  them  by  31  percent  (15.6 
+percent  when  outages  are  not  controlled  for),  but  no  effect  on  men’s  hours  of  employment.  On  the 
+other  hand,  every  additional  hour  of  outages  per  day  reduces  women’s  hours  of  employment  by  1.4 
+percent  on  average.  This  may  be  because  electrification  helps  free  up  time  that  women  have 
+traditionally  spent  on  collecting  fuel,  allowing  them  to  spend  more  time  on  other  productive  activities. 
+The  results  also  show  that  electrification  slightly  increases  labor  force  participation  among  adult  males 
+in  the  household  by  about  1.1  percent.  However,  it  does  not  have  a  significant  effect  on  women’s  labor 
+force participation.  
+
+ 
+
+VI. Who benefits most from rural electrification in India?  
+
+In  the  previous  section,  we  report  the  average  treatment  effect  of  electrification.  But  the  benefits  of 
+gaining access to electricity may quite possibly vary by household welfare depending on existing welfare 
+such  as  income,  education,  and  consumption.  For  example,  richer  households  may  be  equipped  with 
+more  electric  tools  and  appliances  and  more  likely  to  use  electricity  more  productively—and  therefore 
+may benefit  more from electrification  projects. Because government subsidies have been a key  element 
+of rural electrification programs around the world, understanding who benefits from rural electrification 
+is  important.  If  richer  households  benefit  substantially  more  than  poorer  ones,  this  would  argue  for  a 
+different approach in designing and implementing subsidies for rural electrification.  
+
+
+                                                              14 
+ 
+In  this  section,  we  use  a  quantile  regression  approach  to  empirically  estimate  how  households  in 
+different  parts  of  the  expenditure  distribution  benefit  from  electricity.  We  first  discuss  the  theory  of 
+quantile regression, then present the findings. 
+
+While  the  objective  of  ordinary  regression  is  to  estimate  the  mean  of  the  dependent  variable,  the 
+objective of quantile regression is to estimate a quantile value (a median or other quantile value such as 
+0.25, 0.60, and so on) of the dependent variable. Technically, a quantile regression minimizes the sum of 
+absolute  residuals  corresponding  to  each  quantile,  in  contrast  to  minimizing  the  sum  of  the  squares  of 
+the  residuals  as  is  done  by  ordinary  regression.  When  the  entire  shape  of  the  distribution  changes 
+significantly,  simply  estimating  changes  in  the  mean  may  not  be  sufficient  and  investigating  changes  in 
+the outcomes observed at different points in the distribution becomes important (Buchinsky 1998).  
+
+Following Koenker and Bassett (1978) and using the  same notation as in  the  previous estimation model, 
+we can express the quantile regression model as follows:  
+
+                             ,               |             ,   ∈ 0,1                                         (5) 
+
+where                    |    denotes the quantile θ of the outcome conditional on the vector of covariates. In 
+general, the θ‐th sample quantile of Y solves as:  
+
+                 min ∑ :         |               ∑:            1                               	 min ∑                     (6) 
+
+
+where                 is denoted as the “check function” and is defined as: 
+
+                                         ,        0
+                                                                                        (7) 
+                                     1   ,        0
+We  estimate  parameters  in  equation  5  semiparametrically  by  minimizing  the  sum  of  weighted  absolute 
+deviations,  which  fits  medians  to  a  linear  function  of  covariates  and  can  be  performed  using  linear 
+programming  methods  (Buchinsky  1998).  To  account  for  possible  heteroskedasticity  in  the  error  term, 
+we  estimate  the  variance‐covariance  matrix  of  coefficients  using  bootstrap  resampling.  The  quantile’s 
+coefficients  can  be  interpreted  as  the  partial  derivative  of  the  conditional  quantile  of  Yi with  respect  to 
+one of the regressors Xi, namely,                      |       /         .           
+
+We  use  a  semiparametric  approach  to  examine  nonrandom  treatment  effects  on  conditional  quantiles 
+with  panel  data.  Specifically,  we  use  the  quantile  regression  equations  for  the  two  survey  years  to 
+estimate the distributional effects of electricity connection on household outcomes Y, as follows: 
+
+
+
+                                                                   15 
+ 
+                                                    |       ,   ,                                             ,    ∈ 0,1                              (8) 
+
+where                   |       ,           ,            denotes  the  quantile  θ  of  Y  in  period  t,  conditional  on  the  fixed  effects  and 
+household‐  and  village‐level  covariates.  Vector  Z  measures  both  household  and  village  exogenous 
+attributes, while η subsumes unobserved household and village heterogeneity. One problem in applying 
+the  quantile  regression  model  to  panel  data  is  that  differencing  variables  are  not  generally  equal  to  the 
+difference in the conditional quantiles because quantiles are not linear operators. That is, 
+
+                        | ,         ,           	       	               |     ,     ,                   |     ,      ,          
+
+To  overcome  this  problem,  we  follow  Gamper‐Rabindran,  Khan,  and  Timmins  (2010),  who  specify  the 
+unobserved effect η nonparametrically as an unknown function ϕ(.) of the covariates X, as follows:5 
+
+                                                      η = φ( Z i 0 , Z i 1 )                                                 (9)                                                
+
+Substituting equation (9) in each conditional quantile in equation (8), we get the following:  
+
+                                                    |       ,       ,                                                ,         ,        ∈ 0,1                        (10) 
+
+                                                    |       ,       ,                                                ,         ,        ∈ 0,1                        (11) 
+
+The difference of quantiles between the two periods is given by  
+
+                    |       ,           ,                               |     ,     ,                                                                             
+
+   or,                  Δ                       Δ           	   Δ  
+
+Gamper‐Rabindran, Khan, and Timmins (2010) show that the quantile regression can be estimated using 
+a  two‐step  procedure.  First,  following  equations  10  and  11,                                                                |      ,       ,       is  nonparametrically 
+estimated for each period t = 0,1, with Z and E entering linearly in the equation. Second, the differenced 
+fitted  values  from  the  estimations                                                  |   ,     ,                        |        ,         ,         are  regressed  on  the 
+differenced  regressors                                                      and                ,  since  the  proxies  for  the  fixed  effects  are  now 
+eliminated from the estimation.  
+
+Table  10  reports  the  marginal  effects  of  electrification  for  expenditure  quantiles  {.20,  .40,  .60,  .80}. 
+While  electrification  is  uniformly  associated  with  higher  per  capita  expenditure  across  all  quantiles,  the 
+magnitude  of  the  effects  increases  as  one  moves  from  higher  quantiles  to  lower  ones.  For  example,  the 
+
+                                                            
+5
+  Abrevaya  and  Dahl  (2008)  apply  a  similar  approach  based  on  the  correlated  fixed‐effects  model  of  Chamberlain 
+(1984), where the fixed effect is specified as a parametric (linear) function of the covariates X.  
+
+                                                                                                16 
+ 
+aggregate  effect  of  electrification  conditional  on  outages  reported  in  the  sample  is  associated  with  a  16 
+percent  increase  in  expenditure  for  households  in  the  bottom  quantile  but  a  6.1  percent  increase  for 
+those  in  the  top  quantile.  The  results  are  robust  in  models  with  and  without  controls  for  power  outages 
+(columns 2 and 1, respectively). This result suggests that the return to electrification is higher for poorer 
+households  in  India.  The  distribution  of  the  marginal  effects  of  electrification  on  households’ 
+expenditure  by  per  capita  expenditure  quantile  (when  outages  are  controlled  for)  is  further  shown  in 
+figure  3.  The  marginal  benefit  of  electrification  gradually  decreases  as  one  moves  from  the  10th  to  the 
+50th  quantile.  From  the  50th  quantile  onwards,  the  marginal  benefit  drops  rather  quickly  and  even 
+becomes statistically insignificant.  
+
+This  finding  is  somewhat  different  from  those  reported  by  Khandker  et  al.  (2014).  Using  cross‐sectional 
+data  from  the  IHDS  for  2005,  Khandker  et  al.  (2014)  find  that  a  larger  share  of  the  benefits  from  rural 
+electrification  accrues  to  wealthier  households  rather  than  to  poorer  ones.  Because  we  use  panel  data 
+from  the  IHDS  that  span  seven  years,  we  report  longer‐term  effects  of  electrification  on  the  same 
+households.  The  difference  in  findings  suggests  a  possibility  that  over  time  the  rate  of  return  from 
+electrification  has  declined  among  richer  households  while  poorer  households  have  caught  up  by 
+diversifying their use of electricity. 
+
+VII. Conclusion   
+
+Universal  access  to  modern  energy  services  is  one  of  the  three  objectives  of  the  Sustainable  Energy  for 
+All  (SE4ALL)  program  launched  by  the  United  Nations  in  2011.  Access  to  electricity  not  only  brings 
+better‐quality lighting; it also is a key driver of social  and economic development.  Using household‐level 
+panel data from a nationally representative survey conducted in 2005 and 2012, this study estimates the 
+impact of rural electrification on a broad range of household welfare measures in India.  
+
+We  find  that  electrification  is  associated  with  substantial  improvements  in  households’  income, 
+expenditure,  employment,  and  educational  achievement.  But  the  size  of  the  effects  depends 
+importantly on the reliability of electricity service.  For example, an additional hour of outages per  day is 
+associated with a 0.5 percent reduction in income on average. Gaining access to the grid combined with 
+reliable  electricity  service  is  associated  with  a  17  percent  increase  in  households’  income,  but  when 
+access comes with frequent power outages, income rises by only 11 percent.  
+
+About  240  million  people  in  India  still  lack  access  to  electricity  (IEA,  2015).  Findings  from  our  analysis 
+suggest  that  connecting  all  these  people  to  electricity  would  lead  to  a  cumulative  income  gain  of  about 
+
+                                                           17 
+ 
+US$4.7  billion  a  year.  Improving  the  reliability  of  electricity  supply  would  add  to  these  gains.  According 
+to IHDS 2012 data, the average duration of power outages of households who have less than 24 hours of 
+power supply is about 12.5 hours a day. Increasing the supply of electricity to 24 hours a day would lead 
+to an estimated income gain for the rural population of US$6.5 billion annually.  
+
+The  Indian  government  plans  to  achieve  100  percent  electrification  in  rural  areas  by  2017,  at  a  total 
+estimated  cost  of  US$4.4  billion  between  2015  and  2017.  Its  plans  call  for  both  connecting  the  villages 
+that  remain  without  electricity  and  improving  the  reliability  of  power  supply  in  villages  that  are  already 
+connected.  Assuming  a  20‐year  project  lifespan,  the  annual  average  investment  cost  is  about  US$200 
+million.  Even  without  accounting  for  other  benefits  associated  with  better  health  and  education 
+outcomes,  our  estimates  suggest  that  the  net  income  gain  from  providing  reliable  electricity  to  rural 
+households would reach almost US$11 billion a year.  
+
+Based  on  quantile  regression  analysis,  we  also  find  that  while  every  income  group  benefits  from 
+electricity,  the  benefits  are  larger  for  households  in  lower‐income  quantiles.  This  suggests  that  the 
+current rural electrification policy in India is progressive. 
+
+Overall,  the  findings  from  our  analysis  suggest  that  merely  ensuring  connectivity  is  not  enough; 
+increasing the reliability of service is essential to realizing greater benefits from electrification. While the 
+availability  of  electricity  is  important,  it  is  only  one  of  several  factors  that  matter  to  the  impact  of 
+electrification. Others include the frequency of power disruptions, fluctuations in voltage, and the ability 
+to  simultaneously  use  multiple  appliances,  including  high‐capacity  ones.  Ongoing  initiatives  are  adding 
+to  our  knowledge  on  these  issues.  One  set  centers  on  a  multidimensional  energy  access  matrix  recently 
+developed  by  the  Sustainable  Energy  for  All  (SE4ALL)  program,  i.e.  the  Multi‐tier  Framework  (MTF)  of 
+energy  access.  The  Energy  Sector  Management  Assistance  Program  (ESMAP)  at  the  World  Bank  is  using 
+this  framework  to  measure  all  the  essential  attributes  of  quality  in  electricity  access  around  the  world. 
+And  the  World  Bank  is  conducting  a  number  of  household  surveys  based  on  this  framework  to  evaluate 
+energy access in developing countries.  Once such data become available, further analysis  can  be carried 
+out to estimate how different aspects of the quality of service affect the impact of rural electrification.
+
+
+
+
+                                                           18 
+ 
+References 
+Abrevaya, Jason, and Christian M. Dahl. 2008. “The Effects of Birth Inputs on Birthweight: Evidence from 
+       Quantile Estimation on Panel Data.” Journal of Business and Economic Statistics 26: 379–97. 
+Arulampalam, W., A. L. Booth, and M. P. Taylor. 2000. “Unemployment Persistence.” Oxford Economic 
+       Papers 52: 24–50.  
+Banerjee, Sudeshna Ghosh, Doulgas Barnes, Bipul Singh, Kristy Mayer, and Hussain Samad. 2015. “Power 
+       for All: Electricity Access Challenge in India.” World Bank. Washington DC. 
+Barnes, Douglas, Henry Peskin, and Kevin Fitzgerald. 2003. “The Benefits of Rural Electrification in India: 
+        Implications for Education, Household Lighting, and Irrigation.” Draft paper prepared for Energy 
+        and Infrastructure Unit, South Asia Region, World Bank, Washington, DC. 
+Buchinsky, Moshe. 1998. “Recent Advances in Quantile Regression Models: A Practical Guide for 
+       Empirical Research.” Journal of Human Resources 33: 88–126. 
+Burlig, Fiona, and Louis Preonas. 2016. “Out of the Darkness and Into the Light? Development Effects of 
+         Rural Electrification in India.” Energy Institute at Haas Working Paper 268, Haas School of 
+         Business, University of California at Berkeley.  
+Chakravorty, Ujjayant, Kyle Emerick, and Majah‐Leah Ravago. 2016. “Lighting Up the Last Mile: The 
+       Benefits and Costs of Extending Electricity to the Rural Poor.” Discussion Paper 16‐22, Resources 
+       for the Future, Washington, DC. 
+Chakravorty, Ujjayant, Martino Pelli, and Beaza P. Ural Marchand. 2014. “Does the Quality of Electricity 
+       Matter? Evidence from Rural India.” Journal of Economic Behavior & Organization 107: 228–47. 
+Chamberlain, G. 1984. “Panel Data.” In Handbook of Econometrics, edited by S. Griliches and M. 
+      Intriligator. Amsterdam: North‐Holland.  
+Cust, James, Anoop Singh, and Karsten Neuhoff. 2007. “Rural Electrification in India: Economic and 
+        Institutional Aspects of Renewables.” EPRG Working Paper 07/30, Electricity Policy Research 
+        Group, University of Cambridge, Cambridge, UK. 
+Dinkelman, Taryn. 2011. “The Effects of Rural Electrification on Employment: New Evidence from South 
+       Africa.” American Economic Review 101 (7): 3078–108. 
+Filmer, Deon, and Lant Pritchett. 1998. “The Effect of Household Wealth on Educational Attainment 
+        around the World: Demographic and Health Survey Evidence.” Policy Research Working Paper 
+        1980, World Bank, Washington, DC.  
+Gamper‐Rabindran, Shanti, Shakeeb Khan, and Christopher Timmins. 2010. “The Impact of Piped Water 
+      Provision on Infant Mortality in Brazil: A Quantile Panel Data Approach.” Journal of Development 
+      Economics 92: 188–200. 
+Heckman, James J. 1981. “The Incidental Parameters Problem and the Problem of Initial Conditions in 
+      Estimating a Discrete Time‐Discrete Data Stochastic Process.” In Structural Analysis of Discrete 
+
+
+
+                                                    19 
+ 
+        Data with Econometric Applications, edited by C. Manski and D. McFadden. Cambridge, MA: MIT 
+        Press. 
+Hirano, Keisuke, Guido Imbens, and Geert Ridder. 2003. “Efficient Estimation of Average Treatment 
+        Effects Using the Estimated Propensity Score.” Econometrica 71 (4): 1161–89.  
+India, Bureau of Census. 1993. “1991 India Census.” New Delhi. 
+International Energy Agency (IEA).  2015. World Energy Outlook 2015.  
+Khandker, Shahidur R., Douglas F. Barnes, and Hussain A. Samad. 2012. “The Welfare Impacts of Rural 
+      Electrification in Bangladesh.” Energy Journal 33 (1): 199–218.  
+———. 2013. “Welfare Impacts of Rural Electrification: A Panel Data Analysis from Vietnam.” Economic 
+     Development and Cultural Change 61 (3): 659–92. 
+Khandker, Shahidur R., Hussain A. Samad, Rubaba Ali, and Douglas F. Barnes. 2014. “Who Benefits Most 
+      from Rural Electrification? Evidence from India.” Energy Journal 35 (2): 75–96. 
+Koenker, Roger, and Gilbert Bassett. 1978. “Regression Quantiles.” Econometrica 46 (1): 33–50. 
+Lipscomb, Molly, A. Mushfiq Mobarak, and Tania Barham. 2013. “Development Effects of Electrification: 
+       Evidence from the Topographic Placement of Hydropower Plants in Brazil.” American Economic 
+       Journal: Applied Economics 5 (2): 200–31. 
+Min, Brian, and Kwawu Gaba. 2016. “Using Satellite Imagery to Monitor Progress of Rural Electrification 
+        in India.” Project Completion Report P144129, World Bank, Washington, DC. 
+Nieuwenhout, F., P. van de Rijt, and E. Wiggelinkhuizen. 1998. Rural Lighting Services. Petten, 
+      Netherlands: Netherlands Energy Research Foundation. 
+Pargal, Sheoli, and Sudeshna Banerjee. 2014. More Power to India: The Challenge of Electricity 
+         Distribution. Washington, DC: World Bank. 
+UNDP (United Nations Development Programme). 2005. “United Nations Millennium Development 
+       Goals (MDGs).” New York. http://www.un.org/millenniumgoals.  
+van der Plas, Robert, and A. de Graaff. 1988. “A Comparison of Lamps for Domestic Lighting in 
+        Developing Countries.” Industry and Energy Department Working Paper (Energy Series), no. 6, 
+        World Bank, Washington, DC. 
+van de Walle, Dominique, Martin Ravallion, Vibhuti Mendiratta, and Gayatri Koolwal. 2015. “Long‐Term 
+       Gains from Electrification in Rural India.” World Bank Economic Review. Published electronically 
+       October 14. doi:10.1093/wber/lhv057. 
+World Bank. 2001. “India Power Supply to Agriculture, Haryana Case Study, vol. 2.” Report 22171‐IN, 
+       Energy Sector Unit, South Asia Regional Office, World Bank, Washington, DC. 
+                                 
+
+
+
+
+                                                    20 
+ 
+  Figure 1. Benefits of electrification through interrelated pathways to education, income, and health 
+                                                  outcomes 
+                                                         
+                                                   Electricity 
+                                                                                   adoption
+                                                                                                
+                                                                                        
+ 
+                  Electric           Radio/TV/                                              Fan/AC           Electric cooking              Electric
+                   lamp               internet
+                                                            Refrigerator
+                                                                                                      
+                                                                                           appl iances         appliances                 machmnes
+                                                                                                                                                        
+                                                                                        
+ 
+       Light                  Light for in -                Access to                   
+                                                                                     Food                        Comfort/               More               Productive
+                                                                                                                                                             motive
+        for                  home income -                 knowledge                                               water               efficient
+      study/                   generating                      and
+                                                                                  preservation                              
+                                                                                                                 filtration            cooking               power
+     reading 
+                                activities                 information 
+                                                                                                                                                    
+                                                                                                                                                                 
+  
+                                                                                        
+                  Extended                         Extended                            Better                                                 More
+                                                                                        
+                                                                                                                       Better               efficient/ 
+                    study                           hours of                          income
+                                                                                                                       health                           
+                   hours                           operation                        opportunities                                          productive
+                                                                                                                                            business
+                                                                                        
+
+                                                                                        
+                                               Education                          Income                     Health 
+
+                                                                                        
+
+Source: Adapted from Khandker, Barnes, and Samad (2013). 
+                                  
+
+
+
+
+                                                                                      21 
+ 
+                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+
+
+
+ 
+                                                                                                                                                                                                                                                                          Electricity  availability (hours/day)
+                                                                                                                        Electrification effects
+
+
+
+
+                                                                                                                                                                                                                                                                                0
+                                                                                                                                                                                                                                                                                     6
+                                                                                                                                                                                                                                                                                              12
+                                                                                                                                                                                                                                                                                                      18
+                                                                                                                                                                                                                                                                                                              24
+                                                                                                             -0.10   0.00         0.10        0.20   0.30
+
+
+
+
+                                                                                        0
+                                                                                                                                                                                                                                                         Arunachal  Pradesh
+                                                                                                                                                                                                                                                                       Assam
+                                                                                                                                                                                                                                                                        Bihar
+                                                                                                                                                                                                                                                                    Manipur
+                                                                                                                                                                                                                                                                     Haryana
+                                                                                                                                                                                                                                                               Uttar Pradesh
+
+
+
+
+                                                                                        .2
+                                                                                                                                                                                                                                                        Jammu and Kashmir
+                                                                                                                                                                                                                                                            Madhya  Pradesh
+                                                                                                                                                                                                                                                                 Tamil  Nadu
+                                                                                                                                                                                                                                                                   Rajasthan
+                                                                                                                                                                                                                                                                  Karnataka
+
+
+
+
+                                                                                .4
+                                                                                                                                                                                                                                                             Andhra Pradesh
+                                                                                                                                                                                                                                                                   Nagaland
+                                                                                                                                                                                                                                                                Maharashtra
+                                                                                                                                                                                                                                                                  Jharkhand
+
+
+
+
+          Note: Shaded area represents 95% confidence intervals 
+                                                                                                                                                                                                                                                                Uttarakhand
+
+
+
+
+    22 
+                                                                                                                                                                                                                                                                          Goa
+
+
+
+
+                                                                                               .6
+                                                                                                                                                                                                                                                                       Orissa
+                                                                                                                                                                                                                                                                                                                                                                 territory, 2012 
+
+
+
+
+                                                                                                                                                                                                                                                                West  Bengal
+                                                                                                                                                                                                                                                                      Tripura
+
+
+
+
+                                                                       Quantiles of per capita expenditure
+                                                                                                                                                                                                                                                                Chhattisgarh
+                                                                                                                                                                                                                                                                      Punjab
+
+
+
+
+                                                                                        .8
+                                                                                                                                                                                                                                                                  Meghalaya
+                                                                                                                                                                                                                                                           Himachal  Pradesh
+                                                                                                                                                                                                                                                                       Kerala
+                                                                                                                                                                                                                                                                        Delhi
+                                                                                                                                                                                                                                                                       Sikkim
+
+
+
+
+           
+                                                                                        1
+                                                                                                                                                                                                                                                                    Mizoram
+                                                                                                                                                            Figure 3. Effects of electrification on per capita expenditure by expenditure quantile
+
+
+
+
+                                                                                                                                                                                                                                                                     Gujarat
+
+
+
+
+                                                                    
+                                                                                                                                                                                                                                                                Pondicherry
+                                                                                                                                                                                                                                                     Dadra  and Nagar Haveli
+                                                                                                                                                                                                                                                             Daman  and  Diu
+                                                                                                                                                                                                                                                                                                                   Figure 2. Average hours of electricity available to grid‐connected households per day by state or union 
+                                                             
+                                                             
+                         Table 1. Distribution of IHDS sample of rural households by region 
+                                                             
+     Region                      States and union territories                      2005              2012 
+     North                       Haryana, Himachal Pradesh, Jammu and              7,589             9,334 
+                                 Kashmir, Punjab, Rajasthan, 
+                                 Uttarakhand, Uttar Pradesh  
+     West                        Goa, Gujarat, Maharashtra                         3,046             3,448 
+     South                       Andhra Pradesh, Karnataka, Kerala,                5,366             5,985 
+                                 Tamil Nadu  
+     East                        Bihar, Jharkhand, Orissa, West Bengal             3,865             4,530 
+     Central                     Chhattisgarh, Madhya Pradesh                      2,852             3,572 
+     Northeast                   Arunachal Pradesh, Assam, Manipur,                1,255             1,335 
+                                 Meghalaya, Mizoram, Nagaland, Sikkim, 
+                                 Tripura 
+     Union territories and  Dadra and Nagar Haveli, Daman and Diu,                  218               242 
+     the capitala                Delhi, Pondicherry 
+     No. of Observations                                                          24,191            28,446 
+    Note: While this is a panel sample, the number of surveyed households in 2012 exceeds that in 2005 because 
+  many of the original 2005 households split during the seven years between the two surveys.   
+  a. Union territories are administrative divisions that differ from the states. While each state is ruled by its own 
+  elected government, union territories are ruled by the central government.  
+                                                               
+
+
+
+
+                                                             
+
+                  Table 2. Electrification rate among sample households by region (percent) 
+     Region                                     2005                         2012 
+     North                                      52.8                         66.8 
+     West                                       78.7                         92.6 
+     South                                      86.9                         95.5 
+     East                                       37.4                         64.5 
+     Central                                    66.3                         91.9 
+     Northeast                                  69.5                         67.8 
+     Union territories and the                  94.2                         99.8 
+     capital  
+     Total                                      61.8                         76.7 
+     No. of Observations                       24,191                       28,446 
+
+
+
+
+                                                           23 
+ 
+                 Table 3. Distribution of sample households with electricity  
+                                by duration of power outages 
+    Outage duration (hours/day)                      2005                   2012 
+    No outages                                        9.0                    7.0 
+    1–5                                              23.8                   21.4 
+    6–10                                             24.5                   19.2 
+    11–16                                            18.1                   18.4 
+    17–20                                            20.8                   29.0 
+    >20                                               3.8                    5.1 
+    Average duration of outages                       9.3                   10.7 
+    No. of Observations                             16,574                 23,395 
+
+
+
+
+                                             24 
+ 
+                   Table 4. Summary statistics for outcome variables by electrification status 
+                                                           
+                                                              2005                             2012 
+                                                 Households       Households      Households  Households 
+                                                      with           without           with           without 
+Outcome variable                                  electricity       electricity    electricity       electricity 
+Consumption of kerosene and fuel                                                                           
+collection time 
+Kerosene consumption (liters/month)                 3.59**             3.66           2.82**            3.04 
+                                                     (2.77)           (2.04)          (2.18)           (1.04) 
+Time spent on biomass fuel collection               15.4**             19.5           11.3**            19.4 
+(hours/month)                                        (23.7)           (24.8)          (33.6)           (40.6) 
+Income, expenditure, and poverty                                                                           
+Per capita farm income (Rs./year)                 4,118.2**          2,526.7       5,126.6**          2,711.0 
+                                                  (11,144.1)        (3,817.5)      (19,498.8)        (5,263.8) 
+Per capita nonfarm income (Rs./year)              5,131.2**          2,324.6       7,886.4**          3,830.0 
+                                                   (9,053.5)        (4,611.9)      (15,579.4)        (5,494.6) 
+Per capita total income (Rs./year)                9,249.4**          4,851.4      13,012.9**          6,541.1 
+                                                  (14,077.6)        (5,584.9)      (24,794.3)        (7,153.7) 
+Per capita food expenditure (Rs./year)            4,609.3**          3,735.7       5,498.6**          4,153.7 
+                                                   (2,492.5)        (1,924.4)       (3,086.3)        (2,379.0) 
+Per capita nonfood expenditure (Rs./year)         6,779.9**          2,685.3       6,992.4**          3,341.1 
+                                                  (11,988.4)        (4,220.4)      (12,916.1)        (6,361.3) 
+Per capita total expenditure (Rs./year)          11,389.2**          6,421.0      12,488.3**          7,493.7 
+                                                  (13,189.4)        (5,186.4)      (14,317.1)        (7,293.9) 
+Moderate poverty rate (percent)                     15.5**             33.7           16.6**            33.7 
+                                                     (36.2)           (47.3)          (37.3)           (47.3) 
+No. of Observations                                 16,574            7,617          23,496            5,050 
+Education outcomes (ages 5–18)                                                                             
+Time spent in studies by boys (hours/week)          5.97**             4.16           7.08**            5.10 
+                                                     (6.56)           (5.83)          (6.79)           (5.67) 
+No. of Observations                                 14,875            7,898          16,101            4,118 
+Time spent in studies by girls (hours/week)         5.39**             3.55           6.71**            4.64 
+                                                     (6.53)           (5.59)          (6.79)           (5.21) 
+No. of Observations                                 13,826            7,144          14,991            3,934 
+Grade completion by boys (years)                    4.54**             3.20           4.94**            3.65 
+                                                     (3.44)           (3.09)          (3.57)           (3.23) 
+No. of Observations                                 14,875            7,898          16,101            4,118 
+Grade completion by girls (years)                   4.32**             2.65           5.05**            3.62 
+                                                     (3.44)           (2.90)          (3.60)           (3.21) 
+No. of Observations                                 13,826            7,144          14,991            3,934 
+Employment (ages 15–65)                                                                                    
+Labor force participation by men                    0.793**           0.848          0.830**           0.873 
+                                                    (0.405)          (0.359)         (0.376)          (0.333) 
+No. of Observations                                 29,561            12,048         37,078            6,688 
+Labor force participation by women                  0.473**           0.514          0.526**           0.565 
+                                                    (0.499)          (0.500)         (0.499)          (0.496) 
+
+
+                                                       25 
+   
+ No. of Observations                                     29,446              11,836            38,822              7,131 
+ Employment for men (hours/month)                        207.7**              172.9            182.9**             149.0 
+                                                         (158.4)             (129.8)           (152.9)            (125.3) 
+ No. of Observations                                     16,574               7,617            23,496              5,050 
+ Employment for women (hours/month)                      76.9**                58.9             69.5**              51.1 
+                                                          (99.1)              (78.8)            (89.9)             (72.0) 
+ No. of Observations                                     16,574               7,617            23,496              5,050 
+Note: Figures in parentheses are standard deviations. ** represents a statistical significance of 5 percent or better for 
+the difference in the outcome variable between households with electricity and those without. Monetary figures are 
+adjusted by the consumer price index. Rs. = rupees. 
+     
+                                          
+
+
+
+
+                                                              26 
+     
+          Table 5. Summary statistics for outcome variables by duration of electricity availability  
+  
+                                                    2005                                    2012 
+                                       Electricity     Electricity         Electricity        Electricity 
+                                       available for  available for        available for      available for less 
+                                       at least 20     less than 20        at least 20        than 20 
+Outcome variable                       hours/day       hours/day           hours/day          hours/day 
+Consumption of kerosene and fuel 
+collection time
+Kerosene consumption                        3.37**               3.68         2.71**                  2.86 
+(liters/month)                              (3.04)              (2.63)         (2.56)                (2.02) 
+Time spent in biomass fuel                   13.3                16.4            9.3                  12.4 
+collection  (hours/month)                   (25.1)              (23.0)         (28.4)                (35.9) 
+Income, expenditure, and poverty                                                                         
+Per capita farm income (Rs./year)          3,933.4             4,203.4       5,513.4*               4,980.7 
+                                         (13,417.2)           (9,920.4)     (19,539.9)            (19,481.0) 
+Per capita nonfarm income                6,570.1**             4,467.1       9,770.2**              7,174.6 
+(Rs./year)                               (10,027.2)           (8,485.5)     (17,594.0)            (14,685.1) 
+Per capita total income (Rs./year)       10,503.6**            8,670.5      15,283.7**             12,155.3 
+                                         (16,303.9)          (12,881.0)     (26,030.9)            (24,356.6) 
+Per capita food expenditure              4,690.4**             4,571.8       5,687.3**              5,427.3 
+(Rs./year)                                (2,483.5)           (2,495.8)      (3,203.5)             (3,037.9) 
+Per capita nonfood expenditure           8,329.5**             6,064.7       7,334.4**              6,862.9 
+(Rs./year)                               (13,402.9)          (11,204.5)     (13,048.8)            (12,863.6) 
+Per capita total expenditure             13,020.0**           10,636.5      13,020.1**             12,287.2 
+(Rs./year)                               (14,669.7)          (12,375.0)     (14,534.4)            (14,229.0) 
+Moderate poverty rate (percent)             13.8**               16.2           16.9                  16.6 
+                                            (34.5)              (36.9)         (37.5)                (37.2) 
+No. of Observations                         5,338              11,236          7,246                16,149 
+Education outcomes (ages 5–18)                                                                           
+Time spent in studies by boys               6.63**               5.74         7.92**                  6.85 
+(hours/week)                                (7.25)              (6.29)         (7.05)                (6.70) 
+No. of Observations                         4,313              10,562          4,005                12,096 
+Time spent in studies by girls              6.51**               5.01         7.72**                  6.42 
+(hours/week)                                (7.69)              (6.04)         (7.33)                (6.61) 
+No. of Observations                         4,043               9,783          3,662                11,329 
+Grade completion by boys (years)            4.90**               4.42         5.39**                  4.82 
+                                            (3.42)              (3.44)         (3.54)                (3.56) 
+No. of Observations                         4,313              10,562          4,005                12,096 
+Grade completion by girls (years)           4.84**               4.15         5.40**                  4.95 
+                                            (3.41)              (3.44)         (3.63)                (3.58) 
+No. of Observations                         4,043               9,783          3,662                11,329 
+Employment (ages 15–65)                                                                                  
+Labor force participation by men           0.797**              0.784         0.808**                0.838 
+                                           (0.402)             (0.412)        (0.394)               (0.369) 
+No. of Observations                         9,200              20,361         10,182                26,896 
+Labor force participation by women         0.422**              0.493         0.486**                0.540 
+
+
+                                                       27 
+  
+                                                (0.494)            (0.500)           (0.500)               (0.498) 
+ No. of Observations                             9,323             20,123            10,814                28,008 
+ Employment for men (hours/month)               200.3**             211.0            194.3**                178.6 
+                                                (149.2)            (162.4)           (157.0)               (151.2) 
+ No. of Observations                             5,338             11,236             7,246                16,149 
+ Employment for women                            64.6**              70.7            66.3**                  70.7 
+ (hours/month)                                   (90.5)            (102.4)            (90.1)                (90.7) 
+ No. of Observations                             5,338             11,236             7,246                16,149 
+Note: Figures in parentheses are standard deviations. * and ** represent a statistical significance of 10 percent and 5 
+percent (or better), respectively, for the difference in the outcome variable between households that have electricity 
+available for at least 20 hours a day and those that have electricity available for less than 20 hours a day. Monetary 
+figures are adjusted by the consumer price index (2005=100). Rs. = rupees.   
+
+
+
+
+                                                             28 
+    
+ 
+      
+                       Table 6. Effect of household electrification on consumption of kerosene and fuel collection time (N = 24,191) 
+                                                         (1)                              (2)                                   (3) 
+                                                                                                                Aggregate electrification impacts 
+                                                                                                                        calculated from (2)   
+                                            Simple fixed  p‐weighted        Simple fixed  p‐weighted fixed       Simple fixed         p‐weighted 
+                                               effects       fixed effects     effects           effects             effects         fixed effects 
+    Log kerosene consumption 
+    (liters/month)
+    Household has grid electricity             ‐0.041          ‐0.121**         0.007           ‐0.141**             ‐0.051            ‐0.126** 
+                                               (‐0.98)           (‐2.18)        (0.08)           (‐2.01)             (‐1.18)             (‐2.08) 
+    Household has grid electricity ×                                           ‐0.004             0.001                                       
+    duration of power outages per day                                          (‐0.71)            (0.01) 
+    (hours)
+    Time spent on biomass fuel                                                                                                                
+    collection  (hours/month) 
+    Household has grid electricity             ‐0.838           ‐1.582*       ‐2.492*          ‐3.533**              ‐0.483             ‐1.804* 
+                                               (‐1.03)           (‐1.69)       (‐2.23)           (‐3.03)             (‐0.58)             (‐1.89) 
+    Household has grid electricity ×                                          0.141**            0.170*                                       
+    duration of power outages per day                                           (2.10)           (‐1.64) 
+    (hours)
+Note: Figures in parentheses are t‐statistics based on robust standard errors clustered at the village level. ** represents statistically significant at the 5 percent 
+level. * represents statistically significant at the 10 percent level. Regression controls for survey round (2004‐05 = 0, 2011‐12 = 1), household characteristics (age, 
+sex, and education of the household head, number of adult males, number of adult females, log of agricultural land, access to piped water or tube well, access to 
+flush toilet), village‐level infrastructure (paved roads, schools, markets, banks, NGOs, development programs, and so on), and village prices of fuels (firewood and , 
+kerosene and LPG) and of essential food items (staples, meat, fish, vegetables, and so on). Rs. = rupees. 
+     
+
+
+
+
+                                                                                    29 
+      
+     
+
+
+                           Table 7. Effect of household electrification on income, expenditure, and poverty (N = 24,191) 
+                                                     (1)                               (2)                                   (3) 
+                                                                                                            Aggregate electrification impacts 
+                                                                                                                     calculated from (2)   
+                                        Simple fixed  p‐weighted         Simple fixed  p‐weighted fixed      Simple fixed          p‐weighted 
+                                           effects       fixed effects       effects         effects            effects           fixed effects 
+Log per capita farm income 
+(Rs./year)
+Household has grid electricity              ‐0.009           0.061           0.171**           0.108             ‐0.048               0.049 
+                                            (‐0.16)          (0.64)            (2.14)          (0.66)            (‐0.81)              (0.56) 
+Household has grid electricity ×                                            ‐0.015**          ‐0.004                                      
+duration of power outages per day                                             (‐3.15)         (‐0.47) 
+(hours)
+Log per capita nonfarm income                                                                                                             
+(Rs./year)
+Household has grid electricity             0.138*           0.149**          0.266**         0.373**              0.110               0.094 
+                                             (1.81)          (2.27)            (2.50)          (2.38)             (1.44)              (0.80) 
+Household has grid electricity ×                                             ‐0.011*        ‐0.020**                                      
+duration of power outages per day                                             (‐1.86)         (‐2.20) 
+(hours)
+Log per capita total income                                                                                                               
+(Rs./year)
+Household has grid electricity             0.054**          0.110**          0.102**         0.167**            0.043*               0.096* 
+                                             (2.26)          (2.25)            (3.12)          (2.70)             (1.80)              (1.94) 
+Household has grid electricity ×                                            ‐0.004**         ‐0.005*                                      
+duration of power outages per day                                             (‐2.19)         (‐1.70) 
+(hours)
+Log per capita food expenditure                                                                                                           
+(Rs./year)
+Household has grid electricity             0.044**          0.061**          0.047**         0.084**            0.043**              0.056** 
+                                             (4.23)          (4.51)            (3.31)          (4.76)             (4.09)              (3.94) 
+
+
+                                                                         30 
+     
+ Household has grid electricity ×                                                      ‐0.0003              ‐0.002*                                         
+ duration of power outages per day                                                      (‐0.37)              (‐1.89) 
+ (hours)
+ Log per capita nonfood expenditure                                                                                                                         
+ (Rs./year)
+ Household has grid electricity                  0.166**           0.161**            0.146**               0.149**              0.170**               0.164** 
+                                                  (8.18)            (4.83)             (4.91)                (3.43)               (8.23)                (4.82) 
+ Household has grid electricity ×                                                      0.002                 0.001                                          
+ duration of power outages per day                                                     (0.95)                (0.44) 
+ (hours)
+ Log per capita total expenditure                                                                                                                           
+ (Rs./year)
+ Household has grid electricity                  0.091**           0.108**            0.087**               0.120**              0.092**               0.105** 
+                                                  (7.51)            (5.15)             (4.80)                 (4.31)              (7.49)                (4.98) 
+ Household has grid electricity ×                                                     0.0004                 ‐0.001                                         
+ duration of power outages per day                                                     (0.36)                (‐0.67) 
+ (hours)
+ Moderate poverty rate                                                                                                                                      
+ Household has grid electricity                  ‐0.066**          ‐0.074**           ‐0.078**             ‐0.095**              ‐0.063**             ‐0.068** 
+                                                  (‐6.74)           (‐5.68)            (‐6.49)              (‐5.24)               (‐6.39)              (‐5.28) 
+ Household has grid electricity ×                                                      0.001*               0.002*                                          
+ duration of power outages per day                                                      (1.75)               (1.87) 
+ (hours)
+Note: Figures in parentheses are t‐statistics based on robust standard errors clustered at the village level. ** represents statistically significant at the 5 percent 
+level. * represents statistically significant at the 10 percent level. Regression controls for survey round (2004–05 = 0, 2011–12 = 1), household characteristics (age, 
+sex, and education of the household head, number of adult males, number of adult females, log of agricultural land, access to piped water or tube well, access to 
+flush toilet), village‐level infrastructure (paved roads, schools, markets, banks, NGOs, development programs, and so on), and village prices of fuels (firewood,  
+kerosene and LPG) and of essential food items (staples, meat, fish, vegetables, and so on). Rs. = rupees. 
+
+
+
+
+                                                                                    31 
+    
+                                    Table 8. Effect of household electrification on education outcomes (ages 5–18) 
+                                                        (1)                              (2)                                  (3) 
+                                                                                                              Aggregate electrification impacts 
+                                                                                                                      calculated from (2)   
+                                         Simple fixed  p‐weighted          Simple fixed  p‐weighted fixed      Simple fixed         p‐weighted 
+                                             effects        fixed effects      effects          effects           effects          fixed effects 
+ Time spent in studies by boys (hours/week) (N = 22,773)
+ Household has grid electricity               0.125            0.354**         0.436**          1.006**            0.082              0.270** 
+                                              (0.94)             (3.13)          (2.40)           (5.89)           (0.61)               (2.37) 
+ Household has grid electricity ×                                             ‐0.024**         ‐0.051**                                     
+ duration of power outages per day                                              (‐2.51)          (‐5.10) 
+ (hours)
+ Time spent in studies by girls (hours/week) (N = 20,970)                                                                                   
+ Household has grid electricity               0.077            0.346**          0.304*          0.644**            0.042              0.301** 
+                                              (0.58)             (3.08)          (1.66)           (3.85)           (0.31)               (2.64) 
+ Household has grid electricity ×                                              ‐0.018*         ‐0.024**                                     
+ duration of power outages per day                                              (‐1.81)          (‐2.41) 
+ (hours)
+ Grade completion by boys (years) (N = 22,773)                                                                                              
+ Household has grid electricity              ‐0.019             ‐0.035          ‐0.034          0.138**           ‐0.017               ‐0.057 
+                                             (‐0.43)            (‐0.85)         (‐0.56)           (2.23)          (‐0.39)              (‐1.37) 
+ Household has grid electricity ×                                                0.001         ‐0.013**                                     
+ duration of power outages per day                                               (0.36)          (‐3.73) 
+ (hours)
+ Grade completion by girls (years) (N = 20,970)                                                                                             
+ Household has grid electricity              ‐0.036             ‐0.006          ‐0.075            0.102           ‐0.030               ‐0.022 
+                                             (‐0.73)            (‐0.13)         (‐1.13)           (1.54)          (‐0.60)              (‐0.49) 
+ Household has grid electricity ×                                                0.003         ‐0.009**                                     
+ duration of power outages per day                                               (0.87)          (‐2.20) 
+ (hours)
+Note: Figures in parentheses are t‐statistics based on robust standard errors clustered at the village level. ** represents statistically significant at the 5 percent 
+level. * represents statistically significant at the 10 percent level. Regression controls for survey round (2004–05 = 0, 2011–12 = 1), household characteristics (age, 
+sex, and education of the household head, number of adult males, number of adult females, log of agricultural land, access to piped water or tube well, access to 
+
+
+                                                                                    32 
+    
+flush toilet), village‐level infrastructure (paved roads, schools, markets, banks, NGOs, development programs, and so on), and village prices of fuels (firewood, 
+kerosene and LPG) and of essential food items (staples, meat, fish, vegetables, and so on). 
+
+
+
+
+                                                                                   33 
+    
+                                      Table 9. Effect of household electrification on employment (ages 15–65) 
+                                                      (1)                               (2)                Aggregate electrification impacts 
+                                                                                                                   calculated from (2)   
+                                         Simple fixed  p‐weighted        Simple fixed  p‐weighted fixed     Simple fixed         p‐weighted 
+                                            effects       fixed effects      effects          effects          effects          fixed effects 
+ Men’s labor force participation (N = 43,766)
+ Household has grid electricity              0.008           0.009*          0.024**           0.011*           0.004              0.001* 
+                                            (1.46)            (1.81)           (3.50)           (1.69)          (0.80)              (1.66) 
+ Household has grid electricity ×                                           ‐0.001**          ‐0.0002                                   
+ duration of power outages per day                                            (‐3.84)          (‐0.58) 
+ (hours)
+ Women’s labor force participation (N = 45,953)                                                                                         
+ Household has grid electricity            0.014**           0.008*          0.033**            0.008           0.009               0.009 
+                                            (2.15)            (1.67)           (4.14)           (1.09)          (1.45)              (1.55) 
+ Household has grid electricity ×                                           ‐0.002**         0.00002                                    
+ duration of power outages per day                                            (‐3.98)           (0.03) 
+ (hours)
+ Log men’s employment (hours/month) (N = 24,191)                                                                                        
+ Household has grid electricity            0.071**            0.049          0.112**            0.033          0.062**              0.053 
+                                            (2.63)            (1.01)           (3.06)         (0.460)           (2.28)              (1.10) 
+ Household has grid electricity ×                                            ‐0.003*            0.001                                   
+ duration of power outages per day                                            (‐1.65)           (0.35) 
+ (hours)
+ Log women’s employment (hours/month) (N = 24,191)                                                                                      
+ Household has grid electricity            0.114**           0.156**         0.215**          0.312**           0.093              0.117* 
+                                            (2.85)            (2.40)           (3.75)           (3.33)          (2.27)              (1.77) 
+ Household has grid electricity ×                                           ‐0.009**         ‐0.014**                                   
+ duration of power outages per day                                            (‐2.49)          (‐2.36) 
+ (hours)
+Note: Figures in parentheses are t‐statistics based on robust standard errors clustered at the village level. ** represents statistically significant at the 5 percent 
+level. * represents statistically significant at the 10 percent level. Regression controls for survey round (2004–05 = 0, 2011–12 = 1), household characteristics (age, 
+sex, and education of the household head, number of adult males, number of adult females, log of agricultural land, access to piped water or tube well, access to 
+
+
+                                                                                    34 
+      
+flush toilet), village‐level infrastructure (paved roads, schools, markets, banks, NGOs, development programs, and so on), and village prices of fuels (firewood, 
+kerosene and LPG) and of essential food items (staples, meat, fish, vegetables, and so on).  
+
+
+
+
+                                                                                   35 
+    
+                                                          
+        Table 10. Fixed‐effects quantile regression estimates of effects of household electrification on per 
+                                  capita expenditure (rupees/year) (N = 24,191) 
+
+                                                                 (1)               (2)                  (3) 
+                                                                                                    Aggregate 
+                                                                                                  electrification 
+                                                                                                impacts calculated 
+                                                                                                     from (2) 
+    20th quantile 
+    Household has grid electricity                             0.130**          0.168**               0.160** 
+                                                                (9.21)          (15.53)               (15.09) 
+    Household has grid electricity ×                                            ‐0.001*                    
+    duration of power outages per day (hours)                                    (‐1.67) 
+    40th quantile                                                                                          
+    Household has grid electricity                             0.102**          0.154**               0.149** 
+                                                                (8.35)          (12.56)               (11.06) 
+    Household has grid electricity ×                                           ‐0.002**                    
+    duration of power outages per day (hours)                                    (‐3.50) 
+    60th quantile                                                                                          
+    Household has grid electricity                             0.080**          0.114**               0.101** 
+                                                                (7.98)          (14.57)                (8.20) 
+    Household has grid electricity ×                                           0.00001                     
+    duration of power outages per day (hours)                                     (0.01) 
+    80th quantile                                                                                          
+    Household has grid electricity                             0.072**           0.064*                0.061* 
+                                                                (4.21)            (1.82)               (1.66) 
+    Household has grid electricity ×                                              0.001                    
+    duration of power outages per day (hours)                                     (0.79) 
+Note: Figures in parentheses are t‐statistics based on bootstrapped standard errors. ** represents statistically 
+significant at the 5 percent level. * represents statistically significant at the 10 percent level.  
+
+
+
+
+                                                         36 
+ 
+

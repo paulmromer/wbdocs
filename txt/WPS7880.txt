@@ -1,0 +1,1715 @@
+                                                    WPS7880
+
+
+Policy Research Working Paper                      7880
+
+
+
+
+                          Transit Migration
+                       All Roads Lead to America
+
+                                   Erhan Artuc
+                                   Caglar Ozden
+
+
+
+
+Development Research Group
+Trade and International Integration Team
+November 2016
+Policy Research Working Paper 7880
+
+
+  Abstract
+ The paths of many migrants include multiple destina-                               percent. To explain these patterns, this paper constructs
+ tions and transit routes, yet this pattern is almost never                         a dynamic model of global migration that allows transit
+ reflected in empirical analyses. For example, 9 percent                            migration opportunities to impact the attractiveness of
+ of recent immigrants to the United States arrived from                             locations. After estimating the structural parameters of
+ a transit country as opposed to the country where they                             the model, the paper simulates various counterfactual sce-
+ were born. Among those arriving from many high-                                    narios to highlight the spillovers of transit migration paths.
+ income countries, the transit migration ratio exceeds 30
+
+
+
+
+  This paper is a product of the Trade and International Integration Team, Development Research Group. It is part of a
+  larger effort by the World Bank to provide open access to its research and make a contribution to development policy
+  discussions around the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org.
+  The authors may be contacted at eartuc@worldbank.org and cozden@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+Transit Migration: All Roads Lead to America∗
+                                Erhan Artuc†and Caglar Ozden‡
+
+
+
+
+JEL Codes: J61, F22, F16, J68
+Keywords: International Migration, Transit Migration, Migration Policy
+
+
+   ∗
+      We thank two anonymous referees, Frederic Vermeulen, Michel Beine, Simone Bertoli, Michael Clemens,
+Hein de Haas, David McKenzie, Jesus Fernandez-Huertas Moraga, Chris Parsons, Hillel Rapoport, Moritz Rit-
+ter, Mathis Wagner and participants at the International Migration and Development Conference at Oxford
+University for comments and feedback. We are grateful to Zovanga Kone for his excellent assistance in con-
+structing the data ﬁles and catching many of our errors. We also thank Varanya Chaubey and Maggie Liu for
+their editorial help. Research for this paper has been supported in part by the Knowledge for Change Program,
+by the Multidonor Trust Fund for Trade and Development and by the Strategic Research Program of the World
+Bank. All errors and omissions are the authors’ responsibility.
+    †
+      World Bank, Development Research Group
+    ‡
+      World Bank, Development Research Group
+The migration decisions and paths of many international migrants include multiple destinations
+and transit routes. Many people leave their birth countries and live in diﬀerent locations before
+settling permanently in a foreign country or returning home. For example, around 9% of the
+people who migrated to the United States during 2001-2012 were living in a country other than
+their birthplace prior to their arrival. This pattern is even more common for migrants with
+tertiary education: nearly 14% of such migrants did not come directly from their birth coun-
+tries.1 High-income OECD countries are particularly important transit stops for immigrants.
+Among the people who were living in Australia, Canada, or the United Kingdom just before
+their arrival in the United States, over 30% were born in a diﬀerent country and would already
+be classiﬁed as international migrants.
+
+Despite their prevalence and potential economic signiﬁcance, transitory migration patterns
+and the dynamic decision processes behind them are not explored in depth in the international
+migration literature. The determinants of migration ﬂows or stocks are generally estimated
+as functions of the bilateral mobility barriers between geographic locations and the diﬀerences
+                                                                                          2
+between the utility (or income) levels at alternative destinations and origins.               The standard
+model that validates this approach assumes that migrants make a permanent decision at a
+single point in time to move to a foreign country or to stay at home (see Hanson, 2010, for a
+discussion).
+
+Actual migration decisions are, however, more complex and dynamic in nature. Current and
+potential migrants continuously update their information sets and review their decisions. They
+might make (or delay) certain decisions or move to a speciﬁc location at diﬀerent points in
+time. These decisions are based on current location-speciﬁc utility levels, migration costs, as
+well as (expected) future opportunities that will become available only at a new location . For
+example, the decision to move from Morocco to Spain might not be based only on the relatively
+   1
+     We should note that there are a handful of birth or last residence countries where the transit migration
+ratio is lower among the tertiary educated.
+   2
+     These empirical approaches are usually based on the random utility maximization model of McFadden
+(1978).
+
+
+                                                     2
+higher income levels or amenities. Spain’s proximity to more attractive labor markets in other
+European countries, which are possibly less accessible via direct migration, is likely to enter
+into the decision processes and utility calculations of Moroccan migrants.
+
+The objective of this paper is to explore dynamic migration decisions and transit paths using
+analytical modeling and empirical analysis. We ﬁrst construct a sequential multi-period model
+of migration by drawing on recent papers on dynamic decision making processes in labor markets
+(such as Kennan and Walker, 2011 and Artuc, Chaudhuri and McLaren, 2010). Agents are
+identiﬁed by their current country of residence in addition to their birth countries. In each
+period, they can move to a third country or remain in their current location. Their mobility
+decisions depend on location-speciﬁc utility ﬂows as well as bilateral moving costs between
+each pair of countries and a stochastic individual component for each choice. The decision to
+move or to stay put is reconsidered in every period. The dynamic structure of the decision
+process results in a continuation value for each potential destination. The main insight of the
+model is that the continuation value includes an option value for each location in addition to
+an instantaneous utility. This option value of a destination is based on the access it creates to
+other higher value destinations.
+
+Proper accounting of dynamic decision processes, such as reversing migration decisions or
+moving to third countries in later periods, leads to better identiﬁcation of spillovers between
+alternative destinations. Otherwise, we would end up with biased estimates when we try to
+identify the determinants of migration patterns between pairs of birth and destination countries
+or to assess the eﬀectiveness of migration policies. Bertoli, Brucker and Fernandez-Huertas
+Moraga’s (2014) analysis, in the context of the European crisis, shows how biases can occur
+in estimating the determinants of migration when sequential decision processes and resulting
+spillovers are ignored.
+
+Incorporating the option value of a location and viewing migration processes from this dynamic
+lens can generate many additional insights. In standard static models, decisions to migrate to
+
+                                               3
+a location, say France, cannot be analyzed in isolation from alternative destinations available,
+like Germany. As a consequence, changes in the relative attractiveness of Germany will also
+aﬀect migration incentives and, therefore, ﬂows to France.3 Our dynamic model, however,
+exposes another channel: the option value of available destinations for future mobility decisions.
+The ease of movement between a pair of countries aﬀects migration from third countries. For
+example, when Poland joins the European Union and gains visa-free access to the internal labor
+market in the United Kingdom, more Belarusian migrants might decide to move to Poland as
+they hope to eventually end up in the United Kingdom. Similarly, closing down bilateral
+corridors might not fully eliminate migration from certain origin countries. As long as large
+income gaps exist, people will try to ﬁnd a path to a speciﬁc destination via transit countries,
+no matter how circuitous that route might be. In other words, the availability of transit routes
+might signiﬁcantly reduce the eﬀectiveness of restrictive migration policies.
+
+Using the estimated parameters of our dynamic migration model, we perform several simulation
+exercises where we ‘close’ certain bilateral corridors to highlight the spillovers between alterna-
+tive locations as discussed above. We chose the migration corridors based on their importance
+for immigration to the United States, where detailed transit migration data are available. The
+migration paths we consider are direct migration (i) from Canada to the United States, (ii)
+from developing countries to Canada, and (iii) from developing countries to the United States.
+Our fourth and ﬁnal simulation blocks all transit migration to the United States and only al-
+lows direct migration from the migrants’ birth countries. In each of these scenarios, we analyze
+how these policy experiments would aﬀect migration from diﬀerent countries to Canada, to the
+United States, and to other transit countries, like the United Kingdom. As expected, there
+are signiﬁcant spillovers. For example, when people cannot move to the United States directly
+(Simulation 3), both permanent and transit migration to Canada increases. On the other hand,
+when transit migration to the United States is banned (Simulation 4), then direct migration to
+  3
+   Such links between alternative destinations in static models need to be empirically addressed in gravity
+models in international trade models (Anderson, 2011) and migration models (Bertoli and Fernandez-Huertas
+Moraga, 2013).
+
+
+                                                    4
+Canada also drops since Canada’s option value diminishes signiﬁcantly.
+
+While issues related to international transit migration receive relatively little attention in eco-
+nomics, they have a more prominent place in other ﬁelds, such as demography and sociology,
+with varying deﬁnitions and approaches. More speciﬁcally, the phrase ‘transit migration’ is
+used to describe the migration patterns emerging in Europe following restrictions on legal mi-
+gration and border controls that were introduced in the 1990s. As a result, many migrants
+from Eastern Mediterranean and African countries moved to countries at the periphery of the
+European Union, such as those in North Africa and Eastern Europe, while waiting for a chance
+to move to the European Union countries (Collyer and de Haas, 2012; Collyer et al, 2012). The
+paths of most recent refugees from Syria, Iraq and other source countries follow similar transit
+routes, such as through Turkey, as they try to reach Western Europe. The phrase is also used
+extensively to refer to low-skilled and mostly undocumented migrants from Central America
+who travel through and temporarily live in Mexico before reaching the United States. In other
+words, transit migration has a strong aﬃliation with irregular and undocumented migrants and
+refugees as well as a strong sense of temporariness (see Duvell, 2012). Even among the few
+papers in the economics literature (such as Djajic, 2013), this is the general perception.
+
+We use the expression ‘transit migration’ to describe any migrant who lives in a foreign country
+before moving to a second foreign country. Our data from the American Community Survey
+indicate that transit migrants, deﬁned as those living in a country other than their birth country
+‘one year’ prior to their move to the United States, are somewhat diﬀerent than those the
+demography and sociology literatures focus on. First, transit migrants to the United States are
+more likely to have tertiary education as opposed to primary or secondary education. Second,
+most transit migrants are born in high-income European (and some African and East Asian)
+countries as opposed to most Latin American migrants who come directly from their countries
+of birth.
+
+In terms of international migration, our paper is related to the large literature on the deter-
+
+                                                5
+minants of migration patterns such as Mayda (2010), Grogger and Hanson (2011), Beine et al
+(2011) and Belot and Ederveen (2012). Several recent papers (such as Bertoli and Fernandez-
+Huertas Moraga, 2013; Bertoli et al, 2013), were inﬂuenced by new developments in inter-
+national trade literature on gravity models (discussed in Anderson, 2011). They aim to relax
+certain assumptions used in the earlier models. In this regard, the paper closest to ours in terms
+of insights and approach is Bertoli et al (2014) which analyzes the impact of the ﬁnancial crisis
+on intra-European migration patterns. Using a model that incorporates expectations about
+future economic conditions and the attractiveness of alternative destinations, they show how
+the determinants of migration patterns change when dynamic considerations are incorporated.
+While our empirical approach and questions are diﬀerent, our analytical models share many
+insights.
+
+Our paper is related to several other strands in the labor economics literature. First, there is
+an extensive literature in labor economics on dynamic choice models, which explore various di-
+mensions of mobility such as occupational mobility (Keane and Wolpin, 1997), internal mobility
+(Kennan and Walker, 2011), and job search (McCall and McCall 1987). These papers usually
+rely on rich individual panel data, and focus on endogeneity of the human capital accumulation
+process . A more closely related paper is Artuc, Chaudhuri and McLaren (2010) on the sectoral
+mobility of workers in domestic labor markets in the presence of international trade shocks.
+They estimate moving cost frictions using a dynamic discrete choice model, highlighting the
+importance of the option values of available choices.
+
+The use of option values of locations as a concept in the migration literature is more sparse.
+The ﬁrst paper, as far as we are aware, is Burda (1995) who models the timing of a single
+migration decision. There is an option value to wait due to underlying volatility in the economic
+environment. Locher (2001) explores the same concept in a two-period framework, using data
+on ethnic German migration from CIS countries. The next important contribution is Bayer
+and Juessen (2012) who model internal migration decisions in the United States and estimate
+the structural parameters of a dynamic model. The option value again arises from underlying
+
+                                                6
+economic volatility.
+
+Dynamic considerations are extensively analyzed in a series of recent papers on temporary
+                                        orlach (2016) for a recent survey). As several
+and return migration (see Dustmann and G¨
+papers illustrate, return migration levels have always been quite high. Bandiera, Rasul and
+Viarengo (2013) show out-migration rates from the United States were over 60% during the
+age of mass migration at the turn of the 20th Century. Bijwaard, Schluterare and Wahba
+(2014) use administrative data from the Netherlands and Bratsberg, Raaum and Sorlie (2007)
+use register data from Norway and Sweden to explore more recent patterns. Several papers
+on return and circular migration have used more formal and explicit dynamic models. Among
+the ﬁrst examples, Kirdar (2012) develops a dynamic stochastic model to jointly explore return
+migration and savings decisions of migrants and estimates it using panel data from Germany.
+Among more recent and prominent examples are Thom (2015) and Lessem (2015) who use data
+from the Mexican Migration Project on detailed migration histories of individuals. Among their
+ﬁndings is the importance of border enforcement (similar to our simulations of blocked corridors)
+                                                                                      orlach
+to circular and return migration decisions. Using multiple data sources from Mexico, G¨
+(2016) develops a comprehensive dynamic life cycle model to analyze the role of ﬁnancial
+constraints on emigration, return migration and re-emigration decisions. In an another life-
+                                 orlach (2015) explore human capital accumulation and
+cycle model, Adda, Dustmann and G¨
+migration duration decisions using data on Turkish migrants in Germany. All of these papers
+rely on detailed panel data from a single origin or destination country (or a single corridor)
+as the data requirements of such dynamic models are quite demanding. One of our main
+contributions is to analyze a model of global migration patterns and ﬁnd empirical solutions to
+address some of the data constraints.
+
+The next section presents the dynamic structural model. Then, we discuss the data used in
+the paper, followed by the estimation algorithm. We next present the estimation results and
+the simulation exercises. We conclude with a discussion of future research paths and policy
+analysis.
+
+                                               7
+1     Model
+We present a dynamic model that allows repeated migration between alternative destinations
+in each period. Thus, the attractiveness of a destination from a given origin is not solely based
+on the income gap between them, but it is also a function of future migration opportunities
+that become available at the new location. Unlike static models where migration decisions
+are made at a single point in time without further migration possibilities, our model captures
+economically important and ubiquitous sequential and transit migration patterns.
+
+The agents in the model diﬀer according to their current location, birth country and skill
+category. An agent’s country of birth is indexed by i, country of residence is indexed by j and
+skill level is indexed by s. There are n countries in the model and i, j ∈ 1, 2, .., n. An agent
+chooses a destination country based on his expectations. If i = j , the person continues to live
+in his birth country and is not considered to be a migrant. If i = j, the agent is considered to
+be a migrant. In every period, an agent living in j , can choose to migrate to any other country
+k = j , regardless of whether he is already a migrant or not. Alternatively, he can choose to
+stay in j .
+
+An agent with skill level s living in j receives instantaneous (ﬂow) utility φs,j
+                                                                              t at time t. This
+
+utility depends on the current location and skill level, but it is independent of the agent’s birth
+country. The next components of the utility function are composed of moving costs which
+inﬂuence mobility decisions in almost every migration model. Moving costs are incurred if
+an agent born in country i decides to move from country j to another country k = j . We
+assume that the moving cost is equivalent to a one time reduction in the utility and is given
+                 a,k
+by C s,i,j,k +   t .   The ﬁrst component of this moving cost, C s,i,j,k , is ﬁxed (non-random) and
+is a function of the agent’s birth country, current country, destination country and the skill-
+level. This component does not vary among agents with the same characteristics. The second
+                 a,k
+component,       t ,   is random and varies by agent (indexed by a), by time and by destination
+                                   a,k
+country k . More speciﬁcally,      t     is assumed to be i.i.d. and drawn from a mean zero Gumbel
+
+                                                     8
+distribution with scale parameter 1. Furthermore, we assume that the ﬁxed cost component is
+                                                                                    a,k
+zero for stayers, i.e. C s,i,j,j = 0, ∀j ∈ 1, 2, .., n. However, the random cost    t     is incurred by
+both movers and stayers.
+
+Under the assumptions outlined above, the present discounted choice-speciﬁc utility of risk
+neutral and rational agent a, from origin country i, living in country j is equal to
+
+
+      Uts,i,j ( a      s,j           s,i,k
+                t ) = φt + max βEt Vt+1 − C
+                                            s,i,j,k
+                                                    +        a,k
+                                                             t         ,
+                              k
+
+
+        a
+where   t   is a vector of random shocks, k represents the available choices of migration destina-
+tions and β refers to the discount factor between t and t + 1. We take expectations of the above
+expression with respect to agent speciﬁc shocks to get the Bellman equation which is expressed
+as
+
+
+(1)   Vts,i,j = φs,j             s,i,k
+                 t + E max βEt Vt+1 − C
+                                        s,i,j,k
+                                                +           a,k
+                                                            t      ,
+                             k
+
+
+
+where Vts,i,j = E Uts,i,j ( a
+                            t ) is the expected value of location j for agent a from country i at time
+                                                   a
+t, conditional on idiosyncratic shock vector       t.
+
+
+In this setting, as agents decide whether to stay in their current residence country j or to migrate
+to another country k , they have to take the following into consideration as seen in expression
+(1) above: (i) the instantaneous utility φs,j
+                                          t   of staying in j , (ii) expected future continuation
+payoﬀs of every potential destination k , represented by Vts,i,k
+                                                           +1 and (iii) the moving cost from j to
+                             a,k
+k expressed as C s,i,j,k +   t .   Ex-ante identical agents may still make diﬀerent mobility decisions
+because of the random component of their moving costs. These are equivalent to agent-speciﬁc
+utility shocks that aﬀect attractiveness of diﬀerent destinations. Although agents are more
+likely to migrate from countries with small φs,j
+                                             t   to those with large φs,j
+                                                                      t , the reverse is still
+
+possible if the diﬀerences between random shocks are large enough. This is the mechanism
+through which the model would generate simultaneous migration ﬂows from j to k and k to
+
+
+                                                        9
+j . However, the future utility at a given destination k is not fully known, thus agents form
+expectations on these values and optimize accordingly. The instantaneous utility at a location,
+φs,j
+ t , is not a function of the agent’s birth country, but the expected value, Vt
+                                                                               s,i,j
+                                                                                     is a function
+of both birth country i and current residence country j . This is due to the assumption that
+the ﬁxed component of the moving cost C s,i,j,k , depends on the birth, current and destination
+countries. This assumption is supported by the data which show the immigrants in a given
+country j are more likely to move to another country k when compared to the natives of j .
+
+The distributional assumption of the random shock, , allows us to solve the moving proba-
+bilities analytically. An agent born in i, currently living in j has the following probability of
+moving to k :
+
+                     exp βEt Vts,i,k
+                               +1 − C
+                                      s,i,j,k
+
+(2)   ps,i,j,k
+       t         =                                 .
+                                  s,i,l  s,i,j,l
+                      l exp βEt Vt+1 − C
+
+
+
+
+The probability of moving from j to k is a function of location speciﬁc values and moving costs.
+This means we need to solve the Bellman equations to pin down the moving cost parameters
+C s,i,j,k and location speciﬁc instantaneous utility parameters, φs,j
+                                                                  t . This process will allow us
+
+to calculate the direct and transit migration probabilities implied by the model as expressed in
+(2). The Bellman equations need to be solved recursively for any given parameter set and we
+will discuss the solution algorithm in detail in the next section.
+
+The next step is to simplify the Bellman equation. The expected incremental utility of being
+able to move from a given country j at time t can be written as:
+
+
+      Ωs,i,j
+       t     = E max βEt Vts,i,k
+                           +1 − C
+                                  s,i,j,k
+                                          +             a,k
+                                                        t     − βEt Vts,i,j
+                                                                      +1 ,
+                          k
+
+
+which is the expected maximum future value minus the discounted value of the current choice.
+This is the option value of location j and it is a key feature of our model and empirical analysis.
+
+
+                                                       10
+Similar to the moving probabilities, the “E max”expression above can be solved analytically,
+thanks to the distributional assumptions on the random shock.4 This leads to the following
+expression:
+
+
+(3)    Ωs,i,j
+        t     = − log(ps,i,j,j
+                       t       ).
+
+
+The Bellman equation can now be simply expressed using the option value term:5
+
+
+(4)    Vts,i,j = φs,j       s,i,j s,i,j
+                  t + βEt Vt+1 + Ωt     ,
+
+
+This expression shows that the value of location j has three components: (i) the current
+instantaneous utility φs,j
+                       t , (ii) the discounted expected next period utility of staying in j , given
+
+by βEt Vts,i,j
+         +1 , and (iii) the option value of j (due to its access to other destination countries) as
+
+denoted by Ωs,i,j
+            t     .
+
+The option value term in (3), as mentioned earlier, is the feature that separates our model
+from the standard approaches where migration is a single static decision. In standard models,
+migrants choose among the set of potential destinations and move from their birth country.
+Migrants live in that destination for the remainder of time, essentially a single period, and
+receive their payoﬀ. In our setting, the agents face the migration decision repeatedly, regard-
+less of whether they are living in their birth countries or have already migrated. They make
+their decisions based on the instantaneous payoﬀ, location speciﬁc moving costs and expected
+continuation payoﬀs in those destination choices, as expressed in (4).
+
+The option value associated with each potential destination in our model is similar to the
+“option value”concept in the ﬁnance literature. Agents value their ability to move and this
+   4
+     Artuc, Chaudhuri and McLaren (2010) show the derivation of the option value equation in their online
+appendix.
+   5
+     The expression for the option value is related to the inversion equation of Hotz and Miller (1993). Unlike
+them, we do not invert empirical probabilities to estimate values. However, we simplify the Bellman equation
+by taking advantage of the distributional assumption similar to Artuc Chaudhuri and McLaren (2010).
+
+
+                                                      11
+valuation is location speciﬁc. The option value of country j is going to be larger if it provides
+easier access to other and possibly higher income countries. We argue and show that the option
+value of such locations (such as Canada, the United Kingdom and Australia) is one of the main
+motivations behind the observed transit and sequential migration patterns. Finally, we should
+emphasize that the option value of a location Ωs,i,j
+                                               t     = − log(ps,i,j,j
+                                                              t       ) decreases as the probability
+of moving decreases. If the agents were completely immobile and were stuck in j forever, say
+due to complete border closures between j and other destinations, then the option value of j
+would decline to zero.
+
+
+
+1.1     Functional Form of the Moving Costs
+
+The moving costs are one of the key determinants of the mobility patterns generated in the
+model. We assume that the ﬁxed moving cost from country j to country k has two distinct
+                                            s,j,k
+components. The ﬁrst component, denoted by C1     , is the cost of moving from j to k . This
+is assumed to be common for all agents whether they were born in j (locals) or were born
+in another country i and had migrated in an earlier period to j (immigrants). The second
+                       s,i,k
+component, denoted by C2     , is the additional moving cost for immigrants born in i and are
+currently living in j . We refer to this component as the cost of transit migration and do not
+have a priori expectation on its value. The data, however, indicate immigrants are more likely
+to move on to another country k from j when compared to locals, which implies this second
+component is likely to be negative. We assume that the transit cost is a function of birth
+country i and destination country k .6
+
+The common cost component is given by
+
+       s,j,k    1       1                      1                  1
+(5)   C1     = αs, 0 + αs,1 log dist(j, k ) + αs,2 log gdp(j ) + αs,3 lang (j, k ).
+
+   6
+     Unfortunately we cannot use destination speciﬁc parameters in these expressions, since we use only the
+transit migration data to the US. However, we can use bilateral and origin speciﬁc parameters.
+
+
+
+                                                      12
+and the additional transit component is equal to
+
+           s,i,k    2       2                      2                 2
+(6)       C2     = αs, 0 + αs,1 log dist(i, k ) + αs,2 log gdp(i) + αs,3 lang (i, k ),
+
+
+
+where dist(j, k ) is the distance between countries j and k , lang (j, k ) is an indicator variable
+that is equal to 1 if countries j and k share a common language and gdp(j ) is the GDP per
+capita in country j . Total ﬁxed moving cost of moving from j to k for an agent born in i is,
+thus, given by
+
+                       s,j,k         s,i,k
+(7)       C s,i,j,k = C1     + 1i=j C2     ,
+
+       s,j,j       s,i,i
+where C1     = 0, C2     = 0, and the indicator function 1i=j = 1, if i = j and 0 otherwise.
+In other words, the ﬁxed moving cost is equal to zero for stayers independent of their birth
+                         s,j,k
+country; it is equal to C1     for people moving from their birth country to country k and it is
+          s,j,k    s,i,k
+equal to C1     + C2     for transit migrants - people born in country i, living in j and moving
+to k .7
+
+
+
+2         Data
+Among the main constraints faced in estimating dynamic migration models is the availability
+of detailed and comprehensive data. Most global bilateral migration data sets are based on
+censuses and population registers of the destination countries where the migrants currently
+reside. These data sources record only the country of birth or citizenship of migrants. Other
+important variables, such as the year of arrival or migration status, are not included in most
+surveys. Detailed migration histories tend to be available only in small and specialized surveys
+    7
+    In reality, both direct and transit cost components might be functions of the time a migrant spends at the
+current location. Furthermore, the random component might show persistence over time. We abstract away
+from these issues in our model and estimation since it is not feasible to identify duration of stay of migrants at
+a given location.
+
+
+
+
+                                                          13
+which are not nationally representative.8 Without comprehensive global data that cover all
+possible destinations, it is diﬃcult for empirical and analytical papers to explore beyond static
+models.
+
+The data in this paper come from two diﬀerent sources. The global bilateral skilled migration
+database, as described in great detail in Artuc et al (2015), provides migrant stocks by gender
+and education level (tertiary and non-tertiary) for 1990 and 2000 for each pair of countries in
+the world. Part of the data comes from original statistical sources and comprises around 80% of
+the migrant stock in the world. The rest are imputed using gravity based models. Artuc et al
+(2015) describe the empirical methods behind the imputation based on a gravity model. Since
+the imputed data might bias our results, we use only the raw data for 2000. The parallel data
+for 2010 for OECD destinations come from the DIOC database which is described in Arslan
+et al (2014). The DIOC 2010 database also has information on the time of arrival of migrants
+by skill level and country of origin for all of the OECD destinations. This new disaggregation,
+unavailable for earlier decades, allows us to construct the number of new arrivals by skill and
+origin country for 2000-2010. We discuss in the next section how we use this new data in our
+empirical analysis. Finally, we have collected additional bilateral migrant stock data by skill
+level for around 50 non-OECD destinations in 2010. We use this data to complement the DIOC
+data.
+
+The second data source is the annual American Community Survey (ACS) of the United States
+for 2001-2011. ACS provides detailed information on a large sample of the population, including
+migrants who are deﬁned as people born outside the United States, regardless of their citizenship
+or residency status. The survey asks the country of birth, the year of migration to the US and
+where people were living a year earlier. Using these questions, we take the people who declared
+that they had moved to the US within the previous year, record their country of birth, and
+identify their country of residence prior to their move. This procedure allows us to identify
+those who came directly from their birth countries and those who came from another country.
+  8
+                                                  orlach, 2016, for a detailed discussion of data shortcomings.
+      See Carletto et al, 2015, and Dustmann and G¨
+
+
+                                                       14
+If a recent migrant was residing in a country other than their birth country, we consider them
+to be transit migrants. No other data source, to our knowledge, has this level of detailed
+and extensive information about immigrants and their migration paths. Despite this unique
+information, we do not actually know when transit migrants moved to their country of last
+residence. This information is not needed for our modeling purposes but would be quite useful
+for future analysis.
+
+We construct our database in the following manner. We only include people between the ages
+of 18 and 65 at the time of the survey. Dropping the elderly (65+) reduces the sample by
+around 4% while removing the children and young adults shrinks it by around 24%. The main
+reason for removing young migrants is that they are likely to be moving with their parents and
+are unlikely to be making the individual mobility decisions that form the basis of our model.
+We include everybody in our sample who states that they arrived during the year of the survey
+or during the previous year and were abroad in the year before they arrived.9 This leads to
+slightly over 9 million people in the sample.
+
+The ACS surveys have, on average, 175 diﬀerent countries and territories as possible answers
+to the place of birth question. On the other hand, ‘country of residence 1 year ago’ question
+has only 67 categories listed. Many smaller countries in a given region are aggregated into
+regional categories, such as ‘Other South America’ or ‘Other West Asia’. To complicate the
+   9
+    There are two questions we use for this purpose. The ﬁrst question asks when the migrant moved to the
+United States and the second asks the following: ‘Where did this person live 1 year ago?’ We should note
+these two questions seem to create a certain level of confusion which possibly arises from when the survey is
+conducted within that year. Suppose the survey is conducted in September 2006 and the migrant arrived in the
+United States in March 2005. The answer to the ﬁrst question will be that the migrant moved to the United
+States during 2005. In other words, this question is likely to capture more than 12 months of arrivals. That
+is why, the total number of recent arrivals (current or previous year) obtained by summing up each individual
+survey year is actually more than the number of people who arrived during 2001-11 based on the 2012 ACS
+data. For the second question, some people will interpret ‘1 year ago’ as November 2005 and state where they
+were living in the United States. Other respondents will interpret one year as the previous calendar year and
+report the foreign country they were in before coming to the United States. As a result, around 40% of the
+people who stated they migrated during that year or the previous year also reported a location in the United
+States to this second question. We drop these observations from our sample. This adjustment brings our total
+number of observations to 9.03 million, which is now 10% less than the number of people who arrived during
+2001-11 according to the 2012 ACS data.
+
+
+                                                     15
+issue even further, many countries, such as Chile, Peru and Turkey, are individually identiﬁed
+in some of the survey years but aggregated into the regional categories in others, making the
+analysis close to impossible. To address these complications, we construct the smallest set of
+countries and regional aggregates that are consistent over time, ending up with 40 geographic
+units, including the United States. Among these, 25 are separate countries and 15 are regional
+aggregates of the 150 other countries (or regions) that are listed in birthplace category. The
+list of our 40 groups and the countries they include are presented in Table 1. This type of
+aggregation of the world into 40 countries or groups potentially lowers our estimates and the
+extent of transit migration in the data. For example, if a migrant who was born in Peru goes to
+Argentina before moving to the United States, we will not be able to identify him as a transit
+migrant since Peru and Argentina are part of the same category (Other South America) in our
+data and estimation. For compatibility, we group the countries in the global bilateral migration
+database and DIOC/DIOC-E along the same lines. Finally, in addition to their country of birth
+and last residence, we split all migrants as tertiary or non-tertiary educated.
+
+Figures 1 and 2 as well as Tables 2 and 3 provide information on the extent of transit migration
+to the United States. Table 2 shows what percentage of migrants born in a given country was
+residing in a diﬀerent country before migrating to the US. For example, 7% of Canadian born
+migrants came to the US from a diﬀerent country. The same ratio is only 1% for Mexican
+migrants, but over 20% for migrants born in many European countries like the United Kingdom,
+Italy and the Russian Federation. The same information is presented visually in Figure 1 to
+highlight regional diﬀerences and similarities. We see that transit migration is higher among
+migrants born in Africa and the Middle East and lower in Latin America, as migrants from
+the latter region have more direct access to the United States due to geographic proximity and
+diaspora linkages.
+
+Table 3 presents the percentage of migrants coming from a given location who were born some-
+where else and Figure 2 displays the same information visually. The data indicate that transit
+migration is quite high among the migrants who were living in higher income OECD countries.
+
+                                               16
+For example, 30% of migrants from Canada to the US were born in another country; for the
+United Kingdom, that ratio is 37%. Despite the public perception, the data do not indicate
+that migrants coming from Central American or Caribbean countries are generally transit mi-
+grants. Of course, many Central American migrants might simply be traveling through Mexico
+without living there for an extended period of time.
+
+Our ﬁnal observation is that transit migration is more common among high-skilled migrants
+as seen when we compare the second and third columns of Tables 2 and 3. In the aggregate,
+close to 14% of high-skilled but only 6% of low-skilled migrants are transit migrants. These
+diﬀerences indicate that higher skilled migrants are more mobile, not only in terms of leaving
+their home countries for higher income countries (Artuc et al, 2015) but also in terms of moving
+between multiple destinations.
+
+
+
+3     Solution and Estimation Algorithm
+We solve the model at steady state to calculate implied migration probabilities to be used in
+the estimation algorithm (i.e we assume that V0s,i,j = Vts,i,j and φs,j  s,j
+                                                                    0 = φt   for every t). At
+steady state, we can express the present discounted expected utility as
+
+                      1
+(8)   V0s,i,j =          φs,j      s,i,j,j
+                          0 − log p0       ,
+                     1−β
+
+where the moving probability from j to k of migrants from i is given by
+
+                      exp βV0s,i,k − C s,i,j,k
+(9)   ps,i,j,k
+       0         =                                  .
+                                s,i,l
+                       l exp βV0      − C s,i,j,l
+
+The model has the following parameters that need to be estimated (or calibrated) based on
+the equations (5), (6), (8) and (9): (i) the moving cost parameters, α, (ii) the location speciﬁc
+instantaneous utility parameters, φ, and (iii) the discount factor, β . We deﬁne the parameter
+
+
+                                                        17
+vector θ, which consists of all parameters of the model for skill group s, i.e. α’s, φ’s, and β .
+Since there are eight moving cost parameters, n location utility parameters and β , our θ vector
+has n + 8 + 1 elements.
+
+Solving the equilibrium values involves ﬁnding a ﬁxed point. We ﬁrst consider the matrix V0s
+consisting of all V0s,i,j s and deﬁne the function V0s = F (V0s ; θ), using equations (5), (6), (8)
+and (9). Finding the ﬁxed point of function F , given the parameter vector θ, leads us to the
+equilibrium values of V0s,i,j . We should note that V0s is an n × n dimension matrix which means
+we have a large system of n2 equations with n2 unknowns.10 After solving for V0s,i,j s, we can
+insert them in (9) to calculate the moving probabilities, ps,i,j,k
+                                                           0       . This procedure allows us to
+write these moving probabilities as a function of the parameter vector, denoted as ps,i,j,k (θ).
+Then it becomes possible to calculate the log-likelihood contribution of an agent from origin i,
+living in j , and moving to k as log ps,i,j,k (θ) for any given θ.
+
+
+3.1        Likelihood Function:
+
+In the American Community Survey (ACS) data, as discussed in the data section above, we
+have detailed mobility and birthplace information for people who migrated to the United States.
+Transit migrants are deﬁned as the people born in i and living in j before moving to the US.
+We denote their number as M s,i,j,U .11 Next, using the stocks of migrants born in i and living
+j in 2000 from the global bilateral migration database and DIOC (see Artuc et al, 2015, and
+Arslan et al, 2014, for details) and M s,i,j,U matrix, we calculate the approximate number of
+people who are staying in their current country or moving to destinations other than the US.
+We denote this matrix as M s,i,j,S . In other words, we divide the migrants born in i living in j
+(i = j ) into two groups: those who move to the US, given by M s,i,j,U , and those who moved
+elsewhere or stayed in j , given by M s,i,j,S .
+
+Using these data matrices, vectors and implied migration probabilities, the log-likelihood con-
+  10
+       Fortunately, the equations can be solved by iteration since F is a contraction mapping.
+  11
+       Note that the United States is the “only” destination for which we have transit migration data.
+
+
+                                                        18
+tribution of transit migrants can now be expressed as
+
+
+(10) log L1 (θ) =              M s,i,j,U log ps,i,j,U (θ) + M s,i,j,S log         ps,i,j,k (θ) ,
+                    i   j =i                                                k=U
+
+
+where k = U means the destination k is any country other than USA.
+
+Our next dataset, the 2010 DIOC provides data on the number of people who migrated within
+the last 10 years to OECD destination countries. This allows us to calculate the number of
+natives who moved from j to k within the last 10 years if k is an OECD country. We denote
+this matrix M s,j,j,k . Next, we deﬁne M s,j,j,N as the number of people who move to non-OECD
+destinations (labelled by N collectively) and M s,j,j,j as the number of people who stayed in
+their birth country j and did not migrate to any country. Both of these are 40 × 1 vectors
+for each skill group s. In summary, natives (who were born in j and living in j ) are divided
+into the following groups: Staying at home, M s,j,j,j , moving to a speciﬁc OECD destination k ,
+M s,j,j,k and moving to any non-OECD destination, M s,j,j,N .
+
+The log-likelihood contribution of direct migrants is equal to
+                                                                                                              
+
+(11) log L2 (θ) =       M s,j,j,N log                 ps,j,j,k (θ) +                 M s,j,j,k log ps,j,j,k (θ) ,
+                    j                    k∈
+                                          / OECD,k=j                    k∈OECD,k=j
+
+
+where k ∈
+        / OECD, k = j means k is diﬀerent from birthplace and it is not an OECD country.
+k ∈ OECD, k = j means destination k is diﬀerent from birthplace j and is an OECD country.
+We merge all non-OECD destinations when we calculate the likelihood contribution since we
+do not have individual ﬂow data for those. Finally the log-likelihood contribution of stayers is
+equal to
+
+
+(12) log L3 (θ) =       M s,j,j,j log ps,j,j,j (θ).
+                    j
+
+
+Based on log-likelihood contributions from equations (10), (11) and (12), the parameter vector
+
+                                                       19
+θ is given by
+
+
+(13) θ = arg max [log L1 (θ) + log L2 (θ) + log L3 (θ)] .
+
+
+We assume that β = 0.95, normalize the ﬁxed instantaneous utility of USA to φs,U = 8.0, and
+estimate the remaining n − 1 + 8 parameters. In other words, we ﬁx the values of 2 elements
+of θ and estimate the remaining 47 parameters.
+The algorithm is quite demanding computationally, since it involves calculation of 40 × 40 × 40
+probabilities. It is necessary to solve for all of them simultaneously since they are functions of
+each other. Another computational challenge is to search over 47 parameters that maximizes
+the log-likelihood function. The steps of the estimation algorithm are the following:
+
+1. We guess a parameter vector θ
+2. Solve the values, V0s,i,j , and migration probabilities, ps,i,j,k
+                                                             0       using the current θ via the
+following iteration:
+    a. Start with an initial matrix V0s,i,j
+    b. Calculate ps,i,j,k
+                  0       by substituting V0s,i,j in equation (9)
+    c. Solve for the new V0s,i,j using the current probabilities ps,i,j,k
+                                                                  0       with equation (8)
+    d. Compare V0s,i,j with its value from the previous iteration: If the sum of square diﬀerences
+         is less than ε = 10−8 , the algorithm stops and moves on to step #3. Otherwise it
+         updates V0s,i,j , goes back to step (b) and continues to iterate.
+3. The algorithm evaluates log-likelihood function, log L1 + log L2 + log L3 using ps,i,j,k
+                                                                                    0       , and
+data matrices via equations (10), (11), (12) and (13).
+4. Then, the optimization algorithm checks to see if there is room to improve the log-likelihood
+function. If this is the case, it goes back to step #2. If the algorithm has converged, it stops.
+
+The function in the inner loop is a contraction mapping, and generally requires less than 50
+iterations to converge. The outer loop, however, usually requires more than 10,000 iterations.
+We repeat this procedure for both skill groups and take the numerical derivatives around θ to
+
+                                                 20
+calculate the standard errors.
+
+
+
+
+4     Empirical Results
+We estimate parameters of the model separately for high-skilled and low-skilled individuals. As
+discussed above, the vector θ for each skill group s has 49 elements - 40 value parameter for
+each country/region, 8 moving cost parameters and β . As discussed above, we set φs,U = 8.0
+for the US, β = 0.95 and estimate the remaining 47 parameters.
+
+Table 4 presents the 8 moving cost parameters for high and low-skilled workers with the stan-
+dard errors reported in parentheses. We ﬁnd that the intercepts of basic moving cost for direct
+                                                               1
+migration for both low- and high-skilled migrants, denoted as αs, 0 in equation (5), are positive
+                                                                            2
+and signiﬁcant at the 1% level. The additional cost intercepts, denoted as αs, 0 in equation (6),
+
+for transit migrants are negative for both skill levels. This is consistent with the fact that im-
+migrants from country i living in country j are much more likely to migrate to another country
+k when compared to the natives of j . The magnitude of these transit migration coeﬃcients
+are smaller than those of the basic cost coeﬃcients, indicating that the combined intercept for
+transit migration is still positive.
+
+The most important migration cost variable is likely to be distance. The additional distance
+coeﬃcient for transit migrants is positive and signiﬁcant for low-skilled migrants, and insignif-
+icant for high-skilled migrants. As expected, distance increases migration frictions for direct
+migrants and the cost imposed by distance is signiﬁcantly higher for the lower skilled migrants.
+This pattern has been identiﬁed repeatedly in the literature as the higher skilled can more easily
+overcome physical and ﬁnancial costs that are proxied by distance (Hanson, 2010 and Beine,
+Docquier and Ozden, 2011). This diﬀerence is also one of the reasons why migrants tend to be
+positively selected in terms of education levels. On the other hand, the distance coeﬃcient for
+the transit cost component is only signiﬁcant for the low-skilled migrants. This result indicates
+
+                                               21
+that the distance between birth country i and ﬁnal destination k seems to matter only for
+the low-skilled once migrants are already in the transit country j . High-skilled migrants, in
+contrast, are not signiﬁcantly aﬀected by this distance.
+
+GDP per capita is another determinant of moving costs and the eﬀect operates through sev-
+eral channels, such as ﬁnancial barriers. The coeﬃcient is negative and signiﬁcant for basic
+migration for both types of migrants, with a higher (more negative) value for the low-skilled.
+The implication is that direct migration from a poorer country is more costly, especially for
+low-skilled migrants. The GDP per capita coeﬃcients in the transit cost component are both
+positive, but signiﬁcant only for low-skilled migrants. This is similar to the pattern we observed
+for the distance variable. Low-skilled people from poorer countries are more likely to be transit
+migrants when compared to those from high income countries. Another possible explanation is
+that a transit migration experience abroad might increase labor market returns in ﬁnal desti-
+nation countries. This eﬀect will be stronger for those coming from lower income countries and
+will be captured by a positive coeﬃcient of the GDP per capita component of transit migration
+cost.12
+
+Linguistic overlap decreases migration frictions and increases mobility as demonstrated in nu-
+merous studies using gravity models (Beine, Bertoli and Fernandez-Huertas Moraga, 2016).
+Common language decreases basic migration costs for both skill levels, as demonstrated by
+the statistically signiﬁcant negative coeﬃcients, with a larger eﬀect on the high-skilled. The
+interesting result is that linguistic similarity continues to be important for transit migration
+costs, and still more so for high-skilled migrants. For example, an Australian migrant in France
+faces a lower cost of migrating to the United States than a German migrant in France, and the
+cost is even lower if he is high-skilled.
+
+Our ﬁnal set of results presents the instantaneous utility parameters, φs,j
+                                                                        0   for each coun-
+try/region j and skill level s in our model. Note that we set φs,U = 8.0 for the United States
+  12
+       We thank an anonymous referee for this interpretation.
+
+
+                                                       22
+and estimate the parameters for the other 39 locations. Figure 3 presents the results for both
+skills levels, with results for the high-skilled on the left panel and the parameter values ranked
+in declining order in each panel.13 We should emphasize that these parameters are estimated
+separately for each skill level and the right comparisons are within, not across, skill levels. First,
+we observe, as expected, a high degree of correlation with the income levels in these locations.
+High-income OECD countries, such as Canada, Australia and European countries, have higher
+values while poorer African, South East Asian, Caribbean and Central American countries
+are placed towards the bottom of the rankings. Second, the values for the high-skilled (left
+panel) show more variation, especially towards the bottom. This pattern indicates high-skilled
+migrants enjoy much larger instantaneous utility gains when they move, especially from low
+income to high income countries. Third, several developing countries, such as India and China,
+have large utility values for the low-skilled. This pattern is consistent with the low emigra-
+tion rates of these countries and might result from the non-pecuniary beneﬁts these locations
+provide to natives or from country-speciﬁc mobility costs that the utility parameters capture.
+
+
+
+5     Simulations
+This section presents the results of a range of policy simulations that use the estimated co-
+eﬃcients of moving costs and location speciﬁc values. Our main goal is to identify the main
+spillovers between direct and transit migration options and how various simulated policies, such
+as complete blockage of certain migration corridors, impact bilateral and global migration pat-
+terns. In all of these simulations, we consider all origin countries/regions and two representative
+transit countries: Canada and the United Kingdom.
+
+Each simulation involves solving the equilibrium outcomes for all 40 countries/regions, but we
+selected only a sample of representative countries for presentation purposes. The simulation
+algorithm is similar to the one used in the estimation. This time, however, Vts,i,j = Vts,i,j
+                                                                                        +1 , so
+  13
+     All of these instantaneous utility parameter estimates are signiﬁcant at the 99% level with t-statistics
+between 14 and 70.
+
+
+                                                     23
+we use equations (2), (3) and (4), rather than (8) and (9). The simulations use the original
+population and migrant distributions from the data as the initial state variable. The population
+distribution includes agents’ birthplace, current location, and skill level, making it a 40 × 40
+matrix for each skill level.
+
+The number of type s individuals who were born in country i living in country j at time t
+is denoted as Ls,i,j
+               t     . For the simulation, we change the parameter vector of the model to θ .
+Then, we solve the optimization problem using the new parameters, θ , and calculate the new
+migration probabilities, ps,i,k,j
+                          t       (θ ), for each agent type. Next, we ﬁnd the new migrant stocks,
+Ls,i,j
+ t+1 using the new probabilities and ﬂow equation which is given by the following:
+
+
+
+(14) Ls,i,j
+      t+1 =          ps,i,k,j
+                      t       (θ )Ls,i,j
+                                   t     .
+                 k
+
+
+We repeat this exercise for each simulation scenario as described in the following sections.14
+
+Figure 4 helps to visualize the simulation scenarios where the United States is the ﬁnal desti-
+nation. For simplicity, we present three countries in the ﬁgure — Canada, the UK and other
+countries — even though the simulations are solved for all countries separately. People can
+migrate directly to the United States or via other countries. As we mentioned earlier, Canada
+and the United Kingdom are presented as the two possible transit countries in the ﬁgure and
+the discussion, but the model is solved for all potential transit routes.
+
+
+
+5.1     Simulation 1: Moving cost from Canada to the US increases
+
+In our ﬁrst set of simulations, we artiﬁcially increase the moving cost from Canada to the
+United States to a level such that migration levels decrease by more than 99%. Technically,
+  14
+     We should note that the simulation exercises are of partial equilibirum nature, as we assume that country-
+speciﬁc wages and other measures of attractiveness are ﬁxed. However, it is possible that changes in migration
+ﬂows due to policy restrictions will impact wages, further aﬀecting migration ﬂows across the world. Unfor-
+tunately, it would be impossible to fully endogenize these country parameters, without estimating production
+functions of all countries and regions.
+
+
+                                                      24
+100% prohibitive costs do not exist since the i.i.d. shocks have an inﬁnite support. This is
+presented as the removal of the arrow between Canada and the United States in Figure 4
+and implies that both current migrants and native citizens in Canada are no longer able to
+migrate to the United States. This change would force them to reconsider all of their migration
+decisions.
+
+The results of the simulation are presented in Table 5. The main ﬁnding of this simulation
+is that migration from other countries to Canada signiﬁcantly decreases as seen in columns
+1 and 3, even though there are no changes to migration costs or beneﬁts regarding Canada.
+Recall that migration to Canada is attractive for two reasons. First, the instantaneous utility
+parameter for Canada is high compared to many other countries (the φ term in the value
+function expression (4)). Second, moving from Canada to the United States is relatively easy
+which generates a high option value associated with being in Canada (the Ω term in the value
+function). Therefore when it becomes almost impossible to move from Canada to the US, the
+option value of migration to Canada decreases for almost all migrants. The ﬁnal eﬀect is a
+signiﬁcant decline in the overall migration levels from other countries to Canada. Note that
+migration does not drop to zero, because it is still possible to move from Canada to other
+countries and Canada still has a relatively high per-period payoﬀ.
+
+In terms of speciﬁc outcomes, the number of immigrants moving to Canada decreases between
+3% to 18% for people from other countries. The impact is especially high for Latin American
+and Caribbean migrants. If we were to compare the impact on low- and high-skilled migrants,
+we see that it is marginally stronger for the low-skilled regardless of the country of birth. The
+gap is also high for Latin American migrants, where the impact on the low-skilled is almost
+twice as much.
+
+Another potential eﬀect is the impact on other critical transit countries such as the United
+Kingdom. We see in columns 2 and 4 that there is almost no impact on migration from most
+countries to the United Kingdom when the Canada-USA border is closed. However, there is
+
+                                               25
+some increase in high-skilled migration from several countries, such as Jamaica (1.8%) and
+Other Caribbean countries (1.6%) as the United Kingdom becomes more attractive. Finally,
+we observe increased migration from Canada to the United Kingdom (1.9% for the low-skilled
+and 2.8% for the high-skilled) since the Canadians themselves are also unable to move to the
+United States.
+
+
+5.2    Simulation 2: Moving cost to Canada increases
+
+Our second simulation involves increasing the moving costs to Canada from all developing (only
+non-OECD) countries to prohibitively high levels. This is presented as the removal of arrow #2
+in Figure 4. In other words, people are no longer able to move from India or China to Canada
+whether they would like to settle there permanently or use it as a transit stop on their way to
+other countries such as the United States. This policy change is similar to the spillover eﬀects
+of bilateral visa policies implemented by destination countries on other potential destinations,
+as explored by Bertoli and Fernandez-Huertas Moraga (2015).
+
+Table 6 presents results only for high-skilled migrants since the impact on low-skilled migrants
+are negligible, with the exception of the obvious decline of 100% in direct migration to Canada.
+This is probably due to the fact that low-skilled transit migration via Canada is already rel-
+atively small and has minimal impact on other transit paths. For high-skilled migrants, the
+number of transit migrants moving from Canada to the United States decreases signiﬁcantly, as
+seen in column 2, but not by the full 100%. This is due to the fact there are some migrants, say
+from Mexico, who were already in Canada before the border closed and they continue to move
+to the United States over time. We also observe that there is a decline in transit migration
+from OECD countries (such as France) to the United States via Canada, even though migra-
+tion from France to Canada is not blocked. This arises from the fact that transit migration of
+French-born migrants from developing countries to Canada is also blocked, resulting in a small
+decline in the overall migration of the French-born.
+
+
+
+                                              26
+There is a small, and in some cases considerable impact on all other paths of migration,
+especially direct migration to the United States and transit migration via the United Kingdom.
+For example, direct migration to the United States (ﬁrst column) increases for Asian and
+Caribbean countries, up to 3% for Jamaica, 6% for other Caribbean Countries, and slightly
+over 1% for Republic of Korea, the Philippines, Western and Eastern Africa. Similarly, there
+is some increase in transit migration from the United Kingdom to the United States (third
+column) indicating some degree of replacement. For example, there is an increase of around 2%
+in transit migration from Jamaica and 4% from other Caribbean countries as well as around
+1% from African regions. These are again due to global spillovers from changes in bilateral
+corridors.
+
+
+5.3    Simulation 3: Moving Cost to the United States Increases
+
+Our next simulation increases the direct moving cost to the United States to a prohibitive
+level for direct migrants from developing (non-OECD) origin countries. This is equivalent to
+the removal of arrow #3 in Figure 4 and the results are presented in Table 7. We again
+only present the results for high-skilled migrants since the patterns are qualitatively the same
+but quantitatively smaller in the case of low-skilled migrants. Since transit migration forces
+are stronger for high-skilled individuals, they are more responsive to changes in moving costs
+and the United States is more attractive for the high-skilled migrants from most developing
+countries.
+
+Interestingly enough, closing the borders for migrants from developing countries is among
+the main proposals put forward by some of the leading candidates in the 2016 US election.
+Our results indicate that the impact of this policy simulation is actually quite large. First,
+we should highlight that the United States is already the largest destination for high-skilled
+migrants from most origin countries. For example, more than 70% of high-skilled workers who
+left the Philippines already live in the United States.
+
+
+
+                                               27
+When direct migration to the United States becomes impossible, Canada and the United King-
+dom become very attractive destinations. Both of these countries are high-income economies
+with similar income opportunities for migrants so there is a direct spillover in this scenario.
+These eﬀects are presented in the second and fourth columns for Canada and the United King-
+dom, respectively, as many high-skilled migrants move to these close substitutes. For example,
+as reported in columns 2 and 4, migration to Canada and the United Kingdom increases by
+between 25 and 45% for many Central American and Caribbean countries and by a staggering
+165% for the Other Caribbean region that includes Haiti and other smaller island countries.
+The increase is between 5 and 15% for the African regions and between 3 and 15% for many
+non-OECD Asian countries. Although we do not report it, we observe positive but smaller
+changes in migration ﬂows to other high-income OECD countries.
+
+Canada and the United Kingdom also provide a pathway to the United States. As a result,
+transit (or the option value of) migration to these countries increases when direct migration
+to the United States is no longer possible and migrants try to ﬁnd alternative routes. This
+motivation is clearly seen in column 1 where we observe a signiﬁcant increase in transit migration
+to the US via Canada for a range of birth countries. For example, there is a 15-30% increase in
+transit migration from Latin American and Caribbean countries (and again a staggering 95%
+from Other Caribbean countries), between 3 and 10% from many Asian countries and around
+5-10% from the African regions.
+
+
+5.4    Simulation 4: Block all transit migration to the United States
+
+The ﬁnal simulation is a slightly unconventional scenario to highlight the importance of transit
+migration. Suppose, the United States government declares that you can only move to the
+United States from your birth country and all other transit migration routes are banned. In
+other words, if you are an Egyptian living in France, you would either have to stay in France
+or go back home to be able to move to the United States (even if you have French citizenship).
+
+
+
+                                               28
+In terms of our model, we simply remove the option value of moving to France from Egypt.15
+
+The implications of eliminating transit migration for total migration to these countries are quite
+striking as presented in Table 8. We observe that the level of migration to transit countries
+declines signiﬁcantly even though these are still as attractive for permanent settlement. For
+example, as reported in column 1, the migration of high-skilled workers to key transit countries
+like Canada, the United Kingdom and Australia from high-income countries (such as Germany,
+Italy and France) declines by 4.6%, 1.8% and 3.2% receptively. Similarly, migration from
+low-income countries to these three destinations declines by larger amounts: 7.0%, 2.4% and
+4.5% respectively. There are similar signiﬁcant declines in migration to other OECD transit
+countries. This result is one of the clearest and direct evidence of the signiﬁcance of transit
+migration and importance of many OECD destinations as transit countries, especially those
+with lower moving costs to the US.
+
+The decline in low-skilled migration is slightly smaller but still relatively high. For example,
+low-skilled migration from high-income countries (column 3) to Canada is down by 3.1%. The
+decline in low-skilled migration from low-income countries (column 4) is also larger, 11.6% for
+Canada and 2.0% for the United Kingdom.
+
+Finally, we observe bigger declines in percentage terms in migration levels to many of the
+smaller developing countries, especially for the high-skilled migrants from other lower-income
+countries. This is simply an artifact of the data. Since the original migration levels to these
+countries are already so small, any decline translates to a relatively large percentage change.
+
+  15
+    This is why we cannot represent this simulation in Figure 4. While the previous simulations correspond
+to closure of single corridors, this simulation blocks certain types of people while keeping all corridors open for
+direct migration.
+
+
+
+
+                                                        29
+6    Conclusion
+Most empirical analyses of migration decisions and patterns are based on static models. A
+potential migrant is assumed to make a single decision between alternative destinations and his
+current place of residence based on location-speciﬁc utility diﬀerences and bilateral mobility
+costs. Once migration takes place, the payoﬀ and costs are realized and, most importantly,
+there are no additional movements. The data indicate that this simplistic view is quite oﬀ the
+mark. Many migrants’ paths involve multiple countries and are likely to be the outcomes of
+complicated dynamic decision processes. Historical evidence and current data provide ample
+evidence that many migrants live in a series of countries for diﬀerent lengths of time, experience
+repeated migration episodes, or have circular migration paths.
+
+There is a relatively new and exciting strand of the literature that is based on innovative
+dynamic models. They rely on detailed survey data on individual migration histories from
+single origin or destination countries to estimate the determinants of return or circular migration
+behavior. Unfortunately, the absence of detailed individual data at the global level prevents
+us from shedding light on some of the other processes. Our contribution is to construct a
+novel dynamic model of global migration with the goal of incorporating and explaining transit
+migration patterns, using the available data. In our model, agents decide to stay in their current
+location or move to another one every period, taking instantaneous utility payoﬀs and bilateral
+mobility barriers into account. This dynamic structure leads to an option value associated
+with each location, making it attractive as it provides easier access to other locations in future
+periods. This attractiveness is exactly the basis of the transit migration behavior we observe.
+
+Our empirical analysis relies on transit migration data from the American Community Survey,
+which asks migrants their place of birth and where they were living the year before they came
+to the United States. This data indicate that transit migration—people coming to the United
+States from places other than their birth countries—is actually high, especially among high-
+skilled migrants coming from other high-income OECD countries. We combine the American
+
+                                                30
+data with global bilateral migration data and adopt estimation methods to address the data
+challenges. We ﬁnally simulate certain scenarios that highlight the dynamic interactions and
+spillovers between diﬀerent migration paths. For example, blocking certain paths might decrease
+or increase migration ﬂows in other corridors as the option values of the impacted locations
+change. In other words, governments need to incorporate the externalities created by their
+policy actions, especially on their neighbors, via direct and transit migration channels.
+
+
+
+
+                                               31
+References
+                                                        orlach (2015). “The Dynamics
+ [1] Adda, Jerome, Christian Dustmann and Joseph-Simon G¨
+    of Return Migration, Human Capital Accumulation, and Wage Assimilation, ” mimeo,
+    University College London.
+
+ [2] Anderson, James, (2011). “The Gravity Model,” The Annual Review of Economics, vol.
+    3(1).
+
+ [3] Arslan, Cansin, Jean-Christophe Dumont, Zovanga Kone, Yasser Moullan, Christopher
+    Parsons, Caglar Ozden and Theodora Xenogiani, (2014). “A New Proﬁle of Migrants in
+    the Aftermath of the Recent Economic Crisis,” OECD Social, Employment and Migra-
+    tion Working Papers, No. 160, OECD.
+
+ [4] Artuc, Erhan, Frederic Docquier, Caglar Ozden, and Christopher Parsons, (2015). “A
+    Global Assessment of Human Capital Mobility: The Role of Non-OECD Destinations,”
+    World Development, Elsevier, vol. 65, p. 6-26.
+
+ [5] Artuc, Erhan, Shubham Chaudhuri and John McLaren (2010). “Trade Shocks and Labor
+    Adjustment: A Structural Empirical Approach,” American Economic Review, vol. 100,
+    p.1008-1045.
+
+ [6] Bandiera, O., I. Rasul, and M. Viarengo (2013). “The Making of Modern America:
+    Migratory Flows in the Age of Mass Migration,” Journal of Development Economics,
+    vol.102, p.23-47.
+
+ [7] Bayer, Christian and Falko Juessen. (2012). “On the Dynamics of Interstate Migration:
+    Migration Costs and Self-Selection,” Review of Economic Dynamics, vol. 15(3), pages
+    377-401.
+
+
+
+
+                                          32
+                                                andez-Huertas Moraga (2016). “A Practi-
+ [8] Beine Michel, Simone Bertoli and Jesus Fern´
+    tioners’ Guide to Gravity Models of International Migration,” World Economy. vol. 39,
+    p.596-612.
+
+ [9] Beine, Michel, Frederic Docquier, and Caglar Ozden (2011). “Diasporas,” Journal of
+    Development Economics, vol.95, p.30-41.
+
+[10] Belot, M., and S. Ederveen (2012). “Cultural Barriers in Migration Between OECD
+    Countries,” Journal of Population Economics, vol.25, p.1077-1105.
+
+[11] Bertoli, Simone, Herbert Brucker and Jesus Fernandez-Huertas Moraga, (2014). “The
+    European Crisis and Migration to Germany: Expectations and the Diversion of Migra-
+    tion Flows,” Working Papers 2013-03, FEDEA.
+
+[12] Bertoli, Simone, and Jesus Fernandez-Huertas Moraga, (2013). “Multilateral Resistance
+    to Migration,” Journal of Development Economics, vol. 102, p. 79-100.
+
+[13] Bertoli, Simone, and Jesus Fernandez-Huertas Moraga, (2015). “The Size of the Cliﬀ at
+    the Border,” Regional Science and Urban Economics, vol.51, p.1-16.
+
+[14] Bertoli, Simone, Jesus Fernandez-Huertas Moraga and Francesca Ortega (2013). “Cross-
+    ing the Border: Self-Selection, Earnings and Individual Migration Decisions,” Journal
+    of Development Economics, vol.101, p.75-91.
+
+[15] Bijwaard, G., C. Schluter and J. Wahba (2014). “The Impact of Labor Market Dynamics
+    on the Return-Migration of Immigrants,”The Review of Economics and Statistics, vol.96,
+    p.483494.
+
+[16] Burda, Michael, (1995), “Migration and the Option Value of Waiting,” Economic and
+    Social Review vol. 27 p. 1-19.
+
+[17] Collyer, M., F. Duvell and H. de Haas (2012). “Critical approaches to transit migration,”
+    Population Space Place, vol. 18, p.407-414.
+
+                                            33
+[18] Collyer, M. and Hein de Haas, (2012). “Developing dynamic categorisations of transit
+    migration,” Population, Space Place, vol.18, p.468-481.
+
+[19] Djajic, Slobodan (2014). “Transit Migration” Mimeo: The Graduate Institute, Geneva.
+
+                                           orlach (2015). “The Economics of Temporary
+[20] Dustmann, Christian and Joseph-Simon G¨
+    Migrations, ” Journal of Economic Literature, vol.54, pp 98-136.
+
+[21] Duvell, F. (2012). “Transit migration: A blurred and politicised concept,” Population,
+    Space Place, vol.18, p.415–427.
+
+[22] Gibson, John and David McKenzie (2011). “The Microeconomic Determinants of Emi-
+    gration and Return Migration of the Best and Brightest: Evidence from the Paciﬁc, ”
+    Journal of Development Economics vol.95. p. 18-29.
+
+      orlach, Joseph-Simon (2016). “Borrowing Constraints, Migrant Selection, and the Dy-
+[23] G¨
+    namics of Return and Repeat Migration, ” mimeo, University College London.
+
+[24] Grogger, Jeﬀrey and Gordon Hanson (2011). “Income Maximization and the Selection
+    and Sorting of International Migrants, ” Journal of Development Economics, vol.95. p.
+    42-57.
+
+[25] Hanson, Gordon, (2010). “International Migration and the Developing World, ” in Hand-
+    book of Development Economics, ed. by Dani Rodrik and Mark Rosenzweig, vol. 5,,
+    p.4363-4414.
+
+[26] Hotz, Joseph and Robert Miller (1993). “Conditional Choice Probabilities and the Es-
+    timation of Dynamic Models,” The Review of Economic Studies, vol.60, p.497-529.
+
+[27] Kennan, John and James R. Walker (2011). “The Eﬀect of Expected Income on Indi-
+    vidual Migration Decisions,” Econometrica vol. 79, p.211-251.
+
+[28] Lessem, Rebecca (2013). “Mexico-U.S. Immigration: Eﬀects Wages and Border Enforce-
+    ment,” Mimeo, Carnegie Mellon University.
+
+                                           34
+[29] Locher, Lilo (2001). “Testing for the Option Value of Migration,” IZA DP no. 405.
+
+[30] Mayda, Anna Maria (2010). “International Migration: A Panel Data Analysis of the
+    Determinants of Bilateral Flows,” Journal of Population Economics, vol.23, p.1249-1274.
+
+[31] McFadden, Daniel, (1978). “Modeling the Choice of Residential Location,” in Spatial
+    Interaction Theory and Planning Models, ed. by A. Karlqvist, L. Lundqvist, F. Snickars,
+    and J. Weibull, North-Holland.
+
+[32] Pessino, C. (1991). “Sequential migration theory and evidence from Peru,” Journal of
+    Development Economics, vol.36, p.55-87.
+
+[33] Santos Silva, J.M.C., and S. Tenreyro (2006). “The log of Gravity,” Review of Economics
+    and Statistics, vol. 88, p. 641–658.
+
+[34] Thom, Kevin (2015). “Repeated Circular Migration: Theory and Evidence from Undoc-
+    umented Migrants,” Mimeo, New York University.
+
+
+
+
+                                           35
+                 Figure 1: Ratio of Transit Migrants in the United States by Birthplace
+
+
+
+
+0
+1
+5
+10
+20
+
+No data
+
+
+
+          Figure 2: Ratio of Transit Migrants in the United States by Last Country of Residence
+
+
+
+
+0
+1
+5
+10
+20
+30
+
+No data
+
+
+
+
+                                                                                                  IBRD 42585 | OCTOBER 2016
+                                Figure 3: Instantaneous Utility Parameter Estimates
+
+
+                         High-Skill                                                     Low-Skill
+
+                    Canada                                                            Italy
+        Southern Europe                                                           Canada
+         United Kingdom                                               Southern Europe
+     Russian Federation                                                            France
+        Northern Europe                                                United Kingdom
+                  Australia                                                          India
+                     France                                                         China
+         Western Europe                                                Western Europe
+                        Italy                                                   Australia
+                   Ukraine                                                     Germany
+                      Japan                                           Northern Europe
+                 Colombia                                                     West Asia
+                 Germany                                               Northern Africa
+                    Mexico                                         Russian Federation
+Israel, West Bank, Gaza                                                        Colombia
+                West Asia                                              Southern Africa
+           South America                                                            Brazil
+                   Oceania                                                          Japan
+         Northern Africa                                                Western Africa
+                      China                                             South East Asia
+          South East Asia                                                South America
+                      Korea                                      Central & South Asia
+   Central & South Asia                                                             Korea
+                    Poland                                                           Cuba
+          Eastern Europe                                                         Ukraine
+                      Brazil                                  Israel, West Bank, Gaza
+                       Cuba                                                       Poland
+         Southern Africa                                                  Eastern Africa
+                       India                                            Eastern Europe
+    Dominican Republic                                                           Oceania
+               Guatemala                                          Dominican Republic
+         Central America                                               Central America
+                   Jamaica                                                    Caribbean
+               El Salvador                                                   Philippines
+          Western Africa                                                     Guatemala
+               Philippines                                                        Mexico
+            Eastern Africa                                                      Vietnam
+                  Vietnam                                                        Jamaica
+                Caribbean                                                    El Salvador
+
+                                0.0   2.0   4.0   6.0   8.0                                   0.0   2.0   4.0   6.0   8.0
+Figure 4: Migration Scenarios
+                                      Table 1: Country Groupings
+Group                Country list
+Canada               Canada
+Mexico               Mexico
+El Salvador          El Salvador
+Guatemala            Guatemala
+Other Central        Belize; Costa Rica; Honduras; Nicaragua; Panama
+Cuba                 Cuba
+Dominican Republic   Dominican Republic
+Jamaica              Jamaica
+                     Antigua and Barbuda; Bahamas; The; Barbados; Dominica; Grenada; Haiti; Saint
+Other Caribbean
+                     Kitts and Nevis; Saint Lucia; Saint Vincent and the Grenadines; Trinidad and Tobago
+Brazil               Brazil
+Colombia             Colombia
+                     Argentina; Bolivia; Chile; Ecuador; Guyana; Paraguay; Peru; Suriname; Uruguay;
+Other South America
+                     Venezuela, RB
+Northern Europe      Denmark; Finland; Iceland; Ireland; Norway; Sweden
+United Kingdom       United Kingdom
+France               France; Liechtenstein, Luxembourg; Monaco
+Other Western        Austria; Belgium; Netherlands; Switzerland
+Italy                Italy
+Southern Europe      Andorra; Greece; Holy See (Vatican City); Malta; Portugal; San Marino; Spain
+Germany              Germany
+Poland               Poland
+                     Albania; Belarus; Bosnia and Herzegovina; Bulgaria; Croatia; Czech Republic;
+Other Eastern Europe Estonia; Hungary; Latvia; Lithuania; Macedonia, FYR; Moldova; Romania; Serbia;
+                     Montenegro; Slovak Republic; Slovenia
+Russian Federation Russian Federation
+Ukraine              Ukraine
+China                China; Hong Kong SAR, China; Macao SAR, China; Mongolia; Taiwan, China
+Japan                Japan
+Korea                Korea, Dem. People's Rep.; Korea, Rep.
+Philippines          Philippines
+Vietnam              Vietnam
+Other South East     Brunei Darussalam; Myanmar; Cambodia; Timor-Leste; Indonesia; Laos; Malaysia;
+Asia                 Singapore; Thailand
+India                India
+Israel, West Bank,   Israel/Palestine; West Bank and Gaza
+                     Armenia; Azerbaijan; Bahrain; Cyprus; Georgia; Iraq; Jordan; Kuwait; Lebanon;
+Other West Asia
+                     Oman; Qatar; Saudi Arabia; Syrian Arab Republic; Turkey; United Arab Emirates;
+Other Central &      Afghanistan; Bangladesh; Bhutan; Iran, Islamic Rep.; Kazakhstan; Kyrgyzstan;
+South Asia           Maldives; Nepal; Pakistan; Sri Lanka; Tajikistan; Turkmenistan; Uzbekistan
+Northern Africa      Algeria; Egypt, Arab Rep.; Libya; Morocco; Sudan; Tunisia
+                     Benin; Burkina Faso; Cabo Verde; Cote d'Ivoire; Gambia; The; Ghana; Guinea;
+Western Africa
+                     Guinea-Bissau; Liberia; Mali; Mauritania; Niger; Nigeria; Senegal; Sierra Leone;
+                     Burundi; Comoros; Djibouti; Eritrea; Ethiopia; Kenya; Madagascar; Malawi;
+Eastern Africa
+                     Mauritius; Mozambique; Rwanda; Seychelles; Somalia; Tanzania; Uganda; Zambia;
+                     Angola, Botswana; Cameroon; Central African Republic; Chad; Congo; Dem. Rep. of
+Southern Africa      the; Congo; Rep. of the; Equatorial Guinea; Gabon; Lesotho; Namibia; Sao Tome
+                     and Principe; South Africa; Swaziland
+Australia            Australia
+                     Fiji, Kiribati; Marshall Islands; Micronesia, Federation States; Nauru; New Zealand;
+Oceania
+                     Palau; Papua New Guinea; Solomon Islands; Tonga; Tuvalu; Vanuatu
+USA                  United States
+                       Table 2: Ratio of Transit Migrants By Birthplace
+Birthplace                         High-Skilled (%)      Low-Skilled (%)   Total (%)
+TOTAL                                     14                    6              9
+Canada                                     8                    6              7
+Mexico                                     4                    1              1
+El Salvador                               32                    4              7
+Guatemala                                  9                    5              5
+Other Central America                     10                    5              6
+Cuba                                      19                    5              8
+Dominican Republic                         7                    8              8
+Jamaica                                   15                    6              7
+Other Caribbean                           18                    7              9
+Brazil                                     7                    6              6
+Colombia                                  15                    7             10
+Other South America                       16                    7             10
+Northern Europe                           19                   11             15
+United Kingdom                            22                   20             21
+France                                    16                   18             17
+Other Western Europe                      24                   13             20
+Italy                                     24                   16             20
+Southern Europe                           24                   30             27
+Germany                                   16                   12             14
+Poland                                    14                    8             10
+Other Eastern Europe                      19                   13             15
+Russian Federation                        33                   15             25
+Ukraine                                   15                   14             15
+China                                     19                   11             15
+Japan                                      5                    6              5
+Korea                                      9                   10              9
+Philippines                               13                   10             11
+Vietnam                                   27                   12             14
+Other South East Asia                     17                    9             12
+India                                      8                   11              8
+Israel, West Bank, Gaza                    5                   12              9
+Other West Asia                           11                    8              9
+Other Central & South Asia                24                   20             21
+Northern Africa                           20                   22             21
+Western Africa                            26                   15             18
+Eastern Africa                            25                   10             13
+Southern Africa                           32                   20             24
+Australia                                 17                   11             15
+Oceania                                   26                   26             26
+             Table 3: Ratio of Transit Migrants By Last Country of Residence
+Birthplace                      High-Skilled (%)    Low-Skilled (%)        Total (%)
+TOTAL                                 14                   6                    9
+Canada                                35                  24                   30
+Mexico                                 6                   1                    1
+El Salvador                           15                   2                    3
+Guatemala                             11                   1                    2
+Other Central America                 13                   5                    6
+Cuba                                   0                   2                    2
+Dominican Republic                     8                   2                    3
+Jamaica                                6                   2                    3
+Other Caribbean                       23                   6                    9
+Brazil                                16                   4                    8
+Colombia                               5                   5                    5
+Other South America                   10                   6                    7
+Northern Europe                       21                  13                   17
+United Kingdom                        42                  30                   37
+France                                24                  29                   25
+Other Western Europe                  39                  37                   38
+Italy                                 32                  27                   30
+Southern Europe                       36                  44                   39
+Germany                               27                  24                   26
+Poland                                 4                   3                    3
+Other Eastern Europe                  15                   5                    9
+Russian Federation                     9                  27                   20
+Ukraine                               15                   6                   11
+China                                  5                   8                    7
+Japan                                 12                  11                   12
+Korea                                  2                   4                    3
+Philippines                            2                   3                    2
+Vietnam                               11                   2                    3
+Other South East Asia                 22                   8                   14
+India                                  2                  11                    4
+Israel, West Bank, Gaza               33                  27                   30
+Other West Asia                       21                  15                   18
+Other Central & South Asia            26                  15                   20
+Northern Africa                        9                   6                    7
+Western Africa                         5                   6                    6
+Eastern Africa                         8                   7                    7
+Southern Africa                       20                  21                   21
+Australia                             37                  39                   38
+Oceania                               28                  22                   24
+                                Table 4: Parameter Estimates
+Frictions (Moving Costs)
+                                 Intercept      Distance       GDP/Capita    Language
+                                    11.310*         4.144*       -0.464*      -0.832*
+                    Basic
+                                     (0.805)        (0.113)        (0.084)    (0.062)
+  Low Skill
+                  Additional        -4.745*        1.542*          0.223*     -0.598*
+                   Transit           (0.277)        (0.123)        (0.026)    (0.070)
+                                    11.174*        2.310*         -0.347*     -1.066*
+                    Basic
+                                     (0.907)        (0.120)        (0.094)    (0.064)
+  High Skill
+                  Additional        -1.039*         0.176          0.042      -0.951*
+                   Transit           (0.374)        (0.138)        (0.036)    (0.070)
+
+
+Standard errors are in parantheses. (*) Significant at 99 percent level.
+          Table 5: Migration Patterns when Canada-USA Corridor is Blocked
+                                   High skill (% Change)      Low skill (% Change)
+          Birth Country           Directly to                Directly to
+                                   Canada       to US via UK              to US via UK
+                                                              Canada
+Canada                                0.0           2.8          0.0           1.9
+Mexico                               -8.1           0.1        -14.6           0.2
+El Salvador                          -8.2           0.6        -15.7           0.4
+Guatemala                            -8.3           0.3        -16.4           0.2
+Other Central America                -8.2           0.3        -16.3          0.1
+Cuba                                 -8.3           0.1        -17.2           0.0
+Dominican Republic                   -8.2           0.1        -16.2           0.1
+Jamaica                              -8.1           1.8        -16.2           1.3
+Other Caribbean                      -8.1           1.6        -18.7          0.6
+Brazil                               -3.3           0.0         -6.5           0.0
+Colombia                             -8.1           0.1        -14.5           0.0
+Other South America                  -7.6           0.2         -9.3           0.0
+Northern Europe                      -7.5           0.1         -8.8           0.0
+United Kingdom                       -7.6           0.0         -9.0           0.0
+France                               -3.2           0.0         -5.1           0.0
+Other Western Europe                 -3.2           0.1         -5.1           0.0
+Italy                                -3.2           0.1         -5.0           0.2
+Southern Europe                      -7.6           0.2         -8.9           0.1
+Germany                              -3.2           0.0         -5.4           0.0
+Poland                               -3.3           0.1         -6.4           0.0
+Other Eastern Europe                 -3.3           0.1         -6.5           0.0
+Russian Federation                   -3.3           0.0         -6.0           0.0
+Ukraine                              -3.4           0.0         -6.7           0.0
+China                                -7.7           0.2         -9.2           0.0
+Japan                                -3.1           0.0         -4.1           0.0
+Korea                                -7.3           0.1         -7.4           0.0
+Philippines                          -7.5           0.3         -8.3           0.0
+Vietnam                              -3.3           0.1         -5.6           0.0
+Other South East Asia                -7.5           0.1         -7.2           0.0
+India                                -7.8           0.1         -9.3           0.0
+Israel, West Bank, Gaza              -7.3           0.1         -7.5           0.0
+Other West Asia                      -7.8           0.1         -9.8          -0.1
+Other Central & South Asia           -7.8           0.2         -9.9          -0.1
+Northern Africa                      -7.8           0.2         -9.6          -0.1
+Western Africa                       -8.1           0.1        -12.8          -0.2
+Eastern Africa                       -8.1           0.3        -11.5          -0.1
+Southern Africa                      -7.4           0.2         -7.5           0.0
+Australia                            -7.0           0.3         -5.1           0.0
+Oceania                              -7.1           0.2         -5.8           0.0
+      Table 6: Migration Patterns when Mig. to Canada from Developing Countries is Blocked
+                                                   High Skill Migration (% Change)
+           Birth Country
+                                    Directly to USA      to US via Canada          to US via UK
+Canada                                    0.0                      0.0                 0.1
+Mexico                                    0.3                    -96.5                 0.2
+El Salvador                               1.0                    -95.2                 0.7
+Guatemala                                 0.6                    -97.0                 0.4
+Other Central America                     2.0                    -96.2                 1.3
+Cuba                                      0.7                    -94.0                 0.5
+Dominican Republic                        0.7                    -95.1                 0.5
+Jamaica                                   3.1                    -91.2                 1.9
+Other Caribbean                           6.4                    -94.4                 3.9
+Brazil                                    0.3                    -98.3                 0.2
+Colombia                                  0.2                    -95.4                 0.2
+Other South America                       0.5                    -94.5                 0.4
+Northern Europe                           0.0                     -1.9                 0.0
+United Kingdom                            0.0                    -10.3                 0.0
+France                                    0.0                     -4.4                 0.1
+Other Western Europe                      0.0                     -3.6                 0.1
+Italy                                     0.0                     -3.4                 0.0
+Southern Europe                           0.0                     -5.7                 0.1
+Germany                                   0.0                     -2.6                 0.0
+Poland                                    0.4                    -91.7                 0.2
+Other Eastern Europe                      0.3                    -90.3                 0.2
+Russian Federation                        0.1                    -97.9                 0.2
+Ukraine                                   0.1                    -98.2                 0.2
+China                                     0.4                    -96.9                 0.3
+Japan                                     0.0                     -0.6                 0.0
+Korea                                     0.0                     -0.7                 0.0
+Philippines                               1.3                    -95.8                 0.9
+Vietnam                                   1.1                    -95.0                 0.8
+Other South East Asia                     0.3                    -87.2                 0.3
+India                                     0.5                    -98.0                 0.4
+Israel, West Bank, Gaza                   0.5                    -93.7                 0.5
+Other West Asia                           0.4                    -89.9                 0.3
+Other Central & South Asia                0.4                    -94.2                 0.4
+Northern Africa                           0.4                    -80.7                 0.5
+Western Africa                            1.1                    -91.7                 0.8
+Eastern Africa                            1.3                    -87.7                 0.9
+Southern Africa                           0.6                    -81.5                 0.6
+Australia                                 0.0                     -5.0                 0.1
+Oceania                                   0.0                     -1.4                 0.1
+        Table 7: Migration Patterns when Mig. to USA from Developing Countries is Blocked
+                                                      High Skill (% Change)
+         Birth Country            to US via       Directly to
+                                                   Canada          to US via UK  Directly to UK
+                                   Canada
+Canada                                0.0             0.0               3.5            0.0
+Mexico                                6.6             9.4               6.6            9.4
+El Salvador                          29.2            43.9              28.0           43.9
+Guatemala                            16.1            22.0              15.9           22.0
+Other Central America                17.9            25.8              17.6           25.8
+Cuba                                 19.3            25.9              18.6           25.9
+Dominican Republic                   21.6            29.8              21.0          29.8
+Jamaica                              30.5            46.8              28.3           46.7
+Other Caribbean                      94.6           165.4              87.6          165.3
+Brazil                                2.8             3.9               2.8            3.9
+Colombia                              6.3             6.8               6.0            6.8
+Other South America                   4.9             5.5               4.5            5.5
+Northern Europe                       1.5            0.0                0.6            0.0
+United Kingdom                        3.7             0.0               0.0            0.0
+France                                0.6             0.0               0.4            0.0
+Other Western Europe                  0.4            0.0                0.2           0.0
+Italy                                 0.4             0.0               0.2            0.0
+Southern Europe                       1.4             0.0               0.8            0.0
+Germany                               0.2             0.0               0.2            0.0
+Poland                                2.7             4.0               2.8            4.0
+Other Eastern Europe                  2.4             3.3               2.4            3.3
+Russian Federation                    2.4             0.8               2.3            0.8
+Ukraine                               1.7             1.2               1.7            1.2
+China                                 3.1             4.2               3.2            4.1
+Japan                                 0.1             0.0               0.1            0.0
+Korea                                 0.4             0.1               0.3            0.1
+Philippines                           9.6            14.0               9.7           14.0
+Vietnam                               8.8            13.2               8.9           13.2
+Other South East Asia                 2.6             2.7               2.8            2.7
+India                                 4.3             5.6               4.4            5.6
+Israel, West Bank, Gaza               5.1             5.7               5.2            5.7
+Other West Asia                       3.7             4.4               3.8            4.4
+Other Central & South Asia            4.2             4.5               4.5           4.5
+Northern Africa                       4.9             4.7               5.4            4.6
+Western Africa                        8.5            12.7               8.9           12.7
+Eastern Africa                       10.7            15.7              11.2           15.7
+Southern Africa                       6.4             7.2               7.2            7.2
+Australia                             0.9             0.0               1.5            0.0
+Oceania                               0.4             0.1               0.7            0.0
+            Table 8: Migration Patterns when ALL Transit Migration to USA is Blocked
+                                   High Skill (% Change)              Low Skill (% Change)
+
+                                Migration to     Migration to      Migration to      Migration to
+       Birth Country         Specified Country Specified Country Specified Country Specified Country
+                             from High Income from Low Income from High Income from Low Income
+                                 Countries        Countries         Countries         Countries
+Canada                              -4.6              -7.0              -3.1             -11.6
+Mexico                              -7.7             -12.0              -7.6             -26.7
+El Salvador                        -22.6             -32.1              -7.4             -27.3
+Guatemala                          -14.7             -22.2              -6.6             -24.5
+Other Central America              -18.7             -24.0              -6.0             -17.7
+Cuba                               -16.4             -24.5              -4.8             -20.9
+Dominican Republic                 -18.1             -26.2              -5.7             -23.0
+Jamaica                            -26.1             -32.1              -8.4             -27.8
+Other Caribbean                    -40.4             -48.1              -6.5             -20.0
+Brazil                              -3.9              -5.7              -1.0              -1.5
+Colombia                            -5.9              -9.2              -2.3              -7.5
+Other South America                 -5.8              -7.7              -2.5              -4.6
+Northern Europe                     -4.4              -5.9              -1.6              -2.4
+United Kingdom                      -3.2              -4.5              -1.2              -2.0
+France                              -1.6              -2.6              -0.4              -0.8
+Other Western Europe                -1.9              -2.9              -0.5              -0.9
+Italy                               -2.0              -2.7              -0.3              -0.4
+Southern Europe                     -2.5              -3.7              -0.9              -1.5
+Germany                             -2.4              -3.5              -0.5              -0.9
+Poland                              -3.6              -5.1              -1.0              -1.6
+Other Eastern Europe                -2.9              -4.4              -0.9              -1.3
+Russian Federation                  -0.8              -1.0              -0.6              -0.8
+Ukraine                             -1.1              -1.6              -0.9              -1.2
+China                               -4.8              -6.0              -0.2              -0.3
+Japan                               -1.8              -2.0              -0.8              -0.9
+Korea                               -5.7              -9.6              -1.0              -1.4
+Philippines                        -11.9             -14.5              -1.3              -1.4
+Vietnam                             -9.6             -13.5              -0.7              -1.0
+Other South East Asia               -3.2              -4.0              -0.3              -0.5
+India                               -6.0              -7.4              -0.2              -0.2
+Israel, West Bank, Gaza             -5.5              -7.2              -1.4              -1.9
+Other West Asia                     -4.4              -5.7              -0.8              -1.0
+Other Central & South Asia          -5.0              -6.2              -0.7              -0.8
+Northern Africa                     -4.6              -6.4              -0.6              -1.0
+Western Africa                     -10.4             -13.5              -0.9              -1.3
+Eastern Africa                     -11.7             -15.0              -0.7              -1.0
+Southern Africa                     -6.9              -9.1              -0.8              -1.2
+Australia                           -1.8              -2.4              -0.2              -0.3
+Oceania                             -4.8              -6.4              -1.4              -2.4
+

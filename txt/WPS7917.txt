@@ -1,0 +1,1711 @@
+                                                      WPS7917
+
+
+Policy Research Working Paper                        7917
+
+
+
+
+    Building an Ex Ante Simulation Model
+  for Estimating the Capacity Impact, Benefit
+       Incidence, and Cost Effectiveness
+            of Child Care Subsidies
+   An Application Using Provider-Level Data from Turkey
+
+                                Meltem A. Aran
+                            Ana Maria Munoz-Boudet
+                                 Nazlı Aktakke
+
+
+
+
+Poverty and Equity Global Practice Group
+December 2016
+Policy Research Working Paper 7917
+
+
+  Abstract
+  Public financing of child care can allow for more equitable                        in Turkey. The results reveal that the choice of the subsidy
+  access to these services in places where public provision and                      delivery model has a strong bearing on the benefit inci-
+  capacity are low. However, the mechanisms of subsidy deliv-                        dence and cost effectiveness of the subsidy. In the case of
+  ery will affect who benefits, and the overall cost effectiveness                   Turkey, where significant supply-side constraints exist in
+  of such subsidies. This paper sets out an ex ante simulation                       the market, a demand-side voucher system is shown to be
+  model for estimating the benefit incidence of expanded                             the least cost-effective subsidy delivery model. A targeted
+  capacity and enrollments resulting from different child care                       demand-side voucher does not necessarily deliver the most
+  subsidy mechanisms. It uses a supply-side provider level                          “pro-poor results,” and combinations show different benefits
+  and a demand-side household model, and combines the                                and costs. The proposed simulation model can be applied
+  two models. The paper considers investment grants to pro-                          in other country contexts, with the only data require-
+  viders, operational monthly grants to child care providers,                        ments being micro data on the costs and pricing structure
+  combinations of the investment and operational grants, and                         of child care providers, as well as household data with
+  demand-side vouchers to households. The model is applied                           variables on household welfare and child care utilization.
+  to empirical data from child care centers and households
+
+
+
+  This paper is a product of the Poverty and Equity Global Practice Group. It is part of a larger effort by the World Bank to
+  provide open access to its research and make a contribution to development policy discussions around the world. Policy
+  Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at
+  amunozboudet@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+	
+Building	an	Ex	Ante	Simulation	Model	for	Estimating	the	Capacity	Impact,	
+Benefit	Incidence,	and	Cost	Effectiveness	of	Child	Care	Subsidies:	
+                                                               	
+          A n 	 A p p l i c a t i o n 	 U s i n g 	 P r o v i d e r ‐ L e v e l 	 D a t a 	 f r o m 	 T u r k e y 1	
+	
+                                                                   Meltem	A.	Aran	 Development	Analytics 	
+                                                                   Ana	Maria	Munoz‐Boudet	 World	Bank 	
+                                                                   Nazlı	Aktakke	 Development	Analytics 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Keywords:	day	care	centers,	subsidies	and	evidence‐based	policy,	vouchers,	education	finance,	poverty	
+JEL	Classification	Numbers:				H22,	H23,	H32,	I22,	I24,	I38.		
+	
+	                                                             	
+
+                                                               	
+																																																																
+	
+1	 The	 study	 was	 supported	 by	 the	 Swedish	 International	 Development	 Cooperation	 Agency	 SIDA 	 under	 the	
+
+Umbrella	 Facility	 for	 Gender	 Equality	 Trust	 Fund	 of	 the	 World	 Bank.	 The	 authors	 would	 like	 to	 thank	 Rıdvan	
+Kurtipek,	 Yıldız	 Yapar,	 Pınar	 Özel	 Ucuzal	 and	 Dilek	 Okkalı	 Şanalmış	 Turkey	 Ministry	 of	 Development ;	 Burcu	
+Ertuğrul	 and	 Fatih	 Kaynar	 Turkey	 Ministry	 of	 Education ;	 Güler	 Özdoğan,	 Akın	 Yumuş	 and	 Fatma	 Küçükbaşol	
+ Turkey	 Ministry	 of	 Family	 and	 Social	 Policies ;	 Facundo	 Cuevas	 The	 World	 Bank ;	 Öykü	 Uluçay	 and	 Tomas	
+Bergenholtz	 Swedish	Consulate 	for	comments	and	guidance	received	during	methodology	review	meetings	held	
+in	Ankara	in	February	2016.		
+
+	
+	
+1.	Motivation	
+Public	financing	and	partial	subsidization	of	child	care	can	allow	for	more	equitable	access	to	child	care	in	
+places	where	public	provision	and	capacity	are	low.	Countries	have	used	a	number	of	supply‐	and	demand‐
+side	subsidies	in	order	to	expand	access	to	child	care	services.	Various	mechanisms	have	been	experimented	
+with	in	various	countries,	including	and	not	limited	to:		 i 	per	child	operational	grants	to	supply‐side	service	
+providers;	 ii 	 tax	 subsidies	 to	 working	 parents	 and	 iii 	 vouchers	 or	 direct	 cash	 transfers	 provided	 to	
+households.				
+
+In	Mexico,	in	2007	a	supply‐side	grant	program	to	expand	child	care	services	was	created	with	the	goal	of	
+increasing	labor	force	participation	of	poor	mothers	 Mateo	Diaz	and	Chamussy,	2013 .	Child	care	centers	
+were	provided	with	one‐time	initial	investment	subsidies	to	open	up	new	centers	or	to	improve	their	existing	
+facilities.	 Additionally,	 monthly	 grants	 were	 provided	 to	day‐care	 centers	 on	 a	 per	 capita	 per	 child 	 basis	
+ Calderon,	2014 .	The	operational	costs	of	these	centers	are	covered	by	the	public	subsidy	plus	a	fee	collected	
+from	 the	 parents	 Staab	 and	 Gerhard,	 2010 .	 Similarly,	 in	 the	 Republic	 of	 Korea,	 in	 2009	 the	 municipal	
+government	of	Seoul	started	providing	financial	support	to	private	child	care	centers	in	meeting	their	labor	
+costs.	In	return,	regulations	of	public	child	care	centers	are	applied	in	these	centers,	making	them	semi‐public.	
+Nearly	half	of	the	city’s	child	care	centers	are	now	part	of	this	scheme	 OECD,	2012 .			
+
+Demand‐side	grants	and	tax	subsidies	are	also	commonly	applied	in	a	number	of	countries.	The	Netherlands,	
+the	United	States,	and	Australia	are	examples	to	countries	providing	vouchers	to	families	for	increasing	access	
+to	child	care	services	 Warner	and	Grauds,	2011 .	In	the	Netherlands	and	Australia,	the	government’s	aim	has	
+been	 to	 promote	 female	 labor	 force	 participation	 while	 in	 the	 United	 States	 vouchers	 were	 intended	 for	
+helping	low‐income	mothers	leave	welfare	and	start	working.	In	the	United	Kingdom,	the	child	care	voucher	
+scheme	targets	working	parents	–	and	allows	a	tax	break	on	income	partly	subsidized	by	the	employer,	and	
+partly	subsidized	by	the	state.	In	all	four	of	these	developed	countries,	vouchers	or	tax	subsidies	for	child	care	
+are	 provided	 to	 the	 household	 or	 working	 parents	 through	 workplace	 benefits.	 In	 the	 United	 States	 and	
+Australia,	 the	 vouchers	 are	 primarily	 targeted	 to	 poor	 working	 mothers,	 while	 in	 the	 	 United	 Kingdom,	
+Netherlands	and	Austria,	the	vouchers	are	provided	universally	with	non‐poor	working	parents	also	receiving	
+a	subsidy	albeit	smaller.			
+
+While	 countries	 have	 experimented	 with	 different	 models	 and	 mechanisms	 for	 expanding	 access	 and	
+utilization,	little	research	has	been	carried	out	looking	at	the	impact	of	the	choice	of	supply‐	or	demand‐side	
+mechanisms	 in	 targeting	 these	 transfers.	 Where	 countries	 have	 supply‐side	 constraints	 in	 the	 child	 care	
+market,	and	rationing	takes	place	for	limited	child	care	spaces	–	the	choice	of	a	supply‐	or	demand‐side	transfer	
+might	matter	significantly	in	determining	who	benefits	from	public	subsidies.		This	paper	sets	out	a	practical	
+methodology	for	modeling	the	behavior	of	service	providers	 through	a	supply‐side	model 	and	the	behavior	
+of	 households	 through	 a	 demand‐side	 model 	 to	 consider	 the	 impact	 of	 supply‐side	 investment	 and/or	
+operational	 grants	 given	 to	 child	 care	 providers	 and	 demand‐side	 vouchers	 provided	 to	 households	 as	
+subsidies	 for	 child	 care.	 	 The	 paper	 considers	 the	 distributional	 impact	 of	 these	 transfers	 on	 increases	 in	
+capacity	 and	 utilization	 of	 services,	 while	 also	 considering	 cost‐effectiveness	 per	 U.S.	 dollar	 spent	 to	 bring	
+about	new	enrollments.			
+
+The	paper	is	organized	as	follows:	Section	2	provides	an	overview	and	literature	review	of	exiting	ex	ante	
+simulation	models	of	child	care.	In	section	3,	we	present	a	background	on	the	child	care	system	in	Turkey.	In	
+Section	4,	we	present	the	model	for	supply‐	and	demand‐side	subsidies	for	the	child	care	market	looking	at	
+various	policy	scenarios	through	investment	and/or	operational	grants	to	child	care	providers	and	through	
+targeted	household	voucher	schemes.	In	Section	5	we	present	the	data	used	for	the	simulations	and	we	discuss	
+the	step‐by‐step	methodology	for	the	supply‐	and	demand‐side	simulation	models.		In	Section	6,	we	present	
+the	 main	 results	 when	 the	 methodology	 is	 applied	 to	 the	 Turkish	 data	 and	 in	 Section	 7	 we	 conclude	 with	
+possible	practical	implications.		
+
+2.	Literature	Review 		
+The	literature	on	ex‐ante	evaluations	of	child	care	policies	uses	micro	simulations	mainly	to	assess	the	impact	
+of	 policy	 changes	 on	 maternal	 labor	 force	 participation	 and	 child	 care	 utilization.	 Some	 other	 outcome	
+	
+	
+variables	 investigated	 include	 demand	 for	 child	 care,	 hours	 spent	 in	 household	 production	 and	 the	
+distributional	effect	of	the	policies.	The	policies	that	the	authors	investigate	range	from	capacity	expansions	
+to	fee	reductions	and	the	provision	of	subsidies.	Most	of	these	papers	focus	on	using	household	level	data,	
+sometimes	with	community	level	variables	on	supply‐side	availability.		
+
+Del	Boca	and	Vuri	 2007 	merging	data	from	two	micro‐level	surveys,	simulate	the	impact	of	a	partial	or	a	full	
+subsidy	for	child	care	costs	on	female	employment	in	Italy.	They	use	a	discrete	choice	model	where	child	care	
+and	 labor	 force	 decisions	 of	 mothers	 are	 jointly	 made.	 The	 authors	 find	 that	 in	 places	 where	 capacity	
+constraints	and	rationing	of	child	care	services	are	more	prevalent	the	impact	of	subsidies	is	smaller.		Similar	
+to	 Del	 Boca	 and	 Vuri	 2007 ,	 Apps	 et	 al	 2016 	 use	 a	 discrete	 choice	 model	 to	 investigate	 the	 changes	 in	
+mothers’	labor	supply	to	policies	effecting	child	care	prices,	taxes	and	subsidies.	In	their	model,	they	use	three	
+choice	variables;	mother’s	labor	supply,	her	time	allocated	to	household	production	and	hours	of	child	care	
+bought.	They	find	that	mothers’	decision	to	work	is	highly	sensitive	to	earnings	and	child	care	costs.		Both	of	
+these	papers	use	household	level	data	and	model	the	labor	supply	behavior	of	mothers	with	changes	in	child	
+care	prices	and	availability	faced	by	the	household.				
+
+Vanleenhove	 2013 	investigates	in	an	ex‐ante	simulation	model	impact	of	a	capacity	expansion	in	the	Flemish	
+child	care	market	on	the	parents’	choice	of	maternal	labor	supply	and	child	care	usage	using	data	from	Flemish	
+Families	and	Care	Survey	of	2005.	According	to	a	new	decree	by	the	government	issued	in	2012,	the	child	care	
+coverage	 rate	 will	 rise	 to	50	 percent	by	 2016	 and	by	 2020	all	child	care	 demand	 is	 planned	 to	be	met.	 By	
+changing	the	opportunity	set	of	the	households	through	increases	in	formal	care,	the	author	simulates	the	
+response	of	households	to	the	capacity	expansion.		Once	again,	the	model	is	entirely	built	using	the	demand‐
+side	household	survey	data	and	providing	a	shock	to	the	availability	of	child	care	to	the	household.			
+
+Looking	at	the	distributional	impact	of	various	child	care	policies,	Kornstad	and	Toresen	 2006 	consider	the	
+case	of	child	care	in	Norway	and	look	at	the	impact	of	four	different	reforms	on	child	care	choices	of	families,	
+maternal	 labor	 supply	 as	 well	 as	 the	 policies’	 distributional	 impact	 and	 their	 costs	 to	 public	 budget.	 The	
+reforms	that	are	investigated	are	 i 	increasing	child	care	capacity,	 ii 	reductions	in	fees,	 iii 	rescinding	home	
+care	allowance	 the	allowance	for	families	who	do	not	use	center‐based	care 	and	lastly	 iv 	introducing	a	
+working	parents	tax	credit	scheme	that	provides	a	certain	amount	of	credit	to	the	mother	working	more	than	
+17	hours	per	week	and	a	higher	amount	if	she	works	more	than	24	hours	a	week.	Authors	use	a	discrete	choice	
+joint	 labor	 supply	 and	 child	 care	 choice	 model	 and	 estimate	 the	 impact	 of	 these	 policies	 using	 Home	 Care	
+Allowance	Survey	of	1998	of	Norway.	According	to	the	results,	all	four	reforms	increase	the	demand	for	center‐
+based	 care	 and	labor	 supply	of	 mothers	 while	 fee	 reduction	 reform	 is	 the	 most	 successful	 one	 in	 terms	 of	
+increased	demand	and	the	new	tax	credit	scheme	is	the	most	successful	in	terms	of	increased	maternal	labor	
+supply.	Yet,	the	fee	reduction	reform	has	a	slightly	negative	effect	on	the	distribution	of	income.	In	other	words	
+it	benefits	the	households	that	are	well‐off	slightly	more	than	poorer	households	‐since	the	well‐off	are	already	
+using	child	care	and	reducing	child	care	fees	will	benefit	them	directly	‐	while	the	tax	credit	policy	has	a	strong	
+positive	and	pro‐poor	redistribution	effect.	In	the	paper,	rescinding	home	care	allowance	has	a	slight	positive	
+distributional	effect	and	the	capacity	increase	scenario	does	not	have	any	effect	on	distribution.				
+
+In	 Turkey,	 İlkkaracan	 et	 al	 2015 	 evaluated	 ex‐ante	 a	 policy	 intervention	 that	 would	 increase	 child	 care	
+capacity.	They	simulate	the	effects	of	an	increase	in	public	investment	in	child	care	services	on	the	jobs	created	
+and	the	distribution	of	these	jobs	by	gender	and	income	status	of	households.	They	investigate	the	impact	of	a	
+20.7	 billion	 TL	 worth	 of	 public	 investment	 ‐estimated	 annual	 expenditure	 for	 unenrolled	 preschool	 aged	
+children	in	Turkey	to	catch	up	with	the	average	OECD	preschool	enrollment	rate‐	on	preschools	and	child	care	
+market	versus	the	same	level	of	investment	in	the	construction	sector.	They	find	that	an	investment	of	this	
+amount	will	result	in	719,000	new	jobs	created	in	total	when	it	is	spent	on	the	child	care	sector	while	it	will	
+only	create	290,000	new	jobs	when	it	is	spent	on	the	construction	sector.				
+
+Our	paper	contributes	to	the	ex‐ante	simulations	literature	on	child	care	in	two	different	ways:	 i 		firstly	it	
+uses	supply‐side	provider	level	data	to	capture	the	behavioral	investment	model	of	service	providers	in	the	
+face	of	investment	and	operational	grants	provided	to	the	sector	–	hence	the	ex‐ante	model	not	only	looks	at	
+the	 demand	 side	 with	 household	 data	 but	 combines	 the	 investment	 behavior	 of	 the	 service	 provider	 in	
+calculating	 the	 capacity	 expansion;	 and	 ii 	 secondly,	 it	 uses	 data	 on	 the	 child	 care	 sector	 of	 a	 developing	
+	
+	
+country	–	Turkey	‐	with	significant	capacity	constraints	in	the	child	care	sector	and	hence	contributes	to	the	
+literature	 which	 has	 so	 far	 focused	 in	 terms	 of	 ex‐ante	 evaluations	 in	 the	 child	 care	 sectors	 in	 developed	
+countries	such	as	Norway,	Italy	and	Belgium.	Similar	to	some	of	the	aforementioned	papers,	this	paper	looks	
+at	the	capacity	increases	and	changes	in	utilization	–	paying	particular	attention	to	the	distributional	impact	
+of	different	types	and	combinations	of	policies	including	an	investment	grant	to	service	providers,	an	ongoing	
+per	capita	based	monthly	operational	grant	to	service	providers,	and	a	household	targeted	voucher	scheme.			
+Hence	same	levels	of	grants	are	distributed	to	households	or	centers	and	the	impact	of	each	in	terms	of	number	
+of	 children	 enrolled	 and	 number	 of	 children	 enrolled	 from	 the	 lower	 income	 households	 is	 investigated,	
+considering	the	cost‐effectiveness	of	each	scenario	 in	terms	of	per	new	child	enrolled	in	the	system 	as	well	
+as	 the	 benefit	 incidence	of	 “new”	child	 care	 service	 capacity	 created.	 This	 approach	 is	 in	 similar	 vein	with	
+Kornstad	and	Toresen	 2006 	where	different	types	of	reforms	are	investigated	at	the	same	time	in	order	to	
+understand	which	one	is	more	beneficial	to	the	public	and	cost	effective	in	terms	of	the	budget.	Our	findings	
+however	will	significantly	differ	from	their	findings	–	given	the	initial	conditions	and	capacity	constraints	in	
+the	child	care	market	we	analyze	in	Turkey.			
+
+3.	Background	on	the	Child	Care	System	in	Turkey		
+The	 gross	 enrollment	 ratio	 in	 pre‐primary	 education	 remains	 low	 in	 Turkey,	 with	 significant	 capacity	
+constraints	in	the	child	care	sector,	particularly	for	the	younger	age	groups.	The	pre‐primary	gross	enrollment	
+rate	 was	 38.6	 percent	 in	 Turkey	 in	 2015	 as	 opposed	 to	 82.5	 percent	 in	 OECD	 and	 93.9	 percent	 in	 the	 EU	
+countries	in	2013.i		Currently	about	2.7	million	children	aged	3‐5	are	not	benefitting	from	center	based	child	
+care	 services	 as	 opposed	 to	 only	 1.0	 million	 children	 enrolled.ii	 	 Hence,	 a	 large	 number	 of	 children	 do	 not	
+benefit	from	center‐based	child	care	and	preschool	services	in	Turkey.		In	order	to	serve	these	children	who	
+are	 currently	 not	 enrolled	 in	 center	 based	 child	 care	 or	 preschool	 services,	 a	 recent	 World	 Bank	 study	
+estimates	that	a	total	of	58,380	facilities	need	to	be	built.iii	For	the	younger	age	group	0‐3,	child	care	capacity	
+is	close	to	zero,	with	no	public	provision	of	child	care	for	this	age	group.		
+
+Children	from	disadvantaged	backgrounds	are	even	less	likely	to	benefit	from	center	based	child	care	services.	
+Only	16.8	percent	of	the	children	aged	3‐5	living	in	households	in	the	poorest	per	capita	income	decile	benefit	
+from	center‐based	child	care	services	as	opposed	to	60.0	percent	of	the	children	in	the	same	age	group	living	
+in	households	in	the	richest	per	capita	income	decile.iv	A	recent	paper	looking	at	regulations	in	the	private	
+child	care	market	in	Turkey	finds	that	the	infrastructure	related	standards	may	be	too	binding	making	the	
+model	expensive	and	unaffordable	for	poorer	households	in	urban	areas	 Aran	et.al,	 forthcoming .	
+
+Private	 provision	 of	 center‐based	 child	 care	 services	 is	 very	 low.	 As	 of	 2011,	 11.6	 percent	 of	 the	 children	
+enrolled	in	pre‐primary	education	in	Turkey	were	enrolled	in	private	institutions,	while	this	rate	was	30.5	
+percent	for	the	world,	37.0	percent	for	the	OECD	and	29.9	percent	for	the	EU	member	countries.v	Compared	
+to	the	world	or	the	EU	countries	the	percentage	of	children	enrolled	in	private	institutions	remains	low	in	
+Turkey,	 pointing	 to	 the	 fact	 that	 an	 alternative	 way	 to	 increase	 capacity	 in	 Turkey	 could	 be	 through	
+interventions	increasing	private	provision	of	the	services.		
+
+Limited	access	to	affordable	child	care	is	a	significant	impediment	to	female	labor	force	participation	in	the	
+country.	In	Turkey	female	labor	force	participation	is	already	low	with	30.3	percent	in	2014	compared	to	the	
+OECD	and	EU	averages	which	are	51.4	percent	and	51.5	percent	respectively.vi	It	is	common	for	women	to	
+drop	out	of	the	labor	force	due	to	child	care	responsibilities.	According	to	a	household	survey	collected	in	5	
+provinces	of	Turkey,	46	percent	of	the	currently	non‐employed	women	in	the	sample	previously	worked	but	
+decided	to	leave	the	labor	force	and	the	majority	of	these	women	 71	percent 	reported	leaving	the	labor	force	
+“due	to	child	care	responsibilities”	 World	Bank	 2015 .		
+
+In	2015,	the	Turkish	government,	and	in	particular	the	Ministry	of	Family	and	Social	Policies	was	interested	
+in	developing	policies	for	supporting	the	expansion	of	child	care	in	Turkey.		 The	Ministry	was	considering	
+options	for	subsidizing	these	services	by	the	municipality	through	investment	grants,	operational	grants	to	
+service	providers	or	both.		Targeted	demand‐side	vouchers	to	households	were	also	considered	as	a	policy	
+option.		More	specifically,	the	policy	scenarios	considered	included:	 i 	an	investment	grant	only	 Scenario	1 ,	
+ ii 	an	operational	grant	 with	or	without	a	price	cap	 Scenarios	2	A	and	2B ,	 iii 	through	a	voucher	scheme	
+	
+	
+ Scenario	3 ,	and	 iv 	through	the	interaction	of	an	investment	grant	with	an	operational	grant	or	a	voucher	
+scheme	 Scenarios	4A,	4B	and	5	in	Table	1 .	The	purpose	of	the	policy	measures	was	three‐fold:		 i 	to	increase	
+the	 capacity	 of	 these	 services,	 ii 	 to	 increase	 accessibility	 and	 affordability	 of	 services	 for	 children	 from	
+disadvantaged	backgrounds	and	 iii 	to	increase	female	labor	force	participation	by	increasing	employment	
+rates	of	mothers	who	will	utilize	services	as	well	as	creating	new	employment	at	these	child	care	centers	for	
+care‐taker	women.	This	model	was	initially	prepared	in	response	to	such	demand	from	the	Turkish	Ministry	
+of	Family	and	Social	Policies.			
+
+4.		The	Model:	Supply‐	and	Demand‐Side	Subsidies	for	Child	Care				
+We	build	a	model	that	allows	for	three	basic	types	of	subsidies	for	child	care	through	 i 	investment	grants	to	
+the	 service	 provider,	 ii 	 operational	 grants	 to	 the	 service	 provider	 and	 iii 	 vouchers	 provided	 to	 the	
+household.	Investment	grants	are	one‐time	grants	that	are	provided	to	newly	opening	child	care	centers,	in	
+order	to	support	their	investment	and	increase	overall	capacity.	Operational	grants	are	provided	on	a	monthly	
+and	per	child	basis	and	transferred	to	the	service	providers.	The	operational	grant	helps	subsidize	the	services	
+provided	by	private	providersvii.	They	cover	part	of	the	costs	of	provision	–	and	help	reducing	partly	the	prices	
+charged	by	the	providers.	The	vouchers	are	also	provided	on	a	per	child	per	month	basis,	however	the	main	
+difference	between	the	voucher	and	the	operational	grant	is	that	the	vouchers	are	provided	to		households	
+and	 operational	 grants	 are	 given	 directly	 to	 the	 service	 provider.	 Because	 the	 voucher	 is	 given	 to	 the	
+household,	 this	 allows	 for	 additional	 "targeting”	 of	 the	 voucher	 to	 eligible	 households.	 In	 other	 words,	 it	
+becomes	 possible	 to	 “select”	 poorer	 households	 and/or	 households	 where	 women	 work	 etc.	 as	 voucher	
+beneficiaries,	while	with	the	operational	grant	the	grant	benefits	whoever	enrolls	in	the	child	care	center	‐	
+without	any	purposive	targeting.	Figure	1	provides	a	descriptive	overview	of	the	model.			
+
+The	 operational	 grants	 and	 vouchers	 in	 the	 model	 have	 the	 same	 exact	 monthly	 per	 child	 values	 in	 the	
+scenarios	–	and	they	only	differ	by	the	mechanism	of	delivery	and	hence	the	targeting	of	the	benefits.	In	the	
+voucher	scheme,	the	household	that	receives	the	voucher	brings	it	to	the	service	provider	and	gets	services	
+equivalent	to	the	amount	of	the	voucher	for	free,	and	only	pays	for	the	rest	of	the	fees.	In	other	words,	the	
+vouchers	enable	households	to	get	discounted	services	by	the	value	of	the	voucher.	The	service	providers	then	
+claim	the	vouchers	and	receive	money	from	the	government	equivalent	to	the	total	value	of	the	vouchers.	Both	
+operational	grants	and	vouchers	have	monthly	per	child	values	though	the	payments	from	the	government	to	
+the	service	providers	can	be	made	on	a	monthly,	semi‐annual	or	annual	basis	depending	on	how	the	program	
+is	designed.				
+
+	                                   	
+
+
+
+
+	
+	
+                   Figure	1:	A	stylized	model	for	supply	and	demand	side	child	care	subsidies	
+
+
+
+
+                                                                                                                   	
+The	subsidies	have	an	impact	on	utilization	of	services	in	two	ways:		 i 	through	their	impact	on	expanding	
+capacity	and	availability	of	services,	and	 ii 	through	their	impact	on	affordability	of	services.	In	the	model,	
+investment	grants	have	an	impact	on	enrollments	 only	through	their	impact	on	capacity.	The	“benefit”	‐	in	
+terms	of	financial	gain	‐	of	the	investment	grant	is	fully	realized	by	the	service	provider.	The	vouchers	‐on	the	
+other	hand‐	increase	affordability	of	the	services	for	households	and	the	assumption	is	that	their	benefit	is	
+fully	realized	by	the	household.	The	impact	of	the	vouchers	on	enrollment	is	mainly	through	their	impact	on	
+affordability	of	existing	services	for	households	–	hence	we	assume	in	the	short	term	there	will	be	no	capacity	
+impact	of	the	vouchers	in	the	system.	The	operational	grants	fall	somewhere	in	between	–	in	terms	of	its	impact	
+on	enrollments.	While	the	operational	grant	is	received	on	a	per	child	basis	by	the	service	provider,	the	model	
+assumes	that	there	is	a			“pass‐through”	of	the	operational	grants	to	the	households	in	the	form	of	a	reduction	
+in	prices.	In	other	words,	in	our	model	operational	grants	lead	to	decreases	in	the	prices	–	but	the	decrease	in	
+price	 is	 a	 portion	 in	 this	 case	 assumed	 at	 50% 	 of	 the	 operational	 grant	 per	 child.	 The	 benefits	 from	 the	
+operational	grant	are	assumed	to	be	“shared”	between	the	households	and	the	service	providers,	hence	the	
+operational	 grant	 has	 an	 impact	 on	 enrollments	 both	 through	 its	 impact	 on	 enhanced	 capacity	 through	
+benefits	realized	by	the	service	provider 	and	through	its	impact	on	affordability	 through	benefits	realized	
+by	the	household .			
+
+We	consider	several	scenarios	where	these	grants	are	provided	by	themselves	or	in	combination	with	each	
+other.	The	level	of	the	benefits	can	be	varied	once	the	model	is	set	up,	we	consider	here	only	a	fixed	level	of	
+benefit	 50,000	TL	one‐time	investment	grant	and	300	TL	per	child	per	month	operational	grant	or	voucher	
+value ,	though	this	parameter	can	be	adjusted	to	take	on	different	levels	under	each	scenario.	The	operational	
+grant	in	the	scenarios	can	be	provided	with	a	price	cap	option	and	without	a	price	cap	option	 in	Scenario	2A	
+and	 2B .	 	 The	 scenarios	 consider	 the	 investment	 grant	 and	 operational	 grants	 provided	 separately	 and	 in	
+combination	with	each	other	to	look	at	cost	effectiveness	per	new	enrollment	in	each	scenario.	The	full	list	of	
+7	scenarios	is	provided	in	Table	1.		
+
+	
+
+	                                   	
+
+
+
+
+	
+	
+Table	1.	List	of	policy	scenarios		
+
+    	                        Scenario	      Name	                                     Description	
+                             Scenario	1	    Supply	Side	Investment	Grant	only:		      Investment	Grant:	50,000	TL	given	to	the	
+                                            One‐time	investment	grant	to	child	       service	provider	one	time	for	initial	
+                                            care	centers	                             investment.		
+                             Scenario	2A	   Supply	Side	Operational	Grant	only:		     Operational	Grant:	300	TL	per	child	per	month	
+                                            Monthly	per	student		operational	grant	   given	to	the	service	provider	for	5	years.		
+    Simple	Scenarios	
+
+
+
+
+                                             no	price	cap 	
+                             Scenario	2B	   Supply	Side	Operational	Grant	only	       Operational	Grant:	300	TL	per	child	per	month	
+                                            with	Price	Cap:		                         given	to	the	service	provider	for	5	years.	
+                                            Monthly	per	student		operational	grant	   Price	cap:	750	TL	 the	service	provider	agrees	
+                                             with	price	cap 	                         to	limit	the	maximum	price	to	750	TL	per	child	
+                                                                                      per	month	under	this	contract	for	the	duration	
+                                                                                      of	the	subsidy 		
+                             Scenario	3	    Demand	Side	Grant	only:		                 Voucher	to	Household:	300	TL	per	child	per	
+                                            Vouchers	to	households	per	child	         month,	targeting	households	in	bottom	40%	of	
+                                            enrolled	                                 income	percentile.		
+                             Scenario	4A	   Supply	Side	Investment	and	               Investment	Grant:	50,000	TL	given	to	the	
+                                            Operational	Grant	combined:		             service	provider	one	time	for	initial	
+                                            One‐time	investment	grant	and	            investment.		
+                                            monthly	per	child	operational	grant	        	
+                                            combined	 no	price	cap 	                  Operational	Grant:	300	TL	per	child	per	month	
+                                                                                      given	to	the	service	provider	for	5	years.	
+                             Scenario	4B	   Supply	Side	Investment	and	               Investment	Grant:	50,000	TL	given	to	the	
+                                            Operational	Grant	combined	with	Price	    service	provider	one	time	for	initial	
+    Combination	Scenarios	
+
+
+
+
+                                            Cap:		                                    investment.		
+                                            One‐time	investment	grant	and	              		
+                                            monthly	per	child	operational	grant	      Operational	Grant:	300	TL	per	child	per	month	
+                                            combined	 with	price	cap 	                given	to	the	service	provider	for	5	years.	
+                                                                                      Price	cap:	750	TL	 the	service	provider	agrees	
+                                                                                      to	limit	the	maximum	price	to	750	TL	per	child	
+                                                                                      per	month	under	this	contract	for	the	duration	
+                                                                                      of	the	subsidy 	
+                             Scenario	5	    Supply	Side	Investment	Grant	and	         Investment	Grant:	50,000	TL	given	to	the	
+                                            Demand	Side	Grant	combined:		             service	provider	one	time	for	initial	
+                                            One‐time	investment	grant	and	            investment.		
+                                            monthly	voucher	to	households	              	
+                                            combined	                                 Voucher	to	Household:	300	TL	per	child	per	
+                                                                                      month,	targeting	households	in	bottom	40%	of	
+                                                                                      income	percentile.		
+	
+
+5.	Data	and	Methodology	
+The	 supply‐	 and	 demand‐side	 simulation	 model	 is	 built	 using	 data	 sets	 from	 households	 and	 child	 care	
+providers	in	Turkey.	A	unique	data	set	collected	from	child	care	providers	in	2014	in	5	provinces	of	Turkey,	
+allows	us	to	have	insights	into	the	microeconomics	of	running	a	child	care	center	in	Turkey,	and	hence	allows	
+us	to	look	at	the	costs	and	prices	in	the	market	for	child	care.		Turkey	has	significant	supply‐side	constraints	
+in	the	child	care	sector,	and	these	reflect	on	the	results	of	the	simulation	model.	The	initial	conditions	of	the	
+child	care	market	matter	significantly	in	determining	the	outcomes	and	benefit	incidence	of	grants	distributed	
+for	expanding	child	care	utilization.	This	section	first	describes	the	data	sets	that	were	used	for	the	simulations	
+and	the	methodology	in	detail.			
+
+5.1	Data	Used	for	the	Simulation	
+In	order	to	understand	the	impact	of	different	kinds	of	subsidies	we	have	two	main	simulation	models	that	
+interact	with	one	another	in	producing	the	results.	These	models	are	 i 	the	supply‐side	simulation	model	and	
+ ii 	the	demand‐side	simulation	model.	Using	these	models	and	changing	the	parameters	for	the	subsidy	type	
+and	the	level	of	the	subsidy	we	estimate	possible	benefits	of	each	scenario.	Below,	we	describe	the	data	used	
+for	the	simulations	and	the	details	of	each	model.			
+
+	
+	
+5.1.1	Supply‐Side	Simulation	Data	
+	
+For	the	supply‐side	model	we	use	the	data	that	were	collected	by	Development	Analytics	in	2014	for	the	World	
+Bank	study	“Supply	and	Demand	for	Child	Care	Services	in	Turkey”	 World	Bank,	2015 	from	603	center‐based	
+child	care	providers	in	5	provinces,	namely	Istanbul,	Gaziantep,	Denizli,	Eskişehir	and	Samsun.	The	data	set	
+includes	a	wide	range	of	information	on	child	care	centers	such	as	their	set‐up	and	operational	costs	and	the	
+prices	they	charge	per	child.		For	the	purposes	of	this	analysis,	we	only	make	use	of	a	sample	composed	of	the	
+private	providers	in	the	data	set	making	up	a	total	of	226	providers.				This	uniquely	designed	survey	allows	
+us	to	have	information	on	the	costs	and	prices	faced	by	private	providers	in	the	child	care	market	in	Turkey,	
+and	 allows	 us	to	 model	 the	break‐even	 points	 and	 internal	rate	 of	 return	 on	investments	 in	 the	 child	 care	
+sector.		Combining	this	information	with	a	model	on	the	investment	behavior	of	private	providers,	we	are	able	
+to	 come	up	 with	 different	levels	 of	 investments	 and	 capacity	 increases	 with	different	 levels	 of	 the	subsidy	
+  whether	through	the	investment	or	operational	grants	to	facilities .		
+
+5.1.2	Demand‐Side	Data	
+For	the	demand‐side	model	we	make	use	of	the	 Turkey	EU‐SILC	 Survey	of	Income	and	Living	Conditions 	
+2012	data	set.	The	EU‐SILC	data	set	includes	a	wide	range	of	information	on	households	including	information	
+on	children’s	enrollment	in	center‐based	child	care	and	labor	force	participation	of	household	members.	This	
+data	set	is	used	in	order	to	understand	the	benefit	incidence	of	enrollments	as	a	result	of	the	capacity	increase	
+that	occurs	in	the	supply‐side	model,	the	changes	in	enrollment	as	a	result	of	increased	affordability.	We	only	
+make	use	of	the	part	of	the	data	set	collected	from	households	located	in	urban	areas	as	the	proposed	capacity	
+expansions	are	likely	to	benefit	initially	‐	and	primarily	‐	the	urban	areas	in	the	country.		The	demand‐side	
+data	 are	 used	 to	 model	 the	 behavior	 of	 the	 household	 given	 increased	 availability	 of	 child	 care	 in	 the	
+neighborhood,	and	increased	affordability	of	child	care	given	the	operational	grant	 which	leads	to		reduced	
+prices	in	the	market	through	a	pass‐through	assumption 	or	through	the	vouchers.			
+
+5.2	Methodology:	Building	the	Simulation	Model	
+In	the	 supply‐	and	demand‐side	 simulations,	using	 existing	data	we	 aim	to	 model	the	effects	 of	 an	outside	
+shock	to	the	system.	In	our	case,	this	shock	could	be	child	care	centers	receiving	investment	or	operational	
+grants	or	both	or	households	receiving	a	voucher.		There	are	multiple	options	which	could	be	adopted	in	a	
+subsidy	policy	framework	and	we	investigate	in	our	simulation	models	combinations	of	these	policies	with	
+different	levels	of	the	investment	and	operational	grants	and	vouchers.	The	scenarios	are	as	described	in	Table	
+1.	
+
+5.2.1	Supply‐Side	Simulation	
+We	 build	 the	 supply‐side	 simulation	 model,	 using	 the	 supply‐side	 provider	 level	 survey	 collected	 in	 5	
+provinces	where	we	have	detailed	information	on	the	setup	and	operational	cost	structure	and	prices	faced	
+by	 child	 care	 providers.	 Before	 a	 shock	 is	 introduced	 to	 the	 system,	 each	 provider	 faces	 certain	 setup	
+ investment 	 and	 operational	 costs	 and	 certain	 prices	 and	 enrollments.	 All	 of	 these	 data	 come	 from	 the	
+empirical	data	set,	but	are	treated	in	the	model	as	hypothetical	cases	 as	if	investments	in	these	centers	have	
+not	yet	been	made .	A	probability	of	investment	is	calculated	for	each	service	provider	in	the	baseline.		We	call	
+them	hypothetical	cases	as	they	actually	exist	in	reality	‐	but	in	the	model	they	are	treated	as	probabilistic	
+investments	–	such	that	a	service	provider	that	faces	lower	costs	and	better	prices	in	the	market	has	a	higher	
+initial	likelihood	of	investment.		An	outside	shock	is	introduced	to	the	model	that	increases	the	likelihood	for	
+investment	 for	 the	 child	 care	 centers.	 With	 these	 simulations	 our	 aim	 is	 to	 find	 out	 the	 “expected”	 added	
+capacity	and	how	many	more	centers	will	be	established	when	there	are	investment	grants	or	operational	
+grants	 of	varying	sizes 	and	to	see	which	ones	lead	to	a	higher	capacity	increase.		
+
+Calculating	the	Net	Present	Value	and	the	Probability	to	Invest	
+First,	the	net	present	value	for	each	private	child	care	center	in	the	data	is	calculated	in	order	to	find	out	their	
+initial	probability	to	invest,	given	their	 i 	price	per	child,	 ii 	setup	cost	if	they	were	to	open	up	the	center	
+now,	 iii 	monthly	variable	costs,	and	 iv 	total	number	of	children	enrolled.	Net	present	value	of	each	child	
+care	center	is	calculated	for	a	period	of	10	years	by	also	taking	into	account	the	value	of	the	center	if	it	were	
+to	be	sold	at	the	end	of	this	10‐year	period.		
+
+	
+	
+The	equation	for	the	net	present	value	of	a	child	care	center	is	calculated	as	follows:	
+
+	
+            Net	Present	Value	       	 	Setup	Cost	                                                                                                    Eq		1	
+                                                    	       	          ∗                               	          	   	      ∗ 12 ∗ 1        			
+                                                                                                   1
+                                       Terminal	Value .	    viii
+
+
+
+Where:		
+
+            Setup	cost	is	the	setup	cost	 e.g.	if	the	center	were	to	be	opened	up	now	what	the	setup	cost	would	be 	
+             of	the	child	care	center	as	reported	by	each	respondent	in	the	survey.		
+            Yearly	cash	flow	is	the	difference	between	yearly	revenues	collected	from	families	minus	the	variable	
+             costs	 These	are	personnel	costs,	stationary	costs,	utility	costs	and	travel	costs .		
+            The	discount	rate	r	is	assumed	to	be	equal	to	40	percent.ix	
+            Cumulative	and	combined	tax	rate	taken	at	32	percent	in	Turkeyx.			
+
+Secondly,	the	net	present	value	 NPV 	of	an	investment	is	mapped	onto	a	probability	of	investment	through	a	
+functional	form	as	described	below			 See	Figure	2 .	This	non‐linear	functional	form	is	used	to	hypothetically	
+describe	the	investment	behavior	of	child	care	centers.	With	increasing	values	of	NPV,	the	probability	to	invest	
+increases	and	this	probability	ranges	between	0	and	1.		
+
+              Figure	2.	Probability	to	invest	for	each	child	care	center	given	the	estimated	net	present	value	
+
+            P invest 	 	                        ,       	
+                                 	          ,
+
+
+
+
+                                                                                                                                                   	
+	
+
+This	functional	form	shows	that	the	probability	to	invest	increases	with	increasing	values	of	the	net	present	
+value.		 For	those	who	have	a	negative	net	present	value,	a	probability	of	0	is	directly	assigned	without	using	
+the	functional	form .	
+
+Calculating	the	Estimated	Capacity	Increase	Impact	of	the	Grants	
+Impacts	of	investment	and	operational	grants	are	estimated	by	including	these	grants	in	the	net	present	value	
+calculations	 and	 recalculating	 the	 net	 present	 values	 of	 each	 child	 care	 center	 after	 the	 grant	 shock.	 The	
+operational	 grant	 reduces	 the	 operational	 costs	 faced	 by	 the	 service	 provider,	 and	 the	 investment	 grant	
+reduces	the	burden	of	the	investment	 setup 	costs	of	the	service	provider	which	is	reflected	in	the	calculation	
+of	the	net	present	value	‐and	from	there	‐	the	probability	to	invest.		
+
+For	an	investment	grant	the	net	present	value	equation	becomes	as	follows:	
+
+             Net	Present	Value          	 	Setup	Cost                                  	       	                                                       Eq		 2 	
+                                                   	               	           ∗
+                                                                                                           ∗ 12 ∗ 1   		
+                                                    	                      	               	
+                                                                                                                           Terminal	Value	
+                                                                                   1
+
+    	
+
+For	an	operational	grant	without	a	price	cap	the	net	present	value	equation	becomes	as	follows:	
+	
+	
+                       Net	Present	Value			          	 	Setup	Cost	                                                                        Eq		 3 	
+                                         	   	                        	           ∗   	
+                             ∗                   	            	               	       ∗       ∗
+                       ∑
+                                                          	       	
+                             ∗                   	            	               	       ∗       ∗
+                       ∑                                                                          	    	        			
+
+    	
+
+Operational	grants	are	assumed	to	be	given	for	a	period	of	five	years.	
+
+For	an	operational	grant	with	a	price	cap	the	net	present	value	equation	is	the	same	as	above,	but	only	some	
+of	the	schools	that	have	lower	initial	prices	opt	in	for	the	program.	For	those	child	care	providers	that	initially	
+are	 able	 to	 charge	 high	 prices,	 it	 may	 not	 be	 favorable	 to	 lock	 themselves	 into	 the	 price	 cap.	 We	 assume	
+therefore	that	a	sub‐group	of	child	care	centers	will	opt‐in	for	the	grant	 those	with	already	high	prices	will	
+opt	out	of	this	program .	The	new	prices	are	then	calculated	as	follows	for	all	centers:	
+
+    Price_new	 	Price_old	if	Price_old‐operational	grant*pass‐through                                 Price	cap	 Those	who	          Eq		 4 	
+    opt‐out 	
+
+    	
+
+    Price_new	 	Price_old‐operational	grant*pass‐through	if	Price_old‐operational	grant*pass‐                                        Eq		 5 	
+    through Price	cap	 Those	who	opt‐in 	
+    	
+
+It	is	assumed	that	after	5	years,	the	prices	go	back	to	what	they	were	before	the	price	cap	was	introduced.	For	
+both	 of	 the	 operational	 grant	 scenarios	 a	 pass‐through	 rate	 is	 assumed.	 This	 lets	 the	 model	 distribute	 the	
+benefit	to	the	households	by	leading	to	a	decrease	in	prices	 Pass	through	rate	is	assumed	to	be	0.5 .	
+
+Following	the	net	present	value	recalculation,	the	probability	to	invest	is	also	recalculated	for	each	center	and	
+for	each	grant	scenario.	Once	the	baseline	probability	to	invest	and	probability	to	invest	under	each	scenario	
+are	all	calculated,	the	expected	capacity	for	each	center	is	then	calculated	as	follows:	
+
+            E Capacity   Baseline	    	Probability	to	invest	in	Baseline*Total	capacity	of	the	center	                                 Eq		 6 	
+                                                                          	
+
+               E Capacity     Sc	X	   	Probability	to	invest	in	Sc.	X*Total	capacity	of	the	center	                                    Eq		 7 	
+                                                                          	
+
+                                                                                          	
+
+These	 expected	 capacities	 are	 then	 summed	 up	 and	 the	 percent	 capacity	 increase	 achieved	 with	 Sc.	 X	 is	
+calculated	with	the	following	equation:	
+
+        %	Increase	in	total	capacitySc	X	 	 E Total	capacity Sc	X‐E Total	capacity                         Baseline   /	E Total	   		Eq		 8 	
+                                              capacity Baseline		
+
+    	
+
+5.2.2		Demand‐Side	Simulation		
+The	 next	 step	 is	 to	 tie	 the	 capacity	 increase	 coming	 from	 the	 supply‐side	 simulation	 to	 the	 demand‐side	
+household	data	in	order	to	see	who	is	impacted	by	the	newly	created	capacity	and	enrollments.	The	capacity	
+increase	found	in	the	supply‐side	simulation	is	used	as	the	“exogenous	shock”	in	the	demand‐side	simulations.		
+
+Our	aim	in	each	scenario	is	to	find	out	how	much	capacity	is	estimated	to	expand,	how	many	new	children	are	
+expected	to	enroll	in	each	scenario,	who	benefits	from	the	capacity	increases	and	price	reductions	and	the	
+total	estimated	impact	on	mothers’	employment.	We	also	calculate	the			cost	implications	in	each	scenario	 net	
+of	taxes	collected	as	a	result	of	the	intervention 	as	well	as	cost‐effectiveness	per	child	enrolled	and	per	woman	
+employed	into	the	labor	market.		
+
+
+	
+	
+The	impact	on	children’s	preschool	enrollment		
+In	 the	 model,	 we	 can	 expect	 an	 increase	 in	 children’s	 enrollment	 from	 two	different	 channels:	 i 	 the	 first	
+channel	works	through	the	expansion	of	capacity	and	hence	enrollments	 a	new	center	is	opened	in	the	child’s	
+neighborhood	 and	 those	 most	 likely	 to	 enroll	 become	 beneficiaries	 of	 this	 newly	 created	 capacity;	 ii 	 the	
+second	channel	works	through	affordability	 the	child	becomes	enrolled	because	now	it	is	more	affordable	for	
+the	family	to	send	the	child	to	daycare .	The	scenarios	considered	may	contribute	to	enrollments	through	their	
+impact	on	capacity	or	through	their	impact	on	affordability	for	households,	or	both.		
+
+The	 investment	 grants,	 where	 they	 are	 applied,	 are	 assumed	 to	 have	 an	 impact	 on	 enrollments	 through	
+capacity	increases	–	and	not	through	increased	affordability.	Hence,	it	is	assumed	in	the	model,	that	the	full	
+benefit	of	the	investment	grant	will	be	captured	by	the	service	provider.	They	have	an	impact	on	enrollments	
+only	through	new	capacity	created.xi		
+
+For	operational	grants,	the	increase	in	enrollments	is	due	to	the	capacity	effect	as	well	as	the	affordability	
+effect	 income	effect	at	the	household	level ,	as	we	assume	that	the	benefit	from	the	operational	grants	are	
+split	between	the	service	provider	and	the	household.	For	vouchers,	the	effect	on	enrollments	is	through	the	
+affordability	effect	 the	income	effect	at	the	household	level .	In	the	short	term,	we	assume	that	there	is	no	
+capacity	impact	as	a	result	of	the	vouchers.xii				
+
+             Table	2:	Summary	of	Enrollment	Effects	in	the	Model	under	Different	Subsidy	Schemes	
+    	                                       Impact	on	Enrollments	through	          Impact	on	Enrollments	through	
+                                            Impact	on	Capacity		                    Impact	on	Affordability	 Income	
+                                                                                    Effect 	
+
+    Investment	Grant		                                        	                                      	
+     as	in	Scenario1 	
+    Operational	Grant		                                       	                                      	
+     as	in	Scenario	2A	and	2B 	
+    Vouchers		                                                 	                                      	
+     as	in	Scenario	3 	
+	
+
+The	estimated	expected	capacity	increase	due	to	the	investment	grants	and	operational	grants	coming	from	
+the	supply‐side	simulation	is	incorporated	into	the	model.	In	order	to	achieve	this,	the	number	of	children	
+aged	3‐5	who	are	currently	enrolled	in	preschool	or	daycare	in	the	EU	SILC	2012	dataset	is	multiplied	with	the	
+estimated	capacity	increase	coming	from	the	supply‐side	simulation	for	each	scenario.	This	allows	us	to	find	
+out	the	number	of	spots	that	will	be	available	for	the	children	who	are	not	currently	enrolled	in	the	SILC	data	
+set.	
+
+Once	the	new	capacity	is	calculated,	this	value	is	divided	by	the	total	number	of	children	attending	preschool	
+in	Turkey	in	the	baseline.	Lastly,	this	value	is	used	as	the	percent	capacity	increase	and	it	is	multiplied	by	the	
+number	of	children	attending	preschool	in	the	data	set.	This	again	allows	us	to	find	out	the	number	of	spots	
+that	will	be	available	for	the	children	who	are	not	currently	enrolled	in	the	SILC	data	set.	
+
+After	the	capacity	increase	amounts	in	SILC	are	all	determined,	the	number	of	new	spots	due	to	the	increased	
+capacity	are	allocated	to	the	children	in	the	data	set	aged	3‐5,	based	on	their	propensity	to	attend	preschool.	
+This	propensity	is	calculated	using	a	probit	model	which	uses	a	wide	range	of	independent	variables	to	predict	
+a	child’s	propensity	to	attend	preschool.	The	probit	equation	is	as	follows:	
+
+                             P attending	preschool	or	daycare         φ X’ 	                               Eq		 9 	
+where	 the	 independent	 variables	 X	 are	 as	 follows:	 child’s	 age,	 mother’s	 level	 of	 education,	 mother’s	
+employment	 status,	 father’s	 level	 of	 education,	 father’s	 employment	 status,	 per	 capita	 household	 income,	
+household	size,	number	of	adults	in	the	household	aged	65 ,	number	of	children	in	the	household	aged	0‐6	
+and	region	the	household	is	located	in.	
+
+
+	
+	
+Using	this	equation,	the	probability	to	attend	is	calculated	for	all	children	whether	they	currently	attend	a	
+center	 or	 not.	 The	 calculated	 capacity	 increase	 is	 allocated	 to	 the	 children	 starting	 from	 the	 child	 who	 is	
+currently	not	attending	but	has	the	highest	 propensity	to	attend	child	care	among	the	non‐attenders	and	the	
+allocation	stops	when	the	increased	capacity	is	filled.	This	exercise	allows	us	to	observe	who	is	more	likely	to	
+benefit	from	a	capacity	increase	as	a	result	of	an	operational	grant	or	investment	grant.	
+
+For	the	case	of	operational	grant	with	a	price	cap	a	slightly	different	exercise	needs	to	be	adopted.	In	the	price	
+cap	scenario,	the	child	care	centers	in	the	supply‐side	model	with	the	highest	prices	keep	their	prices	and	do	
+not	opt‐in	for	the	grant	since	it	will	not	be	profitable	for	them	to	do	so.	Hence,	we	need	to	incorporate	this	fact	
+into	our	demand‐side	simulation.		We	try	to	achieve	this	by	assuming	that	children	who	do	not	currently	attend	
+preschool	in	households	in	the	highest	income	quintile	will	not	benefit	from	the	capacity	increases	since	the	
+school	their	families	would	prefer	would	not	opt‐in	for	operational	grants.xiii		
+
+Overall	 to	 calculate	 the	 number	 of	 children	 enrolled	 due	 to	 capacity	 increase,	 individual	 weights	 of	 these	
+children	who	are	newly	enrolled	are	summed	up,	using	the	equation	below:	
+                                                                                                                                              	
+                                    Number	of	children	enrolled	due	to	the	capacity	increaseSc	X	 	                             Eq		 10   	
+                  %	   	    	   	    	 	∗     	   	      	      	       	   	   	
+              ∑                                                                                   	   	 	   	   	
+
+                                                                                                                      	     	
+
+
+Operational	grants	also	have	a	positive	effect	through	increasing	affordability	by	decreasing	prices.	To	show	
+this	 impact,	 the	 probability	 to	 attend	 preschool	 is	 calculated	 for	 the	 children	 i 	 P1‐when	 there	 is	 an	
+operational	grant	and	children	are	allocated	the	new	capacity	and	 ii 	P2‐	when	there	is	an	operational	grant	
+and	children	are	allocated	the	new	capacity	and	there	is	also	the	positive	income	shock.	These	probabilities	
+are	 calculated	 using	 the	 probit	 equation	 described	 above.	 As	 a	 second	 step,	 expected	 number	 of	 children	
+benefiting	 from	 affordability	 increases	 are	 calculated	 by	 multiplying	 the	 probabilities	 with	 weights	 of	 the	
+children	and	adding	them	up	for	the	whole	population.	In	the	operational	grants,	the	benefit	of	the	subsidy	is	
+shared	between	the	households	and	service	providers,	hence	there	is	an	increase	in	enrollments	due	to	both	
+the	capacity	increase	and	the	affordability	increase	 the	income	effect .			
+
+For	the	voucher	scenario,	the	main	impact	is	through	the	income	effect	introduced	by	the	voucher	–	hence	the	
+increased	 enrollment	is	due	 to	increased	 affordability	 as	a	 result	 of	the	voucher.	 The	 probability	 to	attend	
+preschool	is	calculated	for	the	children	using	the	 probit	equation	above	 i 	in	the	baseline	where	there	is	no	
+voucher	and	 ii 	when	there	is	a	voucher	creating	a	positive	income	effect.	In	the	second	step	expected	number	
+of	children	attending	preschool	in	the	baseline	and	when	there	is	an	income	effect	will	be	calculated.	Note	that	
+there	is	no	capacity	impact	in	the	short	term	in	the	voucher	scenario,	since	the	benefit	is	fully	absorbed	by	the	
+households.		
+
+The	expected	number	of	children	attending	preschool	as	a	result	of	the	affordability	increases	is	calculated	
+using	the	equation	below:	
+
+        E Number	of	children	enrolled	due	to	affordability	increaseSc	X	                      	 P2‐P1 *individual	       Eq		 11 	
+                                       weight	in	the	dataset	
+In	 summary,	 for	 each	 scenario	 the	 number	 of	 children	 who	 will	 be	 enrolled	 due	 to	 the	 capacity	 impact	 is	
+summed	up	with	the	predicted	number	of	children	who	will	be	enrolled	in	child	care	due	to	the	affordability	
+increase	in	order	to	come	up	with	the	total	number	of	newly	enrolled	children.		
+
+     Number	 of	 newly	 enrolled	 childrenSc	 X Number	 of	 children	 enrolled	 due	 to	 the	 capacity	                    Eq		 12 	
+     increaseSc	X 	E Number	of	children	enrolled	due	to	affordability	increaseSc	X 	
+
+		
+5.2.3		Fiscal	Impact	and	Cost	Effectiveness	
+Different	calculations	are	necessary	to	calculate	the	cost	of	the	investment,	operational	grants,	the	vouchers	
+and	the	scenarios	where	municipalities	open	up	child	care	centers.		
+
+
+	
+	
+For	investment	grants,	we	first	estimate	the	expected	number	of	new	child	care	centers	that	will	be	opened	up	
+as	a	result	of	the	subsidy.	This	is	calculated	by	dividing	the	number	of	new	enrollments	by	the	average	size	of	
+a	child	care	center	 in	our	case,	this	was	50	children	per	center	on	average .	The	expected	number	of	new	child	
+care	centers	 countrywide ,	is	multiplied	with	the	level	of	the	investment	grant.	
+
+        Cost	 	 Number	 of	 children	 enrolled	 due	 to	 the	 capacity	 increase/Average	 capacity	 of	 a	                               Eq		 13 	
+           center *Investment	grant	
+For	the	operational	grant,	when	there	is	no	price	cap,	all	the	schools	that	already	exist	are	assumed	to	opt‐in,	
+hence	the	 cost	of	the	 grant	 will	 be	 equal	to	 the	 country	wide	 level	 of	 expected	 enrollment	multiplied	with	
+yearly	value	of	the	operational	grant	and	summed	up	over	5	years.	
+
+	
+
+                                                     	           	                          	                                     Eq		 14 	
+                                       	 	                           	                  	               ∗ 12			
+                                       ∗   	                         	
+               Total	cost                                                                                       	
+                                                             1
+
+For	 the	 operational	 grant	 with	 the	 price	 cap,	 first	 the	 country‐wide	 number	 of	 children	 enrolled	 from	 the	
+bottom	80%	is	calculated	using	SILC.xiv	Then	the	estimated	number	of	children	who	will	be	newly	enrolled	is	
+added	to	this	value	to	find	the	total	number	of	beneficiaries.	Similar	to	the	previous	step,	5	year	value	of	the	
+operational	grant	is	calculated	to	find	the	total	cost.	
+                                         	       	                            	                     	       	                     Eq		 15 	
+                                             	           	                            	80%
+                                                                                                                    ∗ 12			
+                                         	       	                   	                          	
+                                             ∗               	                    	
+               Total	cost                                                                                                     	
+                                                                         1
+    	
+
+The	cost	of	the	vouchers	is	calculated	by	first	adding	up	number	of	children	already	enrolled	from	the	bottom	
+40%	with	the	expected	number	of	children	newly	enrolled	to	childcare	after	the	voucher	shock	is	received	and	
+then	multiplying	this	value	with	the	value	of	the	voucher.	This	value	is	then	summed	up	for	a	5	year	period.		
+
+	
+
+                                        	        	                            	                     	       	                        Eq		 16 	
+                                             	           	                            	40%
+                                                                                                                    ∗ 12			
+                                         	 	                         	                          	
+                                          ∗  	                            	
+               Total	cost                                                                                                 	
+                                                                         1
+
+	
+
+Two	kinds	of	tax	revenue	are	calculated	for	each	scenario.	These	are	corporation	tax	revenues	and	income	
+tax	revenues	from	newly	employed	staff	at	the	centers.		
+
+               i 	Tax	revenues	obtained	from	the	newly	opening	centers:	This	is	in	the	form	of	income	and	
+              corporation	taxes	making	a	cumulative	total	of	32%	of	the	profitsxv;	and		
+
+               ii 	Tax	revenues	obtained	from	employee	contributions:	This	is	composed	of	the	women	working	in	
+              child	care	centers	that	opened	up	as	a	result	of	the	grants.	Hence	as	a	lower	bound	estimate	for	tax	
+              revenue	‐	all	the	women	employed	in	new	child	care	centers	are	assumed	to	be	receiving	the	
+              minimum	wagexvi.		Net	present	value	of	tax	revenues	are	calculated	for	a	period	of	10	years.		
+
+Net	cost	is	calculated	for	each	scenario	by	taking	the	difference	between	total	costs	and	total	tax	revenues.	
+Finally,	the	cost	effectiveness	of	each	scenario	is	calculated	by	dividing	the	net	costs	of	each	scenario	with	the	
+total	number	of	newly	generated	enrollments	through	the	capacity	and	increased	affordability	effects	of	the	
+scenario	and	dividing	this	number	further	by	10	which	is	the	assumed	years	of	operation	for	these	centers.		
+
+
+
+	
+	
+6.	Main	Findings	
+The	results	of	the	supply‐	and	demand‐side	simulations	are	presented	in	this	section	when	the	methodology	
+is	applied	to	the	case	of	Turkey	taking	into	consideration	the	 i 	impact	on	capacity	and	estimated	number	of	
+new	centers	 ii 	impact	on	enrollments	which	are	derived	both	from	capacity	increase	as	well	as	affordability	
+increase	 in	 the	 household	 and	 hence	 may	 be	 higher	 than	 the	 amount	 of	 capacity	 increased	 iii 	 benefit	
+incidence	of	new	enrollments	and	grants	 %	of	children	in	the	bottom	40%	of	the	income	distribution	that	
+benefit	from	the	expansion	and	households	in	the	bottom	40%	that	benefit	from	the	grants ,	 iv 	costs	and	
+revenues	and	 v 	cost	effectiveness	in	terms	of	the	net	cost	of	the	policy	per	child	enrolled.					
+
+6.1	Impact	on	capacity	and	estimated	number	of	new	centers			
+Capacity	increase	is	maximized	in	the	scenario	that	combines	the	investment	grant	and	the	operational	grant	
+ and	does	not	impose	a	price	cap .	This	scenario	 provided	under	Scenario	4A 	expands	existing	preschool	
+capacity	by	30	percent.		The	estimated	number	of	newly	opened	centers	in	this	scenario	is	4,132	creating	space	
+for	 206,608	 newly	 enrolled	 children	 additionally	 29,738	 children	 are	 expected	 to	 be	 enrolled	 due	 to	 an	
+affordability	increase .	When	a	price	cap	is	introduced	to	these	scenarios	 Scenario	4B 	the	impact	on	capacity	
+is	slightly	lower	though	still	higher	than	if	an	investment	grant	or	operational	grant	were	provided	alone.		
+
+When	 an	 investment	 grant	 is	 provided	 alone	 Scenario	 1 ,	 there	 is	 a	 small	 increase	 in	 capacity,	 while	 the	
+impact	on	capacity	of	only	providing	operational	grants	is	projected	to	be	higher	 Scenario	2A	and	2B .	With	
+a	one‐time	investment	grant	and	without	operational	grants,	the	capacity	increase	is	estimated	to	be	about	6	
+percent.		The	one‐time	investment	grant	does	not	create	enough	incentive	in	the	model	to	expand	capacity	for	
+child	care	centers,	rather	the	operational	grants	seem	to	have	a	more	convincing	impact:	when	operational	
+grants	–with	or	without	a	price	cap‐	are	provided	per	child	per	month	for	5	years,	the	impact	on	capacity	is	
+estimated	to	be	17	percent	with	price	cap	and	24	percent	without	the	price	cap	 an	estimated	2,394	and	3,306	
+new	centers	respectively .		
+
+Where	an	operational	grant	is	introduced	with	a	price	cap	 Scenario	2B ,	the	capacity	increase	is	–	as	expected	
+‐	smaller	compared	to	no	price	cap	scenarios.	In	the	supply	side	simulation	model,	when	an	operational	grant	
+is	introduced	with	a	price	cap,	child	care	centers	that	charge	more	than	the	cap	do	not	find	it	profitable	to	opt	
+in.	As	a	result,	capacity	increase	remains	smaller	compared	to	the	scenario	with	no	price	cap	where	every	
+service	provider	would	have	the	incentive	to	opt‐in.	Hence	for	instance	in	the	scenario	when	an	operational	
+grant	of	300	TL	is	provided	without	a	price	cap	a	capacity	increase	of	24	percent	is	expected	as	opposed	to	a	
+capacity	increase	of	17	percent	when	the	same	grant	is	provided	but	with	a	price	cap	of	750	TL	per	month	per	
+child.		
+
+The	vouchers	‐	when	provided	alone	‐	are	not	expected	to	create	new	capacity	in	the	short	term	in	the	model.	
+The	impact	of	the	vouchers	on	enrollments	are	built	into	the	model	through	their	impact	on	“affordability”	of	
+child	care	for	the	household,	hence	they	work	through	the	demand‐side	simulation	and	are	projected	to	have	
+no	impact	on	the	supply‐side	capacity	in	the	short	term.		
+
+6.2		Impact	on	preschool	enrollment	
+The	increase	in	the	enrollment	figures	come	from	the	increase	in	capacity	in	the	supply‐side	model	 which	is	
+assumed	 to	 be	 taken	 up	 fully	 by	 new	 enrollments 	 as	 well	 as	 the	 increase	 in	 affordability	 of	 child	 care	 by	
+households	in	the	demand‐side	model.	As	explained	in	the	methodology	section,	the	investment	grants	have	
+an	impact	on	enrollments	only	through	their	impact	on	capacity,	whereas	the	vouchers	impact	enrollments	
+through	their	impact	on	affordability	of	child	care	 hence	are	assumed	to	have	no	impact	on	capacity .	The	
+operational	grants	have	an	impact	on	both	capacity	and	affordability	by	the	household	–the	benefit	derived	
+from	the	grants	are	assumed	to	be	shared	by	the	child	care	centers	and	households	equally	and	enrollments	
+increase	in	these	scenarios	both	through	the	capacity	increase	on	the	supply	side	and	the	affordability	increase	
+on	the	demand	side	 and	hence	increased	enrollment	in	existing	capacity .	Number	of	newly	enrolled	children	
+as	a	result	of	each	scenario	through	impact	from	these	two	channels	can	be	seen	in	Figure	3.		
+
+The	highest	levels	of	new	enrollments	are	observed	in	the	set	of	scenarios	that	include	investment	grants	and	
+operational	grants	together	 Scenario	4A	and	4B .	This	is	in	parallel	with	the	fact	that	these	scenarios	also	
+
+	
+	
+create	the	highest	capacity	increases.	The	increase	in	enrollments	is	highest	when	there	is	no	price	cap.	Current	
+enrollment	rate	increases	by	9.6	percentage	points	in	the	case	where	the	one‐time	investment	grant	is	50,000	
+TL	and	the	operational	grant	is	300	TL	per	month	per	child.	A	total	of	236,346	children	are	expected	to	be	
+enrolled	in	preschool,	the	majority	of	which	are	enrolled	through	the	capacity	increase	 206,608	children .	
+When	a	price	cap	is	introduced	 Scenario	4B 	the	increase	in	enrollments	is	estimated	to	be	7.6	percentage	
+points	in	this	scenario.		
+
+	
+
+    Figure	3.	Number	of	newly	enrolled	children	due	to	capacity	or	affordability	increase	
+
+
+                                                         # of newly enrolled children
+                     0                 50,000             100,000           150,000                  200,000               250,000
+
+       Scenario 1
+     Scenario 2A
+      Scenario 2B
+       Scenario 3
+     Scenario 4A
+      Scenario 4B
+       Scenario 5
+
+                                      # of newly enrolled children due to capacity increase
+                                      # of newly enrolled children due to affordability increase
+                                                                                                                                     	
+    Source:	Authors’	calculations	using	SILC	2012	and	Supply	Side	Data	of	“Supply	and	Demand	for	Child	care	Services	in	Turkey”	
+
+Providing	only	demand‐side	vouchers	to	families	 Scenario	3 	has	a	minimal	impact	on	enrollments.	Provision	
+of	vouchers	to	the	bottom	40%	of	the	population	increases	preschool	enrollment	rate	by	only	0.9	percentage	
+points.	As	a	result	of	this	scenario,	a	total	of	22,735	children	are	expected	to	be	enrolled	in	preschool,	all	of	
+whom	 are	 enrolled	 due	 to	 an	 increase	 in	 affordability	 See	 Figure	 3 .	 This	 is	 due	 to	 our	 assumption	 that	
+vouchers	do	not	have	a	supply‐side	impact,	hence	they	do	not	have	any	impact	on	capacity.		Because	the	main	
+constraint	in	the	sector	is	on	the	supply	side	 a	capacity	constraint ,	the	demand‐side	stimulation	introduced	
+by	these	transfers	to	the	household	do	not	address	the	main	constraint	in	the	market	and	are	ineffective	in	
+terms	 of	 increasing	 enrollments.	 We	 also	 see	 that	 the	 voucher	 scenarios	 also	 happen	 to	 be	 the	 least	 cost‐
+effective	way	of	expanding	enrollments	in	terms	of	money	spent	per	new	child	enrolled	 See	Section	5.5	for	
+more	details .		
+
+Overall	 affordability	 increase	 generates	 a	 smaller	 impact	 as	 opposed	 to	 the	 capacity	 increase.	 In	 every	
+scenario,	the	number	of	children	enrolled	due	to	the	capacity	increase	is	almost	always	higher	compared	to	
+the	number	of	children	enrolled	due	to	the	affordability	increase	 See	Annex	Table	A1 .	For	instance	in	the	
+scenario	where	only	an	operational	grant	is	provided	and	there	is	no	price	cap,	the	number	of	children	enrolled	
+due	to	the	capacity	increase	is	165,293		while	the	number	of	children	enrolled	due	to	the	affordability	increase	
+is	estimated	at	29,289.	This	is	due	to	the	supply‐side	constraints	in	the	sector	–	and	signals	that	an	impact	on	
+enrollments	in	the	sector	will	mainly	be	achieved	by	interventions	that	target	the	supply‐side	capacity	of	child	
+care	in	the	country.		
+
+6.3		Benefit	incidence	of	new	enrollments	and	grants			
+The	distributional	impact	of	the	grants	across	income	groups	is	another	important	dimension	analyzed	by	the	
+simulation.	 In	 each	 scenario,	 who	 benefits	 from	 the	 expanded	 capacity	 and	 who	 benefits	 from	 increased	
+affordability	depends	very	much	on	whether	there	is	a	price	cap	attached	to	the	grants	and	whether	there	is	a	
+targeted	voucher	system.				
+
+	
+	
+In	the	scenarios	where	there	are	no	price	caps,	the	newly	created	capacity	accrues	regressively	and	benefits	
+the	higher	income	quintiles	disproportionately.	In	other	words,	the	children	who	are	likely	to	be	enrolled	come	
+from	families	in	the	top	quintiles	of	the	income	distribution.	For	instance,	in	the	scenarios	with	the	operational	
+and	investment	grants	implemented	together	 scenario	4A 	without	the	price	cap,	30.3	percent	of	capacity	
+generated	 is	 utilized	 by	 children	 in	 the	 bottom	 40%	 of	 the	 distribution.	 When	 there	 is	 a	 price	 cap	 in	 the	
+scenarios	with	operational	grants,	the	utilization	of	new	capacity	becomes	more	equitable.	Looking	at	Scenario	
+4B	 where	 the	 operational	 and	 investment	 grants	 are	 provided	 together,	 we	 find	 that	 with	 the	 price	 cap	
+imposed	 at	 750	 TL	 per	 child,	 the	 new	 capacity	 generated	 accrues	 more	 to	 the	 poor–	 with	 39.9	 percent	 of	
+capacity	being	utilized	by	children	in	the	bottom	40	%	of	the	income	distribution.	
+
+The	vouchers	can	be	targeted	to	benefit	the	poorest	households	and	hence	they	have	appeal.	However,	when	
+we	look	carefully	at	the	results,	because	the	impact	of	the	voucher	scheme	is	 too	small	on	enrollments,	the	
+overall	impact	of	the	scheme	even	on	poor	households	is	estimated	to	be	limited.	In	the	voucher	scenario,	the	
+enrollments	 increase	 by	 only	 1.9	 percent	 for	 the	 bottom	 40%,	 while	 overall	 enrollments	 increase	 by	 0.9	
+percent.	The	benefit	incidence	of	the	grant	is	pro‐poor,	meaning	the	grant	would	be	received	only	by	the	low	
+income	households	–	for	instance,	in	the	targeted	voucher	scheme,	44%	of	the	benefits	are	estimated	to	accrue	
+to	households	in	the	bottom	20%	of	the	income	distribution,	which	is	the	best	scenario	in	terms	of	targeting	
+when	 compared	 to	 the	 scenarios	 with	 the	 operational	 grants.	 However,	 because	 the	 enrollment	 impact	 is	
+limited	under	this	scenario	 since	the	voucher	system	works	through	the	demand	side	and	through	improved	
+affordability	of	existing	services	–	rather	than	by	increasing	capacity ,	the	overall	impact	on	the	poor	children	
+is	very	limited.	We	find	that	the	enrollments	of	the	bottom	40	%	of	children	increase	more	 about	6	%	points	
+in	Scenario	4B 	in	the	scenarios	with	the	investment	and	operational	grants	provided	together,	while	in	the	
+voucher	scenario	providing	the	same	level	of	investment	grants	and	providing	the	vouchers	to	the	household	
+the	enrollment	increase	for	the	bottom	40%	is	only	2.1	percent	 Scenario	5 .	This	is	a	very	interesting	and	
+important	result	that	suggests	that	 targeting	the	poorest	households	through	a	demand	side	transfer	might	
+not	always	be	the	most	pro‐poor	policy.	In	the	case	of	child	care	in	Turkey,	it	seems	that	these	households	do	
+not	benefit	from	these	services,	not	because	they	are	not	affordable	to	them,	but	because	they	are	not	available	
+to	them	–	hence	before	resolving	supply	side	capacity	issues	targeting	the	unaffordability	problem	through	a	
+demand‐side	transfer	to	households	turns	out	to	be	an	ineffective	policy	for	expanding	access	to	services.					
+
+	                                   	
+
+
+
+
+	
+	
+    Figure	4.	Preschool	enrollment	rates	of	children	aged	3‐5	by	per	capita	income	quintile	
+
+                                                      Scenario 1: Supply Side Investment Grant only                                                                Scenario 2A: Supply Side Operational Grant only
+
+
+
+
+                                                                                                                                                          1
+                                             1
+
+
+
+
+                                                                                                                  Enrolment rate for Children aged 3-5
+     Enrolment rate for Children aged 3-5
+
+
+
+
+                                                                                                                                                          .8
+                                             .8
+
+
+
+
+                                                                                                                                                          .6
+                                             .6
+
+
+
+
+                                                                                                                                                          .4
+                                             .4
+
+
+
+
+                                                                                                                                                          .2
+                                             .2
+
+
+
+
+                                                                                                                                                          0
+                                             0
+
+
+
+
+                                                                                                                                                               1             2           3            4              5
+                                                  1            2           3            4             5       	                                                                                                              	
+
+                                                      Scenario 2B: Supply Side Operational Grant only                                                                    Scenario 3: Demand Side Grant only
+                                                                      with Price Cap
+
+
+
+
+                                                                                                                                                          1
+                                             1
+
+
+
+
+                                                                                                                   Enrolment rate for Children aged 3-5
+      Enrolment rate for Children aged 3-5
+
+
+
+
+                                                                                                                                                          .8
+                                             .8
+
+
+
+
+                                                                                                                                                          .6
+                                             .6
+
+
+
+
+                                                                                                                                                          .4
+                                             .4
+
+
+
+
+                                                                                                                                                          .2
+                                             .2
+
+
+
+
+                                                                                                                                                          0
+                                             0
+
+
+
+
+                                                  1                2           3            4             5                                                    1                 2           3            4              5
+
+
+
+                                                           Scenario 4A: Supply Side Investment                                                                          Scenario 4B: Supply Side Investment
+                                                             and Operational Grant combined                                                                         and Operational Grant combined with Price Cap
+                                                                                                                                                          1
+                                             1
+
+
+
+
+                                                                                                                   Enrolment rate for Children aged 3-5
+      Enrolment rate for Children aged 3-5
+
+
+
+
+                                                                                                                                                          .8
+                                             .8
+
+
+
+
+                                                                                                                                                          .6
+                                             .6
+
+
+
+
+                                                                                                                                                          .4
+                                             .4
+
+
+
+
+                                                                                                                                                          .2
+                                             .2
+
+
+
+
+                                                                                                                                                          0
+                                             0
+
+
+
+
+                                                  1                2           3            4             5                                                    1                 2           3            4              5
+
+
+
+
+	
+	
+                                                                                                                                                   	
+                                                                    Scenario 5: Supply Side Investment Grant
+                                                                       and Demand Side Grant combined
+
+
+
+
+                                               1
+       Enrolment rate for Children aged 3-5
+
+                                               .8
+                                               .6
+                                               .4
+                                               .2
+                                               0
+
+
+
+
+                                                            1                     2               3               4                5
+                                                                                                                                               	
+
+
+
+
+                                                                Baseline              Capacity increase               Affordability increase
+
+    Figure	5.	Benefit	incidence	of	the	grants	and/or	vouchers	by	per	capita	income	quintile	
+
+                                                                Scenario 1: Supply Side Investment Grant only                                                                                        Scenario 2A: Supply Side Operational Grant only
+
+
+
+
+                                                                                                                                                                                       1,000
+                                              1,000
+
+
+
+
+                                                                                                                                                                                       800
+                                              800
+
+
+
+
+                                                                                                                                                       Total benefit (in million TL)
+     Total benefit (in million TL)
+
+
+
+
+                                                                                                                                                                                       600
+                                              600
+
+
+
+
+                                                                                                                                                                                                                                                  427.6
+                                                                                                                                                                                       400
+                                              400
+
+
+
+
+                                                                                                                                                                                                                                      311.3
+                                                                                                                                                                                                             252.2        265.9
+                                                                                                                                                                                       200
+
+
+
+
+                                                                                                                                                                                               157.3
+                                              200
+
+
+
+
+                                                       0.0                  0.0            0.0             0.0               0.0
+                                                                                                                                                                                       0
+                                              0
+
+
+
+
+                                                                                                                                                                                                1              2           3            4              5
+                                                        1                    2              3               4                 5
+                                                                                                                                          	                                                                                                                  	
+
+
+                                                            Scenario 2B: Supply Side Operational Grant only                                                                                                Scenario 3: Demand Side Grant only
+                                                                            with Price Cap
+                                                                                                                                                                                       1,000
+                                              1,000
+
+
+
+
+                                                                                                                                                                                       800
+                                                                                                                                                       Total benefit (in million TL)
+                                              800
+     Total benefit (in million TL)
+
+
+
+
+                                                                                                                                                                                       600
+                                              600
+
+
+
+
+                                                                                                                                                                                                              413.7
+                                                                                                                                                                                       400
+                                              400
+
+
+
+
+                                                                                                                                                                                               310.7
+                                                                                                          309.6
+                                                                           247.9          264.0
+                                                                                                                                                                                       200
+                                              200
+
+
+
+
+                                                      151.1
+
+                                                                                                                             0.0                                                                                           0.0          0.0            0.0
+                                                                                                                                                                                       0
+                                              0
+
+
+
+
+                                                       1                    2               3              4                 5            	                                                      1              2           3           4              5
+                                                                                                                                                                                                                                                                 	
+
+
+
+
+	
+	
+                                                      Scenario 4A: Supply Side Investment                                                                              Scenario 4B: Supply Side Investment
+                                                        and Operational Grant combined                                                                             and Operational Grant combined with Price Cap
+
+
+
+
+                                                                                                                                                      1,000
+                                     1,000
+
+
+
+
+                                                                                                                                                      800
+                                     800
+
+
+
+
+                                                                                                                      Total benefit (in million TL)
+    Total benefit (in million TL)
+
+
+
+
+                                                                                                                                                      600
+                                     600
+
+
+
+                                                                                             434.2
+
+
+
+
+                                                                                                                                                      400
+                                     400
+
+
+
+
+                                                                                 318.3                                                                                     291.4                   316.2
+                                                         284.4       287.0                                                                                                             284.8
+
+                                                                                                                                                              163.7
+
+
+
+
+                                                                                                                                                      200
+                                             165.7
+                                     200
+
+
+
+
+                                                                                                                                                                                                                   0.0
+
+
+
+
+                                                                                                                                                      0
+                                     0
+
+
+
+
+                                                                                                                                                               1            2           3           4              5
+                                              1           2           3           4             5
+                                                                                                          	                                                                                                              	
+
+                                                     Scenario 5: Supply Side Investment Grant
+                                                                                                                  	
+                                                        and Demand Side Grant combined
+                                     1,000
+                                     800
+     Total benefit (in million TL)
+                                     600
+
+
+
+
+                                                          417.1
+                                     400
+
+
+
+
+                                             317.0
+                                     200
+
+
+
+
+                                                                          0.0         0.0           0.0
+                                     0
+
+
+
+
+                                               1              2           3              4           5
+                                                                                                              	
+
+
+
+
+	
+	
+
+6.4	Cost	Effectiveness		
+	
+Implementing	 each	 scenario	 results	 in	 its	 own	 costs	 and	 potential	 tax	 revenues.	 In	 order	 to	 look	 at	 cost	
+effectiveness,	we	first	consider	net	costs	of	each	scenario,	looking	at	costs	and	potential	tax	revenues	to	be	
+generated.		While	the	costs	are	the	total	costs	of	the	investment	grants,	operational	grants,	or	vouchers,	the	
+tax	revenues	are	collected	in	the	form	of	 i 	corporation	and	income	taxes	of	the	newly	established	centers	
+and	 ii 	employee	taxes	of	the	employees	working	in	these	centers.	The	costs	are	calculated	as	the	total	cost	
+of	the	one‐time	investment	grant	and	the	5	year	on‐going	cost	of	grants	and	vouchers	and	are	provided	in	
+net	present	values.	The	costs	and	revenues	in	each	scenario	are	provided	in	Annex	Table	A1.		
+
+Providing	operational	grants	for	5	years	in	addition	to	investment	grants	turns	out	to	be	the	most	costly	
+alternative.	When	an	operational	grant	of	300	TL	is	provided	for	each	child	enrolled	in	the	centers	for	5	years	
+without	a	price	cap	in	addition	to	a	50,000	TL	investment	grant,	the	total	cost	is	5.8	billion	TL	in	net	present	
+value.			This	cost	which	is	the	highest	among	the	others	is	equivalent	to	about	0.30	percent	of	Turkey’s	2015	
+GDP.xvii		
+
+While	costs	are	higher	in	general	when	operational	grants	are	provided,	revenues	are	also	higher	since	more	
+centers	are	established	under	these	scenarios	‐	leading	to	the	collection	of	more	corporation	and	income	
+taxes.	In	fact,	the	scenario	that	provides	operational	grants	of	300		TL	without	a	price	cap	and	an	investment	
+grant	of	50,000	TL	generates	the	highest	amount	of	revenues	with	1.9	billion	TL.	In	comparison,	the	lowest	
+amount	of	revenues	is	generated	when	vouchers	are	provided	alone.	In	fact	no	revenue	is	generated	from	
+providing	vouchers	for	5	years	since	vouchers	do	not	lead	to	the	establishment	of	new	centers.	
+
+One	of	the	policies	presented	here	are	“net	revenue	generating”	policy	options.	According	to	the	simulation	
+model,	when	the	investment	grants	are	applied	on	their	own	–	the	net	cost	of	the	program	ends	up	being	
+negative,	meaning	that	the	tax	revenue	from	corporation	taxes	and	income	taxes	from	employees	in	these	
+centers	‐over	the	10	year	period	for	which	these	centers	are	expected	to	operate‐,	exceed	the	initial	set	up	
+grants	provided	to	these	centers.	For	instance,	providing	a	50,000	TL	investment	grant	to	these	centers	is	
+estimated	to	cost	39	million	TL	initially,	and	generate	353	million	TL	in	tax	revenues	in	the	10	year	period	
+making	the	total	net	cost	‐314	million	TL	for	this	investment.			The	main	assumption	here	is	that	the	child	
+care	centers	would	truthfully	report	profits	and	that	the	employees	would	be	 formally	employed	at	these	
+centers.		As	long	as	these	requirements	are	tracked	and	enforced,	 net	positive	revenues	are	expected	to	be	
+generated	with	this	kind	of	an	investment	subsidy.		
+
+In	 comparison,	 scenarios	 with	 only	 operational	 grants	 and	 operational	 grants	 provided	 together	 with	
+investment	grants	end	up	having	the	highest	net	cost.	When	300	TL	operational	grant	without	a	price	cap	is	
+provided	together	with	a	50,000	TL	investment	grant	net	cost	is	4.0	billion	TL.	But	it	is	useful	to	remember	
+that	these	are	also	the	scenarios	that	generate	the	highest	changes	in	the	capacity	and	enrollment	rates	for	
+children.	In	order	to	assess	the	cost‐effectiveness	‐and	therefore	value	for	money‐	of	each	scenario,	we	have	
+plotted	the	percentage	point	increase	in	enrollments	as	a	result	of	the	policy	against	the	per	child	net	cost	of	
+implementing	each	policy	in	Figure	6.	
+
+According	to	this	analysis,	a	typology	of	scenarios	come	up	when	the	model	is	applied	to	the	Turkish	case:		
+
+        Revenue	 generating	 scenario	 Scenario	 1	 –	 Investment	 Grant	 Scenario :	 The	 investment	 grant	
+         scenarios	are	expected	to	be	revenue	generating	within	the	10	year	spectrum.	They	have	little	impact	
+         on	enrollments	and	hence	are	not	advised	to	be	applied	on	their	own	if	the	intention	is	to	expand	
+         services	and	increase	enrollments	–	though	if	they	are	provided	on	their	own	they	are	likely	to	have	
+         a	positive	impact	on	the	budget	in	the	medium	term.			
+        Least	Cost	Effective	scenario:	 Scenario	3	–	Only	voucher	scenario :	The	scenario	that	uses	vouchers	
+         only	without	an	investment	support,	is	the	most	expensive	scenario	in	the	analysis	in	terms	of	per	
+         child	enrolled.	This	is	because	incentivizing	a	household	to	use	these	services	using	the	demand‐side	
+         vouchers	only	–	when	availability	of	services	is	low	–	is	difficult	hence	the	vouchers	do	not	address	
+         the	most	binding	problems	in	the	child	care	sector	in	the	country.		
+Most	Cost	Effective	scenarios	 Scenarios	2A,	4A	and	4B	–	Investment	and	Operational	Grants	with	or	without	
+Price	Cap	and	only	operational	grant	without	price	cap :	The	most	cost	effective	scenarios	in	terms	of	budget	
+spent	 per	 child	 enrolled	 as	 a	 result	 of	 these	 policies,	 are	 represented	 by	 Scenarios	 2	 and	 4	 where	 the	
+operational	and	investment	grants	are	provided	together.			As	discussed	in	section	5.3	when	a	price	cap	is	
+introduced	the	benefit	incidence	accrues	more	to	the	poor	households.	Hence	Scenario	4B	where	operational	
+grants	are	provided	together	with	investment	grants	and	with	a	price	cap	is	the	most	cost‐effective	and	pro‐
+poor	 scenario	 in	 terms	 of	 benefit	 incidence.	 	 Overall,	 these	 are	 the	 most	 cost	 effective	 and	 hence	 most	
+recommended	 scenarios	 in	 the	 simulation	 –	 whereby	 the	 twin	 goals	 of	 attaining	 higher	 capacity	 and	
+enrollments	are	also	matched	with	a	concern	for	lower	costs	per	child	and	a	pro‐poor	distribution.	
+
+                                                          	
+
+    Figure	6.	Cost	effectiveness	
+
+                                                                       12
+                                                                                     Most cost effective
+       Increase in enrollment rate (percentage point)
+
+
+
+
+                                                                                       Scenario 4A
+                                                                       10
+
+                                                                                          Scenario 2A
+                                                                                    Scenario 4B
+                                                                       8
+
+
+                                                                                        Scenario 2B
+                                                                       6
+
+
+                                                                       4
+                                                                                           Scenario 5
+                                                        Revenue generating
+                                                            Scenario 1                                                              Least cost effective
+                                                                       2
+                                                                                                                                    Scenario 3
+
+
+                                                                       0
+         -2,000                                               -1,000        0     1,000      2,000       3,000      4,000       5,000    6,000      7,000
+                                                                                Net annual cost per newly enrolled child (TL)
+                                                                                                                                                            	
+
+    Source:	Authors’	calculations	using	SILC	2012	and	Supply	Side	Data	of	“Supply	and	Demand	for	Child	care	Services	in	
+    Turkey”	
+
+
+7.	Conclusions	
+The	mechanism	for	the	delivery	of	a	child	care	subsidy	matters	for	results.	The	initial	conditions	of	the	child	
+care	market,	not	only	determine	the	marginal	benefit	incidence	of	additional	supply,	but	also	have	an	impact	
+on	the	cost	effectiveness	of	targeted	subsidy	measures.	This	paper	has	demonstrated	a	practical	financing	
+model	for	child	care	using	empirical	data	from	Turkey’s	child	care	sector,	and	applicable	to	other	countries.		
+Combining	the	supply‐side	investment	incentives	of	firms	given	a	supply‐side	subsidy	and	the	demand‐side	
+incentives	of	households	in	the	face	of	more	available	supply	and	reduced	prices,	the	model	has	predicted	
+the	 capacity	 enhancement,	 benefit	 incidence	 and	 distribution	 of	 new	 capacity	 as	 well	 as	 the	 incidence	 of	
+public	money	spent	on	households	by	welfare	quintile.	By	considering	the	cost	of	each	measure	and	the	new	
+enrollments	induced	by	each	scenario,	the	paper	has	come	up	with	a	methodology	for	predicting	the	most	
+cost‐effective	 policy	 measure	 for	 the	 country	 for	 expanding	 child	 care	 through	 public	 subsidies	 through	
+supply‐side	investment	or	operational	grants	or	demand‐side	vouchers	that	target	households.	The	paper	
+has	 shown	 that	 the	 mechanisms	 for	 the	 transfer	 alone	 make	 a	 difference	 in	 the	 model	 in	 how	 pro‐poor	
+
+
+	
+delivery	 of	 services	 is	 	 ‐	 and	 simply	 targeting	 “poor	 households”	 may	 not	 be	 the	 most	 pro‐poor	 way	 of	
+expanding	services	or	subsidizing	child	care.					
+
+
+
+
+	
+Annex	
+	
+
+Table	A1.	Summary	of	the	results	under	each	scenario	
+    		          Scenario	Type			                                       		          Scenario	1		                Scenario	2A	                 Scenario	2B	                  Scenario	3	                Scenario	4A	                  Scenario	4B	                   Scenario	5	
+                	
+    		          	                                               		                Supply	Side	               Supply	Side	                  Supply	Side	                  Demand	Side	               Supply	Side	                 Supply	Side	                   Supply	Side	
+                                                                                  Investment	                Operational	                  Operational	                  Grant	only:		              Investment	                  Investment	and	                Investment	
+                                                                                  Grant	only:	               Grant	only:	                  Grant	only	                   Vouchers	to	               and	                         Operational	                   Grant	and	
+                                                                                  One‐time	                  Monthly	per	                  with	Price	                   households	                Operational	                 Grant	                         Vouchers	
+                                                                                  investment	                student		                     Cap:	Monthly	                 per	child	                 Grant	                       Combined	with	                 Combined:		
+                                                                                  grant	to	child	            operational	                  per	student		                 enrolled	                  combined:		                  Price	Cap:		                   One‐time	
+                                                                                  care	centers.		            grant	 no	price	              operational	                                             One‐time	                    One‐time	                      investment	
+                                                                                                             cap 	                         grant	 with	                                             investment	                  investment	                    grant	and	
+                                                                                                                                           price	cap 	                                              grant	and	                   grant	and	                     monthly	
+                                                                                                                                                                                                    monthly	per	                 monthly	per	                   voucher	to	
+                                                                                                                                                                                                    child	                       child	                         households	
+                                                                                                                                                                                                    operational	                 operational	                   combined	
+                                                                                                                                                                                                    grant	                       grant	combined	
+                                                                                                                                                                                                    combined	 no	                 with	price	
+                                                                                                                                                                                                    price	cap 	                  cap 	
+    Grant	      Investment	grant	level		                        		                																						     																													 																												 																									 																		             																					          																			
+    levels		    	                                                                 50,000	₺ 		                ‐			₺ 		                      ‐			₺ 		                     ‐			₺ 		                  50,000	₺ 		                    50,000	₺ 		                    50,000	₺ 		
+                  TL	‐	one	time	grant 	
+    		          Operational	grant	level		                       		                																										 																									     																								      																									 																								      																											    																												
+                	                                                                 ‐			₺ 		                   300	₺ 		                      300	₺ 		                      ‐			₺ 		                  300	₺ 		                      300	₺ 		                       ‐			₺ 		
+                  TL	per	month	per	child 	
+    		          Voucher	level		                                 		                																										 																													 																												 																					       																											 																														 																								
+                	                                                                 ‐			₺ 		                   ‐			₺ 		                      ‐			₺ 		                     300	₺ 		                    ‐			₺ 		                    ‐			₺ 		                       300	₺ 		
+                  TL	per	month	per	child 	
+    		          Price	cap		                                     		                	‐		                       	‐		                          																								      	‐		                       	‐		                         																											    	‐		
+                	                                                                                                                          750	₺ 		                                                                              750	₺ 		
+                  TL	per	month	per	child 	
+    Results		   %	capacity	increase	                            A	                6	                         24	                           17	                           0	                         30	                          24	                            6	
+                                                                	
+    		          #	of	newly	enrolled	children	due	to	capacity	   B	                39,145	                    165,293	                      119,688	                      0	                         206,608	                     166,974	                       39,145	
+                increase	
+    		          #	of	new	centers		                              C	 	B	/	50	       783	                       3,306	                        2,394	                        0	                         4,132	                       3,339	                         783	
+                                                                 B/100	for	Sc.	
+                                                                1 	
+    		          #	of	newly	enrolled	children	due	to	            D	                0	                         29,289	                       20,371	                       22,735	                    29,738	                      19,430	                        25,442	
+                affordability		increase	
+    		          	                                               	                 39,145	                    194,581	                      140,060	                      22,735	                    236,346	                     186,404	                       64,586	
+                Total	number	of	newly	enrolled	children	        E	 	B D	
+
+
+	
+    		       	                                            	                 1.6	          7.9	     5.7	     0.9	     9.6	      7.6	      2.6	
+             	                                            	
+             Increase	in	enrollment	rate	 percentage	     F	 	E	/	 Total	
+             point 	                                      number	of	
+                                                          children	aged	
+                                                          3‐5 		
+                                                          	
+    		       Increase	in	enrollment	rate	of	the	bottom	   G		               0.0	          4.1	     3.6	     1.9	     6.0	      6.2	      2.1	
+             40%	 percentage	points 	
+             	
+    		       %	of	the	newly	enrolled	children	from	       H	                0.0	          25.2	    30.8	    100.0	   30.3	     39.9	     39.4	
+             bottom	40%	                                  	
+                                                          	
+    		       Total	benefit	accruing	to	households	        I	                0	            1,414	   973	     724	     1,490	    1,056	    734	
+              million	TL 	                                	
+                                                          	
+    		       %	of	the	benefit	going	to	bottom	40%	        J	                									.	   29	      41	      100	     30	       43	       100	
+                                                          	
+                                                          	
+    		       %	of	the	benefit	going	to	bottom	20%	        K	                									.	   11	      16	      43	      11	       16	       43	
+                                                          	
+                                                          	
+    		       Total	cost	 million	TL 	                     L	                39	           5,353	   3,612	   1,292	   5,832	    4,081	    1,619	
+                                                          	
+    		       Total	number	of	new	personnel	needed	        M	                2,349	        9,918	   7,181	   0	       12,396	   10,018	   2,349	
+                                                          	
+                                                          	
+    		       Total	tax	revenue	from	newly	employed	       N	                20	           84	      61	      0	       105	      85	       20	
+             women	in	centers	 TL 	                       	
+                                                          	
+    		       Total	tax	revenue	from	corporation		and	     O	                333	          1,407	   1,019	   0	       1,759	    1,422	    333	
+             income	tax	 32%	of	profits 	                 	
+                                                          	
+    		       Total	tax	revenue	 million	TL 	              P	 	N	 	O	        353	          1,492	   1,080	   0	       1,864	    1,507	    353	
+                                                          	
+    		       Total	Net	Cost	 million	TL 	                 Q		 	 L	‐	P	 	    ‐314	         3,861	   2,532	   1,292	   3,968	    2,574	    1,266	
+                                                          	
+    		       Net	annual	cost	per	newly	enrolled	child	    R	 	 Q	/	         ‐803	         1,985	   1,808	   5,683	   1,679	    1,381	    1,960	
+              TL 	                                        E /10	
+
+
+         	
+
+
+
+	
+	
+
+
+References	
+	
+
+Aran,	M.	A.,	Munoz‐Boudet,	A.	M,	and	Aktakke,	N.	“Can	Regulations	Make	it	More	Difficult	to	Serve	the	Poor?	The	Case	
+of	Child	Care	Services	in	Istanbul,	Turkey”	Journal	of	Human	Development	and	Capabilities	 forthcoming .			
+
+Amarante,	 Verónica,	 Rodrigo	 Arim,	 Gioia	 De	 Melo,	 and	 Andrea	 Vigorito.	 "Family	 allowances	 and	 child	 school	
+attendance:	an	ex‐ante	evaluation	of	alternative	schemes	in	Uruguay."	In	Child	Welfare	in	Developing	Countries,	pp.	
+211‐245.	Springer	New	York,	2010.	
+
+Apps,	Patricia,	Jan	Kabátek,	Ray	Rees,	and	Arthur	van	Soest.	"Labor	supply	heterogeneity	and	demand	for	child	care	of	
+mothers	with	young	children."	Empirical	Economics	 2016 :	1‐37.	
+
+Bourguignon,	François,	Francisco	HG	Ferreira,	and	Phillippe	G.	Leite.	"Conditional	cash	transfers,	schooling,	and	child	
+labour:	micro‐simulating	Brazil's	Bolsa	Escola	program."	The	World	Bank	Economic	Review	17.2	 2003 :	229‐254.	
+
+Del	 Boca,	 Daniela,	 and	 Daniela	 Vuri.	 "The	 mismatch	 between	 employment	 and	 child	 care	 in	 Italy:	 the	 impact	 of	
+rationing."	Journal	of	Population	Economics	20.4	 2007 :	805‐832.	
+
+İlkkaracan,	İpek,	Kijong	Kim,	and	Tolga	Kaya.	"The	Impact	of	Public	Investment	in	Social	Care	Services	on	Employment,	
+Gender	Equality,	and	Poverty:	The	Turkish	Case."	Research	Project	Report,	Levy	Economics	Institute	of	Bard	College.	
+August	 2015 .	
+
+Kornstad,	Tom,	and	Thor	O.	Thoresen.	"Effects	of	family	policy	reforms	in	Norway:	Results	from	a	joint	labour	supply	
+and	childcare	choice	microsimulation	analysis."	Fiscal	Studies	27.3	 2006 :	339‐371.	
+
+Leite,	 Phillippe	 G.,	 Ambar	 Narayan,	 and	 Emmanuel	 Skoufias.	 "How	 do	 ex	 ante	 simulations	 compare	 with	 ex	 post	
+evaluations?	evidence	from	the	impact	of	conditional	cash	transfer	programs."	Evidence	from	the	Impact	of	Conditional	
+Cash	Transfer	Programs	 June	1,	2011 .	World	Bank	Policy	Research	Working	Paper	Series,	Vol	 2011 .	
+
+Vanleenhove,	 Pieter.	 "Full	 childcare	 coverage:	 higher	 maternal	 labour	 supply	 and	 childcare	 usage?."	 EUROMOD	
+Working	Paper	No.	EM	19/13.	Available	at	SSRN	2381527	 2013 .	
+
+Calderon,	Gabriela.	The	Effects	of	Child	Care	Provision	in	Mexico.	Banco	de	Mexico	Working	Papers	2014‐07.	Banco	de	
+Mexico,	 2014.	 Available	 at:	 http://www.banxico.org.mx/publicaciones‐y‐discursos/publicaciones/documentos‐de‐
+investigacion/banxico/%7B0AFBA0F8‐0973‐907E‐9ED4‐5AC6E445E064%7D.pdf	
+
+Mateo	Díaz,	Mercedes,	and	Lourdes	Rodriguez	Chamussy.	Childcare	and	women's	labour	participation:	evidence	for	
+Latin	America	and	the	Caribbean.	Inter‐American	Development	Bank,	2013.	
+
+Staab,	 Silke,	 and	 Roberto	 Gerhard.	 "Childcare	 Service	 Expansion	 in	 Chile	 and	 Mexico."	 Gender	 and	 Development	
+Programme	Paper	no:10.	United	Nations	Research	Institute	for	Social	Development,	2010.	
+
+OECD.	 Encouraging	 Quality	 in	 Early	 Childhood	 Education	 and	 Care.	 OECD	 policy	 note.	 OECD,	 2012.	 Available	 from	
+http://www.oecd.org/education/school/49143900.pdf.	
+
+Warner,	 Mildred	 E.,	 and	 Raymond	 HJM	 Gradus.	 "The	 consequences	 of	 implementing	 a	 child	 care	 voucher	 scheme:	
+Evidence	from	Australia,	the	Netherlands	and	the	USA."	Social	Policy	&	Administration	45.5	 2011 :	569‐592.	
+
+World	Bank.	2015.	Supply	and	demand	for	child	care	services	in	Turkey:	a	mixed	methods	study.	Washington,	D.C.:	
+World	 Bank	 Group.	 http://documents.worldbank.org/curated/en/2015/09/24997835/supply‐demand‐child‐care‐
+services‐turkey‐mixed‐methods‐study	
+
+
+	                                       	
+Endnotes	
+	
+                                                               	
+																																																																
+	
+
+i	Rate	for	Turkey	is	from	the	Ministry	of	Education’s	National	Education	Statistics	2015/16,	gross	enrollment	rate	for	
+
+3‐5	year	olds.	Rates	for	OECD	and	the	EU	are	from	World	Bank,	World	Development	Indicators	 gross	enrollment	ratio,	
+pre‐primary,	both	sexes	 % 	
+ii	World	Bank	2015.	Supply	and	Demand	for	Child	Care	Services	in	Turkey	
+iii	World	Bank	2015.	Supply	and	Demand	for	Child	Care	Services	in	Turkey	
+iv	World	Bank	2015.	Supply	and	Demand	for	Child	Care	Services	in	Turkey	
+v	 World	 Bank,	 World	 Development	 Indicators.	 Percentage	 of	 enrollment	 in	 pre‐primary	 education	 in	 private	
+
+institutions	 % 	
+vi	Rate	for	Turkey	is	obtained	from	Turkish	Statistical	Institute’s	website,	it	is	the	annual	figure	for	2014	for	women	
+
+15	years	old	and	older.	Rates	for	OECD	and	EU	are	obtained	from	World	Development	Indicators	of	World	Bank,	they	
+are	for	women	15	years	old	and	older	and	they	are	national	estimates.	
+vii	Note	that	these	providers	can	also	be	municipalities	or	creches	within	working	places.	As	long	as	they	are	regulated	
+
+and	conform	to	certain	standards,	they	can	be	eligible	for	this	funding.		
+
+viii	The	terminal	value	is	calculated	using	the	EBITDA	      Earnings	Before	Interest,	Taxes,	Depreciation	and	Amortization 	
+Multiple.	 The	 final	 year’s	 profits	 is	 multiplied	 by	 a	 constant,	 in	 our	 model	 this	 value	 is	 set	 at	 10.5	 	 	 	 following	
+international	      benchmarking.	         	   See	      source:	    BAIRD	        2015.	     Education	        Services	         Report.	
+http://content.rwbaird.com/RWB/sectors/PDF/TechnologyServices/education‐services‐report.pdf	
+ix	Assumption	here	is	that	above	the	risk	free	interest	rate	there	needs	to	be	about	a	30%	premium.			
+x	This	is	assumed	to	be	32%	of	profits	based	on	tax	rates	in	Turkey;	calculated	by	first	taking	20%	of	the	profit	as	
+
+corporate	tax	and	then	taking	15%	of	the	remaining	profit	as	income	tax.	The	level	of	cumulative	taxes	on	profits	
+would	vary	by	country.		
+xi	This	also	holds	for	the	scenarios	for	the	municipalities	opening	up	crèches	as	well.	These	scenarios	 Scenario	1 	also	
+
+only	have	an	impact	on	enrollments	through	increased	capacity.		
+
+xii	In	other	words,	the	full	benefit	of	the	voucher	is	captured	by	the	households	that	receive	them	 without	an	increase	
+in	prices 	and	the	full	effect	of	an	investment	grant	is	captured	by	the	service	providers	that	receive	them	 without	a	
+reduction	in	prices .	These	simplified	assumptions	allow	us	to	run	the	model	smoothly,	although	variations	of	these	
+scenarios	can	be	applied.	For	the	purposes	of	this	simple	model,	we	propose	to	stick	to	these	definitions.		
+xiii	This	assumption	is	reasonable	due	to	the	information	gathered	in	the	demand	side	survey	in	2014	for	the	World	
+
+Bank	study	Supply	and	Demand	for	Child	care	Services	in	Turkey.	According	to	the	data,	mothers	living	in	households	
+with	per	capita	income	greater	than	821	TL	 the	minimum	per	capita	monthly	income	for	the	9th	decile	according	to	
+SILC	2012	dataset 	or	1012.59	TL	in	2014	values,	have	a	willingness	to	pay	of	780	TL	on	average.	Hence	with	any	price	
+cap	lower	than	this	value,	our	assumption	is	reasonable.	 In	order	to	find	the	2014	nominal	value	of	the	2011	per	capita	
+income	value,	we	used	December	2011	TUFE	index	of	200.85	and	December	2014	TUFE	value	of	247.72	obtained	from	
+Turkish	Central	Bank’s	website. 			
+xiv	Due	to	the	assumption	that	top	2	deciles	will	opt	out	of	the	program	since	their	willingness	to	pay	is	higher.		
+xv	Cumulative	tax	is	calculated	as:	20	percent	of	profits	as	corporate	taxes	and	15%	of	the	remainder	 80	percent	of	
+
+revenue 	as	income	taxes.	
+xvi	The	tax	collected	by	the	government	for	each	woman	is	calculated	by	adding	up	the	taxes	on	the	minimum	wage,	
+
+making	up	a	total	of	98.98	TL	as	posted	by	the	Ministry	of	Labour	and	Social	Security	for	the	first	6	months	of	2016.	
+Using	 the	 information	 related	 to	 minimum	 wage	 in	 The	 Ministry	 of	 Labor	 and	 Social	 Security’s	 website.	
+http://www.csgb.gov.tr/Contents/Istatistikler/AsgariUcret	
+xvii	    Turkey’s	    2015	      GDP	      is	   1,953,561	     million	   TL	     in	    nominal	    terms.	      Source:	
+http://www.tuik.gov.tr/PreHaberBultenleri.do?id 21510	
+
+
+
+
+	
+

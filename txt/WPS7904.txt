@@ -1,0 +1,1185 @@
+                                                             WPS7904
+
+
+Policy Research Working Paper                               7904
+
+
+
+
+                   Matchmaking in Nairobi
+                           The Role of Land Use
+
+                                    Paolo Avner
+                                    Somik Lall
+
+
+
+
+Social, Urban, Rural and Resilience Global Practice Group
+December 2016
+Policy Research Working Paper 7904
+
+
+  Abstract
+ Well-functioning cities reduce the economic distance                               spatial layout of Nairobi that encourage land use clustering
+ between people and economic opportunities. Cities thrive                           can increase the share of overall opportunities that can be
+ because they enable matchmaking—among people, among                                accessed within a given time-frame. When commuters travel
+ firms, and between people and job opportunities. This                              by foot or using the minibus network, the share of accessible
+ paper examines employment accessibility in Nairobi, Kenya                          economic opportunities within an hour doubles from 11
+ and evaluates whether modification of land use patterns                            to 21 percent and from 20 to 42 percent respectively. The
+ can contribute to increases in aggregate accessibility. The                        analysis also finds that spatial layouts that maximize the
+ assessment is based on simulation of counterfactual sce-                           number of households that have access to a minimum share
+ narios of the location of jobs and households throughout                           of jobs, through a more even jobs-housing balance, come at
+ the city without new investments in housing or transport                           the expense of average accessibility. This result is interpreted
+ infrastructure. The analysis finds that modifications to the                       as a trade-off between inclusive and efficient labor markets.
+
+
+
+
+  This paper is a product of the Social, Urban, Rural and Resilience Global Practice Group supported by the Africa Chief
+  Economist office and UKAID through the Multi-donor Trust Fund on Sustainable Urbanization. It is part of a larger
+  effort by the World Bank to provide open access to its research and make a contribution to development policy discussions
+  around the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors
+  may be contacted at avner@worldbank.org and slall1@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+Matchmaking in Nairobi: The Role of Land Use
+
+
+Paolo Avner and Somik Lall
+
+
+
+
+JEL codes: R14, R52, R58, C63
+
+Keywords: Matchmaking, Accessibility, Land use patterns, Urban form, Labor market
+Matchmaking in Nairobi: The Role of Land Use
+
+
+Paolo Avner(a) and Somik Lall(a) 1
+(a)
+      The World Bank
+
+
+Abstract
+Well-functioning cities reduce the economic distance between people and economic opportunities.
+Cities thrive because they enable matchmaking – among people, among firms, and between people
+and job opportunities. This paper examines employment accessibility in Nairobi, Kenya and evaluates
+whether modification of land use patterns can contribute to increases in aggregate accessibility. The
+assessment is based on simulation of counterfactual scenarios of the location of jobs and households
+throughout the city without new investments in housing or transport infrastructure. The analysis finds
+that modifications to the spatial layout of Nairobi that encourage land use clustering can increase the
+share of overall opportunities that can be accessed within a given time-frame. When commuters travel
+by foot or using the minibus network, the share of accessible economic opportunities within an hour
+doubles from 11 to 21 percent and from 20 to 42 percent respectively. The analysis also finds that
+spatial layouts that maximize the number of households that have access to a minimum share of jobs,
+through a more even jobs-housing balance, come at the expense of average accessibility. This result is
+interpreted as a trade-off between inclusive and efficient labor markets.
+
+
+1 Introduction
+Cities bring together people, ideas and capital so as to benefit from agglomeration economies which
+stem from proximity and exchanges (Glaeser and Kahn 2004; Ciccone and Hall 1996). The most
+common sources of urban agglomeration economies arise from: 1/ labor market interactions (pooling),
+2/ linkages between intermediate and final goods producers or input sharing and 3/ knowledge spill-
+overs (Rosenthal and Strange 2004) 2. In this paper we are primarily concerned with agglomeration
+economies that arise from labor-market interactions or matching, sharing Bertaud’s (2014) view that
+cities can primarily be seen as labor markets.
+
+The analysis presented in this paper shows that in Nairobi County, Kenya, employment accessibility
+tends to be limited for a large share of the population that cannot afford to purchase cars. This
+situation is problematic both for productivity and for livability. On the productive side, it limits the
+effective size of the labor markets, thereby preventing workforce/employer sorting which hampers the
+
+1
+  The authors are grateful to Sarah Elizabeth Antos for performing the network analysis which provided the
+automobile transport times matrix and to Annie Bidgood for GIS assistance. Joel Hamann ensured the processing
+of the matatu GTFS data through a Dijkstra algorithm that he also coded. Dean Cira and Sheila Kamunyori’s
+guidance as well as efforts to put us in contact with counterparts in Nairobi and locate datasets are highly
+appreciated. The authors would also like to thank Nancy Lozano Gracia, Adrien Vogt-Schilb, Gunnar Eskeland,
+Vernon Henderson, Roger Gorham, Tony Venables, Paul Collier, Daniel Rodriguez, Marianne Fay and Stephane
+Hallegatte for comments on this work and crucial suggestions.
+2
+  A more comprehensive list differentiating between up to 12 types of economies of scale can be found in the
+2009 World Development Report (World Bank 2009, p 128).
+
+                                                                                                           2
+potential for agglomeration economies (Duranton and Puga 2004). Empirical evidence indicates that
+accessibility, measured as the number of opportunities an individual can access within a given amount
+of time, matters for productivity in cities. Prud’homme and Lee (1999) demonstrate that the elasticity
+of productivity to the share of jobs accessible within 30 minutes for the average worker in 23 French
+cities is 0.15. From an employer’s point of view, Cervero (2001) shows that in the San Francisco Bay
+area there is weaker yet positive evidence that labor-marketshed3 positively influences worker
+productivity levels. Melo et al. (2013) show for a sample of US cities that increasing accessibility to jobs
+results in increased productivity as measured by real wages. The authors report that a doubling of the
+number of jobs accessible per worker within a 20-minute thresholds results in an average increase in
+real wages of 6.5%. Venables (2015) identifies that commuting costs and thus average accessibility
+matters in urban settings. In order to attract skilled workers, firms must compensate for their travel
+costs by offering higher wages. While this will benefit households, it can prevent firms from reaping
+productivity gains and entering international markets because the average wage needed to
+compensate workers is higher than competitive international standards.
+
+From the perspective of households, accessibility constraints in developing country cities may be
+manageable in the short-run, as long as local employment within low-wage, non-tradeable (and often
+informal) service sector occupations dominates; but as the nature of employment shifts from non-
+tradable services to manufacturing and tradable services, and from informal to formal, requiring higher
+firm density, the demands for metropolitan-wide accessibility can be expected to increase. Indeed,
+there are indications that in order to remain within reasonable commuting times of their jobs,
+households are ready to compromise on living conditions. In Nairobi, most residents of informal
+settlements have jobs and comparatively high levels of education relative to those living in formal
+housing, yet their living conditions remain basic (Gulyani, Talukdar, and Jack 2010). This situation
+probably reflects a premium already placed on accessibility. The Spatial Mismatch Hypothesis
+literature (Kain 1968), although primarily focusing on Black minorities in the US, also links labor market
+outcomes to measures of job accessibility. There is evidence that physical segregation of unskilled
+workers away from job opportunities leads to high commuting and job search costs which can partially
+explain higher unemployment rates and lower average wages4.
+
+From a research and policy design perspective it is important to understand whether and how to
+increase metro-wide accessibility and reduce commuting costs to enable labor market pooling, one of
+the main sources of agglomeration economies. A large and growing body of literature on “excess
+commuting” is strongly related to the topic of accessibility and provides insights on how to reduce
+commuting distances within cities. Excess commuting literature (Hamilton and Röell 1982; White 1988;
+Small and Song 1992) is primarily concerned with documenting the ‘jobs – housing balance’ and
+measuring how much commuting is “wasteful” or in excess of a theoretical minimum (the minimum
+commute indicator). The definition of excess commuting has triggered a number of contributions in
+particular aimed at i) understanding the reasons for the existence and magnitude of excess commuting
+and ii) understanding how to craft land use and transport policies to reduce both the level of the
+minimum commute and the associated excess commuting (Ma and Banister 2006). However, the
+excess commuting literature ignores the benefits of large labor markets, which by pooling large
+
+
+3
+ Number of workers that can access work within a defined peak period ranging from 30 to 60 minutes.
+4
+ see Gobillon et al. (2007) for a detailed review of theoretical explanations and empirical evidence of spatial
+mismatch.
+
+                                                                                                                  3
+numbers of workers and job opportunities, allows for sorting and matching between employers and
+employees5.
+
+For these reasons, in this paper, we focus on metrics that capture accessibility to all employment
+opportunities in Nairobi as in Peralta Quiróz and Mehndiratta (2015). The purpose of the study is first
+to provide a diagnostic of the current situation in terms of access to jobs in Nairobi but also to initiate
+a discussion on ways in which residents’ accessibility can be improved. There are two main ways of
+enhancing accessibility: (a) build more or better transportation infrastructure, (b) help land uses evolve
+and adjust so as to allow for smooth connections between residential areas and opportunities. While
+the first possibility has triggered both a vast amount of literature and many investment projects, the
+second has received less attention. Transport projects are often necessary to ‘de-crowd’ cities, but
+improving the coordination of land uses throughout the urban area can probably achieve some of this
+goal without the extra costs of financing transport projects. There are typically two ways of changing
+land use patterns. The first one is to change the residential building stock for example by investing in
+more floor space in close proximity to opportunities or to transit stations. Advocates of compact city
+or Transit Oriented Development have focused on these options. The second is to consider the current
+building stock as fixed and to spatially allocate this capital so as to improve overall accessibility to
+opportunities. In this paper we investigate the second option and whether accessibility can be
+enhanced without additional investments. Developing economies are capital constrained so there is
+value in looking at whether or not it is possible to increase accessibility without additional financing.
+The assessment is based on the simulation of counterfactual scenarios of the location of jobs and
+households throughout the city without new investments in housing or transport infrastructure.
+
+We derive a number of results from our analysis. The main result is that modifications to the spatial
+layout of Nairobi can increase the share of overall opportunities which can be accessed within a given
+time-frame. When commuters travel by foot or using the minibus network, the share of accessible jobs
+within an hour doubles from 11% to 21% and from 20% to 42% respectively. This result is important
+because it demonstrates that careful land use planning and zoning which is coordinated with transport
+infrastructure can lead to more integrated and efficient labor markets without large costs. Secondly,
+our results show that accessibility to employment is already a crucial determinant of the spatial layout
+of Nairobi, with people and employers choosing their locations so as to reduce commuting times and
+costs. Finally, we find that promoting equity in the access to jobs will result in mixed land use patterns
+and more even job-housing balance. Small labor markets, matching employment supply and demand
+locally, will however emerge at the expense of average aggregate accessibility and a fully integrated
+labor market which is conducive to the manifestation of agglomeration economies.
+
+The paper is structured as follows: Section 2 provides background information about the current urban
+form in Nairobi County and the mobility of its residents. Section 3 presents the data sources used to
+investigate accessibility patterns, the distribution of residents and jobs as well as transport costs
+proxied by transport times for three transport modes: cars, matatus and pedestrians. Section 4
+presents the results of the accessibility analysis for Nairobi as it is today. In particular it provides graphic
+evidence that accessibility is uneven geographically but also depending on whether residents have
+access to cars. Section 5 then introduces the main innovation of the paper which is to investigate
+
+
+5
+  Although some authors (Niedzielski 2006; O Kelly and Lee 2005) have paid attention to worker and job
+characteristics so that the matching pattern yielded by solving the transportation problem is more realistic.
+
+                                                                                                              4
+accessibility measures under alternate and counterfactual land use patterns. We find that land-use
+changes can enhance aggregate accessibility in Nairobi and promote a unified labor market even in the
+absence of transport and building investments. Section 6 concludes. The Appendix discusses
+methodological and data choices and limitations.
+
+
+2 Context: Urban form and mobility
+Nairobi County is rapidly growing: Its population grew by one million people over the last decade
+reaching 3.1 million people in 20096 and was home to approximately 3.2 million people in 20127. While
+residential development is spread out, featuring clusters of high density pockets throughout the city,
+Nairobi’s employment arrangement follows a highly monocentric pattern. Land use areas which are
+likely to host most formal jobs, such as industrial, commercial and public facilities remain highly
+concentrated in the urban core, with only limited activity occurring in other emerging centers. New
+road and highway infrastructure, higher land prices, increased rates of car ownership, and other factors
+appear to be fueling a discontinuous or “leapfrog” outward growth in peri-urban settlements and along
+major road corridors.
+
+Small, privately-owned, and artisanally operated buses and vans, known locally as matatus, form the
+backbone of public mass transportation services in the Nairobi metropolitan region. Matatus and
+walking dominate the mode share. Eighty-three percent of all trips include walking as the major or
+secondary mode of travel. Forty-one percent of all trips are walking only, 42 percent involve other
+modes, mainly matatus (63 percent) and buses (21 percent). Only 17 percent of all trips are made
+without walking, among which, more than half (54 percent) are completed by passenger cars and 13
+percent are made by motorcycle (JICA 2013). Compared to other large cities in Africa, Nairobi has the
+largest share of walking trips despite rising and relatively high motorization rates compared to other
+major African cities (JICA 2006; JICA 2014; Kumar and Barrett 2008).
+
+The overall average travel time per trip in Nairobi is 47 minutes, but differs when compared by gender,
+age, personal income level, mode, and trip purpose. Higher earners generally make longer trips (by
+time), while average travel times for motorized modes hover between 54 and 60 minutes per trip
+(excluding motorcycles, which average 38 minutes per trip).
+
+Traffic congestion is a growing problem in Nairobi, resulting from rapidly increasing population and the
+crowding of motorized traffic onto a limited street network. Indeed, IBM ranked Nairobi fourth highest
+in its “commute pain” survey in 2011, indicating that the city hosted one of the world’s longest traffic
+jams, 2.1 hours. According to the World Bank’s Kenya Urbanization Review (World Bank 2016),
+increasing average commuting speeds from the average recorded 13.5kph to 20 kph would save $54.1
+million USD per year and decrease time spent traveling by 30 percent. Increasing average travel speeds
+to 30 kph would save $93.4 million USD per year and decrease time spent traveling by 54 percent.
+
+
+
+
+6
+    as measured by the Kenyan Census.
+7
+    according to landscan data (Bright, Rose, and Urban 2013).
+
+                                                                                                      5
+3 Accessibility in Nairobi: Methodology
+In order to assess accessibility in Nairobi we need information about 1/ where people live, 2/ the
+transport networks and 3/ where opportunities (jobs, schools etc…) are located.
+
+3.1 Population distribution
+Population densities at a global scale are available through the Landscan 2012 dataset in raster format
+(Bright, Rose, and Urban 2013). We used 2012 data and extracted population densities for 1square
+kilometer cells for the Nairobi County region. We used the sub-locations administrative boundaries to
+extract the data.
+
+
+
+
+Figure 1: Population densities as provided by Landscan database for 2012. This worldwide raster map is intersected with
+the administrative boundaries of Nairobi.
+
+3.2 Transportation costs
+The model accounts for various transportation modes: walking, driving and using the informal minibus
+(matatus) network. As a first step we proxied the transport costs of reaching any given location in
+Nairobi through transport times (see discussion of data limitations in the Appendix). Data for the
+’matatu network’ are available online in GTFS (General Transit Feed Specification) format8. These data
+were compiled by the DigitalMatatus consortium comprising University of Nairobi, Columbia
+University, MIT and Groupshot (Williams et al. 2015; Klopp et al. 2015). The GTFS data were processed
+using a Dijkstra algorithm9 which provided us with times to reach any matatu station from any other
+in the urban area. Travel times to reach the closest matatu station were computed based on straight
+line distance or ’as the crow flies’ from the center of each grid cell shown in Figure 1.
+
+
+
+
+8
+  GTFS data or General Transit Feed Specification is a common format for public transportation schedules and
+associated geographic information. It is a collection of multiple csv files which describe transit routes, stops
+(including geographic coordinates), travel times between stops and a number of other public transit properties.
+9
+  Dijkstra’s algorithm is an algorithm for finding the shortest path between two nodes in a graph which may
+represent for example road networks.
+
+                                                                                                                     6
+Figure 2: Matatu network and stops (top) and road network and hierarchy (bottom)
+
+The transport times for roads were computed through a network analysis using the layers provided by
+OpenStreetMap (OSM). Three different travel speeds were assumed based on the road category. First
+order assumptions were made that 1st class roads would carry vehicles traveling at 60km/h, 2nd class
+roads at 40km/h and finally 3rd class roads at 30km/h. With congestion we have travel speeds which
+are much lower: 30, 16 and 12km/h. Finally, walking times were calculated based on bee-line distances
+assuming an average walking speed of 4 km/h.
+
+3.3 Accounting for opportunities
+No data are available to the best of our knowledge on the number of jobs and location within Nairobi
+(see Appendix for a discussion). As a proxy we used the number of sq meters of land used for
+commercial, industrial, mixed residential and commercial or mixed industrial and residential to proxy
+for the location and amount of opportunities in each cell of the grid. We computed these data using
+the land use map for 2010 produced by Columbia University (Columbia University, CSUD 2010).
+
+                                                                                                   7
+Figure 3: Top panel/ Official land-use map used to extract ’opportunities’ level and location. Are considered as
+opportunities any sq meter of land used for commercial, industrial, mixed commercial-industrial and mixed residential-
+commercial. Bottom panel/ Extraction from the land use map to the left. This map represents the ’opportunities’ in terms
+of sq meters of land allocated to the purposes listed above.
+
+
+
+4 Accessibility in Nairobi
+There are a number of ways to characterize accessibility in an urban area. As a first step we will focus
+on the share of total opportunities that can be accessed in Nairobi in a given time-frame using various
+transport modes at a grid cell level. We use grid cells of approximately one square kilometer as the
+unit of analysis instead of administrative boundaries. This has two main advantages: first it is
+convenient as this matches the resolution of the landscan population dataset, second it provides finer
+grain information on accessibility levels in the urban area. The alternative would be to use the lowest
+level of administrative boundaries in Kenya, sub-locations, but these remain large. There are 112 sub-
+locations in the area of analysis while our method represents 731 grid cells.
+
+                                                                                                                      8
+Figure 4: Share of accessible opportunities within one hour of traveling for cars on the top panel and matatus on the bottom
+panel.
+
+On average, car users within Nairobi can access respectively 31%, 58% and 77% of total opportunities
+within a 30, 45 and 60 minutes timeframe in congested conditions. For “matatu” users the situation is
+drastically different as on average they can only access 4%, 10% and 20% within a 30, 45 and 60
+minutes timeframe. These accessibility figures to formal employment opportunities for public
+transport are low. By comparison, in the metropolitan area of Buenos Aires, accessibility figures using
+public transportation are 7%, 18% and 34% for the same time thresholds (Peralta Quiros 2015).
+Preliminary analysis of these figures tends to indicate that Nairobi is a city which is built for cars. But
+car use represents only 13% of trips for all purposes while matatus and walking are massively favored
+with respectively 28% and 41% of trip mode shares for all purposes (JICA 2013; JICA 2014). In parallel,
+although private car ownership rates are higher in Nairobi than in other African cities, they still remain
+low at around 84 cars per 1000 persons (Kumar and Barrett 2008; NORC at the University of Chicago
+
+                                                                                                                          9
+2013). This seems to indicate that most households in Nairobi will benefit from opportunity
+accessibilities closer to the lower levels shown on the bottom panel of Figure 4.
+
+      Share of Nairobi’s opportunities accessible within a given time-frame depending on the
+                                       transport mode used
+                                Cars                Matatus + walking          Walking only
+                      Uncongested Congested             Congested         Uncongested/Congested
+ < 30 mins                 57%           31%                 4%                    3%
+ < 45 mins                 85%           58%                10%                    7%
+ < 60 mins                 96%           77%                20%                    11%
+Table 1 : Average share of Nairobi’s opportunities accessible within a given time-frame depending on the transport mode
+used
+
+Another important feature is the spatial pattern of accessibilities throughout the urban area of Nairobi.
+It is interesting to characterize whether accessibilities levels are evenly distributed or not. One way to
+capture how equally distributed accessibilities are in Nairobi is to produce Lorenz curves and calculate
+the attached GINI coefficient. While this measure has mostly been used to characterize income
+distribution patterns it can be of use to look at accessibility spatial disparities.
+
+
+
+
+Figure 5 : Lorenz curves showing spatial inequality in accessibility to opportunities throughout the urban area of Nairobi
+using cars (blue curve) and matatus (green curve)
+
+It can be seen from Figure 5 that depending on the transport mode used, accessibility to opportunities
+within a given time frame (here 30 minutes) is more or less equally distributed throughout the urban
+area of Nairobi. In particular, it can be seen that accessibility to opportunities using matatus as a
+commuting mode is more spatially unequal than if households used cars. Indeed the Gini coefficients
+associated to both these modes are 0.36 vs 0.29. However, as was highlighted previously residents of
+Nairobi rely much more on walking and matatus than they do on cars. As a consequence and because
+of the inherently localized nature of informal collective transport, accessibilities to opportunities in
+Nairobi are de factor unevenly distributed.
+
+
+
+
+                                                                                                                       10
+5 Assessing alternative spatial layouts in relationship to accessibility
+The indicators computed above give us some information about accessibilities using either cars,
+matatus or walking for the current spatial layout of Nairobi. They however do not provide information
+as to the more or less desirable spatial distribution patterns of jobs and households. The question that
+arises is then: “is it possible to achieve higher accessibility levels by changing land use patterns for a
+given amount of invested capital in transport infrastructure and commercial and residential stock?”.
+To illustrate our questioning we show below a very schematic situation before going back to Nairobi.
+
+5.1 A schematic situation
+Imagine a city that comprises 49 distinct locations, each of them of 1km². Costs of traveling are solely
+based on distance (no time costs at this stage) and the unit cost is typically 1. There are 9 opportunity
+centers in this city (business centers, malls…) – represented by white cells below – which the residents
+of the city can access. Given this grid it is possible to imagine many possible spatial layouts. Let us focus
+on three specific spatial layouts which match – albeit in a simplified manner – stylized urban forms that
+can be encountered in the literature: the mono-centric city, the decentralized city and the urban village
+city.
+
+
+
+
+Figure 6: Three stylized cities that differ by their spatial layout. They share the same number of residents, the same number
+of opportunity centers and the same stock of structures (buildings). White cells are ‘opportunity locations’ while
+households reside in all cells of the urban area.
+
+Given the spatial layout of a city, it is possible to calculate a measure of each resident’s accessibility to
+these opportunities and then to compute an average accessibility metric. The following maps show
+individual residents’ accessibilities.
+
+
+
+
+Figure 7: Accessibility measures for the residents of the three stylized cities
+
+It should then be possible to rank these cities in terms of aggregate accessibility. We do not perform
+this calculation here as the purpose of this section is purely illustrative and any results that we would
+achieve would be highly dependent on the underlying assumptions. The aim would however be to
+achieve a ranking of the stylized cities in terms of aggregate accessibility as imagined in Table 2.
+
+
+
+
+                                                                                                                         11
+                       Ranking of these stylized cities in terms of accessibility
+         Mono-centric city               Decentralized city                   Urban village city
+            1?, 2?, 3?                        1?, 2?, 3?                          1?, 2?, 3?
+Table 2 : Which stylized city performs better in generating accessibility?
+
+5.2 How does Nairobi perform?
+To move away from the stylized cities presented above but still with the idea of evaluating whether
+alternative spatial layouts could enhance accessibility we conduct a series of tests. Keeping constant
+the transportation network and the overall building stock10, we randomly re-shuffle all opportunities
+and people throughout the urban area and re-compute for each outcome indicators of how the city
+performs in connecting households with opportunities. Proceeding in this manner, 10,000 different
+distributions are produced.
+
+
+
+
+10
+   This assumption is tantamount to not allowing for building stock densification. As a result, the urban footprint
+of Nairobi County is not allowed to shrink. Hence, the exercise conducted here does not investigate the
+accessibility outcome associated with smaller urban areas and overall densification. It is solely based on the
+reallocation of jobs, households and building infrastructure for a given amount of invested capital in building and
+firm structure and in the transportation network.
+
+                                                                                                                12
+Figure 8 : Illustration of the exercise conducted for this study. All pixels are characterized by a population density and a
+number of opportunities (commercial, educational and industrial floor space). 10,000 random permutation of these grid
+cells are performed, resulting in 10,000 counterfactual spatial layouts, to evaluate whether accessibility can be enhanced
+through changing the land use patterns, i.e. the location of population and opportunities.
+
+The results of the simulations described above indicate that Nairobi in its current spatial layout
+performs better than any of the 10,000 counterfactual scenarios in providing access to opportunities
+to its residents. It can be seen from Figure 9 that the aggregate accessibility for the current spatial
+layout of Nairobi – around 77% of all formal economic opportunities can be reached within an hour on
+average when all transport modes are available – represented as a green dot on the bottom right side
+of the figure is an outlier. Most of the random counterfactual scenarios achieve aggregate accessibility
+figures that are considerably lower, mostly between 45 to 55%, with frequency spikes shown in Figure
+9 around 50%.
+
+
+
+
+                                                                                                                        13
+Figure 9 : Distribution of the accessibility indexes in all counterfactual scenarios (blue dots) and in current Nairobi (green
+dot).
+
+The conclusion from this exercise is that businesses and households, when deciding where to locate
+within Nairobi, take into account the existing transport network and the location of opportunities. This
+is consistent with the theoretical basis of the classic urban economics’ framework (Alonso 1964;
+Brueckner 1987; Fujita 1989; Wheaton 1974). The spatial layout of Nairobi reflects a complex self-
+organization process whereby households seek to locate within reasonable distances of jobs and public
+amenities, maximizing accessibility within the constrained environment of sub-optimal transport
+investments, and governance challenges related to land-use planning and development control and
+enforcement. As a consequence, the current spatial layout of Nairobi, which is a result of millions of
+individual decisions, is a reasonable outcome in terms of overall access to total opportunities given the
+constraints on capital investments in transport infrastructure and residential structures in the sense
+that it outperforms any random permutation which is computed.
+
+5.3 Aggregate accessibility-improving spatial layouts
+Comparing the current spatial layout of Nairobi to a large number of random permutations
+demonstrates that it performs better than random in terms of aggregate accessibility outcomes.
+However, it is not possible to infer from this exercise that the current spatial layout of Nairobi is
+“optimal” in providing accessibility to economic opportunities to its residents or, less ambitiously, that
+it cannot be enhanced. The 10,000 random permutations performed above indeed only represent a
+very small share of the 731!11 potential permutations that could be produced.
+
+
+
+
+11
+   Nairobi County is divided into 731 km² grid cells. The number of permutations or arrangements of these grid
+cells is equal to 731! (or factorial 731) which is a huge number – in fact Matlab returns “Inf” when queried about
+it. To get a sense of the numbers 100! is close to 9*10 157, which makes any systematic exploration of all
+permutations computationally impossible.
+
+                                                                                                                          14
+5.3.1 Searching for accessibility improving spatial layouts: Methodology
+Another way of exploring the potential permutations is required. This second exercise aims to assess
+the most efficient spatial coordination of land uses, keeping, as previously, the transportation network,
+population, number of jobs and building stock constant. The methodology relies on a hill-climbing
+optimization procedure which only switches grid cells 2-by-2 starting from the current spatial layout
+of Nairobi (instead of permuting all grid cells at once as in the previous exercise). When this initial
+permutation increases overall accessibility, the new spatial layout becomes the baseline and a new
+iteration is performed. If this permutation is not successful, the permutation is discarded and another
+one is tested. This process is repeated a number of times to try to converge to an optimum. A hill
+climbing procedure is conducted for each mode and for the combination of them and also for each
+time threshold. Therefore, an aggregate accessibility spatial layout is found for example for the special
+case where only matatus and walking are available as a transport mode and where the time threshold
+for calculating available opportunities is 45 minutes. This spatial layout will differ from the aggregate
+accessibility improving land use pattern found through hill climbing when the only available transport
+option is cars and the threshold is 45 minutes again. It will also differ from the spatial layout where the
+only transport option is matatus and walking but where the time threshold is 60 minutes. In total,
+twelve aggregate accessibility improving spatial layouts are computed: for all modes (walking, walking
+and matatus, cars, combination of any mode) and for all time thresholds (30, 45 and 60 minutes).
+
+5.3.2 Accessibility gains and land use profiles
+Performing 100,000 iterations using this hill climbing procedure it is shown that overall accessibility
+can increase substantially in Nairobi. Results reported in Table 3 indicate that alternative land use
+patterns can increase overall accessibility by 15% for cars (from 77% to 92.5% of accessible
+opportunities) and can even double the share of formal economic opportunities which can be reached
+within an hour using matatus (from 20% to 42%) or traveling by foot (from 11% to 21%). This is the
+central result of the paper.
+
+These conclusions indicate that even if Nairobi’s spatial layout performance is tolerable in connecting
+people to opportunities as demonstrated in the first exercise, there is still considerable room to
+increase accessibility through better land use coordination. Achieving such outcomes, however, will
+require very strong governance structures, enforcement policies and planning capabilities.
+
+
+
+
+                                                                                                        15
+a/ Initial spatial layout
+
+
+
+
+b/ With aggregate accessibility improving spatial layouts
+
+
+
+
+Figure 10 : Comparing accessibilities to formal economic opportunities in the initial and aggregate accessibility improving
+spatial layouts for cars (on the left) and matatu (on the right) transport within an hour
+
+Figure 10 shows the shares of accessible opportunities at the pixel level in the initial and improved
+spatial layouts. As in Figure 4, the higher potential accessibilities with cars compared to matatus appear
+clearly. The increase in aggregate accessible opportunities is however larger with matatus when
+accounting for population changes as seen in Table 3:
+
+    Share of Nairobi’s opportunities accessible within a given time-frame depending on the transport
+                   mode used in the current and alternative spatial layouts of Nairobi
+                         Cars                    Matatus + walking                 Walking only
+                 Initial    Alternative       Initial       Alternative       Initial      Alternative
+ < 30 mins        31%           55%             4%              7%              3%              5%
+ < 45 mins        58%           83%            10%              21%             7%             13%
+ < 60 mins        77%           96%            20%              42%            11%             21%
+Table 3 : Share of Nairobi’s opportunities accessible within a given time -frame depending on the transport mode used in
+the current and alternative spatial layouts of Nairobi
+
+Looking at the spatial distribution of households and formal economic opportunities in the aggregate
+accessibility improving scenarios for cars (b/) and matatus (c/) in Figure 11 and comparing to the initial
+spatial layout (a/) is telling as how to increase overall accessibility12. In both cases higher aggregate
+
+
+12
+  Because the hill climbing procedure is exploratory in nature, it is not possible to claim that the aggregate
+improving spatial outcomes are optimal. It is however the case that, as the 100,000 permutations are performed,
+there are progressively fewer permutations between cells that yield a better accessibility outcome, indicating
+that the solver is progressing towards an optimum. A corollary to this precision is that more than one spatial
+
+                                                                                                                        16
+accessibilities are associated with a concentration of households and economic opportunities in the
+vicinity of the center of Nairobi County, which is also the central connecting node of both the major
+roads and the matatu network – which mostly runs on major roads.
+
+a/ Initial spatial layout
+
+
+
+
+b/ Aggregate accessibility improving spatial layout for car transport
+
+
+
+
+c/ Aggregate accessibility improving spatial layout for matatu transport
+
+
+
+
+Figure 11 : Distribution of formal economic opportunities (left) and population (right) in the initial and aggregate
+accessibility improving spatial layouts for cars or matatu transportation.
+
+An interesting difference between both aggregate accessibility improving spatial layouts is that the
+one computed for cars segregates between residential and economic uses, with the highest population
+densities located to the West of the CBD and the economic opportunities mostly to the East.
+Conversely the improved spatial distribution of population and economic opportunities for matatus is
+
+outcome can generate the improved aggregate accessibility outcomes displayed in this study. Numerous
+iterations have however shown that they all tend to resemble the ones that we display here.
+
+                                                                                                                 17
+much less segregated with more of a mixed land use outcome. The difference between these two
+outcomes can tentatively be explained by the fact that matatus only run on major roads (matatus in
+essence provide localized services) whereas cars can use secondary or even tertiary roads and thus can
+reach locations (close and more distant) easier and without relying on walking for a portion of the trip.
+These spatial outcomes and their differences, which we do not claim to fully explain, appear consistent
+with the observations and the literature concerned with urban form and travel behaviors which
+indicates that mixed land use patterns are better suited to a combination of collective transport and
+walking (Cervero 2002; Cervero and Kockelman 1997). Both accessibility improving spatial layouts tend
+to have highest population and formal economic opportunity densities along major roads and in close
+vicinity to the CBD of Nairobi. It is worth pointing out that the tendency towards central concentrations
+of households and economic opportunities is achieved in both cases without accounting for
+agglomeration economies which would tend to encourage further this phenomenon. It should equally
+be noted that this exercise does not account for potential increase in congestion levels as a result of
+modified commuter flows (see Appendix for a more detailed discussion of the implications of such a
+simplification). Congestion forces would conversely tend to discourage higher concentration which is
+linked to higher land or real estate prices and longer travel times because of increased traffic
+congestion.
+
+5.3.3 Is there an efficiency vs equity tradeoff? How about losers?
+The results presented above show that on average residents of Nairobi could achieve higher
+accessibility levels to employment opportunities with alternate spatial layouts. However, this does not
+address whether some people would lose from land use reorganization or whether the new land use
+configuration reduces inequality in the access to jobs across the urban area. In other words is there an
+efficiency vs equity tradeoff associated with aggregate accessibility improving spatial layouts?
+
+Figure 12 shows the spatial inequalities in access to formal economic opportunities for residents in
+Nairoby County in the aggregate accessibility improved spatial outcomes for matatus and cars. For
+cars, the Lorenz curve is very similar to the one displayed in the current Nairobi (Figure 5) and the
+associated GINI coefficient remains virtually identical. For matatu users conversely, the spatial layout
+which maximizes their aggregate accessibility is associated with a rise in spatial inequality. The GINI
+coefficient increases from 0.36 to 0.40 and the Lorenz curve is more convex. This rise in inequality in
+access to employment opportunities using matatus is due to the fact that the land use reorganization
+will tend to benefit the most centrally located people more than the rest of the metropolitan
+population.
+
+
+
+
+                                                                                                      18
+Figure 12 : Improving aggregate accessibility for matatus comes at the expense of equality in access to economic
+opportunities for all residents in Nairobi as the GINI coefficients increases with respect to the initial spatial layout
+
+This situation seems to point towards a trade-off between overall efficiency associated with one
+unified labor market and the equality concern which aims to provide similar levels of accessibility to
+all residents of Nairobi. But having a more spatially unequal distribution of employment accessibility
+does not imply that there are losers. After all, it is possible to achieve a situation where everyone gains
+from a different land use pattern and yet still have increased inequality if some gain more than others.
+It is therefore important to understand if the alternate land use configuration which promotes higher
+average accessibility levels can lead people to lose access to jobs and how badly they are impacted.
+
+As a first step, tracking how cells move within Nairobi County from the initial to the aggregate
+accessibility improving spatial layout, it is possible to quantify winners and losers of the spatial
+reorganization. Nairobi residents mostly gain in terms of aggregate accessibility from the spatial
+reorganization: at least 80% winners. However, there is a non-negligible share of losers which varies
+depending on the transportation mode used and the time threshold retained to quantify the share of
+accessible formal opportunities. For pedestrians and matatu riders the share of losers ranges from 16%
+to 20%. For car drivers/passengers the share of losers is lower, ranging from 15% for the 30 minute
+threshold down to 2% for the 60 minute threshold.
+
+                  Average accessibility gains and losses from the spatial reorganization
+                                      Cars               Matatus + walking             Walking
+                                 Average        Average        Average        Average        Average        Average
+                                access gain    access loss    access gain    access loss    access gain    access loss
+ <30 mins                          29%            10%            5%             1%             3%             1%
+ <45 mins                          28%            13%            14%            3%             8%             2%
+ <60 mins                          18%            8%             28%            5%             12%            3%
+Table 4: Average share of total opportunities whose access to is gained or lost in the aggregate accessibility improving
+spatial layout compared to the initial situation for various modes of transport and time thresholds.
+
+The extra formal economic opportunities accessible to winners of the spatial reconfiguration are much
+higher than the loss of accessibility for the losers. This is very apparent for matatu riders and
+pedestrians as shown in Table 4. For example, the average matatu rider winner has access to 28% more
+
+
+                                                                                                                     19
+opportunities within an hour’s travel than in the baseline while the loser only has access to 5% fewer
+economic opportunities.
+
+There are several conclusions which can be drawn from looking at how alternative aggregate
+accessibility improving spatial layouts will affect Nairobians and how gains and losses are distributed.
+First, many more will gain than lose from the spatial reconfiguration: 80% at least. Second, there is
+however a non-negligible share of losers ranging from 2% to 20% with average shares for pedestrians
+and matatu riders between 16% and 20%. Third, the average gains in accessibility for the winners are
+much larger than the average losses for the losers and this is particularly true for pedestrians and
+matatu riders. Finally, the average accessibility losses for the losers are typically limited for pedestrians
+and for matatu riders: from 1% to 5% depending on the travel time threshold. So, although the concern
+that a spatial reconfiguration will create losers should be acknowledged and addressed to the extent
+possible, we argue that it should not impede the overall goal of providing many more with increased
+accessibilities.
+
+5.4 Localized accessibility: Inclusive vs integrated labor markets?
+In this section the aim is to investigate accessibility improving spatial configurations where the
+objective is no longer to promote market wide accessibility but more localized accessibility, i.e. to
+increase the share of people that have access to a significant share of formal economic opportunities.
+We carry out this exercise for two reasons. First, following up on the previous section and the
+discussion of winners and losers from land use reorganization, to investigate counterfactual scenarios
+where the focus is on labor market inclusion (even if partial) rather than on overall efficiency. We wish
+to understand if the spatial outcomes of these two exercises differ drastically or not. Second, because
+while their benefits are well documented, the exact criteria of what constitutes large and integrated
+labor markets is not13.
+
+5.4.1 Without agglomeration economies
+Instead of investigating the average access to jobs in Nairobi County we are interested in assessing the
+share of residents that have access to a “reasonable” amount of formal economic opportunities within
+a given time-frame and how land use patterns can affect this share. As a first step, we define the
+reasonable amount of economic opportunities to be 10%14 of the total in Nairobi County. We then, as
+previously, use a hill climbing procedure to simulate accessibility improving spatial layouts (again
+keeping the housing stock and transportation network constant). We perform this analysis for all
+transportation modes, but will focus mainly in this section on the localized accessibility of pedestrians
+and matatu riders as they are the most likely to benefit from improved local accessibility as the distance
+they can travel in a given time-frame is much shorter than for car drivers.
+
+
+
+
+13
+   Angel and Blei (2015a) for example claim that what matters for productivity is not metropolitan wide potential
+access to jobs but to ensure that residents can access their actual job within a reasonable travel time.
+14
+   Other thresholds were tested (5% and 20%). The results for the 5% threshold look very similar to those of the
+10% threshold. For the 20% threshold however, the urban form is closer to that of the overall accessibility
+increasing spatial layout.
+
+                                                                                                              20
+a/ Initial local accessibility
+
+
+
+
+b/ Improved local accessibility
+
+
+
+
+Figure 13: Comparing local accessibilities to formal economic opportunities in the initial and local accessibility improving
+spatial layouts for pedestrians (on the left) and matatu transport (on the right) within an hour
+
+Figure 13 shows that by modifying the spatial distribution of formal economic opportunities and
+residents it is possible to increase the number of areas within Nairobi County where Nairobians have
+access to at least 10% of countywide economic opportunities within an hour. The number of cells
+where local accessibility is above 10% increases from 200 to 337 for pedestrians (from 27% to 46% of
+Nairobi County area) and from 325 to 449 for matatu riders (from 44% to 61% of Nairobi County area).
+Accounting for population changes, the hill climbing procedure yields spatial layouts which can
+increase local accessibility for pedestrians from 63% to 91% of residents with access to at least 10% of
+formal economic opportunities and for matatu riders from 80% to 97% within an hour15.
+
+
+
+
+15
+  Shares of residents with access to at least 10% of economic opportunities evolve like follows: pedestrians: from
+0%, 22%, 63% to 0%, 75%, 91% for the 30, 45 and 60 minute thresholds; matatu riders: 1%, 45%, 80% to 16%,
+81%, 97% for the 30, 45 and 60 minute thresholds; for car drivers/riders: 88%, 98%, 99% to 99%, 100% and 100%.
+
+                                                                                                                        21
+a/ Initial spatial layout
+
+
+
+
+b/ Local accessibility improving spatial layout for pedestrians
+
+
+
+
+c/ Local accessibility improving spatial layout for matatu transport
+
+
+
+
+Figure 14: Distribution of formal economic opportunities (left) and population (right) in the initial and local accessibility
+improving spatial layouts for pedestrians or matatu transportation
+
+It can be seen from Figure 14 that when the objective is to increase the share of residents that have
+access to a “reasonable” amount of economic opportunities, the resulting spatial patterns (in panel b/
+and c/ of Figure 14) display much higher levels of dispersion mostly in economic opportunities but also
+to a lesser extent in population compared to the highly monocentric and concentrated initial spatial
+layout. This can be seen from the scattering of green colored cells representing high levels of economic
+opportunities. Simulations therefore confirm that increasing mixed land uses can improve local
+accessibility levels to some economic opportunities. This is not surprising as it locally improves the job-
+housing balance.
+
+
+
+
+                                                                                                                          22
+The question that follows is whether there is a fundamental tradeoff between focusing on inclusive
+labor markets and the integrated labor market which increases average accessibility to employment
+investigated in section 5.3. Table 5 provides some relevant results.
+
+   Share of Nairobi’s opportunities accessible within a given time-frame depending on the transport
+                  mode used in the current and alternative spatial layouts of Nairobi
+                       Cars                     Matatus + walking                 Walking only
+                          Local       Aggregate                  Local       Aggregate                  Local       Aggregate
+             Initial                                Initial                                 Initial
+                         access        access                   access        access                   access        access
+ <30 mins     31%         23%            55%         4%           4%             7%          3%          3%             5%
+ <45 mins     58%         46%            83%         10%         12%            21%          7%          9%            13%
+ <60 mins     77%         71%            96%         20%         17%            42%         11%         11%            21%
+Table 5: Comparison of average share of accessible formal economic opportunities in the initial spatial layout, in the local
+accessibility improving spatial layout and in the aggregate accessibility improving spatial layout
+
+Table 5 shows the average share of accessible jobs in Nairobi County in the initial spatial layout and
+the two alternatives which have been discussed in this paper: the aggregate accessibility improving
+and the local accessibility improving spatial layouts. There are two important messages that come out
+from these numbers. First, the local accessibility improving spatial pattern performs less well on
+average than the aggregate accessibility improving spatial pattern in connecting people and
+opportunities for all modes and all time thresholds and for a given transportation network. For the 60
+minute time threshold the figures read 21% of accessible opportunities vs 11% for pedestrians, 42% vs
+17% for matatus riders and 96% vs 71% for car passengers. Second, with two exceptions (for
+pedestrians and matatu riders for the 45 minute threshold) the local accessibility improving scenario
+does not perform better and sometimes worse (for car drivers/passengers for all time thresholds and
+for matatu riders for the 60 minute threshold) than the initial baseline in providing residents with
+overall access to opportunities. Nairobi planners and policy makers should therefore be aware of the
+trade-off that exists between locally promoting, through land use planning decisions, a balance
+between jobs and housing and a unified and thick countywide labor market. Whereas the first option
+can provide some measure of access to economic opportunities, it might fail to deliver a strong
+integrated labor market and hence hinder an efficient pooling of workers and employers which is one
+channel through which agglomeration economies are achieved.
+
+5.4.2 With agglomeration economies
+Here the idea to be investigated is associated with the intuition that planning options which would
+favor access to a reasonably sized labor market instead of to all opportunities could result in more
+employment options for many residents but also decrease the possibility of achieving industrial or
+commercial clusters of a sufficient size to reap the benefits of increasing returns and knowledge spill-
+overs. To represent these agglomeration economies we will associate a bonus to grid cells neighbored
+by cells with high formal employment opportunity counts. This is done in a simplified manner by
+calculating the sum of formal economic opportunities within a 3km radius of each pixel and by
+associating a share of this sum (typically 5% in this exercise) to the pixel. The total amount of jobs in
+Nairobi County will therefore vary depending on the distribution of employment opportunities in the
+alternative scenarios. The more clustered the employment areas (the pixels), the higher the absolute
+amount of economic opportunity in Nairobi. In terms of accessibility, this exercise will tend to favor
+short travel times to large employment zones. While there are many other ways of representing the
+
+
+
+
+                                                                                                                         23
+agglomeration economies associated with intra-metropolitan area firm clustering16 and the choice of
+the parameters can also be discussed (Gaigné, Riou, and Thisse 2013; Lucas and Rossi-Hansberg 2002),
+this exercise nonetheless captures the idea that employment density and firm clustering are
+productivity enhancing.
+
+a/ Initial spatial layout
+
+
+
+
+b/ Local accessibility improving spatial layout for pedestrians
+
+
+
+
+c/ Local accessibility improving spatial layout for matatu transport
+
+
+
+
+Figure 15: Distribution of formal economic opportunities (left) and population (right) in the initial and local accessibility
+improving spatial layouts for pedestrians or matatu transportation building in agglomeration economies
+
+It can be seen from Figure 15 that the absolute amount of formal economic opportunities changes with
+the introduction of agglomeration economies with higher maximums and many less cells with no
+opportunities. However, the conclusions that we reach as to the distribution of households and
+
+16
+  For example, we could have introduced a distance decay function to weigh the benefits of employment
+opportunities differently according to the distance to any given pixel.
+
+                                                                                                                            24
+economic opportunities in the local accessibility improving scenarios only marginally change compared
+to the maps presented in section 5.4.1 for local accessibility without agglomeration economies. We
+can however observe slightly less dispersed employment opportunities and more polycentric patterns
+as the agglomeration economies favor clustering of economic activity.
+
+Angel and Blei (2015a; 2015b) rightfully claim that self-organization processes ensure that as
+metropolitan areas grow, they also become more productive in a large part because commuting costs
+do not increase at the same pace as population nor land consumption. We concur with this analysis
+and have ourselves provided indications (see section 5.2) that the spatial layout of Nairobi County is
+the result of a complex self-organization process where accessibility to economic opportunities and
+commuting costs play a central role in the location of residents and economic opportunities. Angel and
+Blei demonstrate for U.S. cities that there are three processes which can explain why commuting costs
+only marginally increase with population: “increases in population density, locational adjustments of
+residences and workplaces to be within tolerable commute range of each other and increases in
+commuting speeds brought about by shifts to faster roads and transit systems”.
+
+There are a few differences which we however believe deserve a specific discussion. A main difference
+between our study and Angel and Blei’s is that we focus on potential accessibility whereas theirs looks
+at actual pairs of residences and jobs. We believe that focusing on potential accessibility makes sense
+in the Nairobi context for at least three reasons: 1/ when land markets are imperfect (high transaction
+costs involved in land buying/selling, unclear land titles…), as is often the case in developing country
+cities, moving costs for firms or residents are high which indicates that intra-urban locational
+adjustments to remain within reasonable travel times of jobs may not be possible or not smooth nor
+costless. Therefore, if and when one workplace moves, there is value in having access to a wider array
+of employment opportunities within a given time frame to increase the employer/worker selection
+process. 2/ In cities where unemployment levels are high, the spatial mismatch literature (Gobillon,
+Selod, and Zenou 2007) shows that spatial isolation from large job pools can diminish employment
+outcomes of residents in part because geographic segregation and low accessibility increases job
+search costs. 3/ Part time jobs – whether formal or informal – are widespread in developing country
+cities and increasingly so in the developed world. Having access to more than one employment
+opportunity is therefore central.
+
+Angel and Blei also advocate that more transport connections are needed and that there should be a
+focus on increasing travel speeds. We agree in part with this statement, and Nairobi, suffers crippling
+congestion costs which need to be addressed. But many developing country cities also face huge
+challenges in terms of housing, sanitation and access to basic services which are worsened by
+enormous population influxes with only limited financial capacity to cope. And transportation
+investments – although necessary – are hugely costly. There is therefore value in investigating options
+which could increase employment accessibility at lower costs. We believe smart planning which would
+be attentive to residential access to economic opportunities could provide at least part of the answer.
+
+
+6 Conclusions
+This study has demonstrated that land-use change can substantially contribute to the creation of a
+unified and deep labor market in Nairobi even in the absence of investments in transportation
+networks and in the building stock. Our central result is that the share of jobs that can be accessed
+
+
+                                                                                                     25
+within an hour doubles from 11% to 21% and from 21% to 42% for pedestrian and matatu users
+respectively with alternative spatial layouts. Achieving such an outcome is central to reaping benefits
+from agglomeration economies by allowing matching and sorting between potential employers and
+workers. The long travel times associated with very high shares of walking and reliance on matatus
+currently displayed in Nairobi are indeed indications of a fragmented labor market where simple
+geographic proximity is outweighed by commuting costs. This lack of accessibility has negative
+consequences for productivity, as argued throughout this paper, but also for livability as they are
+indications that in order to remain within reasonable travel times of economic opportunities,
+households may be willing to compromise on housing conditions and access to basic services.
+
+Several other findings emerge from our analysis. First, accessibility is already a central determinant of
+the locational decisions of households and employers. This is demonstrated by Nairobi’s current spatial
+layout largely outperforming 10,000 random counterfactuals in terms of aggregate accessibility to
+employment opportunities. This finding supports urban economic theories, beginning with Alonso
+(1964), which aim to explain the spatial distribution of people and land rents in urban areas as a
+tradeoff between the proximity to jobs and larger associated housing costs. Carefully designed plans
+coordinated with current and future transportation networks can facilitate the search for accessible
+locations, thereby allowing agglomeration economies to emerge (Rossi-Hansberg 2004). Second, the
+promotion of spatial layouts that would provide some minimum level of employment accessibility to
+as many households as possible would lead to small scale local labor markets at the expense of an
+integrated labor market. We interpret this as a tradeoff between equity and efficiency or in other terms
+between inclusive and efficient labor markets. However, our simulations also show that winners from
+spatial reorganizations aimed at increasing employment accessibility at large are far more numerous
+than losers. Winners’ gains in terms of accessible jobs are also larger than losers’ losses.
+
+This study explicitly links employment accessibility to intra-city distribution of people and activity. As
+such, it is, to the best of our knowledge, an innovative attempt to tackle accessibility through a land
+use and planning lens instead of through a more commonly used transportation approach. This
+methodology suffers from some limitations that we hope future work can address. While we detail all
+these limitations extensively in the Appendix, we want to discuss the main drawback briefly here. The
+methodology we employed is a-economic in the sense that it disregards the economic forces which
+guide the structure of an urban area. In particular, it does not account for centripetal congestion forces
+which can take the form of traffic jams, higher land and housing costs and which would tend to
+discourage the concentration of people and activities and the associated increase in accessibility. An
+avenue for future work would be to incorporate our accessibility approach which focuses on land uses
+to an economically founded model that explicitly describes household and employers’ locational
+decisions.
+
+
+
+
+                                                                                                       26
+7 Bibliography
+Alonso, W. 1964. Location and Land Use: Toward a General Theory of Land Rent. Harvard University
+         Press.
+Angel, Shlomo, and Alejandro M. Blei. 2015a. “Commuting and the Productivity of American Cities.”
+         NYU Marron Institute of Urban Management, no. Working paper #19 (January): 1–44.
+———. 2015b. “Commuting and the Spatial Structure of American Cities.” NYU Marron Institute of
+         Urban Management, no. Working paper #20 (January): 1–55.
+Bertaud, Alain. 2014. “Cities as Labor Markets.” Marron Institute on Cities and the Urban
+         Environment, New York University, no. Working paper #2 (February).
+Bright, Eddie A., Amy N. Rose, and Marie L. Urban. 2013. “Landscan 2012.” Data. Oak Ridge National
+         Laboratory. http://www.ornl.gov/landscan/.
+Brueckner, Jan K. 1987. “Chapter 20 The Structure of Urban Equilibria: A Unified Treatment of the
+         Muth-Mills Model.” In Handbook of Regional and Urban Economics, edited by Edwin S. Mills,
+         Volume 2:821–45. Urban Economics. Elsevier.
+         http://www.sciencedirect.com/science/article/pii/S1574008087800068.
+Cervero, Robert. 2001. “Efficient Urbanisation: Economic Performance and the Shape of the
+         Metropolis.” Urban Studies 38 (10): 1651–71. doi:10.1080/00420980120084804.
+———. 2002. “Built Environments and Mode Choice: Toward a Normative Framework.”
+         Transportation Research Part D: Transport and Environment 7 (4): 265–84.
+Cervero, Robert, and Kara Kockelman. 1997. “Travel Demand and the 3Ds: Density, Diversity, and
+         Design.” Transportation Research Part D: Transport and Environment 2 (3): 199–219.
+         doi:10.1016/S1361-9209(97)00009-6.
+Ciccone, Antonio, and Robert E. Hall. 1996. “Productivity and the Density of Economic Activity.” The
+         American Economic Review 86 (1): 54–70.
+Columbia University, CSUD. 2010. “Nairobi Land Use Map, 2010.” Center for Sustainable Urban
+         Development, Columbia University.
+         https://nairobigismaps.wikischolars.columbia.edu/2010+Land+Use+Data.
+Consulting Engineering Services (India) Private Limited. 2010. “Feasibility Study and Technical
+         Assistance for Mass Rapid Transit System for the Nairobi Metropolitan Region.”
+Duranton, Gilles, and Diego Puga. 2004. “Micro-Foundations of Urban Agglomeration Economies.”
+         Handbook of Regional and Urban Economics 4: 2063–2117.
+Fujita, Masahisa. 1989. Urban Economic Theory: Land Use and City Size. Cambridge, New York:
+         Cambridge University Press.
+Gaigné, Carl, Stéphane Riou, and Jacques-François Thisse. 2013. “How to Make the Metropolitan
+         Area Work? Neither Big Government, nor Laissez-Faire.” Working Paper.
+Geroliminis, Nikolas, and Carlos F. Daganzo. 2008. “Existence of Urban-Scale Macroscopic
+         Fundamental Diagrams: Some Experimental Findings.” Transportation Research Part B:
+         Methodological 42 (9): 759–70.
+Glaeser, Edward L., and Matthew E. Kahn. 2004. “Sprawl and Urban Growth.” In Handbook of
+         Regional and Urban Economics, edited by J. Vernon Henderson and Jacques-François Thisse,
+         Volume 4:2481–2527. Cities and Geography. Elsevier.
+Gobillon, Laurent, Harris Selod, and Yves Zenou. 2007. “The Mechanisms of Spatial Mismatch.” Urban
+         Studies 44 (12): 2401–28. doi:10.1080/00420980701540937.
+Gulyani, Sumila, Debabrata Talukdar, and Darby Jack. 2010. “Poverty, Living Conditions, and
+         Infrastructure Access: A Comparison of Slums in Dakar, Johannesburg, and Nairobi.” World
+         Bank Policy Research Working Paper Series 5388.
+Hamilton, Bruce W., and Ailsa Röell. 1982. “Wasteful Commuting.” The Journal of Political Economy,
+         1035–53.
+JICA. 2006. “The Study on Master Plan for Urban Transport in the Nairobi Metropolitan Area in the
+         Republic of Kenya.” Japan International Cooperation Agency.
+———. 2013. “JICA Nairobi Personal Travel Survey.” Japan International Cooperation Agency.
+
+                                                                                                 27
+———. 2014. “The Project on Integrated Urban Development Master Plan for the City of Nairobi in
+         the Republic of Kenya (Draft).” Japan International Cooperation Agency.
+Kain, John F. 1968. “Housing Segregation, Negro Employment, and Metropolitan Decentralization.”
+         The Quarterly Journal of Economics, 175–97.
+Klopp, Jacqueline, Sarah Williams, Peter Waiganjo, Daniel Orwa, and Adam White. 2015. “Leveraging
+         Cellphones for Wayfinding and Journey Planning in Semi-Formal Bus Systems: Lessons from
+         Digital Matatus in Nairobi.” In Planning Support Systems and Smart Cities, edited by Stan
+         Geertman, Jr. Ferreira Joseph, Robert Goodspeed, and John Stillwell, 227–41. Cham: Springer
+         International Publishing. http://dx.doi.org/10.1007/978-3-319-18368-8_12.
+Kumar, Ajay, and Fanny Barrett. 2008. “Stuck in Traffic: Urban Transport in Africa.” AICD Background
+         Paper.
+Lucas, Robert E., and Esteban Rossi-Hansberg. 2002. “On the Internal Structure of Cities.”
+         Econometrica 70 (4): 1445–76.
+Ma, Kang-Rae, and David Banister. 2006. “Excess Commuting: A Critical Review.” Transport Reviews
+         26 (6): 749–67.
+Melo, Patricia C., Daniel J. Graham, David Levinson, and Sarah Aarabi. 2013. “Agglomeration,
+         Accessibility, and Productivity: Evidence for Urbanized Areas in the US.” In Paper Submitted
+         for the Transportation Research Board 92nd Annual Meeting.
+Niedzielski, Michael A. 2006. “A Spatially Disaggregated Approach to Commuting Efficiency.” Urban
+         Studies 43 (13): 2485–2502.
+NORC at the University of Chicago. 2013. “Kenya State of the Cities Baseline Survey.” NORC.
+O Kelly, Morton E., and Wook Lee. 2005. “Disaggregate Journey-to-Work Data: Implications for
+         Excess Commuting and Jobs-Housing Balance.” Environment and Planning A 37 (12): 2233.
+Peralta Quiros, Tatiana. 2015. “Mobility for All: Getting the Right Urban Indicator.” Connections -
+         Transport & ICT, no. Note 25 (November).
+         http://pubdocs.worldbank.org/pubdocs/publicdoc/2015/11/67931446737085683/TransportI
+         CT-Newsletter-Note25a-Nov-highres.pdf.
+Prud’homme, Rémy, and Chang-Woon Lee. 1999. “Size, Sprawl, Speed and the Efficiency of Cities.”
+         Urban Studies 36 (11): 1849–58. doi:10.1080/0042098992638.
+Quirós, Tatiana Peralta, and Shomik Raj Mehndiratta. 2015. “Accessibility Analysis of Growth Patterns
+         in Buenos Aires, Argentina: Density, Employment, and Spatial Form.” Transportation
+         Research Record: Journal of the Transportation Research Board 2512 (November): 101–9.
+         doi:10.3141/2512-12.
+Rosenthal, Stuart S., and William C. Strange. 2004. “Chapter 49 Evidence on the Nature and Sources
+         of Agglomeration Economies.” In Handbook of Regional and Urban Economics, 4:2119–71.
+         Elsevier. http://linkinghub.elsevier.com/retrieve/pii/S1574008004800063.
+Rossi-Hansberg, Esteban. 2004. “Optimal Urban Land Use and Zoning.” Review of Economic Dynamics
+         7 (1): 69–106. doi:10.1016/S1094-2025(03)00056-5.
+Small, Kenneth A., and Shunfeng Song. 1992. “‘ Wasteful’ commuting: A Resolution.” Journal of
+         Political Economy, 888–98.
+Venables, A. J. 2015. “The Developing City: Urban Form and Urban Function.” Draft.
+Wheaton, William C. 1974. “A Comparative Static Analysis of Urban Spatial Structure.” Journal of
+         Economic Theory 9 (2): 223–37. doi:doi: DOI: 10.1016/0022-0531(74)90068-4.
+White, Michelle J. 1988. “Urban Commuting Journeys Are Not ‘Wasteful.’” Journal of Political
+         Economy 96 (5): 1097–1110.
+Williams, Sarah, Adam White, Peter Waiganjo, Daniel Orwa, and Jacqueline Klopp. 2015. “The Digital
+         Matatu Project: Using Cell Phones to Create an Open Source Data for Nairobi’s Semi-Formal
+         Bus System.” Journal of Transport Geography 49 (December): 39–51.
+         doi:10.1016/j.jtrangeo.2015.10.005.
+World Bank. 2009. World Development Report 2009: Reshaping Economic Geography. World
+         Development Report 2009. Washington, D.C.: World Bank.
+
+
+                                                                                                  28
+———. 2016. “Kenya Urbanization Review.” Washington, DC.: World Bank.
+     https://openknowledge.worldbank.org/handle/10986/23753.
+
+
+
+
+                                                                       29
+Appendix: Data and methodological issues
+This study relies on a relatively small number of assumptions and simplifications to work around the
+absence of data in some areas. It also constitutes only a first step towards a more comprehensive tool
+to integrate land use changes as a policy relevant option to achieve thicker and more efficient labor
+markets. As such some methodological choices and data related issues deserve to be discussed.
+
+Data choices:
+   Imperfect data about number and location of jobs: the amount and location of formal economic
+    opportunities are inferred from a detailed land use map, associating them with the quantity of
+    land used for industrial, commercial and public utility purposes. This is suboptimal as it does not
+    provide exact information about job numbers and location. The correlation between land uses and
+    economic opportunities is loose: it is indeed uneasy to associate number of square meters used
+    for industrial purposes with a number of industrial jobs. The same applies for commercial activities
+    etc... But even accepting the bold idea that job numbers are proportional to number of square
+    meters, the land use map used in this study does not provide information about building heights,
+    only land plot size. Therefore, one storey buildings are considered in the same way as six storey
+    buildings. The strong assumptions that we make are the unfortunate consequence of the lack of
+    data. We will however pursue efforts aimed at identifying or producing more accurate sources for
+    counting and locating formal jobs in the urban area of Nairobi County. As a follow up to this study
+    the team will apply the same methodology to assess accessibilities and their potential
+    enhancements through land use occupation changes in Kampala, Uganda. In Kampala, detailed
+    registries on employment quantities and locations exist and will increase the accuracy of our
+    conclusions.
+   Other public or collective transportation options besides matatus: In parallel to the informal
+    minibus system – matatus – discussed in this paper, there exists both a formal bus system and
+    railway commuter service in Nairobi. Buses operate on roughly 67 routes and carry a smaller
+    percentage of the population than matatus (350,000-400,000 passengers per day). With
+    competing companies, bus service is not provided in an efficient manner, maintenance suffers,
+    and profitability margins are low. Contributing to the inefficiencies of the public transport system
+    is the fact that many of these buses travel along the same routes as the matatus, competing for
+    limited space in the already congested CBD (Consulting Engineering Services (India) Private Limited
+    2010). Also complicating matters is that routes have been optimized to maximize efficiency for the
+    operator and not coordinated to an efficient level in maximizing passenger comfort or
+    convenience. Nairobi was founded as a railway town, and its rail infrastructure remains well
+    connected to the city center. Rift Valley Railways (RVR) offers twice daily service on five commuter
+    rail routes in the Nairobi metropolitan region, averaging 2,300 to 6,900 passengers per route.
+    While commuter rail is an economical mode of public transport, at present it serves only a tiny
+    fraction of the daily commuting needs of the Nairobi general public. The most commonly cited
+    reasons by Nairobians for not utilizing the system are concerns with safety and comfort, along with
+    protracted travel times and difficult access to stations (Consulting Engineering Services (India)
+    Private Limited 2010). Both these transport modes carry only a fraction of daily commuters in
+    Nairobi so their initial omission is not too problematic; in the future however the team will look to
+    integrate these networks into the analysis.
+   Monetary costs of the various transportation options: The analysis conducted in this study only
+    considers transport times in determining accessibilities. A more complete analysis would reason in
+
+                                                                                                      30
+    terms of complete costs, accounting both for time opportunity costs and monetary costs. Lack of
+    data prevents the team at this stage from performing this more complete investigation. In
+    particular, matatu fares vary depending on the time of the day, the level of congestion, the length
+    of the trip, weather conditions and so on. It is therefore difficult to ascertain with reasonable
+    confidence the monetary costs of a matatu trip.
+
+Methodological limitations:
+   Representation of economic forces in location decision behaviors: In the model presented and
+    discussed above there is no representation of household and formal employers’/firms’ behavior
+    when deciding where to locate. As a result of this omission there is no possibility of capturing the
+    real estate or land market which is both a result of and a factor in household and economic activity
+    location decisions. High land prices which can result from high demand might prevent some
+    activities from locating in some areas and instead push them towards less desirable (and hence
+    less accessible) locations. In this respect, the model and results presented above overlook an
+    important location decision factor and can be tagged as a-economic, thereby representing an
+    informative yet schematic and maybe idealized outcome. A critical avenue for policy oriented
+    research, which is beyond the scope of the present effort, would be to build an economically
+    grounded location decision model for both firms and households which could represent optimal
+    land use occupation with respect to economic opportunities.
+   Representation of local characteristics: the desirability of certain locations for their inherent
+    qualities or conversely the disamenities associated with proximity to certain areas (industrial
+    locations for example) are also disregarded and could play a role in local sorting of households and
+    firms. Ideally, the economically grounded location model for firms and households advocated for
+    above would capture the role of amenities. In its absence however, future work along the lines of
+    this study could integrate the inherent desirability or undesirability of certain locations through
+    simple coefficients encouraging or discouraging certain land use patterns.
+   Addressing congestion: Although congestion is accounted for in this study in the baseline situation
+    – the current spatial layout of Nairobi – through realistic transportation speeds, the impact of
+    changing the location of households and formal economic opportunities on these congestion levels
+    is not represented. However, changing the spatial pattern of Nairobi will also modify the direction
+    and intensity of commuting flows, possibly saturating some road links in some areas whilst
+    relieving congestion in some others. The aggregate accessibility improving scenarios both display
+    a higher concentration of households and formal economic opportunities in the vicinity of the city
+    center which is likely to overall increase congestion in these areas. The model, however, falls short
+    of integrating this feedback loop when calculating accessibilities. A future improvement would be
+    to endogenously estimate congestion levels based on commuting flows on the basis of Bureau of
+    Public Roads (BPR) speed-flow curve or a Macroscopic Fundamental Diagram (Geroliminis and
+    Daganzo 2008).
+
+
+
+
+                                                                                                      31
+

@@ -1,0 +1,1516 @@
+                                                      WPS7925
+
+
+Policy Research Working Paper                        7925
+
+
+
+
+       The Public/Private Wage Differential
+     in the Land of Gross National Happiness
+                                Achim D. Schmillen
+
+
+
+
+Social Protection and Labor Global Practice Group
+December 2016
+Policy Research Working Paper 7925
+
+
+  Abstract
+  In Bhutan, the public sector is usually seen as the most                           into labor force participation and the public or private
+  desirable employer. This study asks if this can be attributed                      sector. The study finds that the public/private wage dif-
+  to public sector employees receiving higher wages than                             ferential is sizeable but can entirely be accounted for by
+  comparable private sector workers. To answer the ques-                             observable characteristics. At the same time, there is strong
+  tion, the study combines an Oaxaca-type decomposition                              evidence that preferences for public sector jobs are
+  of wage differentials into characteristics and coefficients                        caused by pronounced intersectoral differences in over-
+  effects with a multinomial logit model for self-selection                          all compensation packages, in particular fringe benefits.
+
+
+
+
+  This paper is a product of the Social Protection and Labor Global Practice Group. It is part of a larger effort by the World
+  Bank to provide open access to its research and make a contribution to development policy discussions around the world.
+  Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The author may be contacted
+  at aschmillen@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+       The Public/Private Wage Differential in the Land of Gross National Happiness
+
+
+                                       Achim D. Schmillen
+
+
+    The World Bank; 1818 H St., NW; Washington, DC 20433; USA; phone: +1 (202) 473 1000;
+                               email: aschmillen@worldbank.org
+
+
+
+
+JEL-Classification: J31, J45, O15
+Keywords: public/private wage differential, sector selection, decomposition methods, Bhutan
+
+
+
+
+Acknowledgements: I thank Genevieve Boyreau and Pablo Gottret for guidance and Laurent
+Bossavie, Urmila Chatterjee, Afra Chowdhury, Ira Gang, Cem Mete, Jasmine Rajbhandary and Martin
+Rama for helpful comments and suggestions. Special thanks are due to the officials of Bhutan’s
+Ministry of Labour and Human Resources for their productive cooperation throughout this project
+and for their comments on a previous version of this paper.
+1.      Introduction
+
+All over the world, public sector labor markets and especially the determination of wages in the public
+sector have attracted a great deal of attention by both researchers and policy makers. As noted by
+Gregory and Borland (1999), this attention seems to be largely due to the significant size of many
+public sector labor markets and also to their fundamental differences from private sector labor
+markets. With regard to wage determination, competition imposes discipline on (many) private sector
+wages whereas (many) public sector wages are not governed by market forces but are instead
+influenced by political developments, government priorities and similar non-market processes. In an
+early contribution, Fogel and Lewin (1974) establish that de jure public sector workers in many
+jurisdictions are supposed to obtain wages equivalent to those received by private sector workers
+performing comparable work. While Fogel and Lewin (1974) argue that this “prevailing wage
+principle” is sensible in terms of both equity and efficiency they note that de facto it is often violated.
+
+        This study asks whether public sector wages in Bhutan follow the prevailing wage principle or
+if instead systematic differences between the wages of the country’s public and private sector workers
+exist. To answer this question, a three-step procedure is used that makes it possible to (i) account for
+possible self-selection into labor force participation and into public or private sector work, (ii) estimate
+flexible models of wage determination for the public and the private sector and (iii) investigate the
+proportion of the differences in the average levels of hourly wages between public and private sector
+workers that is accounted for by differences in the level of individuals’ characteristics (the
+“characteristics effect”) and by differences in the impact on wages of these characteristics (the
+“coefficients effect”), as originally suggested by Oaxaca (1973).
+
+The three-step procedure reveals that average public sector wages are significantly higher than average
+wages in the private sector. Quantile regressions show that the public/private wage differential is
+especially pronounced in the left tail of the wage distribution. However, in the mean and across most
+of the wage distribution, the public/private wage differential can entirely be accounted for by
+differences in observable characteristics between public and private sector workers (in particular by
+differences in the average educational attainment and industrial structure between public and private
+sector). Therefore, the study finds that in the narrow sense of the word, i.e., as far as wages and not
+overall compensation packages are concerned, Bhutan’s public sector does in fact follow the prevailing
+wage principle. However, it has to be noted that Bhutan’s public sector workers enjoy more extensive
+
+
+                                                    -2-
+fringe benefits, better access to pensions and other social insurances, more job security and higher
+prestige. Therefore, overall compensation packages received by Bhutan’s public sector workers tend
+to be far more generous than those offered in the private sector. This also explains why for many in
+Bhutan the public sector is the most desirable employer.
+
+       This study aims to make three contributions. First, it is among the very first empirical studies
+on Bhutan’s labor market and the very first one documenting patterns of sector selection, wage
+structure and wage determinants. The issue of public/private wage differentials is particularly relevant
+for Bhutan as the country’s public sector is not only seen as the sector of choice by many job seekers
+but also large, comprising almost 50 percent of employment outside agriculture. Because three
+hydropower projects currently under construction that together have a cost of 150 percent of Bhutan’s
+GDP will come on stream in the coming years, incentives to expand the size of the public sector even
+further are likely to rise as are incentives to increase the generosity of the compensation packages
+offered to public sector workers. Second, the study adds to the literature on public/private wage
+differentials in development countries. While quite a bit is known on this issue for developed and
+transition economies, knowledge is still limited or even non-existent for large parts of the developing
+world. Finally, by using a refined three-step procedure that combines the decomposition method
+introduced by Oaxaca (1973) with the multinomial logit model for sector self-selection suggested by
+Bourguignon, Fournier and Gurgand (2007) the study makes a methodological contribution.
+
+       This study is closely related to the microeconomic literature on public/private wage
+differentials. Ehrenberg and Schwartz (1986), Bender (1998) and Gregory and Borland (1999) review
+early contributions largely with respect to developed countries. The body of literature focusing on
+transition economies is surveyed in Lausev (2014). The literature for developing countries is more
+scattered. Pioneering analyses include those by Lindauer and Sabot (1983) for Tanzania, van der Gaag
+and Vijverberg (1988) for Côte d'Ivoire, Stelcner, van der Gaag and Vijverberg (1989) for Peru and
+Terrell (1993) for Haiti. More recently, empirical investigations of the public/private wage differential
+have been conducted for Vietnam (Bales and Rama, 2001), China (Chen, Démurger and Fournier,
+2005, and Démurger, Li and Yang, 2012), Turkey (Tansel, 2005), India (Glinskaya and Lokshin, 2007,
+and Saha, Roy and Kar, 2014), Pakistan (Aslam and Kingdon, 2009), different Latin American
+economies (Mizala, Romaguera and Gallegos, 2011), again Peru (Coppola and Calvo-Gonzales, 2011)
+and a handful of other countries. As noted by Lausev (2014), the relevant literature typically finds that
+
+
+                                                  -3-
+average public sector wage premiums in developing countries are positive and larger than those in
+developed economies.
+
+        The rest of this paper is structured as follows: Section 2 provides background on the economic
+situation in Bhutan. Section 3 contains a description of the Bhutan Labour Force Survey (BLFS) 2014,
+the data set used henceforth. The same section also introduces the analytical strategy and describes
+the econometric model underlying the three-step procedure. The main empirical analysis follows in
+Section 4. The section consists of four parts: First, a compilation of descriptive statistics on wages,
+fringe benefits and other variables. Second, an analysis of self-selection into labor force participation
+and public or private sector as well as of the determinants of wages in either sector and a
+decomposition of the selection-adjusted difference in average wages between public and private sector
+into characteristics and coefficients effects. Third, an appraisal of whether results are robust to
+variations in the empirical setup. Fourth, similar decompositions for different quantiles of the wage
+distribution. Finally, Section 5 discusses possible implications for research and policy and concludes.
+
+
+
+2.      Background
+
+Bhutan is a landlocked country in South Asia bordering China to the North and India to the West,
+South and East. According to NSB (2014), Bhutan’s population in 2014 was around 745,000 and its
+land area covers 38,394 square kilometers. Thus, Bhutan has a population in the same order of
+magnitude as the Comoros or Guyana and covers a land area similar to that of the Netherlands or
+Switzerland. Bhutan’s official currency is the ngultrum or Nu. The Nu is pegged to the Indian rupee at
+par; in late 2014 one US dollar was worth about Nu 63.5. Administratively, Bhutan’s territory is divided
+into 20 dzongkhags (administrative districts). The 20 dzongkhags are further divided into 205 gewogs
+(groups of villages).
+
+        Bhutan is maybe most famous for introducing and popularizing the concept of Gross National
+Happiness (GNH), now enshrined as a principle of state policy in Article 9 of the country’s
+constitution. Exact characterizations of GNH differ but one widely cited publication defines it as a
+“multi-dimensional development approach that seeks to achieve a harmonious balance between
+material well-being and the spiritual, emotional and cultural needs of our society” (GNHC, 2012, p.
+3). Over the last decades, Bhutan has seen rapid and sustained economic growth. In 2014, its GDP
+per capita reached US dollar 2,379 according to the World Development Indicators. Over the last
+
+                                                  -4-
+decades, Bhutan has also achieved broad-based and inclusive poverty reduction. As noted by NSB
+and World Bank (2014), between 2007 and 2012 the proportion of the population with consumption
+below the official poverty line dropped by half and Bhutan was able to practically eradicate extreme
+poverty. Multidimensional poverty indices and indicators related to education and health outcomes
+have also seen significant improvements.
+
+        With regard to Bhutan’s labor market, overall conditions are more favorable in the country
+than in most other South Asian economies. For instance, data from MoLHR (2015) show that in 2014
+Bhutan’s overall unemployment rate stood at 2.6 percent. Besides, the gaps between male and female
+labor force participation and employment rates have long been much narrower than in many other
+South Asian economies. While the overall education level of Bhutan’s labor force continues to be
+comparatively low, it has been improving rapidly due to a trend toward almost universal enrollment
+in primary education, increasing enrollment rates in secondary education, and an ever greater emphasis
+on tertiary education.
+
+        At the same time, Bhutan faces a number of significant labor market challenges and
+bottlenecks. These include high levels of informality and underemployment (in particular in rural
+areas), a limited formal social protection system and relatively elevated rates of unemployment for
+certain parts of the labor force, especially for young, well-educated city dwellers. Specific labor market
+challenges relate to the interplay between the public and the private sector. A vibrant private sector
+has yet to emerge in Bhutan. As documented in MoLHR (2015), the country’s public sector comprises
+almost 50 percent of employment outside agriculture. It also employs two-thirds of workers with
+tertiary education. In addition to that, the public sector is widely perceived as the preferred employer,
+including among educated youth who aspire to white-collar jobs. In a recent survey among
+unemployed youth in Bhutan, 50.3 percent of respondents said they would prefer to work for the
+government and another 32.4 percent aspired for a job in a state-owned enterprise (MoLHR and
+UNDP, 2014). Similar data from the 2014 edition of the Bhutan Labour Force Survey confirm that
+the majority of unemployed persons would like to work in the public sector. Highly educated persons
+are particularly keen to find a job in the public sector and the perceived superior salary, good benefit
+packages and high job security of public sector jobs are cited among the main reasons for why work
+in the public sector is so attractive.
+
+
+
+
+                                                   -5-
+       With major hydropower projects coming on stream in the next few years, Bhutan’s
+macroeconomic environment is expected to change radically in a short period of time. This will
+potentially exacerbate the already existing imbalances between public and private sector. The three
+hydropower projects currently under construction in Bhutan together have a cost of 150 percent of
+the country’s GDP. Already today, hydropower contributes 30 percent of the Royal Government of
+Bhutan’s domestic revenues and this figure is expected to reach 56 percent by 2024/25. While
+Bhutan’s hydropower developments are a huge opportunity for the country’s development, they also
+carry risks. In particular, they are expected to lead to an appreciation of real exchange rates through
+higher wages and land and real estate prices. This “Dutch disease” phenomenon will make it ever
+harder for the private sector to compete in the tradable sector. Furthermore, because the hydropower
+revenues will enter Bhutan through the government budget, the incentives to expand the size of the
+public sector and increase public sector pay and benefits are likely to rise. This might limit
+opportunities for the private sector even in the non-tradable part of the economy.
+
+
+
+3.     Data, Analytical Strategy and Econometric Model
+
+3.1.   Data
+
+The analysis relies on data from the 2014 edition of the Bhutan Labour Force Survey (BLFS),
+described in detail in MoLHR (2015). The BLFS is a household survey that is conducted annually by
+the Department of Employment of Bhutan’s Ministry of Labour and Human Resources (MoLHR).
+The BLFS covers a nationally representative sample of around 6,000 households in all 20 dzongkhags
+of Bhutan. As Bhutan’s urban residents are more heterogeneous than its rural population and
+economic activities in urban centers are more diverse, urban households are oversampled. In 2014,
+the BLFS covered 1,479 rural and 4,440 urban households for a total sample of 5,919 households. On
+average, sampled households contained about four household members resulting in a total sample size
+of 23,587 individuals.
+
+       In each household covered in the BLFS, all questions are answered by one respondent, often
+the household head. Respondents are questioned about variables concerning the household as a whole
+and about socio-demographic and work-related characteristics of all household members. Together
+with items on labor force participation, the core of the BLFS questionnaire encompasses questions
+related to the household members’ current work status and employment history. An additional module
+
+                                                 -6-
+covers housing and asset ownership, risks and coping mechanisms, and coverage of social protection
+programs on the household level. Interviews were done in December 2014 and January 2015. For the
+first time for a large-scale household survey in Bhutan, tablet-based computer-assisted personal
+interviews (CAPI) were conducted. The objective was to improve data quality and streamline data
+analysis. As another measure to assure high data quality, all respondents were asked for their cellphone
+numbers and during a meticulous data cleaning exercise these numbers were used to reach out to
+respondents in case any inconsistencies or missing values had been discovered in the raw BLFS data.1
+
+         The BLFS contains information on household members’ monthly earnings and weekly hours.
+Both variables are available for dependent as well as own-account workers. Under the assumption that
+each month consists of 4.35 weeks this makes it possible to construct a measure for hourly wages.2
+The survey also ascertains whether a worker is employed in the civil service, other government
+agencies, the armed forces or state-owned enterprises (which following ILO, 2009, together constitute
+the public sector), in agriculture or private enterprises (defined henceforth as the private sector) or by
+a non-governmental organization, international non-governmental organization or community service
+organization (a very small group of workers that is henceforth disregarded).
+
+         Additionally, the 2014 edition of the BLFS questions respondents about a wide range of
+household members’ individual characteristics useful for an analysis of wages. These include
+information on labor market characteristics such as whether an individual is a regular paid employee,
+casually paid employee, contract worker, own-account worker or unpaid family worker. Henceforth,
+unpaid family workers and/or workers for whom an hourly wage cannot be discerned will not be
+considered. Comprehensive sectoral information is also available in the BLFS. For the purpose of this
+study, this information is aggregated to the level of 16 broad sectors according to the ISIC Rev. 3
+classification (agriculture, hunting and forestry; fishing; mining and quarrying; manufacturing;
+electricity, gas and water supply; construction; wholesale and retail trade; hotels and restaurants;
+
+
+
+         1   To verify the reliability of the BLFS data, Appendix A compares size, structure and annual average pay of
+Bhutan’s civil service according to the BLFS with administrative data from the country’s Royal Civil Service Commission
+(RCSC, 2014, 2015). While some noteworthy discrepancies between the civil service employment structure according to
+the BLFS data and RCSC (2014) can be documented, the overall size, structure and annual average pay of the civil service
+is similar according to both sources.
+           2 Implicitly, the construction of the measure for hourly wages assumes equal pay structures in the public and the
+
+private sectors. Alternative computations not reported here but available upon request document that the main results of
+Section 4 are robust to instead constructing the wage variable under the assumption that a month consists of four weeks
+for public sector workers and 4.5 weeks for private sector workers (or vice versa).
+                                                           -7-
+Table 1
+Variable definitions
+ Variable                       Definition
+ Hourly wage in Nu              Average monthly earnings from primary job in Nu divided by total hours worked
+                                for the primary job in the past week multiplied by 4.35
+ Regular paid employee          Individual performing any kind of work for wage or salary, in cash or in kind
+ Casual paid employee           Individual working as and when they find a job for which they get paid, in cash or
+                                in kind
+ Contract / piece paid worker   Individual who has a temporary contract to do a particular piece of work but is not
+                                an employee of the company he/she is working for
+ Own-account worker             Individual operating his own enterprise neither employing anybody to operate
+                                his/her enterprise nor being employed by anybody
+ Potential experience           Age minus six for individuals with no or no formal education, age minus years of
+                                schooling minus six for individuals with one to 12 years of schooling, age minus 20
+                                for individuals with undergraduate degree below Bachelor’s degree, age minus 21 for
+                                individuals with Bachelor’s degree, age minus 23 for individuals with graduate
+                                degree, individuals aged 14 or under or 66 or over are not covered
+ Education                      No formal education includes no or no formal education, primary education
+                                includes nursery and/or up to five years of schooling, lower secondary education
+                                includes six to eight years of schooling, middle secondary education includes nine
+                                or ten years of schooling, higher secondary education includes 11 or 12 years of
+                                schooling, lower tertiary education includes undergraduate degree including
+                                Bachelor’s degree, higher tertiary education includes graduate degree (Master’s
+                                degree or higher), religious education is not covered
+ Industry                       Industry classified according to top level of ISIC Rev. 3, wholesale and retail trade
+                                includes wholesale and retail trade and repair of motor vehicles, motorcycles and
+                                personal and household goods, transport and communications includes transport,
+                                storage and communications, real estate and business activities includes real estate,
+                                renting and business activities, public administration and defense includes public
+                                administration and defense and compulsory social security, other service activities
+                                includes other community, social and personal service activities, extra-territorial
+                                organizations and bodies are not covered
+ Location                       20 dzongkhags (Bumthang, Chukha, Dagana, Gasa, Haa, Lhuntse, Mongar, Paro,
+                                Pemagatshel, Punakha, Samdrup Jongkhar, Samtse, Sarpang, Thimphu, Trashigang,
+                                Trashiyangste, Trongsa, Tsirang, Wangdue Phodrang and Zhemgang)
+ Wealth index                   Weighted first principal component factor of variables capturing household
+                                ownership of sofa set, furniture, heater, bukhari, fan, choesham, mobile phone, bicycle,
+                                rice cooker, curry cooker, water boiler, refrigerator, modern stove, microwave oven,
+                                camera / video camera, radio / cassette / CD player, television, VCR / VCD /
+                                DVD player, computer / laptop, rice grinding machine, jewelry, dish antenna /
+                                decoder, lamps / kerosene lamps, foreign bow, electric iron, sewing machine,
+                                washing machine, tractor, bike / scooter, family car as well as the number of pigs,
+                                cattle, yaks, buffaloes, horses, sheep goats and chicken and the acreage of wet land,
+                                dry land and other land owned and whether the household owns its dwelling and
+                                whether the dwelling has electricity
+ Prop. of individuals in        Number of household members aged 14 or under divided by total number of
+ household aged 14 or under     household members
+ Prop. of individuals in        Number of household members aged 66 or over divided by total number of
+ household aged 66 or over      household members
+ Prop. of individuals in        Number of household members in public sector (not counting respective individual)
+ household in public sector     divided by total number of household members minus one
+ Prop. of individuals in        Number of household members in private sector (not counting respective
+ household in private sector    individual) divided by total number of household members minus one
+
+
+
+
+                                                       -8-
+transport and communications; financial intermediation; real estate and business activities; public
+administration and defense; education; health and social work; other service activities; and private
+households).
+
+        Information on socio-demographic characteristics, such as individuals’ age and education are
+included in the BLFS as well. This allows the construction of a variable for potential labor market
+experience. Information on an individual’s location (dzongkhag and urban or rural area) and his or her
+gender and nationality (Bhutanese or not) can also be used. Lastly, the questionnaire contains a series
+of questions on households’ wealth and exact demographic composition. For precise definitions of all
+variables used in the empirical analysis of Section 4, cf. Table 1.
+
+
+
+3.2.    Analytical Strategy and Econometric Model
+
+The microeconomic literature has used a wide range of methods to investigate wage differentials
+between public and private sector workers (cf. Lausev, 2014, for an overview). Among the most
+commonly used methods are “single equation” models and “double equation” models. Single equation
+models are basically wage regressions in the tradition of Mincer (1974) for the whole economy that
+include a public sector dummy variable. For double equation models separate wage regressions are
+run for the public and private sector samples. The main advantage of single equation models is that
+they make corrections for self-selection into labor force participation and specific sectors
+straightforward. In the context of analyzing wage differentials between public and private sector,
+controlling for such self-selection is of paramount importance. On the other hand, double equation
+models are more flexible and allow intercepts and returns to productive characteristics to differ across
+sectors. They can also be an intermediate step for counterfactual decompositions, i.e., for an
+investigation of the proportion of the differences in the average levels of hourly wages between public
+and private sector workers that is accounted for by differences in the level of individuals’
+characteristics (the “characteristics effect”) and by differences in the impact on earnings of these
+characteristics (the “coefficients effect”) as originally suggested by Oaxaca (1973).3
+
+
+
+
+         3 The Oaxaca type decomposition was originally introduced to study racial or gender wage differentials. It has
+
+since been applied to many other areas.
+
+
+                                                         -9-
+        Here, a procedure is used that combines the decomposition method introduced by Oaxaca
+(1973) based on a double equation model with the multinomial logit model for sector self-selection
+suggested by Bourguignon, Fournier and Gurgand (2007):4 The combined procedure makes it possible
+to account for possible self-selection into labor force participation and into public or private sector
+work in a straightforward way, to estimate a flexible double equation model and to conduct a
+counterfactual decomposition of the wage differential between public and private sector. It consists
+of three steps: In the first step, a multinomial logit model for simultaneous selection into labor force
+participation and into the public or private sector is estimated. Second, the correlates of log hourly
+wages are estimated separately for public and private sector workers. Finally, the difference in mean
+hourly wages of the two groups is decomposed into characteristics and coefficients effects.
+
+        The basic model for steps one and two is given by
+
+        (1)                    and
+              ∗
+        (2)                    .
+
+Here	               ,          ,             indicates the sector (in this case public sector, private sector
+                                                                                                            ∗
+or inactivity),    refers to the wage associated with work in a specific sector of employment,                  is a
+discrete choice variable that indicates the choice of a sector of employment.             and     are vectors of
+demographic, institutional, regional or labor-related explanatory variables.           and      are error terms.
+Equation (1) is a wage equation in the tradition of Mincer (1974) and equation (2) an equation for
+simultaneous choice of labor force participation and sector.
+
+        In the most basic double equation model, wage equations for the public and the private sector
+are estimated separately and without consideration for sector self-selection. However, if individuals
+have unobserved characteristics that affect both their choice of employment and their wages, then the
+error terms       and     will be correlated and estimates of         that do not account for self-selection
+biased and inconsistent. To correct for this potential inconsistency, applied research has traditionally
+employed the bias correction method embedded in Lee’s (1983) extension of the Heckman (1979)
+
+
+
+
+        4A combination of the selection correction strategy by Bourguignon, Fournier and Gurgand (2007) and
+decomposition by Oaxaca (1973) has previously been used in similar form by a small number of studies, including by
+Chen, Démurger and Fournier (2007). The exposition of this section draws on Bhaumik, Gang and Yun (2006),
+Bourguignon, Fournier and Gurgand (2007), Dimova and Gang (2007) and Gang and Schmillen (2014).
+                                                      - 10 -
+two-stage selection model to the multinomial logit case. The advantage of Lee’s (1983) approach is
+that it is fairly simple. It requires the estimation of only one correction term. However, Bourguignon,
+Fournier and Gurgand (2007) note that this simplicity is achieved at the cost of relatively restrictive
+assumptions. They use Monte Carlo methods to show that a variation of the selection-correction
+approach suggested by Dubin and McFadden (1984) performs better in practice.
+
+          The approach proposed by Bourguignon, Fournier and Gurgand (2007) is again based on a
+multinomial logit model. Its central feature is that it takes the correlation between the disturbance
+terms from each wage equation and the disturbance terms from each multinomial logit equation
+(namely the terms       and     ) explicitly into account. This link is incorporated by assuming a linear
+association between           and   . After further assuming that the Independence of Irrelevant
+Alternatives (IIA) hypothesis holds and performing a number of algebraic manipulations,
+Bourguignon, Fournier and Gurgand (2007) propose the following selection-corrected variant of
+equation (1):
+
+          (3)                               ∑     … |                          ,
+
+where       is the probability of self-selection into sector   and the	      e are bias correction terms.
+While the           have no closed form they can be computed numerically after the multinomial logit
+estimation. Moreover, Dimova and Gang (2007) point out that as the number of bias correction terms
+in this equation is equal to the number of multinomial logit choices one can identify not only the
+direction of the bias related to the allocation of individuals in a specific sector but also which choice
+among any two alternative sectors this bias stems from. For instance, a positive bias correction
+coefficient related to the private sector selection equation in the public sector wage equation highlights
+higher wages of individuals in the public sector compared to individuals taken at random due to the
+allocation of people with less favorable unobserved skills out of the public sector into the private
+sector.
+
+          The empirical estimation of equation (3), i.e., of separate selection-corrected wage regressions
+for the private and the public sector, forms the basis for the third and final step. In this step, a
+selection-adjusted Oaxaca type decomposition is used to investigate the proportion of the differences
+in the average levels of hourly wages between public and private sector workers that can be accounted
+
+
+
+                                                    - 11 -
+for by characteristics and coefficients effects, respectively. Formally, the stylized Oaxaca type
+decomposition equation can be written as
+
+        (4)
+              ̅         ̅       ,
+
+or alternatively as
+
+        (5)
+              ̅         ̅       .
+
+Here,    denotes average log hourly wages and       is a 1 × K vector of average individual characteristics
+of sector                   ,       including the relevant correction terms.        is a K × 1 vector of
+parameters and ̅ the average error terms which are zero by construction. The first, second, and third
+components of the right-hand side of equations (4) and (5) are called the characteristics, the
+coefficients and the residuals effects, respectively. The key difference between equations (4) and (5) is
+that equation (4) uses public sector coefficients as the baseline while equation (5) relies on private
+sector coefficients for this purpose. As there is rarely a particular reason to estimate either equation
+(4) or equation (5), Reimers (1983) proposes to use the average coefficients over both groups instead.
+This is the approach followed here. Moreover, Bhaumik, Gang and Yun (2006) note that the
+coefficients effect generally incorporates the effect of differences in the constant term between
+sectors. The coefficients of the constant terms explain the wage differential between public and private
+sector workers that is not attributed to explanatory variables. Hence, the difference in the constant
+terms may be interpreted as baseline differences between the two sectors. It can be separated from
+the effects of the other coefficients.
+
+        The characteristics and coefficients effects can be further decomposed into subgroups of
+variables or even individual variables. In this context, a critical issue is that the decomposition results
+for categorical variables depend on which category is chosen to be the omitted base category. To avoid
+this issue and to arrive at decomposition results that are independent of such a choice, this study
+makes use of a method introduced by Yun (2005). The method relies on first estimating the group
+models with the standard dummy coding. Next, the coefficient vectors are transformed so that they
+represent deviations from the grand mean and the coefficient for the base category is added.
+
+
+
+                                                   - 12 -
+         Also note that while the estimates from the second stage wage regressions and the third stage
+are consistent, their standard errors are inefficient. However, efficient standard errors can however be
+obtained with the help of the bootstrap. This is the approach followed here.
+
+         In terms of characteristics to be included in the vectors of explanatory variables,                    and     ,
+this study uses potential experience, potential experience squared, nationality and gender of the worker
+and indicators for his or her educational attainment and type of employment in the wage equations
+and ensuing Oaxaca type decomposition. The inclusion of these variables is based on standard human
+capital theory. For similar reasons, variables for the sector and dzongkhag of employment and a
+rural/urban dummy variable are also included in the wage equations and Oaxaca type decomposition.
+In contrast, occupation dummies are not included. This is due to their potential endogeneity related
+to the interaction of self-selection into sectors and into occupations.5
+
+         When estimating the equations for selection into labor force participation and into private or
+public sector work, all controls for an individuals’ socio-demographic characteristics, education and
+location are again included. To avoid identification to rely entirely on the parametric form of the
+multinomial logit model, a number of additional variables appear in the selection equation but not in
+the earnings equation. I.e., these explanatory variables are used as excluded instruments. Here,
+excluded instruments are mainly family characteristics – the proportion in the household of children
+aged 14 or under, seniors aged 66 or over, private sector workers and public sector workers. The
+selection of family characteristics as excluded instruments borrows significantly from the literature on
+labor supply and earnings. For instance, Christofides and Michael (2013) and Gang and Schmillen
+(2014) postulate that the presence of children and/or old individuals in the household should influence
+self-selection into labor force participation and Christofides and Pashardes (2002) argue that the
+employment of other members of an individual’s family in a specific sector should reduce the costs
+of job search in this sector. At the same time, family characteristics should have no direct effects on
+wages.
+
+         Additionally, a wealth index is used as an excluded instrument. Following standard practice,
+this wealth index is defined as the first principal component factor of a large number of variables
+
+
+
+         5Similar concerns about potential endogeneity might also be voiced about the use of labor market characteristics
+and industry dummies as regressors. As such concerns can be seen as less pressing as compared to those for occupations,
+labor market and industry characteristics are nevertheless included as regressors.
+                                                         - 13 -
+capturing household living conditions, wealth and assets (cf. World Bank, 2003). Here, these variables
+are the ownership of a dwelling, of different types of livestock and land as well as of 29 different
+consumer goods like mobile phones, rice cookers, composite bows or cars, and the presence of an
+electricity connection. Schultz (1995) and Tansel (2005) argue that higher household wealth – or rather
+the higher unearned income derived from it – should increase the shadow value of time spent working
+and therefore decrease labor force participation but should not influence wages through any other
+channels.6
+
+
+4.       Results
+
+4.1.     Descriptive Statistics
+
+Basic summary statistics for various variables related to individuals’ earnings, labor market
+characteristics, socio-demographic characteristics, education and industry are summarized in Table 2.
+The table displays the means and standard deviations of all relevant variables separately for public and
+private sector workers. Additionally, results of t-tests for differences in characteristics between the
+two groups are presented. Appropriate sample weights are used for the descriptive statistics
+summarized in Table 2 and all other statistics presented in this section.7
+
+         Table 2 makes it clear that there are many differences in the average characteristics of public
+and private sector workers that are statistically and economically significant. Maybe most strikingly,
+public sector employees have significantly higher average hourly wages than those in the private sector.
+On average, public sector workers earn Nu 77.31 (that is approximately US dollar 1.22) per hour.
+Average hourly wages of private sector workers are Nu 66.23 (or US dollar 1.04). The public/private
+wage differential is statistically significant at the 1 percent level.
+
+
+
+          6 The practical implementation of the three-step procedure is greatly facilitated by a number of STATA ado-files
+
+programmed by different researchers: Below, oaxaca by Jann (2008) is used for the Oaxaca type decompositions and code
+based on the one in selmlog by Bourguignon, Fournier and Gurgand (2007) for the numerical computation of correction
+terms. Besides, the quantile regressions of Section 4.3 rely on rifreg by Firpo, Fortin and Lemieux (2007, 2009).
+          7 As mentioned above, the BLFS contains data on 23,587 individuals. 14,137 of these fulfill the restrictions
+
+underlying the baseline decomposition (as detailed in Table 1, this implies in particular that they are between 15 and 65
+years old and are neither unpaid family workers nor graduates of institutions of religious education). Of these, 7,178
+individuals work either in the public or the private sector. Finally, for 6,562 individuals valid information on all control
+variables is available in the BLFS. Accordingly, they form the basis of the analysis of this section. Table 2 shows that the
+unweighted sample of 6,562 individuals can be broken down into 3,180 observations for public sector workers and 3,382
+observations for private sector workers. Using appropriate sample weights, this translates into 58,068 public sector workers
+and 118,853 private sector workers.
+                                                           - 14 -
+Table 2
+Characteristics of individuals and t-tests for differences in these characteristics
+                                                         Public sector                Private sector             t-Tests
+  Earnings
+  Hourly wage in Nu                                 77.31         (3.01)          66.23       (4.46)             ***
+  Labor market characteristics
+  Regular paid employee                             0.941         (0.010)         0.165       (0.021)            ***
+  Casual paid employee                              0.015         (0.004)         0.051       (0.009)            ***
+  Contract / piece paid worker                      0.040         (0.011)         0.036       (0.005)
+  Own-account worker                                0.005         (0.002)         0.748       (0.024)            ***
+  Socio-demographic characteristics
+  Urban                                             0.679         (0.048)         0.270       (0.045)            ***
+  Female                                            0.228         (0.012)         0.383       (0.015)            ***
+  Bhutanese                                         0.998         (0.001)         0.995       (0.002)
+  Potential experience                              22.60         (0.55)          31.88       (0.71)             ***
+  Education
+  No formal education                               0.227         (0.024)         0.648       (0.020)            ***
+  Primary education                                 0.089         (0.008)         0.082       (0.006)
+  Lower secondary education                         0.137         (0.009)         0.082       (0.005)            ***
+  Middle secondary education                        0.170         (0.010)         0.087       (0.010)            ***
+  Higher secondary education                        0.173         (0.009)         0.056       (0.009)            ***
+  Lower tertiary education                          0.169         (0.014)         0.040       (0.007)            ***
+  Higher tertiary education                         0.035         (0.006)         0.005       (0.001)            ***
+  Industry
+  Agriculture, hunting and forestry                 0.000         -               0.467       (0.031)            ***
+  Fishing                                           0.000         -               0.001       (0.001)
+  Mining and quarrying                              0.003         (0.002)         0.022       (0.008)            **
+  Manufacturing                                     0.047         (0.009)         0.133       (0.010)            ***
+  Electricity, gas and water supply                 0.037         (0.011)         0.005       (0.001)            ***
+  Construction                                      0.024         (0.011)         0.036       (0.007)
+  Wholesale and retail trade                        0.009         (0.003)         0.157       (0.011)            ***
+  Hotels and restaurants                            0.003         (0.002)         0.064       (0.010)            ***
+  Transport and communications                      0.018         (0.003)         0.066       (0.010)            ***
+  Financial intermediation                          0.039         (0.006)         0.001       (0.001)            ***
+  Real estate and business activities               0.094         (0.015)         0.023       (0.003)            ***
+  Public administration and defense                 0.525         (0.027)         0.000       (0.000)            ***
+  Education                                         0.111         (0.010)         0.005       (0.001)            ***
+  Health and social work                            0.057         (0.007)         0.001       (0.000)            ***
+  Other service activities                          0.031         (0.006)         0.013       (0.002)            ***
+  Private households                                0.000         -               0.006       (0.002)            ***
+  Fringe benefits
+  Gratuity                                          0.945         (0.013)         0.289       (0.035)            ***
+  Provident fund payments                           0.949         (0.014)         0.321       (0.034)            ***
+  Overtime payments                                 0.957         (0.013)         0.270       (0.021)            ***
+  Paid annual leave                                 0.943         (0.015)         0.443       (0.032)            ***
+  Paid sick leave                                   0.962         (0.013)         0.645       (0.024)            ***
+  Paid casual leave                                 0.961         (0.013)         0.628       (0.025)            ***
+  Paid maternity/paternity leave                    0.960         (0.014)         0.481       (0.040)            ***
+  Compensation for work accidents or
+                                                    0.965         (0.011)         0.326       (0.030)            ***
+  occupational diseases
+  Number of observations (unweighted)                         3,180                       3,382
+  Number of observations (weighted)                          58,068                      118,853
+Notes: (1) The figures within the parentheses are linearized standard errors. (2) The symbols *, ** and *** indicate
+significance at the 10%, 5% and 1% levels, respectively. (3) Unless otherwise noted, weights have been used. (4) For fringe
+benefits, comparisons are for regular paid employees, casual paid employees and contract / piece paid workers in state-
+owned or private enterprises or only. (5) Location variables are not depicted.
+                                                          - 15 -
+        Concerning labor market characteristics, public sector workers are relatively more likely to be
+employed as regular wage workers. This status applies to 94.1 percent of public sector workers but to
+only 16.5 percent of private sector workers. Conversely, public sector employees are substantially less
+likely to be contract or piece paid workers or, unsurprisingly, own-account workers. Socio-
+demographic variables also show notable differences between the two sectors. In particular,
+statistically significant differences exist with respect to workers’ average location, gender and
+experience. For instance, 67.9 percent of public sector workers live in urban parts of Bhutan but only
+27.0 percent of private sector workers are city dwellers. Moreover, public sector workers are less likely
+to be female and on average have less potential experience. At the same time, while according to the
+BLFS 2014 the proportion of Bhutanese nationals is very high in both sectors it does not significantly
+differ between them.8
+
+        The average educational attainment of workers differs markedly between the two sectors.
+Whereas less than a quarter (22.7 percent) of public sector employees have no or no formal education
+this is the case for almost two-thirds of private sector workers (64.8 percent). On the other hand, 3.5
+percent of public sector workers but only 0.5 percent of private sector workers have higher tertiary
+education, defined here as the completion of at least a Master’s degree. Finally, industrial structures
+also differ between the two sectors. For instance, public sector workers are dramatically less likely to
+work in agriculture, hunting and forestry (nil vs. 46.7 percent) but much more likely to work in public
+administration and defense (52.5 vs. nil percent). Again, these differences are statistically significant at
+the 1 percent level. In general, the picture that emerges from Table 2 is that in Bhutan wages, jobs and
+workers all differ considerably between the public and the private sector.
+
+        Fringe benefits that are paid in addition to the base salary are an important aspect of overall
+worker compensation for which the BLFS 2014 contains relatively detailed information. According to
+Bhutan’s Labor and Employment Act, the majority of workers should de jure be entitled to the
+following eight distinct fringe benefits: gratuity (not in the sense of tips but as an additional retirement
+benefit after a certain length of service), provident fund payments (another retirement benefit),
+overtime payments, paid annual leave, paid sick leave, paid casual leave, paid maternity/paternity leave
+
+
+
+
+        8 Administrative data from the MoLHR and the World Bank’s Bhutan Enterprise Survey 2015 document much
+higher proportions of non-Bhutanese workers than the BLFS 2014. This hints at a general under-reporting of non-
+Bhutanese individuals in the BLFS 2014.
+                                                     - 16 -
+and compensation for work accidents or occupational diseases. However, in many countries and also
+in Bhutan the enforcement of labor laws is relatively lax and some employers are able to avoid
+compliance (cf. Fandl, Kugler, Vodopivec and Weber, 2011, for details on compliance with Bhutan’s
+Labor and Employment Act). Against this backdrop, the BLFS 2014 collects data for regular paid
+employees, casual paid employees and contract / piece paid workers in state-owned or private
+enterprises, and data on their de facto coverage by fringe benefits.
+
+        As monetary values of fringe benefits are hard to quantify, they will not be considered in the
+subsequent analysis of the public/private wage differential. However, Table 2 still lists the prevalence
+of these benefits separately for public and private sector workers. The table shows that coverage is
+incomplete both in the public and the private sector. At the same time, public sector workers are more
+likely to be eligible for each of the eight types of benefits and all differentials are both statistically
+significant and economically meaningful. In fact, for each of the eight benefits, coverage among public
+sector workers easily exceeds 90 percent. The benefit with the lowest prevalence among public sector
+workers is paid annual leave. 94.3 of public sector workers are covered by this benefit. On the other
+end of the spectrum, 96.5 percent of public sector workers receive compensation for work accidents
+or occupational diseases. In contrast, only between around 25 percent and 65 percent of private sector
+workers are covered by each particular benefit. Only 27.0 percent of private sector employees are paid
+for overtime. Paid sick leave is the most common benefit in the private sector. 64.5 percent of private
+sector workers receive this benefit. It seems safe to assume that differences between public and private
+sector would be even more pronounced if data on benefit coverage were also collected for workers
+other than regular paid employees, casual paid employees and contract / piece paid workers in state-
+owned or private enterprises.
+
+
+
+4.2.    Selection Equation, Wage Regressions and Baseline Decomposition
+
+Turning to the initial step of the three-step procedure outlined above, Table 3 reports outputs from
+an empirical estimation of the sector selection equation (2). These outputs provide insights into the
+determinants of self-selection into labor force participation and into public and private sector. Not
+directly reported in Table 3 but available upon request are the coefficients of the multinomial logit
+model used to estimate equation (2). What is displayed in Table 3 are marginal effects on the likelihood
+of self-selection into the public sector, the private sector or inactivity. This is because marginal effects
+
+                                                   - 17 -
+are much more straightforward to interpret. Since the marginal effects of a multinomial logit model
+depend on the values of the explanatory variables, one must decide at which values to report them.
+As is common in the literature, the table shows the average marginal effects. In other words, Table 3
+provides insights into the determinants of the sectoral choice of individuals with average
+characteristics. The delta method is used to compute standard errors.
+
+
+
+Table 3
+Marginal effects from selection regressions
+                                           Inactive                      Public sector             Private sector
+                                    Estimate        S.E.            Estimate        S.E.      Estimate          S.E.
+ Socio-demographic characteristics
+ Urban                                0.030 *         (0.017)       0.055 *** (0.008)          -0.085 ***       (0.018)
+ Female                               0.385 *** (0.029)            -0.149 *** (0.014)          -0.236 ***       (0.023)
+ Bhutanese                           -0.156 **        (0.070)       0.233 *** (0.048)          -0.078           (0.048)
+ Potential experience                -0.090 *** (0.003)             0.026 *** (0.002)           0.064 ***       (0.003)
+ Potential experience squared         0.001 *** (0.000)            -0.000 *** (0.000)          -0.001 ***       (0.000)
+ Education
+ Primary education                   -0.180 *** (0.038)             0.100 *** (0.014)           0.079 **        (0.034)
+ Lower secondary education           -0.212 *** (0.039)             0.127 *** (0.014)           0.084 **        (0.036)
+ Middle secondary education          -0.410 *** (0.039)             0.187 *** (0.018)           0.219 ***       (0.037)
+ Higher secondary education          -0.566 *** (0.036)             0.281 *** (0.020)           0.286 ***       (0.037)
+ Lower tertiary education            -0.692 *** (0.042)             0.323 *** (0.019)           0.369 ***       (0.039)
+ Higher tertiary education           -0.829 *** (0.258)             0.368 *** (0.077)           0.461 **        (0.191)
+ Selection variables
+ Wealth index                         0.024 *** (0.009)             0.003         (0.007)      -0.026 ***       (0.007)
+ Prop. of individuals in
+ household aged 14 or under          -0.101 *         (0.057)       0.100 *** (0.018)           0.002           (0.054)
+ Prop. of individuals in
+ household aged 66 or over            0.165           (0.104)      -0.128 *** (0.048)          -0.036           (0.096)
+ Prop. of individuals in
+ household in public sector           0.231 *** (0.038)            -0.010         (0.017)      -0.221 ***       (0.032)
+ Prop. of individuals in
+ household in private sector          0.079 *** (0.019)            -0.103 *** (0.014)           0.024 *         (0.014)
+Notes. (1) The symbols *, ** and *** indicate significance at the 10%, 5% and 1% levels, respectively. (2) Weights have
+been used for the estimation. (3) The reported standard errors have been calculated using the delta method. (4) Location
+variables are not depicted.
+
+
+
+         In many ways, the multinomial logit estimates of Table 3 confirm the descriptive evidence of
+Table 2. For instance, they confirm that urban workers are more likely to work in the public rather
+than in the private sector, ceteris paribus. Additionally, they provide some evidence that city dwellers are
+more likely to be inactive. Moreover, the multinomial logit estimates confirm that relatively well-
+educated individuals are more likely to self-select into public sector jobs. Well-educated individuals
+are also much less likely to be inactive. Other results of the multinomial logit estimates could not have
+
+                                                           - 18 -
+been deducted from descriptive evidence or nuance the descriptive picture of Table 2. For instance,
+Table 3 shows that women are less likely to participate in the labor market but also indicates that
+women tend to self-select out of the private sector. In addition to that, Bhutanese nationals are shown
+to be more prone to seek public sector employment and less likely to be either inactive or employed
+in the private sector. Finally, the table demonstrate that an inverse u-shaped pattern exists between
+potential experience and labor force participation (irrespective of the sector of employment). Similar
+inverse u-shaped patterns have been documented for many other countries.
+
+        Concerning possible self-selection into labor force participation and public or private sector
+work, it was mentioned above that the empirical representation of equation (2) uses household and
+family characteristics (the proportion of children, seniors, private sector workers and public sector
+workers in the household) and a wealth index as excluded instruments. As is evident from Table 3, all
+of these instruments have at least some statistically and economically significant influence on self-
+selection. For instance, individuals in households with a higher proportion of members aged 14 or
+under are relatively more likely to work in the public sector. The opposite is the case for individuals
+in households with a higher proportion of members aged 66 or above. Besides, the sector of activity
+of other household members apparently acts as an important push factor: in case a higher proportion
+of other household members is employed in the public sectors that makes employment in the private
+sector less likely. Similarly, when relatively more household members are private sector workers, this
+reduces the probability that a specific worker self-selects into the public sector. Finally, higher
+household wealth reduces the likelihood of self-selection into the public sector and increases the
+likelihood of labor force non-participation. The last result is consistent with the argument of Schultz
+(1995) and Tansel (2005) that higher household wealth – or rather the higher unearned income derived
+from it – should increase the shadow value of time spent working and therefore decrease labor force
+participation.
+
+        Table 4 shifts the attention to the second step of the three-step procedure and an empirical
+estimation of equation (3). I.e., Table 4 is concerned with estimating the correlates of log hourly wages
+in the public and the private sector. As mentioned in Section 3, following the methodology proposed
+by Bourguignon, Fournier and Gurgand (2007) this is done in a way that takes self-selection into
+account and even allows an explicit consideration of biases related to the allocation of individuals in a
+specific sector and which choice among any two alternative sectors this bias stems from.
+
+
+                                                  - 19 -
+Table 4
+Selection-corrected wage regressions
+                                                         Public sector                           Private sector
+                                                  Estimate          S.E.                  Estimate           S.E.
+ Labor market characteristics
+ Regular paid employee                                -0.150         (0.254)                 -0.442 *** (0.042)
+ Casual paid employee                                 -0.478 *       (0.269)                 -0.357 *** (0.085)
+ Contract / piece paid worker                         -0.240         (0.262)                 -0.196 *        (0.116)
+ Socio-demographic characteristics
+ Urban                                                -0.031         (0.040)                  0.271 *** (0.049)
+ Female                                                0.036         (0.054)                 -0.108          (0.101)
+ Bhutanese                                            -0.398 *** (0.144)                     -0.137          (0.130)
+ Potential experience                                  0.043 *** (0.008)                      0.016          (0.018)
+ Potential experience squared                         -0.000 *** (0.000)                     -0.000          (0.000)
+ Education
+ Primary education                                     0.130 **      (0.058)                 -0.023          (0.083)
+ Lower secondary education                             0.267 *** (0.058)                      0.159 **       (0.072)
+ Middle secondary education                            0.556 *** (0.063)                      0.422 *** (0.091)
+ Higher secondary education                            0.874 *** (0.083)                      0.624 *** (0.121)
+ Lower tertiary education                              1.295 *** (0.083)                      0.920 *** (0.128)
+ Higher tertiary education                             1.443 *** (0.100)                      1.373 *** (0.176)
+ Industry
+ Fishing                                                   -         -                        2.371 *** (0.146)
+ Mining and quarrying                                  1.141 **      (0.545)                  1.006 *** (0.122)
+ Manufacturing                                         0.849 *       (0.514)                  0.771 *** (0.068)
+ Electricity, gas and water supply                     1.008 *       (0.523)                  0.651 *** (0.215)
+ Construction                                          1.271 **      (0.553)                  0.732 *** (0.120)
+ Wholesale and retail trade                            0.939 *       (0.520)                  0.608 *** (0.072)
+ Hotels and restaurants                                    -         -                        0.552 *** (0.088)
+ Transport and communications                          0.946 *       (0.524)                  0.648 *** (0.069)
+ Financial intermediation                              0.895 *       (0.516)                  0.542 *** (0.170)
+ Real estate and business activities                   0.901 *       (0.514)                  0.947 *** (0.147)
+ Public administration and defense                     0.831         (0.514)                  1.019 *** (0.361)
+ Education                                             0.874 *       (0.517)                  0.787 *** (0.101)
+ Health and social work                                0.996 *       (0.515)                  1.200 *** (0.175)
+ Other service activities                              1.026 **      (0.521)                  0.841 *** (0.154)
+ Private households                                        -         -                        0.470 *** (0.175)
+ Correction terms and constant
+ Correction term (inactive)                           -0.077         (0.156)                  0.101          (0.190)
+ Correction term (public sector)                      -0.065         (0.052)                 -0.195          (0.246)
+ Correction term (private sector)                      0.289 *       (0.153)                 -0.208 **       (0.106)
+ Constant                                              2.890 *** (0.571)                      2.849 *** (0.354)
+ R-square                                                      0.536                                  0.335
+Notes. (1) The symbols *, ** and *** indicate significance at the 10%, 5% and 1% levels, respectively. (2) Weights have
+been used for the estimation. (3) The reported standard errors are bootstrap standard errors from 200 replications. (4)
+Location variables are not depicted. (5) The wage regressions are based on the selection regressions of Table 3. (6) The
+correction terms are the Bourguignon, Fournier and Gurgand (2007) equivalents for the Mill’s ratio.
+
+
+
+         In spite of some important differences between correlates of log hourly wages in the public
+and the private sector, Table 4 shows that altogether the patterns associated with individual wages
+look rather similar for the two sectors. Moreover, the overall picture that emerge from the table is that
+
+                                                         - 20 -
+even in Bhutan – a country with many unique features – most basic regularities derived from standard
+human capital theory hold. Direction and size of the individual coefficients are generally those that
+one would expect from the estimation of such a wage equation in the tradition of Mincer (1974). For
+instance, Table 4 demonstrates that both in the public and the private sector average hourly wages are
+higher for better educated individuals, ceteris paribus. It should be noted that Table 4 does not correct
+for the possible endogeneity of educational choice and therefore does not make causal statements
+about the returns to education in Bhutan.
+
+        For both public and private sector workers, wages tend to increase with potential experience
+but with a declining rate. Thus, over the life cycle wages exhibit an inverse u-shaped path. However,
+this pattern is only statistically significant for public sector workers. With regard to gender, a
+statistically significant gender wage gap exists neither in the public nor the private sector. Given that
+gender wage gaps continue to be a defining feature of many countries’ labor markets this appears
+noteworthy. Concerning the different industry variables, wages tend to be lowest in agriculture,
+hunting and forestry (the reference category in Table 4). In both the public and the private sector,
+workers in mining and quarrying and in health and social work earn among the highest wages. Other
+industries with relatively high wages include construction and other service activities in the public
+sector and fishing and public administration and defense in the private sector. Note that the wage
+differences across industries are generally much more precisely estimated for the private sector.
+
+        According to Table 4, an urban wage premium is only present for the private sector while
+wages between urban and rural areas do not differ in a statistically significant way for the public sector.
+Together with the often only marginally significant coefficients associated with industry variables, this
+result gives the impression that Bhutan’s de facto public sector wages are in fact strongly correlated with
+variables that de jure determine public sector wages, especially in the civil service (like an individual’s
+education), but much less so with variables that have less of a de jure role like gender, location or
+industry. Contrary to this overall pattern, Table 4 shows that hourly wages and Bhutanese citizenship
+are negatively correlated in the public sector whereas there is no statistically significant relationship
+between the two variables in the private sector. This might reflect a specific (unobservable) assignment
+to high-level positions demanding specialized technical expertise of the small number of non-
+Bhutanese employees in Bhutan’s public sector.
+
+
+
+
+                                                   - 21 -
+        Finally, it is worth having a look at the coefficients associated with the various correction
+terms. As pointed out in Dimova and Gang (2006, p. 625), “(f)or each sector-based wage estimation,
+a negative (…) selectivity coefficient related to any of the alternative sectors indicates lower wages
+than those of randomly chosen individuals on account of the allocation of individuals with better (…)
+unobserved characteristics out of the given sector and into the respective alternative sector. For
+instance, if we observe a negative private sector selectivity correction coefficient in the public sector
+equation, this indicates lower than randomly chosen rewards to the skills of individuals working for
+the public sector due to the allocation of individuals with better unobserved characteristics out of the
+public and into the private sector.” The reverse is the case for positive correction terms. As is clear
+from Table 4, the correction term related to the private sector is negative and marginally statistically
+significant in the public sector wage equation. In other words, wages in the public sector appear
+downward biased due to the allocation of individuals with better unobserved characteristics out of
+this sector into inactivity. The correction term related to the private sector is also negative and
+statistically significant in the private sector wage equation. No other correction terms are individually
+statistically significant in either wage equation.
+
+        Results from the third and final step of the procedure outlined in Section 3, i.e., an Oaxaca
+type decomposition of log hourly wages based on the selection-corrected wage regressions from Table
+4, are reported in Table 5. The objective of the decomposition is to explain how much of the overall
+difference in the logarithm of hourly wages between public and private sector workers adjusted for
+self-selection of individuals can be attributed to differences in the level of individuals’ characteristics
+and by differences in the impact on wages of these characteristics. As the table shows, when sector
+self-selection is taken into account the overall difference in hourly wages amounts to 0.587 log points
+or roughly 58.7 percent.
+
+The two most important estimates are those for the aggregate characteristics and coefficients effects.
+According to Table 5, these amount to 0.583 and 0.004 log points, respectively. The positive value of
+the characteristics effect means that if public and private sector employees were to have the same
+regression coefficients, i.e., the impact of the characteristics on their hourly wages were identical, the
+logarithm of hourly wages of public sector workers would have been higher than that of private sector
+workers by 0.583 log points due solely to differences in characteristics. Conversely, the coefficients
+effect of 0.004 implies that, if both public and private sector workers were to have the exact same
+characteristics so that any difference in wages between the two sectors were due only to
+                                                     - 22 -
+Table 5
+Decomposition of the difference in hourly wages between public and private sector (benchmark)
+                                                                               Overall difference
+                                                                          Estimate            S.E.
+                                                                          0.587    ***        (0.125)
+                                                        Characteristics effect                      Coefficients effect
+                                                    Estimate            S.E.                  Estimate            S.E.
+  Aggregate Effect                                      0.583 *** (0.216)                          0.004          (0.260)
+  Aggregate effect without constants                                                               0.186          (0.330)
+  Labor market characteristics                         -0.215 *         (0.111)                    0.124 **       (0.055)
+  Regular paid employee                                -0.049           (0.040)                    0.144 *** (0.049)
+  Casual paid employee                                  0.007 *** (0.002)                         -0.005          (0.004)
+  Contract / piece paid worker                          0.000           (0.001)                   -0.003          (0.005)
+  Own-account worker                                   -0.173 **        (0.088)                   -0.012          (0.094)
+  Socio-demographic characteristics                    -0.061 *** (0.021)                          0.037          (0.324)
+  Urban                                                 0.049 *** (0.013)                         -0.143 *** (0.033)
+  Female                                                0.006           (0.009)                    0.044          (0.035)
+  Bhutanese                                            -0.001           (0.000)                   -0.260          (0.184)
+  Potential experience                                 -0.273 *** (0.095)                          0.714          (0.527)
+  Potential experience squared                          0.158 *         (0.085)                   -0.318          (0.274)
+  Education                                             0.326 *** (0.030)                         -0.044          (0.039)
+  No formal education                                   0.242 *** (0.022)                         -0.068          (0.045)
+  Primary education                                    -0.004           (0.005)                   -0.000          (0.008)
+  Lower secondary education                            -0.020 *** (0.004)                         -0.005          (0.008)
+  Middle secondary education                           -0.007 *** (0.002)                         -0.003          (0.007)
+  Higher secondary education                            0.020 *** (0.004)                          0.011          (0.008)
+  Lower tertiary education                              0.069 *** (0.007)                          0.023 *** (0.008)
+  Higher tertiary education                             0.025 *** (0.004)                         -0.002          (0.003)
+  Industry                                              0.499 *** (0.186)                          0.102          (0.126)
+  Agriculture, hunting and forestry                     0.362 *** (0.104)                          0.021          (0.102)
+  Fishing                                              -0.000           (0.000)                   -0.001          (0.000)
+  Mining and quarrying                                 -0.006 *** (0.002)                          0.003          (0.003)
+  Manufacturing                                        -0.003           (0.006)                    0.015          (0.012)
+  Electricity, gas and water supply                     0.002           (0.004)                    0.009 **       (0.005)
+  Construction                                         -0.003           (0.002)                    0.019 **       (0.008)
+  Wholesale and retail trade                            0.000           (0.011)                    0.035 *** (0.012)
+  Hotels and restaurants                                0.030 **        (0.016)                   -0.015          (0.018)
+  Transport and communications                         -0.001           (0.004)                    0.016 *** (0.006)
+  Financial intermediation                             -0.002           (0.004)                    0.009 **       (0.004)
+  Real estate and business activities                   0.011 *         (0.006)                    0.003          (0.011)
+  Public administration and defense                     0.078           (0.122)                   -0.025          (0.117)
+  Education                                             0.006           (0.008)                    0.010          (0.009)
+  Health and social work                                0.018 *** (0.006)                         -0.003          (0.006)
+  Other service activities                              0.003           (0.002)                    0.006          (0.004)
+  Private households                                    0.003 **        (0.002)                   -0.001          (0.001)
+  Location                                              0.035 *** (0.013)                         -0.032          (0.023)
+  Constant                                                                                        -0.183          (0.398)
+Notes. (1) The symbols *, ** and *** indicate significance at the 10%, 5% and 1% levels, respectively. (2) Weights have
+been used for the decomposition. (3) The reported standard errors are bootstrap standard errors from 200 replications.
+(4) Detailed location variables and correction terms are not depicted. (5) The decomposition is based on the selection
+regressions of Table 3 and the selection-corrected wage regressions of Table 4.
+
+
+
+
+                                                         - 23 -
+differences in the regression coefficients, i.e., the rates of return on the characteristics, the logarithm
+of hourly wages of public sector workers would have been higher than that of private sector workers
+by 0.004 log points. In short, public sector workers would be worse off if the differences between
+their characteristics and those of the private sector workers were to disappear. In addition to that, they
+would also be worse off in the absence of any differences between the two groups in the effectiveness
+of, or returns to, those characteristics.
+
+          Importantly, the aggregate characteristics effect is statistically significant at the 1 percent level
+and of the same magnitude as the overall public/private wage differential. In contrast, the aggregate
+coefficients effect is not statistically significant at any conventional level of statistical significance.
+Therefore, the main result from Table 5 – and the whole three-step procedure – is that the sizeable
+differences in average wages between public and private sector workers in Bhutan can entirely be
+explained by differences in the observable characteristics of public and private sector workers.
+
+          Table 5 also allows a more detailed consideration of how different variables or groups of
+variables influence the aggregate characteristics and coefficients effects. Disaggregating the
+characteristics effect shows that public sector workers benefit considerably from being on average
+better educated than private sector workers. The education variables explain 0.326 log points of the
+difference between public and private sector wages. Most importantly in this regard, public sector
+workers are relatively less likely to have no or no formal education and relatively more likely to have
+lower tertiary education. The very high wage premiums associated with higher tertiary education
+documented in Table 4 play a comparatively smaller role in explaining the aggregate characteristics
+effect.
+
+          The other group of observable characteristics that explains a sizeable portion of the wage gap
+between public and private sector relates to the distinct industrial structures of the two sectors. Public
+sector workers are much more likely to work in industries that are more favorable for the labor market
+and this explains 0.499 log points of the difference between public and private sector wages. Most
+importantly, public sector workers are much less likely to work in agriculture, hunting and forestry –
+the industry with the lowest hourly wages. Additionally, the sectoral distribution of work in hotels and
+restaurants, health and social work and private households favors public sector workers. (That of
+mining and quarrying has the opposite effect.)
+
+
+
+                                                     - 24 -
+        Observable characteristics of public sector workers are also more favorable when it comes to
+their location in terms of dzongkhag. At the same time, the characteristics effect associated with labor
+market and socio-demographic variables actually works against them. In particular, public sector
+workers are much less likely to be engaged as own-account workers, a type of activity very favorable
+for the labor market. On average, the potential experience profile across sectors also puts public sector
+workers at a disadvantage. In contrast, their higher degree of urbanization is associated with a
+favorable characteristics effect. Overall, the public sector workers’ favorable characteristics effects
+associated with the education, sector and location variables outweigh the unfavorable characteristics
+effects stemming from labor market and socio-economic variables. This leads the overall
+characteristics effect for public sector workers to be positive and statistically and economically
+significant.
+
+        Concerning a detailed decomposition of the coefficients effect, Table 5 shows that much fewer
+variables can be identified as statistically significant drivers of such an effect. Of those that are
+statistically significant, the returns to labor market characteristics and in particular to being a regular
+paid employee favor the public sector. Among the few individual variables with statistically significant
+coefficients effects, it is noteworthy that the returns to being a city dweller are higher in the private
+sector whereas the wage premium associated with having a lower tertiary education is more elevated
+in the public sector. The coefficients effects of some sectoral variables (including those for
+construction, wholesale and retail trade and transport and communications) also work in the private
+sector workers’ favor. It should be noted, however, that neither the overall coefficients effect nor the
+coefficients effect net of baseline differences between public and private sector nor the baseline
+differences as measured by the coefficient associated with the constant are statistically significant.
+
+
+
+4.3.    Sensitivity Checks
+
+Table 6 summarizes three alternative specifications of the benchmark selection-corrected Oaxaca type
+decomposition of log hourly wages. The objective is to assess whether this study’s main results are
+robust to variations in the empirical setup. For conciseness, outputs are displayed only for the
+aggregate characteristics and coefficient effects as well as for semi-detailed decompositions that group
+the effects of labor market characteristics, socio-demographic characteristics, education, industry and
+location. Outputs for the corresponding detailed decompositions are available upon request.
+
+                                                   - 25 -
+Table 6
+Decomposition of the difference in hourly wages between public and private sector (robustness)
+PANEL A – GROUP DIFFERENCES IN THE PREDICTORS WEIGHTED BY GROUP SIZES
+                                                                      Overall difference
+                                                                 Estimate            S.E.
+                                                                   0.587 ***         (0.125)
+                                               Characteristics effect                      Coefficients effect
+                                           Estimate            S.E.                  Estimate            S.E.
+ Aggregate Effect                              0.612 *** (0.217)                         -0.025          (0.261)
+ Aggregate effect without constants                                                       0.158          (0.373)
+ Labor market characteristics                 -0.287 *** (0.050)                          0.204 *** (0.051)
+ Socio-demographic characteristics             0.001           (0.025)                   -0.025          (0.325)
+ Education                                     0.296 *** (0.038)                         -0.014          (0.025)
+ Industry                                      0.535 *** (0.204)                          0.066          (0.203)
+ Location                                      0.068 *** (0.018)                         -0.065 **       (0.027)
+ Constant                                                                                -0.183          (0.398)
+
+PANEL B – SELECTION CORRECTION FOLLOWING DUBIN AND MCFADDEN (1984)
+                                                                   Overall difference
+                                                              Estimate            S.E.
+                                                                0.505 ***         (0.097)
+                                            Characteristics effect                      Coefficients effect
+                                         Estimate           S.E.                  Estimate            S.E.
+ Aggregate Effect                            0.580 *** (0.208)                        -0.075          (0.234)
+ Aggregate effect without constants                                                    0.349          (0.348)
+ Labor market characteristics              -0.213 **        (0.108)                    0.125 **       (0.054)
+ Socio-demographic characteristics         -0.061 *** (0.021)                          0.220          (0.351)
+ Education                                   0.327 *** (0.032)                        -0.065          (0.042)
+ Industry                                    0.493 *** (0.179)                         0.104          (0.124)
+ Location                                    0.034 *** (0.013)                        -0.035          (0.023)
+ Constant                                                                             -0.424          (0.410)
+
+PANEL C – TRIMMED SAMPLE
+                                                                                 Overall difference
+                                                                            Estimate            S.E.
+                                                                              0.677 ***         (0.128)
+                                                          Characteristics effect                      Coefficients effect
+                                                       Estimate           S.E.                  Estimate            S.E.
+ Aggregate Effect                                         0.474 **        (0.217)                    0.203          (0.265)
+ Aggregate effect without constants                                                                  0.187          (0.283)
+ Labor market characteristics                            -0.224 **        (0.113)                    0.117 **       (0.052)
+ Socio-demographic characteristics                       -0.069 *** (0.020)                          0.079          (0.275)
+ Education                                                0.304 *** (0.028)                         -0.059 *        (0.033)
+ Industry                                                 0.455 **        (0.197)                    0.070          (0.117)
+ Location                                                 0.008           (0.012)                   -0.019          (0.022)
+ Constant                                                                                            0.016          (0.367)
+          Notes. (1) The symbols *, ** and *** indicate significance at the 10%, 5% and 1% levels, respectively. (2) Weights
+have been used for the decomposition. (3) The reported standard errors are bootstrap standard errors from 200
+replications. (4) Detailed variables and correction terms are not depicted.
+
+
+         As mentioned in Section 3, the benchmark selection-corrected Oaxaca type decomposition
+uses the average coefficients of public and private sector workers. This follows a suggestion by
+                                                           - 26 -
+Reimers (1983). As an alternative, Cotton (1988) proposes to weigh the coefficients by the group sizes.
+This alternative suggestion is implemented in Panel A of Table 6. Panel B of Table 6 does not rely on
+the variation of the selection-correction procedure of Dubin and McFadden (1984) recommended by
+Bourguignon, Fournier and Gurgand (2007). Instead, the original procedure introduced by Dubin and
+McFadden (1984) is used. This procedure relies on a slightly different linearity assumption and
+imposes the additional restriction that all correlation coefficients between error terms sum to zero.
+Finally, in Panel C of Table 6 the sample is restricted in a way that excludes the 1 percent of
+observation with the lowest hourly wage as well the as the 1 percent of observations with the highest
+wage per hour. The rationale behind this robustness exercise is to assess whether results are robust to
+the exclusion of outliers.
+
+         Panels A, B and C of Table 6 show that for all three alternative specifications selection-
+corrected predicted average hourly wages are statistically significantly higher for public sector workers
+than for private sector workers. The magnitude of the difference in these hourly wages is quite robust
+as well. Moreover, the differences can be completely attributed to characteristics effects in all three
+alternative specifications. Overall coefficients effects are never statistically significant. Finally, in all
+three alternative specifications observable labor market characteristics continue to favor private sector
+workers whereas education and industry characteristics work to the benefit of public sector workers.
+In the case of the characteristics effects of socio-demographic and location characteristics, two of
+three alternative specifications support the findings from the baseline decomposition. In the third
+alternative specification these variables are not associated with a statistically significant characteristics
+effect. Concerning coefficients effects, results of the robustness exercise once again confirm those
+from the baseline decomposition. In particular, all three alternative specifications support the notion
+that returns to favorable labor market characteristics are higher in the public sector. Apart from these
+labor market characteristics, hardly any of the semi-aggregate variables depicted in Table 6 are
+associated with statistically significant coefficients effects. Overall, Table 6 makes it clear that the main
+results from the baseline decomposition are very robust to variations in the empirical setup.9
+
+
+
+
+         9 The main results from the baseline decomposition are also robust to a number of additional sensitivity checks
+
+not depicted here but available upon request. These include the use of the standard Oaxaca decomposition based on OLS
+regressions instead of the three-step decomposition method and of a three-step decomposition without sample weights.
+Qualitatively, the main results are also robust to a specification that avoids possible concerns about the measurement of
+
+
+                                                         - 27 -
+4.4.     Quantile Decompositions
+
+So far, the analysis has focused on decomposing the differences in average hourly wages between the
+public and the private sector. In recent years procedures have gained prominence that make it possible
+to complement an analysis of differences in mean wages by quantile decompositions that assess
+different quantiles of the wage distribution (cf. Fortin, Lemieux and Firpo, 2011). Here, the Oaxaca
+type decompositions of differences in mean wages between public and private sector of the last
+subsections are complemented by similar decompositions based on differences in various quantiles of
+the wage distributions in the public and private sectors. In terms of methodology, a two-step
+procedure first suggested by Firpo, Fortin and Lemieux (2007, 2009) is implemented: First, separate
+regressions of the recentered influence function (a widely used tool in robust estimation) of the
+unconditional quantile on the explanatory variables are run for the private and the public sectors.
+Second, generalized Oaxaca type decompositions are performed for various quantiles of the wage
+distribution. An important caveat is that the procedure suggested by Firpo, Fortin and Lemieux (2007,
+2009) does not control for self-selection into labor force participation and public or private sector
+jobs.
+
+         Results of the quantile decompositions are summarized in Table 7. The table focuses on the
+second step of the two-step procedure suggested by Firpo, Fortin and Lemieux (2007, 2009) and on
+the overall wage differences between public and private sectors at various quantiles of the wage
+distribution. Additionally, the table indicates whether the overall differences are attributable to
+workers’ characteristics or the returns to these characteristics. The quantiles considered range from
+the tenth percentile to the 90th percentile, in steps of ten percentiles.
+
+         Table 7 shows that overall differences between wages in the public and the private sectors are
+statistically and economically significant across the wage distribution. Additionally, it demonstrates
+that these differences are most pronounced in the left tail of the distribution. The tenth percentile of
+the public sector wage distribution is 98.8 percent higher than the tenth percentile of the private sector
+wage distribution. With regard to the median the difference is 52.2 percent and with regard to the 90th
+percentile it amounts to 16.6 percent. The quantile decompositions demonstrate that over the entire
+
+
+
+own-account workers’ wages by restricting the second-stage regressions and third-stage decompositions to dependent
+workers in the public and private sector (though in this case the overall characteristics effect is significant only at the 10
+percent level).
+                                                            - 28 -
+wage distribution, none of the overall differences between public and private sector wages can be
+attributed to coefficients effects; these are all statistically insignificant. In contrast, differences in
+observable characteristics between the public and private sectors can fully explain overall wage
+differences from the tenth percentile of the wage distribution up to the median. For the right-hand
+side of the wage distribution precision in the estimation of characteristics effects is insufficient to
+clearly attribute overall wage differences to these as opposed to coefficients effects.
+
+
+
+Table 7
+Decomposition of the difference in hourly wages between public and private sector (quantile
+decompositions)
+ Quantile                               Overall difference           Characteristics effect         Coefficients effect
+                                     Estimate         S.E.         Estimate          S.E.        Estimate          S.E.
+ 10th percentile                       0.988 *** (0.057)             1.072 *** (0.220)           -0.084            (0.224)
+ 20th percentile                       0.744 *** (0.035)             0.615 *** (0.103)            0.129            (0.106)
+ 30th percentile                       0.659 *** (0.032)             0.523 *** (0.075)            0.135            (0.078)
+ 40th percentile                       0.574 *** (0.030)             0.541 *** (0.080)            0.032            (0.082)
+ 50th percentile / median              0.522 *** (0.029)             0.505 *** (0.084)            0.017            (0.086)
+ 60th percentile                       0.496 *** (0.029)             0.282           (0.223)      0.215            (0.224)
+ 70th percentile                       0.448 *** (0.029)             0.208           (0.243)      0.240            (0.244)
+ 80th percentile                       0.324 *** (0.031)             0.313           (0.309)      0.011            (0.310)
+ 90th percentile                       0.161 *** (0.039)             0.556           (0.516)     -0.395            (0.517)
+Notes. (1) The symbols *, ** and *** indicate significance at the 10%, 5% and 1% levels, respectively. (2) Weights have
+been used for the estimation. (3) The reported standard errors are robust standard errors. (4) Quantile decompositions use
+the procedure suggested by Firpo, Fortin and Lemieux (2007, 2009). They do not correct for selection.
+
+
+
+         Overall, the quantile decompositions complement the decomposition at the mean by
+demonstrating that public sector wages are significantly higher than private sector wages across the
+whole wage distribution but especially in its left tail. Whenever power is sufficient to disentangle
+characteristics and coefficients effects, the overall difference between public and private sector wages
+can be attributed to differences in observable characteristics between public and private sector
+workers. No evidence is found that would support the contention that differing returns to observable
+characteristics explain the overall differences in wages across any of a number of different quantiles
+of the wage distribution.
+
+
+5.       Conclusions
+
+This study investigated why many in Bhutan see the public sector as the most desirable employer. It
+asked if this was because public sector employees received higher wages than comparable private
+
+                                                          - 29 -
+sector workers. To answer this question, it used a refined three-step procedure that made it possible
+to account for possible self-selection into labor force participation and into public or private sector
+work in a straightforward way, to estimate a flexible model of wage determination in either sector and
+to conduct a counterfactual decomposition of the wage differential between the public and private
+sectors into characteristics and coefficients effects, as originally suggested by Oaxaca (1973). The
+empirical investigation revealed that average wages in Bhutan’s public sector are significantly higher
+than average wages in the country’s private sector. Quantile regressions showed that public/private
+wage differentials are in fact positive over the whole wage distribution and especially pronounced in
+its left tail. However, the investigation also demonstrated that in the mean and over much of the wage
+distribution the positive public/private wage differentials can entirely be accounted for by differences
+in observable characteristics between public and private sector workers.
+
+        This study’s results for Bhutan are generally comparable to those of the broader literature on
+the public/private wage differential in developed and developing countries. For instance, Mizala,
+Romaguera and Gallegos (2011) document positive raw public/private wage gaps for all 11 Latin
+American countries in their sample. All of these gaps decrease when controlling for characteristics
+effects. Qualitatively similar patterns have also been documented by Christofides and Michael (2013)
+for 23 of 27 European countries in their sample, by Aslam and Kingdon (2009) for Pakistan and by
+others.10 What is striking about Bhutan is the sheer difference between the very sizeable raw
+public/private wage gap and the practically inexistent wage gap once characteristics effects are
+controlled for. Observable characteristics of workers or jobs explain a larger proportion of Bhutan’s
+public/private wage differential than in almost all other countries for which comparable data exist.
+
+        What are the policy implications of these findings? At least in a narrow sense of the word, the
+overall conclusion seems to be that Bhutan’s public sector follows what has been called the prevailing
+wage principle. In other words, the country’s public sector workers tend to receive wages equivalent
+to those earned by private sector workers performing comparable work (cf. Fogel and Lewin, 1974).
+At the same time, the public sector clearly remains the sector of choice for many Bhutanese job seekers
+and queuing for public sector jobs is widespread. At first glance it might appear puzzling why the
+
+
+
+
+        10  In contrast, in their study of the Peruvian labor market Coppola and Calvo-Gonzales (2011) document no
+overall public/wage gap. Instead, they find significantly positive characteristics effects and significantly negative
+coefficients effects that cancel each other out.
+                                                       - 30 -
+public sector should be seen as so attractive when public sector workers receive wages equivalent to
+those earned by private sector workers performing comparable work. However, this apparent puzzle
+can be explained by the fact that the overall compensation packages received by Bhutan’s public sector
+workers tend to be far more generous than those offered in the private sector. As documented in
+Section 4, Bhutan’s public sector employees enjoy more extensive fringe benefits than private sector
+workers. In addition to that, they also have better access to pensions and other social insurances, more
+job security and higher prestige.
+
+        A number of major hydropower projects will come on stream in the next few years. As a result,
+the pressure is likely to rise to further expand Bhutan’s public sector and to further increase the
+generosity of the compensation packages offered to public sector workers. In light of the results of
+this study it might appear more prudent for the Royal Government of Bhutan to instead consider a
+three-pronged strategy for sectoral rebalancing – not to weaken the public sector but to allow private
+sector jobs to emerge and prosper. First, reign in wage increases in the public sector and make sure
+that in the future adjustments to public sector wages are modest and in line or below private sector
+wage growth. Second, gradually align the overall compensation packages offered to public sector and
+private sector workers, e.g. by strengthening the enforcement of labor regulations to improve private
+sector workers’ access to fringe benefits they are legally entitled to, extending pension insurance to the
+private sector and considering the introduction of unemployment benefits or other forms of income
+support for jobless private sector workers. Third, foster broad private sector development and
+continue the current policy of limiting growth in the public sector workforce, especially with regard
+to the civil service.
+
+
+
+
+                                                  - 31 -
+References
+
+Aslam, Monazza and Geeta Kingdon. 2009. “Public-Private Sector Segmentation in the Pakistani
+Labour Market.” Journal of Asian Economics 20: 34–49.
+Bales, Sarah and Martin Rama. 2001. “Are Public Sector Workers Underpaid? – Appropriate
+Comparators in a Developing Country.” World Bank Policy Research Working Paper 2747.
+Bender, Keith. 1998. “The Central Government-Private Sector Wage Differential.” Journal of
+Economic Surveys 12: 177–220.
+Bhaumik, Sumon K., Ira N. Gang and Myeung-Su Yun. 2006. “Ethnic Conflict and Economic
+Disparity: Serbians and Albanians in Kosovo.” Journal of Comparative Economics 34: 754–773.
+Bourguignon, Francois, Martin Fournier and Marc Gurgand. 2007. “Selection Bias Corrections Based
+on the Multinomial Logit Model: Monte Carlo Comparisons.” Journal of Economic Surveys 21: 174–
+205.
+Chen, Yi, Sylvie Démurger and Martin Fournier, 2005. “Earnings Differentials and Ownership
+Structure in Chinese Enterprises.” Economic Development and Cultural Change 53: 933–958.
+Chen, Yi, Sylvie Démurger and Martin Fournier. 2007. “Différentiels Salariaux, Segmentation et
+Discrimination à l’Egard des Femmes sur le Marché du Travail Chinois.” GATE Working Paper 07–
+13.
+Christofides, Louis N. and Maria Michael. 2013. “Exploring the Public-Private Sector Wage Gap in
+European Countries.” IZA Journal of European Labor Studies 2: 1–53.
+Christofides, Louis N. and Panos Pashardes. 2002. “Self/Paid-Employment, Public/Private Sector
+Selection, and Wage Differentials.” Labour Economics 9: 737–762.
+Coppola, Andrea and Oscar Calvo-Gonzalez. 2011. “Higher Wages, Lower Pay: Public vs. Private
+Sector Compensation in Peru.” World Bank Policy Research Working Paper 5858.
+Cotton, Jeremiah. 1988. “On the Decomposition of Wage Differentials.” Review of Economics and
+Statistics 70: 236–243.
+Démurger, Sylvie, Shi Li and Juan Yang. 2012. “Earnings Differentials between the Public and Private
+Sectors in China: Exploring Changes for Urban Local Residents in the 2000s.” China Economic
+Review 23: 138–153.
+Dimova, Ralitza and Ira N. Gang. 2007. “Self-Selection and Earnings during Volatile Transition.”
+Journal of Comparative Economics 35: 612–629.
+Dubin, Jeffrey A. and Daniel L. McFadden. 1984. “An Econometric Analysis of Residential Electric
+Appliance Holdings and Consumption.” Econometrica 52: 345–362.
+Ehrenberg, Ronald G. and Joshua L. Schwarz. 1987. “Public-Sector Labor Markets.” In Ashenfelter,
+Orley and Richard Layard (eds.). Handbook of Labor Economics 2: 1219–1260.
+Fandl, Kevon, Adriana Kugler, Milan Vodopivec and Michael Weber. 2011. “Is Enforcement of Labor
+Market Regulations Beneficial for Workers? Evidence from Surprise Inspections in Bhutan.”
+Unpublished manuscript. Washington, DC: World Bank.
+Firpo, Sergio, Nicole M. Fortin and Thomas Lemieux. 2007. “Decomposing Wage Distributions
+Using Recentered Influence Function Regressions.” Mimeo, University of British Columbia.
+                                               - 32 -
+Firpo, Sergio, Nicole M. Fortin and Thomas Lemieux. 2009. “Unconditional Quantile Regressions.”
+Econometrica 77: 953–973.
+Fogel, Walter and David Lewin. 1974. “Wage Determination in the Public Sector.” Industrial and
+Labor Relations Review 27: 410–431.
+Fortin, Nicole M., Thomas Lemieux and Sergio Firpo. 2011. “Decomposition Methods in
+Economics.” In: Ashenfelter, Orley and David Card (eds.). Handbook of Labor Economics 4A: 1–
+102.
+van der Gaag, Jacques and Wim Vijverberg. 1988. “A Switching Regression Model for Wage
+Determinants in the Public and Private Sectors of a Developing Country.” Review of Economics and
+Statistics 70: 244–252.
+Gang, Ira N. and Achim Schmillen. 2014. “Sometimes, Winners Lose: Economic Disparity and
+Indigenization in Kazakhstan.” IZA Discussion Papers 8464.
+Glinskaya, Elena and Michael Lokshin. 2007. “Wage Differentials between the Public and Private
+Sectors in India.” Journal of International Development 19: 333–355.
+Gregory, Robert G. and Jeff Borland. 1999. “Recent Developments in Public Sector Labor Markets.”
+In: Ashenfelter, Orley and David Card (eds.). Handbook of Labor Economics 1: 3573–3630.
+Gross National Happiness Commission (GNHC). 2012. FAQs on GNH. Thimphu.
+Heckman, James. 1979. “Sample Selection Bias as a Specification Error.” Econometrica 47: 153–161.
+International Labour Office (ILO). 1999. Statistics on Public Sector Employment: Methodology,
+Structures and Trends. Geneva.
+Jann, Ben. 2008. “The Blinder-Oaxaca Decomposition for Linear Regression Models.” Stata Journal
+8: 453–479.
+Lausev Jelena. 2014. “What has 20 Years of Public-Private Pay Gap Literature Told Us? Eastern
+European Transitioning vs. Developed Economies.” Journal of Economic Surveys 28: 516–550.
+Lee, Lung Fei. 1983. “Generalized Econometric Models with Selectivity.” Econometrica 51: 507–512.
+Lindauer, David L. and Richard H. Sabot. 1983. “The Public/Private Wage Differential in a Poor
+Urban Economy.” Journal of Development Economics 12: 137–152.
+Mincer, Jacob. 1974. Schooling, Experience and Earnings. National Bureau of Economic Research,
+New York.
+Ministry of Labour and Human Resources (MoLHR). 2015. Labour Force Survey Report 2014.
+Thimphu.
+Ministry of Labour and Human Resources (MoLHR) and United Nations Development Programme
+(UNDP). 2014. Unemployed Youth Perception Survey 2014 Report. Thimphu.
+Mizala, Alejandra, Pilar Romaguera and Sebastián Gallegos. 2011. “Public-Private Wage Gap in Latin
+America (1992–2007): A Matching Approach.” Labour Economics 18: S115–S131.
+National Statistics Bureau (NSB). 2014. Bhutan at a Glance 2014. Thimphu.
+National Statistics Bureau (NSB) and World Bank. 2014. Bhutan Poverty Assessment. Thimphu.
+
+
+                                              - 33 -
+Oaxaca, Ronald L. 1973. “Male-Female Differentials in Urban Labor Markets.” International
+Economic Review 14: 693–709.
+Reimers, Cordelia W. 1983. “Labor Market Discrimination against Hispanic and Black Men.” Review
+of Economics and Statistics 65: 570–579.
+Royal Civil Service Commission (RCSC). 2014. Civil Service Statistics 2014. Thimphu.
+Royal Civil Service Commission (RCSC). 2015. Annual Report 2014–2015. Thimphu.
+Saha, Sarani, Poulomi Roy and Saibal Kar. 2014. “Public and Private Sector Jobs, Unreported Income
+and Consumption Gap in India: Evidence from Micro-Data.” North American Journal of Economics
+and Finance 29: 285–300.
+Schultz, T. Paul. 1990. “Testing the Neoclassical Model of Family Labor Supply and Fertility.” Journal
+of Human Resources 25: 599–634.
+Stelcner, Morton, Jacques van der Gaag and Wim Vijverberg, 1989. “A Switching Regression Model
+of Public-Private Sector Wage Differentials in Peru: 1985-86.” Journal of Human Resources 24: 545–
+559.
+Tansel, Avsit, 2005. “Public-Private Employment Choice, Wage Differentials, and Gender in Turkey.”
+Economic Development and Cultural Change 53: 453–477.
+World Bank. 2003. Measuring Living Standards: Household Consumption and Wealth Indices.
+Washington, DC.
+Yun, Myeung-Su. 2005. “A Simple Solution to the Identification Problem in Detailed Wage
+Decompositions.” Economic Inquiry 43: 766–772.
+
+
+
+
+                                                - 34 -
+Appendix A. Civil Service Employment and Pay
+
+To check the reliability of the BLFS data especially with regard to the absolute and relative size of
+Bhutan’s public sector and the average pay in this sector, Table A1 compares size and structure of
+civil service employment and the average annual civil service pay according to the BLFS with
+administrative data from Bhutan’s Royal Civil Service Commission (RCSC, 2014, 2015). RCSC (2014)
+contains reliable and up-to-date administrative information on the strength and structure of Bhutan’s
+civil service as of December 31, 2014 and RCSC (2015) does the same for the average annual civil
+service pay as of July 2014. The civil service in turn forms the largest component of public sector
+employment in Bhutan. As outlined in Section 3, the other components of the public sector are other
+government agencies, the armed forces and state-owned enterprises. This definition follows ILO
+(2009).
+
+          Table A1 documents that using appropriate weights the BLFS counts 24,530 civil service
+employees in Bhutan whereas RCSC (2014) identifies 26,320 civil servants. In other words, RCSC
+(2014) gives a civil service headcount that is 7.3 percent larger than the one implied by the BLFS.
+While this discrepancy is not non-negligible, the overall size of Bhutan’s civil service is similar
+according to both sources.
+
+          Concerning the structure of civil service employment, Table A1 breaks total employment in
+the civil service down by employees’ labor market characteristics, socio-demographic characteristics
+and level of education. The age and education breakdowns are performed on a more aggregate level
+than what is possible with the BLFS alone. This is because RCSC (2014) does not provide the exact
+numbers of civil service employees for as many age or education groups as the BLFS. The specific
+categorization also differs between the two sources.
+
+          Table A1 documents that with regard to labor market characteristics, both the BLFS and RCSC
+(2014) categorize the overwhelming majority of civil servants as regular paid employees. At the same
+time, the number of contract workers in Bhutan’s civil service is about six times higher according to
+RCSC (2014) than according to the BLFS. The reason might be because some contract workers in the
+civil service do not identify themselves as civil servants in the BLFS and instead refer of themselves
+as being employed in other government agencies. This would then also explain a large portion of the
+discrepancy in overall civil service employment between the BLFS and RCSC (2014). Besides, it is
+noteworthy that while the RCSC plausibly classifies no civil servants as casual paid employees or own-
+
+                                                 - 35 -
+account workers, the BLFS counts a very small number of civil servants as belonging to the two
+employment types. These are most probably miscategorizations.
+
+
+
+Table A1
+Civil service employment and pay according to the BLFS 2014, RCSC (2014) and RCSC (2015)
+ PANEL A – CIVIL SERVICE EMPLOYMENT ACCORDING TO THE BLFS 2014 AND RCSC (2014)
+                                          BLFS 2014            RCSC (2014)                              Difference
+                                      Absolute   Relative   Absolute  Relative                      Absolute Relative
+ Total                                 24,530    100.0%       26,320   100.0%                          1,790      7.3%
+ By labor market characteristics
+ Regular paid employee                  24,301    99.1%       25,358    96.3%                           1,057      4.3%
+ Casual paid employee                       92     0.4%            0     0.0%                             -92   -100.0%
+ Contract / piece paid worker              131     0.5%          962     3.7%                             831    634.4%
+ Own-account worker                          6     0.0%            0     0.0%                              -6   -100.0%
+ By socio-demographic characteristics
+ Male                                  16,247     66.2%       13,328    65.8%                           1,081      6.7%
+ Female                                  8,283    33.8%        8,992    34.2%                             709      8.6%
+ Non-Bhutanese                              43     0.2%          469     1.8%                             426    990.7%
+ Bhutanese                             24,487     99.8%       25,851    98.2%                           1,364      5.6%
+ Age 24 and under                        1,263     5.1%        1,502     5.7%                             239     18.9%
+ Age 25–34                             11,940     48.7%       13,371    50.8%                           1,431     12.0%
+ Age 35–44                               6,511    26.5%        7,354    27.9%                             843     12.9%
+ Age 45–54                               4,063    16.6%        3,397    12.9%                            -666    -16.4%
+ Age 55 and over                           754     3.1%          696     2.6%                             -58     -7.7%
+ By education
+ Middle secondary education or less      8,849    36.1%        5,125    19.5%                          -3,724    -42.1%
+ Higher secondary education              7,334    29.9%        6,320    24.0%                          -1,014    -13.8%
+ Lower tertiary education                6,600    26.9%       12,141    46.1%                           5,541     84.0%
+ Higher tertiary education               1,422     5.8%        1,772     6.7%                             350     24.6%
+ Religious education                        96     0.4%            0     0.0%                             -96   -100.0%
+
+  PANEL B – CIVIL SERVICE PAY ACCORDING TO THE BLFS 2014 AND RCSC (2015)
+                                                   BLFS 2014                   RCSC (2015)                 Difference
+                                              Absolute        Relative      Absolute    Relative     Absolute Relative
+                                                     Nu                          Nu                         Nu
+  Annual average                                               100.0%                   100.0%                      12.8%
+                                               209,948                       236,757                    26,809
+Notes. (1) Weights have been used for the BLFS 2014 numbers. (2) BLFS 2014 records civil service employment and pay
+around December 2014 and January 2015, RCSC (2014) records employment as on December 31, 2014 and RCSC
+(2015) pay as of July 2014. (3) Due to data availability, civil service employment by education and civil servant annual
+average pay are for regular paid employees only. (4) For the RCSC (2014) numbers, middle secondary education or less
+includes functional qualification and basic education class 10 and below, higher secondary education includes certificate,
+lower tertiary education includes diploma, bachelor, postgraduate diploma and postgraduate certificate, higher secondary
+education includes master und Ph.D.
+
+
+
+         Concerning socio-economic characteristics, the gender and age structure of Bhutan’s civil
+service look very similar in the BLFS and according to RCSC (2014). At the same time, notable
+discrepancies are found with respect to civil servants’ citizenship. Both sources count very few non-
+Bhutanese citizens among the group of civil servants. However, their number according to RCSC
+                                                          - 36 -
+(2014) is ten times as large as the one implied by the BLFS. This might partly be because following
+RCSC (2014) almost all non-Bhutanese citizens in the civil service are contract workers. According to
+the source, this is the case for 444 out of 469 non-Bhutanese citizens listed as civil service employees.
+However, the discrepancy between the BLFS and RCSC (2014) might also point towards a more
+general under-reporting of non-Bhutanese individuals in the BLFS (cf. footnote 8). Finally, relatively
+large differences are also recorded between both sources with regard to civil servants’ education.
+Generally speaking, the average education level of civil servants as detailed in the BLFS is significantly
+higher than that of all employed individuals in Bhutan (cf. Table 1). Nevertheless, RCSC (2014) lists
+even higher average education levels for civil servants. No ready explanation is apparent for this
+discrepancy.
+
+        Finally, Table A1 shows that the average annual pay of a civil servant according to the BLFS
+2014 is Nu 209,948 while RCSC (2015) lists it as Nu 236,757. Put differently, average civil service pay
+according to official sources is Nu 26,809 or 12.8 percent higher than according to the BLFS 2014.
+This is again a discrepancy that is not non-negligible but that still puts the BLFS 2014 relatively close
+to information garnered form administrative sources.
+
+        Summa summarum, a number of noteworthy discrepancies between the civil service employment
+headcount and structure and average pay according to the BLFS data and administrative data from
+the Royal Civil Service Commission can be documented, especially with regard to the typical
+nationality and educational attainment of civil servants. Still, the overall size, employment structure
+and level of pay of the civil service documented in the BLFS is quite similar to the one recorded by
+RCSC (2014, 2015).
+
+
+
+
+                                                  - 37 -
+
