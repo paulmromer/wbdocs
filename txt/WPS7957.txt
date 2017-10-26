@@ -1,0 +1,1519 @@
+                                                 WPS7957
+
+
+Policy Research Working Paper                   7957
+
+
+
+
+          Impact of Oil Price Fluctuations
+          on Financial Markets Since 2014
+                                  Ha Nguyen
+                                 Huong Nguyen
+                                  Anh Pham
+
+
+
+
+Development Research Group
+Macroeconomics and Growth Team
+January 2017
+Policy Research Working Paper 7957
+
+
+  Abstract
+ This paper investigates the causal impact of oil price fluctu-                     bonds) while lifting safe assets (U.S. investment-grade bonds
+ ations on financial markets since January 2014. Following                          and long-term Treasury bonds). In addition, lower oil prices
+ a heteroscedasticity-based event study approach, the paper                         boost the U.S. dollar and reduce the prices of emerging
+ instruments changes in oil prices by exogenous shocks in                           market equities. Remarkably, the declines in oil prices hurt
+ oil supply. It finds that oil price declines raise uncertainty                     several sectors that supposedly benefit from lower oil prices,
+ and hurt risky assets (U.S. stocks and high-yield corporate                        such as basic materials, industrials, and transportation.
+
+
+
+
+  This paper is a product of the Macroeconomics and Growth Team, Development Research Group. It is part of a larger
+  effort by the World Bank to provide open access to its research and make a contribution to development policy discussions
+  around the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors
+  may be contacted at hanguyen@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+Impact of Oil Price Fluctuations on Financial Markets Since 2014
+                                                                 1/24/2017
+
+                                                                 Ha Nguyen1
+                                                               The World Bank
+                                                         hanguyen@worldbank.org
+
+                                                            Huong Nguyen
+                                                            Tufts University
+                                                        huong.nguyen@tufts.edu
+
+                                                              Anh Pham
+                                                       George Mason University
+                                                         apham16@gmu.edu
+
+
+
+
+JEL: G15; Q41
+
+Keywords: Oil prices, financial markets
+
+
+
+                                                            
+1
+  We are grateful to Maya Eden, Roberto Fattal Jaef, Grace Li, Aart Kraay, Minh Thi Nguyen, Luis
+Serven and seminar participants at the World Bank and the IMF for comments and feedback..
+ 
+
+
+
+
+                                                                     1
+ 
+Contents
+I.      Introduction ............................................................................................................... 3
+II.         Methodology .......................................................................................................... 6
+     Identifying oil-supply events ........................................................................................ 9
+        Table 2.1: Demand news and event days .................................................................. 11
+        Table 2.2: Tests of differences in variance of oil price changes ............................... 12
+III.        Data ...................................................................................................................... 13
+        Table 3.1: Summary statistics ................................................................................... 14
+IV.         Results .................................................................................................................. 16
+     Overall US market ...................................................................................................... 16
+        Table 4.1: Impacts of WTI oil price on overall markets ........................................... 17
+        Table 4.2: Persistence of oil price shocks ................................................................. 18
+     On volatility ................................................................................................................. 19
+        Table 4.3: Oil price declines and the VIX index....................................................... 19
+     The US Market: Breakdown by sector and asset class ............................................ 19
+        Table 4.4: Breakdown by sector and asset class ....................................................... 21
+V.      Impact on Emerging Markets ................................................................................ 23
+        Table 5.1 MSCI Emerging Market index.................................................................. 23
+        Table 5.2 Dollar index (broad).................................................................................. 24
+        Table 5.3 MSCI Gulf States Index ............................................................................ 25
+VI Discussion on potential channels .............................................................................. 26
+VII Conclusion ................................................................................................................ 27
+APPENDIX ...................................................................................................................... 29
+     Table A1: 29 Event dates ............................................................................................ 29
+     Figure A1: SeekingAlpha news article – Sample ..................................................... 33
+     Appendix B: Dealing with the small sample problem.............................................. 34
+        Table B.1: Shapiro-Wilk W Test .............................................................................. 34
+References ........................................................................................................................ 37
+
+
+
+
+                                                                    2
+ 
+                                 I.      Introduction
+
+Recent developments in the oil market are nothing short of spectacular. The West
+Texas Intermediate (WTI) oil price has fallen from over $100 per barrel in mid-
+2014 to around $30 per barrel in February 2016. Since then, it has recovered to
+around $50 a barrel as of December 2016 (Figure 1). No one knows if we have seen
+the bottom of oil prices, or this recovery is only temporary.
+
+
+
+
+                             Figure 1.1: WTI oil price
+                                Source: Bloomberg
+
+
+A concerning observation in financial markets is that recently, stock prices and oil
+price tend to rise and fall together. Conventional wisdom suggests that a cheaper
+oil price benefits oil-importing economies, such as the U.S., because of lower
+production costs for industries and lower fuel costs for households. However, lower
+oil prices could hurt the oil and gas sector and transmit to financial markets, which
+could then propagate damages to the real economy via finance-macro linkages
+(Kiyotaki and Moore, 1997; Bernanke et al, 1999). Thus, it is possible for the
+negative effects of lower oil prices to outweigh their benefits. Indeed, many policy
+makers are concerned about potential systemic risk that the recent declines in oil
+prices may cause (for example, see IMF, 2015 and Bernanke, 2016).
+
+
+
+
+                                          3
+ 
+In this paper, we investigate the causal impact of oil price fluctuations on U.S. and
+international financial markets from January 2014 until October 2016. Quantifying
+the causal impacts of oil prices on the financial markets is not straightforward. We
+do not know if oil prices affect stock prices, stock prices affect oil prices, or both
+are driven by a third factor such as the expectation about future economic growth.
+To overcome the issue of endogeneity, we use a heteroscedasticity-based event
+study approach, following Rigobon (2003) and Rigobon and Sack (2004).
+Specifically, we instrument for changes in oil prices with exogenous shocks that
+mainly affect oil supply. The window for our event study is one day. The detailed
+description of the events is discussed in section II.
+
+There are three main findings. First, for the U.S. financial markets, we find that a
+lower WTI oil price hurts risky assets (stocks and high-yield bonds), lifts safe assets
+(investment grade bonds and long term Treasury bonds), and raises the market’s
+future volatility (the VIX index). A 10% decline in the WTI oil price lowers the
+U.S. stock market index by about 1.2% and high-yield corporate bonds by 0.41%.
+The same decline raises investment-grade bonds by 0.31%, long-term Treasury
+bonds by 1.2%, and the VIX index by 9.1%. Second, a 10% decrease in oil price
+boosts the value of the U.S. dollar by 0.41% and hurts equity markets in emerging
+countries by 1.32%. Third, we examine the impact of oil price fluctuations on
+different sectors. As expected, lower oil prices adversely affect the energy sector.
+Remarkably, the declines in oil prices hurt basic materials, transport and industrials,
+sectors that supposedly benefit from lower oil prices.
+
+Our paper complements the empirical literature on the impact of oil prices on
+financial markets and on oil-exporting countries. The existing literature finds either
+a positive2 or a non-significant impact of oil price declines on advanced countries’
+
+                                                            
+2
+    Jones and Kaul, 1996; Sadorsky, 1999.
+
+
+
+
+                                                               4
+ 
+stock markets.3 Additionally, some studies find that oil price declines hurt the oil
+and gas sector and oil exporting countries.4 The vast majority of the empirical
+literature uses different VAR frameworks with various identification assumptions.
+
+Our study’s contribution is twofold. First, instead of using the traditional VAR
+approach, we use a heteroscedasticity-based event study approach, developed by
+Rigobon (2003). This event-study approach helps mitigate the concern about
+omitted variables and reverse causality. Second, we examine the recent episode of
+oil’s steep decline (January 2014 to October 2016). We find that the declines in oil
+prices during this period have systemic negative impacts on financial markets, a
+finding not seen in the existing literature.
+
+The rest of the paper is organized as follows: section II explains the identification
+strategy and oil-supply events. Section III describes data sources. Section IV
+presents the results for the U.S. financial market. Section V presents the results for
+emerging markets. Section VI discusses potential channels of the transmission.
+Section VII concludes.
+
+                                                            
+3
+    Hammoudeh et al. (2004) find none of the daily oil industry stock indices can explain the daily
+future movements of the New York Mercantile Exchange (NYMEX) futures prices. Kilian and Park
+(2009) find that oil supply shocks have no significant effect on the U.S. stock market. Apergis and
+Miller (2009) find that international stock market returns do not respond significantly to oil price
+shocks. Kilian (2009) decomposes shocks to oil prices to oil supply shocks, global demand shocks
+and crude oil specific demand shocks. He finds that the surge in oil prices between 2003-2007 was
+caused by global demand shocks and hence did not cause a major recession in the U.S.
+4
+    Park and Ratti (2008) find that while oil price increases have a negative impact on stock returns in
+the US and in 12 European countries, they have positive impacts on the stock market in Norway, an
+oil-exporting country. Boyer and Filion (2007) show that increases in the price of oil affect the stock
+returns of Canadian oil and gas companies positively. El-Sharif et al. (2005) reach a similar
+conclusion for oil and gas returns in the UK.
+
+ 
+
+
+
+
+                                                               5
+ 
+                                   II.        Methodology
+
+We identify the effect of changes in oil prices on prices of various asset classes
+through a heteroscedasticity-based identification strategy, following Rigobon
+(2003) as well as Rigobon and Sack (2004). Consider the following system of
+equations:
+
+                        ∆        ∆                                   (1)
+                        ∆        ∆                                   (2)
+where ∆      is the change in oil prices, ∆        the change in asset price, and    a set of
+common factors that could affect both oil prices and stock prices (such as interest
+rates, news about global growth or other demand-side factors).                represents oil
+shocks that only directly affect oil prices.          captures events that affect oil supply,
+such as a North Sea storm that forces oil firms to evacuate platforms. Similarly,
+are the idiosyncratic shocks that only directly affect stock prices. Our goal is to
+estimate the value of : the causal impacts of changes in oil prices on changes in
+stock prices. Note that in this framework, the effects of oil price increases or
+decreases are symmetric.
+
+We divide the days in our sample into two types of days, event (E) and non-event
+(N) days. We identify 28 days between 01/01/2014 to 10/15/2016 with important
+announcements and developments about oil supply as event days. A useful feature
+of the approach is that it does not require the complete absence of common shocks
+during event days. This strategy instead relies on the identifying assumption that
+the variances of the common shocks             and financial shocks         are the same on
+non-event days and event days, whereas the variance of oil supply shocks                  	is
+higher on event days than non-event days: 	
+
+                                     ,         ,        (3)
+                                     ,            ,     (4)
+                                     ,         ,        (5)
+
+
+
+
+                                              6
+ 
+These assumptions imply that the “importance” of oil supply-side announcements
+increases on event days (E). Again, it is important to note that demand factors can
+take place on event days, as long as the influence of demand factors is similar to
+that on non-event days. As argued by Rigobon and Sack (2004), these assumptions
+are much weaker than those required in traditional event-study approach.
+
+Under such assumptions, we can identify parameter                                               by comparing the covariance
+matrices of stock price and oil price changes on event days and non-event days. In
+particular, for each of the two types of days                                              ∈      ,     , we can estimate the
+covariance matrix of ∆ , ∆                                     , denoted Ω :
+
+                                                             ∆                          ∆ ,∆
+                                  Ω                                                                           (6)
+                                            		          ∆ ,∆                             ∆
+
+Rigobon and Sack (2004) show that the difference in the covariance matrices on
+event and non-event days as ∆Ω=Ω                                               Ω :
+
+                                                        ,          ,
+                                         ∆Ω =	                         	                                (7)
+                                                                                    1
+From (7),               can be estimated as
+                                                         ∆Ω ,
+                                                                                                 (8)5
+                                                         ∆Ω ,
+
+which from (6), (8) can be written as:
+                                                                       ∆ ,∆                    ∆ ,∆
+                                                                          ∆                    ∆
+
+The numerator captures the difference between the covariance of oil prices and
+stock prices for event days and non-event days. If the covariance for event days is
+the same as that for non-event days, the relationship between oil prices and stock
+
+                                                            
+                            ∆Ω ,                               ∆Ω ,
+5
+     We choose                       instead of                        because the latter estimate is problematic. Under the null
+                            ∆Ω ,                               ∆Ω ,
+hypothesis of                 0, both the numerator ∆Ω                     ,   and the denominator ∆Ω    ,    are zero. In other words,
+                                                            ∆Ω ,
+under the null hypothesis, the ratio                               	is undetermined.  
+                                                            ∆Ω ,
+
+
+
+
+                                                                                7
+ 
+prices is driven only by common shocks,                  . Hence, the causal impact of oil price
+on stock price, , would be zero.
+
+Empirically, the approach can be implemented through an instrumental variable
+estimation technique. As such, we define vectors ∆                      and ∆     with size     1 to
+contain the log changes in asset prices and oil prices on the event days, and vectors
+∆       and ∆      with size       1 to contain the log changes in asset prices and oil
+prices on the non-event days. We then combine the two subsamples into two (
+    	       1 vectors that contain the log changes in asset prices and oil prices in our
+sample, ∆           ∆ 			∆     and ∆          ∆        			∆     ′	.
+
+Consider the following instrument:
+
+                                   ∆   			                       ∆
+                                             																                ′	
+
+where        is the number of explanatory variables.                  can be estimated by regressing
+the log change in asset prices ∆ on the log change in oil prices over the sample
+period using the standard instrumental variable approach, with the instrument                     :
+
+                                               ∆                ∆
+
+Simple algebra shows that the estimated value of                       is asymptotically identical to
+the following:
+                                       ∆ ,∆                           ∆ ,∆
+                                          ∆                           ∆
+
+The regression equation is therefore as follows:
+
+
+                   ∆                   ∆                   ∆                 ∆
+
+
+where ∆         is the log change in asset prices (i.e. stock prices and bond prices);
+        ∆     is the log change in the WTI oil price, instrumented by w; and ∆                   and
+
+
+
+
+                                                   8
+ 
+∆           are the log changes in lagged asset prices and oil prices (they are control
+variables).
+
+We present regular standard errors in our main results section, and bootstrap
+standard errors as robustness checks in Appendix. The two methods yield similar
+results.
+
+                                                   Identifying oil-supply events
+
+Identifying oil-supply events is challenging. There is not a fixed calendar for oil-
+supply events, so one has to screen these days from financial news. Since there are
+multiple events that could happen in those days, it is not certain that oil supply news
+drives oil prices.
+
+We employ several rounds of screening to identify oil-supply events. In the first
+round, we use the Seeking Alpha news portal (www.seekingalpha.com).7 Seeking
+Alpha records all surprising events and announcements that arguably affect the oil
+supply. They range from surprising announcements by OPEC officials and OPEC
+member countries to unexpected developments in key oil exporters. From 1/1/2014
+to 10/15/2016, we record 29 events. The window for our event study is one day.
+For announcements that happen after trading hours, we examine the change in
+financial markets on the following trading day. These dates are shown in Table A1
+in the Appendix, along with links to in-depth financial news discussing the events.
+
+There could be concerns with this list. The first potential problem is that recorded
+events could reflect ad-hoc ex-post explanations of the analysts. For example, an
+analyst could see oil prices drop during the day and look for news about oil supply
+
+
+                                                            
+ 
+7
+  Seeking Alpha is a community-based platform for investment research, with broad coverage of
+stocks, asset classes, ETFs and investment strategy. In contrast to other equity research platforms,
+insight is provided by investors and industry experts rather than sell-side analysts. Seeking Alpha
+has 4M registered users (48% YOY growth). Over 18.5% of the audience are financial
+professionals. 
+
+
+
+
+                                                                 9
+ 
+that could explain that event. This would be a problem if oil prices drop because of
+demand factors but the analysts interpret this as supply driven.
+
+We minimize this possibility by not considering the days that have important
+demand announcements recorded by Seeking Alpha analysts. We also do not
+consider announcements about U.S. oil inventories because oil inventories could
+reflect both supply and demand factors. Furthermore, we also cross check with
+independent economic calendars to see if there are important surprising demand
+announcements in the 29 event days. We removed 4/12/2015 as there were
+numerous Fed speeches (Harker, Dudley, Bullard, Kocherlakota spoke at the “The
+New Normal for the U.S. Economy” forum hosted by the Philadelphia Fed), as well
+as the one by ECB President. Thus, we have 28 event dates.
+
+To increase our confidence that these 28 days are primarily supply events, we also
+use U.S. news coverage to provide a check. We use www.newslibrary.com to count
+how many articles with the words “economy” or “economic growth” appear in 526
+U.S. national news outlets. The number of the articles represents how intensively
+news about the economy, or “demand news”, is covered. The assumption is that the
+higher the count for a day, the more significant demand news is for that day. We
+collect article counts for all the days since 1/1/2014. We check econometrically if
+the average article count for those 28 event days is higher or lower than that for the
+non-event days. Table 2.1 shows that the average count is marginally smaller on
+the event days than the non-event days, indicating that demand factors are
+marginally smaller in the events days.
+
+
+
+
+                                         10
+ 
+                         Table 2.1: Demand news and event days
+                                             Log (# News Article)
+                     Event                          -0.0983*
+                                                    (0.0505)
+                     Constant                      6.9286***
+                                                    (0.0096)
+                     Observations                     700
+                     R-squared                       0.0059
+                          Robust standard errors in parentheses
+                             *** p<0.01, ** p<0.05, * p<0.1
+
+
+The second potential problem is that OPEC announcements could reflect worries
+about oil demand by OPEC. For example, an announcement that OPEC countries
+will be meeting to cut production could reflect their worry that demand for oil is
+low. Should we treat this announcement as an event about oil supply cut or oil
+demand decline? The reaction of oil prices in the market could help us answer this
+question. An oil demand decline shifts the demand curve for oil to the left, reducing
+its price. A cut in oil production shifts the supply curve for oil to the left, raising its
+price. The equilibrium price depends on how much the demand and supply curves
+shift and the relative magnitude of price elasticity of demand and supply. According
+to Kilian and Murphy (2014) and Hamilton (2009), the price elasticity of oil
+demand in the short run ranges from -0.26 to 0, and the price elasticity of oil supply
+in the short run is nearly 0. Thus, the magnitude of the short-run price elasticity of
+supply is not greater than that of demand for oil. This implies that a rise in oil prices
+following an event OPEC announcement to cut production should reflect a supply
+shock. Let us take an extreme example where the supply curve for oil is almost
+vertical and the demand curve for oil is almost horizontal. In this case, if we see an
+increase in oil prices, the supply curve must shift to the left much more than the
+demand curve, indicating that people perceive the news about the production cut
+
+
+
+
+                                            11
+ 
+by OPEC as a supply event. In our 28 events, the reactions to the WTI oil price all
+indicate that the events are supply driven.
+
+The third concern is that some of the geopolitical events (such as ISIS making
+advances in Iraq) could generate uncertainty, which is a demand factor. We argue
+that demand factors, if any, are weaker than the supply factors, by observing the
+price action. Take the example of ISIS making advances in Iraq: uncertainty would
+cause oil prices to go down, while the negative supply shock associated with the
+ISIS disruptions would cause oil prices to go up. In the equilibrium, we observe an
+increase in oil prices. Following the same logic about the shifts in demand and
+supply and the price elasticity of demand and supply for oils in the short run, we
+argue that oil supply shocks dominate demand shocks in these types of events.
+
+For the heteroskedastic-based strategy to work, the changes in oil price on event
+days have to be larger than the changes on non-event days.8 Table 2.2 shows the
+results of several test statistics to confirm that the variance of the log change in the
+WTI oil price for the event days is larger than that for the non-event days.
+                        Table 2.2: Tests of differences in variance of oil price changes9
+                              Test                                  F-statistics        p-value
+                           Levene                                    13.6400            0.0002
+     Brown-Forsythe trimmed mean                                     12.8885                0.0003
+            Brown-Forsythe median                                    13.5831            0.0002
+
+
+ 
+
+
+
+
+                                                            
+8
+ In a traditional Instrumental Variable method, it is the result of the first stage.
+9
+ Notes: “Test” describe the F-statistic being computed. The Levene test for unequal variances is
+described in Levene (1960). The Brown-Forsythe tests are described in Brown and Forsythe (1974).
+These tests all formally test the hypothesis that the variances of the changes in oil prices are equal
+on event days and non-event days.
+
+
+
+
+                                                               12
+ 
+                                                               III.    Data
+
+Our period of analysis spans 1/1/2014 to 10/15/2016. Overall, we have 700 trading
+days, and hence 699 observations. We obtain daily the WTI crude oil price from
+the U.S. Energy Information Administration. The WTI crude is chosen instead of
+Brent because WTI is the main benchmark for oil consumed in the United States.
+The WTI refers to oil extracted from wells in the U.S. and sent via pipelines to
+Cushing, Oklahoma10.
+
+We use the Dow Jones U.S. Market Index (DJUS), which represents about 95% of
+the U.S. market, to capture U.S. equity. We use the Bloomberg bond indices for
+bond prices. Daily historical Dow Jones U.S. Market indices, Bloomberg High-
+Yield Bond Indices and Bloomberg U.S. Corporate Bond Indices (investment
+grade) are obtained from Bloomberg. The 10 sectoral stock indices from Dow Jones
+are Basic Materials, Consumer Goods, Consumer Services, Financials, Healthcare,
+Industrials, Energy, Tech, Telecom, and Utilities.11 These 10 indices together make
+up the Dow Jones U.S. Market Index. In addition, we also examine two important
+subsectors: transportation and airlines.12 The S&P 500 and its sectoral indices serve
+as a robustness check.
+
+The Bloomberg investment-grade corporate bonds are the aggregate index,
+Healthcare, Tech, Materials, Financials, Communication, Consumer Discretionary,
+Utilities, Industrials, Consumer Services and Energy.13 Similarly, the Bloomberg
+high-yield corporate bond indices are the aggregate high-yield corporate bond
+
+
+
+                                                            
+10
+    For 10/10/2016, we opted for future price (March strike date) to account for Columbus’s Day.  
+11
+    Their tickers are, respectively, DJUSBM, DJUSNC, DJUSCY, DJUSFN, DJUSHC, DJUSIN,
+DJUSEN, DJUSTC, DJUSTL, DJUSUT. These 10 indices together make up the Dow Jones U.S.
+Market Index (DJUS).
+12
+    DJUSTS, and DJUSAR. 
+13
+    Their tickers are, respectively, BUSC, BUSCHC, BUSCTE, BUSCMA, BUSCFI, BUSCCO,
+BUSCCD, BUSCUT, BUSCIN, BUSCCS and BUSCEN.
+
+
+
+
+                                                                  13
+ 
+ index, Healthcare, Technology, Materials, Financials, Communications, Consumer
+ Discretionary, Utility, Industrials, and Consumer Staple.14
+
+                                                    Table 3.1: Summary statistics
+                                                                     Full Sample
+                   Variable                                     Obs        Mean      Std. Dev.     Min       Max
+             Δ Log Oil Price                                    699      -0.000864   0.0266       -0.111     0.113 
+               Δ Log Stocks                                     698      0.000205    0.00874     -0.0402     0.0364 
+      Δ Log High-Yield Bonds                                    699      0.000185    0.00234     -0.0114    0.00990 
+Δ Log (Investment-Grade Bonds)                                  699      0.000207    0.00248     -0.00847   0.00846 
+               Δ Log (TLT)                                      699      0.000478    0.00827     -0.0276     0.0265 
+               Δ Log (VIX)                                      699      0.000109    0.0802       -0.241     0.401 
+
+
+                                                                      Event Days
+                   Variable                                     Obs        Mean      Std. Dev.     Min       Max
+             Δ Log Oil Price                                    28         0.0160      0.0441     -0.111     0.113
+               Δ Log Stocks                                     28        0.00329     0.00976    -0.0151    0.0242
+      Δ Log High-Yield Bonds                                    28        0.00154     0.00247    -0.00451   0.00732
+Δ Log (Investment-Grade Bonds)                                  28       0.000378     0.00256    -0.00588   0.00510
+               Δ Log (TLT)                                      28       0.000317     0.00890    -0.0178    0.0179
+               Δ Log (VIX)                                      28        -0.0183      0.0775     -0.180     0.125
+
+
+                                                                 Non-Event Days
+                   Variable                                     Obs        Mean      Std. Dev.     Min       Max
+             Δ Log Oil Price                                    671       -0.00157     0.0255    -0.0905     0.102
+               Δ Log Stocks                                     670       7.59e-05    0.00868    -0.0402    0.0364
+      Δ Log High-Yield Bonds                                    671      0.000128     0.00232    -0.0114    0.00990
+Δ Log (Investment-Grade Bonds)                                  671      0.000200     0.00248    -0.00847   0.00846
+               Δ Log (TLT)                                      671      0.000485     0.00825    -0.0276    0.0265
+               Δ Log (VIX)                                      671      0.000876      0.0803     -0.241     0.401
+                                                             
+ 14
+  Their tickers are BUHY, BUHYHC, BUHYTE, BUHYMA, BUHYFI, BUHYCO, BUHYCD,
+ BUHYUT, BUHYIN and BUHYCS, respectively. 
+
+
+
+
+                                                                          14
+  
+                                      Figure 3.1
+                Changes in selected financial instruments and oil price
+
+
+
+
+For emerging market indices, we use MSCI dollar-denominated indices: MSCI
+overall emerging market index, MSCI Gulf State Index, and MSCI individual
+country indices for key oil-exporter countries.
+
+We choose TLT as a proxy for long-term Treasury bonds. TLT is the iShares 20+
+Year Treasury Bond ETF (Exchange Traded Fund) managed by BlackRock. It has
+99.08% its market value in 20+ Year Treasuries, 0.60% in 15-20 Years Treasuries
+and the rest in cash and derivatives. It is the largest and most liquid ETF for long-
+term Treasury bonds.
+
+Table 3.1 provides the summary statistics for changes in the WTI oil price and in
+different stock and bond indices. We present the summary statistics for the whole
+
+
+
+
+                                          15
+ 
+sample, for the event and non-event days. Overall, the price actions of oil in event
+days on average are larger than those in non-event days. For example, the standard
+deviation of the log change in WTI oil price in event days is 0.0441, about twice as
+much for that in non-event days (0.0255). We formally tested for this difference in
+Table 2.2.
+
+                                    IV.        Results
+
+                                Overall US market
+
+This section presents the effects of oil price fluctuations in the US market. Note
+that in this setup, the impacts of oil increases or decreases on financial markets are
+symmetric. Hence, we could interpret the coefficients as the impacts of either an
+oil price increase or decline. Here, for brevity, we choose to interpret the
+coefficients as the impacts of oil price declines. Table 4.1 shows that the decline in
+WTI oil price hurts U.S. risky assets, measured by overall stock and the high-yield
+bond indices, while benefiting safe assets, specifically, investment-grade bond and
+long-term 20+ year Treasury bonds (TLT). A 10% decrease in oil price leads to a
+1.2% decrease in the Dow Jones U.S. market index. We find a similar result when
+using S&P 500 index as an alternative broad-based stock index. In addition, a 10%
+decrease in WTI oil price leads to a 0.41% decrease in the high-yield bond index.
+At the same time, investment-grade corporate bonds increase by 0.31%, and TLT
+increases by 1.19%.
+
+
+
+
+                                          16
+ 
+                      Table 4.1: Impacts of WTI oil price on overall markets
+        
+VARIABLES           ∆log	 Stock index)     ∆log (High-yield     ∆log (Investment-      ∆log (20+ Treasury
+                                             bond index)        grade bond index)              bond)
+
+∆Log (Oil Price)   0.144***    0.120***   0.0446**   0.0408*** -0.0308** -0.0308** -0.112***      -0.119***
+                   (0.0538)    (0.0311)   (0.0182)    (0.0101)  (0.0137)  (0.0122)  (0.0413)       (0.0352)
+ ∆                              0.0167               0.0200***            -0.00145               -0.0326***
+                               (0.0149)              (0.00369)           (0.00375)                 (0.0126)
+ ∆                             0.0254*                0.00409            -0.000114                  -0.0182
+                               (0.0150)              (0.00323)           (0.00367)                 (0.0122)
+ ∆                             -0.00853               0.000797            7.96e-05                  -0.0119
+                               (0.0146)              (0.00306)           (0.00371)                 (0.0122)
+∆                              -0.00740
+                               (0.0544)
+∆                               -0.0682
+                               (0.0524)
+∆                              -0.00722
+                               (0.0501)
+ ∆                                                   0.483***
+                                                     (0.0664)
+ ∆                                                    -0.0461
+                                                     (0.0631)
+ ∆                                                   0.00664
+                                                     (0.0411)
+∆                                                                          -0.0288
+                                                                           (0.0391)
+∆                                                                          -0.0272
+                                                                           (0.0412)
+∆                                                                           0.0420
+                                                                           (0.0375)
+∆                                                                                                 -0.105***
+                                                                                                   (0.0394)
+∆                                                                                                  -0.0609
+                                                                                                   (0.0416)
+∆                                                                                                   0.0184
+                                                                                                   (0.0376)
+       Constant    0.000326    0.000346 0.00022** 0.00015** 0.000180* 0.000178* 0.000381          0.000386
+                   (0.00032)   (0.00033) (8.81e-05) (7.46e-05) (9.36e-05) (9.64e-05) (0.00030)    (0.00030)
+    Observations      698         695        699        696        699        696       699          696
+     R-squared      0.081       0.105      0.055      0.418      0.027      0.030      0.064       0.080
+       Stock: Dow Jones U.S. Market Index. High-yield bond: Bloomberg U.S. high-yield
+       corporate bond index, BUHY. US corporate bond index: Bloomberg U.S. corporate bond
+       index, BUSC.
+                               Robust standard errors in parentheses.
+                                 *** p<0.01, ** p<0.05, * p<0.1
+
+
+
+
+                                                      17
+        
+Table 4.2 reports the persistence of the impact of the oil shocks. We consider the
+log change in the stock and bond indices one, two and three days after the event
+days. We find that oil price declines still affect high-yield bonds three days after
+the events. However, we find no evidence for the persistent impact of oil prices on
+stocks, investment-grade bonds, and Treasury bonds.
+
+                     Table 4.2: Persistence of oil price shocks
+
+                            Index                   Without       With lags
+                      Stock index (t+1)              l
+                                                    0.0720         0.0429
+                        ∆Log (t+1; t)              (0.0440)       (0.0270)
+                      Stock index (t+2)            0.00715         0.0151
+                       ∆Log (t+2; t+1)             (0.0586)       (0.0338)
+                     Stock index (t+3)              -0.0774         -0.0487
+                      ∆Log (t+3; t+2)              (0.0650)        (0.0366)
+                 High-yield bond index (t+1)      0.0569***       0.0555***
+                                                   (0.0141)        (0.0107)
+                 High-yield bond index (t+2)      0.0354***        0.0335**
+                                                   (0.0124)        (0.0137)
+                 High-yield bond index (t+3)       0.0255**        0.0239**
+                                                   (0.0127)        (0.0121)
+             Investment grade bond index (t+1)       0.0175         0.0167
+                                                   (0.0129)        (0.0118)
+             Investment grade bond index (t+2)    -0.000559        0.00147
+                                                   (0.0152)        (0.0136)
+             Investment grade bond index (t+3)       0.0137         0.0104
+                                                   (0.0112)        (0.0113)
+                         TLT (t+1)                   0.0203         0.0158
+                                                   (0.0448)        (0.0433)
+                         TLT (t+2)                  -0.0279         -0.0213
+                                                   (0.0473)        (0.0450)
+                         TLT (t+3)                   0.0261         0.0133
+                                                   (0.0414)        (0.0393)
+
+
+To address the potential concern about the small sample of event days, we do two
+things. First, we test for the normality of the regression residuals and second, we
+apply bootstrapping to the baseline regressions. We find that the results remain
+
+
+
+
+                                          18
+ 
+unchanged: lower oil prices hurt stock and high-yield bond indices, and help
+investment-grade and long-term Treasury bonds. The details of the bootstrapped
+regressions are shown in Appendix B.
+
+                                     On volatility
+
+This section examines the impacts of oil price fluctuations on uncertainty, proxied
+by the log of the VIX index. VIX is a popular measure of the market’s expectation
+of stock volatility over the next 30-day period. Table 4.3 reveals that volatility hiked 
+by 9.09% for every 10% decline in WTI oil price. This finding reinforces the
+argument that oil price declines, although driven by exogenous supply shocks, can
+create uncertainty, flight to safety, and a deterioration of the stock market.
+
+                  Table 4.3: Oil price declines and the VIX index
+                VARIABLES              ∆log(VIX)           ∆log(VIX)
+               ∆Log (Oil Price)        -1.005***           -0.909***
+                                        (0.297)             (0.290)
+
+                    Lags                   No                 Yes
+                   Constant            -0.000804           -0.000757
+                                       (0.00297)           (0.00300)
+
+                 Observations            699                  696
+                  R-squared             0.054               0.068
+                        Robust standard errors in parentheses
+                           *** p<0.01, ** p<0.05, * p<0.1
+
+             The US Market: Breakdown by sector and asset class
+
+Table 4.4 presents the impact of oil price fluctuations on different asset classes
+(stocks, high-yield bonds, and investment-grade bonds) of different sectors. In each
+asset class, the sectors are sorted by the magnitude of the impacts.
+
+About half of the sectoral stock indices are negatively affected by oil price declines.
+As expected, the energy sector is hit the hardest as the WTI oil price decreases.
+Focusing on column 4 (regressions with lags), a 10% decline in the WTI oil price
+
+
+
+
+                                           19
+ 
+causes the Energy stock index to drop by 5.04%. The decline in the energy sector
+is expected because lower oil prices squeeze energy companies’ profit and put
+pressure on their credit-worthiness. The Basic Materials sector is also very sensitive
+to oil price fluctuations: when WTI oil price decreases by 10%, the stock index of
+Basic Materials decreases by 2.91%. Technology, consumer services, consumer
+goods, telecommunication, healthcare and utilities do not seem affected by oil price
+declines.
+
+Interestingly, some sectoral stock indices that are expected to benefit from oil price
+declines—Industrials, Basic Materials, and Transport Services – also witness the
+value of their indices drop with oil price. In addition, the valuation of airlines,
+another sector that supposedly benefits from oil price declines, remains unchanged
+when the WTI oil price goes down. This suggests that other channels, such as
+uncertainty-driven demand reduction for industrial products or transport services
+and air travel, might be at play.
+
+The Financial sector is widely expected to be affected by the spillovers from the
+Energy sector. Economists and policy makers are concerned that distressed energy
+companies, driven by lower oil prices, could default on their loans to banks,
+adversely impacting banks’ balance sheets. We find that while the stock index of
+Financial sector is negatively affected by a lower WTI oil price, the magnitude of
+1.75% is not relatively large compared to other sectors.
+
+
+
+
+                                         20
+ 
+                         Table 4.4: Breakdown by sector and asset class
+ 
+
+                             Index             Without lags        With lags
+         Stocks             Energy              0.532***           0.504***
+                                                 (0.101)           (0.0888)
+                        Basic Materials         0.312***           0.291***
+                                                (0.0479)           (0.0410)
+                       Transport Services        0.216**            0.196*
+                                                  (0.109)           (0.109)
+                           Financials            0.190**           0.175**
+                                                 (0.0779)          (0.0744)
+                          Industrials            0.169***          0.158***
+                                                 (0.0453)          (0.0422)
+                        Aggregate Index         0.144***           0.130***
+                                                 (0.0531)          (0.0481)
+                             Tech                  0.121*           0.102*
+                                                 (0.0702)          (0.0616)
+                       Consumer Services           0.0791           0.0645
+                                                 (0.0792)          (0.0730)
+                       Consumer Goods              0.0642           0.0519
+                                                 (0.0621)          (0.0565)
+                           Telecom                 0.0403           -0.0385
+                                                 (0.0662)          (0.0420)
+                          Healthcare               0.0359           0.0317
+                                                 (0.0730)          (0.0603)
+                            Utilities             -0.0260           0.0294
+                                                 (0.0462)          (0.0662)
+                            Airlines               -0.127            -0.138
+                                                  (0.194)           (0.186)
+    High-yield Bonds        Energy               0.0973**         0.0899***
+                                                 (0.0449)          (0.0176)
+                           Materials             0.0545**         0.0510***
+                                                 (0.0234)          (0.0154)
+                        Communications          0.0538***         0.0421***
+                                                 (0.0229)          (0.0150)
+                        Aggregate Index         0.0446**          0.0408***
+                                                 (0.0186)          (0.0101)
+                       Consumer Services         0.0355**         0.0332***
+                                                 (0.0142)         (0.00951)
+                           Financials            0.0244*           0.0254*
+                                                 (0.0130)          (0.0140)
+
+
+
+
+                                          21
+ 
+                             Healthcare            0.0202**           0.0253***
+                                                  (0.00954)           (0.00919)
+                       Consumer Discretionary      0.0237**           0.0204***
+                                                   (0.0119)           (0.00726)
+                             Industrials            0.0237             0.0181**
+                                                   (0.0164)           (0.00785)
+    Investment-Grade          Energy               -0.00972            -0.00445
+          Bonds                                    (0.0177)            (0.0155)
+                             Materials             -0.00716            -0.00753
+                                                   (0.0159)            (0.0154)
+                             Financials            -0.0261**         -0.0263***
+                                                   (0.0110)           (0.00970)
+                          Aggregate Index         -0.0308**           -0.0308**
+                                                   (0.0137)            (0.0122)
+                          Communications           -0.0343*            -0.0322*
+                                                   (0.0195)            (0.0180)
+                             Healthcare          -0.0433***          -0.0440***
+                                                   (0.0145)            (0.0130)
+                             Industrials         -0.0458***          -0.0467***
+                                                   (0.0159)            (0.0141)
+                              Utilities          -0.0547***          -0.0555***
+                                                   (0.0172)            (0.0156)
+
+
+We see similar trends among the high-yield bond indices. Focusing on column 4
+(regressions with lags), we find that the Bloomberg Energy high-yield bond index
+stands out as the most affected high-yield sector. A 10% decline in WTI oil price
+causes the Energy high-yield bond index to drop by 0.90%. Interestingly, high-yield
+bonds of most other sectors also suffer, ranging from Materials (0.51%) to
+Industrials (0.18%).
+
+Cheap oil improves investment-grade corporate bonds, except those in Energy and
+Materials sectors. The signs for almost all sectors are negative, implying a negative
+relationship between oil prices and the investment-grade corporate bonds’ indices:
+when oil prices are lower, the corporate bond indices are higher. However, we do
+not find evidence for a negative relationship between cheap oil and prices of
+investment grade bonds in the Energy or Basic Materials sectors. This suggests that
+
+
+
+
+                                            22
+ 
+investors are reluctant to invest in the Energy and Basic Materials’ corporate bonds,
+even when they are of higher ratings. The sectors whose investment grade bonds
+benefit the most are relatively less cyclical: Utilities, Industrials, Healthcare and
+Communications. For a 10% decline in the WTI oil price, the indices for these
+sectors’ investment-grade bond indices increase from 0.32% to 0.56%.
+
+                                              V.               Impact on Emerging Markets
+
+This section considers the impact of oil price declines to emerging markets. Table
+5.1 shows that oil price declines hurt the dollar-denominated MSCI Emerging
+market index. For every 10% decline in WTI oil price, the dollar value of MSCI
+Emerging Market index drops by 1.32%. The MSCI Emerging Markets Index
+consists of 21 emerging countries,15 most of them are not oil exporters.
+Nevertheless, we still see the declines in these markets. This reinforces the concern
+that this time, lower oil price could carry global systemic risk.
+
+                                         Table 5.1 MSCI Emerging Market index
+                          VARIABLES                                  ∆log (MSCI       ∆log (MSCI
+                                                                      Emerging)        Emerging)
+
+                       ∆Log( Oil Price)                               0.142**           0.132**
+                                                                      (0.0709)          (0.0534)
+
+                                  Lags                                     No               Yes
+
+                              Constant                                9.41e-05         0.000181
+                                                                     (0.000358)       (0.000339)
+                          Observations                 699                                   696
+                           R-squared                  0.068                                 0.168
+                                    Robust standard errors in parentheses
+                                       *** p<0.01, ** p<0.05, * p<0.1
+
+
+
+                                                            
+15
+    Brazil; Chile; China; Colombia; Czech Republic; Arab Republic of Egypt; Hungary;
+India; Indonesia; Republic of Korea; Malaysia; Mexico; Morocco; Peru; Philippines;
+Poland; Russian Federation; South Africa; Taiwan, China; Thailand; and Turkey. 
+
+
+
+
+                                                                      23
+ 
+The effect can be broken to two components: the decline in the stock markets of
+emerging markets, and the appreciation of the U.S. dollar. Indeed, as the WTI oil
+price declines, the dollar index appreciates in value (Table 5.2). A 10% decline in
+the WTI oil price leads to 0.41% increase in the U.S. dollar. We use the trade-
+weighted dollar index that the U.S. has against its major trade partners.16 The
+appreciation of the U.S. dollar is usually a worrying sign to emerging markets
+(Shin, 2016).
+
+                                                   Table 5.2 Dollar index (broad)
+                                   VARIABLES                    ∆log (Index)    ∆log (Index)
+
+                                ∆Log( Oil Price)                 -0.0406**          -0.0414**
+                                                                  (0.0200)           (0.0176)
+
+                                           Lags                      No               Yes
+
+                                       Constant           0.000236**        0.000258**
+                                                          (0.000111)         (0.000115)
+                                    Observations              689                674
+                                     R-squared               0.133              0.148
+                                         Robust standard errors in parentheses
+                                            *** p<0.01, ** p<0.05, * p<0.1
+
+
+Focusing the impact of oil price fluctuations on oil exporters, Table 5.3 examines
+the impacts of oil price fluctuations on the dollar-denominated MSCI Gulf States
+Index. The impact here reflects the reactions of oil-exporters’ stock markets to
+changes in oil prices. Quite surprisingly, a lower WTI oil price hurts the dollar value
+of the Gulf States’ stock markets but the impact is statistically insignificant: every
+10% decline in WTI oil price, MSCI Gulf State index drops by 0.55%. The
+magnitude is relatively small and not statistically different to zero. Conventional
+
+                                                            
+16
+  Euro Area; Canada; Japan; Mexico; China; United Kingdom; Taiwan, China; Republic of Korea;
+Singapore; Hong Kong SAR, China’ Malaysia; Brazil; Switzerland; Thailand; Philippines;
+Australia; Indonesia; India; Israel; Saudi Arabia; Russian Federation; Sweden; Argentina; República
+Bolivariana de Venezuela; Chile; and Colombia. Data are from the Federal Reserve.
+
+
+
+
+                                                                24
+ 
+wisdom suggests that lower oil prices should affect the Gulf States more severely
+than the overall emerging markets. The finding that Gulf States’ index is less
+affected than the overall emerging market index suggests that other channels, above
+and beyond the lower oil revenue channel, might be at play.
+
+                         Table 5.3 MSCI Gulf States Index
+                VARIABLES              ∆log (Index)       ∆log (Index)
+               ∆Log( Oil Price)           0.0714             0.0554
+                                         (0.0773)           (0.0617)
+
+                     Lags                     No               Yes
+
+                   Constant              -0.000235          -8.04e-05
+                                        (0.000444)         (0.000401)
+
+                 Observations              699                 696
+                  R-square                0.018               0.121
+                        Robust standard errors in parentheses
+                           *** p<0.01, ** p<0.05, * p<0.1
+
+
+To investigate the possibility further, we examine the impacts of lower oil prices
+on individual important oil-exporting emerging markets. Key emerging oil
+exporters - Brazil, Colombia, Mexico and the Russian Federation - show
+tremendous sensitivity to the declines in oil prices. The coefficients are much larger
+than the overall MSCI Emerging Market Index, and the Dow Jones U.S. Market
+Index. In particular, a 10% decline in the WTI oil price reduces the stock index of
+Brazil by 3.01%, Colombia by 4.13%, Mexico by 2.21% and Russia by 4.57%. The
+declines here suggest heavy capital flight of investors from these markets when
+they see oil prices drop. Since these countries are large and likely systemically
+important, the magnitude of the impacts is concerning. The indices of many smaller
+Gulf States, however, are not significantly affected by lower oil prices. This finding
+is consistent with the results in table 5.4 and reinforces the possibility that other
+channels beyond the oil revenue channel could affect emerging markets.
+
+
+
+
+                                         25
+ 
+                             Table 5.4 MSCI country indices
+                     Index                         Value (with lags)
+
+                    Russia                             0.457***
+                                                       (0.0827)
+                   Colombia                            0.413***
+                                                       (0.0750)
+                    Brazil                             0.301***
+                                                       (0.0988)
+                    Mexico                             0.221***
+                                                       (0.0712)
+                    Qatar                              0.144**
+                                                       (0.0654)
+                    Kuwait                             0.103***
+                                                       (0.0380)
+                 Kazakhstan                              0.156
+                                                        (0.107)
+            United Arab Emirates                         0.141
+                                                        (0.106)
+                    Nigeria                             0.0605
+                                                       (0.0620)
+                    Oman                                0.0423
+                                                       (0.0458)
+                 Saudi Arabia                           0.0280
+                                                       (0.0782)
+
+
+                       VI.      Discussion on potential channels
+
+At least three potential channels could explain the negative impact of lower oil
+prices on financial markets and the economy. The first one is the demand channel.
+Lower oil prices imply that many energy firms might have to scale down
+production. Since the sector buys many goods and services from other sectors (for
+example, electricity generation relies on a range of inputs such as construction and
+IT services), a decline in the sector reduces demand from the rest of the economy
+(usually referred to as the ‘indirect effect’). In addition, laid-off workers from the
+
+
+
+
+                                          26
+ 
+energy sector also reduce consumption in local services and tradable goods (the
+‘induced effect’).
+
+The second channel works through the financial sector. As energy firms scale down
+their operation or become bankrupt, they would have difficulties repaying their
+debts. This would hit the financial sector, who in turn would have to scale down
+lending to the rest of the economy. The energy sector-led credit crunch could cause
+other sectors in the economy to reduce investment and production.
+
+The third channel that could transmit the negative impacts of lower oil prices to the
+rest of the economy is uncertainty. Relentless declines in oil prices raise
+uncertainty,17 which we confirm via the corresponding increase in the VIX index
+in table 4.2. When economic agents are uncertain about the economic prospect and
+direction of financial markets, they tend to move their investment to safer and less
+cyclical assets. This is precisely what we observe in the data: investment-grade and
+long-term Treasury bonds appreciate at the cost of equity and high-yield bonds.
+
+ 
+
+                                                               VII Conclusion
+
+Lower oil prices are traditionally thought to be good for oil-importing economies,
+such as the U.S. Indeed, the existing literature tends to find statistically insignificant
+to positive impacts of lower oil prices on U.S. stock markets. However, swift and
+dramatic recent declines in oil prices and the accompanying movements in financial
+markets are concerning. Do lower oil prices carry systemic risk this time? This
+paper tries to shed light on the issue by examining the causal impacts of oil price
+
+                                                            
+17
+   This direction is different to the view postulated in Rey (2015) and Miranda-Agrippino and Rey
+(2015). These papers show that the VIX acts like a common factor behind the prices of risky assets
+as well as commodity prices around the world. The positive co-movement between oil prices and
+risky asset prices is driven by the VIX, which itself is driven by underlying fundamentals such as
+U.S. monetary policy. In our paper, we show that there is a direct causal link from lower oil prices
+to higher VIX.
+
+
+
+
+                                                                   27
+ 
+declines on financial markets. The findings suggest that they do. A lower WTI oil
+price negatively affects risky assets (stocks and high-yield bonds) in many sectors
+in the U.S. financial market. Quite strikingly, sectors that supposedly benefit from
+lower prices, such as Basic Materials, Industrials and Transport Services, also
+suffer. Similarly, equities in emerging countries deteriorate, more so for large oil-
+exporting countries and, interestingly, less so for smaller oil-exporting Gulf States.
+Safer assets, such as investment-grade bonds, and particularly, long-term Treasury
+bonds, are boosted when oil prices drop. Overall, the findings suggest capital flight
+to safety when oil prices drop: capital moves out of stocks and high-yield bonds,
+and flocks to investment-grade corporate bonds and risk-free long-term T-bonds.
+These phenomena are typically observed during bad times.
+
+An interesting direction of future research would be to examine in detail the
+channels via which the transmission from lower oil prices to the real economy could
+operate: does the impact work through the demand channel, the financial channel,
+or the conventional oil input channel? Using firm-level data, one could investigate
+to what extent stock prices of firms in demand-sensitive sectors, credit-sensitive
+sectors, or oil-intensive sectors reacted to oil price fluctuations in the last two years.
+
+
+
+
+                                           28
+ 
+                                                               APPENDIX
+
+
+
+                                                          Table A1: 29 Event dates
+      Date              Description                                                    Expec    Actual
+                        *** Removed because of a significant macro event                ted     Effect
+                                                                                       Effect
+     10/10/16           Crude oil rallies as Putin says Russia is ready to join          +      2.48%
+                                                                                                  18
+                        production deal
+                        http://www.bloomberg.com/news/articles/2016-10-
+                        10/putin-says-russia-ready-to-freeze-or-even-cut-output-
+                        with-opec
+     10/4/16            Oil prices peel back after reports on Libya and Iran             -      -0.27%
+                        production
+                        http://www.cnbc.com/2016/10/04/reuters-america-update-
+                        4-oil-eases-as-iran-libya-output-rises-hit-opec-deal-
+                        momentum.html
+     9/28/16             OPEC reportedly agrees to first production cut in 8 years       +      5.27%
+                        http://www.bloomberg.com/news/articles/2016-09-
+                        28/opec-said-to-agree-on-first-oil-output-cut-in-eight-years
+     9/21/16             Norway oil workers go on strike, helping send crude prices      +      3.32%
+                        higher
+                        http://www.reuters.com/article/norway-oil-strike-
+                        idUSL8N1BX09O
+      9/5/16            Big move in Oil on Saudi-Russia cooperation                      +      1.03%
+                        http://www.cnbc.com/2016/09/05/saudi-arabia-russia-to-
+                        call-for-oil-market-cooperation-report.html
+     8/23/16            Reuters: Iran signals more willingness for joint action to       +      1.57%
+                        boost oil price
+                        http://www.reuters.com/article/us-opec-freeze-
+                        idUSKCN10Y1MM
+     8/15/16            Crude oil continues three-day rally on potential OPEC action     +      2.77%
+                        http://www.marketwatch.com/story/oil-futures-rally-on-
+                        fresh-hopes-for-a-production-freeze-2016-08-15
+
+
+
+                                                            
+18
+ Since WTI oil price is not available on 10/10/2016 (Columbus Day), we take the log change of
+March 2017 WTI oil future between 10/10/2016 (Monday) and 10/07/2016 (Friday) instead.
+
+
+
+
+                                                                    29
+ 
+    6/2/16    OPEC fails to agree on production caps                           -   0.14%
+              http://www.bloomberg.com/news/articles/2016-06-
+              02/opec-said-to-keep-status-quo-after-failing-to-agree-
+              output-limit
+    5/9/16    Crude oil gives up Friday gains as Canadian fires slow their     -   -2.56%
+              spread
+              http://www.bloomberg.com/news/articles/2016-05-
+              08/alberta-s-vicious-wildfires-spread-to-suncor-oil-sands-
+              site
+    4/19/16   Oil prices rises as a result of an oil worker strike in Kuwait   +   2.83%
+              that has reduced output to 1.1M barrels per day from 2.8M.
+              http://www.cnbc.com/2016/04/18/crude-prices-edge-up-on-
+              kuwait-oil-worker-strike.html
+    4/12/16   Oil pops higher on report of output freeze agreement.            +   4.02%
+              According to Interfax, Saudi Arabia and Russia have
+              reached a consensus on an oil production freeze.
+              http://www.bloomberg.com/news/articles/2016-04-
+              12/russia-saudi-arabia-reach-oil-freeze-consensus-interfax-
+              says
+    4/1/16    "It looks like the freeze deal may be starting to fall apart,"   -   -4.37%
+              says Dominick Chirichella of the Energy Management
+              Institute, suggesting the April 17 meeting between OPEC
+              and non-OPEC producers to discuss a freeze deal could be
+              postponed.
+              http://www.wsj.com/articles/oil-prices-decline-ahead-of-u-
+              s-data-1459503111
+    3/1/16    Crude oil tops $34 on talk of production agreement               +   4.91%
+              http://www.cnbc.com/2016/02/16/oil-prices-spike-on-
+              reports-of-saudi-russia-output-cut-talks.html
+    2/17/16   Oil pokes above $30 after bullish comments from Iran             +   5.46%
+              The country's oil minister says Iran would support any effort
+              aimed at stabilizing oil prices - including a deal between
+              OPEC and non-OPEC (Russia) producers.
+              http://www.cnbc.com/2016/02/16/russia-saudi-arabia-
+              output-freeze-helps-oil-price-higher-in-asia.html
+    2/12/16   WTI crude oil climbs as much as 12%, supported by                +   11.29%
+              yesterday's comments by the UAE energy minister that
+              OPEC may be willing to cooperate on possible production
+              cuts.
+
+
+
+
+                                             30
+ 
+               http://www.wsj.com/articles/oil-rebounds-from-12-year-
+               low-1455251366
+
+
+    1/28/16    Russia's energy minister said Thursday that Moscow was          +       2.72%
+               ready to take part in an OPEC meeting aimed at
+               establishing possible "coordination" in the face of low oil
+               prices due largely to a supply glut.
+               https://www.yahoo.com/news/russia-ready-meet-opec-
+               over-low-oil-prices-184309486.html?ref=gs
+    12/31/15   North Sea storm forced oil firms to evacuate platforms and      +       1.46%
+               shut down production on Thursday
+               http://www.reuters.com/article/us-weather-northsea-
+               idUSKBN0UE0OR20151231
+    12/4/15    OPEC decided to roll over its policy of maintain crude          -       -2.66%
+      ***      production in order to retain market share.***
+               http://www.cnbc.com/2015/12/04/opec-president-well-
+               wait-and-watch-the-market.html
+    10/6/15    Crude oil rallies following comments by OPEC chief              +       4.74%
+               Abdalla Salem el-Badri anticipating big cuts to oil
+               investments that are expected to ease production and draw
+               down global crude supplies.
+               http://www.wsj.com/articles/opec-chief-sees-oil-price-
+               rising-on-investment-cuts-1444123148
+    8/27/15    According to the WSJ, the República Bolivariana de              +       9.81%
+               Venezuela is pushing for an emergency OPEC meeting to
+               come up with a plan to combat the rout in oil prices.
+               http://af.reuters.com/article/energyOilNews/idAFL4N1125I
+               320150827
+    3/25/15    Western-backed President Abed Rabbo Mansour Hadi has            +       3.59%
+               reportedly fled the Yemen port of Aden by boat as militants
+               were closing in.
+               http://www.cbsnews.com/news/yemen-president-abed-
+               rabbo-mansour-hadi-flees-aden-palace-houthi-rebels/
+    1/20/15    Bearish Iran comments: "Iran is strong enough to withstand          -   -3.57%
+               a deeper slump in prices even if the country must sell at $25
+               a barrel,"
+               http://www.bloomberg.com/news/articles/2015-01-19/iran-
+               sees-opec-sticking-by-oil-output-decision-amid-price-
+               slump
+
+
+
+
+                                             31
+ 
+    1/13/15    Brent crude and WTI hits record six-year lows, as an oil             -   -0.30%
+               minister from OPEC reiterated that the group would not
+               change its production strategy+.
+               http://www.cnbc.com/2015/01/13/oil-falls-below-45-as-
+               opec-plays-hardball.html
+     1/6/15    Saudi Arabia's King Abdullah, in a speech, makes clear               -   -4.22%
+               Saudi Arabia is giving no signs it will cut supply
+               http://www.reuters.com/article/us-markets-oil-
+               idUSKBN0KE06V20150106
+    12/4/14    Oil prices turn lower after Saudi Arabia cut the price of its        -   -0.85%
+               oil in the U.S., reinforcing concerns that the kingdom is
+               prioritizing market share rather than raise prices.
+               http://www.wsj.com/articles/saudi-arabia-cuts-all-january-
+               crude-oil-prices-to-u-s-asia-1417700645
+    11/27/14   Saudis block OPEC output cut, sending oil price plunging         -       -11.1%
+               http://www.reuters.com/article/us-opec-meeting-
+               idUSKCN0JA0O320141127
+    10/23/14   Crude oil prices sprint higher as Saudi Arabia is said to have   +       2.80%
+               cut supply last month, according to a source familiar with
+               the country’s oil policy.
+               http://www.bloomberg.com/news/articles/2014-10-
+               23/saudi-arabia-said-to-cut-crude-oil-supply-to-market-in-
+               september
+    6/24/14    Brent crude fell below $114/bbl, its lowest levels in a week,        -   -0.17%
+               amid speculation that Iraqi oil production won’t be disrupted
+               by violence
+               http://money.cnn.com/2014/06/12/news/oil-prices-iraq/
+    6/12/14    Islamist militant made rapid gains across northern Iraq on       +       2.03%
+               Wednesday and Kurdish forces on Thursday took control
+               some parts of Kirkuk
+               http://www.wsj.com/articles/oil-prices-surge-after-
+               militants-seize-iraqi-cities-1402572871
+
+
+
+
+                                              32
+ 
+    Figure A1: Seeking Alpha news article – Sample
+
+
+
+
+                          33
+ 
+                Appendix B: Dealing with the small sample problem
+
+
+
+To alleviate the concern that we have a small sample problem (28 events days), we
+(a) test for the normality of the error terms in event days, and (b) use bootstrap
+standard errors.
+
+       a) Test for the normality of the error terms
+
+In this section, we test for whether different indices are normally distributed. We
+have 28 event days, which might raise some concerns about the small sample
+problem. However, we can still use the t-distribution for hypothesis tests, even
+when our sample is small, as long as the data are normally distributed.
+
+Results of Shapiro-Wilk test for the normality of the baseline regressions’ residuals
+in Table B.1 show that we fail to reject the null hypothesis that the error terms of
+the baseline regressions for stock prices, investment grade bonds and TLT are
+normally distributed. We reject the null hypothesis that the error terms of high-yield
+bonds are normally distributed. Thus, we are more confident when using the regular
+inference method for hypothesis tests of stocks, investment-grade bonds, and
+Treasury bonds. We are less confident using the regular inference method for high-
+yield bonds. As a result, we will present our bootstrap confidence intervals in part
+(b).
+
+                            Table B.1: Shapiro-Wilk W Test
+
+                              Obs.         W          V           Z        P-value
+            Stocks             28       0.97576     0.732       -0.642     0.73971
+       High-Yield Bonds        28       0.88287     3.537       2.601      0.00465
+    Investment-Grade Bonds     28       0.95911     1.235       0.434      0.33200
+             TLT               28       0.95579     1.335       0.595      0.27594
+                      Figure B.1: Distribution of residuals
+
+
+
+
+                                           34
+ 
+       b) Bootstrapping
+
+Following Hébert and Schreger (2016), we implement the bootstrap procedure by
+Horowitz (2001) to calculate confidence intervals. This robustness check is
+especially important for the results of high-yield bonds because they are not
+normally distributed, as shown in part (a). In this section, we find that our
+confidence intervals for our coefficients are similar to confidence intervals
+constructed under normal approximations
+
+From our original data, we resample 2000 bootstrap samples with replacements
+from event and non-event days, separately. Each bootstrap sample contains 28
+event days and 671 non-event days, except stock (with 670 non-event days). In each
+
+bootstrap sample, we compute                , where   is the point estimate from our
+
+
+
+
+                                       35
+ 
+original data,              is the point estimate in the 	              bootstrap sample, and           is the
+heteroskedasticity-robust standard error of the                         bootstrap sample. We calculate
+the 2.5th percentile and 97.5th percentile of	                  in the bootstrap replications, denoted
+    .   and         .   , respectively. We then report 95% confidence interval for                 :[    .
+
+         ,      .               ], where s is the heteroskedasticity-robust standard error from
+our original data sample.
+
+
+
+                                Table B.2: Bootstrapping for the 28 events
+
+ 
+                                                     Stocks                                 HY Bonds
+
+                                       Without lags            With lags        Without lags           With lags
+         ∆Log (Oil Price)                0.144**               0.106**             0.052*               0.043**
+    95% Confidence Interval            [0.004, 0.242]        [0.024, 0.172]    [-0.014, 0.109]     [0.016, 0.069]
+             Observations                   698                   695               699                      696
+ 
+ 
+                                         Investment-Grade Bonds                                  TLT
+
+                                      Without lags             With lags         Without lags            With lags
+         ∆Log (Oil Price)              -0.0287**               -0.031***           -0.118**             -0.119***
+    95% Confidence Interval          [-0.055, -0.007]    [-0.054, -0.008]       [-0.179, -0.047]   [-0.186, -0.045]
+             Observations                  699                    696                 699                     696
+
+
+
+
+                                                        36
+ 
+                                    References
+
+Apergis, Nicholas and Stephen Miller (2009), “Do structural oil-market shocks
+affect stock prices” Energy Economics, Volume 31, pp 569-575
+
+Bernanke, Ben (2016) “The relationship between stocks and oil prices” Brooking
+Institution blog [https://www.brookings.edu/blog/ben-bernanke/2016/02/19/the-
+relationship-between-stocks-and-oil-prices/]
+
+Bernanke, Ben, Mark Gertler and Simon Gilchrist (1999), “The Financial
+accelerator in a quantitative business cycle framework” Handbook of
+Macroeconomics, Volume 1
+
+Boyer, M. Martin and Filion, Didier, (2007), “Common and fundamental factors in
+stock returns of Canadian oil and gas companies”, Energy Economics, 29, issue 3,
+p. 428-453.
+
+Brown, Morton B.; Forsythe, Alan B. (1974). "Robust tests for the equality of
+variances". Journal of the American Statistical Association. 69: 364–367
+
+El-Sharif, I., Brown, D., Burton, B., Nixon, B., Russell, A., (2005) “Evidence on
+the nature and extent of the relationship between oil prices and equity values in the
+UK” Energy Economics 27 (6), 819-830.
+
+Hamilton, James (2009), “Understanding Crude Oil Prices” The Energy Journal
+30(2), 179-206
+
+Hammoudeh, S., Dibooglu, S. & Aleisa, E. (2004), “Relationships among U.S. oil
+prices and oil industry equity indices” International Review of Economics and
+Finance 13(4), 427-453.
+
+Hébert, Bengamin and Jesse Schreger (2016) The costs of sovereign default:
+evidence from Argentina, NBER Working Paper No 22270
+
+
+
+
+                                         37
+ 
+Horowitz, Joel (2001) “The Bootstrap”, Chapter 52 in Handbook of econometrics,
+vol 5, pp 3159-3228
+
+Huang, Roger, Ronald Masulis and Hans Stoll (1996), “Energy shocks and
+financial markets” Journal of Futures Markets, Vol. 16, pp 1-27
+
+IMF (2015) “Global implications of lower oil prices” IMF Staff Discussion Note
+
+Jones, Charles and Gautam Kaul (1996) “Oil and the stock market” The Journal of
+Finance, Vol. 51, No. 2, pp. 463-491
+
+Kilian, Lutz (2009) “Not all price shocks are alike: disentangling demand and
+supply shocks in the crude oil market” American Economic Review, Vol 99, pp
+1053-1069
+
+Kilian, Lutz and Murphy, D. (2014), “The Role of Inventories and Speculative
+Trading in the Global Market for Crude Oil”. Journal of Applied Econometrics,
+29: 454-478
+
+Kilian, Lutz and Park, C. (2009), “The impact of oil price shocks on the U.S. stock
+market”. International Economic Review, 50: 1267–1287
+
+Kiyotaki, Nobuhiro and John Moore (1997) Credit Cycles, Journal of Political
+Economy Vol. 105, No. 2 (April 1997), pp. 211-248
+
+Levene, H. (1960). Robust testes for equality of variances. In Contributions to
+Probability and Statistics (I. Olkin, ed.) 278–292. Stanford Univ. Press
+
+Miranda-Agrippino Silvia & Hélène Rey (2015) "World Asset Markets and the
+Global Financial Cycle," NBER Working Papers 21722
+
+Park, Jungwook and Ronald Ratti (2008), “Oil price shocks and stock markets in
+the U.S. and 13 European countries” Energy Economics, Vol 30, pp 2587-2608
+
+
+
+
+                                        38
+ 
+Rey Hélène (2015) "Dilemma not Trilemma: The global Financial Cycle and
+Monetary Policy Independence," NBER Working Papers 21162
+
+Rigobon, Roberto (2003) "Identification Through Heteroskedasticity," The Review
+of Economics and Statistics, MIT Press, vol. 85(4), pages 777-792, November.
+
+Rigobon, Roberto & Sack, Brian, 2004. "The impact of monetary policy on asset
+prices," Journal of Monetary Economics, Elsevier, vol. 51(8), pages 1553-1575,
+November.
+
+Sadorsky, Perry (1999). "Oil price shocks and stock market activity," Energy
+Economics, Elsevier, vol. 21(5), pages 449-469, October.
+
+Shin, Hyun Song (2016) “Global liquidity and procyclicality”, speech at the World
+Bank conference “The state of economics, the state of the world”
+
+
+
+
+                                       39
+ 
+

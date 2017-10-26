@@ -1,0 +1,2773 @@
+                                                          WPS7933
+
+
+Policy Research Working Paper                            7933
+
+
+
+
+    Estimation and Inference for Actual
+and Counterfactual Growth Incidence Curves
+                              Francisco H. G. Ferreira
+                                    Sergio Firpo
+                                 Antonio F. Galvão
+
+
+
+
+Development Research Group
+Poverty and Inequality Team
+January 2017
+Policy Research Working Paper 7933
+
+
+  Abstract
+  Different episodes of economic growth display widely vary-                         limiting null distribution of the test statistics of interest for
+  ing distributional characteristics, both across countries and                      those general functions, and proposes resampling methods
+  over time. Growth is sometimes accompanied by rising and                           to implement inference in practice. The proposed methods
+  sometimes by falling inequality. Applied economists have                           are illustrated by a comparison of the growth processes in
+  come to rely on the Growth Incidence Curve, which gives                            the United States and Brazil during 1995–2007. Although
+  the quantile-specific rate of income growth over a certain                         growth in the average real wage was disappointing in both
+  period, to describe and analyze the incidence of economic                          countries, the distribution of that growth was markedly dif-
+  growth. This paper discusses the identification conditions,                        ferent. In the United States, wage growth was mediocre for
+  and develops estimation and inference procedures for both                          the bottom 80 percent of the sample, but much more rapid
+  actual and counterfactual growth incidence curves, based                           for the top 20 percent. In Brazil, conversely, wage growth was
+  on general functions of the quantile potential outcome pro-                        rapid below the median, and negative at the top. As a result,
+  cess over the space of quantiles. The paper establishes the                        inequality rose in the United States and fell markedly in Brazil.
+
+
+
+
+  This paper is a product of the Poverty and Inequality Team, Development Research Group. It is part of a larger effort by
+  the World Bank to provide open access to its research and make a contribution to development policy discussions around
+  the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be
+  contacted at fferreira@worldbank.org; firpo@insper.edu.br; and antonio-galvao@uiowa.edu.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+Estimation and Inference for Actual and Counterfactual
+                             Growth Incidence Curves∗
+          Francisco H. G. Ferreira†             Sergio Firpo‡            Antonio F. Galvao§
+
+
+
+
+       Keywords: Growth Incidence Curves; Potential outcomes; Inference; Quantile Process
+       JEL Classiﬁcation: C14, C21, D31, I32.
+   ∗
+     The authors would like to express their appreciation to Matias Cattaneo, Yu-Chin Hsu, David Kaplan,
+Ying-Ying Lee, Zhongjun Qu, Alexandre Poirier, Liang Wang and participants at the 2015 meeting of the
+Midwest Econometric Group for useful comments and discussions regarding this paper. Vitor Possebom
+provided excellent research assistance. Computer programs to replicate the numerical analyses are available
+from the authors. All the remaining errors are ours.
+   †
+     Development Research Group, The World Bank, 1818 H Street, NW, Washington, DC, 20433. E-mail:
+fferreira@worldbank.org
+   ‡
+     Insper, Rua Quata 300, Sao Paulo, SP 04546-042. E-mail: firpo@insper.edu.br
+   §
+     Department of Economics, University of Iowa, W284 Pappajohn Business Building, 21 E. Market Street,
+Iowa City, IA 52242. E-mail: antonio-galvao@uiowa.edu
+1     Introduction
+Growth episodes have displayed widely diﬀerent distributional characteristics across countries
+and over time. The same rate of growth in average incomes has been accompanied by rising
+inequality in some cases, and by falling inequality in others. A large literature on “pro-poor
+growth”and, more generally, on the incidence of economic growth processes has developed,
+and attracted attention among both researchers and policymakers.
+    Over time, this literature has come to rely heavily on the Growth Incidence Curve (GIC ),
+which describes the rate of income growth at each quantile τ ∈ (0, 1) of the (anonymous)
+distribution (Ravallion and Chen (2003)). It has been used to compare the distributional
+characteristics of growth processes both across countries and over time (see, e.g. Besley and
+Cord (2007)). It has also been shown to underlie changes in certain widely-used classes of
+poverty and inequality measures, which can be formally expressed as functionals of the GIC
+(Ferreira (2012)).
+    Growth incidence curves have also featured in a long-standing literature that uses counter-
+factual income distributions to decompose changes (or diﬀerences) in inequality and poverty
+over time (or between countries), and to attribute such changes to diﬀerent factors such as,
+for example, changes in worker characteristics or in the returns to those characteristics. The
+original contributions to this literature, including Juhn, Murphy, and Pierce (1993), Dinardo,
+Fortin, and Lemieux (1996) and Donald, Green, and Paarsch (2000), predate the Ravallion
+and Chen (2003) article that introduced the term GIC , and hence do not use it. Yet, each
+of those papers sought to account for diﬀerences across entire wage or income distributions
+– which can be formally expressed as GIC s – using counterfactual distributions. Ferreira
+(2012) deﬁnes counterfactual growth incidence curves as functionals of counterfactual distri-
+butions, and establishes the link to this earlier literature on distributional change.
+    Despite their conceptual importance and widespread practical use, however, formal condi-
+tions for identiﬁcation and inference using growth incidence curves – actual or counterfactual
+– have not been established. In this paper, we rely on the formal analogy between distribu-
+tional change and treatment heterogeneity to ﬁll that gap. More speciﬁcally, we write both
+actual and counterfactual GIC s in terms of vectors of potential outcomes (Rubin (1977)),
+and then apply suitable variants of a number of results from the literature on quantile treat-
+ment eﬀects to formally establish the conditions for identiﬁcation of the GIC . Speciﬁcally,
+we adapt the identiﬁcation results in Firpo (2007), where the relevant identiﬁcation restric-
+
+
+
+                                               1
+tion is the ignorability assumption.1 In our context, it implies that the income distributions
+that we observe in two diﬀerent time periods are generated by two group of factors only: ob-
+servable components whose distributions may vary over time, and unobservable components
+whose conditional distributions given observables are ﬁxed over time.
+    We then propose a simple three-step semiparametric estimator for both actual and coun-
+terfactual growth incidence curves, which relies on established sample re-weighting and quan-
+tile regression techniques. In the ﬁrst step, a nonparametric estimator of the propensity score
+is used, and weights are computed. In our setup, the propensity score is computed by pooling
+the repeated cross-section data for initial and end periods and calculating the probability of
+being observed at the ﬁnal period, given covariates. In the second step, one obtains properly
+weighted quantiles of the outcome from a simple weighted quantile regression. The third
+step is the computation of the GIC as a function of the vector of quantiles of weighted out-
+come distributions.2 When applied to counterfactual GIC s, this procedure has the added
+advantage that it requires no assumption on the structural relationships between income and
+its covariates, as was the case with most of the previous literature.
+    We establish the asymptotic properties of these estimators, propose suitable test statis-
+tics, and discuss inference procedures in practice. For practical inference we compute critical
+values using resampling methods. We provide suﬃcient conditions and show the theoretical
+validity of a bootstrap approach. Moreover, we discuss in detail an algorithm for its practi-
+cal implementation. We also discuss computation of critical values through a subsampling
+method.
+    The main technical contributions of the paper are as follows. The ﬁrst is to develop
+practical statistical inference procedures for the GIC . This enables researchers to conduct
+estimation and inference for the GIC over the entire set of quantiles. Secondly, we can easily
+extend our results to general functionals of the vector of quantiles of potential outcomes and
+not only the one that yields the GIC , which allows us to develop testing procedures for
+general hypotheses involving these functionals.3 An additional by-product contribution of
+    1
+      This condition has been employed widely in the distributional treatment eﬀect literature. See not only
+Firpo (2007), but also, among others, Flores (2007), Cattaneo (2010), and Galvao and Wang (2015).
+    2
+      A natural extension of our method – not pursued in this paper – would be to implement a fourth step,
+which would involve estimation and inference of real-valued functionals of the GIC process, such as poverty
+and income inequality growth.
+    3
+      The theoretical results derived in this paper can be applied to other functionals of the quantiles of
+potential outcomes processes. For instance, the quantile treatment eﬀects in Firpo (2007), and the Makarov
+bounds for the quantiles of the distribution of treatment eﬀects discussed in Fan and Park (2010), although
+following a more elaborate formula, are also functionals of the quantiles of the potential outcomes. In
+general, our ﬁnal estimator can be seen as a plug-in estimator of the functional using the estimated quantiles
+
+
+                                                      2
+this paper is to establish the asymptotic properties of the estimator of the vector of quantiles
+of weighted outcome distributions for the quantile process, namely, uniform consistency and
+weak convergence. The provision of uniform results over the set of quantiles is a necessary
+condition to establish the results for the testing procedures. We also show that the esti-
+mator is uniformly eﬃcient, as the asymptotic variance of the estimator coincides with the
+semiparametric eﬃciency bound.
+   These contributions are closely related to the literature on quantile treatment eﬀects,
+which is a particular functional of the vector formed by the quantiles of the potential out-
+comes. That literature started with Doksum (1974) and Lehmann (1974) and has expanded
+recently (see, e.g., Abadie, Angrist, and Imbens (2002), Chernozhukov and Hansen (2005),
+Bitler, Gelbach, and Hoynes (2006), Firpo (2007), Cattaneo (2010), Donald and Hsu (2014),
+Galvao and Wang (2015), and Firpo and Pinto (2015)).4
+   We illustrate the proposed procedure by comparing actual and counterfactual growth
+incidence curves (for real hourly wages) for the two largest countries in the Western Hemi-
+sphere, namely the United States and Brazil, in the twelve years prior to the onset of the last
+great ﬁnancial crisis: 1995-2007. Although growth rates in average wages were disappoint-
+ing in both countries (especially in Brazil), there were substantial diﬀerences in inequality
+dynamics. The GIC for the US was ﬂat until approximately the 8th decile, and sharply
+upward-sloping over the top quintile. In Brazil conversely, the GIC peaked around the ﬁrst
+quintile, and was downward sloping thereafter. As a result wage inequality rose sharply in
+the US and declined in Brazil.
+   We use counterfactual GIC s to examine whether these changes were driven primarily
+by the composition of the labor force - in terms of observed worker characteristics such as
+gender, age, and education - or by changes in the broader structure of the economy. In both
+countries, we ﬁnd that increases in worker age (and thus potential experience) and education
+contributed to income growth in a roughly equiproportional manner. Changes in inequality
+were driven almost entirely by changes in economic structure.
+   The remainder of the paper is organized as follows. Section 2 deﬁnes the GIC . Sec-
+tion 3 presents the econometric results, describes the three-step estimator, establishes the
+asymptotic properties of the estimator, discusses inference for the quantile process, and its
+of potential outcomes.
+   4
+     The results of this paper are also related to those on inference on the quantile process. See, e.g.,
+Belloni, Chernozhukov, and Fernandez-Val (2011), and Qu and Yoon (2015) for the nonparametric case;
+Gutenbrunner and Jureckova (1992), Koenker and Machado (1999), Koenker and Xiao (2002), Chernozhukov
+and Fernandez-Val (2005), and Angrist, Chernozhukov, and Fernandez-Val (2006) for the parametric case.
+
+
+                                                   3
+practical implementation. The empirical application to the US and Brazil is presented in
+Section 4. Section 5 concludes. We relegate the proofs of the results to the Appendix.
+
+
+2     Growth incidence curves: Actual and counterfactual
+In this section we formally deﬁne the growth incidence curve (GIC ), which was originally
+introduced by Ravallion and Chen (2003). Let Y be the outcome variable of interest, say
+an indicator of economic welfare such as income. There are two time periods, 0 and 1.
+Let us say that an individual observation taken at time 1 belongs to group A, ie, G = A.
+An observation taken at time 0 belongs to group B , or G = B . Assume that income is
+continuously distributed over the population of interest, and denote its cumulative distri-
+bution function (CDF) at time t as FY |T (·|t). The income level at the τ -th quantile for
+                                                                              −1
+groups A and B are given by, respectively, the inverse of the CDF, qA (τ ) = FY |T (τ |1) and
+           −1
+qB (τ ) = FY |T (τ |0). Then, the instantaneous GIC at a given time t and quantile τ can be
+                   −1
+                 dFY |T
+                        (τ |t)/dt
+represented as      −1
+                   FY    (τ |t)
+                                    . In discrete time, the income growth rate for a given quantile τ
+                      |T
+between two time periods, 0 and 1, can then be written as
+
+                                                        qA (τ ) − qB (τ )
+                                          GICY (τ ) =                     .
+                                                             qB (τ )
+
+    Motivated by the importance of the GIC for the economic analysis of social welfare, this
+paper develops estimation and inference procedures for the GIC (τ ), which is calculated as
+the diﬀerence of quantiles in time periods 1 and 0 over the quantile in time zero, for the entire
+set of quantiles τ ∈ (0, 1). We assume availability of a random sample of size n from the joint
+distribution of (Y, T, X ), where Y is the income, T is a time dummy variable that equals 1
+at period T = 1, and X is a vector of length d of covariates. We could have represented the
+data equivalently as (Y, G, X ).
+    The covariates enable us to learn how changes in their joint distribution aﬀect growth
+and inequality. For an individual i in our sample, if Gi = A we observe Yi (1), otherwise
+Gi = B and we observe Yi (0), where Yi (1) is what individual i’s outcome would be were
+she observed at time T = 1, and Yi (0) is what individual i’s outcome would be were she
+observed at time T = 0. Borrowing from the treatment eﬀect literature, we call Y (1) and
+Y (0) ‘potential outcomes’; we say that individual i is ‘treated’ if she is observed at period 1
+or group A, and ‘untreated’ if observed at period 0 or group B . We may refer to T as the
+
+
+                                                        4
+‘treatment assignment dummy’ or, more accurately, ‘time assignment dummy’. Thus, the
+observed outcome is Y = (Y (1) − Y (0))T + Y (0).
+   Writing the problem in terms of potential outcomes is useful because it allows us to
+easily write both actual and counterfactual distributions. For example, the actual outcome
+distribution for those individuals from group B , that is, those who were observed at time
+0, is FY (0)|T (·|0) and the actual outcome distribution for those individuals from group A,
+that is, those who were observed at time 1, is FY (1)|T (·|1). The counterfactual outcome
+distribution for those individuals who were observed at time 0, were they observed at time
+1, is FY (1)|T (·|0) and the counterfactual outcome distribution for those individuals who were
+observed at time 1, were they observed at time 0, is FY (0)|T (·|1).
+   Let τ be a real number in T ⊂ (0, 1) and t = 0, 1. Let qAt (τ ) be inf q Pr[Y (t) ≤ q |T =
+1] ≥ τ , or the τ th quantile of FY (t)|T (·|1), which is the distribution function of Y (t) for the
+subpopulation A. For the B subpopulation, let qBt (τ ) be inf q Pr[Y (t) ≤ q |T = 0] ≥ τ , or
+the τ th quantile of FY (t)|T (·|0). For both subpopulations, those distribution functions share
+the same support, which is Yt ⊂ R. Let us also deﬁne
+
+                                     qA 1 ( τ )                            qB 1 (τ )
+                   QA (τ, τ ) :=                  , and QB (τ, τ ) :=                    .
+                                     qA0 (τ )                             qB 0 ( τ )
+
+   Thus, the GIC can be derived from the previous variables as the growth rate of income
+at the τ th quantile between periods 0 and 1. We ﬁrst deﬁne the observed or actual GIC as
+
+
+                                   qA 1 ( τ ) − qB 0 ( τ )     1 0   QA (τ, τ )
+                    GIC (τ ) :=                            =                      − 1.          (1)
+                                          qB 0 ( τ )           0 1   QB (τ, τ )
+
+   The graphical depiction of GIC , as proposed in Ravallion and Chen (2003), is obtained
+by letting τ vary from zero to one and plotting the corresponding values of GIC against
+the quantiles τ . The quantiles involved in the computation of equation (1) are based on the
+ranking of individuals in each distribution of interest. Therefore, unless the individual i keeps
+her ranking over time, GIC will not be an appropriate tool to infer individual gains over
+time. This is a consequence of the veil of ignorance (anonymity) shrouding the comparison
+of the two distributions (see Essama-Nssah, Paul, and Bassole (2013)).
+   The interpretation of the graphical depiction of GIC is simple. If the GIC is a decreasing
+function for all τ in its domain of deﬁnition, then all inequality measures that respect the
+
+
+                                                      5
+Pigou-Dalton principle of transfers and scale invariance will indicate a fall in inequality over
+time. If instead, the GIC is an increasing function of τ , then the same measures will register
+an increase in inequality (Ravallion and Chen (2003)). When no relative inequality measure
+changes over time, then the GIC will present a constant growth rate over the process of
+quantiles τ .
+   Using our previous notation, we can deﬁne GIC ∗ as the counterfactual GIC . It can be
+expressed as
+
+
+                        qB 1 (τ ) − qB 0 (τ )     1 −1     QB (τ, τ )          1 0    QB (τ, τ )
+        GIC ∗ (τ ) :=                         =                         =                          − 1,   (2)
+                              qB 0 ( τ )          0 1     QB (τ, τ )           0 1    QB (τ, τ )
+
+which is the growth incidence curve for quantile τ if the distribution of associated factors
+(explanatory variables, or covariates) had remained ﬁxed from period 0 to 1. GIC ∗ captures
+only that part of distributional change associated with changes in the conditional distribution
+FY (·)|T , which we interpret broadly as changes in the structure of the economy.
+   Comparing GIC with GIC ∗ allows us to understand whether heterogeneity in economic
+growth is driven by changes in the joint distribution of observed covariates (X ) that impact
+income, or is driven by changes in the structure of the economy. For example, if GIC is
+decreasing in τ but GIC ∗ is uniform (ﬂat) over τ , the decrease in inequality is driven by
+changes in the distribution of covariates. This interpretation can be formally obtained by
+decomposing the GIC (τ ) into two components as following:
+
+                                                                        qB 1 (τ )
+                             GIC (τ ) = GIC ∗ (τ ) + GIC ∗∗ (τ ) ·                ,
+                                                                        qB 0 (τ )
+
+where
+                                      qA1 (τ ) − qB 1 (τ )     1 0       QA (τ, τ )
+                    GIC ∗∗ (τ ) :=                         =                          −1
+                                           qB 1 (τ )           1 0       QB (τ, τ )
+
+is the growth incidence curve that would have occurred only because of time changes in the
+distribution of covariates.
+   We will develop estimation and inference procedures for the GIC (τ ) and GIC ∗ (τ ) and,
+more generally, for functionals of the quantile of potential outcomes. In that sense, our
+theoretical framework provides a ﬂexible method for the practical analysis of the growth
+incidence curves.
+
+
+                                                     6
+3     The econometric model
+In this section we introduce the econometric model, discuss identiﬁcation, estimation of the
+parameters of interest, and inference procedures. As previously seen, GIC can be written
+as a function of the vector of quantiles of potential outcomes. Thus, in this section, we
+ﬁrst obtain the results for the latter, and then, for the GIC . Notation: Let E and E be
+                                                              p       p∗
+expectation and sample average, respectively. Let          , →, and → denote weak convergence,
+and convergence in probability and in outer probability, respectively. Let |g (z )|∞ denote
+supz |g (z )| for z ∈ Z .
+
+
+3.1     Identiﬁcation
+In order to make our setup comparable with the treatment eﬀects literature, we maintain
+all deﬁnitions and notation as it is commonly used in that framework. Therefore, we have a
+random sample of size n from the joint distribution of (Y, T, X ), where Y is the outcome of
+interest, T is a dummy variable of treatment assignment, and X is a vector of length d of
+covariates. For completeness, in this section, we also deﬁne qt (τ ) as inf q Pr[Y (t) ≤ q ] ≥ τ ,
+for t = 0, 1, which is the unconditional τ th quantile of FY (t) , the distribution function of
+Y (t) whose support is Yt ⊂ R.
+    Now we deﬁne the p-score, the conditional probability of being treated (observed at time
+1) given X , as p (X ), and the unconditional probability as p. Let X ∈ X ⊂ Rd .
+    In what follows, it is also useful to deﬁne the function m as: m(a, b; τ ) = τ − 1{a < b}.
+We state assumptions on the general model for identiﬁcation of the parameters of interest.
+
+I.I For each τ ∈ T , t = 0, 1, qt (τ ) uniquely solves E[m(Y (t), qt (τ ); τ )] = 0; qAt (τ ) uniquely
+      solves E[m(Y (t), qAt (τ ); τ )|T = 1] = 0; and qBt (τ ) uniquely solves E[m(Y (t), qBt (τ ); τ )|T =
+      0] = 0.
+
+I.II For all τ ∈ T , we have (Y (1), Y (0)) ⊥ T |X ;
+
+I.III For some c > 0, c < p(X ) < 1 − c, a.e. X .
+
+    Assumptions I.I–I.III are standard in the literature, as in Firpo (2007). Condition I.I
+is in general not a suﬃcient identiﬁcation condition for qt (τ ) because Y (t) is not always
+observable from the data. Therefore, the untestable condition I.II, the so-called ignorability
+assumption, is fundamental. According to condition I.II, the assignment to the treatment is
+
+
+                                                  7
+random within subpopulations characterized by X . This assumption has been used, among
+others, by Heckman, Ichimura, Smith, and Todd (1998), Dehejia and Wahba (1999), Hirano
+and Imbens (2004), Firpo (2007). Within the GIC framework this assumption implies that
+conditional on X , there is a random mechanism that assigns individual i to the exact period
+that she is observed (either period 0 or 1). In our model the triple (Y, T, X ) is observable,
+and a random sample of size n can be obtained. Condition I.III states that for almost all
+values of X , both treatment assignment levels have a positive probability of occurrence.
+   Under conditions I.I–I.III the quantities q1 (τ ), q0 (τ ), qA1 (τ ), qA0 (τ ), qB 1 (τ ) and qB 0 (τ )
+are identiﬁed from the joint distribution of (Y, T, X ). These six objects can be written as
+implicit functions of the observed data. For all τ ∈ T ,
+
+            E [w1 (T, X ) m(Y, q1 (τ ); τ )] = E [w0 (T, X ) m(Y, q0 (τ ); τ )]
+             = E [wA1 (T, X ) m(Y, qA1 (τ ); τ )] = E [wA0 (T, X ) m(Y, qA0 (τ ); τ )]
+             = E [wB 1 (T, X ) m(Y, qB 1 (τ ); τ )] = E [wB 0 (T, X ) m(Y, qB 0 (τ ); τ )] = 0,
+
+                         T                       1−T                                          1−T     p(X )
+where w1 (T, X ) =     p(X )
+                             ,   w0 (T, X ) =   1−p(X )
+                                                        ,   wA1 (T, X ) = T
+                                                                          p
+                                                                            , wA0 (T, X ) =    p     1−p(X )
+                                                                                                               ,
+                  T        1−p(X )                              1−T
+wB 1 (T, X ) =   1−p        p(X )
+                                      and wB 0 (T, X ) =        1−p
+                                                                    .   This main identiﬁcation result follows
+directly from Lemma 1 in Firpo (2007).
+   Finally, given that the elements in the vectors Q(τ, τ ), QA (τ, τ ) and QB (τ, τ ) are iden-
+tiﬁed, since q1 (τ ), q0 (τ ), qA1 (τ ), qA0 (τ ), qB 1 (τ ) and qB 0 (τ ) are identiﬁed, it follows from
+equations (1) and (2) that GIC (τ ) and GIC ∗ (τ ) are also, respectively, identiﬁed from the
+joint distribution of (Y, T, X ).
+
+Remark 1. We note that one can also obtain other functionals of interest based on Q (τ, τ ),
+QA (τ, τ ) and QB (τ, τ ), which highlights the potential relevance of the proposed methods in
+practice. Given the identiﬁcation result, general functionals of parameters of interest are also
+identiﬁed, since they can be written as functions of qt (τ ), qAt (τ ), qBt (τ ), and consequently
+as functions of the observable variables (Y, T, X ). For example, the quantile treatment eﬀect
+(QTE) will be ∆ ( τ ) = q1 (τ ) − q0 (τ ) = [1 − 1] Q (τ, τ ) and for quantile treatment eﬀect on
+the treated (QTT) will be ∆A (τ ) = qA1 (τ ) − qA0 (τ ) = [1 − 1] QA (τ, τ ). Less common than
+the previous two treatment eﬀect parameters, the QTU, the quantile treatment eﬀect on the
+untreated, is deﬁned as ∆B (τ ) = [1 − 1] QB (τ, τ ) = qB 1 (τ ) − qB 0 (τ ). Other functionals,
+such as the Makarov bounds for the CDF of Y (1)−Y (0) (Fan and Park (2010)) that explicitly
+depend on QA (τ, τ ) and QB (τ, τ ) at diﬀerent points (τ, τ ), can similarly be obtained from
+
+                                                            8
+the quantiles of potential outcomes.
+
+
+3.2       Estimation
+We are interested in estimation and inference for the GIC (τ ) and GIC ∗ (τ ). Equations
+(1) and (2) show that GIC can be written as a function of the quantiles of potential out-
+comes. Thus, we estimate each component of the vectors Q (τ, τ ), QA (τ, τ ) and QB (τ, τ )
+to construct estimators for the GIC (τ ) and GIC ∗ (τ ).
+      Given identiﬁcation, we are able to estimate the parameters of interest using a multi-step
+estimator as follows.
+
+Step 1 Estimate p(X ) parametrically or nonparametrically and obtain an estimator p (X ).5
+                                                                                    n
+        The estimator of p is the sample average of T , i.e., p = n−1               i=1   Ti .
+
+Step 2 For each (τ, τ ) ∈ T × T , obtain
+
+                            q1 (τ )                         qA 1 ( τ )                           qB 1 (τ )
+            Q (τ, τ ) =               , QA (τ, τ ) :=                    , and QB (τ, τ ) :=                  ,
+                           q0 (τ )                          qA0 (τ )                             qB 0 ( τ )
+
+        where, for t = 0, 1, qt (τ ), qAt (τ ) and qBt (τ ) satisfying the following conditions:
+
+                                        E[wt (τ − 1{Y        < qt (τ )})] = 0                                     (3)
+                                       E[wAt (τ − 1{Y        < qAt (τ )})] = 0                                    (4)
+                                       E[wBt (τ − 1{Y        < qBt (τ )})] = 0,                                   (5)
+
+        where w1,i = Ti /p (Xi ), w0,i = (1 − Ti ) / (1 − p (Xi )), wA1,i = Ti /p,
+        wA0,i = [(1 − Ti ) / (1 − p (Xi ))] [p (Xi ) /p], wB 1,i = [Ti /p (Xi )] [(1 − p (Xi )) / (1 − p)]
+        and wB 0,i = (1 − Ti ) / (1 − p).
+
+      In practice, estimators of qt (τ ), qAt (τ ) and qBt (τ ) can be obtained by weighted quantile
+  5
+      Appendix 6.3 discusses the practical estimation of p(X ).
+
+
+
+
+                                                        9
+regressions (QR)
+
+                             qt (τ ) = arg min E [wt,i ρτ (Yi − q )] ,                       (6)
+                                            q
+
+                            qAt (τ ) = arg min E [wAt,i ρτ (Yi − q )] and                    (7)
+                                            q
+
+                              qBt (τ ) = arg min E [wBt,i ρτ (Yi − q )] ,                    (8)
+                                                q
+
+
+where ρτ (u) := u(τ − 1{u < 0}) is the check function as in Koenker and Bassett (1978).
+
+Step 3 Finally, we can plug-in estimates of the quantiles of the potential outcomes into the
+     expressions to estimate GIC in (1) as following
+
+
+                                    qA1 (τ ) − qB 0 (τ )       1 0       QA (τ, τ )
+                      GIC (τ ) =                         =                            − 1,
+                                         qB 0 ( τ )            0 1       QB (τ, τ )
+
+     where we estimate qA1 (τ ) and qB 0 (τ ) as in (7) and (8), respectively. To compute the
+     corresponding weights, we estimate the propensity score, p(X ), by approximating its
+     log-odds ratio by a polynomial and use the logistic link function with covariates given
+     below in the data description.
+
+   Analogously, we can also estimate the counterfactual GIC ∗ in (2) as
+
+
+                        ∗        qB 1 (τ ) − qB 0 (τ )       1 0    QB (τ, τ )
+                   GIC (τ ) =                          =                         − 1,
+                                       qB 0 (τ )             0 1    QB (τ, τ )
+
+   which, as described previously, is the growth incidence curve for quantile τ if the distri-
+bution of explanatory variables of income had remained ﬁxed from period 0 to 1.
+   There are other alternative estimators available in the literature for the quantile objects
+of interest deﬁned in Step 2 above. Donald and Hsu (2014) discuss an estimator that makes
+use of the inverse of the cumulative distribution function (CDF) of the potential outcomes.
+Their approach to estimate the quantiles is a three-step procedure. In the ﬁrst step one needs
+to compute weights; in the second step the CDF is computed for all points on its support
+by using an inverse probability weighted estimator; and in the third step one obtains the
+quantile by inverting the CDF. We show below that the estimator proposed by Donald
+and Hsu (2014) and our proposed method are asymptotically equivalent. Nevertheless, the
+
+
+                                                    10
+estimator discussed in this paper has several practical advantages. First, our estimator for
+the quantiles is a two-step method: the ﬁrst step coincides with the one of Donald and
+Hsu (2014), but unlike that method, our QR estimator for the object of interest is obtained
+without having to invert the CDF. This is possible because of the second advantage of our
+method: QR has a linear program representation, which makes practical computation simple
+and allows using weights directly into the objective function that is solved. Finally, if one is
+interested in quantiles, and its transformations, using the proposed estimator is attractive
+due to its computational eﬃciency and accuracy in ﬁnite samples.6
+
+Remark 2. One can also easily use the multi-step estimator deﬁned above to obtain estimates
+for other functionals of interest. For example, the estimator of QTE will be ∆ (τ ) = q1 (τ ) −
+q0 (τ ) = [1 − 1] Q (τ, τ ) and for QTT will be ∆A (τ ) = qA1 (τ ) − qA0 (τ ) = [1 − 1] QA (τ, τ ).
+Other functionals, such as the Makarov bounds for the quantiles of the distribution of treat-
+ment eﬀects, Y (1) − Y (0), are estimated using the analytical expressions of these estimated
+bounds as functions of QA (τ, τ ) and QB (τ, τ ).
+
+
+3.3     Asymptotic properties
+In this section, we derive the asymptotic properties of the multi-step estimator for the
+quantile process. We ﬁrst focus on the properties of the estimator of qt (τ ) and establish
+                                                                 ∞
+the uniform consistency and the weak limit of qt (τ ), in            (T ). The extension to qAt (τ ) and
+qBt (τ ) is direct. We also establish the consistency and the weak limit of Q(τ, τ ), QA (τ, τ )
+                                                                                                      ∗
+                     ∞            ∞
+and QB (τ, τ ) in        (T ) ×       (T ). The asymptotic properties of the GIC (τ ) and GIC (τ )
+follow from these results. In addition, we derive the uniform semiparametric eﬃciency of the
+estimator. Finally, we discuss how in practice we estimate weights used to compute qt (τ ).
+The two last results are collected in the Appendix.7
+
+3.3.1    Consistency
+
+Consistency is a desired property for most estimators. For the consistency of process qt (τ )
+over τ ∈ T , consider the following conditions.
+   6
+     We refer the reader to Koenker, Leorato, and Peracchi (2013) for a discussion and comparison on the
+statistical properties of the distribution regression and the quantile regression approaches.
+   7
+     In Appendix 6.2, we provide results for the uniform semiparametric eﬃciency of the estimator. In
+Appendix 6.3 we discuss the practical estimation of the corresponding nuisance parameters, wt (·), wAt (·),
+and wBt (·).
+
+
+
+                                                    11
+QC.I For s, t ∈ {0, 1}, the densities fY (s)|T (·|t) are bounded above and, uniformly in τ ,
+        positive. Also, for any δ > 0,
+
+                               inf         |E[wt (T, X )(τ − 1{Y < qt (τ )})]∞ >   δ.
+                           |qt (τ )|∞ >δ
+
+
+
+QC.II There exists 0 < Mw < ∞ such that wt (T, X ) < Mw , a.e. (T, X ).
+
+QC.III |wt − wt |∞ = op (1).
+
+   These conditions are standard in the literature. We state QC.I and QC.II for self-
+containedness. As usual in the QR literature, QC.I requires the density to be bounded
+away from inﬁnity. The second part of QC.I is a standard identiﬁcation condition. It is
+similar to Angrist, Chernozhukov, and Fernandez-Val (2006) and Firpo (2007), and it follows
+from I.I–I.III for each τ . QC.II imposes boundedness on the density of X . It is analogue to
+Assumption 1(ii) of Firpo (2007) and follows directly from I.III. QC.III requires consistent
+estimation of the nuisance parameter. This is a usual requirement corresponding to (1.4) of
+Theorem 1 of Chen, Linton, and Van Keilegom (2003).
+   The following result establishes consistency of the estimator over the set of quantiles.
+
+Theorem 1. Suppose that E[wt (T, X )m(Y, qt (τ ); τ )] = 0, and that conditions         QC.I–
+QC.III are satisﬁed. Then, for t = 0, 1, as n → ∞
+
+                                      sup |qt (τ ) − qt (τ )| = op∗ (1).
+                                      τ ∈T
+
+
+
+
+   The extension of Theorem 1 to qAt (·) and qBt (·), t = 0, 1 is direct. The assumptions
+QC.I– QC.III are analogous.
+
+3.3.2     Weak convergence
+
+Now we derive the limiting distribution of the general qt (τ ) estimator. We impose the
+following suﬃcient conditions.
+
+                                                                p
+QG.I The functions wt (T, X ) ∈ Π and wt (T, X ) → wt (T, X ) uniformly in (T, X ) over
+        compact sets, where wt (T, X ) ∈ Π, and Π is a function class of uniformly smooth
+        functions in (T, X ) with domain {0, 1} × X .
+
+
+                                                      12
+             √
+QG.II            n (E[(wt (T, X ) − wt (T, X ))(τ − 1{Y < qt (τ )})] + E[wt (T, X )(τ − 1{Y < qt (τ )})])
+         converges weakly.
+
+QG.III |wt (T, X ) − wt (T, X )|∞ = op (n−1/4 ).
+
+       Assumptions QG.I–QG.III concern the properties of the weights. They are high level
+conditions and will be discussed in the section of the estimation of wt . Conditions QG.I
+and QG.II allow for estimated weights. Assumption QG.II is similar to Cattaneo (2010).
+Examples satisfying QG.II include smooth function classes. These assumptions allow for
+a wide variety of nonparametric and parametric estimators. QG.III strengthens QC.III
+such that the estimator of the nuisance parameter converges at a rate faster than n−1/4 . A
+similar assumption appears in Chen, Linton, and Van Keilegom (2003).
+       Now we present the weak convergence result.
+
+Theorem 2. For t = 0, 1, suppose that |E[wt (T, X )m(Y, qt (τ ); τ )]|∞ = 0, that |qt − qt |∞ =
+                                                                                                                    ∞
+op∗ (1), and that conditions QC.I–QC.II, QG.I–QG.III are satisﬁed. Then, in                                             (T ),
+
+                                                    √
+                                                        n(qt − qt )      Gt ,
+
+where Gt is a mean zero Gaussian process with covariance function E[Gt (τ )Gt (τ ) ] =
+ −1                  −1
+Dt  (τ )Stt (τ, τ )[Dt  (τ )] , with, for t = 0, 1, and l = 0, 1,
+
+                     ∂ E[wt (T, X )m(Y, qt (τ ); τ )]
+       Dt (τ )   =                                    |qt (τ )=qt (τ )
+                                 ∂qt (τ )
+ Stl (τ, τ )     =   E [(wt (T, X ) (m(Y, qt (τ ); τ ) − E [m(Y, qt (τ ); τ )|X, T = t]) + E [m(Y, qt (τ ); τ )|X, T = t])
+                     · (wl (T, X ) (m(Y, ql (τ ); τ ) − E [m(Y, ql (τ ); τ )|X, T = l]) + E [m(Y, ql (τ ); τ )|X, T = l])] .
+
+
+
+
+       The result in Theorem 2 shows that the limiting distribution of the estimator is a Gaussian
+                                         ¯, then the limiting distribution collapses to a
+process. Thus, if one ﬁxes a quantile at τ
+simple normal distribution, as in Firpo (2007). For practical inference, below we provide
+inference methods over the set of quantiles that are simple to implement in applications.8
+As before, the extension of Theorem 2 to qAt (·) and qBt (·), t = 0, 1 is direct. The assumptions
+corresponding to QG.I–QG.III are analogous.
+   8
+    Firpo and Pinto (2015) present a similar result to Theorem 2. Nevertheless our proof technique is diﬀerent
+on the treatment of both inﬁnite dimension parameters. In addition, we do not require compactness of the
+support of X and impose weaker assumptions on wt .
+
+
+
+                                                               13
+   Given the result in Theorem 2, it is simple to establish the weak convergence to the
+vector Q(τ, τ ). The results for QA (τ, τ ) and QB (τ, τ ) are analogous.
+
+                                                                                ∞             ∞
+Corollary 1. Assume the conditions of Theorem 2, as n → ∞, in                        (T ) ×       (T )
+
+                       √          √         ( q1 − q1 )                    G1
+                        n(Q − Q) = n                            G=               ,
+                                            ( q0 − q0 )                    G0
+
+where G is the vector of Gaussian processes with covariance function
+
+                              −1                  −1               −1                  −1
+                             D1  (τ )S11 (τ, τ )[D1  (τ )]        D1  (τ )S10 (τ, τ )[D0  (τ )]
+E[G(τ, τ )G(τ , τ ) ] =      −1                   −1              −1                   −1
+                                                                                                         .
+                            D0  (τ )S01 (τ , τ )[D1  (τ )]       D0  (τ )S00 (τ , τ )[D0  (τ )]
+
+
+
+   In order to perform inference on functions of the Q(τ, τ ) , we impose a diﬀerentiabil-
+ity condition on such functions and state a functional delta method result. Consider the
+following assumption.
+
+                                           ∞            ∞             ∞
+QG.IV (Hadamard) The functional h :            (T ) ×       (T ) →        (T ) deﬁned over the distribu-
+     tion of potential outcomes is Hadamard diﬀerentiable at Q, with Hadamard derivative
+     given by h(·) .
+
+   The following result is a well known application of the functional delta method, we include
+it for completeness.
+
+Lemma 1. Assume the conditions of Theorem 2, and QG.IV, as n → ∞,
+
+                                 √
+                                     n(h(Q) − h(Q))          h(G) .
+
+
+
+   Donald and Hsu (2014) establish the weak convergence of a quantile estimator that
+makes use of the inverse of the CDF in their Theorem 3.8. Their result is similar to that
+in Theorem 2 above. Nevertheless, as mentioned previously, the quantile estimators are
+diﬀerent. In addition, the assumptions required to establish the results are diﬀerent. On
+the one hand, Donald and Hsu (2014) impose strong conditions to derive the result. For
+instance, their Assumption 3.1 requires that the distributions of Y (0) and Y (1) have convex
+and compact supports. Their Assumption 3.2 requires all the covariates to be continuous
+
+                                                14
+and the support of the vector of covariates, X , to be compact. We are able to somewhat
+relax these assumptions. Given that we work with a standard semiparametric estimator,
+and a quantile regression framework in the second step, we do not require such assumptions
+to derive the asymptotic properties of our proposed estimator.
+
+
+   Now we to return to the main object of interest and analyze the growth incidence curves,
+GIC (τ ) and GIC ∗ (τ ). As an application of Theorem 2 and Lemma 1, we derive the asymp-
+totic distribution for GIC (τ ). Corollary 1 implies that
+
+                    √                                      √
+                        n(QA − QA )           GA ,   and    n(QB − QB )               GB ,
+
+where GA (τ ) and GB (τ ) are Gaussian processes with variance-covariance functions that can
+be obtained as an application of Corollary 1.
+                            [1 0]QA (τ,τ )                           [1 0]QB (τ,τ )
+   Recall that GIC (τ ) =   [0 1]QB (τ,τ )
+                                             − 1, and GIC ∗ (τ ) =   [0 1]QB (τ,τ )
+                                                                                      − 1. These functionals
+are diﬀerentiable at (QA , QB ), as long as qB 0 (τ ) = 0 with derivatives deﬁned by
+
+                                                 1               [1 0]QA
+                   GIC (GA , GB ) =                  [1 0]GA −             [0 1]GB ,
+                                             [0 1]QB           ([0 1]QB )2
+
+and for GIC ∗ we have that
+
+                                               1             [1 0]QB
+                    GIC ∗ (GB ) =                  [1 0] −             [0 1] GB .
+                                           [0 1]QB         ([0 1]QB )2
+
+   Therefore, from a functional delta method we have the following results.
+
+                                                                                      ∞
+Corollary 2. Assume the conditions of Theorem 2, as n → ∞, in                             (T )
+
+                             √
+                                 n(GIC − GIC )              GIC (GA , GB )                               (9)
+                           √           ∗
+                               n(GIC − GIC ∗ )              GIC ∗ (GB ) .                               (10)
+
+
+
+
+3.4    Inference procedures
+In this section, we turn our attention to inference procedures on the GIC . Important
+questions posed in the econometric and statistical literatures concern the nature of the
+
+
+                                                     15
+impact of a policy intervention or treatment on the outcome distributions of interest. The
+corresponding questions for the GIC are, for example, whether there is signiﬁcant income
+growth at any quantile (the null hypothesis being GIC (τ ) = 0 for all τ ); and whether growth
+is uniform or heterogeneous (GIC (τ ) equals the average growth rate, for all τ ). One can
+also ask if growth is non-decreasing in τ (GIC (τ ) ≥ 0 for all τ ). Since the main objective
+of this paper is to study the growth incidence curve, and these questions and hypotheses
+are formulated for the entire GIC process, we develop inference procedures for the quantile
+process over the set of quantiles indexed by τ .
+
+3.4.1       Test statistics
+
+We seek to develop inference for GIC over the index set of quantiles T . We present
+results for functionals of quantiles of the marginal distributions of potential outcomes, and
+in particular, the GIC (τ ) and GIC ∗ (τ ). Let β (τ ) be a functional of Q, QA , and QB , that
+                                                                                                    [1 0]QA (τ,τ )
+is, β (τ ) = h(Q(τ, τ )). In particular, we are interested in β (τ ) = GIC (τ ) =                   [0 1]QB (τ,τ )
+                                                                                                                     − 1,
+                                                           [1 0]QB (τ,τ )
+and the counterfactual one β (τ ) = GIC ∗ (τ ) =           [0 1]QB (τ,τ )
+                                                                            − 1.
+    We discuss three main hypotheses of interest. First, we consider the following standard
+null hypothesis
+                                      H0 : β (τ ) − r(τ ) = 0,       τ ∈T,                                           (11)
+
+uniformly, where the vector r(τ ) is assumed to be known, continuous in τ over T , and
+        ∞
+r ∈         (T ). More generally, the hypothesis in (11) embeds several interesting hypotheses
+about the parameters of the quantile function.
+
+Example (The uniformly null eﬀect hypothesis). A basic hypothesis is that the growth inci-
+dence curve, GIC (τ ), is statistically equal to zero for all τ ∈ T . The alternative is that the
+it diﬀers from zero at least for some τ ∈ T . In this case, r(τ ) = 0, and relative inequality
+remains stable.
+
+    The basic inference process to test the null hypothesis (11) is
+
+                                     Wn (τ ) := β (τ ) − r(τ ),       τ ∈T.
+
+    To derive the asymptotic properties of the above statistic, we need to compute the es-
+timator β (τ ), which is given by β = h(Q). The GIC (τ ) estimate is β (τ ) = GIC (τ ) =
+[1 0]QA (τ,τ )                                                                ∗    [1 0]QB (τ,τ )
+[0 1]QB (τ,τ )
+                 − 1, and the estimate for GIC ∗ (τ ) is β (τ ) = GIC (τ ) =       [0 1]QB (τ,τ )
+                                                                                                    − 1, which for
+a ﬁxed quantile τ , has an asymptotic normal distribution as given in Corollary 2.
+
+                                                      16
+   General hypotheses about β (τ ) can be accommodated through functions of Wn (·). We
+                                        er-von Mises type test statistics, Vn = f (Wn (·)),
+consider the Kolmogorov-Smirnov and Cram´
+where f (·) is a general functional of the process Wn (·). In particular, we consider diﬀerent
+functionals that lead to diﬀerent test statistics, such as
+
+                               √                               √
+                      V1n :=       n sup |Wn (τ )|,   V2n :=       n          |Wn (τ )| dτ.
+                                     τ ∈T                              τ ∈T
+
+                                                               √
+There are many alternative possible statistics as: V3n := n supτ ∈T Wn (τ )2 and V4n :=
+√
+  n τ ∈T Wn (τ )2 , dτ , among others. In this paper we concentrate on V1n and V2n .
+   These statistics and their associated limiting theory provide a natural foundation for
+testing the null hypothesis. Now we present the limiting distributions of the test statistics
+under the null hypothesis. From Corollary 1 and Lemma 1 under the null hypothesis (H0 :
+                                √
+β = h(Q) = r), it follows that n(h(Q) − h(Q))       h(G) . Thus, the following lemma
+summarizes the limiting distributions.
+
+Lemma 2. Assume the conditions of Theorem 2, and                              QG.IV. Under H0 : β (τ ) =
+h(Q(τ )) = r(τ ), τ ∈ T , as n → ∞,
+
+                       V1n     sup |h(G(τ )) |,       V2n              |h(G(τ )) | dτ.
+                               τ ∈T                            τ ∈T
+
+
+
+
+   When performing tests for the GIC , the limiting distributions of the test statistics under
+the null hypothesis follows from Theorem 2. Under the null hypothesis (H0 : GIC (τ ) = r(τ )),
+           √
+it follows n(GIC (τ ) − r(τ ))     GIC (GA , GB ) . Thus, the following corollary summarizes
+the limiting distributions. The result for H0 : GIC ∗ (τ ) = r(τ ) is analogous.
+
+Corollary 3. Assume the conditions of Theorem 2. Under H0 : GIC (τ ) = r(τ ), as n → ∞,
+
+                V1n     sup |GIC (GA , GB ) |,        V2n              |GIC (GA , GB ) | dτ.
+                        τ ∈T                                   τ ∈T
+
+
+
+
+   The second hypothesis of interest concerns an unknown r(τ ), which needs to be estimated.
+In many examples of interest, the component r(τ ) in the null hypothesis (11) is unknown
+or deﬁned as a function of the conditional distribution and thus needs to be estimated (see,
+e.g., Koenker and Xiao (2002) and Chernozhukov and Fernandez-Val (2005)). r(τ ) might,
+
+                                                      17
+for example, be GIC (τ ) for a diﬀerent country, or period. Or it might be GIC ∗ (τ ). The
+natural expedient of replacing the unknown r in the test statistic by estimates introduces
+some fundamental diﬃculties. The estimate will be denoted as r(τ ). Let
+
+                                      ¯ n (t) := β (τ ) − r(τ ),
+                                      W                                τ ∈T.
+
+In this framework, we follow Chernozhukov and Fernandez-Val (2005) and assume that the
+                                                                              √
+quantile estimates and nuisance parameter estimates satisfy the following: n-consistent
+                                        √                            √
+estimators for β (·) and r(·), such that n(β (·) − β (·)) h(G(·)) and n(r(·) − r(·)) Gr (·)
+             ∞
+jointly in (T ), where (h(G(·)) , Gr (·)) is a zero mean continuous Gaussian process with a
+                                                       √
+non-degenerate covariance kernel. Thus, we have that n(β (τ ) − r(τ ))    h(G(τ )) − Gr (τ ).
+The process remains asymptotically Gaussian; however, the estimation of r(τ ) introduces a
+new drift component that additionally complicates the covariance kernel of the process.
+   Under the null hypothesis H0 : β (τ ) = r(τ ), the test statistics become:
+
+                                √                                  √
+                       ¯1n :=
+                       V                   ¯ n (τ )|,
+                                    n sup |W            ¯2n :=
+                                                        V              n           ¯ n (τ )| dτ.
+                                                                                  |W
+                                      τ ∈T                                 τ ∈T
+
+
+Example (The uniformly constant (but unknown) eﬀect hypothesis). A basic hypothesis is
+that the growth incidence curve, GIC (τ ), is statistically equal to the mean growth rate for
+all τ ∈ T . , i.e., growth has no distributional heterogeneity. The alternative is that GIC (τ )
+diﬀers from the mean at least for some τ ∈ T . In this case, r(τ ) = γAGR , (where γAGR is
+the mean growth rate).
+
+   Now we display the limiting distributions of these test statistics under the null hypothesis.
+                                                            √
+Lemma 3. Assume the conditions of Theorem 2 and that n(β (·) − β (·))            h(G(·)) and
+√                                  ∞
+  n(r(·) − r(·)) Gr (·) jointly in   (T ), where (h(G(·)) , Gr (·)) is a zero mean continuous
+Gaussian process with a non-degenerate covariance kernel.. Under H0 : β (τ ) = h(Q(τ )) =
+r(τ ), τ ∈ T , as n → ∞,
+
+                 ¯1n
+                 V     sup |h(G(τ )) − Gr (τ )|,        ¯2n
+                                                        V                  |h(G(τ )) − Gr (τ )| dτ.
+                       τ ∈T                                        τ ∈T
+
+
+
+
+   This result can be applied to test for the GIC . The limiting distributions of the test
+statistics under the null hypothesis follow from Lemma 3 . Under the null hypothesis (H0 :
+
+
+                                                        18
+                                √                                                    √
+GIC (τ ) = r(τ )), it follows       n(GIC (τ ) − r(τ ))      GIC (GA , GB ) , and        n(r(τ ) − r(τ ))
+Gr (τ ). The following corollary summarizes the limiting distributions. The result for H0 :
+GIC ∗ (τ ) = r(τ ) is analogous.
+
+Corollary 4. Assume the conditions of Lemma 3, with β (τ ) = GIC (τ ), as n → ∞,
+
+       ¯1n
+       V       sup |GIC (GA , GB ) − Gr (τ )|,       ¯2n
+                                                     V               |GIC (GA , GB ) − Gr (τ )| dτ.
+               τ ∈T                                           τ ∈T
+
+
+
+
+   Finally, we consider testing hypotheses concerning inequalities on both null and alterna-
+tive hypotheses as
+                           H0 : β (τ ) ≥ 0 vs H1 : β (τ ) < 0,           τ ∈T.                              (12)
+
+The following is an example of hypotheses that may be considered.
+
+Example (The ﬁrst-order stochastic dominance hypothesis). An important practical hy-
+pothesis involves the composite null GIC (τ ) ≥ r(τ ), for all τ ∈ T , versus the alternative
+                                                                                               qA1 (τ )−qB 0 (τ )
+of GIC (τ ) < r(τ ), for some τ ∈ T . When r(τ ) = 0 and because GIC (τ ) =                         qB 0 (τ )
+                                                                                                                  ,
+such that for qB 0 (τ ) = 0, testing whether GIC (τ ) ≥ 0 is equivalent to test whether qA1 (τ ) ≥
+qB 0 (τ ), ie, that FY (1)|T =1 stochastically dominates FY (0)|T =0 in ﬁrst-order.
+
+   Therefore, the above example describes a test which is analogous to a ﬁrst order stochastic
+dominance as in Donald and Hsu (2014). These null hypotheses of interest can be formalized
+as H0 : β (τ ) ≥ 0, and the test statistic becomes:
+
+                                                  √
+                                         ˜1n :=
+                                         V               ˜ n (τ ),
+                                                   n sup W
+                                                      τ ∈T
+
+
+      ˜ n (τ ) = β (τ ).
+where W
+                                ˜1n since it has been known in the literature that when
+   We employ the test statistic V
+the null hypothesis involves an inequality, the set of points satisfying the null hypothesis is
+usually not a singleton (see, e.g., Linton, Maasoumi, and Whang (2005)). The typical way
+to resolve this is to apply the least favorable conﬁguration (LFC) to ﬁnd a point in the null
+hypothesis least favorable to the alternative hypothesis. Hence, to derive the asymptotic
+                                   ˜1n , one computes the estimator β (τ ) and plugs it in, and
+properties of the above statistic, V
+given the LFC the limiting distribution is analogous to that in Lemma 2 and Corollary 2.
+
+
+
+                                                    19
+    To perform practical inference we suggest the use of resampling techniques to approximate
+the limiting distributions and obtain critical values. To obtain the critical value for the
+ﬁrst two criteria we use a bootstrap procedure, and for the inequality test we make use of
+subsampling.
+
+3.4.2     Practical implementation of testing procedures
+
+Implementation of the proposed tests in practice is simple. First, we discuss the test H0
+in (11). To implement the tests one needs to compute the statistics of test V1n or V2n .
+                                                        ¯2n . We suggest the use of a
+                                                 ¯1n or V
+Analogously, when r(τ ) is unknown, one computes V
+recentered bootstrap procedure to calculate critical values. The steps for implementing the
+tests in practice are as follows.
+    First, the estimates of β (τ ) are computed by solving the problems in equations (6)–(8)
+and calculating β (τ ). Second, Wn is calculated by centralizing β (τ ) at r(τ ), and V1n or V2n
+is computed by taking the maximum over τ (V1n ) or summing over τ (V2n ). For the general
+case with unknown r(τ ), the tests are computed in the same fashion. The only adjustment
+                               ¯ n . Third, after obtaining the test statistic, it is necessary to
+is the use of r(τ ) to compute W
+compute the critical values. We propose the following scheme. We use the test statistic V1n
+as an example, but the procedure is the same for the other cases. Take B as a large integer.
+For each b = 1, . . . , B :
+
+  (i) Obtain the resampled data {(Yib , Tib , Xib ), i = 1, . . . , n}.
+
+                                 b
+ (ii) Estimate β b (τ ) and set Wn (τ ) := (β b (τ ) − β (τ )).
+                                                                     √
+ (iii) Compute the test statistic of interest V1bn = maxτ ∈T                b
+                                                                         n|Wn (τ )|.
+
+    Let cB                                                                    1             B
+         1−α denote the empirical (1 − α)-quantile of the simulated sample {V1n , . . . , V1n },
+where α ∈ (0, 1) is the nominal size. We reject the null hypothesis if V1n is larger than cB
+                                                                                           1−α .
+In practice, the maximum in step (iii) is taken over a discretized subset of T .
+    A formal justiﬁcation the simulation method is stated as follows. Consider the following
+conditions.
+
+                                      1          n                                           √
+QG.IB For any δn ↓ 0, sup||w||Π ≤δn | n          i=1   wt (T, X ) − E[wt (T, X )]|∞ = op∗ (1/ n).
+            √ 1      n                             ∗
+QG.IIB       nn      i=1 [(τ − 1{Yi <   qt (τ )})(wt (Ti , Xi ) − wt (Ti , Xi ))] converges weakly to a tight
+                                  ∞
+        random element G in        (T ) in P ∗ -probability.
+
+                                                        20
+Theorem 3. Under QC.I–QC.II, QG.IB–QG.IIB and QG.III with “in probability”
+                                                                        √ ∗
+replaced by “almost surely”, then, for t = 0, 1, the bootstrap estimator n(qt (τ ) − qt (τ ))
+G(τ ) in P ∗ -probability in    ∞
+                                    (T ).
+
+
+
+   Theorem 3 establishes the consistency of the bootstrap procedure. It is important to
+highlight the connection between this result and the previous section. In fact, Theorem 3
+shows that the limiting distribution of the bootstrap estimator is the same as that of Theorem
+2, and hence the above resample scheme is able to mimic the asymptotic distribution of
+interest.
+   Now we move our attention to testing the H0 displayed in (12). As discussed in Linton,
+Maasoumi, and Whang (2005), even when the data are i.i.d. the standard bootstrap might
+not work well when testing the inequality under the null hypothesis. This is because one
+needs to impose the null, which is diﬃcult because it is deﬁned by a complicated system of
+inequalities. Thus, we follow Linton, Maasoumi, and Whang (2005) and suggest the use of
+a subsampling method, which is very simple to deﬁne and yet provides consistent critical
+values.
+   We ﬁrst deﬁne the subsampling procedure. Let Zi = {(Yi , Ti , Xi ) : i = 1, ..., n} and
+construct all possible subsets of size b. The number of such subsets Bn is “n choose b.”
+                                 ˜1n computed over the entire sample. With some abuse of
+Let Sn denote our test statistic V
+notation, the test statistic Sn can be re-written as a function of the data {Zi : i = 1, ..., n}:
+
+                                                   √
+                                            Sn =    nsn (Z1 , ..., Zn ),
+
+                                                               ˜ n (τ ) = β (τ ). Let
+                                              ˜ n (τ )], where W
+where sn (Z1 , ..., Zn ) is given by supτ ∈T [W
+
+                                                    √
+                                 Jn (w) = P             nsn (Z1 , ..., Zn ) ≤ z
+
+denote the distribution function of Sn . Let sn,b,i be equal to the statistic sb evaluated at the
+subsamples {Zi , ..., Zi+b−1 } of size b, i.e.
+
+                    sn,b,i = sb (Zi , Zi+1 , ..., Zi+b−1 ) f or       i = 1, ..., n − b + 1.
+
+This means that we have to recompute qt (Zi , Zi+1 , ..., Zi+b−1 ) using each subsample as well.
+We note that each subsample of size b (taken without replacement from the original data)
+
+
+                                                          21
+is indeed a sample of size b from the true sampling distribution of the original data. Hence,
+it is clear that one can approximate the sampling distribution of Sn using the distribution
+of the values of sn,b,i computed over n − b + 1 diﬀerent subsamples of size b. That is, we
+approximate the sampling distribution Jn of Sn by
+
+                                              n−b+1
+                                      1                   √
+                         Jn,b (w) =                   1    bsn,b,i ≤ w .
+                                    n−b+1       i=1
+
+
+Let gn,b (1 − α) denote the (100 − α)-th sample quantile of Jn,b (·). We call it the subsample
+critical value of signiﬁcance level α. Thus, we reject the null hypothesis at the signiﬁcance
+level α if Sn > gn,b (1 − α). The computation of this critical value is not particularly onerous,
+although it depends on how big b is.
+    The validity of the subsampling methods for the quantile regression process was estab-
+lished by Chernozhukov and Fernandez-Val (2005).
+
+
+    A Supplemental Appendix collects Monte Carlo simulations conducted to evaluate the
+ﬁnite sample properties of the proposed tests. We conduct simulations to evaluate the
+performance of these tests in terms of size and power. The results provide evidence that the
+empirical levels of the tests approximate well the nominal or theoretical levels. Moreover, the
+tests possess large power against selected alternatives. The results are improved when the
+sample size increases, nevertheless they are not very sensitive to the numbers of bootstraps.
+
+
+4     Wage distribution dynamics in the United States and
+      Brazil, 1995-2007
+This section illustrates the usefulness of the proposed methods with an empirical example.
+We compute the GIC and GIC ∗ for the two most populous nations in the Western Hemi-
+sphere, namely the United States and Brazil, for the 1995-2007 period, and compare results.
+In particular, we emphasize the role of the following decomposition of the GIC , introduced
+in Section 2 and reproduced below:
+
+                                                                 qB 1 (τ )
+                         GIC (τ ) = GIC ∗ (τ ) + GIC ∗∗ (τ ) ·             .
+                                                                 qB 0 (τ )
+
+    The ﬁrst term in this decomposition is the counterfactual GIC , which keeps the joint
+
+                                               22
+distribution of observed covariates ﬁxed (see equation 2). Under Assumptions I.I–I.III, this
+term can be interpreted as describing the growth process that would have obtained in the
+absence of any changes in that joint distribution. The second term of the decomposition is
+correspondingly interpreted as the eﬀect of changes in the joint distribution of covariates.
+   Our reweighting method allows for the direct construction of the counterfactual GIC ,
+with no need to postulate a structural relationship between wages, covariates and unobserved
+terms, as was required by the earlier literature that followed Juhn, Murphy, and Pierce
+(1993). Under that approach, economists would typically estimate OLS regressions for the
+two time periods separately and then construct a counterfactual wage distribution using
+estimated parameters and residuals from time t = 1 but covariates from time t = 0. This
+would yield a counterfactual distribution of wages at time t = 1, with a distribution of
+covariates that was ﬁxed at time t = 0 (see, for example, Bourguignon, Ferreira, and Leite
+(2008)). In addition to requiring strong functional form assumptions, however, it is not clear
+how one would perform statistical inference on the counterfactual GIC using that method.
+   In this section we report the estimates for GIC and its counterfactual counterpart GIC ∗ ,
+                  ∗
+GIC (τ ) and GIC (τ ) respectively, over τ ∈ T . We also report the corresponding growth
+rates in average wages, γAGR and γAGR∗ , respectively, for comparison. Moreover, using the
+techniques developed in the previous section, we perform inference on both sets of curves.
+                                                                         er-von Mises
+Speciﬁcally, we apply the uniform tests, Kolmogorov-Smirnov (KS) and Cram´
+(CVM), to test the following hypotheses:
+
+ (i) Constant distribution: (H0 : GIC (τ ) = 0 versus HA : GIC (τ ) = 0);
+
+ (ii) Distribution-neutral growth (H0 : GIC (τ ) = γAGR versus HA : GIC (τ ) = γAGR , where
+     γAGR is the growth rate in the average wage);
+
+ (iii) Constant distribution, conditional on covariates, (H0 : GIC ∗ (τ ) = 0 versus HA :
+     GIC ∗ (τ ) = 0);
+
+ (iv ) Distribution-neutral growth, conditional on covariates (H0 : GIC ∗ (τ ) = γAGR∗ versus
+     HA : GIC ∗ (τ ) = γAGR∗ , where γAGR∗ is the counterfactual growth rate in average
+     wage).
+
+
+
+
+                                             23
+4.1      Data
+4.1.1     CPS – US
+
+Our data for the United States come from the March supplement to the Current Population
+Surveys (CPS) for 1995 and 2007.9 The dataset provides the distribution of labor earnings in
+the US in 1995 and 2007 for full-time workers of both genders. We use the following variables
+for our analysis. Y denotes real hourly labor earnings (sum of annual pretax wages, salaries,
+tips, and bonuses, divided by the number of hours worked annually). The vector X consists
+of three covariates of Y , namely: (i) the worker’s age in years; (ii) a gender dummy; and
+(iii) a categorical variable for the highest educational level attained (“high school”, “some
+college” or “college”).
+      We restrict the sample to individuals aged 16 to 65 that reported a positive value for
+real hourly earnings in the previous year. Individuals with missing values for any of the
+four variables in Y and X were excluded from the sample. After applying these ﬁlters, we
+trimmed the sample by dropping the top and bottom 0.5% of the distribution of hourly
+wages in each year, to eliminate outliers. Hourly wages are in US dollars of March 2007.
+The Consumer Price Index was used to inﬂate 1995 incomes: nominal values in 1995 were
+multiplied by 1.36 to be expressed in 2007 dollars. The ﬁnal sample contains a total of
+165,245 observations. Summary statistics are presented in Table 1.
+
+                                Table 1: Summary Statistics – US
+
+                                        Mean     S.D.    Min.     Max.     Observations
+                  CPS 1995
+            Hourly Work Earnings       16.730   11.402   1.047   74.162       69,494
+                    Age                37.039   12.090    16       65         69,494
+                    Male                0.527                                 69,494
+                High School            0.333                                  69,494
+             College Incomplete         0.295                                 69,494
+                   College              0.243                                 69,494
+                  CPS 2007
+            Hourly Work Earnings       19.626   16.748   1.202   168.280      95,751
+                    Age                39.284   12.807    16       65         95,751
+                    Male                0.525                                 95,751
+                High School            0.305                                  95,751
+             College Incomplete         0.291                                 95,751
+                   College              0.297                                 95,751
+
+
+  9
+      http://www.census.gov/programs-surveys/cps.html
+
+
+                                                  24
+4.1.2    PNAD – Brazil
+
+                                                                       ılios (PNAD),
+The Brazilian data come from the Pesquisa Nacional por Amostra de Domic´
+an annual Brazilian household survey that samples households across (almost) the entire
+country.10 It collects information on various household characteristics, as well as individual
+incomes and education levels. We use PNAD data for 1995 and 2007. For comparability,
+we use the same four variables as for the CPS: real hourly labor earnings, age, gender, and
+a categorical educational attainment variable. IBGE, the Brazilian Statistics Bureau that
+is responsible for running PNAD, started including the rural Northern region in the PNAD
+sample after 2004 but, for comparability across years, we do not use information on the rural
+North for 2007.
+   As for the US, we restrict the sample to individuals aged 16 to 65 that reported a positive
+labor income in the previous year. Individuals with missing values for income or any of our
+three covariates were excluded from the sample. The top and bottom 0.5% of the distribution
+of hourly wages in each year was trimmed, as in the CPS. Hourly wages are in Brazilian reais
+(BRL) of September 2007, which means that nominal values in 1995 were multiplied by 2.89
+to be expressed in 2007 prices. The ﬁnal sample contains a total of 275,749 observations.
+Summary statistics are presented in Table 2.
+
+                              Table 2: Summary Statistics – Brazil
+
+                                        Mean      S.D.     Min.    Max.     Observations
+               PNAD 1995
+           Hourly Work Earnings          5.565    7.312    0.300   61.317      119,770
+                   Age                  34.924   11.936      16      65        119,770
+                   Male                  0.631                                 119,770
+               High School              0.131                                  119,770
+            College Incomplete           0.046                                 119,770
+                  College                0.064                                 119,770
+               PNAD 2007
+           Hourly Work Earnings          5.659    6.978    0.312   62.500      155,979
+                   Age                  36.367   12.025      16      65        155,979
+                   Male                  0.589                                 155,979
+               High School              0.259                                  155,979
+            College Incomplete           0.085                                 155,979
+                  College                0.094                                 155,979
+
+
+   A comparison of Tables 1 and 2 reveals considerable diﬀerences between the two labor
+  10
+                                                                             a, Amazonas, Par´
+     In 1995, PNAD did not survey households in the rural areas of Acre, Amap´                      onia
+                                                                                             a, Rondˆ
+and Roraima — six states in the Amazon region.
+
+
+                                                  25
+forces. US full-time workers are on average some three years older than their Brazilian
+counterparts, and earn much higher wages: the nominal exchange rate in September 2007
+was 1.90 BRL to the USD, so average wages in 2007 in this sample were approximately 6.6
+times higher in the US than in Brazil. US workers are also much more educated, and the
+female share of the labor force is higher there. Over the twelve years between 1995 and
+2007, both labor forces became a little older, and more educated. Educational attainment
+rose in both countries, but more markedly in Brazil, which started from a much lower level.
+Completion of high school in Brazil almost doubled over the period, and the college-educated
+share also rose from 6.4% to 9.4%. The female share of the labor force was essentially stable
+at 47% in the US, but rose from 37% to 41% in Brazil, driven primarily by a higher rate of
+female labor force participation (Ferreira, Firpo, and Messina (2016)).
+
+
+4.2    Results
+Before we present results for the GIC , we compute standard inequality measures for hourly
+real wages for both countries. Table 3 summarizes some of the main changes in the wage
+distributions in the US and Brazil over this period. The ﬁrst panel presents ﬁve common
+measures of relative wage inequality for the two countries in 1995 and 2007, as well as
+for the counterfactual wage distribution FY (1)|T (·|0). The inequality measures are the Gini
+coeﬃcient, the Theil-T index (that is, the Generalized Entropy measure with parameter = 1),
+the mean log deviation (also known as Theil-L, or GE (0)), the relative mean deviation, and
+the standard deviation of logarithms. The second panel presents the growth rate in mean
+hourly wages (γAGR ) and the average of quantile-speciﬁc growth rates, across quantiles,
+denoted Mean GIC .
+
+         Table 3: Inequality measures hourly real wages (HRW) – US and Brazil
+
+                                             US                            Brazil
+                                  Factual     Counter Factual      Factual   Counter Factual
+                               1995 2007                        1995 2007
+             Gini              0.355 0.383         0.381        0.539 0.490        0.473
+        Theil Entropy          0.205 0.260         0.258        0.536 0.457        0.444
+   Theil mean log deviation    0.218 0.254         0.250        0.511 0.411        0.383
+   Relative mean deviation     0.257 0.274         0.272        0.404 0.366        0.348
+  Standard deviation of logs   0.682 0.710         0.703        0.963 0.852        0.814
+ Growth of mean wage (γAGR )       0.173           0.101            0.017         -0.150
+          Mean GIC                 0.127           0.063            0.138         -0.016
+
+
+
+
+                                             26
+   Below we discuss the ﬁndings for each country separately, including the KS and CVM
+tests of the four hypotheses listed earlier, before brieﬂy comparing results across countries.
+
+4.2.1   United States
+
+Figure 1 presents the estimates for the GIC and GIC ∗ , and their corresponding 95% con-
+ﬁdence intervals, for the US in the period 1995-2007. The blue line displays the GIC , and
+the straight horizontal black line represents the corresponding average growth rate, γAGR .
+The green line displays the counterfactual growth incidence curve, GIC ∗ , and the dashed
+red line shows its corresponding mean eﬀect, γAGR∗ . The number of bootstrap replications
+used to construct conﬁdence intervals is 300.
+   The growth incidence curve for the US is essentially ﬂat at a cumulative growth rate of
+approximately 10% for the ﬁrst eight deciles of the distribution. From τ = 0.8 onwards it
+begins to slope upwards, and the slope increases sharply for the uppermost decile. A growth
+rate of 10% over twelve years translates into an average annual wage growth rate of less than
+one percent over the period, supporting earlier descriptions of wage stagnation for most US
+workers, even during the “Goldilocks” economy that preceded the great ﬁnancial crisis of
+2008-09 (see, e.g. Kopczuk, Saez, and Song (2010) and Mishel, Bivens, Gould, and Shierholz
+(2012)). The fact that the growth in the average wage was considerably higher, at 17.3%,
+reﬂects the much better performance of the top quintile. This is also why it was higher than
+the average quantile-speciﬁc growth rate across quantiles, of 12.7%. The more rapid growth
+of wages among the top ﬁfth of full-time workers naturally translated into rising inequality,
+as shown by all ﬁve inequality measures in Table 3. The commonly used Gini coeﬃcient rose
+by almost three percentage points.
+   The basic ﬁnding that there was positive but heterogeneous wage growth in the US
+is found to be statistically signiﬁcant by the inference results for the formal hypotheses
+formulated earlier, namely constant distribution and distribution-neutral growth for the
+GIC . These results are presented in Table 4, which reports the Kolmogorov-Smirnov (KS)
+        er-von Mises tests (CVM) (V1n and V2n , respectively). First, we test the constant
+and Cram´
+distribution hypothesis for the GIC uniformly over quantiles (H0 : GIC (τ ) = 0), which
+is rejected at the 1% level of signiﬁcance for both tests. Thus, we reject the hypothesis
+that the US wage distribution did not change at all. Second, we test whether growth was
+distribution-neutral over the period, i.e. whether GIC (τ ) = γAGR . In this test we have an
+estimate (r) under the null hypothesis and apply the V¯1n and V¯2n tests. Again, we strongly
+
+
+                                              27
+                                          Figure 1: GIC US 1995–2007
+
+
+
+
+                              0.4
+                                              GIC                                                                                                              o
+                                              Counterfactual GIC
+                                              Average
+                                              Counterfactual Average
+
+                                                                                                                                                               o
+
+
+
+
+                              0.3
+                                                                                                                                                            o
+                                                                                                                                                           o
+
+
+
+
+                                                                                                                                                           o
+
+                              0.2
+                        GIC
+                                                                                                                                                       o
+                                                                                                                                                     oo o o
+                                                                o                                                                                   o
+                                                                                                                                                   o
+                                                              o                                                                                o    o      o
+                                                                            o o                                                            oo o ooo
+                                                                 o o       o                                                                 o           o
+                                                        o      o       o
+                                      o               oo ooo      o      oo o o        o o       o            ooo           oo          o
+                                                             o     o    o                                    o                                       o
+                                       o
+                                     o o           o                 oo       o    o    ooo o o o ooo                     o            o o
+                                          o o o ooo o       o      o                                   o               o o o o o oo                       o
+                                                                                  o
+                                                                                 o ooo
+                                                                                                   o       oo           o           o
+                                                                                                         oo      o o oo o
+                              0.1
+
+
+
+
+                                                    o               o                        oo o o                                      o             oo
+                                     o o o oo          o      o                                                     o           ooo        o
+                                           o                                                            o         o
+                                                        o       ooo             o                                                                o o
+                                      o o                            o     o       o                                                            o oo o
+                                             o      oo o                       o                                                               o
+                                         o                                   o                ooo                  o                          o
+                                                o o o oo o o           oo              o                  o                               o oo
+                                       o o       o                       o    o oo o             o              oo
+                                               o            o         o oo               oooo     o o      o     o oo
+                                                                                                                          o o o oo
+                                                                                                                           o         o
+                                        o     o    o
+                                                                                     oo o            o ooo oo                 oo o
+                                            o                                                o      o          o             o         oo
+                                                                                                   o        o         oooo            o o
+                                           o                                                          o                             o
+                              0.0
+
+
+
+
+                                    0.0                   0.2                     0.4                      0.6                     0.8                         1.0
+
+                                                                                         quantiles
+
+
+
+
+reject the null hypothesis, which is in line with the heterogeneity observed across quantiles
+in Figure 1.
+   The second interesting ﬁnding from our analysis is that the counterfactual growth inci-
+dence curve, GIC ∗ , lies everywhere between the no-growth line at zero, and the actual GIC ,
+and its shape is very similar to that of the latter. This implies that both changes in (broadly
+deﬁned) economic structure - encompassing changes in returns to observed worker attributes,
+as well as changes in both the distribution of and returns to unobserved characteristics - and
+changes in the joint distribution of age, gender and education contributed to the modest
+increase in US wages during the study period. Since the GIC ∗ is also ﬂat until τ = 0.8 or
+thereabouts, and then sharply increasing, we can conclude that the rise in wage inequality
+is not driven by changes in the gender, age and educational make-up of the workforce. It is
+driven instead by changes in economic structure and by their impact on the remuneration
+structure of various worker attributes.
+   This ﬁnding is conﬁrmed by an inspection of the wage inequality measures for the US
+counterfactual distribution, FY (1)|T (·|0), in Table 3 above. All ﬁve measures lie strictly
+between the actual wage inequality levels in 1995 and 2007, but are all much closer to the
+higher 2007 levels. Taking the mean log deviation as an example, the decomposition indicates
+that changes in economic structure between 1995 and 2007 shifted the measure from 0.218
+in 1995 to 0.250. Changes in the joint distribution of covariates - i.e. the age, gender and
+
+
+                                                                                        28
+                                                  er-von Mises (CVM) Tests – US
+         Table 4: Kolmogorov-Smirnov (KS) and Cram´
+
+            Null Hypothesis                KS      Critical Values               CVM          Critical Values
+                                                 1%      5%      10%                        1%      5%     10%
+    No Eﬀect: GIC (τ ) = 0                0.378 0.067 0.0601 0.057              15.677     1.661 1.379 1.184
+  Mean Eﬀect: GIC (τ ) = γAGR             0.306 0.058 0.055 0.051                7.689     1.333 1.252 1.093
+    No Eﬀect: GIC ∗ (τ ) = 0              0.205 0.080        0.069     0.059     6.590     2.235    1.849    1.694
+ Mean Eﬀect: GIC ∗ (τ ) = γAGR∗           0.204 0.075        0.063     0.054     5.648     1.472    1.269    1.186
+
+
+educational make up of the full-time labor force - account only for the residual change from
+0.250 to 0.254. Formal tests, also presented in Table 4, conﬁrm that the GIC ∗ (τ ) was neither
+constant nor distribution neutral over the period. We ﬁrst test whether GIC ∗ (τ ) = 0. The
+results indicate rejection of the null at 1% level for both the KS and CVM tests. And when
+we test distribution neutrality of growth conditional on the joint distribution of covariates,
+GIC ∗ (τ ) = γAGR∗ the null is again rejected at all reported levels of signiﬁcance.
+
+4.2.2      Brazil
+
+The results for the Brazilian GIC and GIC ∗ (τ ) for 1995-2007 are displayed in Figure 2. As
+before, the blue line displays the actual GIC , and the dashed black line denotes the growth
+rate of mean wages, γAGR . The green line displays the counterfactual growth incidence curve,
+GIC ∗ , and the dashed red line shows its corresponding mean eﬀect, γAGR∗
+       Remarkably, there was even less growth in average wages for full-time workers in Brazil
+than in the US over this period. Cumulative growth in real wages was a paltry 1.7% - a
+tenth of the US rate.11 However, the distribution of that growth was completely diﬀerent
+from the US case. Brazil’s GIC rises sharply up until the ﬁrst quintile, at which point in
+the distribution wages grew by 40% or more over the period. The GIC is then downward
+sloping from τ = 0.2 to τ = 1.0. It crosses the x-axis near the 7th decile, and is negative
+thereafter. This growth pattern is consistent with a substantial decline in wage inequality
+among full-time workers, as shown in Table 3. Whereas all ﬁve inequality indices reported
+rose for the US, all ﬁve declined for Brazil. The Gini coeﬃcient fell by almost four points,
+  11
+    It is quite likely that this dismal performance is due, at least in part, to a composition eﬀect. Ferreira,
+Firpo, and Messina (2016) report that formal employment in Brazil rose by a ﬁfth, from 48 to 58% of the
+labor force, between 1995 and 2012. While not strictly the same, formal employment is highly correlated
+with full-time status. The same authors also report that the formalization of labor contracts was more
+common among lower earners. Such a process is likely to lower average earnings in that sample through a
+composition eﬀect.
+
+
+                                                      29
+                                      Figure 2: GIC Brazil 1995–2007
+
+
+
+                                                                       o
+                                                                                                                                                      GIC
+                                                                     o          o
+                                                                    oo                                                                                Counterfactual GIC
+                                                                       o     oo                                                                       Average
+                                                                           oo
+                                                                 o
+                                                                                o                                                                     Counterfactual Average
+
+
+
+
+                               0.4
+                                                            o              o
+                                                           o                   oo ooo
+                                                         o
+                                                         oo                               o
+
+                                                    o                  o    o         o oo
+                                                   o                o o    o     o
+                                                  o                      oo
+                                                                     o
+                                                                       o
+                                                                                     o
+                                                                                    o o
+                                                                                              o oo
+                                                 o               o                              o
+                                                                                               o
+                                             oo          o                             o          o
+                                                                                      o oo
+
+
+
+
+                               0.2
+                                                       o        o                                  o oo
+                                                               o                                  o     oooo
+                                                                                              o oo
+                                             o             o                                         o o    o ooo        o
+                                            o                                                  o   o         o
+                         GIC
+                                                                                                    o            o    o
+                                                     o       o                                                            oo
+                                                                                                      oo             o
+                                        o         oo                                                    o o        oo        ooooo
+                                                 o                                                                                  o o
+                                       o                                                                o
+                                                                                                            o
+                                                                                                             oo                  ooo o
+                                             o                                                                                       o o       o
+                                                                                                                                           o
+                                                                                                                                        o o oo oo
+                                                                                                              o         o
+                                                                                                               oooo
+                               0.0
+
+
+                                            o                                                                                                            o
+                                             o                                                                         o o                    o o      oo
+                                                                                                                   o oo   ooo                         o        o         o o        o
+                                        o                                                                           o                             oo      o oo o o        o        o
+                                       o                                                                                     o                      oo     ooo       o
+                                                                                                                                                                       o   o o o
+                                                                                                                                                                               o
+                                                                                                                              o   oo                             oo o oo        o    o
+                                                                                                                               o o
+                                                                                                                                o    ooo                                         o
+                                                                                                                                    o
+                                                                                                                                        oo
+                                                                                                                                          oo                                o
+                                                                                                                                            oo
+                                                                                                                                               oo
+                                                                                                                                              o oo
+                                                                                                                                                   o   o                            o
+                               -0.2
+
+
+
+
+                                                                                                                                                      o o
+                                                                                                                                                    o    o
+                                                                                                                                                     o                               o
+                                                                                                                                                              o o
+                                                                                                                                                          o                  o
+                                                                                                                                                           oo oo      o  oo   o    o
+                                                                                                                                                             o                   oo
+                                                                                                                                                                  o o o    o
+                                                                                                                                                                   o o oo      oo
+                                                                                                                                                                            o
+
+
+
+
+                                      0.0                                  0.2                              0.4                      0.6                   0.8                      1.0
+
+                                                                                                                  quantiles
+
+
+
+
+and the mean log deviation, which is more sensitive to income gaps at the bottom of the
+distribution, lost almost 20% of its initial value.
+    This pro-poor pattern is also evident in the fact that the average growth rate across
+quantiles was 13.8% - higher than in the US - despite a near stagnant average wage. Un-
+surprisingly, then, both the constant distribution and the distribution-neutral growth hy-
+potheses are resoundingly rejected at 1% level of signiﬁcance for Brazil as well, in both
+                               er-von Mises tests. This can be seen in Table 5, which
+the Kolmogorov-Smirnov and Cram´
+collects the results for the KS and CVM tests (V1n and V2n , respectively).
+    As in the US case, the counterfactual growth incidence curve lies everywhere below
+the GIC , and has a very similar shape. This parallelism suggests that the main drivers
+of distributional heterogeneity - which in this case were highly equalizing - belong to the
+realm of changes in economic structure, aﬀecting remuneration patterns and unobserved
+worker characteristics. One plausible such candidate driver was the sustained rise in Brazil’s
+minimum wage over this period, which is both consistent with the shape of the GIC , and
+with earlier ﬁndings in the literature (e.g. Ferreira, Firpo, and Messina (2016)). Changes in
+the joint distribution of observed attributes - gender, age and education - on the other hand,
+had roughly equi-proportional eﬀects across the distribution. These eﬀects were generally
+positive - i.e. wage-increasing - as one would expect from rising experience and educational
+levels.
+
+
+                                                                                                                  30
+                                                 er-von Mises (CVM) Tests – Brazil
+        Table 5: Kolmogorov-Smirnov (KS) and Cram´
+
+            Null Hypothesis                KS     Critical Values              CVM          Critical Values
+                                                 1%      5%     10%                       1%      5%     10%
+    No Eﬀect: GIC (τ ) = 0               0.522 0.0648 0.058 0.055              20.187    1.267 1.151 1.027
+  Mean Eﬀect: GIC (τ ) = γAGR            0.504 0.066 0.062 0.057               19.395    2.024 1.686 1.532
+    No Eﬀect: GIC ∗ (τ ) = 0             0.383     0.081     0.066 0.059       20.268    1.112    1.045    1.018
+ Mean Eﬀect: GIC ∗ (τ ) = γAGR∗          0.533     0.090     0.067 0.055       22.666    1.423    1.264    1.178
+
+
+       Once again, this ﬁnding is consistent with the inequality measures for the Brazilian
+counterfactual distribution, reported in the last column of Table 3. These are all lower than
+the actual inequality values in both 1995 and 2007, suggesting that the observed decline in
+inequality was due entirely to changes in economic structure. This may well reﬂect both
+the eﬀects of a rising minimum wage and the decline in the economy-wide skill premium,
+as discussed earlier in the literature (see, e.g. Barros et al., 2010). The eﬀect of changes
+in the observed composition of the labor force was actually to partly oﬀset those declines,
+through a mildly unequalizing eﬀect of the second term of the decomposition.12 In terms of
+formal inference, as should be expected from Figure 2 and the above discussion, both null
+hypotheses (constant distribution and the distribution-neutral growth) are rejected at the
+1% level of signiﬁcance for both KS and CVM tests. See Table 5.
+       A comparison of results suggests that the 1995-2007 period saw very diﬀerent distribu-
+tional dynamics for real hourly wages among full-time employees across the two countries.
+Growth in average wages was muted in both countries; and almost zero in Brazil. But such
+an aggregated description misses important diﬀerences in the distribution of that growth:
+whereas wages were growing at less than 1% per year in the US for all but the top ﬁfth of
+workers (who experienced much faster increases), Brazil saw relatively rapid wage growth
+for the bottom half of the distribution, while wages were actually falling for the top fourth.
+As a result, wage inequality rose in the US and fell markedly in Brazil.
+       Despite these very disparate headline stories, there were similarities too. In both cases,
+changes in the observed composition of the labor force - notably higher levels of education
+and experience - contributed to wage growth, and did so roughly equi-proportionately across
+  12
+    The unequalizing eﬀect of educational expansions when returns are (artiﬁcially) held constant is not a
+novel ﬁnding. Bourguignon, Ferreira, and Lustig (2005) refer to this as the ’paradox of progress’ and explain
+that it reﬂects the generally observed convexity of returns to schooling. As workers become more educated,
+mass in the schooling distribution shifts to ranges where returns are steeper, and inequality rises.
+
+
+
+                                                     31
+the distribution. In other words, changes in the joint distribution of X were not responsible
+for the sharp movements in inequality in either country. Those changes were attributable
+almost entirely to changes in the distribution of wages conditional on those observables,
+interpreted here broadly as changes in economic structure.
+
+
+5     Conclusion
+The recent rise in interest in inequality within the economics profession has not been ac-
+companied by a corresponding ability to properly identify the sources of changes in income
+or wage distributions. The development of the growth incidence curve (GIC ) by Ravallion
+and Chen (2003) has spurred a wave of descriptive studies of the distributional character-
+istics of economic growth, across many countries and time periods. Hitherto, however, the
+precise requirements for identiﬁcation and inference using the GIC had not been formally
+established.
+    This paper ﬁlls that gap by writing the growth incidence curve as a functional of the
+vector formed by the quantiles of potential outcomes, where treatment assignment is formally
+replaced by time assignment. We establish the conditions under which both actual and
+counterfactual growth incidence curves are identiﬁed, and propose a simple semi-parametric
+procedure that allows for the estimation of the GIC with no need for restrictive functional
+form assumptions on the relationship between income and its covariates. We establish the
+asymptotic properties of these estimators, and propose practical inference procedures for
+general functions of the quantile potential outcome. Statistical inference procedures are
+developed uniformly over the set of quantiles T . We propose testing for general hypotheses
+                                                     er-von Mises type statistics. Since
+and consider both the Kolmogorov-Smirnov and the Cram´
+the parameter of interest is inﬁnite dimensional, for practical inference, we compute critical
+values using a bootstrap method. We provide suﬃcient conditions under which the bootstrap
+is valid, and discuss an algorithm for its practical implementation.
+    Finally, we use the proposed methods to estimate the actual and counterfactual growth
+incidence curves for the US and Brazil, during the 1995-2007 period. The results document
+important heterogeneity across the quantiles of the income distribution in both growth pro-
+cesses. Neither country had a constant income distribution over that period, and neither
+growth process was distribution-neutral. Growth in average wages was disappointing in
+both countries, particularly in Brazil. But these averages hide very diﬀerent distributional
+
+
+                                             32
+pictures: Wage stagnation was observed in the US for the bottom 80% of the distribution,
+while the top ﬁfth, and particularly the top tenth, grew much more rapidly. Conversely,
+wages rose rapidly below the median in Brazil, and actually fell for the top 25% or so of the
+distribution. As a result, inequality fell substantially in Brazil and rose in the United States.
+In both cases, changes in economic structure, rather than in the observed make-up of the
+labor force, were responsible for changing inequality.
+
+
+
+
+                                               33
+References
+Abadie, A., J. Angrist, and G. Imbens (2002): “Instrumental Variables Estimates of
+  the Eﬀect of Subsidized Training on the Quantiles of Trainee Earnings,” Econometrica,
+  70, 91–117.
+
+Angrist, J., V. Chernozhukov, and I. Fernandez-Val (2006): “Quantile Regression
+  under Misspeciﬁcation, with an Application to the U.S. Wage Structure,” Econometrica,
+  74, 539–563.
+
+Barros, R., M. de Carvalho, S. Franco, and R. Mendonca (2010): “Markets,
+  the State, and the Dynamics of Inequality in Brazil,” in Declining Inequality in Latin
+  America: A Decade of Progress?, ed. by L. F. Lopez-Calva, and N. Lustig. Washington,
+  DC: Brookings Institution Press.
+
+Belloni, A., V. Chernozhukov, and I. Fernandez-Val (2011): “Conditional Quantile
+  Processes Based on Series or Many Regressors,” Working Paper, Boston University.
+
+Besley, T., and L. J. Cord (2007): Delivering on the Promise of Pro-Poor Growth.
+  World Bank and Palgrave MacMillan, Washington DC.
+
+Bitler, M. P., J. B. Gelbach, and H. W. Hoynes (2006): “What Mean Impacts Miss:
+  Distributional Eﬀects of Welfare Reform Experiments,” American Economic Review, 96,
+  988–1012.
+
+Bourguignon, F., F. H. G. Ferreira, and P. G. Leite (2008): “Beyond Oaxaca-
+  Blinder: Accounting for Diﬀerences in Household Income Distributions,” Journal of Eco-
+  nomic Inequality, 6, 117–148.
+
+Bourguignon, F., F. H. G. Ferreira, and N. Lustig (2005): The Microeconomics of
+  Income Distribution Dynamics in East Asia and Latin America. World Bank and Oxford
+  University Press, Washington, DC.
+
+Cattaneo, M. (2010): “Eﬃcient Semiparametric Estimation of Multi-Valued Treatment
+  Eﬀects under Ignorability,” Journal of Econometrics, 155, 138–154.
+
+Chen, X., O. Linton, and I. Van Keilegom (2003): “Estimation of Semiparametric
+  Models When the Criterion Function is not Smooth,” Econometrica, 71, 1591–1608.
+
+
+                                           34
+Chernozhukov, V., and I. Fernandez-Val (2005): “Subsampling Inference on Quantile
+  Regression Processes,” Sankhya, 67, 253–276.
+
+Chernozhukov, V., and C. Hansen (2005): “An IV Model of Quantile Treatment Ef-
+  fects,” Econometrica, 73, 245–261.
+
+Dehejia, R., and S. Wahba (1999): “Causal Eﬀects in Nonexperimental Studies: Reval-
+  uating the Evaluation of Training Programs,” Journal of the American Statistical Associ-
+  ation, 94, 1053–1062.
+
+Dinardo, J., N. M. Fortin, and T. Lemieux (1996): “Labor Market Institutions and
+  the Distribution of Wages, 1973-1992: A Semiparametric Approach,” Econometrica, 64,
+  1001–1044.
+
+Doksum, K. (1974): “Empirical Probability Plots and Statistical Inference for Nonlinear
+  Models in the Two-Sample Case,” The Annals of Statistics, 2, 267–277.
+
+Donald, S. G., D. A. Green, and H. J. Paarsch (2000): “Diﬀerences in Wage Distri-
+  butions between Canada and the United States: An Application of a Flexible Estimator
+  of Distribution Functions in the Presence of Covariates,” Review of Economic Studies, 67,
+  609–633.
+
+Donald, S. G., and Y.-C. Hsu (2014): “Estimation and Inference for Distribution Func-
+  tions and Quantile Functions in Treatment Eﬀect Models,” Journal of Econometrics, 178,
+  383–397.
+
+Essama-Nssah, B., S. Paul, and L. Bassole (2013): “Accounting for Heterogene-
+  ity in Growth Incidence in Cameroon Using Recentered Inﬂuence Function Regression,”
+  ECINEQ Working Paper no. 289.
+
+Fan, Y., and S. S. Park (2010): “Sharp Bounds on the Distribution of the Treatment
+  Eﬀects and Their Statistical Inference,” Econometric Theory, 26, 931–951.
+
+Ferreira, F. H. G. (2012): “Distributions in Motion: Economic Growth, Inequality, and
+  Poverty Dynamics,” in Oxford Handbook of the Economics of Poverty, ed. by P. Jeﬀerson.
+  Oxford: Oxford University Press.
+
+
+
+
+                                            35
+Ferreira, F. H. G., S. Firpo, and J. Messina (2016): “Understanding Recent Earnings
+  Inequality Dynamics in Brazil,” in New Order and Progress: Development and Democracy
+  in Brazil, ed. by B. R. Schneider. New York: Oxford University Press.
+
+Firpo, S. (2007): “Eﬃcient Semiparametric Estimation of Quantile Treatment Eﬀects,”
+  Econometrica, 75, 259–276.
+
+Firpo, S., and C. Pinto (2015): “Identiﬁcation and Estimation of Distributional Impacts
+  of Interventions Using Changes in Inequality Measures,” Journal of Applied Econometrics,
+  31, 457–486.
+
+Flores, C. A. (2007): “Estimation of Dose-Response Functions and Optimal Doses with
+  a Continuous Treatment,” mimeo.
+
+Galvao, A. F., and L. Wang (2015): “Uniformly Semiparametric Eﬃcient Estimation
+  of Treatment Eﬀects with a Continuous Treatment,” Journal of the American Statistical
+  Association, 110, 1528–1542.
+
+Gutenbrunner, C., and J. Jureckova (1992): “Regression Rank Scores and Regression
+  Quantiles,” The Annals of Statistics, 20, 305–330.
+
+Heckman, J., H. Ichimura, J. Smith, and P. Todd (1998): “Characterizing Selection
+  Bias Using Experimental Data,” Econometrica, 66, 1017–1098.
+
+Hirano, K., G. Imbens, and G. Ridder (2003): “Eﬃcient Estimation of Average Treat-
+  ment Eﬀects Using the Estimated Propensity Score,” Econometrica, 71, 1161–1189.
+
+Hirano, K., and G. W. Imbens (2004): “The Propensity Score with Continuous Treat-
+  ment,” in Applied Bayesian Modeling and Causal Inference from Incomplete-Data Per-
+  spectives, ed. by A. Gelman, and X.-L. Meng. Wiley.
+
+Juhn, C., K. M. Murphy, and B. Pierce (1993): “Wage Inequality and the Rise in
+  Returns to Skill,” Journal of Political Economy, 101, 410–442.
+
+Koenker, R., and G. W. Bassett (1978): “Regression Quantiles,” Econometrica, 46,
+  33–49.
+
+Koenker, R., S. Leorato, and F. Peracchi (2013): “Distributional vs. Quantile Re-
+  gression,” CEIS Tor Vergata, Research Paper Series.
+
+                                            36
+Koenker, R., and J. A. F. Machado (1999): “Godness of Fit and Related Inference
+  Processes for Quantile Regression,” Journal of the American Statistical Association, 94,
+  1296–1310.
+
+Koenker, R., and Z. Xiao (2002): “Inference on the Quantile Regression Process,” Econo-
+  metrica, 70, 1583–1612.
+
+Kopczuk, W., E. Saez, and J. Song (2010): “Earnings Inequality and Mobility in the
+  United States: Evidence from Social Security Data Since 1937,” Quarterly Journal of
+  Economics, 125, 91–128.
+
+Kosorok, M. (2008): Introduction to Empirical Processes and Semiparametric Inference.
+  Springer, New York, NY.
+
+Lehmann, E. L. (1974): Nonparametrics: Statistical Methods Based on Ranks. Holden-Day,
+  San Francisco, CA.
+
+Linton, O., E. Maasoumi, and Y.-J. Whang (2005): “Consistent Testing for Stochastic
+  Dominance under General Sampling Schemes,” Review of Economic Studies, 72, 735–765.
+
+Mishel, L., J. Bivens, E. Gould, and H. Shierholz (2012): The State of Working
+  America. 12th Edition. An Economic Policy Institute book. Cornell University Press,
+  Ithaca, N.Y.
+
+Newey, W. K. (1997): “Convergence Rates and Asymptotic Normality for Series Estima-
+  tors,” Journal of Econometrics, 79, 147–168.
+
+Qu, Z., and J. Yoon (2015): “Nonparametric Estimation and Inference on Conditional
+  Quantile Processes,” Journal of Econometrics, 185, 1–19.
+
+Ravallion, M., and S. Chen (2003): “Measuring Pro-poor Growth,” Economics Letters,
+  78, 93–99.
+
+Rubin, D. (1977): “Assignment to Treatment Group on the Basis of a Covariate,” Journal
+  of Educational Statistics, 2, 1–28.
+
+van der Vaart, A. (2002): “Inﬁnite-dimensional Z-Estimators,” in Lectures on Probability
+  Theory and Statistics, ed. by P. Bernard. Berlin, Springer Verlag.
+
+
+
+                                            37
+van der Vaart, A., and J. A. Wellner (1996): Weak Convergence and Empirical
+ Processes. Springer-Verlag Press, New York, New York.
+
+       (2007): “Empirical Processes Indexed by Estimated Functions,” IMS Lecture Notes
+ Monograph Series, Asymptotics: Particles, Processes and Inverse Problems, 55, 234–252.
+
+
+
+
+                                         38
+6     Appendix
+
+6.1    Proofs of the main results
+This appendix collects the proofs of the results given in the text. To demonstrate Theorems
+1, 2, and 3 below we make use of Lemmas 4, 5, and 6, respectively, given in the Online
+Supplemental Appendix. These lemmas establish, respectively, uniform consistency, weak
+convergence, and validity of the bootstrap for generic Z-estimators with possibly non-smooth
+functions and a nuisance parameter, when both the parameter of interest and the nuisance
+parameter are possibly inﬁnitely dimensional. The results allow for the case of proﬁled
+nonparametric estimator, i.e., it depends on the parameters.
+    For clarity, the demonstrations make use of the superscript zero to denote the true pa-
+rameters.
+
+
+Proof of Theorem 1. The general result for consistency of Z-estimator is given in Lemma
+4 in the Online Supplemental Appendix. To prove the result we apply the lemma to
+our continuous treatment model with θ0 = q 0 (·), h0 = w0 (·), Z(θ, h)(τ ) = Eψq,w,τ , and
+Z(θ, h)(τ ) = Eψq,w,τ , where ψq,w,τ = m(y, q (τ ); τ )w(x) = (τ − 1{Y < q (τ )})w(x). Notice
+that w(T, x), and since T = {0, 1} we write w(x) = w(T, x) in the demonstrations.
+                                ∞
+    In this case, Θ = L =           (T ) and || · ||Θ = || · ||L = | · |∞ , while H = Π, a function
+class with domain {0, 1} × X , and || · ||H = || · ||Π = supx∈X | · | = | · |∞ . For any δ > 0,
+Πδ = {w ∈ Π : |w − w0 |∞ < δ }.
+    To establish the result we verify the conditions of Lemma 4. Thus, under QC.I–QC.III
+we can check the general conditions C.1–C.5 in the Supplemental Appendix. Condition C.1
+is satisﬁed by the computational properties of quantile regression estimator of Theorem 3.3
+of Koenker and Bassett (1978) and conditions QC.II and QC.III such that we have
+
+                                                                       wt (Xi )
+                   |E[(τ − 1{Y < qt (·)})w(X )]| ≤ const · sup
+                                                                i≤ n       n
+                                                         0 (x)|| + o (1)
+                                                      ||wt
+                             ||wt (X )||Π                       Π   p
+                  ≤const ·                  = const ·                    = Op∗ (1/n).
+                                   n                            n
+
+ Condition C.2 holds by condition QC.I.
+                                                                                       0
+   We now show that condition C.3, the continuity of E[m(Y ; qt (τ ))wt (X )] at wt      uni-
+                      ∞                                    0
+formly over qt (τ ) ∈   (T ), is satisﬁed. For any ||wt − wt ||∞ ≤ δ , which is equivalent to
+
+
+
+
+                                                    39
+                          0
+supτ ∈T supx∈X |wt (x) − wt (x)| ≤ δ , we have
+
+                                                                            0
+                 sup sup |E[m(Y, qt (τ ); τ )wt (X )] − E[m(Y, qt (τ ); τ )wt (X )]|
+                 τ ∈T x∈X
+                                                         0
+               = sup sup |E[m(Y, qt (τ ); τ )(wt (X ) − wt (X ))]| ≤ sup |E[m(Y, qt (τ ); τ )]|δ.
+                 τ ∈T x∈X                                              τ ∈T
+
+
+Therefore, condition C.3 is satisﬁed because τ − 1{y < qt (τ )} is a bounded function.
+   Note that the functional class {ψq,w,τ = (τ − 1{Y < q (τ )})w(X ), q ∈ Θ, w ∈ Π, τ ∈ T }
+is formed as (T − F )w(X ), where F = 1{Y < q (τ )} is a VC subgraph class and hence
+a bounded Donsker class. Hence T − F is also bounded Donsker, and using assumption
+QC.II, (T −F )w(X ) is therefore Donsker with a square integrable envelope 2 maxt |w(X )|t ,
+by Theorem 2.10.6 in Van der Vaart and Wellner (1996). The stochastic equicontinuity then
+is a part of being Donsker, which implies condition C5S which in turn implies C.5.
+   Hence, all the conditions of Lemma 4 are satisﬁed.
+
+
+
+Proof of Theorem 2. To establish the result we apply Lemma 5 in the Online Supplemental
+Appendix and we verify its conditions.
+  Condition G.1 was veriﬁed in the proof of Theorem 1. For condition G.2, note that
+
+                         0                       0       0            0          0             0
+  |E[(τ − 1{Y ≤ qt (·)})wt (X )] − E[(τ − 1{Y ≤ qt (·)})wt (X )] + E[wt (X )fY (qt )(qt (·) − qt (·))]|∞
+            0                             0            0       0
+=|E[{1{Y ≤ qt (·)} − 1{Y ≤ qt (·)} + fY (qt )(q (·) − qt (·))}wt (X )]|∞
+             0                             0             0
+  |E[{1{Y ≤ qt (·)} − 1{Y ≤ qt (·)} + fY (qt )(qt (·) − qt (·))}]|∞ Mw
+       0                           0             0                          0
+=|FY (qt (·)) − FY (qt (·)) + fY (qt )(qt (·) − qt (·))|∞ Mw = o(|qt (·) − qt (·)|∞ ).
+
+
+
+                                                                          0
+   Now we verify condition G.3. To ﬁnd the pathwise derivative of Z(qt , wt ) with respect
+                                                                      0            0
+                                                       ¯t such that {wt
+to wt , we conduct the following calculations. For any w                    ¯ t − wt
+                                                                        + α(w        ):α∈
+[0, 1]} ⊂ Π,
+
+                          0             0                       0
+         E[m(Y, qt ; τ )(wt      ¯ t − wt
+                            + α (w        ))] − E[m(Y, qt ; τ )wt ]                          0
+                                                                                      ¯ t − wt
+                                                                    = E[m(Y, qt ; τ )(w        )]
+                                     α
+                                         0                                                  0         0
+                                  ¯ t − wt
+and has the limit E[m(Y, qt ; τ )(w        )] as α → 0.                 Therefore Z2 (qt , wt )[wt − wt ] =
+                      0                             0
+E[m(Y, qt ; τ )(wt − wt )] in all directions [wt − wt ] ∈ Π. Condition G.3.1 is satisﬁed by
+
+
+
+
+                                                       40
+noting that
+
+                      0                                                             0
+   |E[m(Y, qt (·), ·)wt (X )] − E[m(Y, qt (·), ·)wt (X )] − E[m(Y, qt (·); ·)(wt − wt )(X )]|∞ = 0.
+
+And condition G.3.2 is veriﬁed by
+
+                                           0                  0               0
+                  |E[m(Y, qt (·); ·)(wt − wt )(X )] − E[m(Y, qt (·); ·)(wt − wt )(X )]|∞
+                                            0               0
+                =|E[m(Y, qt (·); ·) − m(Y, qt (·); ·)(wt − wt )(X )]|∞
+                                               0
+                ≤|E[m(Y, qt (·); ·)] − E[m(Y, qt (·); ·)]|∞ o(1) = δn o(1),
+
+
+where the last equality follows because the distribution function of Y is continuous.
+   Condition G.4 is automatically satisﬁed by QG.III. Now we check condition G.5. Note
+                      ∞
+that {ψq,w,τ : q ∈    δ (T   ), w ∈ Π, τ ∈ T } is Donsker. This follows because by QG.I the
+bracketing number of Π by Corollary 2.7.4 in van der Vaart and Wellner (1996) is ﬁnite,
+thus Π is Donsker with a constant envelope. The class F is Donsker by exploiting the
+monotonicity and boundedness of indicator function and bounded density condition assumed
+in QC.I. Finally, the result follows because the class is formed by taking products and sums
+of bounded Donsker classes F , Π, and T , which is Lipschitz over (F × Π × T ). Hence by
+Theorem 2.10.6 in van der Vaart and Wellner (1996) {ψq,w,τ } is Donsker and we have that
+G.5’ is satisﬁed by Lemma 3.3.5 of van der Vaart and Wellner (1996). Therefore, we obtain
+condition G.5 by condition G.1 and inequality (4) in Lemma 5 in the Online Supplemental
+Appendix.
+   Finally, condition G.6 holds by QG.II. Hence, all the conditions of Theorem 2 are
+satisﬁed.
+
+
+
+Proof of Corollary 1. The proof follows directly from the result in Theorem 2, which estab-
+lish Donsker properties, and therefore tightness, for each element of the vector. By noticing
+that marginal tightness implies joint tightness, and from joint ﬁnite-dimensional asymptotic
+normality, the result follows.
+
+
+
+
+Proof of Lemma 1. The proof follows from the result in Theorem 2 and Corollary 1 and
+                                                                             √
+the functional delta method. Corollary 1 implies the weak convergence result, n(Q(τ ) −
+
+
+                                                   41
+Q0 (τ ))     G(τ ). From the assumptions and the diﬀerentiability condition in QG.IV of
+h(qt (τ )) at qt Theorem 3.9.5 in van der Vaart and Wellner (1996) applies and the result
+follows.
+
+
+
+Proof of Corollary 2. The proof follows directly from the result in Theorem 2, Lemma 1,
+and the Hadamard diﬀerentiable of GIC and GIC ∗ .
+
+
+
+Proof of Lemma 2. The assertion holds by Corollary 1, Lemma 1, and the continuous
+mapping theorem.
+
+
+
+Proof of Corollary 3. The assertion holds by Lemma 2 and the continuous mapping the-
+orem.
+
+
+
+Proof of Lemma 3. The assertion holds by Corollary 1, Lemma 1, and the continuous
+mapping theorem.
+
+
+
+Proof of Corollary 4. The assertion holds by Lemma 3 and the continuous mapping the-
+orem.
+
+
+
+Proof of Theorem 3. This theorem is a restatement of the Lemma 3 in the Supplemental
+Appendix.
+
+
+6.2        Semiparametric eﬃciency of the two-step estimator
+In this section, we establish the uniform semiparametric eﬃciency of the two-step estimator.
+We ﬁrst calculate the eﬃcient inﬂuence function of the parameter qt (τ ) in the following
+semiparametric model
+
+                                                 ∞
+                              F = {Fq,w : q ∈        (T ), w ∈ Π},
+
+
+
+                                            42
+where Fq0 ,w0 is the distribution function of the observed data. Then, we provide suﬃcient
+conditions under which the proposed two-step estimator is uniformly semiparametric eﬃ-
+cient.
+                                              ∂ E[m(Y (t),q 0 (τ );τ )]
+Proposition 1. Suppose Γ0 (τ ) :=                    ∂β (τ )
+                                                                          exists for t = {0, 1}. For each τ ∈ T , the
+eﬃcient inﬂuence function of the parameter q (τ ) is
+
+                          Ψq (y, t, x, τ ) = −Γ− 1                   0       0 0
+                                               0 (t, τ )ψ (y, x, t, q (τ ), w , e ),
+
+
+where ψ (y, x, t, q 0 (τ ), w0 , e0 ) = m(y, q 0 (τ ); τ )w0 (x)−e0 (x, q 0 (τ ))(w0 (x)−1) with e0 (x, q (τ )) =
+E[m(Y, q 0 (τ ); τ )|X = x].
+
+Proof. The proof is given in Theorem 3 of Firpo (2007).
+
+     Based on the eﬃcient inﬂuence function of q (τ ), we show that the two-step estimator is
+uniformly semiparametric eﬃcient provided the following condition
+
+
+
+     √                                   √
+E.       nE[m(Y, q 0 (τ ); τ )w(X )] =       nE[ψ (Y, X , t, q 0 (τ ), w0 , e0 )] + op (1).
+
+     Condition E is critical to the eﬃciency of the two-step estimator, and it is similar to its
+corresponding condition for the multi-valued model is condition (4.2) of Cattaneo (2010).
+
+Theorem 4. Assume that the conditions of Theorem 2 in the main text and condition E
+hold. Then the two-step estimator is uniformly semiparametric eﬃcient.
+
+     This result guarantees that the two-step estimator is uniformly semiparametric eﬃcient.
+Hypothesis testings based on this estimator are expected to be optimal.
+
+                                                             √                       0    0 0
+Proof of Theorem 4. We ﬁrst verify that                          nE[ψ (Yi , Xi , t, qt , wt , e )] converges weakly in
+ ∞
+     (T ). Proceeding in the exact same way as in the proof of Theorem 2, conditions QC.I and
+                                                                                  0    0 0
+QG.I imply G.5 (in the Online Supplemental Appendix), and hence ψt = ψ (y, x, t, qt , wt ,e )
+is Donsker, which in turn implies the weak convergence.
+     The uniform semiparametric eﬃciency follows from the weak convergence above and the
+pointwise semiparametric eﬃciency (Theorem 3 in Firpo (2007)) by Theorem 18.9 of Kosorok
+(2008).
+
+
+                                                              43
+   Now we verify that the formula in condition QG.II equals the left hand-side of condition
+E., which implies that the inﬂuence function of the two-step estimator is eﬃcient. Recall
+that m(Y (t), qt (τ ); τ ) = τ − 1{Y (t) < qt (τ )}. To this end, we begin with the formula in
+condition QG.II.
+
+                               √                  0                   0
+                                   nE[(τ − 1{Y < qt (τ )})(wt (X ) − wt (X ))]|w=w
+                             √         0                      0
+                            = n(Em(Y, qt (τ ); τ )(wt (X ) − wt (X ))|w=w
+                             √         0                      0
+                            = n(Em(Y, qt (τ ); τ )(wt (X ) − wt (X ))
+                             √         0
+                            = n(Em(Y, qt (τ ); τ )wt (X ),
+
+where the ﬁrst equality uses the deﬁnition of m(·), and the second equality follows by con-
+dition G5’ which in turn was veriﬁed in the proof of Theorem 2.
+
+
+6.3    Estimation of weights w(X )
+The estimation of the nuisance parameter in the ﬁrst step is very important for practical
+implementation of the proposed methods. We have been assuming that the estimator wt of
+                        0
+the nuisance parameter wt satisﬁes various conditions (QC.III and QG.I– QG.III). In this
+section we discuss the estimation of the weights for QTE, QTT, and QTU.
+                                       T                       1−T                      T                      1−T p(X )
+   Recall that w1 (X ) =             p(X )
+                                           ,   w0 (X ) =      1−p(X )
+                                                                      ,   wA1 (X ) =    p
+                                                                                          ,   w A0 (X ) =       p 1−p(X )
+                                                                                                                          ,
+                   T 1−p(X )                            1−T
+wB 1 (X ) =       1−p p(X )
+                                and wA0 (X ) =          1−p
+                                                            .      The estimators are deﬁned by the plug-in
+                                             T                      1−T                     T                  1−T p(X )
+method as following: w1 (X ) =             p(X )
+                                                 ,   w0 (X ) =     1−p(X )
+                                                                           ,   wA1 (X ) =   p
+                                                                                              ,   wA0 (X ) =    p 1−p(X )
+                                                                                                                          ,
+               T 1−p(X )                              1−T
+wB 1 (X ) =   1−p p(X )
+                               and wA0 (X ) =         1−p
+                                                          .   Therefore, the important pieces for estimation
+are the conditional probability of being treated, p(X ) = P r[T = 1|X = x], and the un-
+conditional p = P r[T = 1]. The latter can be estimated by its sample counterpart, that
+          n
+                  Ti
+is, p =   i=1
+              n
+                       . For the former, we follow Firpo (2007). Following the propensity score
+estimation strategy employed by HIR, we use a logistic power series approximation, i.e., a
+series of functions of X is used to approximate the log-odds ratio of the propensity score.
+The log-odds ratio of p(x) is equal to log(p(x)/(1 − p(x))). These functions are chosen to
+be polynomials of x and the coeﬃcients that correspond to those functions are estimated by
+a pseudo-maximum likelihood method.
+   Start by deﬁning HK (x) = [HK, j (x)] (j = 1, ..., K ), a vector of length K of polynomial
+functions of x ∈ X satisfying the following properties: (i) HK :                                   X → RK ; and (ii)
+HK, 1 (x) = 1. If we want HK (x) to include polynomials of x up to the order n, then it is
+
+
+                                                              44
+suﬃcient to choose K such that K ≥ (n + 1)r . In what follows, we will assume that K is a
+function of the sample size N and grows without bounds as n grows without bounds, that
+is, K = K (n) → ∞ as n → ∞.
+   Next, the propensity score is estimated. Let p(x) = L(HK (x) π ), where L : R →
+R, L(z ) = (1 + exp(−z ))−1 ; and
+
+                          n
+                      1
+        π = arg max             (Ti log(L(HK (Xi ) π )) + (1 − Ti ) log(1 − L(HK (Xi ) π ))) .
+                 w    n   i=1
+
+
+   The asymptotic properties of the logistic power series as discussed in Hirano, Imbens,
+and Ridder (2003) and Newey (1997). The required conditions (QC.III and QG.I–QG.III)
+are satisﬁed when using the logistic power series estimator. QG.I follows directly from the
+asymptotic properties of estimator. QG.II is satisﬁed by exploiting the monotonicity and
+boundedness of indicator function and bounded density condition assumed in QC.I. Finally,
+QC.III and QG.III follow from the mean value theorem.
+
+
+
+
+                                                   45
+7        Supplemental Appendix (Online)
+This supplement contain two parts. First, it presents results for the asymptotic theory for
+the generic Z-estimator. Second, we provide Monte Carlo simulations to evaluate the ﬁnite
+sample performance of the proposed methods. The simulations provide evidence that the
+methods perform well in ﬁnite samples. The empirical size of the test approximates the
+nominal one, and the tests have large empirical power.
+
+
+7.1      Asymptotic Theory
+In this appendix, we establish the asymptotic properties of a generic Z-estimator. More
+speciﬁcally, we describe the model, the regularity conditions, and state the asymptotic re-
+sults.
+    In Lemmas 4 and 5 below, we provide veriﬁable suﬃcient conditions for general consis-
+tency and weak convergence of generic moment restriction estimators (Z-estimators) with
+possibly non-smooth functions and a nuisance parameter, when both the parameter of in-
+terest and the nuisance parameter are possibly inﬁnite dimensional. The results allow for
+the case where the nonparametric estimator is proﬁled, i.e., is allowed to depend on the
+parameters. Lemma 6 establishes the validity of the bootstrap. These general results are
+used to prove the asymptotic properties of the two-step estimator discussed in the main text.
+In this general setting, the data need not be independent and identically distributed (i.i.d.).
+These approaches and results are similar to those in van der Vaart (2002) and van der Vaart
+and Wellner (2007). While these later works provide high level conditions, we describe sim-
+pler veriﬁable conditions for Z-estimators. The results for the general theory presented here
+extend those of Chen, Linton, and Van Keilegom (2003) in that the parameter of interest
+is a Banach valued quantity instead of a Euclidean vector. Moreover, the results extend
+Theorem 3.3.1 of van der Vaart and Wellner (1996) in that a possibly inﬁnite dimensional
+nuisance parameter needs to be estimated in the ﬁrst step.
+    Let Θ and L denote Banach spaces, and H a norm space, with norms || · ||Θ , || · ||H ,
+and || · ||L , respectively. Let Zn : Θ × H → L, Z : Θ × H → L be random maps and a
+deterministic map, respectively. We suppress the dependence of Z on n for simplicity. The
+Z-estimator θ is deﬁned as the approximate root of
+
+                                         Z(θ, h) = 0,
+
+
+
+                                              46
+where h is a ﬁrst step estimator of a possibly inﬁnite dimensional nuisance parameter.
+
+
+7.2    Consistency
+We ﬁrst derive a general consistency result for a Z-estimator in a Banach space. To obtain
+the consistency of the generic Z-estimator, we impose the following conditions.
+
+C.1 ||Z(θ, h)||L = op∗ (1).
+
+C.2 ||Z (θn , h0 )||L → 0 implies θn → θ0 for any sequences θn ∈ Θ.
+
+C.3 Uniformly in θ ∈ Θ, Z (θ, h) is continuous at h0 .
+
+C.4 ||h − h0 ||H = op∗ (1).
+
+C.5 For all sequences δn ↓ 0,
+
+                                                 ||Z(θ, h) − Z (θ, h)||L
+                               sup                                            = op∗ (1).
+                        θ∈Θ,||h−h0 ||H ≤δn   1 + ||Z(θ, h)||L + ||Z (θ, h)||L
+
+
+   Condition C.1 requires that θ solves the estimating equation ||Z(θ, h)||L = 0 only asymp-
+totically. Condition C.2 is an identiﬁcation of the parameter. Condition C.3 is a smooth
+assumption of Z in h only at h0 . Condition C.4 requires that the nuisance parameter is
+consistently estimated. Condition C.5 is a high level assumption and can be stated in more
+primitive conditions for speciﬁc cases. Further, condition C.5 is implied by the following
+uniform convergence condition of Z to Z.
+
+C5S For any sequences δn ↓ 0,
+
+                                     sup           ||Z(θ, h) − Z (θ, h)||L = op∗ (1).
+                              θ∈Θ,||h−h0 ||H ≤δn
+
+
+
+   This set of conditions are similar to conditions of Theorem 1 of Chen, Linton, and Van
+Keilegom (2003).
+   The following lemma summarizes the consistency of the generic Z-estimator.
+
+Lemma 4. Suppose that θ0 ∈ Θ satisﬁes Z(θ0 , h0 ) = 0 with h0 ∈ H and that conditions
+C.1–C.5 hold. Then ||θ − θ0 ||Θ = op∗ (1).
+
+
+                                                       47
+Proof. By condition C.2, it suﬃces to show that ||Z(θ, h0 )||L = op∗ (1). Using the triangle
+inequality,
+
+           ||Z(θ, h0 )||L ≤ ||Z(θ, h0 ) − Z(θ, h)||L + ||Z(θ, h) − Z(θ, h)||L + ||Z(θ, h)||L .
+
+   By conditions C.3 and C.4, ||Z(θ, h0 )−Z(θ, h)||L = op∗ (1). By condition C.1, ||Z(θ, h)||L =
+op∗ (1). In addition,
+
+              ||Z(θ, h) − Z(θ, h)||L = op∗ (1) + op∗ (||Z(θ, h)||L ) + op∗ (||Z(θ, h)||L )
+                                      = op∗ (1) + op∗ (1) + op∗ (||Z(θ, h0 )||L ) + op∗ (1),
+
+where the ﬁrst equality follows by condition C.5 and the second equality is a result of
+conditions C.1 and C.3. Therefore, inequality implies ||Z(θ, h0 )||L ≤ op∗ (1) and hence the
+result.
+
+
+7.3       Weak Convergence
+Now we provide a general result of weak convergence for the Z-estimator. For the proof
+of weak convergence of the Z-estimator, consistency is assumed without loss of generality.
+Therefore, the parameter space is replaced by Θδ × Hδ where Θδ := {θ ∈ Θ : ||θ − θ0 ||Θ < δ }
+as in Chen, Linton, and Van Keilegom (2003) and Hδ := {h ∈ H : ||h − h0 ||H < δ }.
+   Because the parameter spaces are a Banach and a normed space, we need notions of
+derivatives for maps from a Banach or a normed space to a Banach space. Let Θ and L
+                                              echet diﬀerentiability of a map φ : Θ → L
+denote Banach spaces, and H a normed space. Fr´
+at θ ∈ Θ means that there exists a continuous, linear map φθ : Θ → L with
+
+                                 ||φ(θ + hn ) − φ(θ) − φθ (hn )||
+                                                                  →0
+                                              ||hn ||
+
+for all sequences {hn } ⊂ Θ with ||hn || → 0 and θ + hn ∈ Θ for all n ≥ 1 ; see, e.g., p. 26 of
+Kosorok (2008). Pathwise derivative of a map ϕ : H → L at h ∈ H in the direction [h    ¯ − h] is
+
+                                                        ¯ − h)) − ϕ(h)
+                                                 ϕ(h + (h
+                                 ¯ − h] = lim
+                             ϕh [h
+                                            →0
+
+
+           ¯ − h) :
+with {h + (h             ∈ [0, 1]} ⊂ H, provided that the limit exists. To obtain the weak limit,
+we impose the following suﬃcient conditions.
+
+                                                   48
+G.1 ||Z(θ, h)||L = op∗ (n−1/2 ).
+
+G.2 The map θ → Z(θ, h0 ) is Fr´
+                               echet diﬀerentiable at θ0 with a continuously invertible
+      derivative Z1 (θ0 , h0 ).
+
+G.3 For all θ ∈ Θδ the pathwise derivative Z2 (θ, h0 )[h − h0 ] of Z (θ, h0 ) exists in all directions
+      [h − h0 ] ∈ H. Moreover, for all (θ, h) ∈ Θδn × Hδn with a positive sequence δn = o(1):
+
+      G.3.1 ||Z (θ, h0 ) − Z (θ, h) − Z2 (θ, h0 )[h − h0 ]||L ≤ c||h − h0 ||2
+                                                                            H for a constant c ≥ 0.
+
+      G.3.2 ||Z2 (θ, h0 )[h − h0 ] − Z2 (θ0 , h0 )[h − h0 ]||L ≤ o(1)δn .
+
+G.4 The estimator h ∈ H with probability tending to one; and ||h − h0 ||H = op∗ (n−1/4 ) .
+
+G.5 For any δn ↓ 0,
+                                                √                  √
+                                              || n(Z − Z )(θ, h) − n(Z − Z )(θ0 , h0 )||L
+                          sup                        √               √                    = op∗ (1).
+              ||θ−θ0 ||≤δn ,||h−h0 ||H ≤δn        1 + n||Z(θ, h)||L + n||Z (θ, h)||L
+
+      √
+G.6    n(Z2 (θ0 , h0 )[h − h0 ] + (Z − Z )(θ0 , h0 )) converges weakly to a tight random element G
+      in L.
+
+   Condition G.1 requires θ to solve the estimating equation only asymptotically. Condi-
+tions G.2 and G.3 are smoothness conditions for Z. Condition G.4 is the same as condition
+(2.4) of Chen, Linton, and Van Keilegom (2003). Conditions G.5 and G.6 are high level
+assumptions, and more primitive conditions are provided for more speciﬁc cases. Moreover,
+condition G.5 is implied by
+
+G.5’ For any δn ↓ 0,
+
+                                                √                 √
+                          sup                 || n(Z − Z )(θ, h) − n(Z − Z )(θ0 , h0 )||L = op∗ (1).
+               ||θ−θ0 ||≤δn ,||h−h0 ||H ≤δn
+
+
+
+   Now we provide a general result for Z-estimators.
+
+Lemma 5. Suppose that θ0 ∈ Θδ satisﬁes Z(θ0 , h0 ) = 0, that θ = θ0 + op∗ (1), and that
+conditions G.1–G.6 hold. Then,
+
+                                         √                   −1
+                                              n(θ − θ0 )    Z1  (θ0 , h0 )G.
+
+
+                                                           49
+                                                                             √
+Proof. The proof is divided in two steps. First, we establish                    n-consistency. Second, we
+establish the weak convergence.
+             √
+    Step 1: n-consistency
+                                                       √
+   We start the proof by showing that θ is                 n-consistent for θ0 in Θ. By deﬁnition, the
+  echet diﬀerentiability of Z(θ, h0 ) implies the existence of a continuous linear map Z1 (θ0 , f0 )
+Fr´
+such that
+
+                         ||Z(θ, f0 ) − Z(θ0 , f0 ) − Z1 (θ0 , f0 )(θ − θ0 )||L
+                                                                               = o(1).
+                                            ||θ − θ0 ||Θ
+
+By the triangle inequality, it follows
+
+                 ||Z1 (θ0 , h0 )(θ − θ0 )||L ≤ ||Z(θ, h0 ) − Z(θ0 , h0 )||L + o(||θ − θ0 ||Θ ).
+
+Since the derivative Z1 (θ0 , h0 ) is continuously invertible by condition G.2, there exists a
+positive constant c such that ||Z1 (θ0 , h0 )(θ1 − θ2 )||L ≥ c||θ1 − θ2 ||Θ for every θ1 and θ2 ∈ Θδ .
+Therefore, it follows
+
+                           (c − o(1))||θ − θ0 ||Θ ≤ ||Z(θ, h0 ) − Z(θ0 , h0 )||L ,                          (13)
+
+and
+
+                  (c − op∗ (1))||θ − θ0 ||Θ ≤ ||Z(θ, h0 ) − Z(θ0 , h0 )||L = ||Z(θ, h0 )||L ,               (14)
+
+with probability tending to one. By the triangle inequality and conditions G.1 and G.6,
+the right hand side of the previous inequality is bounded by
+
+      ||Z(θ, h0 ) − Z(θ, h)||L + ||Z(θ, h) − Z(θ, h) + Z(θ0 , h0 ) − Z(θ0 , h0 )||L + Op (n−1/2 ).          (15)
+
+For the ﬁrst term, we have that
+
+||Z(θ, h0 ) − Z(θ, h)||L ≤||Z(θ, h0 ) − Z(θ, h) − Z2 (θ, h0 )[h − h0 ]||L
+                              + ||Z2 (θ, h0 )[h − h0 ] − Z2 (θ0 , h0 )[h − h0 ]||L + ||Z2 (θ0 , h0 )[h − h0 ]||L
+                                              ˆ − θ0 ||Θ + Op∗ n−1/2
+                           ≤op∗ n−1/2 + op∗ ||θ
+
+                           ≤||Z(θ, h0 )||L × op∗ (1) + Op∗ n−1/2 ,
+
+
+                                                      50
+where the ﬁrst inequality follows from the triangle inequality, the second one by conditions
+G.3 and G.6, and the third by inequality (13).
+   As for the second term in (15), by condition G.5,
+
+                                                               √
+    ||Z(θ, h) − Z(θ, h) + Z(θ0 , h0 ) − Z(θ0 , h0 )||L =op∗ (1/ n + ||Z(θ, h)||L + ||Z(θ, h)||L )
+                                                               √
+                                                       =op∗ (1/ n) + op∗ (||Z(θ, h)||L ).
+
+                                                                      √
+The second equality follows from condition G.1, ||Z(θ, h)||L = op∗ (1/ n). By the triangle
+inequality,
+
+                                                                                         √
+              ||Z(θ, h)||L ≤ ||Z(θ, h) − Z(θ, h) + Z(θ0 , h0 ) − Z(θ0 , h0 )||L + Op∗ (1/ n).
+
+It then follows
+
+                                                                                        √
+               (1 − op∗ (1))||Z(θ, h) − Z(θ, h) + Z(θ0 , h0 ) − Z(θ0 , h0 )||L ≤ op∗ (1/ n).
+
+Thus, equation (15) is bounded by
+
+                                 ||Z(θ, h0 )||L × op∗ (1) + Op∗ n−1/2 ,
+
+and the right side of the equality in (14) satisﬁes
+
+                                (1 − op∗ (1))||Z(θ, h0 )||L ≤ Op∗ n−1/2 .                              (16)
+
+                       √                                √
+Therefore, (c − op (1)) n||θ − θ0 ||Θ ≤ Op∗ (1) and θ is n-consistent for θ0 in Θ.
+
+   Step 2: Weak Convergence
+   Now we show the weak convergence. By conditions G.2 and G.3,
+
+  || − Z(θ, h) + Z(θ0 , h0 ) − Z1 (θ0 , h0 )(θ − θ0 ) − Z2 (θ0 , h0 )[h − h0 ]||L
+=||-Z(θ, h) + Z(θ, h0 ) − Z2 (θ, h0 )[h − h0 ] + Z(θ, h0 ) − Z(θ0 , h0 ) − Z1 (θ0 , h0 )(θ − θ0 )
+   + Z2 (θ, h0 )[h − h0 ] − Z2 (θ0 , h0 )[h − h0 ]||L
+≤|| − Z(θ, h) + Z(θ, h0 ) − Z2 (θ, h0 )[h − h0 ]||L + ||Z(θ, h0 ) − Z(θ0 , h0 ) − Z1 (θ0 , h0 )(θ − θ0 )||L
+   + ||Z2 (θ, h0 )[h − h0 ] − Z2 (θ0 , h0 )[h − h0 ]||L
+=op∗ (n−1/2 ) + op∗ n−1/2 + op∗ n−1/2 = op∗ n−1/2 .
+
+
+                                                        51
+Therefore, it follows that
+
+                   √            √                         √
+      Z1 (θ0 , h0 ) n(θ − θ0 ) + nZ2 (θ0 , h0 )[h − h0 ] = n(−Z(θ,ˆh ˆ ) + Z(θ0 , h0 )) + op∗ (1)
+                                                          √
+                                                               ˆh
+                                                         = n(Z(θ,  ˆ ) − Z(θ0 , h0 )) + op∗ (1)
+                                                          √
+                                                         = n(Z(θ0 , h0 ) − Z(θ0 , h0 )) + op∗ (1),
+
+and
+
+                   √              √
+      Z1 (θ0 , h0 ) n(θ − θ0 ) = − n(Z2 (θ0 , h0 )[h − h0 ] + (Z − Z)(θ0 , h0 )) + op∗ (1)      G,
+
+by condition G.6.
+   Now by condition G.2 and the continuous mapping theorem, we have that
+
+                                    √
+                                     n(θ − θ0 )       Z−1
+                                                       1 (θ0 , h0 )G.
+
+
+
+
+7.4    The Validity of the Bootstrap
+A formal justiﬁcation for the simulation method discussed for the two-step estimator is stated
+in in the main text. In the following Lemma 6 we provide a result for the validity of the
+bootstrap for general Z-estimator. It is also an extension of that in Chen, Linton, and Van
+Keilegom (2003).
+   There are two potential diﬃculties when constructing the conﬁdence bands for the QTE.
+First, closed-form expressions of the covariance kernel are hard to calculate. This mainly is
+due to the estimation of the nuisance parameters. Second, even if closed-form expressions of
+the covariance kernel are available, they are useful only when the set T is ﬁnite. Thus, we use
+the ordinary nonparametric bootstrap method to determine the rejection regions of the tests
+                                                                             n
+for the case when Z (θ, h) = Em† (Wi , θ; h (Wi , θ)) and Z (θ, h) =     1
+                                                                         n   i=1   m† (Wi , θ; h (Wi , θ)),
+where {Wi } is i.i.d and m† (·) is some known function. It is without loss of generality to
+                                        √
+study only the validity of bootstrap for n(θ(t) − θ0 (t)). Let h∗ be an estimator of h0 using
+resampled data. Let Z∗ (θ, h) denote the resampled average. The bootstrap estimator θ∗
+satisﬁes
+
+                                     ||Z∗ (θ∗ , h∗ )|| = op∗ (n−1/2 ).
+
+
+                                                    52
+    Following Chen, Linton, and Van Keilegom (2003), an asterisk denotes a probability or
+moment computed under the bootstrap distribution conditional on the original data set.
+    Consider the following conditions:
+
+G.4B With P ∗ -probability tending to one, h∗ ∈ H and ||h∗ − h||Π = op∗ (n−1/4 ).
+
+G.5B For any δn ↓ 0,
+
+                                                √                 √
+                          sup                 || n(Z∗ − Z)(θ, h) − n(Z∗ − Z)(θ0 , h0 )||L = op∗ (1).
+               ||θ−θ0 ||≤δn ,||h−h0 ||Π ≤δn
+
+
+        √
+G.6B        n(Z2 (θ, h)[h∗ − h] + (Z∗ − Z)(θ, h)) converges weakly to a tight random element G
+      in L in P ∗ -probability.
+
+    Conditions G.4B–G.6B are the bootstrap analog to the conditions to establish weak
+convergence.
+                                                      a.s.
+Lemma 6. Suppose θ0 ∈ int(Θ) and θ → θ0 . Assume that conditions G.1,G.4,G.5, and
+G.6. are satisﬁed with “in probability” replaced by “almost surely”. Let conditions G.2 and
+G.3 hold with h0 replaced by h ∈ Hδn . Also, assume that Z1 (θ; h) is continuous in h at
+                                                         √
+θ = θ0 and h = h0 . Then, under conditions G.4B– G.6B, n(θ∗ − θ) Z−         1
+                                                                           1 (θ0 , h0 )G in
+P ∗ -probability.
+
+Proof. The assertion that ||θ∗ − θ|| = Op∗ (n−1/2 ) a.s. P can be shown in a similar way as
+                √
+the proof of the n-consistency of θ. Therefore we omit the proof and only show the weak
+convergence in probability of the bootstrap estimator.
+
+
+
+
+                                                             53
+   Note that
+
+        ||Z∗ (θ∗ , h∗ ) − Z∗ (θ, h) − Z1 (θ, h)(θ∗ − θ) − Z2 (θ, h)[h∗ − h]||
+      =||Z(θ∗ , h∗ ) − Z(θ∗ , h) − Z2 (θ, h)[h∗ − h] + Z(θ∗ , h) − Z(θ, h) − Z1 (θ, h)(θ∗ − θ)
+        + [(Z∗ (θ∗ , h∗ ) − Z(θ∗ , h∗ )) − (Z∗ (θ, h) − Z(θ, h))]
+        + [(Z(θ∗ , h∗ ) − Z(θ∗ , h∗ )) − (Z(θ, h) − Z(θ, h))]
+        + Z2 (θ, h)[h∗ − h] − Z2 (θ∗ , h)[h∗ − h]||
+      ≤||Z(θ∗ , h∗ ) − Z(θ∗ , h) − Z2 (θ, h)[h∗ − h]|| + ||Z(θ∗ , h) − Z(θ, h) − Z1 (θ, h)(θ∗ − θ)||
+        + ||(Z∗ (θ∗ , h∗ ) − Z(θ∗ , h∗ )) − (Z∗ (θ, h) − Z(θ, h))||
+        + ||(Z(θ∗ , h∗ ) − Z(θ∗ , h∗ )) − (Z(θ, h) − Z(θ, h))||
+        + ||Z2 (θ, h)[h∗ − h] − Z2 (θ∗ , h)[h∗ − h]||
+      =op∗ (n−1/2 ).
+
+The ﬁrst term is op∗ (n−1/2 ) by condition G.3 (version of this lemma) and G.4B. The second
+                                                                    √
+term is op∗ (n−1/2 ) by condition G.2 (version of this lemma) and n-consistency of θ∗ . The
+third and fourth terms are op∗ (n−1/2 ) by the triangle inequality and conditions G.5’ (almost
+sure version) and G.5B. And the ﬁfth term is op∗ (n−1/2 ) by condition G.3 (version of this
+             √
+lemma) and n-consistency of θ∗ .
+   Therefore, it follows
+
+                  √           √                    √
+         Z1 (θ, h) n(θ∗ − θ) + nZ2 (θ, h)[h∗ − h] = n(Z∗ (θ∗ , h∗ ) − Z∗ (θ, h)) + op∗ (1)
+                                                     √
+                                                  = − n(Z∗ (θ, h) − Z(θ, h)) + op∗ (1)
+
+and
+
+               √             √                    √
+      Z1 (θ, h) n(θ∗ − θ) = − nZ2 (θ, h)[h∗ − h] − n(Z∗ (θ, h) − Z(θ, h)) + op∗ (1)              G
+
+in L in P∗ -probability by condition G.6. We can replace Z1 (θ, h) by Z1 (θ0 , h0 ) with prob-
+ability one. Now by condition G.2 (version of this lemma) and the continuous mapping
+theorem, we have
+                                     √
+                                         n(θ∗ − θ)      Z− 1
+                                                         1 (θ0 , h0 )G,
+
+
+and the result follows.
+
+
+
+                                                     54
+8       Monte Carlo
+In this section we conduct numerical experiments to evaluate the ﬁnite sample properties of
+the proposed methods. We report results for the empirical size and power of the uniform
+tests. We are mainly interested in studying the properties of the tests based on QTE over
+T.
+
+
+8.1        Experiment Design
+In the experiments, we use the same data generating process (DGP) as in Firpo (2007). The
+generated data follow a very simple speciﬁcation. Starting with X = [X1 , X2 ] , we set
+                                                   √           √
+                                                    12          12
+                                   X1 ∼ µX1     −      , µX1 +
+                                                   2            2
+                                                  √            √
+                                                    12          12
+                                   X2 ∼ µX2     −      , µX2 +
+                                                   2            2
+
+which will be independent random variables with the following means and variances: E [X1 ] =
+µX1 , E [X2 ] = µX2 , and V [X1 ] = V [X2 ] = 1. The treatment indicator is set to be T = 1{δ0 +
+                                                                                         √
+                       2
+δ1 X 1 + δ2 X 2 + δ3 X 1 + η > 0}, where η has a logistic c.d.f. as F (u) = (1+exp(−πu/10 3))−1 .
+The potential outcomes are Y (0) = γ1 X1 + γ2 X2 +           0   and Y (1) = Y (0) +   1   −   0,   where    0
+                                                     2                2
+and    1   are, respectively, distributed as N (0, σ 0 ) and N (β, σ 1 ). The variables X , η ,       0,   and
+1    are mutually independent. Under this speciﬁcation, Y (1) and Y (0) will be distributed as
+the sum of two uniforms and a normal.
+     The parameters were chosen to be µX1 = 1, µX2 = 5, δ0 = −1, δ1 = 5, δ2 = −5,
+δ3 = −0.05, γ1 = −5, γ2 = 1. For the simple experiment, the parameters β , σ 20 , σ 21 control
+the testing procedure under the null and alternative.
+     To investigate the empirical size, we consider the above DGP with β = 0 and σ 20 = σ 21 =
+5. To evaluate the power of the test we use two diﬀerent conﬁgurations: (i) varying the
+parameter β ∈ {0, 6}; (ii) varying the parameter σ 20 ∈ {5, 20}, while keeping σ 21 = 5. In
+the later case, by using a σ 20 diﬀerent from σ 21 we are able to achieve a positive treatment
+across the quantiles.
+     We implement tests for the null hypothesis that the treatment eﬀect is ineﬀective. Thus,
+we estimate ∆(τ ) = q1 (τ ) − q0 (τ ) and test whether ∆(τ ) = 0 for all τ . We report results
+             er-von Mises test for the simulations. The results for the Kolmogorov-Smirnov
+for the Cram ´
+
+
+                                                    55
+                                      B=250                             B=500
+                           α = 0.01 α = 0.05 α = 0.10       α = 0.01 α = 0.05 α = 0.10
+             n = 500        0.008     0.035      0.079        0.010      0.039   0.080
+             n = 750        0.009     0.045      0.084        0.010      0.046   0.085
+            n = 1000        0.009     0.048      0.091        0.011      0.049   0.092
+
+
+                               Table 6: Size of the uniform tests (β = 0 )
+
+                                          0
+tests are similar. For the estimation of wt in the ﬁrst-step, we use a nonparametric estimation
+with a local linear logit and a leave-one-out for choice of the number of polynomials.
+   We examine the empirical rejection frequencies for 1%, 5%, and 10% (α = {0.01, 0.05, 0.10})
+nominal levels tests for diﬀerent choices of sample size n = {500, 750, 1000}. We also inves-
+tigate diﬀerent numbers of bootstraps {250, 500}. The number of replications is 2,000.
+
+
+8.2     Results
+We present the empirical size and power for the proposed tests. Table 6 collects the results
+for empirical size and Figures 3 and 4 display the empirical power functions when varying β
+and σ 20 , respectively.
+   In Table 6 we report the empirical sizes for diﬀerent samples and nominal sizes. First,
+we observe that the empirical sizes (β = 0) are close to the respective nominal ones, 1%,
+5%, and 10%. We also study the impact of sample size and number of bootstraps on the
+size. The size improves with the sample size, but it is not very sensitive to the number
+of bootstraps, implying that smaller number of bootstraps is satisfactory. Overall, Table 6
+shows that the uniform tests have good size property even in small samples.
+   The empirical power functions are displayed in Figures 3 and 4. In Figure 3 we vary β .
+The results show that the power of test improves as the sample size increases. The main point
+is that as the parameter β increases, the treatment increases, and so does the probability
+of the test rejecting the null of eﬀect of the treatment. Figure 4 displays the results for
+empirical power when varying σ 20 . The results are qualitatively similar and show that the
+power increases as the heterogeneity increases. In addition, as the sample size increases
+the improves the raises. As in the previous case, the results suggest that the number of
+bootstraps does not have a substantial eﬀect on the power.
+   Overall the simulations show the usefulness of our uniform inference procedures in de-
+
+                                                   56
+                                   Power B=250                                                         Power B=500
+            1.0
+
+
+
+
+                                                                                1.0
+            0.8
+
+
+
+
+                                                                                0.8
+            0.6
+
+
+
+
+                                                                                0.6
+    Power
+
+
+
+
+                                                                        Power
+            0.4
+
+
+
+
+                                                                                0.4
+            0.2
+
+
+
+
+                                                                                0.2
+                                                              n=1000                                                              n=1000
+                                                              n=750                                                               n=750
+                                                              n=500                                                               n=500
+            0.0
+
+
+
+
+                                                                                0.0
+                  0   1        2        3        4        5        6                  0   1        2        3        4        5        6
+
+                                        β                                                                   β
+
+
+
+
+Figure 3: Empirical power function when varying β . Left box plots the power function for diﬀerent
+sample sizes and number of bootstraps 250. Right box plots the power function for diﬀerent sample
+sizes and number of bootstraps 500.
+
+
+
+
+                                   Power B=250                                                         Power B=500
+            1.0
+
+
+
+
+                                                                                1.0
+            0.8
+
+
+
+
+                                                                                0.8
+            0.6
+
+
+
+
+                                                                                0.6
+    Power
+
+
+
+
+                                                                        Power
+            0.4
+
+
+
+
+                                                                                0.4
+            0.2
+
+
+
+
+                                                                                0.2
+
+
+
+
+                                                              n=1000                                                              n=1000
+                                                              n=750                                                               n=750
+                                                              n=500                                                               n=500
+            0.0
+
+
+
+
+                                                                                0.0
+
+
+
+
+                  5       10                15       20                               5       10                15       20
+
+                                       σ2                                                                  σ2
+
+
+
+
+Figure 4: Empirical power function when varying σ 20 . Left box plots the power function for
+diﬀerent sample sizes and number of bootstraps 250. Right box plots the power function for
+diﬀerent sample sizes and number of bootstraps 500.
+
+
+
+                                                                       57
+tecting cases where heterogeneity is an important concern. The results suggest the proposed
+methods have good ﬁnite sample performance, leading to reliable, powerful, and computa-
+tionally attractive inference. Our main proposal, the uniform tests, in addition to having
+good power properties, makes the bootstrap method a practical inference procedure.
+
+
+
+
+                                            58
+
