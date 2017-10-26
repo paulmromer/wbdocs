@@ -1,0 +1,1410 @@
+                                                       WPS8093
+
+
+Policy Research Working Paper                         8093
+
+
+
+
+   How Important are Spillovers from Major
+           Emerging Markets?
+                                 Raju Huidrom
+                                 M. Ayhan Kose
+                              Franziska L. Ohnsorge
+
+
+
+
+Development Economics
+Development Prospects Group
+June 2017
+Policy Research Working Paper 8093
+
+
+  Abstract
+ The seven largest emerging market economies—China,                                 a 1 percentage point increase in EM7 growth is associ-
+ India, Brazil, Russia, Mexico, Indonesia, and Turkey—con-                          ated with a 0.9 percentage point increase in growth in
+ stituted more than one-quarter of global output and more                           other emerging and frontier markets and a 0.6 percentage
+ than half of global output growth during 2010–15. These                            point increase in world growth at the end of three years.
+ emerging markets, called EM7, are also closely integrated                          Second, sizeable as they are, spillovers from EM7 are still
+ with other countries, especially with other emerging and                           smaller than those from G7 countries (Group of Seven of
+ frontier markets. Given their size and integration, growth                         advanced economies). Specifically, growth in other emerg-
+ in EM7 could have significant cross-border spillovers. The                         ing and frontier markets, and the global economy would
+ authors provide empirical estimates of these spillovers                            increase by one-half to three times more due to a simi-
+ using a Bayesian vector autoregression model. They report                          larly sized increase in G7 growth. Third, among the EM7,
+ three main results. First, spillovers from EM7 are sizeable:                       spillovers from China are the largest and permeate globally.
+
+
+
+
+  This paper is a product of the Development Prospects Group, Development Economics. It is part of a larger effort by the
+  World Bank to provide open access to its research and make a contribution to development policy discussions around the
+  world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be
+  contacted at rhuidrom@worldbank.org, akose@worldbank.org, and fohnsorge@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+   How Important are Spillovers from Major Emerging Markets?
+                  Raju Huidrom, M. Ayhan Kose, and Franziska L. Ohnsorge
+
+
+
+
+ Key Words: Business cycles; spillovers; external shocks; China; EM7; G7.
+JEL Codes: E32, F20, F42.
+
+
+    Huidrom: World Bank, Development Prospects Group; rhuidrom@worldbank.org. Kose: World Bank, Develop-
+ment Prospects Group; Brookings Institution; CEPR, and CAMA; akose@worldbank.org. Ohnsorge: World Bank,
+Development Prospects Group; CAMA; fohnsorge@worldbank.org. Earlier drafts bene…ted from comments by Ajai
+Chopra, Kevin Clinton, Aart Kraay, Jaime Marquez, Warwick McKibbin, Peter Morgan, Cyn-Young Park, David
+Robinson, Luis Serven, Marc Stocker, Carlos Vegh, Naoyuki Yoshino, and participants at the ADB-ADBI conference
+on “20 Years after the Asian Financial Crisis”, ECB-Central Bank of Turkey Conference on “Economic Growth and
+Income Convergence”   , and the CAMA-ANU-Australian Treasury Conference on “Shaping the Next Decade: Eco-
+nomic Trends in the Global Economy,” and at seminars at the ADBI, Bank of England, Bank of Japan, Federal
+Reserve Board, IMF, Japan Ministry of Finance, Johns Hopkins SAIS, and World Bank. We thank Sergio Kurlat
+and Qian Li for outstanding research assistance.
+1       Introduction
+In the last two decades, emerging market economies played an increasingly important role in the
+global economy. They constituted more than a quarter of global output and more than half of global
+output growth during 2010-15, compared with just about one-tenth and one-…fth respectively in
+the 1990s (Figure 1). The rising importance of emerging markets is also accompanied by their rapid
+integration into global trade and …nance networks. The seven largest emerging market economies—
+China, Russia, India, Brazil, Turkey, Mexico, and Indonesia— constitute about 80 percent of total
+emerging market output. This group, which we label as EM7, akin to G7 (the Group of Seven
+major advanced economies), has also been the main source of growth in emerging markets and
+their integration into the global economy.1 In particular, the EM7 economies have strong trade and
+…nancial ties with other emerging markets (EM) and frontier markets (FM), especially with those
+in their respective neighborhoods.2 Given their size and integration, growth in EM7 could have
+signi…cant spillovers to other economies in the world.3 The objective of this paper is to empirically
+assess the size of these spillovers.
+
+    Previous studies on spillovers mostly focus on those originating from advanced economies, in-
+cluding the G7, while spillovers from the emerging markets have received relatively scant attention.4
+This re‡ ects the dominant historical role of the G7 economies in the world economy. However, given
+the changing economic landscape, understanding spillovers from the EM7 has become increasingly
+important. Existing work on spillovers from the EM7 is limited, tends to focus on spillovers from
+individual EM7 economies, and are often conducted with a regional perspective. The literature
+so far has not presented a systematic analysis comparing individual EM7 economies as sources of
+spillovers, and comparing spillovers from the EM7 to those originating from the G7. Our paper is
+the …rst one that attempts to …ll these gaps in the literature.
+
+   An extensive literature employs dynamic stochastic general equilibrium (DSGE) models to
+quantify and elucidate the role of speci…c shocks in driving business cycles. In particular, some
+studies have examined the role of domestic and foreign shocks using multi-country DSGE models
+mostly in the context of advanced economies (e.g. Ambler, Cardia and Zimmermann 2002; De
+Walque, Smets, and Wouters 2005). While these are useful for understanding spillovers among
+advanced economies, there is less theoretical work that looks at spillovers between advanced and
+emerging markets, and within emerging markets (Comin et al. 2014). Speci…cations and evaluations
+    1
+     The largest EM economies, i.e. EM7, are identi…ed using 2015 GDP data at market exchange rates. In terms of
+economic size, the G7 constitutes roughly 80 percent of output in advanced markets (AM) which is also about the
+share of EM7 in total EM output. The G7 and EM7 are also the major sources of AM and EM integration into the
+global economy (Figure 1 C and D). We consider these similarities to motivate the EM7 as a group that represents
+the major EM, as much as the G7 represents the major AM. The G7 and EM7 are also similar to the extent that
+they are, on aggregate, net-commodity importers, more speci…cally net-oil importers. For more detailed discussions
+of the rising importance of emerging markets in the global economy, see Kose and Prasad (2010), Magnus (2011),
+and Sharma (2012).
+   2
+     Details of the country classi…cation are provided in Table A1 in the Supplementary Appendix.
+   3
+     Outside of EM7, the next three largest EM economies – Saudi Arabia, Poland, and Thailand – are relatively
+small, contributing on average less than 2 percent to EM output (Figure A5 in the Supplementary Appendix). For
+comparison, the next three largest AM economies outside of the G7 are also relatively small, and their contribution
+to AM output is quite similar, around 3 percent.
+   4
+     For the literature on spillovers from advanced economies, see Canova (2005), Gregory, Head and Reynauld (1997),
+Stock and Watson (2005), Eickmeier (2007), Kose, Otrok and Whiteman (2003), and Diebold and Yilmaz (2015).
+Inoue, Kaya, and Ohshige (2015) and Ahuja and Nabar (2012) examine spillovers from China, and Alturki, Espinosa-
+Bowen, and Ilahi (2009) look at spillovers from Russia.
+
+
+
+                                                         2
+of these models— especially in terms of shocks and comparison of simulated and actual moments—
+often remain an open question. In this context, empirical estimates of spillovers using reduced-form
+models provide useful guidance for theoretical work (Canova and Marrinan 1998). Our empirical
+…ndings thus provide ground work for the speci…cation and evaluation of DSGE models that feature
+both advanced and emerging market economies.5
+
+    To estimate spillovers from EM7, we use a parsimonious Bayesian vector autoregressive (VAR)
+model. The model features growth in EM7, other emerging and frontier markets (EFM), and G7
+(representing the major advanced economies) plus additional controls for global …nancing conditions
+and commodity prices. The set of variables included in the VAR is consistent with that of a standard
+small open economy DSGE model that is calibrated to capture the main features of most of the
+EFMs included in our sample (Kose 2002; Neumeyer and Perri 2005). Exogenous shocks to EM7
+growth are …rst identi…ed using a recursive identi…cation scheme in the model, and then the dynamic
+e¤ects of those shocks on growth in other economies (i.e. spillovers) are traced out. We estimate
+the model using data over the period 2000Q1-2015Q2 for G7 economies and 16 EFMs. We employ
+the same model to estimate spillovers originating from G7 and compare the size of G7 spillovers
+with those originating from EM7. We use a similar model to estimate and compare spillovers from
+individual EM7 economies. Thus, our empirical approach utilizes a common methodology that
+allows a disciplined comparison of spillovers originating from the EM7 and G7, and also from the
+individual EM7 economies.
+
+    Our main …ndings are as follows: First, spillovers from EM7 are signi…cant: a 1 percentage point
+increase in EM7 growth is associated with a 0.9 percentage point increase in growth in other EFM
+and a 0.6 percentage point increase in world growth at the end of three years. Second, notwith-
+standing sizeable spillovers from EM7 to other EFM, spillovers originating from G7 economies are
+larger. Speci…cally, a 1 percentage point increase in G7 growth is associated with an increase in
+growth in other EFM and the global economy that is one-half to three times larger than a similarly
+sized increase in EM7 growth. Moreover, ‡   uctuations in G7 growth explain a much larger fraction,
+about four times, of the variance of growth in other EFM and the global economy than ‡       uctua-
+tions in EM7 growth. Third, among the EM7, spillovers from China are the largest and permeate
+globally, but spillovers originating from the other EM7 are much smaller.
+
+   The rest of the paper is organized as follows. Section 2 describes the econometric methodology
+and the database. We present the empirical results in Section 3. In Section 4, we discuss the
+robustness exercises. Section 5 concludes.
+
+
+2       Methodology and Database
+We use a set of Bayesian structural vector autoregression (VAR) models to quantify growth spillovers
+from EM7 to other economies in the world.6 In this section, we describe the VAR models and the
+database used for estimation.
+    5
+      Economic theory is ambiguous about the implications of increased trade and …nancial linkages for spillovers
+(Frankel and Rose 1998; Doyle and Faust 2002; Kose, Prasad, and Terrones 2009). Our study is also related to this
+literature as it is useful in quantifying the magnitude of spillovers.
+    6
+      An alternative empirical approach for measuring spillovers is a panel regression framework. Compared with a
+structural VAR, the identi…cation of exogenous growth shocks and tracing their dynamic e¤ects are less straightfor-
+ward. A related empirical approach is a dynamic factor model. Compared with a structural VAR, dynamic factor
+models are more useful in quantifying comovement among a large set of variables, but they are less useful for analyzing
+cross-border spillovers unless these spillovers are explicitly modeled.
+
+
+                                                          3
+2.1    VAR Models
+The VAR models, in reduced-form, can be represented as follows:
+
+                               yt = a0 + A1 yt    1   + A2 y t   2   + ::: + Ap yt   p   + ut ;                   (1)
+where yt is an m 1 vector of variables at date t, Ai is an m m coe¢ cient matrix for each lag of the
+variable vector with a0 being the constant term. The vector ut represents the reduced form error
+terms with a variance-covariance matrix (with o¤-diagonal entries) denoted by . The recursive
+identi…cation scheme used in the paper amounts to using the cholesky factor of         to obtain a
+mapping from the correlated reduced-form error terms ut to the uncorrelated structural shocks vt .
+The dynamic e¤ects of these structural shocks on model variables are what we use to make causal
+inferences about how EM7 growth shocks a¤ect growth in other economies, i.e. spillovers.
+
+    We estimate two types of VAR models depending on how other EFM are included in the model
+as spillover destinations. The …rst one which we label the aggregate model is used to study the
+aggregate spillover implications for other EFM as a group. That is, we use the aggregate model
+to measure how growth in EM7 a¤ects, i.e. spills over to, aggregate growth in other EFM, where
+aggregate growth in other EFM is de…ned as the GDP weighted average of growth in individual
+economies in that group. For this, we include aggregate growth in other EFM as spillover destination
+in the model.
+
+   The second one which we label as the country model is used to estimate spillovers to individual
+EFM economies. Here, we include growth in each EFM economy as the spillover destination and
+the VAR model is estimated one at a time for each of these spillover destinations. While the
+aggregate model provides a summary estimate of aggregate spillovers to other EFM, the country
+model lends a much more disaggregated picture. We deploy both versions of the model to make
+robust inferences about spillovers. We now describe the two types of VAR models in much more
+detail.
+
+    Aggregate model . We include the following variables in vector yt , in this order: G7 growth, the
+U.S. interest rate, Emerging Market Bond Index (EMBI), EM7 growth, oil price, and other EFM
+growth. In this paper, we are mainly interested in spillovers originating from EM7, and we include
+EM7 growth in the VAR to re‡      ect that. Growth in other EFM re‡     ects the spillover destination
+in the model. We include G7 growth in the model to control for growth in the major advanced
+economies while calculating spillovers from EM7. This also allows us to examine spillovers from the
+EM7 to the G7, and also spillovers from the G7 to other economies. The latter serves as a baseline
+against which we compare the size of spillovers originating from EM7. The U.S. interest rate (the
+yield on 10-year U.S. treasury bills) and the EMBI serve as proxies for global …nancial conditions.
+Since the importance of oil prices for economic activity is well established in the literature, we
+include oil prices as an additional control in the model. In sum, the set of variables included in the
+VAR describes a standard small open economy DSGE model that characterizes most of the EFMs
+included in the sample.
+
+   The ordering of the variables in the VAR is based on the presumed exogeneity, or predetermi-
+nation, of variables where more exogenous variables are ordered …rst.7 For instance, it assumes
+    7
+      There are alternative identi…cation schemes used in the literature. For instance, Eickmeier (2007) uses sign re-
+strictions to study spillovers between the United States and Germany. Such approaches generally require a much
+larger set of variables than the one used in this paper and are particularly useful for providing a structural inter-
+
+
+                                                            4
+that G7 growth is relatively exogenous to EM7 growth: a reasonable assumption given their rel-
+ative economic size. This ordering implies that G7 growth shocks a¤ect EM7 growth within the
+same quarter, whereas shocks to EM7 growth can a¤ect G7 growth only with a lag of at least one
+quarter.8 Using a similar argument, we order EM7 growth before growth in other EFM. Global
+…nancial conditions are assumed to be relatively exogenous to EM7, and hence U.S. interest rates
+and EMBI are ordered before EM7 growth. By ordering oil price after EM7 growth, we implicitly
+assume that oil prices are relatively endogenous to EM7 growth. This is consistent with the fact
+that the EM7, in particular China, are a major source of demand for key commodities including oil
+and hence, a growth increase in these economies, by increasing demand, can endogenously result
+in an increase in the price of oil and other commodities.
+
+    Given the limited sample period used in this paper (2000Q1-2015Q2), we estimate the model
+using Bayesian techniques following Litterman (1986). More precisely, we impose the prior that
+longer lags are more likely to be close to zero than shorter lags. In addition, we impose the prior
+that own lags of a variable are more important determinant of that variable than lags of other
+variables in the model. This speci…cation helps improve precision of model estimates by addressing
+the over-parameterization problem often encountered in estimating VAR models with short time
+series. Inferences are made using 2000 Monte Carlo draws. We use a lag length of four quarters,
+which is standard for VAR models estimated with quarterly data.
+
+    To estimate growth spillovers from each of the individual EM7 economies, the VAR model above
+is re-estimated by replacing aggregate EM7 with the individual EM7 economy in question as the
+spillover source, one at a time. To control for any e¤ects that the rest of the EM7 may have on
+the spillover destination economies, this version of the model includes aggregate growth in the rest
+of EM7. For instance, to obtain growth spillovers from Brazil, we estimate a model that includes
+Brazil growth (spillover source) while controlling for aggregate growth in EM7 excluding Brazil.
+This would guard against any potential bias in spillover estimates from Brazil if spillovers from
+the rest of the EM7 (e.g. China) were signi…cant. Given their relative economic size, we order
+Brazil growth after growth in EM7 excluding Brazil, while preserving the ordering among the rest
+of the variables as before. Spillovers from the other EM7 economies are estimated, one at a time,
+following a similar procedure.
+
+    An important consideration here is the ordering of oil prices. While oil prices, arguably, are
+relatively endogenous to growth in some of EM7 economies notably China and India which justi…es
+ordering oil prices after growth in these EM7 economies, it is not obvious this is the case for the
+rest of EM7 (e.g. Russia, Indonesia). However, to maintain consistency and to ensure that our
+results are not driven by di¤erences in the ordering of oil prices, we retain the same ordering of oil
+prices while measuring spillovers from each of the EM7.
+
+   Country model. While the aggregate model provides estimates of spillovers to other EFM as a
+group, we use the country model to estimate spillovers to individual EFM economies. As mentioned
+pretation of growth shocks, for instance whether they are supply-driven or demand-driven as in Eickmeier (2007).
+Given data limitations, a detailed examination of the sources of the growth shock and its implications goes beyond
+the scope of this paper.
+   8
+     The identi…cation of exogenous growth shocks is possible but less satisfactory with annual data. For instance,
+with annual data, one would assume that variables ordered last only a¤ect those up the order with a lag of 1 year (e.g.
+EM7 growth shocks a¤ecting G7 growth) which precludes, by construction, any spillover e¤ects in the immediate
+periods following the shock. Thus, the spillover analysis in this paper is limited to those economies for which quarterly
+data is available.
+
+
+                                                           5
+earlier, the model is estimated for each EFM as a spillover destination, one at a time. Thus, to
+estimate spillovers from EM7 as a group to each EFM, we include the following variables in the
+VAR, in this order: G7 growth, EMBI, EM7 growth (spillover source), trade-weighted commodity
+prices, EFM growth (spillover destination), and EFM real e¤ective exchange rate. The ordering
+closely follows the aggregate model. Ordering real e¤ective exchange rates last is standard in the
+literature (e.g. Ilzetzki, Mendoza, and Vegh 2013).
+
+    Since the country model is estimated for each spillover destination, we can include country-
+speci…c variables which are tailored to that particular spillover destination –a strategy not available
+in the aggregate models. Thus, the country model includes trade-weighted commodity prices (in-
+stead of oil prices as in the aggregate model) and real e¤ective exchange rates (not available for an
+aggregate country group). Including exchange rates in the model is consistent with small economy
+DSGE models such as Galí and Monacelli (2005) and Lubik and Schorfheide (2007). The weights
+are the average share of exports during 2007-14 of each commodity in the commodity export basket
+of the spillover destination country in question.
+
+    Having a larger set of variables in the country model, however, would result in a loss of degrees
+of freedom. Thus, for the sake of model parsimony, the country model includes only EMBI as
+a proxy for global …nancing conditions and leaves out the U.S. interest rates. Our main results
+are, however, robust to including only U.S. interest rates as a proxy for global …nancial conditions,
+or including both EMBI and U.S. rates. As in the case of the aggregate model, spillovers from
+individual EM7, as spillover source, are estimated by including the EM7 economy in question while
+controlling for aggregate growth in the rest of EM7, one at a time.
+
+2.2   Database
+The estimation uses a balanced panel of quarterly observations for 30 economies between 2000Q1
+and 2015Q2 (see Table A1 in the Supplementary Appendix). Real GDP for some of these economies
+is based on the quarterly database in Ilzetzki, Mendoza, and Vegh (2013) which is extended to
+2015Q2 using the OECD Quarterly National Accounts and Haver Analytics. Real GDP data for
+the remainder of the economies are sourced from the OECD Quarterly National Accounts and
+Haver Analytics. Real e¤ective exchange rates are the narrow (wherever available) and the broad
+indices from the Bank for International Settlements (BIS) supplemented with the Bruegel database.
+The EMBI spread series is taken from J.P. Morgan. The U.S. long-term interest rate is the 10-
+year generic government yields from Bloomberg. Nominal oil prices are obtained from the World
+Bank Pink Sheet and de‡   ated using seasonally adjusted U.S. CPI series from Haver Analytics. A
+balanced panel of the GDP series and the EMBI is available from 1998, but we start the sample
+in 2000 to avoid the immediate periods following the Asian crisis of 1997 and the Russian crisis of
+1998. Table A2 in the Supplementary Appendix provides more details of the variables used in this
+paper.
+
+    The trade-weighted commodity prices for each EFM are constructed as follows: nominal monthly
+prices of 35 commodities are obtained from the World Bank pink sheet. As in the case of oil prices,
+these nominal commodity prices are de‡   ated by the U.S. CPI. The resulting real prices are con-
+verted into indices by setting January 2010 as 100. Then, the monthly indices are converted into
+quarterly indices by taking averages across the months in a given quarter. Country-speci…c trade
+weights are then applied to these real quarterly commodity price indices to yield a trade-weighted
+real commodity price index for each country. For a given country, the trade weights are the average
+
+
+                                                  6
+share of exports of each commodity in the total commodity export basket during the period 2007-
+2014.9 Commodity exports are de…ned in terms of SITC 4th revision at 4 digits from the World
+Integrated Trade Solution (WITS) database.
+
+    While estimating the model, some of the data are transformed to yield stationary series. Real
+GDP, oil and commodity prices, and real e¤ective exchange rates, originally in levels, are converted
+into quarter-on-quarter growth rates. Any residual linear trends in those growth rates are removed.
+During the sample period used in this paper, the U.S. interest rate and the EMBI exhibit a down-
+ward trend. We use …rst di¤erences of these two series. The aggregate model uses aggregate GDP
+growth rates for various country groups. Those are calculated as the GDP weighted growth rates
+of all the countries in a given group. The GDP weights are calculated using the annual current
+GDP (in US$) series from the IMF’   s World Economic Outlook (October 2016) database.
+
+
+3       Results
+We present two main sets of results. First, we discuss growth spillovers from aggregate EM7 and
+compare those with spillovers originating from the G7. Second, we analyze spillovers from each of
+the individual EM7 to gauge the relative importance of these economies as a source of spillovers.
+
+3.1     Spillovers from EM7
+We begin by presenting growth spillovers from EM7 using the aggregate model that features ag-
+gregate EM7 as the spillover source. Spillovers are analyzed in two di¤erent dimensions. First,
+we show how an exogenous growth shock in EM7 spills over to other economies using impulse
+responses. We also calculate impulse responses due to a growth shock in G7 to assess the relative
+size of spillovers from EM7. Second, we perform variance decompositions that show the relative
+contributions of growth shocks in EM7 vis-à-vis other shocks in the VAR system in explaining
+business cycle ‡ uctuations in spillover destinations.
+
+   Figure 2 presents the impulse responses of model variables to an exogenous growth shock in
+EM7 that increases its growth by 1 percentage point on impact.10 These are highly persistent
+shocks as they translate into an increase of about 2.7 percentage points in cumulative terms in
+EM7 growth at the end of three years. Their e¤ect on growth in other EFM is sizeable on impact
+and they gain momentum over time, with maximum cumulative e¤ect towards the end of three
+years. On impact, growth in other EFM rises by about 0.3 percentage point in response to the
+shock, while the cumulative impact at the end of three years is about 0.9 percentage point. These
+e¤ects are statistically signi…cant at the 2 standard deviation signi…cance level (corresponding to
+the 16-84 percent con…dence bands) which is often used in the literature.
+
+    In contrast, the estimated impact on G7 growth is, on average, modest and statistically in-
+signi…cant. This is partly by construction since G7 growth, ordered …rst in the VAR, is assumed to
+be relatively exogenous to EM7 growth. The weak spillover e¤ect on G7 growth may also re‡       ect
+their net oil-importing status. As net oil importers, G7 economies tend to su¤er from the higher oil
+prices associated with a rise in EM7 growth (Figure 2E). On balance, global growth –calculated as
+    9
+     The trade weights are based on 2007-14 averages rather than the full sample period (2000-2015) because the
+number of missing observations rises considerably before 2007 and after 2014.
+  10
+     Throughout this paper, we present impulse responses due to positive growth shocks. Since the VAR model used
+in the paper is linear, the distinction between positive and negative growth shocks is, however, trivial.
+
+
+                                                       7
+the GDP weighted average of the impulse responses of EM7, other EFM, and G7 growth – could
+increase by 0.6 percentage point at the three-year horizon.11 This …nding implies that despite the
+weak spillover e¤ects on advanced economies, a growth increase in the major emerging markets
+could aid global growth highlighting the economic size of these economies.
+
+    How do the EM7 compare with the G7 as a source of spillover? Spillovers from the G7 (as
+a proxy for the major advanced economies) are a natural baseline to gauge the size of spillovers
+originating from the EM7. For this, we compare the impulse responses due to an EM7 growth shock
+and a G7 growth shock, with the size of the shocks normalized, for comparability, such that EM7
+and G7 growth increase by 1 percentage point on impact (Figure 3). Sizeable as they are, spillovers
+from EM7 growth shocks to other EFM remain somewhat smaller than those originating from G7 at
+all horizons.12 For instance, at the end of three years, an increase in G7 growth would raise growth
+in other EFM by about 0.5 percentage point more than a similarly sized growth increase in EM7.
+The global impact of spillovers from EM7 is signi…cantly smaller than that from the G7: global
+growth would increase by about 1.4 percentage points more due to the G7 growth shock than the
+EM7 growth shock. In other words, growth in other emerging and frontier markets, and the global
+economy would increase by one-half to three times more due to a similarly sized increase in G7
+growth. The larger role of G7 as a source of spillover is corroborated by the variance decomposition
+–an exercise that factors in the historical size of growth shocks in EM7 and G7. Over the sample
+period, G7 growth shocks on average explain about 38 and 81 percent of the variation of growth
+in other EFM and the world economy respectively at the three-year horizon, compared with just 8
+and 18 percent explained by EM7 growth shocks (Figure 4).
+
+    Stronger spillovers from G7 countries re‡ect their larger economic size. While the EM7 account
+for about a quarter of global GDP at market rates, G7 countries account for almost half of global
+GDP. In addition, G7 countries account for a larger share of global trade and play a central role
+in global …nance. At end-2014, more than half of global banking assets and liabilities were on G7
+country banks’balance sheets. The G7 accounted for one-third of global foreign direct investment
+‡ ows and almost half of global portfolio investment. Thus, …nancial ‡     ows can quickly transmit
+shocks originating in G7 economies around the world. These results are consistent with previous
+work that reports similar …ndings albeit for speci…c regions. For instance, growth spillovers from
+Russia to other economies in the Europe and Central Asia region tend to be smaller than those
+from the European Union, re‡   ecting stronger ties with the latter (Andrle, Garcia-Saltos, and G.
+Ho 2013; Obiora 2009).
+
+3.2      Spillovers from Individual EM7
+We now turn to spillovers from each of the individual EM7 economies. For this, we use the version
+of the aggregate model that features each EM7 economy as the spillover source rather than EM7
+as one group. The model is then estimated for each of the EM7 economies as a spillover source,
+one at a time.
+
+       Figure 5A presents the impulse responses at the three-year horizon which is when the cumulative
+  11
+     The groups of countries (G7, EM7, and other EFM) constitute about 84 percent of global GDP at market
+exchange rates in 2014.
+  12
+     Our results are robust when the shock sizes are re-calibrated such that EM7 and G7 growth increase by their
+respective 1 standard deviation on impact (Figure A2 in the Supplementary Appendix). This calibration scheme
+would better re‡ ect shock sizes that have historically characterized EM7 and G7 growth.
+
+
+
+                                                       8
+spillover e¤ects are generally the largest.13 As before, for comparability, the shock size is normalized
+such that growth in each of the EM7 economies increases by 1 percentage point on impact. As
+the …gure shows, the magnitude of spillovers varies across the EM7 economies. The increase in
+growth in China could raise growth in other EFM by about 0.5 percentage point whereas a similar
+shock in Russia and India would raise growth in other EFM by about 0.2-0.3 percentage point only.
+Spillovers from a growth shock in the rest of the EM7 economies –Brazil, Mexico, Indonesia, and
+Turkey –to other EFM are much smaller and/or statistically insigni…cant.
+
+    Beyond this aggregate impact, we also evaluate the spillover e¤ects of the EM7 on individual
+EFM economies. For this, we use the country model where we estimate spillovers to each of the
+individual EFM economies (spillover destinations). Figure 5B summarizes the impulse responses of
+growth in other EFM economies due to a growth shock in each of the EM7 economies respectively.
+It reports the cross-sectional average response among the other EFM (spillover destinations) and
+the corresponding cross-sectional 20-80 percentile range. As the …gure shows, an increase in growth
+in China permeates globally and a¤ects growth in other emerging and frontier markets around
+the world.14 The impulse responses at the 3-year horizon due to a 1 percentage point increase
+in China’ s growth are statistically signi…cant for 13 (8) out of 14 other EFM economies at the 1
+standard deviation (2 standard deviations) signi…cance level.15 The spillover e¤ects of a shock to
+growth in Russia are smaller; growth shocks in the rest of the EM7 economies have negligible e¤ects
+on other EFM economies. Most of these spillover e¤ects are also statistically insigni…cant.
+
+    A robust result from both the aggregate and the country models is that spillovers from growth
+‡ uctuations in China are the largest among the major emerging markets, while spillovers originating
+from Russia, though smaller than China, are non-trivial. The dominant role of China as a spillover
+source re‡                                                             s economy is more than four
+          ects its size and integration. In current dollar terms, China’
+times the size of the next-largest EM7 economy (Brazil); its imports are six times the size of those
+of Russia; and its demand for primary energy and metals is four to ten times the size of that of
+India. These observations explain why growth spillovers from China are the largest among the
+EM7. Spillovers from Russia re‡    ect its impact on neighboring economies in Europe and Central
+Asia. Negligible spillovers from the rest of the EM7 economies may re‡   ect their limited integration
+and/or smaller economic size.
+
+    How would spillovers from an increase in growth in just China compare with those from a
+synchronous increase in growth in EM7? This is a relevant question given that cyclical ‡uctuations
+in emerging markets are often highly synchronized (Claessens, Kose and Terrones 2012).16 For
+this, we compare the spillover results from two di¤erent versions of the aggregate model: one that
+features aggregate EM7 as the spillover source and another that features China as the spillover
+source to aggregate growth in EFM. A synchronous EM7 growth increase is de…ned as one in which
+EM7 growth increases by the same amount as an isolated increase in China’      s growth, which we
+  13
+     Our results are generally robust when the impulse responses are analyzed at shorter horizons. For instance,
+Figure A4 in the Supplementary Appendix presents results at the two-year horizon.
+  14
+     Given the important role of China for global commodity demand, spillover e¤ects from China could be more
+pronounced for commodity exporters than importers (Ahuja and Nabar 2012; Inoue, Kaya, and Ohshige 2015). Our
+results suggest that this is indeed the case. See Figure A1 in the Supplementary Appendix.
+  15
+     Due to unavailability of trade-weighted commodity prices data for Phillipines, the country model is not estimated
+for this country.
+  16
+     This has been the case in the recent growth slowdown as well since much of it has been synchronous and not
+limited to China alone (Didier et al. 2015).
+
+
+
+
+                                                          9
+assume to be a 1 percentage point increase on impact.17 In a synchronous increase in growth,
+activity in China’ s trading partners that are also closely linked to their regional EM7 would be
+doubly hit. Thus, growth in other EFM could increase by around 0.2 percentage point more, over
+three years, in a synchronous increase in growth in EM7 than in an isolated increase in China’  s
+growth (Figure 6). The upshot here is that even though spillovers from China are sizeable, a
+synchronous acceleration in growth in EM7 would have considerably larger spillover e¤ects than
+just an increase in China’ s growth alone.
+
+
+4        Robustness
+We consider a wide range of exercises to check the robustness of our headline …ndings. To begin
+with, we focus on spillovers from EM7 as a group. We compare the results from the baseline
+model with the following speci…cations. First, we estimate those spillovers by including a dummy
+for the global …nancial crisis of 2008-09. Second, we study spillovers when oil prices are included
+as an exogenous variable rather than an endogenous variable as in the baseline model. In this
+alternative speci…cation, oil prices, by construction, do not endogenously respond to an increase
+in growth in EM7. By comparing the spillover results from this speci…cation with those from the
+baseline model, we can gauge the extent to which oil prices endogenously transmit EM7 growth
+shocks across borders. Third, we examine spillovers when the model is estimated using industrial
+production instead of GDP.
+
+    Fourth, we check the consistency between the baseline and the country models. For this, the
+spillover estimates obtained from the country models for each of the other EFM economies (spillover
+destinations) are aggregated using their respective GDP shares, which is then compared with the
+spillover estimate for other EFM (as an aggregate) obtained from the baseline model. Fifth, we
+estimate a factor-augmented version of the baseline model by replacing aggregate growth in each
+of the country groups, i.e. G7, EM7, and other EFM, with the estimated common factor of growth
+in individual economies in each group respectively. For instance, we replace aggregate G7 growth
+with the common factor of growth in individual G7 economies.18 Since the common factors are
+not a-priori dependent on GDP weights, they serve as an alternative way to represent “aggregate”
+growth dynamics in each of the country groups. Sixth, we consider BRICS (Brazil, Russia, India,
+China, and South Africa) as an alternative group to characterize the large emerging markets, and
+compare our headline result (i.e. spillovers from EM7) with spillover estimates from BRICS.19
+Finally, we add some other countries to our baseline other EFM group: Hong Kong SAR, China;
+Singapore; and Korea Republic.
+
+   Table 1 presents the results. We report the median responses of growth in other EFM to a
+1 percentage point increase in EM7 growth along with the 16-84 percent con…dence bands. As
+    17
+     Our results are robust when the shock sizes are re-calibrated such that EM7 and China’ s growth increase by their
+respective 1 standard deviation on impact (Figure A3 in the Supplementary Appendix).
+  18
+     The common factors are estimated as the …rst principal component of growth in individual economies in each
+group. As is standard in principal component analysis, the absolute scale of the estimated factors is unidenti…ed.
+Hence, the point estimates of the spillovers are less comparable with the baseline results. We use this speci…cation
+primarily to check the direction and statistical signi…cance of spillover estimates.
+  19
+     Among EM economies, South Africa is ranked 13th in terms of GDP size in 2015 and hence, does not feature
+in our EM7. Since South Africa, as a member of BRICS, is a spillover source in this speci…cation, the spillover
+destination is taken to be other EFM minus South Africa. For robustness, we also consider other alternative groups
+as the spillover source. For instance, we analyze spillovers from the group “EM7 plus South Africa”. We also consider
+other alternative groups by adding each of Hong Kong SAR China, Singapore, and Korea Republic to EM7. Our
+headline results are robust to these alternative groupings (Table A3).
+
+
+                                                         10
+expected, when the global …nancial crisis is controlled for, the point estimates of spillovers from
+EM7 to other EFM are slightly smaller than what the baseline model suggests. Spillovers in the
+baseline model are marginally smaller than those in the alternative model speci…cation assuming
+exogenous oil prices. This suggests that an increase in oil prices induced by the increase in growth
+in EM7, as in the baseline model, o¤sets some of the favorable spillover e¤ects to other EFM
+given the latter’s net-oil importing status. The point estimates of spillovers from BRICS are also
+insigni…cantly di¤erent from those from EM7 given the overlapping con…dence bands. While the
+point estimates of spillovers from the rest of the alternative model speci…cations deviate somewhat
+from those of the baseline model, those deviations are statistically insigni…cant as well. All in all, a
+robust …nding from all these speci…cations is that spillover estimates are sizeable and statistically
+signi…cant. We obtain very similar results when the baseline model is estimated by including VIX
+instead of EMBI. Our headline results are also robust to the inclusion or exclusion of U.S. interest
+rates.
+
+    We also check the robustness of the spillover estimates from individual EM7. The baseline
+model measures spillovers from each of the EM7 while controlling for the rest of the EM7. This
+guards against any potential bias in spillover estimates from, say Brazil, if spillovers from the rest
+of the EM7 (e.g. China) were signi…cant. For robustness, we measure spillovers from each of the
+EM7 without controlling for the rest of EM7.
+
+    Figure 7A presents the results from the aggregate model. The point estimates are quite close to
+the baseline speci…cation (Figure 5A). More importantly, our headline result remains that China
+dominates as a spillover source among the EM7. In addition, as in the baseline speci…cation,
+spillovers from Russia, while smaller than China’ s, are non-trivial while spillovers from the rest of
+the EM7 economies are negligible and/or statistically insigni…cant. Figures 7B presents the results
+from the alternative speci…cation of the country model. These are in line with the baseline results
+(Figure 5B) as well. In sum, our earlier …nding that among the EM7, spillovers from China are the
+largest and have a global outreach is robust to changes in the model speci…cation.
+
+
+5    Conclusion
+We provide empirical estimates of spillovers from the largest seven emerging market (EM7) economies
+using a parsimonious VAR model. Our paper adds to the existing literature on spillovers from the
+major emerging markets in several dimensions. First, by using a large quarterly dataset that in-
+cludes advanced, emerging, and frontier economies, it assesses the global implications of spillovers
+from EM7. Second, it examines how spillovers from EM7 compare with those originating from the
+G7. Third, using a common methodology, it includes a disciplined comparison of spillovers origi-
+nating from the individual EM7 economies in the context of a model that includes all the major
+variables that are featured in a standard small open economy DSGE model.
+
+    Our results suggest that spillovers from EM7 to other emerging and frontier markets are sizeable:
+a 1 percentage point increase in EM7 growth can raise growth in other EFM by about 0.9 percentage
+point in cumulative terms at the end of 3 years. On the contrary, we …nd that spillovers from EM7
+to advanced economies are, on average, modest and statistically insigni…cant. On balance, global
+growth could increase by 0.6 percentage point at the three-year horizon re‡ ecting the economic size
+of emerging markets, in particular EM7. Among the EM7 economies, spillovers from China are
+the largest and permeate globally. Sizeable as they are, spillovers from EM7 are somewhat smaller
+than those originating from G7 economies.
+
+                                                  11
+    By providing a set of baseline stylized facts, these results constitute ground work for the speci-
+…cation, calibration and evaluation of DSGE models that analyze cyclical spillovers from advanced
+and emerging economies. Understanding the magnitude and channels of spillovers from EM7 is
+a fertile ground for future theoretical and empirical research. Future work can usefully consider
+the roles played by common shocks (e.g. common monetary and …scal policy shocks) and the
+importance of trade and …nancial linkages in transmitting cross-border spillovers from EM7 and
+G7.
+
+
+
+
+                                                 12
+References
+ [1] Ahuja, A., and M. Nabar. 2012. “Investment-Led Growth in China: Global Spillovers.”Work-
+     ing Paper 12/267, International Monetary Fund, Washington, DC.
+
+ [2] Alturki, F., J. Espinosa-Bowen, and N. Ilahi. 2009. “How Russia A¤ects the Neighborhood:
+     Trade, Finance, and Remittance Channels.” Working Paper 09/277, International Monetary
+     Fund, Washington, DC.
+
+ [3] Ambler, S., E. Cardia, C. Zimmermann. 2002. “International Transmission of the Business
+     Cycle in a Multi-sector Model.” European Economic Review 46 (2): 273–300.
+
+ [4] Andrle, M., R. Garcia-Saltos, and G. Ho. 2013. “The Role of Domestic and External Shocks
+     in Poland: Results from an Agnostic Estimation Procedure.”Working Paper 13/220, Interna-
+     tional Monetary Fund, Washington, DC.
+
+ [5] Canova. F. 2005. “The Transmission of US Shocks to Latin America.” Journal of Applied
+     Econometrics 20 (2): 229-251
+
+ [6] Canova, F., and J. Marrinan. 1998. “Sources and Propagation of International Output Cycles:
+     Common Shocks or Transmission?” Journal of International Economics 46 (1): 133–   166.
+
+ [7] Claessens, S., M. A. Kose, M. E. Terrones. 2012. “How do Business and Financial Cycles
+     Interact?” Journal of International Economics 87(1): 178-190.
+
+ [8] Comin, D., N. Loayza, F. Pasha, and L. Serven. 2014. “Medium Term Business Cycles in
+     Developing Countries.” American Economic Journal: Macroeconomics, 6(4): 209-45.
+
+ [9] De Walque, G., F. Smets, and R. Wouters. 2005. “An Estimated two-country DSGE Model for
+     the Euro Area and the US Economy.” National Bank of Belgium, Mimeo, European Central
+     Bank.
+
+[10] Didier, T., M.A. Kose, F. Ohnsorge, and L. Ye. 2015. “Slowdown in Emerging Markets: Rough
+     Patch or Prolonged Weakness?” Policy Research Note 4, World Bank, Washington, DC.
+
+[11] Diebold, F. X. and K. Yilmaz. 2015. “Financial and Macroeconomic Connectedness: A Network
+     Approach to Measurement and Monitoring.” Oxford: Oxford University Press.
+
+[12] Doyle, B., and J. Faust. 2002. “An Investigation of Comovements among the Growth Rates
+     of the G-7 Countries.” Federal Reserve Bulletin 427- 437, Board of Governors of the Federal
+     Reserve System, Washington, DC.
+
+[13] Eickmeier, S. 2007. “Business Cycle Transmission from the US to Germany— A Structural
+     Factor Approach.” European Economic Review 51 (3): 521-551.
+
+[14] Frankel, J., and A. Rose. 1998. “The Endogeneity of the Optimum Currency Area Criteria.”
+     The Economic Journal 108: 1009–   1025.
+
+[15] Galí, J. and T. Monacelli. 2005. “Monetary Policy and Exchange Rate Volatility in a Small
+     Open Economy.” Review of Economic Studies 72: 707–   734.
+
+[16] Gregory, A.W., A. Head, J. Raynauld. 1997. “Measuring World Business Cycles.”International
+     Economic Review 38: 667–  702.
+
+
+                                              13
+[17] Ilzetzki, E., E. G. Mendoza, and C. A. Vegh. 2013. “How Big (Small?) are Fiscal Multipliers?”
+     Journal of Monetary Economics 60 (2): 239-254.
+
+[18] Inoue, T., D. Kaya, and H. Ohshige. 2015. “The Impact of China’s Slowdown on the Asia
+     Paci…c Region: An Application of the GVAR Model.” Policy Research Working Paper 7442,
+     World Bank, Washington, DC.
+
+[19] Kose, M. A. 2002. “Explaining Business Cycles in Small Open Economies: How much do World
+     Prices Matter?”’Journal of International Economics, 56(2): 299-327.
+
+[20] Kose, M. A., C. Otrok, and C. Whiteman. 2003. “International Business Cycles: World, Re-
+     gion, and Country Speci…c Factors.” American Economic Review 93 (4): 1216-1239.
+
+[21] Kose, M. A., and E. Prasad. 2010. “Emerging Markets: Resilience and Growth Amid Global
+     Turmoil.” Washington: Brookings Institution Press.
+
+[22] Kose, M. A., E. Prasad, and M. Terrones. 2009. “Does Financial Globalization Promote Risk
+     Sharing?” Journal of Development Economics 89: 258– 270.
+
+[23] Litterman, R.B. 1986. “Forecasting with Bayesian Vector Autoregressions— Five Years of Ex-
+     perience.” Journal of Business & Economic Statistics, 4 (1): 25-38.
+
+[24] Lubik, T. and F. Schorfheide. 2007. “Do Central Banks Respond to Exchange Rate Movements?
+     A Structural Investigation.” Journal of Monetary Economics 54: 1069– 1087.
+
+[25] Magnus, G. 2011. “Uprising: Will Emerging Markets Shape or Shake the World Economy?”
+     Hoboken, New Jersey: John Wiley and Sons.
+
+[26] Neumeyer, A. and F. Perri. 2005. “Business Cycles in Emerging Economies: The Role of
+     Interest Rates.” Journal of Monetary Economics 52(2): 345-380.
+
+[27] Obiora, K. 2009. “Decoupling from the East toward the West? Analyses of Spillovers to the
+     Baltic countries.” IMF Working Paper 09/129. International Monetary Fund, Washington,
+     DC.
+
+[28] Sharma, R. 2012. “Breakout Nations: In Pursuit of the Next Economic Miracles.” New York:
+     Norton.
+
+[29] Stock, J., and M. Watson. 2005. “Understanding Changes in International Business Cycle
+     Dynamics.” Journal of the European Economic Association 3 (5): 968-1006.
+
+
+
+
+                                               14
+Figure 1: Global importance of Emerging Markets and EM7
+ A. EM share of Global Output                                                    B. EM contribution to global growth
+
+    Percent                                                                         Percentage point
+    80                                                                              3.5
+
+    60
+                                                                                    2.5
+    40
+                                                                                    1.5
+    20
+                                                                                    0.5
+     0
+                1990s                   2000-08                2010-15                           1990s                  2000-08               2010-15
+                                                                                    -0.5
+               China       Brazil     India       Russia       Mexico
+                                                                                              China       Brazil        India      Russia       Mexico
+               Indonesia   Turkey     Other EM    G7                                          Indonesia   Turkey        Other EM   G7           World
+ C. Global integration of EM and AM                                              D. Global integration of EM7 and G7
+
+    Percent                                                                         Percent
+                       EM 2000 (2005)         EM 2013 (2014)                                           EM7 2000 (2005)       EM7 2013 (2014)
+   100                                                                              70
+                       AM 2000 (2005)         AM 2013 (2014)                                           G7 2000 (2005)        G7 2013 (2014)
+                                                                                    60
+     80
+                                                                                    50
+     60                                                                             40
+
+     40                                                                             30
+                                                                                    20
+     20
+                                                                                    10
+      0                                                                               0
+                 Trade              Remittances             FDI flows                            Trade              Remittances             FDI flows
+
+
+Note: EM stands for emerging markets; EM7 for the group of 7 countries: Brazil, China, India, Indonesia, Mexico, Russia, and Turkey; G7 stands for the group of
+7 countries: Canada, France, Germany, Italy, Japan, United Kingdom, and United States; AM for advanced markets.
+C.D. Due to data constraints, global trade (exports plus imports) from 2000 and 2013; remittances (inflows plus outflows) data from 2000 and 2013; foreign direct
+investment (FDI) flows (inflows plus outflows) from 2000 and 2014; and international investment position (IIP, including direct investment, portfolio investment,
+financial derivatives, and other investment assets and liabilities) from 2005 and 2013.
+
+
+
+
+                                                                               15
+Figure 2: Impulse responses due to a 1 percentage point increase in EM7 growth
+ A. Other EFM                                           B. G7
+
+   Percentage point                                           Percentage point
+
+  1.4                                                         0.3
+  1.2                                                         0.2
+  1.0                                                         0.1
+                                                              0.0
+  0.8
+                                                             -0.1
+  0.6
+                                                             -0.2
+  0.4                                                        -0.3
+  0.2                                                        -0.4
+  0.0                                                        -0.5
+         1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16                     1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+ C. Global economy                                           D. EM7
+
+   Percentage point                                           Percentage point
+
+  1.2                                                        4.0
+  1.0
+                                                             3.0
+  0.8
+  0.6                                                        2.0
+  0.4
+                                                             1.0
+  0.2
+  0.0                                                        0.0
+         1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16                     1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+ E. Oil prices
+
+   Percentage point
+
+  25.0
+
+  20.0
+
+  15.0
+
+  10.0
+
+   5.0
+
+   0.0
+         1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+
+Note: Other EFM refers to the group of emerging and frontier markets excluding EM7. The graphs show the cumulated
+impulse responses at different horizons due to a 1 percentage point increase on impact in EM7 growth. Global is GDP-
+weighted average of the response of EM7, other EFM, and G7 responses. Solid lines represent medians, and dotted
+lines represent 16-84 percent confidence bands.
+
+
+
+
+                                                        16
+Figure 3: Impulse responses due to a 1 percentage point increase in G7 and EM7 growth
+            A. Other EFM
+
+              Percentage point
+
+               3.0
+                             G7        EM7
+               2.5
+
+               2.0
+
+               1.5
+
+               1.0
+
+               0.5
+
+               0.0
+                         On Impact            1 Year             2 Years            3 Years
+
+             B. Global economy
+
+              Percentage point
+
+               4.0
+                              G7        EM7
+               3.5
+
+               3.0
+
+               2.5
+
+               2.0
+
+               1.5
+
+               1.0
+
+               0.5
+
+               0.0
+                         On Impact            1 Year             2 Years            3 Years
+
+
+Note: The graphs show the cumulated impulse responses of growth in other EFM, at different horizons, due to a 1
+percentage point increase on impact in G7 and EM7 growth. The impulse response of the global economy is calculated
+as the GDP-weighted average of the responses of G7, EM7, and other EFM. Solid bars represent medians, and error
+bars represent 16-84 percent confidence bands.
+
+
+
+
+                                                       17
+Figure 4: Variance share explained by G7 and EM7 growth shocks
+            A. Other EFM
+              Percent
+                60
+                               G7         EM7
+                50
+
+
+                40
+
+
+                30
+
+
+                20
+
+
+                10
+
+
+                  0
+                          On Impact             1 Year              2 Years             3 Years
+
+             B. Global economy
+
+              Percent
+               100             G7         EM7
+                90
+                80
+                70
+                60
+                50
+                40
+                30
+                20
+                10
+                  0
+                          On Impact             1 Year              2 Years             3 Years
+
+
+
+Note: The graphs show the variance share of growth in other EFM (Figure A) and the global economy (Figure B), at
+different horizons, explained by shocks to G7 and EM7 growth. The variance share of the global economy is calculated
+as the GDP-weighted average of the variance shares of G7, EM7, and other EFM. Solid bars represent medians, and
+error bars represent 16-84 percent confidence bands.
+
+
+
+
+                                                         18
+Figure 5: Impulse responses due to a 1 percentage point increase in growth in individual EM7
+ A. Aggregate spillovers                                  B. Country spillovers
+
+    Percentage point                                                            Percentage point
+    1.2                                                                          1.5      20-80 percentile range                   Average
+    0.8                                                                          1.0
+
+    0.4                                                                          0.5
+
+    0.0                                                                          0.0
+
+   -0.4                                                                         -0.5
+                   Russia
+
+
+
+
+                                                                                                Russia
+                                                      Indonesia
+
+                                                                  Turkey
+
+
+
+
+                                                                                                                                      Indonesia
+
+                                                                                                                                                  Turkey
+                            India
+
+
+
+
+                                             Mexico
+
+
+
+
+                                                                                                         India
+                                    Brazil
+
+
+
+
+                                                                                                                 Brazil
+
+                                                                                                                          Mexico
+           China
+
+
+
+
+                                                                                        China
+Note:
+A. The graph shows cumulated impulse responses of growth in other EFM at the end of three years due to a 1
+percentage point increase on impact in each of the EM7 growth. These results are from the aggregate VAR model.
+Solid bars represent medians, and the error bands represent 16-84 percent confidence bands.
+B. The graph shows the cumulated impulse responses at the end of three years due to a 1 percentage point increase on
+impact in each of the EM7 growth. These results are from the country models. For each spillover source country, the
+bar denotes the 20-80 percentile range of the responses of other EFM economies and the red diamond denotes the
+cross-sectional average response.
+
+
+
+
+                                                                           19
+Figure 6: Impulse responses due to a 1 percentage point increase in EM7 and China’s growth
+              Percentage point
+              1.2
+                            EM7         China
+              1.0
+
+              0.8
+
+              0.6
+
+              0.4
+
+              0.2
+
+              0.0
+
+             -0.2
+                        On Impact               1 Year            2 Years             3 Years
+
+
+Note: The graphs show the cumulated impulse responses of growth in other EFM, at different horizons, due to a 1
+percentage point increase on impact in EM7 and China’s growth. Solid bars represent medians, and error bars represent
+16-84 percent confidence bands.
+
+
+
+
+                                                         20
+Figure 7: Robustness checks: Spillovers from individual EM7
+ A. Aggregate spillovers                                 B. Country spillovers
+
+    Percentage point                                                            Percentage point
+    1.2                                                                         1.5         20-80 percentile range                Average
+
+    0.8                                                                         1.0
+
+    0.4                                                                         0.5
+
+    0.0                                                                         0.0
+
+   -0.4                                                                         -0.5
+                   Russia
+
+
+
+
+                                                                                               Russia
+                                                      Indonesia
+
+                                                                  Turkey
+
+
+
+
+                                                                                                                                    Indonesia
+
+                                                                                                                                                Turkey
+                            India
+
+
+
+
+                                             Mexico
+
+
+
+
+                                                                                                        India
+                                    Brazil
+
+
+
+
+                                                                                                                Brazil
+
+                                                                                                                         Mexico
+           China
+
+
+
+
+                                                                                       China
+Note:
+A. The graph shows cumulated impulse responses at the end of three years due to a 1 percentage point increase on
+impact in each of the EM7 growth. These results are from the alternative specification of the aggregate model where
+growth in the rest of EM7 is not controlled for while measuring spillovers from each EM7.
+B. The graph shows the cumulated impulse responses at the end of three years due to a 1 percentage point increase on
+impact in each of the EM7 growth. These results are from the alternative specification of the country models where
+growth in the rest of EM7 is not controlled for while measuring spillovers from each EM7. For each spillover source
+country, the bar denotes the cross-sectional 20-80 percentile range of the responses of other EFM economies and the
+red diamond denotes the cross-sectional average response.
+
+
+
+
+                                                                           21
+Table 1: Robustness checks: Spillovers from EM7
+
+                                                    On impact        1 year        2 years        3 years
+                                                      0.28            0.79          0.86           0.87
+        Aggregate model (baseline)
+                                                    [0.15 0.43]    [0.48 1.13]    [0.49 1.3]    [0.46 1.32]
+                                                       0.26           0.78           0.84          0.85
+        Global financial crisis dummy
+                                                     [0.14 0.4]    [0.52 1.07]    [0.53 1.18]   [0.54 1.19]
+                                                       0.28           0.87           1.34          1.55
+        Controlling for oil prices
+                                                     [0.15 0.4]    [0.58 1.18]    [0.93 1.81]   [1.04 2.17]
+                                                        0.39           0.97           0.93          0.93
+        Industrial production series
+                                                      [0.1 0.7]     [0.4 1.6]       [0.3 1.6]     [0.3 1.6]
+                                                        0.26           0.81           0.88          0.89
+        Country model
+                                                    [-0.07 0.59]   [0.26 1.41]    [0.23 1.58]   [0.24 1.62]
+                                                        0.28           0.54           0.52          0.51
+        Factor-augmented model
+                                                    [0.01 0.57]    [0.17 0.96]     [0.1 0.94]   [0.09 0.95]
+                                                        0.20           0.69           0.80          0.80
+        Spillovers from BRICS
+                                                    [0.08 0.34]    [0.39 0.98]    [0.43 1.16]    [0.42 1.2]
+        Spillovers to other EFM plus Hong Kong,         0.59           1.14           1.06          1.05
+        Singapore, Korea Rep.                       [0.43 0.75]    [0.81 1.51]     [0.67 1.5]    [0.65 1.5]
+
+Note: The table shows the cumulated impulse responses of growth in other EFM, for different horizons, due to a 1
+percentage point increase on impact in EM7 growth. These are from the alternative specifications of the aggregate
+model. Bolded denote the medians and the numbers in the parentheses are the 16-84 percent confidence bands. Global
+financial crisis dummy: includes a dummy for the global financial crisis of 2008-09; Controlling for oil prices: oil
+prices are treated as an exogenous regressor in the model; Industrial production series: estimates are based on
+industrial production growth; Country model: spillover estimates for the individual EM excluding EM7 economies
+from the country models are aggregated by GDP weights; Factor-augmented model: estimates are based on the
+common factor (first principal component) each of G7, EM7, and other EFM economies; Spillovers from BRICS:
+estimates are based on spillovers from BRICS. The spillover destination in this case is other EFM minus South Africa;
+Spillovers to other EFM plus Hong Kong, Singapore, Korea Rep. : estimates for alternative definition of spillover
+destination that includes other EFM and Hong Kong, Singapore, Korea Republic.
+
+
+
+
+                                                         22
+                 Supplementary Appendix
+
+How Important are Spillovers from Major Emerging Markets?
+
+         Raju Huidrom, M. Ayhan Kose, and Franziska L. Ohnsorge
+
+
+
+
+                                   23
+Table A1: Country classification
+
+                 Advanced Markets                                 Emerging Markets
+                                                                                                                                Frontier Markets
+         G7           Other Advanced Markets                EM7        Other Emerging Markets
+Canada*          Australia          Luxembourg    Brazil*         Chile*             Poland*         Argentina       Ecuador            Kenya       Romania*
+France*          Austria            Malta         China*          Colombia           Qatar           Azerbaijan      El Salvador        Kuwait      Senegal
+Germany*         Belgium            Netherlands   India*          Czech Republic*    Saudi Arabia    Bahrain         Gabon              Lebanon     Serbia
+Italy*           Denmark            Norway        Indonesia*      Egypt              South Africa*   Bangladesh      Georgia            Mauritius   Sri Lanka
+Japan*           Finland            New Zealand   Mexico*         Hungary*           Thailand*       Bolivia         Ghana              Mongolia    Tunisia
+                                                                                     United Arab
+United Kingdom* Greece              Portugal      Russia*         Malaysia*                          Botswana        Guatemala          Namibia     Ukraine
+                                                                                     Emirates
+                 Hong Kong SAR,
+United States*                  Singapore         Turkey*         Morocco                            Bulgaria*       Honduras           Nigeria     Uruguay
+                 China
+                 Ireland        Spain                             Pakistan                           Costa Rica*     Jamaica            Oman        Venezuela
+                 Iceland            Sweden                        Peru*                              Cote d'Ivoire   Jordan*            Panama      Vietnam
+                 Korea Republic     Switzerland                   Philippines*                       Croatia*        Kazakhstan         Paraguay*   Zambia
+
+Note: The table shows the list of countries and their classification. Emerging markets (EM) include economies that currently are, or have been for most of their
+recent history, middle-income countries with a long established record of access to international financial markets. Frontier markets (FM) include economies that
+are usually smaller and less developed than EM and, in the view of investors, considerably riskier (although economies undergoing extreme economic or political
+instability are excluded). Technically, the EM and FM classification in this paper consolidates the ones independently developed by FTSE and S&P. The Advanced
+Markets (AM) category follows the IMF classification. Countries with an asterisk are the ones included in the model estimation. G7 and EM7 represent the major
+AM and EM economies respectively.
+
+
+
+
+                                                                                    24
+Table A2: Database
+
+          Variable                           Definition                    Frequency                            Source
+                                                             a
+Output                       Real gross domestic product (GDP)             Quarterly   Ilzetzki, Mendoza, and Vegh (2013), OECD, Haver Analytics
+Output                       Nominal gross domestic product in US$ (GDP)   Annual      World Economic Outlook (October 2016)
+EMBI                         Emerging market bond index                    Quarterly   J.P. Morgan
+U.S. interest rate           Nominal yield on 10-year government bonds     Quarterly   Bloomberg
+Oil price                    Nominal oil prices                            Quarterly   World Bank Pink Sheet
+Commodity prices             Nominal commodity prices                      Quarterly   World Bank Pink Sheet
+                             Commodity exports defined using SITC 4th
+Commodity exports            revision at 4 digits                          Annual      World Integrated Trade Solution (WITS)
+Real effective exchange rate Real effective exchange rate b                Quarterly   BIS, Bruegel datasets
+U.S. CPI                     Consumer price index                          Quarterly   Haver Analytics
+VIX                          CBOE volatility index                         Quarterly   CBOE
+
+
+Note: The table describes the variables used in the model estimation and their sources.
+a The main source for the quarterly series is Ilzetzki, Mendoza, and Vegh (2013). This database which ends around
+2008 is extended by splicing from different sources.
+b The narrow index wherever available is taken while the remainder uses the broad index. Details are available upon
+request.
+
+
+
+
+                                                                     25
+Table A3: Robustness checks: Spillovers from alternative definitions of large EM
+
+                                                   On impact        1 year        2 years       3 years
+                                                     0.28            0.79          0.86          0.87
+        Spillovers from EM7 (baseline)
+                                                   [0.15 0.43]    [0.48 1.13]    [0.49 1.3]    [0.46 1.32]
+                                                       0.29           0.80          0.85           0.84
+        Spillovers from EM7 plus South Africa
+                                                   [0.16 0.44]    [0.48 1.14]    [0.47 1.3]    [0.44 1.31]
+        Spillovers from EM7 plus Hong Kong             0.28           0.78          0.85           0.85
+        SAR, China                                 [0.16 0.42]    [0.49 1.12]   [0.49 1.27]    [0.47 1.29]
+                                                       0.28           0.79          0.87           0.87
+        Spillovers from EM7 plus Singapore
+                                                   [0.16 0.42]     [0.5 1.11]   [0.51 1.28]     [0.48 1.3]
+                                                       0.28           0.77          0.82           0.80
+        Spillovers from EM7 plus Korea Rep.
+                                                   [0.16 0.41]    [0.49 1.1]    [0.44 1.22]    [0.41 1.22]
+
+Note: The table shows the cumulated impulse responses of growth in other EFM, for different horizons, due to a 1
+percentage point increase on impact in EM7 growth. These are from the aggregate model using alternative definitions
+of large EM as spillover source. Bolded denote the medians and the numbers in the parentheses are the 16-84 percent
+confidence bands. Spillovers from EM7 plus South Africa: spillover source is the group of EM7 countries and South
+Africa. The spillover destination in this case is other EFM minus South Africa; Spillovers from EM7 plus Hong
+Kong SAR, China: spillover source is the group of EM7 countries and Hong Kong SAR, China; Spillovers from
+EM7 plus Singapore: spillover source is the group of EM7 countries and Singapore; Spillovers from EM7 plus
+Korea Rep.: spillover source is the group of EM7 countries and Korea Republic.
+
+
+
+
+                                                        26
+Figure A1: Spillovers from China: Commodity exporters vs. commodity importers
+
+              Percentage point
+              1.0
+              0.9
+              0.8
+              0.7
+              0.6
+              0.5
+              0.4
+              0.3
+              0.2
+              0.1
+              0.0
+                             Commodity exporter                      Commodity importer
+
+
+
+Note: The graphs show the cumulated impulse responses at the end of three years due to a 1 percentage point increase
+on impact in China’s growth. These are estimated using the country models. In each group, the bar denotes the cross-
+sectional 20-80 percentile range of the responses of other EFM economies in that group and the red diamond denotes
+the respective cross-sectional average response. Commodity exporters include Chile, Costa Rica, Malaysia, Paraguay,
+and Peru. Commodity importers include Bulgaria, Croatia, Hungary, Jordan, Poland, Republic of Korea, Romania,
+and Thailand.
+
+
+
+Figure A2: Impulse responses due to a 1 percentage point increase in G7 and EM7 growth: Robustness
+              Percentage point
+              1.8
+
+              1.6          G7         EM7
+              1.4
+
+              1.2
+
+              1.0
+
+              0.8
+
+              0.6
+
+              0.4
+
+              0.2
+
+              0.0
+                        On Impact             1 Year             2 Years             3 Years
+
+
+Note: The graphs show the cumulated impulse responses of growth in other EFM, at different horizons, due to a 1
+standard deviation increase on impact in G7 and EM7 growth. Solid bars represent medians, and error bars represent
+16-84 percent confidence bands.
+
+
+                                                        27
+Figure A3: Impulse responses due to a 1 percentage point increase in EM7 and China’s growth: Robustness
+                   Percentage point
+                    0.9
+                   0.8                     EM7                China
+
+                   0.7
+                   0.6
+                   0.5
+                   0.4
+                   0.3
+                   0.2
+                   0.1
+                   0.0
+                   -0.1
+                                   On Impact                            1 Year                    2 Years                     3 Years
+
+
+Note: The graphs show the cumulated impulse responses of growth in other EFM, at different horizons, due to a 1
+standard deviation increase on impact in EM7 and China’s growth. Solid bars represent medians, and error bars
+represent 16-84 percent confidence bands.
+
+
+
+Figure A4: Impulse responses due to a 1 percentage point increase in growth in individual EM7: Robustness
+ A. Aggregate spillovers                                 B. Country spillovers
+
+    Percentage point                                                                       Percentage point
+    1.2                                                                                    1.5       20-80 percentile range                        Average
+    0.8                                                                                    1.0
+
+    0.4                                                                                    0.5
+
+    0.0                                                                                    0.0
+
+   -0.4                                                                                    -0.5
+                          Russia
+
+
+
+
+                                                                                                             Russia
+                                                                 Indonesia
+
+                                                                             Turkey
+
+
+
+
+                                                                                                                                                     Indonesia
+
+                                                                                                                                                                 Turkey
+                                   India
+
+                                            Brazil
+
+                                                     Mexico
+
+
+
+
+                                                                                                                      India
+
+                                                                                                                                 Brazil
+
+                                                                                                                                          Mexico
+           China
+
+
+
+
+                                                                                                     China
+
+
+
+
+Note:
+A. The graph shows cumulated impulse responses of growth in other EFM at the end of two years due to a 1 percentage
+point increase on impact in each of the EM7 growth. These results are from the aggregate VAR model. Solid bars
+represent medians, and the error bands represent 16-84 percent confidence bands.
+B. The graph shows the cumulated impulse responses at the end of two years due to a 1 percentage point increase on
+impact in each of the EM7 growth. These results are from the country models. For each spillover source country, the
+bar denotes the cross-sectional 20-80 percentile range of the responses of other EFM economies and the red diamond
+denotes the cross-sectional average response.
+
+
+
+
+                                                                                      28
+Figure A5: Contribution of EM7 (G7) and the next three largest EM (AM) to EM (AM) output
+              Percent
+               90
+
+               80
+
+               70
+
+               60
+                                                    EM      AM
+               50
+
+               40
+
+               30
+
+               20
+
+               10
+
+                0
+                         EM7/G7            SAU/KOR               POL/AUS           THA/ESP
+
+Note: The blue bars show the EM output share of EM7 and those of the next three largest EM: Saudi Arabia (SAU),
+Poland (POL), and Thailand (THA). The red bars show the AM output share of G7 and those of the next three largest
+AM: Korea Republic (KOR), Australia (AUS), and Spain (ESP).
+
+
+
+
+                                                       29
+

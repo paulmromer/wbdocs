@@ -1,0 +1,1664 @@
+                                                     WPS8160
+
+
+Policy Research Working Paper                       8160
+
+
+
+
+          Online Exports and the Wage Gap
+                                 Marcio Cruz
+                                Emmanuel Milet
+                                Marcelo Olarreaga
+
+
+
+
+Trade and Competitiveness Global Practice Group
+August 2017
+Policy Research Working Paper 8160
+
+
+  Abstract
+ The development of the Internet is often seen as a source                          a priori that an expansion of online exports reduces the
+ of demand for skilled workers and therefore a potential                            wage gap. After correcting for potential endogeneity bias
+ driver of the wage gap between skilled and unskilled work-                         in a sample of 22 developing countries for which online
+ ers. This paper focuses on the impact that international                           trade and wage gap data can be matched, the study finds
+ trade in online platforms has on the wage gap. Because                             that a 1 percent increase in the share of online exports
+ online trade allows smaller firms with relatively more                             over GDP leads to a 0.01 percent decline in the wage gap.
+ unskilled workers to access world markets it can be expected
+
+
+
+
+  This paper is a product of the Trade and Competitiveness Global Practice Group. It is part of a larger effort by the World
+  Bank to provide open access to its research and make a contribution to development policy discussions around the world.
+  Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted
+  at marciocruz@worldbank.org, emmanuel.milet@unige.ch, and marcelo.olarreaga@unige.ch.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+                            Online Exports and the Wage Gap∗
+                  Marcio Cruz†             Emmanuel Milet‡               Marcelo Olarreaga§
+
+
+
+
+Keywords: wage gap, online trade.
+JEL codes: F14, J31, L86.
+
+
+
+
+  ∗
+                                                                    eline Carr`
+     We are grateful to Rita Almeida, Omar Arias, Irene Brambilla, C´         ere, Alvaro Gonzalez, Daniel Lederman,
+Andreas Lendle, J´ er´emy Lucchetti, Monika Mr´ azov´     ed´
+                                                     a, Fr´ eric Robert-Nicoud, Indhira Santos, Shawn Tan, Pierre-
+Louis V´ezina, and participants at workshops at the World Bank, the Asian Development Bank Institute, the Tunis
+Business School, and at the Western Economic Association conference in San Diego for very constructive comments
+and suggestions. We also gratefully acknowledge support from the r4d program on Employment funded by Swiss
+National Science Foundation and the Swiss Development Cooperation, as well as the Knowledge for Change Program
+and the World Bank’s Chief Economist Oﬃce for Latin America.
+   †
+     World Bank and UFPR, email: marciocruz@worldbank.org
+   ‡
+     University of Geneva, email: emmanuel.milet@unige.ch
+   §
+     University of Geneva, CEPII, and CEPR, email: marcelo.olarreaga@unige.ch
+1        Introduction
+
+We explore the impact of online international trade on the wage gap between skilled and unskilled
+workers. In a sample of 22 developing countries for which we have data on cross border online trade,
+and labor surveys to estimate the wage gap, we ﬁnd that a one percent increase in the share of online
+exports over GDP reduces the wage gap by 0.01 percent. This can be explained by the information
+providing mechanisms in online platforms that reduce the ﬁxed cost of exporting, allowing smaller
+ﬁrms with a more unskilled workforce to export. We provide evidence supporting this mechanism
+as the reduction in the wage gap associated with online exports is larger in countries with a larger
+share of small ﬁrms.
+        This result is important for at least three reasons. First, while world trade increased by 92
+percent (8 percent annual growth) between 2004 and 2012, cross-border online trade grew more
+than 7 times faster (see Figure 1 where the left axis shows the growth in world trade, and the
+right axis the growth in online trade). Even if cross-border e-commerce only represents around 20
+percent of online sales, it has been rapidly growing and its share is expected to double over the next
+5 years (UNCTAD, 2015). For policy makers, it is important to assess early on the consequences
+of such a rapidly growing phenomenon. Second, the wage gap has been declining in the developing
+world over the last decade (Cruz and Milet, 2017). Our sample is no exception, with an average
+annual decline of 1 percent as can be seen from Figure 2. Understanding the forces behind the
+decline in the wage gap, and the role played by employment in small ﬁrms, can provide useful tools
+in the ﬁght against income inequality. Third, it contributes to the debate on how technological
+progress aﬀects skilled and unskilled workers, and ultimately income inequality. Does technological
+progress promote or reduce income inequality? While the development of the Internet has often
+been seen as skilled biased and contributing to income inequality (Akerman et al., 2015), this paper
+suggests otherwise. Online platforms that allow small ﬁrms to access world markets help unskilled
+workers and contribute to a reduction in income inequality.1
+        We face several challenges. First, data on online cross border trade ﬂows are not yet collected by
+any national or international agency, although some proposals have been put forward (UNCTAD,
+2015). As a proxy we use cross-border ﬂows on the eBay platform made available by Lendle et al.
+    1
+     As noted by Varian (2005): “big enterprises were the ﬁrst to reap the beneﬁts of this technological progress. But
+the impact of information technology on small and medium-size enterprises may yet turn out to have the most impact
+on the economy ”. He also remarked more recently that small businesses are taking advantage of technologies which
+used to be the sole privilege of large companies: “[. . . ] even the smallest company can now aﬀord a communications
+and computational infrastructure that would have been the envy of a large corporation 15 years ago ”(Varian, 2011).
+
+
+
+                                                          1
+(2016). One problem with using eBay ﬂows is that the platform originally started as a peer-to-peer
+online market where second-hand products were auctioned, even if it rapidly became a platform
+mainly used by professional sellers on ﬁxed price transactions. Because we want our proxy to reﬂect
+the access of ﬁrms to foreign consumers via an online platform rather than the general expansion of
+e-commerce, we decided to disregard transactions that were undertaken under the auction system.
+We are still left with measurement error due to the fact that cross border eBay ﬂows are only a
+fraction of total online transactions between ﬁrms and foreign consumers. We will address this
+measurement error using an instrumental variable strategy described below.
+      The second challenge we face is endogeneity. Indeed, other unobserved factors such as techno-
+logical progress may simultaneously determine online trade and the wage gap, thus introducing a
+bias in our estimates. To correct for this (and measurement error) we use an instrumental variable
+estimator. We use three instruments: i) the time varying geography determinants of bilateral on-
+line trade ﬂows following Feyrer (2009); ii) the value of domestic online sales in each of the partner
+countries; and iii) the average import tariﬀ in the importing countries. These three variables are
+likely to be valid instruments. Indeed, geography related variables and variables capturing demand
+shocks in importing countries are unlikely to be correlated with other determinants of the wage
+gap in the exporting country.
+      The third challenge is to provide estimates of the wage gap between skilled and unskilled workers
+that are consistent across countries. We do this using the methodology and data provided by Cruz
+and Milet (2017). The raw data are based on labor and household surveys in diﬀerent countries and
+at diﬀerent points in time harmonized by the World Bank in the International Income Distribution
+Database (I2D2). This makes feasible the use of the same methodology and variables to estimate
+the wage gap across countries and time.
+      We are not the ﬁrst to look at the determinants of the wage gap between skilled and unskilled
+workers. Labor economists have emphasized the role played by changes in supply and demand
+to explain changes in the wage gap and ultimately in wage inequality. The workhorse framework
+linking supply and demand to factor prices is developed in Katz and Murphy (1992), later reﬁned
+by several authors (see Card and Lemieux, 2001, for instance). The most recent version of this
+model features skill-biased technologies, i.e. technologies that shift outward the relative demand for
+skilled workers. This skill-biased technology change (SBTC hereafter) induces a permanent shift
+in the demand for the labor service of skilled workers.2 However, technological change need not be
+  2
+      The fact that wage inequalities increased at the same time when many industries were investing in computers
+
+
+
+                                                        2
+biased in favor of skilled workers. Luo (2017) shows that as Europe was experiencing signiﬁcant
+technological progress during the 500 years before the First World War, the wage gap between
+skilled and unskilled workers declined by more than 50%. In our empirical model we will control
+for both demand and supply side determinants of the wage gap. Our contribution is to add as
+potential demand driver the growth in online international trade.
+    The literature has also looked at the importance of trade as a determinant of the wage gap.
+Some trade economists have stressed the fact that the timing of rising wage inequalities in developed
+and developing countries coincided with a rapid increase in international trade ﬂows (see Feenstra
+and Hanson, 2001; Harrison and McMillan, 2011, for surveys). Feenstra and Hanson (1999) ﬁnd
+that imports of intermediate inputs account for about 15 percent of the increase in the relative wage
+of skilled workers in the United States over the period 1979-1990. SBTC is twice as important and
+accounts for about a third of the increase. Evidence from developing countries is more scarce,
+but also suggests that wage inequalities have been driven by episodes of trade liberalization in the
+1980s and 1990s (Goldberg and Pavcnik, 2007). Lower tariﬀs imply that many developed economies
+outsourced part of their production process to lower income countries, which as emphasized by the
+“trading tasks” models (Feenstra and Hanson, 1996; Grossman and Rossi-Hansberg, 2008) can lead
+to increased wage inequalities in both developed and developing countries as long as the tasks being
+outsourced to developing countries are considered as unskilled in the rich country and skilled in the
+low-income country. Autor et al. (2013) ﬁnd that trade with China hurts more unskilled workers
+in the United States, and Autor (2014) and Autor et al. (2015) argue that the negative impact of
+imports from China on wage and employment of unskilled workers in the United States is much
+larger than the impact of technological change.
+    More recently, income inequality has been declining in many developing countries, especially in
+Latin America (De la Torre et al., 2015). Lustig et al. (2013) review some of this literature and
+conclude that the decline in overall inequalities in Latin American countries is to a large extent
+the consequence of a decline in the wage gap, income redistribution associated with government
+transfers, and the boom in commodity prices (Gasparini et al., 2011).
+    To sum up, the existing literature has concluded that both trade and skill biased technological
+progress play a role in explaining changes in the wage gap between skilled and unskilled workers.
+Importantly, these changes substantially contribute to the evolution in income inequality. However,
+gave strong support to the skill-biased technology change hypothesis (Krueger, 1993; Berman et al., 1994; Autor
+et al., 1998; Acemoglu, 2002).
+
+
+
+
+                                                      3
+to our knowledge the impact of online cross border trade on the wage gap between skilled and
+unskilled workers is yet to be investigated.
+    The rest of the paper is organized as follows. Section 2 presents the empirical strategy and
+section 3 the data. Section 4 discusses the empirical results of the impact of online exports on
+the wage gap. Section 5 explores theoretically and empirically the role played by small ﬁrms in
+explaining the impact of online exports on the wage gap. Section 6 concludes.
+
+
+2    Empirical strategy
+
+We explain variations in the wage skill gap within countries and over time with the following
+empirical model:
+
+
+
+
+ln(wage gap)c,t = β1 ln(online exportsc,t /GDPc,t ) + β2 ln(exportsc,t /GDPc,t )                              (1)
+
+                         +β3 ln(skilled/unskilled)c,t + β4 ln(Internet usersc,t /P opc,t ) + δc + ηt +        c,t
+
+
+
+where β s are parameters to be estimated, (skilled/unskilled )c,t is the relative supply of skilled
+workers, δc and ηt are country and year ﬁxed eﬀects, and               c,t   is the error term. We expect β1 ,
+which captures the impact of online exports on the wage gap to be negative. Indeed, the reduction
+in the ﬁxed cost of entering foreign markets brought by online platforms helps smaller and less
+productive ﬁrms which tend to hire more unskilled workers, to enter international markets.3 This
+again increases the relative labor demand for unskilled workers. Total exports over GDP controls
+for the overall impact of trade openness on the wage gap. The expected sign is ambiguous as some
+of the early studies have shown that trade increased the wage gap, whereas some of the more recent
+studies have shown that the commodity boom has contributed to a reduction of the wage gap. The
+relative supply of skilled workers should reduce the wage gap and therefore β3 is expected to be
+negative. The share of Internet users in the population is a proxy for skilled biased technological
+change (Akerman et al., 2015) and we therefore expect β4 to be positive.
+    An important concern with the estimation of equation (1) is the endogeneity of online and total
+    3
+      For evidence that small ﬁrms have a more unskilled workforce, see the classic work by Brown and Medoﬀ (1989)
+or Hamermesh (1980). For evidence that online markets help small ﬁrms access otherwise unreachable international
+markets see Lendle et al. (2013). They show that 90 percent of US ﬁrms on the eBay platform export and that their
+size is much smaller than the size of traditional US exporting ﬁrms. Lendle and Olarreaga (2017) provide similar
+evidence for ﬁrms in developing countries.
+
+
+
+
+                                                        4
+exports ﬂows, as well as measurement error associated with the use of eBay cross border ﬂows as
+a proxy for online exports. We address this by instrumenting online and total trade ﬂows using
+three exogenous sources of variation. First, we use the time-varying distance determinant of online
+and total exports as in Feyrer (2009). We expect the impact of distance to vary over time due
+to innovations in the transport sector that has shifted shipments towards air transport, as well
+as technological progress in the information and telecommunication sector. We expect the impact
+of distance to be diﬀerent for online and total trade because technological improvements, which
+reduce information barriers and that we proxy using geographic distance, are likely to be stronger
+for online transactions given the information providing mechanisms in online platforms such as the
+top rated seller or buyer information in online markets (Lendle et al., 2016). Thus the variation in
+the use of these instruments comes from the diﬀerential impact of distance across time and across
+online and oﬄine ﬂows.
+   The second set of instruments capture foreign demand shocks for online and total exports in
+importing countries. In the case of online trade, domestic demand is computed as the sum of
+domestic online transactions and online imports. For total trade, we simply use the GDP of the
+importing country. We expect demand in the importing country to be positively correlated with
+online and total export ﬂows of exporting countries, and uncorrelated with other determinants of
+the wage gap in the exporting country.
+   Finally, we use the average tariﬀ imposed by the importing country. To diﬀerentiate the tariﬀ
+imposed on online and total trade, we use the average import tariﬀ on manufacturing products
+for online trade and the average tariﬀ on all products (including raw materials and agricultural
+products) for total trade. There is no reason to believe that the average tariﬀ imposed by the
+importing country is correlated with the wage gap in the exporting country other than through its
+impact on bilateral trade, which we expect to be negative.
+   We estimate the following six equations:
+
+
+
+
+                                                 5
+                                                            d
+            ln(online exportsx,m,t /GDPx,t ) =             βt ln(distance)x,m + βx,m + βx,t +    x,m,t        (2)
+                                                       t
+            ln(online exportsx,m,t /GDPx,t ) = η ln(online demand)m,t + βx,m + βx,t +              x,m,t      (3)
+
+            ln(online exportsx,m,t /GDPx,t ) = λln(1 + tarif fmanuf )m,t + βx,m + βx,t +            x,m,t     (4)
+
+
+                                                            d
+                    ln(exportsx,m,t /GDPx,t ) =            αt ln(distance)x,m + αx,m + αx,t + µx,m,t          (5)
+                                                       t
+                    ln(exportsx,m,t /GDPx,t ) = θln(GDP )m,t + αx,m + αx,t + µx,m,t                           (6)
+
+                    ln(exportsx,m,t /GDPx,t ) = ψ ln(1 + tarif f )m,t + αx,m + αx,t + µx,m,t                  (7)
+
+
+where ln(online exports )x,m,t and ln(exports )x,m,t are respectively the online and total exports from
+country x to country m in year t. βx,m and αx,m control for time-invariant country-pair speciﬁc
+determinants of trade ﬂows such as distance, colonial linkages, common language, etc. βx,t and αx,t
+are year and country speciﬁc shocks in the exporting country. We use the estimate in equations (2)-
+(7) to predict the log of bilateral online and total exports. To estimate the impact of online trade
+on the wage gap, we need to aggregate the bilateral exports ﬂows at the exporter and year level.
+We ﬁrst take the exponential of the predicted bilateral trade ﬂows estimated by equations (2)-(7).
+We then aggregate these trade ﬂows at the exporter and year level by summing the trade ﬂows over
+all importers each year. After taking logs we use these six variables to instrument the log share of
+online and total exports in GDP.
+
+
+3        Data
+
+The variable of interest is the wage gap between skilled and unskilled workers. We borrow the
+data and methodology from Cruz and Milet (2017). The data source is the International Income
+Distribution Database (I2D2) put together by the World Bank which compiles more than 1,000
+household and labor force surveys from 164 countries over the period 1960-2014 covering more
+than 120 million individuals. The data have been harmonized to the extent possible ensuring that
+conceptual variables have similar meaning, allowing for cross-country analysis.4 For the purpose of
+this study, we selected a restricted sample of 22 countries for which suﬃcient data are available.5
+    4
+        See Montenegro and Hirn (2009) and Montenegro and Patrinos (2014) for more information about the database.
+    5
+        See table 1 for a list of countries and surveys.
+
+
+
+                                                           6
+We kept surveys for which individual information on gender, age, education achievement, and
+labor income (wage) was available and consistent over the period 2004-2012 for which we have
+cross-border trade data. We kept the working age population, and dropped individuals below 15
+and above 64 years of age.6 Finally, we kept workers who reported being paid employees rather
+than self-employed. Wages are reported in various units depending on the country being surveyed.
+We converted them into monthly full-time equivalent.7 We exclude the top and bottom 1% of
+the wage distribution as non-response and under-reporting are typically quite severe among high-
+income households, and the bottom end of the distribution is likely to suﬀer from measurement
+error, misreporting, and omissions to consider ﬁnancial transfers within the household (such as
+remittances for instance). There are ﬁve categories of educational achievement: no education
+or incomplete primary, complete primary, incomplete secondary, complete secondary, and post-
+secondary.
+       We deﬁne skilled workers as workers with at least a complete secondary education.8 The group of
+unskilled workers is made of individuals without education (below primary), incomplete primary and
+complete primary education.9 Following Katz and Murphy (1992) and Acemoglu and Autor (2011),
+wages and labor supply are deﬁned in terms of eﬃciency units by adjusting for the composition
+of the workforce. We follow Acemoglu and Autor (2011) and deﬁne 50 demographic groups of
+individuals based on the ﬁve education categories (no education or incomplete primary education,
+complete primary education, incomplete secondary education, complete secondary education, and
+post-secondary education), ﬁve job experience groups (0-9 years, 10-19 years, 20-29 years, 30-
+39 years, and more than 40 years), and gender (50=5 education groups×5 experience groups×2
+genders). We regress the individual log wage on the ﬁve education dummies, an experience quartic,
+the full interaction between the education dummies and the experience quartic, a dummy for
+   6
+     This restriction does not aﬀect our results. Individuals outside the [15-64] years old interval account for on
+average 4.7% of the population, and 4.6% of the total wage bill.
+   7
+     Wages reported in the various surveys are either daily, weekly, by-weekly, monthly, bi-monthly, quarterly, annually
+or hourly wages. In the case of hourly wages, we multiplied by the number of hours worked during the day, and by
+the number of weeks during the month (52 weeks divided by 12 months). In the case where wages are reported on
+a hourly basis and information on the number of hours is missing, we made the assumption that workers worked 8
+hours per day.
+   8
+     In unreported descriptive statistics, we show that the real wages of workers with complete secondary and post-
+secondary education follow similar trend over time, and so do the wages of workers with below complete secondary
+education. This similarity in the trends suggest that there is a higher degree of homogeneity within the skilled and
+unskilled workers rather than between them.
+   9
+     In unreported descriptive statistics, we looked at the evolution of the real wage for each of these education
+categories. Real wages of workers with complete secondary or post-secondary education followed a similar pattern,
+quite diﬀerent from the one for workers with at most incomplete secondary education.
+
+
+
+
+                                                           7
+whether the individual lives in an urban area, and an industry dummy10 . We then predict wages at
+the corresponding education levels and ﬁve experience levels (at 5, 15, 25, 35, 45 years of experience,
+corresponding to the average experience in each experience group deﬁned above), in each industry.
+We perform separate estimations for men and women. We then take the weighted average of the
+predicted log wage for skilled and unskilled workers. Weights are deﬁned as the average of the labor
+share of each of the 50 demographic groups in each industry over time.11
+         Figure 3 describes the evolution of the wage gap and online exports in some selected countries.12
+The countries were selected so that the variables have similar dimension for illustration purposes.
+Nevertheless, ﬁgure 3 suggests that if the wage gap declined in most countries in our sample, this
+is not the case in the Philippines, for instance.
+         The online trade data are borrowed from Lendle et al. (2016), where we only consider ﬁxed price
+transactions, as the mechanism we have in mind does not go through the auctioning of second-hand
+goods.13 It contains bilateral cross-border ﬂows on the eBay platform over the period 2004-2012.
+Cross border ﬂows represented on average 20 percent of the total value of transactions on the eBay
+platform during this period. As shown in ﬁgure 1 online trade was growing faster than overall trade
+over the period 2004-2012.
+         Table 2 provides summary statistics for all the variables used in the estimations of equa-
+tions (1)-(7). The data source for GDP, average tariﬀs, and the share of Internet users is the
+World Bank’s World Development Indicators. Information on distance comes from the CEPII
+distance database (Mayer and Zignago, 2011).
+
+
+4         Online exports and the wage gap
+
+Table 3 presents the ordinary least square estimates. All regressions include country and year
+ﬁxed eﬀects, and standard errors are clustered at the country-level to account for intertemporal
+correlation in the error term for each country. In all columns online exports has a negative sign and
+is statistically signiﬁcant at the 1 percent level. Using the estimates of column (4) which corresponds
+to equation (1) we ﬁnd that a 1 percent increase in the share of online exports over GDP decreases
+    10
+     There are ten broad industries in the I2D2: agriculture, mining, manufacturing, public utilities, construction,
+retail and wholesale, transport, ﬁnance, public administration, and others.
+  11
+     See Cruz and Milet (2017) for further details on the construction of the wage gap.
+  12
+     We selected countries based on the comparable magnitudes in terms of changes in the wage gap and online trade.
+Graphs for other countries show similar patterns.
+  13
+     We also used as a robustness check all online trade ﬂows on eBay which include auction transactions. Results
+are similar and often larger in magnitude.
+
+
+
+                                                         8
+the wage gap by 0.01 percent. The log of total exports over GDP is never statistically signiﬁcant.
+The coeﬃcient on the relative supply of skilled workers is as expected negative and statistically
+signiﬁcant.14 The share of Internet users, which we use as a proxy for technological change, has a
+negative and statistically signiﬁcant sign, suggesting that as the number of Internet users increases
+the wage gap between skill and unskilled workers declines.
+       As discussed earlier an important problem with the estimates in table 3 is measurement error as
+online exports are only captured by cross-border transactions that occurred over the eBay platform.
+Other platforms like Amazon, or Alibaba are excluded. Moreover, many electronic transactions do
+not occur over the platforms but directly on ﬁrms’ web pages.15 There may also be omitted
+variable bias if the role of the Internet, which is imperfectly captured by the share of Internet
+users, is correlated with both online exports and the wage gap. In order to correct for these two
+problems we instrument online and total exports using equations (2)-(7). Results of the estimation
+of equations (2)-(7) are shown in table 4. The log of online exports over GDP is the dependent
+variable in columns (1)–(3), and the log of total exports over GDP in columns (4)–(6). Time-
+varying distance and trade costs have the expected negative signs but with very diﬀerent point
+estimates. The marginal impact of distance on total export ﬂows tends to declining over time for
+both online and total trade. As can be seen from column (4) in 2004 the impact of distance on total
+trade is 12 percent smaller than in 2012 (the reference year). For online trade the impact is more
+than 30 percent smaller in 2005 (we do not use 2004 as it is imprecisely estimated). Columns (2)
+and (5) report the estimates of equations (3) and (6) where we use the domestic demand for online
+products (column 2) and GDP (column 5) in partner countries as instruments for online exports and
+total exports respectively. In both columns the coeﬃcients on the demand variables are positive
+and statistically signiﬁcant, as expected. Finally, columns (3) and (6) report the estimates of
+equations (4) and (7) where the instruments are respectively the average tariﬀ on manufacturing
+products and the average tariﬀ on all products in the importing country. As expected, import
+tariﬀs are negatively correlated with export ﬂows. The correlation matrix of total and online trade
+ﬂows with their predicted values is given in table 5. All trade ﬂows are highly correlated, but it
+is important to note that the correlation between the predicted trade ﬂows and the actual ﬂows
+  14
+     Its magnitude, -0.10 can be interpreted in terms of the elasticity of substitution between skilled and unskilled
+workers. Following a simple supply and demand framework a     ` la Katz and Murphy (1992), assuming that technological
+change is exogenous to the supply of skilled workers, the coeﬃcient we estimate is (minus) the inverse of the elasticity
+of substitution between skilled and unskilled workers. Our estimate in column (4) therefore implies an elasticity
+around 10.
+  15
+     Note that the latter may be less likely for exporters from developing countries which need independent feedback
+mechanisms provided by these platforms to create a reputation as a reliable business partner.
+
+
+                                                           9
+is always above 0.84, suggesting that our instrumental variables are doing a reasonable job in
+explaining observed trade ﬂows. This is not surprising given that we use the gravity framework.
+    Table 6 provides the instrumental variable estimates of equation (1). In the ﬁrst three columns
+we report the estimates using one of the three types of instruments for each export ﬂow (online
+and total). In columns (4) to (6) we use two instruments for each trade ﬂow, which allows us to
+test for the validity of our instruments. IV (2) + (3) corresponds to the ﬁrst two instruments for
+each trade ﬂow (i.e. obtained form equations (2) and (3) for online exports, and from equations (5)
+and (6) for total exports. The same logic applies to IV (2)+(4) and IV (3)+(4). In column (7) we
+use all instruments.
+    All the estimated coeﬃcients on the share of online exports are negative as expected and sta-
+tistically signiﬁcant at the 1 percent level. The estimates in column (4) suggest that a 1 percent
+increase in online exports would lead to a 0.01 percent decline in the wage gap, which is very
+close to the OLS estimate. The estimated coeﬃcient on total exports is also always negative and
+statistically signiﬁcant with a point estimate around -0.05. The coeﬃcient on the relative sup-
+ply of skilled workers remains negative across the four speciﬁcations, but is always statistically
+insigniﬁcant. The share of Internet users is negative and statistically signiﬁcant at the 10 percent
+level. At the bottom of the table we report various statistics attesting the overall validity of our
+instruments. The p-value of the F-test for the ﬁrst stage is strongly below the admitted threshold
+of 5% in all speciﬁcations, and the Hansen J test shows that the overidentiﬁcation restriction are
+valid (except perhaps in column (6) when we only use demand and tariﬀ shocks as instruments).
+The Cragg-Donald F-test also attests of the strength of our instruments.
+
+
+5    The role of small ﬁrms
+
+As discussed earlier a potential explanation for the negative impact of online exports on the wage
+gap is that the reduction in the ﬁxed cost of exporting beneﬁts small ﬁrms which tend to be less
+skill-intensive. While small ﬁrms are under-represented in the population of regular exporters,
+anecdotal evidence suggest that they account for a signiﬁcant share of the ﬁrms engaged in cross-
+border e-commerce. The company “Ecommerce Europe” which describes itself as “the voice of
+the e-commerce sector in Europe” represents over 25,000 online shops across Europe. Its 2016
+e-commerce report surveyed 585 European ﬁrms engaged in e-commerce and shows that 334 of the
+
+
+
+
+                                                10
+surveyed ﬁrms are what they call “pure-players” (i.e. not retailers or wholesalers).16 Most of these
+independent ﬁrms (72%) have fewer than 10 employees and 84% have fewer than 20 employees,
+and two-thirds engage in cross-border e-commerce. In developing countries, anecdotal evidence
+taken form UNCTAD (2015) shows that when facing substantial challenges while engaging in e-
+commerce, many micro and small enterprises rely on existing online platforms. Such platforms
+propose a variety of service that micro and small ﬁrms would not be able to provide on their own
+such as advertising, product management, shipping, and most importantly payments via credit
+cards, PayPal, or bank accounts.17
+       We ﬁrst develop a simple analytical model to analyze the role of small ﬁrms in explaining the
+impact of online exports on the wage gap. We then empirically assess whether the impact of online
+exports on the wage gap is stronger in countries with a larger share of employment in small ﬁrms.
+
+
+5.1      A conceptual framework
+
+Building on Ekholm and Midelfart (2005) and Yeaple (2005) it can be shown that a reduction in
+the ﬁxed cost of exporting faced by small ﬁrms leads to a reduction in the wage gap between skilled
+and unskilled workers, and that this reduction is larger in the presence of a relatively larger share
+of small ﬁrms.18
+       On the demand side we have a representative consumer with CES preferences over two im-
+perfectly substitutable composite goods Xh and Xl who maximizes her utility with respect to her
+budget constraint E . Each composite good is also a CES aggregate of individual varieties produced
+by monopolistically competitive ﬁrms. The aggregate production and corresponding price index in
+each sector is given by:
+  16
+      Reports are available at https://www.ecommerce-europe.eu/.
+  17
+      In developing countries it is also important to recognize the role played by mobile phones in facilitating the
+access by micro and small business to e-commerce. According to WTO (2013), “The most popular ICT in developing
+countries and one which is progressing very rapidly in Africa and Asia, in particular India, is the mobile phone. Mobile
+phones are increasingly playing a larger role in the expansion of e-commerce in developing countries, especially among
+users without terminal connections. [..] In many developing countries, [...] they are increasingly being used for data
+application such as m-commerce and m-banking. In a number of African countries, notably Kenya, South Africa,
+Tanzania and Zambia, mobile telephones are being used to do personal banking services ”.
+   18
+      We develop a simple closed economy model, but it can be easily reinterpreted as an open economy model by
+either having consumers and producers being located in diﬀerent countries, or by adding a second set of consumers
+in a diﬀerent country in which a ﬁxed cost needs to be paid in order to reach them.
+
+
+
+
+                                                          11
+                                           −1            −1
+                                                                     −1
+                           U   =     Xh         + Xl
+
+                           E = wh H + wl L                                                                    (8)
+                                           Nk            σ −1
+                                                                        σ
+                                                                      σ −1
+                         Xk =                   qk (i)     σ    di           ,     k ∈ {h, l}                 (9)
+                                       0
+                                           Nk                          1
+                                                                      1−σ
+                          Pk =                  pk (i)1−σ di                 ,      k ∈ {h, l}.              (10)
+                                       0
+
+
+We assume that σ > > 1 meaning there is a greater substitutability between varieties within each
+composite good than in ﬁnal consumption.
+    On the supply side, ﬁrms in each sector behave monopolistically. Firms in sector h incur a
+ﬁxed cost paid in skilled labor, and a unit skilled labor requirement to produce one unit of output.
+Firms in sector l use a diﬀerent technology. They incur a lower ﬁxed cost paid in skilled labor, and
+a unit unskilled labor requirement to produce one unit of output.19 The cost functions of a typical
+ﬁrm in each sector are given by:
+
+
+
+
+                                   T Ch (qh ) = F wh + qh wh
+
+                                   T Cl (ql ) = δF wh + ql wl ,                  δ < 1.
+
+
+where δ < 1 is the discount on the ﬁxed cost faced by ﬁrms in sector l. Our objective is to see what
+is the impact of a reduction in δ (the fraction of ﬁxed cost paid by ﬁrms in sector l) on the wage
+gap, and how this changes with the share of ﬁrms in sector l. Firms maximize their proﬁt, and we
+get the standard pricing rule, where ﬁrms charge a constant markup over their marginal cost.
+
+
+
+                                                                      σ
+                                                   ph =                  wh                                  (11)
+                                                                     σ−1
+                                                                      σ
+                                                   pl =                  wl .                                (12)
+                                                                     σ−1
+
+Free-entry in each sector drives proﬁts to zero and gives us the equilibrium quantities produced by
+a typical ﬁrm in each sector:
+  19
+     In the appendix we develop the more general case where both sectors use unskilled and skilled labor, but with
+diﬀerent intensity.
+
+
+
+
+                                                                 12
+                                               qh = F (σ − 1)                                          (13)
+
+                                                ql = δF (σ − 1)ω,                                      (14)
+
+
+where ω is the wage gap (ω = wh /wl ). The revenues of a typical h-type ﬁrms are given by:
+Rh = ph qh = F σwh and the revenues of a typical L-type ﬁrms are: Rl = pl ql = δF σwh . With δ
+smaller than one, it follows that Rh /Rl = 1/δ is greater than one, meaning that h-type ﬁrms have
+greater revenues than l-type ﬁrms.
+       Within each sector we can express the aggregate quantities consumed Xh and Xl , as well as the
+corresponding price indices Ph and Pl , as a function of the number of ﬁrms in each sector, Nh and
+Nl :
+
+
+
+                                                     σ
+                                   Xk = qk Nk1−σ ,                      k ∈ {h, l}                     (15)
+                                                     1
+                                                    1−σ
+                                    Pk = pk Nk            ,             k ∈ {h, l}.                    (16)
+
+
+       Relative demand for the two composite goods is given by:
+
+
+                                                   Xh   Ph          −
+                                                      =                                                (17)
+                                                   Xl   Pl
+
+       Substituting equations (15) and (16) into equation (17), and then using equations (11) to (14),
+we can express the wage gap as a function of δ , and the relative number of ﬁrms:
+
+
+
+                                         qh N h σ − σ
+                                                      1             ph Nh   1/(1−σ ) −
+                                                              =
+                                         ql Nl                      pl Nl
+                                                −
+                                   1    Nl (σ−σ1)( −1)
+                               δ   −1                         = ω                                      (18)
+                                        Nh
+
+       It is straightforward to see that the derivative of ω with respect to δ is positive and that the
+second derivative with respect to δ and Nl /Nh is also positive. Thus, a lower ﬁxed cost faced by
+smaller and less skill-intensive ﬁrms (due to online platforms) leads to a reduction in the wage-gap
+and the eﬀect is stronger the larger is the share of smaller ﬁrms.20
+  20
+       Note that the number of ﬁrms is endogenous in this monopolistic competitive model. In the appendix we
+
+
+                                                              13
+5.2     Empirical evidence
+
+To empirically investigate the role of small ﬁrms in cross-border e-commerce, we go back to the
+harmonized I2D2 and extract information on ﬁrm size. We compute, for each country and year the
+share of workers employed in ﬁrms with fewer than 10 employees.21 It is on average 45 percent,
+and it oscillates between 15 percent in Russia and 74 percent in Costa Rica. This suggests that
+for many countries in our sample the share of employment in small ﬁrms is suﬃciently large as to
+have an economically signiﬁcant impact on the wage gap.
+    We also compute the share of skilled workers in small and large ﬁrms to check whether small
+ﬁrms are less skilled-intensive. Columns (2) and (3) of table 7 show that on average only 25 percent
+of workers in small ﬁrms (ﬁrms with fewer than 10 employees) are considered skilled. In large ﬁrms
+(ﬁrms with more than 50 employees) 49 percent of workers are skilled. Comparing each row in
+columns (2) and (3) of table 7 we observe in all countries a larger share of skilled workers in large
+ﬁrms.
+    The variation across countries in the share of employment in small ﬁrms suggests that if the
+mechanism at work is the one described above, then the impact of online exports on the wage gap is
+likely to be heterogeneous across countries. In order to test this heterogeneity and provide evidence
+for our mechanism, we re-estimate equation (1) with an interaction between online exports and
+two dummies indicating whether the country is above or below the median share of employment
+in small ﬁrms in our sample. The median is at 44 percent in our sample. We use a dummy for
+two reasons. First, the size of the ﬁrm is not systematically reported by all individuals in the
+I2D2 surveys and the resulting information may be quite noisy. In addition, the I2D2 does not
+provide the exact number of employees, but an interval with a lower and upper bound for ﬁrm size.
+Second, the relationship between the impact of online exports on the wage gap and the share of
+workers in small ﬁrms may not be linear. The solution to these two problems is to use a dummy
+variable instead of the actual continuous variable. We expect the coeﬃcient on the interaction of
+online exports with the dummy indicating a share of employment in small ﬁrms above the median
+to be negative and larger than the coeﬃcient on the interaction of online exports with the dummy
+indicating a share of employment in small ﬁrms below the median. Because we are ultimately
+endogenize the number of ﬁrms and solve for a full model with more general assumptions on the production side to
+show that the wage gap increases with the ﬁxed costs faced by ﬁrms in the less skill-intensive sector, and that this
+eﬀect is larger the larger is the endowment of unskilled to skilled workers.
+  21
+     Information on ﬁrm size is unfortunately not available for Colombia, the Dominican Republic, Sri Lanka, and
+the Philippines.
+
+
+
+
+                                                        14
+interested in the interaction between the role of small ﬁrms and online exports, we also interact the
+total exports with the same dummies to ensure that the mechanism we describe is not also present
+in the case of total exports. If the channel through which exports aﬀect the wage gap works through
+the ability of small ﬁrms to export via online platforms, the interaction terms between total exports
+and the dummies should not be statistically diﬀerent from one another.
+         The instrumental variable estimates are reported in table 8. The interaction between online
+exports and the dummy indicating a share of employment in small ﬁrms above the median is
+negative and statistically signiﬁcant in all speciﬁcations. It is almost identical to the baseline
+results. Note that the coeﬃcient is very stable across speciﬁcations and precisely estimated (p-value
+below 1%). On the other hand, the interaction with the dummy indicating a share of employment
+in small ﬁrms below the median is not statistically diﬀerent from zero. Thus, the negative impact
+of online exports on the wage gap is observed in countries with a larger share of small ﬁrms. The
+impact of total exports on the wage gap remains negative and statistically signiﬁcant.22
+
+
+6         Concluding remarks
+
+We examine the impact of online exports in reducing the wage gap between skilled and unskilled
+workers. Our econometric results suggest that as the share of online exports increases the wage
+gap declines. The economic signiﬁcance of the impact is small as the elasticity of the wage gap
+with respect to the share of online exports is 0.01, reﬂecting the fact that online cross-border trade
+is still a relatively small phenomenon. However, with online cross border trade growing at a pace
+seven times faster than world trade, its contribution to reductions in wage inequality is bound to
+increase.
+         We also ﬁnd that the impact is stronger in countries where the share of the labor force in
+small ﬁrms is larger. Small ﬁrms are more likely to beneﬁt from the reduction in the ﬁxed cost of
+exporting provided by online markets. They also tend to hire relatively more unskilled workers.
+Thus, as the share of online exports increases, this leads to a relative increase in the demand faced
+by small ﬁrms, which will in turn increase the relative demand for unskilled workers, and reduces
+the wage gap. In fact we ﬁnd that the negative impact is only observed in countries with a large
+share of the labor force in small ﬁrms. In countries where the share of the labor force in small ﬁrms
+    22
+    We also interact total exports with the same dummies as for online exports. The coeﬃcients on the two inter-
+actions are not statistically diﬀerent from each other. Thus, the impact of total exports on the wage gap does not
+depend on the relative importance of small ﬁrms in the economy.
+
+
+
+                                                       15
+is below the median, an increase in online exports has no impact on the wage gap.
+   These results suggest that reducing barriers to online trade may be desirable for reasons that
+go beyond economic eﬃciency, as it may help reduce labor income inequality. Anyone who has
+tried to purchase goods online across borders knows that there are still important administrative
+barriers to international trade online. These include unclear taxationm customs requirements, and
+long customs delays. Solutions to these problems need to be considered. Examples include the
+introduction of higher de minimis thresholds under which no customs duties or other taxes (such
+as VAT) apply, the introduction of streamlined procedures for payment of customs duties and
+other taxes, such as e-Customs or e-taxation, or a coordination eﬀort by exporting and importing
+countries to allow for the payment of customs duties online.
+
+
+
+
+                                               16
+References
+
+Acemoglu, D. (2002). Directed Technical Change. Review of Economic Studies 69 (4), 781–809.
+
+Acemoglu, D. and D. Autor (2011). Skills, Tasks and Technologies: Implications for Employment
+  and Earnings, Volume 4 of Handbook of Labor Economics, Chapter 12, pp. 1043–1171. Elsevier.
+
+Akerman, A., I. Gaarder, and M. Mogstad (2015). The Skill Complementarity of Broadband
+  Internet. The Quarterly Journal of Economics 130 (4), 1781–1824.
+
+Autor, D. (2014). Polanyi’s Paradox and the Shape of Employment Growth. NBER Working
+  Papers 20485.
+
+Autor, D. H., D. Dorn, and G. H. Hanson (2013). The China Syndrome: Local Labor Market Eﬀects
+  of Import Competition in the United States. American Economic Review 103 (6), 2121–68.
+
+Autor, D. H., D. Dorn, and G. H. Hanson (2015). Untangling Trade and Technology: Evidence
+  from Local Labour Markets. The Economic Journal 125 (584), 621–646.
+
+Autor, D. H., L. F. Katz, and A. B. Krueger (1998). Computing Inequality: Have Computers
+  Changed The Labor Market? The Quarterly Journal of Economics 113 (4), 1169–1213.
+
+Berman, E., J. Bound, and Z. Griliches (1994). Changes in the Demand for Skilled Labor within
+  U.S. Manufacturing: Evidence from the Annual Survey of Manufactures. The Quarterly Journal
+  of Economics 109 (2), 367–97.
+
+Brown, C. and J. Medoﬀ (1989). The Employer Size-Wage Eﬀect. Journal of Political Econ-
+  omy 97 (5), 1027–59.
+
+Card, D. and T. Lemieux (2001). Can Falling Supply Explain The Rising Return To College For
+  Younger Men? A Cohort-Based Analysis. The Quarterly Journal of Economics 116 (2), 705–746.
+
+Cruz, M. and E. Milet (2017). Skill Premium in Developing Countries. mimeo, World Bank.
+
+De la Torre, A., A. Ize, G. Beylis, and D. Lederman (2015). Jobs, Wages and the Latin American
+  Slowdown. World Bank Other Operational Studies 22709, The World Bank.
+
+Ekholm, K. and K. H. Midelfart (2005). Relative wages and trade-induced changes in technology.
+  European Economic Review 49 (6), 1637–1663.
+
+
+                                             17
+Feenstra, R. and G. Hanson (2001). Global Production Sharing and Rising Inequality: A Survey
+  of Trade and Wages. NBER Working Papers 8372.
+
+Feenstra, R. C. and G. H. Hanson (1996). Globalization, Outsourcing, and Wage Inequality.
+  American Economic Review 86 (2), 240–45.
+
+Feenstra, R. C. and G. H. Hanson (1999). The Impact of Outsourcing and High-Technology Cap-
+  ital on Wages: Estimates for the United States, 1979-1990. The Quarterly Journal of Eco-
+  nomics 114 (3), 907–940.
+
+Feyrer, J. (2009). Trade and Income – Exploiting Time Series in Geography. NBER Working
+  Papers 14910.
+
+Gasparini, L., S. Galiani, G. Cruces, and P. Acosta (2011). Educational Upgrading and Returns to
+  Skills in Latin America: Evidence from a Supply-Demand Framework, 1990-2010. IZA Discussion
+  Paper 6244.
+
+Goldberg, P. K. and N. Pavcnik (2007). Distributional Eﬀects of Globalization in Developing
+  Countries. Journal of Economic Literature 45 (1), 39–82.
+
+Grossman, G. M. and E. Rossi-Hansberg (2008). Trading Tasks: A Simple Theory of Oﬀshoring.
+  American Economic Review 98 (5), 1978–97.
+
+Hamermesh, D. S. (1980). Commentary. In J. J. Siegfried (Ed.), The Economics of Firm Size,
+  Market Structure and Social Performance. Washington: FE. Trade Comm.
+
+Harrison, A. and M. McMillan (2011). Oﬀshoring Jobs? Multinationals and US Manufacturing
+  Employment. The Review of Economics and Statistics 93 (3), 857–875.
+
+Katz, L. F. and K. M. Murphy (1992). Changes in Relative Wages, 1963-1987: Supply and Demand
+  Factors. The Quarterly Journal of Economics 107 (1), 35–78.
+
+Krueger, A. B. (1993). How Computers Have Changed the Wage Structure: Evidence from Micro-
+  data, 1984-1989. The Quarterly Journal of Economics 108 (1), 33–60.
+
+Lendle, A. and M. Olarreaga (2017). Can Online Market Make Trade More Inclusive?          ADBI
+  Working Papers 742.
+
+
+
+
+                                              18
+                                                 ezina (2013). eBay’s anatomy. Economics
+Lendle, A., M. Olarreaga, S. Schropp, and P.-L. V´
+  Letters 121 (1), 115–120.
+
+                                                 ezina (2016). There Goes Gravity: eBay and the
+Lendle, A., M. Olarreaga, S. Schropp, and P.-L. V´
+  Death of Distance. Economic Journal 126 (591), 406–441.
+
+Luo, R. (2017). Skill Premium and Technological Change in the very Long Run: 1300-1914.
+  Discussion Papers in Economics 17/09, University of Leicester.
+
+Lustig, N., L. F. Lopez-Calva, and E. Ortiz-Juarez (2013). Declining Inequality in Latin America
+  in the 2000s: The Cases of Argentina, Brazil, and Mexico. World Development 44 (0), 129 – 141.
+
+Mayer, T. and S. Zignago (2011). Notes on CEPII’s Distances Measures: The GeoDist Database.
+  CEPII Working Papers 2011-25.
+
+Montenegro, C. E. and M. Hirn (2009). A new disaggregated set of labor market indicators using
+  standardized household surveys from around the world. Background paper prepared for World
+  Development Report .
+
+Montenegro, C. E. and H. A. Patrinos (2014). Comparable estimates of returns to schooling around
+  the world. World Bank Policy Research Working Paper (7020).
+
+UNCTAD (2015). Information Economy Report 2015: Unlocking the potential of E-Commerce for
+  developing countries. UNCTAD/IER/2015.
+
+Varian, H. (2005). Technology Levels the Business Playing Field. The New York Times, August
+  25 .
+
+Varian, H. (2011). Micromultinationals Will Run the World. Foreign Policy, August 15 .
+
+WTO (2013). e-Commerce in Developing Countries: Opportunities and challenges for small and
+  medium-sized enterprises. ISBN 978-92-870-3864-7.
+
+Yeaple, S. R. (2005). A Simple Model of Firm Heterogeneity, International Trade, and Wages.
+  Journal of International Economics 65 (1), 1–20.
+
+
+
+
+                                              19
+Appendix
+
+In this appendix we generalize the model we presented in section 5.1 to allow for more general
+assumptions on the production side. We also fully close the model and instead of looking at
+whether the impact of a reduction in the ﬁxed cost faced by small and unskilled-intensive ﬁrms is
+aﬀected by the number of small and unskilled-intensive ﬁrms relative to large ﬁrms (which is an
+endogenous variable) we explore the results in terms of endowments of unskilled to skilled workers
+in the economy, which are assumed exogenous and are a determinant of the number of small and
+large ﬁrms.
+
+
+Aggregate Demand
+
+The model draws on Ekholm and Midelfart (2005) and Yeaple (2005). As in section 5.1 a represen-
+tative consumer has CES preferences over two imperfectly substitutable composite goods Xh and
+Xl and maximize their utility with respect to their budget constraint E . Each composite good is a
+CES aggregate of individual varieties produced by monopolistically competitive ﬁrms in diﬀerent
+sectors. It is useful to think as sector h as populated by ﬁrms more skill-intensive than those in
+sector l. The aggregate consumption and corresponding price index in each sector are given by:
+
+
+
+                                      −1            −1
+                                                                −1
+                       U   =    Xh         + Xl
+
+                       E = wh H + wl L                                                        (19)
+                                      Nk            σ −1
+                                                                   σ
+                                                                 σ −1
+                      Xk =                 qk (i)     σ    di           ,   k ∈ {h, l}        (20)
+                                  0
+                                      Nk                          1
+                                                                 1−σ
+                      Pk =                 pk (i)1−σ di                 ,   k ∈ {h, l}.       (21)
+                                  0
+
+
+We assume that σ > > 1 meaning there is a greater substitutability between varieties within each
+composite good than in ﬁnal consumption.
+
+
+Firm production
+
+In each sector, ﬁrms behave monopolistically and incur a ﬁxed cost to be paid in skilled labor, and
+a variable using a mix of skilled and unskilled labor. In sector h ﬁrms incur a ﬁxed cost F and
+require αh skilled-labor and 1 − αh unskilled labor to produce one unit of output. In sector l ﬁrms
+incur a ﬁxed cost δF (δ ≤ 1) and require αl skilled labor and 1 − αl unskilled workers. We assume
+
+                                                            20
+that ﬁrms in sector h are more skill-intensive in production than ﬁrms in sector l, i.e. αh > αl .
+The cost functions of a typical ﬁrm in each sector are given by:
+
+
+
+                                                   αh 1−αh
+                           T Ch (qh ) = F wh + qh wh wl
+                                                    αl 1−αl
+                           T Cl (ql ) = δF wh + ql wh wl    ,       δ < 1.
+
+
+Firms maximize their proﬁt, and we get the standard pricing rule, where ﬁrms charge a constant
+markup over their marginal cost.
+
+
+
+                                                 σ    αk 1−αk
+                                      pk =     σ − 1 wh wl                                      (22)
+                                                 σ    αl 1−αl
+                                      pk   =   σ − 1 wh wl                                      (23)
+
+
+Free-entry in each sector drives proﬁts to zero and gives us the equilibrium quantities produced by
+a typical ﬁrm in each sector:
+
+
+
+
+                                     qh    = F (σ − 1)ω 1−αh                                    (24)
+
+                                      ql = δF (σ − 1)ω 1−αl ,                                   (25)
+
+
+where ω is the wage gap between skilled and unskilled worker (i.e. the wage gap ω = wh /wl ). Note
+that as long as delta is strictly lower than one, ﬁrms in sector h has greater revenues than ﬁrms in
+sector l: Rh /Rl = 1/δ .
+
+
+Labor market clearing conditions
+
+To close the model we need to determine the number of ﬁrms active in each sector, which we get
+from the labor market clearing conditions. Skilled labor is used to pay the ﬁxed cost of ﬁrms in
+both sector, and used with intensity αh in sector h, and with intensity αl in the l sector. Unskilled
+labor is only used in the production of each ﬁrm with the complementary intensities 1 − αh in
+sector h and 1 − αl in sector l. Using the total cost functions and Shephard’s lemma, we obtain
+the following demand for skilled and unskilled labor:
+
+
+
+                                                  21
+                             H = Nh F (1 + αh (σ − 1)) + Nl δF (1 + αl (σ − 1))                                     (26)
+
+                              L = Nh F ω (σ − 1)(1 − αh ) + Nl δF ω (σ − 1)(1 − αl )                                (27)
+
+
+The equilibrium is given by the 11 equations (20)-(27) and the 11 unknowns E , Xh , Xl , Ph , Pl , ph ,
+pl , qh , ql , Nh , Nl .
+
+
+Solving for the wage gap
+
+Our aim is to express the wage gap (ω ) as a function of the relative factor endowment ( H
+                                                                                         L ) and the
+
+parameter δ . The labor market clearing conditions allow us to pin down the number of ﬁrms in
+each sector. Using equations (26) and (27) we get:
+
+
+
+                                            Hω (σ − 1)(1 − αl ) − L(1 + αl (σ − 1))
+                                 Nh =                                                                               (28)
+                                                   F ωσ (σ − 1)(αh − αl )
+                                            Hω (σ − 1)(αh − 1) + L(1 + αh (σ − 1))
+                                 Nl =                                                                               (29)
+                                                   F ωδσ (σ − 1)(αh − αl )
+
+For convenience, let us deﬁne the ratio of the number of ﬁrms as a function of the wage gap
+                                             H                                                Nh
+ω and relative factor endowment              L.     We deﬁne the function g such that:        Nl   = δg (ω, H
+                                                                                                            L ) where
+                H
+g (ω, H         L ω (σ −1)(1−αl )−(1+αl (σ −1)) .
+      L) =      H                                   Note that the function g is strictly positive and diﬀerent from
+                L ω (σ −1)(αh −1)+(1+αh (σ −1))
+zero as it is deﬁned as the ratio of the number of ﬁrms in each sector.23 Using CES preferences
+in the consumption of the aggregate goods gives the usual relationship between relative aggregate
+consumption and relative price indices:
+
+
+
+                                                     Xh             Ph   −
+                                                           =                 .                                      (30)
+                                                     Xl             Pl
+
+Within each sector, the CES structure of consumption of varieties allows us to express the aggregate
+quantities consumed Xh and Xl as well as the corresponding price indices as a function of the
+number of ﬁrms in each sector:
+  23
+       CES preferences over the varieties in each sector ensures that there is at least one ﬁrm producing in each sector.
+
+
+
+
+                                                               22
+                                                  σ
+                                Xk = qk Nk1−σ ,                           k ∈ {h, l}                                  (31)
+                                                  1
+                                 Pk = pk Nk1−σ ,                          k ∈ {h, l}.                                 (32)
+
+
+   Substituting for the equilibrium prices and quantities into equations (31) and (32) and plugging
+into equation (30), we can express the wage gap as a function of relative factor endowment, δ , and
+the relative number of ﬁrms:
+
+
+
+                                                      Xh               Ph −
+                                                               =
+                                                      Xl               Pl
+                                          qh Nh         σ
+                                                      σ −1             ph Nh     1/(1−σ ) −
+                                                               =
+                                          ql Nl                        pl Nl
+                                    σ−
+                         g (ω, H
+                               L)
+                                     −1   ω (αh −αl )(σ−1) = δ                                                        (33)
+
+                                                                                   H
+This last expression links the wage gap ω to factor endowment                      L    and to the diﬀerence in ﬁxed
+cost requirement between ﬁrms in sectors h and l. We now use the implicit function theorem and
+                                                                                  dx
+                                                              ˆ=
+totally diﬀerentiate this expression. Using hat-algebra (i.e. x                   x )   we obtain:
+
+
+
+                                                                               σ−
+                                        1                          ˆ−           −1 εg,H/L        H
+                     ˆ =
+                     ω                                  σ−         δ                   −           ,                  (34)
+                            (σ − 1)(αh − αl ) +          −1 εg,ω         (σ   − 1) + σ− 1 εg,ω
+                                                                                                 L
+
+                                                                                                       H
+where εg,ω and εg,H/L are the elasticities of the g function with respect to ω and                     L   respectively. It
+is straightforward to check that these two elasticities are identical: εg,ω = εg,H/L are equal to:
+
+
+
+                                  ωH
+                                   L σ (σ − 1)(αh − αl )                             1
+ εg,ω = εg,H/L =                                                           2
+                       H                                                       g (ω, H/L)
+                       L ω (σ   − 1)(αh − 1) + (1 + αh (σ − 1))
+                                                             H
+                                                             L ωσ (σ   − 1)(αh − αl )
+                 =
+                       H                                                      H
+                       L ω (σ   − 1)(αh − 1) + 1 + αh (σ − 1)                 L ω (σ   − 1)(αl − 1) − 1 − αl (σ − 1)
+
+These two elasticities are strictly positive since we imposed αh > αl > 0 and σ > 1. It follows that
+in expression (34), the terms in front of δ ˆ and Hˆ
+                                                   L are positive. Therefore, a reduction in the ﬁxed
+
+cost of exporting for ﬁrms in sector l reduces the wage gap between skilled and unskilled workers.
+
+
+                                                             23
+Similarly, an increase in the relative supply of skilled workers also reduces the wage gap. Finally,
+we want to investigate whether the marginal eﬀect of a reduction in the ﬁxed cost of exporting for
+ﬁrms in sector l varies with factor endowment. We simply take the second order derivative of the
+wage gap with respect to δ and to the relative factor endowment:
+
+
+                                               σ−
+      ∂ω       ω 1−(αh −αl )(σ−1) g (ω, H/L)− −1
+           =                             −
+      ∂δ         (σ − 1)(αh − αl ) + σ−   1 εg,ω
+                                                           σ−
+                    −
+                 ( σ−      1−(αh −αl )(σ −1) g (ω, H/L)−
+  ∂2ω                 1 )ω
+                                                            −1
+                                                                 L                                σ−         ∂εg,ω
+           = −                                          2        H εg,H/L   (σ − 1)(αh − αl ) +       εg,ω +       .
+∂δ∂H/L                                       σ−                                                    −1        ∂H/L
+                      (σ − 1)(αh − αl ) +     −1 εg,ω
+
+
+                                                                                            ∂εg,ω
+A suﬃcient condition for this equation to be negative is for the partial derivative         ∂H/L    to be positive
+since the other terms between brackets are positive. Deriving the elasticity gives us the following
+expression, which is positive given the restriction imposed on factor-intensity (αh > αl > 0).
+
+
+
+                       ∂εg,ω                   (σ − 1)(αh − αl )(1 − αh )ω
+                                 =                                                     2.
+                       ∂H/L                H
+                                      αl   L ω (σ   − 1)(αh − 1) + 1 + αh (σ − 1)
+
+
+
+
+                                                        24
+             Table 1: List of the countries and survey years
+
+             (1)      (2)
+Country   # Surveys   Years available
+ARG           7       2005, 2006, 2007,   2008, 2009, 2010, 2012
+BOL           4       2005, 2007, 2008,   2009
+BRA           8       2004, 2005, 2006,   2007, 2008, 2009, 2011, 2012
+CHL           3       2006, 2009, 2011
+COL           7       2004, 2005, 2006,   2007,   2008,   2009, 2010
+CRI           6       2004, 2005, 2006,   2007,   2008,   2009
+DOM           9       2004, 2005, 2006,   2007,   2008,   2009, 2010, 2011, 2012
+ECU           8       2004, 2005, 2006,   2007,   2008,   2009, 2010, 2012
+ETH           6       2005, 2006, 2009,   2010,   2011,   2012
+GTM           3       2004, 2006, 2011
+HND           7       2004, 2005, 2006,   2007, 2009, 2010, 2011
+KHM           2       2006, 2008
+LKA           2       2004, 2008
+MEX           3       2008, 2010, 2012
+NIC           2       2005, 2009
+PAN           8       2005, 2006, 2007,   2008,   2009,   2010,   2011,   2012
+PER           9       2004, 2005, 2006,   2007,   2008,   2009,   2010,   2011, 2012
+PHL           8       2004, 2005, 2006,   2007,   2008,   2009,   2010,   2011
+PRY           8       2004, 2005, 2006,   2007,   2008,   2009,   2010,   2012
+RUS           6       2004, 2005, 2006,   2007,   2008,   2009
+SLV           4       2004, 2005, 2006,   2007
+URY           9       2004, 2005, 2006,   2007,   2008, 2009, 2010, 2011, 2012
+
+
+
+
+                                   25
+                                      Table 2: Summary statistics
+
+Variable                                                                      #Obs.     Mean      Std. Dev.
+Ln online exports/GDP                                                          131      -13.67       3.68
+Ln online exports/GDP (IV: distance)                                           131      -14.03       4.19
+Ln online exports/GDP (IV: importer online domestic sales)                     131      -14.03       4.18
+Ln online exports/GDP (IV: importer tariﬀ on manuf. products)                  131      -14.04       4.19
+Ln total exports/GDP                                                           131       -1.84       0.70
+Ln total exports/GDP (IV: distance)                                            131       -2.08       0.86
+Ln total exports/GDP (IV: importer GDP)                                        131       -2.08       0.86
+Ln total exports/GDP (IV: importer tariﬀ on all products)                      131       -2.09       0.86
+Ln relative supply                                                             131        0.21       0.63
+Internet user/Pop.                                                             131        0.21       0.14
+Ln distance                                                                   60038       8.56       0.92
+Ln demand (online)                                                            60038     12.53        4.92
+Ln GDP                                                                        60038      25.84       1.90
+Ln(1+ average tariﬀ on manuf. products)                                       60038       1.51       0.72
+Ln(1+ average tariﬀ)                                                          60038       1.54       0.70
+Source: Online trade data comes from Lendle et al. (2016). Data on the wage gap and relative supply of skilled
+workers is from Cruz and Milet (2017). Data on bilateral distance comes from Mayer and Zignago (2011).
+Predicted trade ﬂows are estimated by the authors. All other variables come from the World Bank’s World
+Development Indicators 2016.
+
+
+
+
+                                                     26
+         Table 3: Impact of online exports on the wage gap (OLS)
+
+                                  (1)           (2)            (3)            (4)
+Ln online exports/GDP         -0.010***     -0.009***     -0.009***      -0.012***
+                               (0.002)       (0.002)        (0.002)        (0.003)
+Ln total exports/GDP                          -0.020         -0.018         -0.019
+                                             (0.013)        (0.012)        (0.014)
+Ln relative supply                                         -0.102**      -0.100***
+                                                            (0.046)        (0.033)
+Internet user/Pop.                                                        -0.303**
+                                                                           (0.145)
+Observations                     131           131           131             131
+R2                               0.34          0.35          0.40            0.43
+All regressions include country and year ﬁxed eﬀects. Robust standard errors clustered
+at the country level in parenthesis. Signiﬁcance levels: *: 10%, **: 5% ***: 1%.
+
+
+
+
+                                          27
+         Table 4: Instrumenting online and total bilateral ﬂows using equations (2)-(7)
+
+                        dep. var :        Ln (online exports/GDP)                          Ln (total exports/GDP)
+                                           (1)          (2)           (3)           (4)           (5)               (6)
+Ln distance – 2004                       -0.080                                 -0.122***
+                                        (0.094)                                  (0.017)
+Ln distance – 2005                    -0.350***                                 -0.122***
+                                        (0.076)                                  (0.015)
+Ln distance – 2006                    -0.301***                                 -0.126***
+                                        (0.056)                                  (0.014)
+Ln distance – 2007                    -0.317***                                 -0.125***
+                                        (0.053)                                  (0.016)
+Ln distance – 2008                    -0.297***                                 -0.109***
+                                        (0.055)                                  (0.014)
+Ln distance – 2009                    -0.160***                                 -0.104***
+                                        (0.044)                                  (0.017)
+Ln distance – 2010                     -0.078**                                 -0.045***
+                                        (0.039)                                  (0.014)
+Ln distance – 2011                       -0.014                                 -0.033***
+                                        (0.043)                                  (0.012)
+Ln demand (online)                                  0.204***
+                                                     (0.019)
+Ln(1+ average manuf. tariﬀ)                                       -0.406***
+                                                                   (0.093)
+Ln GDP                                                                                        0.755***
+                                                                                               (0.026)
+Ln(1+ average tariﬀ)                                                                                             -0.083***
+                                                                                                                  (0.025)
+Observations                            60,038        60,038        60,038        60,038        60,038             60,038
+R2                                      0.712          0.713        0.711         0.950          0.951              0.950
+All columns include bilateral and exporter times year ﬁxed eﬀects. Bootstrapped (50 replications) standard errors in parenthesis.
+Signiﬁcance levels: *: 10%, **: 5% ***: 1%. The dependent variable in columns (1)-(3) is the log of bilateral online exports
+over GDP. The dependent variable in columns (4)-(6) is the log of bilateral total exports. Ln Online demand is domestic online
+sales on eBay. Data on average tariﬀs are taken from the World Development Indicator.
+
+
+
+
+                                                         28
+     Table 5: Correlation between observed and predicted trade ﬂows using equations (2)-(7)
+
+                Ln Xonline     Ln Xonline     Ln Xonline     Ln Xonline         X       Ln X      Ln X           Ln X
+Ln Xonline          1
+Ln Xonline       0.8436          1.0000
+Ln Xonline        0.8442         0.9986         1.0000
+Ln   Xonline      0.8433         0.9996         0.9989          1.0000
+Ln   X            0.3365         0.3944         0.3939          0.3943       1.0000
+Ln   X            0.3414         0.4047         0.4041          0.4046       0.9745     1.0000
+Ln   X            0.3437         0.4044         0.4040          0.4044       0.9750     0.9995       1
+Ln   X            0.3412         0.4045         0.4042          0.4046       0.9745     0.9999    0.9994            1
+X stands for total exports, and eBay for online exports. Xonline , Xonline , and Xonline are predicted online trade ﬂows over
+GDP using equations (2), (3) and (4) respectively. X, X , and X are predicted total trade ﬂows over GDP using equations (5),
+(6), and (7) respectively.
+
+
+
+
+                                                      29
+                        Table 6: Impact of online exports on the wage gap (instrumental variables)
+
+                                         (1)            (2)            (3)            (4)           (5)             (6)           (7)
+     Ln online exports/GDP           -0.012***      -0.012***      -0.012***     -0.012***      -0.011***      -0.012***     -0.012***
+                                      (0.002)        (0.003)        (0.003)        (0.002)       (0.003)         (0.003)       (0.003)
+     Ln total exports/GDP            -0.047***      -0.050***      -0.047***     -0.047***      -0.049***      -0.046***     -0.049***
+                                      (0.018)        (0.018)        (0.018)        (0.018)       (0.018)         (0.017)       (0.018)
+     Ln relative supply                -0.095         -0.094         -0.095         -0.095        -0.095          -0.095        -0.094
+                                      (0.077)        (0.077)        (0.077)        (0.077)       (0.077)         (0.077)       (0.077)
+     Internet user/Pop.               -0.339*        -0.342*        -0.337*       -0.343**       -0.338*        -0.348**      -0.349**
+                                      (0.175)        (0.176)        (0.175)        (0.173)       (0.175)         (0.174)       (0.175)
+     Observations                        131           131            131            131            131             131           131
+     R2                                 0.40           0.39           0.40           0.40          0.39            0.40          0.39
+     F-test (p-value)                   0.000         0.000          0.000          0.000         0.000            0.000         0.000
+     Hansen (p-value)                                                               0.386          0.549           0.066         0.179
+     Cragg-Donald (F-test)             64.851         65.112        64.111         33.682         33.442         32.451        22.142
+     IV-online trade                    (2)             (3)           (4)         (2)+(3)        (2)+(4)        (3)+(4)        (2)-(4)
+     IV-total trade                     (5)            (6)           (7)          (5)+(6)        (5)+(7)        (6)+(7)        (5)-(7)
+
+
+
+
+30
+     All regressions include country and year ﬁxed eﬀects. Robust standard errors in parenthesis. Signiﬁcance levels: *: 10%,
+     **: 5% ***: 1%. We report the p-values of the F-test of the ﬁrst stage,the Hansen overidentiﬁcation J test on the validity
+     of the instruments and the F-test on the Cragg-Donald identiﬁcation test for weak instruments. The critical value at
+     10% for test of relative size bias is 7.03 in columns (1)-(3), 16.87 in columns (4)-(6), and 21.68 in column(7). The critical
+     value at 5% for the test of relative bias in columns (4)-(6) is 11.04, and 15.72 in column (7)
+ Table 7: Share of employment in small and large ﬁrms by country
+
+                   (1)                     (2)                    (3)
+Country     Employment share          Skilled/total          Skilled/total
+              in small ﬁrms          in small ﬁrms          in large ﬁrms
+ARG               29.52                   48.61                  78.22
+BOL               52.42                   44.15                  71.07
+BRA               60.96                   39.71                    .
+CHL               26.13                   46.98                  72.47
+CRI               73.96                   21.06                    .
+ECU               49.13                   8.768                  19.06
+ETH               59.69                   20.13                  38.67
+GTM               53.92                   16.25                  34.99
+HND               59.79                   7.520                  48.78
+KHM               45.07                   12.57                  16.44
+MEX               41.96                   21.75                  48.86
+NIC               42.33                   14.88                  50.59
+PAN               20.34                   28.36                  69.74
+PER               44.00                   53.58                  85.46
+PRY               43.38                   39.10                  70.39
+RUS               14.61                   14.33                  19.94
+SLV               33.73                    4.96                  16.10
+URY               37.59                   17.77                  46.43
+Average           45.20                   25.39                  49.20
+Source: World Bank’s I2D2 database. Small ﬁrms are deﬁned as those with less
+than 10 employees (excluding self-employment). Column (1) provides the share
+of workers in small ﬁrms in the total labor force. Column (2) provides the share
+of skilled workers in small ﬁrms’ total employment, and column (3) the share of
+skilled workers in large ﬁrms’ total employment. Skilled workers are deﬁned as
+workers with at least a complete secondary education.
+
+
+
+
+                                      31
+                                         Table 8: Impact of online exports on the wage gap (IV): The role of small ﬁrms
+
+                                                                           (1)          (2)           (3)            (4)           (5)           (6)                            (7)
+     Ln online exports/GDP × small ﬁrms above median                 -0.010***     -0.010***     -0.010***     -0.011***     -0.010***     -0.011***                       -0.011***
+                                                                       (0.002)       (0.002)       (0.002)       (0.002)       (0.002)       (0.003)                         (0.002)
+     Ln online exports/GDP × small ﬁrms below median                    -0.012        -0.012        -0.011        -0.009        -0.015         0.000                          -0.005
+                                                                       (0.017)       (0.018)       (0.017)       (0.016)       (0.016)       (0.017)                         (0.015)
+     Ln total exports/GDP                                             -0.051**      -0.055**      -0.050**      -0.049**      -0.054**      -0.045**                        -0.047**
+                                                                       (0.022)       (0.023)       (0.021)       (0.020)       (0.022)       (0.019)                         (0.020)
+     Ln relative supply                                                 -0.095        -0.095        -0.095        -0.094        -0.096        -0.092                          -0.093
+                                                                       (0.080)       (0.079)       (0.080)       (0.080)       (0.079)       (0.080)                         (0.080)
+     Internet user/Pop.                                                 -0.260        -0.263        -0.258        -0.268        -0.264        -0.265                          -0.278
+                                                                       (0.206)       (0.209)       (0.206)       (0.203)       (0.206)       (0.205)                         (0.204)
+     Observations                                                         105          105           105            105           105           105                            105
+     R2                                                                   0.39         0.40          0.40           0.39          0.40          0.40
+     F-test (p-value)                                                    0.000        0.000         0.000          0.000         0.000         0.000                         0.000
+     Hansen (p-value)                                                                                              0.204         0.549        0.078                          0.113
+     Cragg-Donald (F-test)                                                                                         9.443         9.286       11.727                          7.916
+     IV-online trade                                                     (2)           (3)           (4)        (2)+(3)       (2)+(4)       (3)+(4)                         (2)-(4)
+     IV-total trade                                                      (5)           (6)           (7)        (5)+(6)       (5)+(7)       (6)+(7)                         (5)-(7)
+
+
+
+
+32
+     All regressions include country and year ﬁxed eﬀects. Robust standard errors in parenthesis. Signiﬁcance levels: *: 10%, **: 5% ***: 1%. Small ﬁrms are deﬁned as those with less than 10 employees
+     (excluding self-employment). We report the p-values of the F-test of the ﬁrst stage, and of the Hansen overidentiﬁcation J test on the validity of the instruments.
+                                               Figure 1
+                      Evolution of world and online cross-border trade, 2004-2012
+
+
+
+
+                                                                                                          15
+       2
+       1.8
+
+
+
+
+                                                                                                          10
+       1.6
+       1.4
+
+
+
+
+                                                                                                          5
+       1.2
+       1
+
+
+
+
+                                                                                                          0
+             2004                2006                  2008                   2010                  2012
+
+                     Offline export (left axis)               Online exports (right axis)
+
+
+
+
+Note: The evolution of world trade is from United Nations’ Comtrade database. The evolution of online cross-border
+trade is proxied by the evolution of eBay cross-border trade from Lendle et al. (2016) (ﬁxed price transactions only).
+
+
+
+
+                                                         33
+                                                                        Figure 2
+                                                      Evolution of wage skill premimum, 2004-2012
+                    .2           .1
+         e( log skill premium | X)
+       -.1            0
+                    -.2
+
+
+
+
+                                      -4                    -2                     0           2    4
+                                                                              e( trend | X )
+                                      coef = -.01242624, se = .00169072, t = -7.35
+
+
+
+
+Note: This is the partial plot of a regression of the log of the wage gap between skilled and unskilled workers on
+a time trend and country ﬁxed eﬀects for countries in our sample with more than 7 observations over the period
+2004-2012. The estimates of wage gap are from Cruz and Milet (2017).
+
+
+
+
+                                                                                34
+                                   Figure 3: Wage gap and online trade in selected countries
+
+
+                                         ARG                                                                                            BOL
+
+
+
+
+                                                                                    1.5
+
+
+
+
+                                                                                               0
+
+
+
+
+                                                                                                                                                                                   3
+0
+
+
+
+
+                                                                                               -.1
+                                                                                    1
+
+
+
+
+                                                                                                                                                                                   2
+-.05
+
+
+
+
+                                                                                               -.2
+                                                                                    .5
+
+
+
+
+                                                                                                                                                                                   1
+-.1
+
+
+
+
+                                                                                               -.3
+                                                                                    0
+
+
+
+
+                                                                                                                                                                                   0
+       2004            2006              2008                2010                2012                 2005            2006              2007                 2008               2009
+
+          Ln Skill premium (left axis)          Ln Online exports (right axis)                           Ln Skill premium (left axis)          Ln Online exports (right axis)
+
+
+
+                                         BRA                                                                                            COL
+
+
+
+
+                                                                                                                                                                                   2.5
+0
+
+
+
+
+                                                                                    2
+
+
+
+
+                                                                                               0
+
+
+
+
+                                                                                                                                                                                   2
+                                                                                    1.5
+
+
+
+
+                                                                                               -.05
+
+
+
+
+                                                                                                                                                                                   1.5
+-.1
+
+
+
+
+                                                                                    1
+
+
+
+
+                                                                                                                                                                                   1
+                                                                                               -.1
+                                                                                    .5
+
+
+
+
+                                                                                                                                                                                   .5
+                                                                                               -.15
+-.2
+
+
+
+
+                                                                                    0
+
+
+
+
+                                                                                                                                                                                   0
+       2004            2006              2008                2010                2012                 2004                   2006                     2008                      2010
+
+          Ln Skill premium (left axis)          Ln Online exports (right axis)                           Ln Skill premium (left axis)          Ln Online exports (right axis)
+
+
+
+                                         ETH                                                                                            ECU
+                                                                                               .05
+                                                                                    25
+
+
+
+
+                                                                                                                                                                                   5
+0
+
+
+
+
+                                                                                    20
+
+
+
+
+                                                                                                                                                                                   4
+                                                                                               0
+                                                                                    15
+
+
+
+
+                                                                                                                                                                                   3
+-.2
+
+
+
+
+                                                                                    10
+
+
+
+
+                                                                                                                                                                                   2
+                                                                                               -.05
+                                                                                    5
+
+
+
+
+                                                                                                                                                                                   1
+-.4
+
+
+
+
+                                                                                               -.1
+                                                                                    0
+
+
+
+
+                                                                                                                                                                                   0
+
+
+
+
+       2004            2006              2008                2010                2012                 2004            2006              2008                 2010               2012
+
+          Ln Skill premium (left axis)          Ln Online exports (right axis)                           Ln Skill premium (left axis)          Ln Online exports (right axis)
+
+
+
+                                         PRY                                                                                            PHL
+                                                                                               .08
+0
+
+
+
+
+                                                                                    4
+
+
+
+
+                                                                                                                                                                                   4
+                                                                                               .06
+                                                                                    3
+
+
+
+
+                                                                                                                                                                                   3
+-.05
+
+
+
+
+                                                                                               .04
+                                                                                    2
+
+
+
+
+                                                                                                                                                                                   2
+-.1
+
+
+
+
+                                                                                               .02
+                                                                                    1
+
+
+
+
+                                                                                                                                                                                   1
+-.15
+
+
+
+
+                                                                                    0
+
+
+
+
+                                                                                               0
+
+
+
+
+                                                                                                                                                                                   0
+
+
+
+
+       2004            2006              2008                2010                2012                 2004            2006              2008                 2010               2012
+
+          Ln Skill premium (left axis)          Ln Online exports (right axis)                           Ln Skill premium (left axis)          Ln Online exports (right axis)
+
+                                                                                          35
+

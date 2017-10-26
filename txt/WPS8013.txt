@@ -1,0 +1,1162 @@
+                                                        WPS8013
+
+
+Policy Research Working Paper                          8013
+
+
+
+
+           Improving the Resilience of Peru‚Äôs
+           Road Network to Climate Events
+                                 Julie Rozenberg
+                           Cecilia Briceno-Garmendia
+                                     Xijie Lu
+                                Laura Bonzanigo
+                                  Harry Moroz
+
+
+
+
+Latin America and the Caribbean Region
+Office of the Chief Economist
+March 2017
+Policy Research Working Paper 8013
+
+
+  Abstract
+ This paper proposes a methodology to prioritize interventions                      then overlaid with natural hazard layers. The average annual
+ in Peru‚Äôs road network. A network model is built, linking the                      losses associated with the hazard disruptions of the critical
+ country‚Äôs economic and population centers through indica-                          links are calculated in many scenarios, including climate
+ tive corridors, which are defined as the least-cost routes to                      change uncertainty and different impacts and reconstruc-
+ connect origins to destinations. The network‚Äôs critical links                      tion times. A robust decision-making approach is then used
+ are identified by systematically simulating disruptions and                        to select interventions that decrease hazard disruption costs.
+ calculating the costs associated with them. The network is
+
+
+
+
+  This paper is a product of the Office of the Chief Economist, Latin America and the Caribbean Region. It was originally
+  prepared as a case study and background paper for the Regional Study ‚ÄúRoad Networks, Accessibility and Resilience:
+  The Cases of Colombia, Ecuador and Peru‚Äù published in 2015. It benefited from funding of the Swiss Corporation for
+  Development and the Korean Green Growth Trust Fund. It is part of a larger effort by the World Bank to provide open
+  access to its research and make a contribution to development policy discussions around the world. Policy Research
+  Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at jrozenberg@
+  worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+                     Improving the Resilience of Peru‚Äôs Road Network to Climate Events
+
+          Julie Rozenberg, Cecilia Briceno-Garmendia, Xijie Lu, Laura Bonzanigo, Harry Moroz
+
+
+
+
+JEL: R40, R42, Q54
+
+Keywords: robust decision making, network analysis, transport prioritization, climate change resilience
+
+Disclaimer: This paper was originally prepared as a case study and background paper for the
+Regional Study ‚ÄúRoad Networks, Accessibility and Resilience: The Cases of Colombia, Ecuador and Peru‚Äù
+published in 2015 and sponsored by the Chief Economist‚Äôs Office in the Latin America and the
+Caribbean Vice-Presidency of the World Bank. It benefited from funding of the Swiss Corporation for
+Development (SECO) and the Korean Green Growth Trust Fund (KGGTF).
+1. Introduction
+In Latin America, economic activity and population mobility are heavily dependent on transport. Many
+economies rely on commodity exports and populations and economic production are concentrated in
+urban areas, often far from dispersed rural populations. Thus, connectivity among cities, mining and
+agricultural production areas, and external markets requires transport networks to move people and
+goods cost-effectively.
+
+Peru‚Äôs difficult topography and climate create challenges for businesses and communities, as in much of
+Latin America, nearly all of the nation‚Äôs cargo travels by road. Median altitudes range from less than 500
+meters above sea level on the coast and the Amazon regions to more than 3,000 meters in mountainous
+areas. Extreme temperatures, floods and landslides triggered by heavy rains sometimes lead to closures
+of important roads (MTC, 2005). In 1982-83 and 1997-98, severe El Ni√±o events caused flash floods and
+landslides, resulting in huge losses. In 1982-83, for instance, most bridges on the northern areas of the
+Pan Americana road, along the Peruvian coast, were destroyed. Not all bridges have been rebuilt and
+many temporary structures remain. Such interruptions help explain the high logistics costs for export
+commodities in Peru.
+
+To support economic growth, policy makers must ensure that as Peru develops, its road network is
+resilient to future shocks. Obviously, the best solution would be to fully protect the entire network against
+all possible disruptions. But because resources are limited, policy makers must know which roads are
+critical -- for instance, those with the most traffic, greatest socio-economic relevance, or most expensive
+consequences in the event of disruption -- and the best interventions to protect them against the
+disruption risks they face.
+
+Identifying the most appropriate interventions to prevent or mitigate disruptions linked to natural
+disasters in a road network is challenging. First, it is difficult (and sometimes impossible) to predict the
+frequency, severity, and duration of the potential disruptions to which a road segment is exposed. Large
+data sets and sophisticated modeling are needed to accurately estimate the probability of an extreme
+event such as extreme rainfall or earthquake to occur in a particular place. In addition, climate change
+adds considerable uncertainty to the magnitude of mean and extreme changes in precipitation that may
+occur in a country or region. This uncertainty is even more pronounced at the fine scale needed for road
+projects ‚Äì since downscaling climate data tends to amplify rather than reduce uncertainty.
+
+Moreover, the economic impact of natural disasters on a road depends on many local variables that are
+sometimes unknown to analysts. The impact worsens if the road is not well maintained, if deforestation
+makes the terrain prone to landslides, or if emergency responses are not dispatched in a timely fashion
+to make the road operational again in a short time. Whether a critical road can be repaired in a few weeks
+or months can dramatically change the economic consequences of a disruption, as well as the type of
+interventions required.
+
+Finally, the economic impact of a disruption in a road network is exacerbated if the road is critical to an
+economic sector, to a certain community, or to the entire transportation network. Traditionally, economic
+
+
+                                                                                                           2
+analyses of road interventions have been focused on project-level benefits. For instance, Peru‚Äôs
+Supervisory Board for Investment in Public Transport Infrastructure (OSITAN) typically asks
+concessionaries and the Ministry of Transport (MTC) to submit economic analysis for each intervention
+for which they are seeking funding. The main metrics used to choose projects are financial indicators
+based on future traffic demand. But this project-centered approach misses the system-wide benefits of
+some interventions, particularly their impact on resilience.
+
+So, to plan for a resilient road network, it is important to identify the critical links of a network whose
+rupture the economy cannot afford, and the alternatives available to planners and policy makers to
+reduce the risks associated with the disruption of those links. This papers aims to help governments solve
+these challenges. Building on the framework and concepts for accessibility and criticality by (Brice√±o-
+Garmendia et al., 2015), this paper proposes a methodology to set priorities within Peru‚Äôs road network,
+taking a system-wide approach, and to design robust interventions that may reduce its vulnerability,
+despite the uncertainties related to hazards and their impacts. Specifically, it helps answer two questions.
+
+What are the most critical roads in the national network, and of these, which are the most exposed to
+natural disasters? The study finds that because of high traffic and agriculture exports ‚Äì combined with
+exposure to floods, landslides, and storm surges ‚Äì disruption risks could be especially high for three
+clusters of the Peruvian road network: Carretera Central near Lima, Piura in the north and a southern part
+of the Pan Americana road.
+
+What are the most robust proactive interventions to reduce the disruption risks of these critical links? The
+most robust options to mitigate disruption risk vary by link. In Piura and Pan Americana, building a flood-
+proof road is the most robust option in the face of the many uncertainties considered, since it is the most
+cost-efficient investment across a large number of scenarios. By contrast, for Carretera Central, building
+redundancy is the most robust option.
+
+2. Methodology
+This paper uses a network approach to evaluate the vulnerability of a subset of the Peruvian road system
+across a wide range of potential future conditions. Given the size and complexity of Peru‚Äôs national road
+network, a systematic assessment of each link is costly in terms of data needs and computational
+demands, and would not necessarily address decision makers‚Äô need to prioritize interventions. Instead,
+carefully selected criticality criteria can help narrow a road network of tens of thousands of links down to
+several hundred meriting further analysis.
+
+Accordingly, this study is split into two main parts. First, we built a Geographic Information System (GIS)
+model of the road network in Peru that captures the physical characteristics and cast aspects of the road,
+which we use to identify a set of critical links. Critical links are those of utmost importance for the
+performance of the overall network, which can be defined using different geopolitical, social, and
+economic criteria. The impact that an individual road (a network segment more generally) has on the
+aggregate accessibility of the country or region gives a sense of the relative importance of that individual
+road in the network or, in other words, of its criticality.
+
+
+                                                                                                          3
+Then, for the critical links exposed to floods and landslides, we assessed the disruption risk under many
+possible scenarios and compared alternative interventions to reduce this risk. We then identified the best
+intervention to reduce the risk associated with floods and landslides for these links, taking into account
+the uncertainties around future hazards and vulnerabilities. Here we applied state-of-the-art
+methodologies to address deep uncertainties related to future conditions and data gaps.
+
+    2.1. A network approach for measuring criticality
+Ranking corridors based on their criticality can inform prioritization exercises and, ultimately, enable the
+analysis of the economic and development impacts of specific interventions and policy decisions.
+
+Peru‚Äôs road network contains 164,411 kilometers of roads, of which we wanted to identify the most critical
+links. Several criteria can be used depending on the policy goal. For instance, policy makers might decide
+to prioritize export outlets for agricultural products, mining corridors, or increase access for lagging areas
+to main cities. Here we measured a link‚Äôs criticality in terms of the impacts that its removal would have
+on the overall network. This required building a model of the road network and calculating least-cost
+routes between Origin-Destination pairs (see annex for a description of the model and data).
+
+Before calculating the impact of link removal, we applied two initial filters to identify the critical links.
+First, we narrowed the network down by selecting only the least-cost routes between our set of origins
+and destinations. We call these routes the indicative corridors.1 Then, we applied a second filter which we
+used to capture the socio-economic importance of the different routes by looking at their traffic levels.
+We ranked the links by traffic levels and selected the 10 percent links with the highest traffic ‚Äì that is with
+4,000 or more vehicles per day2 (Figure 1). This step reduced the analysis to about 1.3 percent of the
+national network, or 2,274 kilometers ‚Äì we call these 974 links candidate critical links.
+
+
+
+
+1
+  Explicit criteria were imposed to define the corridors of interest to make sure cross-country comparisons were
+possible. To identify the indicative corridors, we used the Network Analyst, an extension of the ArcGIS software,
+which allowed us to analyze all routes via their HDM-4 estimated RUCs, which fully reflects the physical
+characteristics of the existing road network.
+2
+  The median average daily traffic (ADDT) for Peru is 982 vehicles. Figure 1 is adapted from (Taylor et al., 2006)
+whose methodology we borrow. These authors first identify the candidate critical links as those that are part of the
+least-cost route between two locations -- then measure the change in cost or in accessibility associated with the
+loss of each of these links. For computation capacity reasons, in this study we modified the first step of their
+application by defining the candidate critical links as those links that are part of the least-cost routes and have the
+highest traffic.
+
+
+                                                                                                                     4
+Figure 1 indicative corridors and candidate critical links (in red). Source: author‚Äôs calculations based on
+MTC data.
+
+
+
+
+Once we had narrowed down the number of links, the second step was to measure the criticality of each
+of the 974 candidate links by estimating the cost for the network when a link is disrupted, lost, or
+degraded. We used the interdiction technique, which solves the network when some of its elements are
+removed (Lu et al., 2014; Pokharel and Ieda, 2013; Ukkusuri and Yushimito, 2009). We removed each
+candidate critical link sequentially and each time we recalculated the least-cost routes between all OD
+pairs. With the new least-cost routes configuration (the ‚Äúsecond-best‚Äù routes), we calculate the new
+performance of the network.
+
+The performance of the network and impacts of link removal were calculated along three dimensions: the
+road user cost for each OD pair, the kilometers driven for each OD pair and the total daily cost of using
+
+                                                                                                         5
+the network (using average daily traffic on each link). We aggregated the performance of the least-cost
+routes at the national level using weights that reflect the importance of each OD pair. Indeed, a simple
+sum of the road user cost over all the routes in the network would be misleading because some routes
+are used much more frequently than others.
+
+We thus assigned weights to the different OD pairs based on the importance of the origins and
+destinations, which we measured in terms of traffic. We did this by:
+
+ÔÇ∑   Summing the traffic getting in and out of each origin and destination node.
+ÔÇ∑   Calculating for each route ‚Äì each Origin-Destination pair ‚Äì a weight w based on the gravity model:
+
+                                                        Ì†µÌ±áÌ†µÌ±Ç ‚àó Ì†µÌ±áÌ†µÌ∞∑
+                                                 Ì†µÌ±§ =         2
+                                                         Ì†µÌ±òÌ†µÌ±öÌ†µÌ±ÇÌ†µÌ∞∑
+
+where TO is the total traffic getting in and out of the origin, TD is the total traffic getting in and out of the
+destination, and kmOD is the distance between the origin and destination. We also use these weights to
+distribute traffic (measured at each link) between the OD pairs in the calculation of the total daily cost of
+the network.
+
+The impact of a disruption at the national level is then the difference in network performance between
+the baseline conditions and the new network configuration with second-best routes when a link is
+removed. The criticality of each link is thus expressed along the three same dimensions: first, by
+aggregating over the network the average increase in road user cost (dollars per ton-kilometer) when the
+link is removed, compared with a baseline condition with no disruptions. Second, by aggregating over the
+network the average increase in kilometers that users have to drive when a disruption occurs. And third,
+by calculating the total direct economic cost linked to the disruption.
+
+The candidate critical links are ranked according to these impacts on the network when they are
+disrupted: the higher these three impacts, the higher the criticality of the link.
+
+    2.2. Exposure of critical links
+Once we have identified the critical links, we overlay the network with hazard layers to identify which
+ones are also exposed to natural disasters.
+
+We used a database of flood scenarios produced by Global Flood Risk using the IMAGE Scenarios
+model‚ÄîGLOFRIS (Ward et al., 2013; Winsemius et al., 2013). This model simulates daily discharge and
+runoff at a horizontal resolution of 0.5¬∞ x 0.5¬∞. Deltares simulated eight return periods ‚Äì RP5, RP10,
+RP25, RP50, RP100, RP250, RP500, and RP100. The model was forced using daily meteorological fields of
+precipitation, temperature, and radiation for four time periods: 1960‚Äê99, which represents the baseline
+climate; 2010‚Äê49 representing 2030; 2030‚Äê69 representing 2050; and 2060‚Äê99 representing 2080. The
+meteorological data for the baseline climate are WATCH Forcing data (Weedon et al., 2011). The future
+meteorological data are provided by the ISI‚ÄêMIP project, and consist of bias‚Äêcorrected data (Hempel et
+
+
+                                                                                                               6
+al., 2013) for an ensemble of five Global Climate Models (GCMs) from the CMIP5 project (Taylor et al.,
+2012).3
+
+Because Peru‚Äôs most important highway is along the coast, we also overlay the network with coastal
+flood data.4 But since there are no probabilistic data we simply identify the links exposed to coastal
+floods and do not calculate disruption losses linked to coastal floods.
+
+Finally, some parts of Peru are susceptible to landslides triggered by high rainfall. Thus, we use landslide
+susceptibility maps provided by Ingemmet to associate landslides to flood events.5 In places where
+landslide susceptibility is high, we add landslide impacts to flood impacts for high return period floods.
+
+    2.3. Vulnerability of critical links
+Here we define the vulnerability of a link as the economic consequences of a hazard event. It is
+therefore broader than structural damages to the infrastructure and includes impacts on both road
+users and the government or concessionaries.
+
+Assessing the vulnerability of exposed roads to floods was the most difficult part of this exercise because
+of a lack of local data on critical parameters such as flood duration, structural damages, and traffic
+rerouting. Instead of working with best guesses we built several scenarios for each unknown parameter
+and relationship.
+
+Flood duration
+Data on flood duration and on the relationship between flood duration and depth were not available. This
+relationship generally depends on many factors other than flood depth, such as water velocity and
+topography. Thus, we constructed simple curves based on information about past floods on the Carretera
+Central, the only highway for which data were available (Figure 2). We validated those curves with expert
+consultations.
+
+
+
+
+3
+  The GCMs used are GFDL‚ÄêESM2M, HadGEM2‚ÄêES, IPSLCM5A‚ÄêLR, MIROC‚ÄêESM‚ÄêCHEM, and NorESM1‚ÄêM.
+For this study, we used climate projections based on one representative concentration pathway (RCP), RCP8.5.
+4
+  2013 Dartmouth flood observatory flood extend v2 data set.
+5
+  http://www.ingemmet.gob.pe/.
+
+                                                                                                               7
+Figure 2 Relationship between flood depth and flood duration. Source: authors‚Äô calculations
+
+
+
+
+Structural damages
+The impact that different water levels may have on a particular road segment depends on many factors
+and on engineering design ‚Äì for which we had no local data. After consultations with transport and civil
+engineers, we assumed that a road would have to be entirely reconstructed if water remained for more
+than 30 days, or rehabilitated if water stayed 10-30 days. We assumed that for less than 10 days
+underwater, a road would need only cleaning and minor maintenance. The costs of reconstruction,
+rehabilitation, and cleaning depend on the characteristics of the disrupted link (Table 6 in Annex). We did
+not distinguish between primary and secondary roads for the time thresholds.
+
+Traffic rerouting during a disaster and reconstruction
+When a disaster hits, different scenarios of traffic rerouting may occur. We assumed that if a landslide
+hits a road, all traffic is redirected to the second-best routes. But for floods, we assumed that the share of
+traffic that can drive through the flooded road depends on the water level on the road and created three
+scenarios (Figure 3).
+
+Figure 3 Relationship between water level and traffic disruption. Source: authors‚Äô calculations.
+
+
+
+
+                                                                                                            8
+In the optimistic scenario, 30 percent of traffic has to take the second-best route if water is between 15
+and 25 centimeters, and 100 percent of traffic has to take the second-best route when water is above 60
+centimeters (Figure 3). But in the pessimistic scenario, 100 percent of traffic needs to take the second-
+best route when water is 30 centimeters deep (that is we assume that all vehicles on that road are too
+low to drive through 30 centimeters of water). For the share of traffic that can still use the first-best route,
+despite water on the road, we assume that the maximum speed remains below 30 kilometers per hour
+and recalculate road user costs (RUCs) accordingly.
+
+Not only during the event, but also during reconstruction or rehabilitation, only some traffic can use the
+road. Because the exact share of traffic that can use the road during works is also unknown, we develop
+three additional traffic scenarios. In the optimistic one, 90 percent of traffic can use the link during
+reconstruction, at a slower pace. In the intermediate one, 80 percent can use the link. In the pessimistic
+one, 70 percent of traffic can go through. In terms of timing of rerouting, we assumed that reconstruction
+takes 30 days per kilometer, rehabilitation 10 days per kilometer, and cleaning 2 days per kilometer.
+
+Landslides
+In some parts of Peru, intense rainfall can trigger landslides. Where landslide susceptibility is high, we
+assume that the road is destroyed and 100 percent of traffic has to be redirected to the second-best
+routes. We also assume that it takes 30 days to clear the debris and reestablish disrupted connectivity.
+
+Total cost of an event
+For one flood event, the total costs for users are:
+
+                                Ì†µÌ∞ø = Ì†µÌ∞∑ ‚àó ((1 ‚àí Ì†µÌ±†) ‚àó Ì†µÌ±ê1Ì†µÌ±†Ì†µÌ±° Ì†µÌ±èÌ†µÌ±íÌ†µÌ±†Ì†µÌ±° + Ì†µÌ±† ‚àó Ì†µÌ±ê2Ì†µÌ±õÌ†µÌ±ë Ì†µÌ±èÌ†µÌ±íÌ†µÌ±†Ì†µÌ±° )
+
+Where D is the number of days of the disruption, s is the share of traffic redirected to the second-best
+route, c1st best is the cost of using the first-best route adjusted for the increased cost of use when partially
+disrupted, and c2nd best is the cost of using the second-best route.
+
+When a disaster strikes, not only private users suffer, but the government or concessionaries also need
+to reinstate the road. Depending on the severity of the impact, they may rebuild it, rehabilitate it, or clean
+it. We calculate the cost for the government or concessionaries as the number of kilometers damaged
+multiplied by the cost of rehabilitation or reconstruction, depending on the structural damages (see Table
+6).
+
+We assume that during reconstruction, a share of traffic may continue to use the second-best routes,
+which adds to users‚Äô costs of disruption. Our measure of vulnerability misses indirect effects such as
+missed hours of work, traffic congestion, costs of missing connections with other transport modes, and
+losses of perishable goods. For instance, every year, $5.2 billion of agricultural commodities ‚Äì mainly
+yellow onions, grapes, quinoa, coffee, and cocoa ‚Äì are transported by road to the harbors from the Andes
+and Amazonian regions. Some of these commodities are lost because of road disruptions, but these losses
+were not taken into account in this paper for lack of data.
+
+
+
+
+                                                                                                              9
+    2.4. Prioritization and choice of interventions
+Decision-makers need guidance on how to reduce the vulnerability of critical links. Should they wait until
+the disasters strike and simply rebuild or rehabilitate the roads? Or, should they mitigate risks in advance?
+
+Deep uncertainty like climate change, combined with data gaps, challenge decision-makers around the
+world. How can long-term decisions be made now when the parties to decisions do not know or cannot
+agree on the system model relating actions to consequences or the prior probability distributions for the
+key input parameters to those models (Groves and Lempert, 2007)?
+
+Traditional analysis, sometimes called ‚ÄúPredict then Act‚Äù, hinges on accurately predicting climate and
+other conditions ‚Äì then reaching consensus on what the future will bring. This approach does not work
+well for long-term climate change or project-specific inventions given the multiple challenges noted
+above.
+
+Innovative methods exist for managing long-term and uncertain project risks. Robust Decision Making
+(RDM) is one such approach. RDM is an iterative, quantitative, decision support methodology designed to
+help policy makers identify robust strategies ‚Äì that satisfy decision-makers‚Äô objectives in many plausible
+futures rather than being optimal in any single best estimate of the future. RDM asks, ‚ÄúWhat are the
+strengths and limitations of our strategies, and what can we do to improve them?‚Äù
+
+To answer this, RDM rests on a simple concept. Rather than using models and data to evaluate plans
+under a single or handful of scenarios, RDM stress tests investment choices under hundreds of scenarios.
+Statistical analyses of these model runs identify the key conditions under which each strategy satisfies or
+fails to satisfy decision-makers‚Äô objectives. Visualizations help decision-makers understand how robust
+different strategies are by benchmarking those key conditions against the range of plausible outcomes.
+They also help compare strategies along other dimensions such as cost, technical feasibility, and social
+acceptability (Lempert et al., 2013).
+
+Importantly, approaches like RDM are not new: they are based on solid traditional decision-making
+theories. They use existing data and models transparently, revealing critical assumptions often hidden in
+analyses. Such approaches also promote consensus ‚Äì decision-makers can agree on a plan without
+agreeing on predictions of the unpredictable.
+
+Similar approaches have been applied with increasing frequency in the United States and Europe
+(Haasnoot et al., 2013; Lempert and Groves, 2010). These methods are collectively referred to as ‚Äúdecision
+making under deep uncertainty‚Äù (DMDU). The World Bank has been using DMDU methodologies in
+various projects, ranging from hydropower investments in Nepal (Bonzanigo et al., 2015a), to water and
+energy investments in Africa (Cervigni and Morris, 2015), water resources planning in Lima Peru
+(Bonzanigo et al., 2015b; https://goo.gl/BRojPW), and wetland management. But few papers have applied
+DMDU tools to road networks (Cervigni et al., 2016; Espinet et al., 2015).
+
+This paper applies RDM techniques to identify the most robust interventions in each critical link ‚Äì that is,
+interventions that work well no matter what the future brings.
+
+
+                                                                                                          10
+Available interventions
+An RDM analysis typically begins by identifying available options. To reduce losses linked to the disruption
+of part of the road network because of a disaster, policy makers have two sets of choices: intervene after
+the disaster hits (reactive), or try to reduce possible impacts with proactive interventions beforehand.
+Proactive interventions include all those that reduce or eliminate disruption losses, while reactive
+interventions include rehabilitation or reconstruction of the affected road. The advantage of the latter is
+that no resources are directed where they may not be needed. But intervening after a disaster may be
+more costly than preventing it. In particular, rehabilitation can take time, especially for roads managed
+directly by the government, so the costs for the economy at large may escalate.
+
+We compared several proactive options with a reactive one, in which the government or concessionaries
+rebuild the same road after a disaster ruined it. We considered the following proactive options:
+
+ÔÇ∑   Interventions on the critical road. The first option is to maintain the road more frequently. Generally,
+    road authorities perform two types of maintenance: routine and periodic. Routine maintenance
+    involves all sorts of small interventions on a road and can be carried out once a year or more often,
+    depending on the weather, on the materials used, and on the traffic. Periodic maintenance generally
+    occurs every five years and includes major rehabilitation works. Proper maintenance and frequent
+    cleaning of drainage structures can significantly reduce the time water remains on a road ‚Äì and in its
+    turn, reduce the overall damage to the infrastructure. As intervention, we considered doubling the
+    frequency of periodic maintenance, and assumed that it divides by three the length of a disruption
+    due to flood.
+    The second option is to upgrade the road, which may involve adding tunnels or elevating a road ‚Äì
+    depending on the topography of the area. Such work can be very costly, but we assume that it would
+    make the road resistant even to 100-year return period floods. The costs we use are based on
+    discussions with stakeholders.
+
+ÔÇ∑   Adding redundancy by upgrading an existing alternative to the first-best route. For each link disrupted,
+    we already identified second-best routes as alternatives to the lowest-cost routes between all ODs.
+    So, we explored the option of improving the roads most used by these second-best routes. For
+    instance, this could imply transforming an existing secondary road, or an unpaved road, into a primary
+    paved road. We considered two possible ways of adding redundancy: a large-scale increase in
+    redundancy, where all road segments used for second-best routes are upgraded to primary paved
+    roads, and a more targeted increase in redundancy, where only 30 percent of alternative roads are
+    upgraded to primary paved roads.
+
+These interventions have different capital and maintenance costs (see Table 6).
+
+Uncertainties
+We considered four types of uncertainties that can affect the choice of the best intervention. Some are
+related to the impossibility of predicting their values; others to data gaps. The uncertainties are the
+intensity, frequency, and duration of climate-related events; the structural impact of water levels on the
+
+
+                                                                                                         11
+road; the amount of traffic to be rerouted when a flood or landslide hits; and the time and total cost of
+reconstructing a road after a disaster.
+
+We then statistically generated 500 futures, each a combination of one value for each uncertainty. These
+futures are not predictions, and we do not assign any likelihood to their occurrence. We use them to
+better understand the behavior of our investment options.
+
+Metrics
+Metrics describe how we measure the performance of the different interventions. We express this
+performance as the discounted sum of the difference between the costs of interventions (investment and
+operations and maintenance) and the avoided average annual losses (AAAL) every year over the life cycle
+of the investment:
+                                                 30
+                                                ‚àíÌ†µÌ±êÌ†µÌ±úÌ†µÌ±†Ì†µÌ±°Ì†µÌ±†(Ì†µÌ±°) + Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞ø(Ì†µÌ±°)
+                                        Ì†µÌ±É = ‚àë (                              )
+                                                          (1 + Ì†µÌ±ë)Ì†µÌ±°
+                                                Ì†µÌ±°=1
+
+Where AAAL is the difference between the average annual losses (AAL) with the intervention and AAL if
+we do nothing.
+
+                          Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞ø (Ì†µÌ±°) = Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞ø(Ì†µÌ±ëÌ†µÌ±ú Ì†µÌ±õÌ†µÌ±úÌ†µÌ±°‚ÑéÌ†µÌ±ñÌ†µÌ±õÌ†µÌ±î) ‚àí Ì†µÌ∞¥Ì†µÌ∞¥Ì†µÌ∞ø(Ì†µÌ±ñÌ†µÌ±õÌ†µÌ±°Ì†µÌ±íÌ†µÌ±üÌ†µÌ±£Ì†µÌ±íÌ†µÌ±õÌ†µÌ±°Ì†µÌ±ñÌ†µÌ±úÌ†µÌ±õ)
+
+Average annual losses include the total private cost to users and the cost of reactive investments to
+reconstruct or rehabilitate the road after a disaster. To calculate average annual losses, we calculate
+disruption costs for each return period event and aggregate them.
+
+This measure of performance is similar to a net present value in which the only benefits of the intervention
+that are considered are the avoided disruption losses. Later in this paper, an investment is ‚Äúprofitable‚Äù if
+P is positive.
+
+Choosing the most robust option
+To choose the most robust option across the futures considered, several criteria can be applied. In this
+paper, we use the minimum of the maximum regret across all scenarios. The regret of an option i is the
+difference between the performance of the option and the performance of the best option i‚Äô for a
+particular scenario s.
+
+                                      regret(Ì†µÌ±ñ, Ì†µÌ±†) = max(Ì†µÌ±É(Ì†µÌ±ñ ‚Ä≤ , Ì†µÌ±†) ‚àí Ì†µÌ±É(Ì†µÌ±ñ, Ì†µÌ±†))
+                                                            Ì†µÌ±ñ‚Ä≤
+
+We calculate regret for each option in every future, then identify the option with the lowest possible value
+of regret ‚Äì our robust option, which performs well no matter what the future brings.6
+
+
+
+
+6
+ This metric is dependent on extreme scenarios. One way to avoid that is to compare the regret of each project to
+the regret of not implementing the project.
+
+                                                                                                               12
+3. Results
+    3.1. The most critical and most exposed roads in the Peruvian road network
+Figure 4 visualizes the performance of the network with the three metrics when each of the 974 links is
+disrupted (each point in the graph represents one link being disrupted):
+
+    ÔÇ∑   The X-axis shows the change in the network length, measured in additional kilometers.
+    ÔÇ∑   The Y-axis shows the increase in cumulative road user costs (RUC) over all OD pairs, measured in
+        US dollars per vehicle
+    ÔÇ∑   The shape of the plotted links represents the daily additional economic cost ‚Äì the increase in RUC
+        multiplied by traffic.
+
+Accordingly, the three metrics are correlated. When a link is removed the additional road user cost largely
+depends on additional kilometers driven, because the conditions of the alternative routes tend to be
+similar across the network. In addition, we pre-selected links with high traffic and we gave more weight
+to OD pairs with more traffic, so that when the additional road user cost is high, the total daily economic
+cost is high as well. This correlation may not hold in different contexts (rural roads for instance) where the
+cost of the alternative roads depends much more on the quality of the road and where there is little traffic.
+Here, since the three dimensions of criticality are correlated, we can easily use daily economic cost as a
+proxy for criticality and lack of redundancy.
+
+For most of the links considered here, the increase in RUC is less than $40 per day, the increase in length
+is less than 70 kilometers, and the economic cost remains below $2 million a day (Figure 4).
+
+Yet the disruption of some links can lead to an increase of more than 300 kilometers on average for routes
+of the network, and to more than a $400 daily increase in RUC. The disruption of these links that lead to
+the longest detours and highest increase in RUC generally present high costs when traffic is accounted for
+(on average, between $2 million and $4 million a day). One of these links, if disrupted, leads to losses
+above $4 million per day. Thus, such disruptions have very important consequences for the performance
+of the network even if they last for a short time.
+
+
+
+
+                                                                                                           13
+Figure 4 Ranking the criticality of links in Peru‚Äôs road network
+
+
+
+
+Figure 5 maps the economic costs of disruption over all candidate critical links. The links with daily costs
+higher than $2 million are shown in red and all are located on the Pan Americana Highway. This is not
+surprising as this is the road with the highest daily traffic and it is located between the sea and the
+mountains; thus, it has little redundancy.
+
+Next, we explore the critical links most exposed to disruptions caused by natural disasters.
+
+First, we overlay the network with the flood maps described in section 2.2. The links with the highest cost
+and kilometers increase that are also exposed to floods are all on the Pan Americana highway (Figure 5).
+The cluster Pan Americana ‚Äì a set of critical links located on the Pan Americana highway ‚Äì is exposed to
+river and coastal floods, and if disrupted costs close to $3 million a day to its users ‚Äì forcing them to drive
+an average of 300 additional kilometers. The area North of Arequipa presents the highest economic losses
+and very low redundancy, so we focus our analysis on this section (cluster Pan Americana in Figure 6).
+
+
+
+
+                                                                                                            14
+ Figure 5. Economic cost of road disruption in Peru
+
+
+
+
+The other two clusters we considered lay on the Carretera Central, near Lima, and around Piura. The
+disruption costs in these two clusters are not among the highest (Figure 6). But both clusters are
+frequently affected by disasters and are strategic export routes for agricultural products. In Carretera
+Central disruptions occur very frequently ‚Äì and each time, the road‚Äôs (partial) closure leads to immediate
+food price rise in Lima, which affects poor people the most. Policy makers indicated that the most
+vulnerable cluster is located between Lima and La Oroya.
+
+
+                                                                                                       15
+Finally, disruptions due to floods in the region around Piura can lead to the disconnect of four cities and
+one airport ‚Äì and high losses in coffee exports.7 We focus on one particularly strategic area in the south
+of the city, on one of the main export routes for coffee.
+
+Figure 6 Critical links exposed to floods in Peru.
+
+
+
+
+Note: V1, V2 and V3 are segments on the Pan Americana (map Figure 5) and the three clusters are the
+ones for which we will do a full analysis.
+
+    3.2. What is the most robust proactive intervention to reduce the vulnerability of
+         critical links?
+For the three critical clusters, we first calculated average annual losses with no proactive interventions
+under a wide range of conditions that combine climate scenarios with different flood depth, structural
+impact and traffic rerouting scenarios.
+
+Figure 7 shows average annual losses (AAL) for the three selected clusters, with no proactive
+interventions, under a range of future conditions. AAL are broken down into private losses (Figure 7, panel
+a) and cost of reconstruction and rehabilitation (Figure 7, panel b). The highest AAL for users are on the
+
+7
+  About 58% of Peru‚Äôs coffee exports move through the Paita harbor in this area. (Brice√±o-Garmendia and Guasch,
+2015) finds that the time that coffee takes from the production site to the toasting site (in our critical area) is what
+most affects the competitiveness of coffee producers and exporters. Delays in reaching the toasting site can also
+lead to severe losses ‚Äì particularly if the raw product remains exposed to changes in temperature before being
+toasted.
+
+                                                                                                                     16
+Pan Americana highway, where traffic is the highest. For Carretera Central, ex-post costs are higher
+because rainfall triggers landslides that require rebuilding the road more often.
+
+The range of possible AAL is large because of the uncertainty considered, and we cannot attach specific
+probabilities to these scenarios. Instead we perform analyses of variance to identify the main drivers
+behind the range of AAL.8 For the Pan Americana, the uncertainty on future AAL mainly depends on the
+impacts of climate change on flood frequency and on the uncertainty of flood duration. For Piura and
+Carretera Central, the range of AAL mostly depends on the duration of the disruption. For at least these
+two latter clusters, our results indicate that the high losses could be reduced if the duration of the
+disruption were contained.
+
+    Figure 7. Total disruption costs (AAL) for three road clusters in Peru
+        (a) Private costs (for users)                          (b) Reactive intervention costs
+
+
+
+
+To decide what proactive intervention protects the road the best against uncertain disruption losses, we
+calculated the economic performance of each possible intervention in the three clusters for all possible
+scenarios of AAL. We consider four options:
+
+ÔÇ∑     increased maintenance, which allows reducing disruption length,
+ÔÇ∑     large-scale increase in redundancy, where we assume that most of the road segments used for
+      second-best routes are upgraded to primary paved roads,
+ÔÇ∑     targeted increase in redundancy, where only 30 percent of the alternative roads are upgraded to
+      primary paved roads, and
+ÔÇ∑     flood-proofing the first-best road, where we assume the road is elevated or drainage is highly
+      improved to avoid flood losses for all events with a return period of 100 years or less.
+
+
+
+
+8
+ The analysis of variance partitions the observed variance of a variable into components attributable to different
+sources of variation. In other words, we are explaining the variance of the outputs of our average losses model by
+the variance of the inputs (the sources of uncertainty identified previously). Doing so tells us about the drivers that
+are the most important to increase or decrease average annual losses.
+
+                                                                                                                    17
+Figure 8 shows how these four options perform, under all scenarios for the three clusters. The
+performance is calculated as described in the section on Metrics, and incorporates, in the avoided losses,
+both user costs and the cost of rehabilitating the road after a disaster.
+
+ Figure 8. Performance of different interventions over 30 years, for different scenarios, for the three Clusters
+
+
+
+
+ Note: These performance metrics are calculated over 30 years, with a discount rate of 3 percent and with
+ the assumption that traffic will not increase in the next 30 years.
+
+
+Here we assumed that the traffic on the roads analyzed does not increase in the next three decades. This
+is a conservative assumption that tends to reduce the benefits of the interventions. We vary these
+assumptions in the annex (with a 6 percent discount rate and a 3 percent growth rate in traffic), but these
+alternative assumptions do not change the order of preference of the different interventions.
+
+Because reactive interventions are included in the performance, whenever the performance of a proactive
+intervention is negative, it means that reactive interventions are more profitable.
+
+We then measure the robustness of interventions by calculating the maximum regret for each option in
+each cluster (Table 1).
+
+
+                                                                                                           18
+Table 1. Maximum regret in the three clusters, discounted over 30 years (billions of US dollars)
+                            More            Large-scale   Targeted       Flood-       Do nothing
+                            frequent        increase in increase in proofing (ex-post
+                            maintenance redundancy        redundancy     first-       intervention
+                                                                         best         only)
+                                                                         road
+ Pan Americana              2.1             5.4           2.5            1.9          7.4
+ Piura                      0.50            0.82          0.64           0.040        4.8
+ Carretera Central          0.37            0.55          0.037          0.32         4.5
+ In bold, the option that in each cluster minimizes the maximum regret.
+
+
+For all three clusters the option of doing nothing and relying only on ex-post interventions is the one with
+the highest possible regret, and this regret increases as traffic increases.
+
+For Pan Americana and Piura, the most robust option would be flood-proofing the first-best road (Table
+1). Assuming that it is possible to build a flood-proof road at the costs we have used, this option provides
+the greatest benefits in most scenarios. Moreover, the flood-proof road remains a better option than the
+others even in some scenarios where it has negative performance ‚Äì that is, in which being reactive is
+better, due to lower rainfall and optimistic assumptions about the duration of disruptions. Note that if we
+assume that traffic will increase at 3 percent per year in the next 30 years, there are no scenarios in which
+being reactive is better than investing in flood-proof roads, and this option always performs better than
+the others. In other words, there is no regret in investing in a flood-proof road (Figure 13 in the Annex).
+
+If the option of a flood-proof road were not available for the Pan Americana and Piura clusters, in both,
+the second most robust option would be more frequent maintenance (Table 1). Here the scenarios that
+lead to a negative performance are those with an optimistic assumption on flood duration ‚Äì that is, where
+water recedes rapidly. Since the main benefit of improved maintenance is the reduced duration of a flood
+because of cleaner drainage, for instance, if a flood lasts a short time, improved maintenance is not as
+useful.
+
+In neither of these two clusters is the option of improving redundancy profitable, but for different reasons.
+For Pan Americana, the number of kilometers of roads that would need to be upgraded to improve
+redundancy is very high (840 kilometers), so even if the potential disruption costs are very high (Figure 7),
+they do not offset the cost of upgrading all those roads. For Piura, the number of kilometers to upgrade
+is smaller (400 kilometers) but the potential disruption losses are also lower, hence the upgrading of the
+second-best routes is not profitable. This may change if we included the export losses linked to even
+shorter disruptions. Note that if only a portion of the second-best routes were upgraded (third
+intervention in Figure 8), this option becomes profitable in those scenarios with the highest expected
+losses. These results suggest that a further, more detailed analysis about which segments of the second-
+best routes would be most critical to upgrade may be useful.
+
+
+
+
+                                                                                                          19
+For Carretera Central, targeted upgrading of second-best routes is the most robust option (Table 1). This
+occurs because Carretera Central suffers from landslides in addition to floods, so more frequent
+maintenance and flood-proofing the first-best route are not as efficient. Here again, the regret of targeted
+increased redundancy becomes null if traffic increases by 3% per year (Figure 13 in the Annex), so this
+intervention should be implemented no matter what happens.
+
+The Ministry of Transport is currently upgrading two roads to increase the redundancy of Carretera
+Central. 9 To dive deeper into the performance of the best option for the Carretera Central, we explored
+in greater detail the profitability of these two projects. To simplify the analysis, we calculated the
+performance of increasing redundancy only considering losses from landslides (which cause the biggest
+losses in this cluster). Moreover, we varied the probability of occurrence (and duration of disruption) of
+landslides every year and the discount rate, as before.
+
+ Figure 9. Profitability of increased redundancy around Carretera Central for different probabilities
+ of occurrence of events and different discount rates.
+ 0 percent growth in traffic                        3 percent annual growth in traffic
+
+
+
+
+Figure 9 shows the profitability of the investment (that is, whether or not the performance of the
+investment is positive) for different probabilities of occurrence of landslides and different discount rates.
+The left panel calculates performance assuming there is no increase in traffic while the right panel
+assumes there is an annual growth rate of 3 percent for traffic. According to these results, for any discount
+rate lower than 15 percent, the investment makes sense even if traffic is disrupted for one day because
+of a small landslide and even if traffic does not increase for the next 30 years. If traffic does increase, the
+investment makes sense even with an 18 percent discount rate for any frequency of landslides.
+
+
+
+
+    9
+     Road 1: Huaura ‚Äì Say√°n ‚Äì Churin ‚Äì Oyon ‚Äì Ambo = 283.5 km. Road 2: Lima (Puente Santa Anita) ‚Äì Canta ‚Äì
+    Unish (Vicco) = 239.3 Km. Cost: around $700 million.
+
+
+                                                                                                             20
+Finally, we evaluate a more challenging investment to avoid landslides on the Carretera Central: a tunnel.
+We repeat the analysis assuming that the tunnel avoids all losses but costs $33 million per kilometer.
+
+ Figure 10. Profitability of a tunnel on Carretera Central for different probabilities of occurrence of
+ events and different discount rates.
+ 0 percent growth in traffic                        3 percent annual growth in traffic
+
+
+
+
+Unlike with the option of upgrading alternative roads, if traffic does not increase the option of the tunnel
+is only profitable for relatively low discount rates (lower than 10 percent), or higher discount rates and
+high probabilities of occurrence of landslides. If traffic increases by 3 percent a year, the tunnel is
+profitable with a discount rate of up to 12 percent. But discount rates are usually lower than 10 percent
+for public infrastructure investments so this option is still quite robust and should be considered by the
+local authorities or the government. Indeed, one advantage of tunnels is that they do not need to be
+rebuilt after an extreme event ‚Äì unlike upgrading alternative roads.
+
+Again, these results consider only private losses. If we included commercial costs, tunnels would probably
+make even more economic sense on roads subject to frequent landslides.
+
+4. Conclusions and Policy Recommendations
+Faced with the challenge of allocating resources efficiently and prioritizing the most urgent investments
+on road networks, decision-makers struggle to identify the most critical links and evaluate their
+vulnerability in the face of uncertain future events and uncertainties about their impact. This paper sought
+to answer two key questions. First, what are the most critical roads in Peru‚Äôs national network, and which
+are the most exposed to natural disasters? Second, what are the most robust proactive interventions to
+reduce the vulnerability of critical links?
+
+To help answer these questions, the paper shows how to effectively combine traditional transport models,
+like HDM-4, with innovative network analysis and state-of-the-art methods for managing uncertainties
+about the future.
+
+
+                                                                                                          21
+By using the interdiction technique on thousands of links, this paper shows how to select the most critical
+links. Ideally this phase would be conducted in close collaboration with policy makers, who are generally
+well aware of the most critical links and can bring nuances to the selection. Analysts can easily take into
+account additional qualitative information on the strategic or economic relevance of some links to
+improve the decisions. The combination of quantitative information on disruption costs and knowledge
+of the local challenges allows the identification of the most important areas of the network for further
+analysis.
+
+This paper then demonstrates how to identify the most exposed of these links to natural hazards by
+overlaying the network with hazard data and factoring in different parameters of their vulnerability ‚Äì such
+as flood depth and duration, traffic rerouting, and structural damage. Finally, by running hundreds of
+scenarios of possible events and their impacts, it applies a robust decision-making approach to guide an
+analysis of policy options available when a road network is exposed to unpredictable climate events.
+
+More data are needed to evaluate the full economic and social costs of disruptions and improve the
+economic analysis on the most vulnerable links of Peru‚Äôs road networks. In addition, other non-
+engineering solutions exist to reduce the vulnerability of the critical links that could be as effective, if not
+more, as the options explored in this paper. They include reforestation, traffic management, and
+multimodality. Reforestation, for instance, could significantly reduce the risk of landslides. Finally, traffic
+management, particularly if linked to early warning systems, could reduce losses during a disaster, by
+redirecting traffic to alternative routes and lowering the costs of a disruption afterwards by avoiding
+congestion.
+
+5. References
+Bonzanigo, L., Brown, C., Harou, J., Hurford, A., Karki, P., Newmann, J., Ray, P., 2015a. South Asia
+        Investment Decision Making in Hydropower. Decision Tree Case Study of the Upper Arun
+        Hydropower Project and Koshi Basin Hydropower Development in Nepal (GEEDR South Asia No.
+        AUS 11077). The World Bank.
+Bonzanigo, L., Molina Perez, E., Ramos, C., Groves, D.G., Rodriguez Cabanillas, I., Kalra, N.R., Brandon,
+        C.J., 2015b. Robust decision-making in the water sector: a strategy for implementing Lima‚Äôs
+        long-term water resources master plan (No. WPS7439). The World Bank.
+Brice√±o-Garmendia, C., Guasch, L. (Eds.), 2015. Analisis Integral de Logistica en Peru (Integral Analysis of
+        Logistics of Key Export Products), World Bank, SECO. ed. Published by MINCETUR, Washington
+        DC, USA, Lima, Peru.
+Brice√±o-Garmendia, C., Moroz, H., Rozenberg, J., 2015. Road Networks, Accessibility and Resilience: The
+        Cases of Colombia, Ecuador and Peru, Transport and ICT Global Practice and Chief Economist
+        Office of the Latin American Region. ed. World Bank, Washington DC, USA.
+Cervigni, R., Losos, A.M., Chinowsky, P., Neumann, J.L., 2016. Enhancing the climate resilience of Africa‚Äôs
+        Infrastructure: the roads and bridges sector (No. 110137). The World Bank.
+Cervigni, R., Morris, M., 2015. Enhancing resilience in African drylands: toward a shared development
+        agenda. World Bank.
+Espinet, X., Schweikert, A., Chinowsky, P., 2015. Robust Prioritization Framework for Transport
+        Infrastructure Adaptation Investments under Uncertainty of Climate Change. ASCE-ASME J. Risk
+        Uncertain. Eng. Syst. Part Civ. Eng. E4015001.
+
+
+                                                                                                             22
+Groves, D., Lempert, R., 2007. A new analytic method for finding policy-relevant scenarios. Glob.
+         Environ. Change 17, 73‚Äì85. doi:10.1016/j.gloenvcha.2006.11.006
+Haasnoot, M., Kwakkel, J.H., Walker, W.E., ter Maat, J., 2013. Dynamic adaptive policy pathways: A
+         method for crafting robust decisions for a deeply uncertain world. Glob. Environ. Change.
+Hempel, S., Frieler, K., Warszawski, L., Schewe, J., Piontek, F., 2013. A trend-preserving bias correction‚Äì
+         the ISI-MIP approach. Earth Syst. Dyn. 4, 219‚Äì236.
+Lempert, R.J., Groves, D.G., 2010. Identifying and evaluating robust adaptive policy responses to climate
+         change for water management agencies in the American west. Technol. Forecast. Soc. Change
+         77, 960‚Äì974.
+Lempert, R.J., Popper, S.W., Groves, D.G., Kalra, N., Fischbach, J.R., Bankes, S.C., Bryant, B.P., Collins,
+         M.T., Keller, K., Hackbarth, A., Dixon, L., LaTourrette, T., Reville, R.T., Hall, J.W., Mijere, C.,
+         McInerney, D.J., 2013. Making Good Decisions Without Predictions. Rand Corp. Res. Brief 9701.
+Lu, Q.-C., Peng, Z.-R., Zhang, J., 2014. Identification and Prioritization of Critical Transportation
+         Infrastructure: Case Study of Coastal Flooding. J. Transp. Eng. 141, 04014082.
+MTC (Ministerio de Transporte y Comunicaciones), 2005. Plan intermodal de transporte. Lima.
+Pokharel, R., Ieda, H., 2013. Prioritization of road network sections to upgrade dry weathered condition:
+         An accessibility approach in rural areas of Nepal, in: Proceedings of the Eastern Asia Society for
+         Transportation Studies.
+Taylor, K.E., Stouffer, R.J., Meehl, G.A., 2012. An overview of CMIP5 and the Experiment Design. Bull.
+         Am. Meteorol. Soc. 93, 485‚Äì498.
+Taylor, M.A., Sekhar, S.V., D‚ÄôEste, G.M., 2006. Application of accessibility based methods for
+         vulnerability analysis of strategic road networks. Netw. Spat. Econ. 6, 267‚Äì291.
+Ukkusuri, S.V., Yushimito, W.F., 2009. A methodology to assess the criticality of highway transportation
+         networks. J. Transp. Secur. 2, 29‚Äì46.
+Ward, P.J., Jongman, B., Weiland, F.S., Bouwman, A., Beek, R. van, Bierkens, M.F.P., Ligtvoet, W.,
+         Winsemius, H.C., 2013. Assessing flood risk at the global scale: model setup, results, and
+         sensitivity. Environ. Res. Lett. 8, 044019. doi:10.1088/1748-9326/8/4/044019
+Weedon, G.P., Gomes, S., Viterbo, P., Shuttleworth, W.J., Blyth, E., √ñsterle, H., Adam, J.C., Bellouin, N.,
+         Boucher, O., Best, M., 2011. Creation of the WATCH forcing data and its use to assess global and
+         regional reference crop evaporation over land during the twentieth century. J. Hydrometeorol.
+         12, 823‚Äì848.
+Winsemius, H.C., Van Beek, L.P.H., Jongman, B., Ward, P.J., Bouwman, A., 2013. A framework for global
+         river flood risk assessments. Hydrol. Earth Syst. Sci. 17, 1871‚Äì1892.
+
+
+Authors contributions: JR contributed to the design of the analysis, carried out the economic analysis and
+wrote the paper. CBG was the TTL of the Regional Study, contributed to the design of the analysis and led
+the discussions with the clients in Peru. XL did the network modeling. LB contributed to the analysis and
+discussions with the clients and helped write the paper. HM worked on the HDM4 model and helped with
+the Regional study.
+
+Acknowledgements: Special thanks go to peer reviewers of the Regional Study Marianne Fay, Andreas
+Dietrich Kopp and Baher El-Hifnawi; and to Augusto de la Torre, Daniel Lederman, Jose Luis Irigoyen and
+Aurelio Menendez for their overall supervision. The team also benefited from very useful comments
+provided by Siobhan Murray, Adrien Vogt-Schilb and Stephane Hallegatte.
+
+
+
+                                                                                                          23
+Also, the team recognizes the close collaboration with the Government of Peru under the coordination of
+Francisco Ruiz and Maria Elena Lucana (MINCETUR). Other contributors include Pedro Monz√≥n, Fernando
+Cerna y Ana Vera (MINCETUR), Carol Flores (PROMPERU), Omar Linares, Ivo Diaz, Guillermo Ch√°vez, Javier
+Hervias, Enrique Llocclla, Oscar Salcedo, Natalia Teruya and Carlos Lozada (MTC), Martha Huaman, Gerald
+Toskano (Provias Descentralizado), Nery Romero (Provias Nacional), Carlos Azurin (CNC - MEF), Fernando
+M√°laga, Cesar Villareal P√©rez and Aleksandr Lopez Juarez (CENEPRED), Lionel Fidel Smoll and Susana Vilca
+Achata (INGEMMET), and Laura Avellaneda (MINAM).
+
+Finally, the team wants to thank the participants of workshops held in Lima in November 2014 and April
+2015 (with an extensive participation of Government agencies, think tanks and representatives of the
+private sector); a seminar held in the Transport and ICT Forum sponsored by the Road Asset Management
+Global Solution Group in April 2015, a workshop sponsored by the Green Transport Community of Practice
+in May 2015, and a half-a-day seminar organized jointly by the Climate Change Vice-Presidency and the
+Transport and ICT Global Practice to explore areas for collaboration and operationalization of innovative
+methodologies.
+
+
+
+
+                                                                                                      24
+6. Annex
+    6.1. The road network
+We constructed a GIS road network for Peru and allocated the RUC and the vehicle speed (km/hour)
+produced by HDM-4 based on the roads‚Äô attributes‚Äîclass, condition, type of pavement, number of lanes,
+terrain and traffic level. For road segments in urban areas, we recalculated speed with the Google
+Directions Application program interface (API) to capture the impact of congestion.
+
+                                   Table 2. Coverage of GIS Road Data
+               GIS Coverage of
+  Network     Reported Network        Surface Type     Condition      # of
+                                                                                            Traffic
+   Type             KMs             (Paved/Unpaved) (Good/Fair/Poor) Lanes
+                      %
+  Primary             100                   ‚àö                  ‚àö            ----               ‚àö
+ Secondary            100                   ‚àö                  ‚àö            ----             Some
+  Tertiary            100                   ‚àö                  ‚àö            ----              ----
+                      Source: Ministerio de Transportes y Comunicaciones (2013).
+                              Note: GIS = geographic information system.
+
+ Table 3. Condition as a percent of the total primary   Table 4. Surface type as a percent of the total
+ network                                                primary network
+               Good       Fair    Bad      No info                     Paved Not Paved No info
+               %          %       %        %                           %        %            %
+   Peru        55         20      16       9                Peru       85       8            7
+ Source: World Bank based on GIS data.                  Source: World Bank based on GIS data.
+
+
+The Ministry of Transport and Communication (MTC) provided a georeferenced road network data set
+that contained data on surface type and road condition for 93 percent of the country‚Äôs roads, updated in
+May 2015. However, it lacked information on terrain, which is an input to HDM-4. Thus, we used a Digital
+Elevation Model (DEM) to classify the country into 15 geographies and extracted elevation data at fixed
+intervals along the line of the road network. We calculated terrain class for each link and grouped them
+into the seven terrain types used by the HDM-4 model. Though we obtained traffic volume data (AADT)
+from the MTC, it was not georeferenced or included as one of the attributes in the GIS network. Hence,
+based on the origin and destination pair of the AADT, we identified the location of origin and destination
+(OD) and attributed the primary roads that can connect the OD with the shortest distance (the simulation
+is based on the shortest path routing algorithm). Once we had all the needed information to match the
+physical characteristics of the GIS network with the outputs of HDM-4, we appended the corresponding
+road user cost and vehicle speed to each link.
+
+We then selected ODs using national and provincial capital cities, population centers of over 25,000
+inhabitants, main ports and airports, and border crossing, generating a total of 93 nodes total. Based on
+
+                                                                                                          25
+the GIS road network and the 93 nodes, we used the shortest path routing algorithm to compute number
+of kilometers, travel time, and total road user cost for each origin-destination pair (or route).
+
+
+Table 5. Terrain Classes and Percentage of Land Area Peru
+ Class Description                      Peru
+ 1       Plains                         0.11
+ 2       Mid-altitude plains            0.00
+ 3       High-altitude plains           0.00
+ 4       Lowlands                       10.92
+ 5       Rugged lowlands                17.41
+ 6       Platforms (very low plateaus) 1.48
+ 7       Low plateaus                   0.05
+ 8       Mid-altitude plateaus          0.00
+ 9       High plateaus                  0.72
+ 10      Very high plateaus             0.14
+ 11      Hills                          20.83
+ 12      Low mountains                  7.44
+ 13      Mid-altitude mountains         10.37
+ 14      High mountains                 16.81
+ 15      Very high mountains            13.70
+Source: Authors‚Äô calculations.
+
+
+
+    6.2. GIS Data Limitations
+A number of limitations associated with the input data sets and the methods used in this analysis should
+be taken into account in the interpretation of results.
+
+Scale of roads. The scale of the source data (that is, the level of detail) for roads is unknown, but there are
+obvious differences between the countries and in comparison with large-scale data sets such as Open
+Street Map. The smaller the scale, the less likely the features in the geographic information system (GIS)
+data will accurately represent the geometry of the roads on the ground. As a result, the total kilometers
+calculated based on the GIS data will deviate, to some degree, from the officially reported statistics. In
+figure 11 below, scale makes a big difference in the calculated sinuosity index value.
+
+Spatial resolution of the elevation model. The spatial resolution of the elevation model also presents a
+challenge, particularly with respect to the average width of roads. Figure 11 below shows a road drawn
+with a width of 7 meters, approximately one-third of the size of an elevation cell. In this case, extracted z-
+values will be affected by roadside features, particularly in areas of high relief.
+
+
+
+
+                                                                                                            26
+Segmentation. In the terrain analysis, road characteristics are calculated by segment, which is defined
+somewhat arbitrarily according to the network geometry. While the start and end of a segment may not
+necessarily define a homogenous feature, errors in network geometry only exacerbate the problem.
+
+ Scale  difference  between Spatial resolution of Digital Segmentation example
+ gROADS and Open Street Map Elevation             Model
+
+
+
+
+Figure 11 Examples of Challenges with Input Datasets
+
+
+     6.3. The Highway Development and Management Model, HDM-4
+Road user costs (RUC)10 and speed (km/hour) are calculated for roads of different attributes using the
+World Bank‚Äôs Highway Development and Management Model (HDM-4). This software package was built
+to evaluate and assess road maintenance, improvement, and investment projects. Inputs into HDM-4
+include both road characteristics (network type, terrain, surface, and pavement condition) and vehicle
+fleets information (traffic classes). For the purposes of this study, the vehicle fleet data were collected at
+the country level with a heavy truck taken as the representative vehicle. For each of the possible
+combinations of road characteristics and traffic class (6,804 in total), we calculated in HDM-4 a unique
+road user cost and travel speed estimate.
+
+Road conditions definition in HDM4
+(http://siteresources.worldbank.org/EXTAFRSUBSAHTRA/Resources/SSATPWP89A-RONET.pdf)
+
+For paved roads, the road condition classes are defined as follows:
+
+     -   Very Good: Roads in very good condition require no capital road works.
+     -   Good: Roads in good condition are largely free of defects, requiring some minor maintenance
+         works, such as preventive treatment or crack sealing.
+     -   Fair: Roads in fair condition are roads with defects and weakened structural resistance, requiring
+         resurfacing of the pavement (periodic maintenance), but without the need to demolish the
+         existing pavement.
+
+10
+  RUCs are defined as the unit cost of using a road expressed in dollars per ton-kilometer and consist of vehicle
+operating costs (VOCs), which reflect the cost of operating a vehicle, and value of time costs (VOTs), which reflect
+the cost of time associated with using a vehicle. VOCs include the costs of fuel, lubricants, tires, maintenance parts
+and maintenance labor, crew time, depreciation, interest, and overhead. The VOTs include the cost of passenger
+time and the cargo time. Each of these components is calculated separately as an output of the HDM-4 model.
+
+                                                                                                                   27
+    -   Poor: Roads in poor condition require rehabilitation (strengthening or partial reconstruction).
+    -   Very Poor: Roads in very poor condition require full reconstruction, almost equivalent to new
+        construction.
+For gravel roads, the road condition classes are defined as follows:
+
+    -   Very Good: Roads in very good condition require no capital road works.
+    -   Good: Roads in good condition are roads that require only spot regraveling.
+    -   Fair: Roads in fair condition require regraveling (periodic maintenance).
+    -   Poor: Roads in poor condition require partial reconstruction.
+    -   Very Poor: Roads in very poor condition require full reconstruction, almost equivalent to new
+        construction.
+For earth roads, the road condition classes are defined as follows:
+
+    -   Very Good: Roads in very good condition require no capital road works.
+    -   Good: Roads in good condition are roads that require only spot repairs.
+    -   Fair: Roads in fair condition require heavy grading (periodic maintenance).
+    -   Poor: Roads in poor condition require partial reconstruction.
+    -   Very Poor: Roads in very poor condition require full reconstruction, almost equivalent to new
+        construction.
+
+
+
+
+                                                                                                          28
+    6.4. Accounting for Urban Friction
+Due to higher traffic, urban centers tend to suffer from congestion problems (referred to as higher friction
+in the urban center in GIS terms). The average speeds of vehicles in the city are expected to be lower than
+in intercity corridors and even rural areas assuming all other conditions are equal. HDM-4 can be used to
+model congestion effects by inputting a reduced speed based on travel time and speeds calculated using
+Google‚Äôs Directions Application Program Interface (API), which takes congestion into account.
+
+First, urban areas must be defined. This is done based on three criteria: percentage of built-up land;
+population; and status as a national or provincial capital. Roads which intersect the urban cluster mask
+are identified and considered ‚Äúurban‚Äù for the purposes of analyzing urban friction. Travel time and speeds
+are then calculated for these roads using Google‚Äôs Directions API.
+
+An ‚Äúurban friction coefficient‚Äù can be defined to provide a sense of congestion effects:
+
+                                                                                        Ì†µÌ∞∫Ì†µÌ±úÌ†µÌ±úÌ†µÌ±îÌ†µÌ±ôÌ†µÌ±í Ì†µÌ±ÜÌ†µÌ±ùÌ†µÌ±íÌ†µÌ±íÌ†µÌ±ëÌ†µÌ±†Ì†µÌ±ñ
+                    Ì†µÌ±àÌ†µÌ±üÌ†µÌ±èÌ†µÌ±éÌ†µÌ±õ Ì†µÌ∞πÌ†µÌ±üÌ†µÌ±ñÌ†µÌ±êÌ†µÌ±°Ì†µÌ±ñÌ†µÌ±úÌ†µÌ±õ Ì†µÌ∞∂Ì†µÌ±úÌ†µÌ±íÌ†µÌ±ìÌ†µÌ±ìÌ†µÌ±ñÌ†µÌ±êÌ†µÌ±ñÌ†µÌ±íÌ†µÌ±õÌ†µÌ±°Ì†µÌ±ñ = 1 ‚àí
+                                                                                 Ì†µÌ±ÇÌ†µÌ±üÌ†µÌ±ñÌ†µÌ±îÌ†µÌ±ñÌ†µÌ±õÌ†µÌ±éÌ†µÌ±ô Ì†µÌ∞ªÌ†µÌ∞∑Ì†µÌ±Ä4 Ì†µÌ±ÜÌ†µÌ±ùÌ†µÌ±íÌ†µÌ±íÌ†µÌ±ëÌ†µÌ±†Ì†µÌ±ñ
+
+
+The urban friction coefficient can be interpreted as the percentage speed reduction of the original HDM-
+4 speed estimates. For the urban road links in Colombia, Ecuador, and Peru, the average friction
+coefficients are 0.50, 0.36, and 0.39 respectively. In other words, there is on average a 50 percent speed
+reduction in Colombia, 36 percent speed reduction in Ecuador, and 39 percent speed reduction in Peru in
+the urban centers defined by the study.
+
+For the calculation of road user costs in HDM-4, the speeds derived from Google were inputted directly
+to the model and calculated as an additional road characteristic for all urban roads. That is, in the case of
+urban roads, HDM-4 was used to calculate the road user cost associated with an existing road link rather
+than the road user costs associated with a type of road based on the seven road characteristics.
+
+
+
+
+                                                                                                                           29
+    6.5. Costs of interventions
+
+
+Table 6 Costs of different interventions, per road type (thousands of US dollars per kilometers). Source:
+Colombia and MTC, Peru
+                                  Flood Routine                     Upgrade
+                                  Proof Mainte- Rehabili- Construc- to
+CLASS      Surface Terrain        1m nance tation tion              primary Bridge Tunnel
+Primary    Paved      Flat       2,500 13       1,300     2,500     -         28,000 33,000
+Primary    Paved      Hilly      2,804 16       1,328     3,117     -          -        -
+Primary    Paved      Mountain 2,944 10         1,212     3,867     -         -         -
+Primary    Paved      Steep      3,573 19       1,531     4,712     -         -         -
+Secondary Paved       Flat       2,137 15       850       1,563     1,650     -         -
+Secondary Paved       Hilly      2,357 16       775       2,000     1,970     -         -
+Secondary Paved       Mountain 2,647 13         844       2,617     2,236     -         -
+Secondary Paved       Steep      3,126 15       978       3,260     2,658     -         -
+Secondary Unpaved Flat           1,646 6        243       840       3,163     -         -
+Secondary Unpaved Hilly          1,974 7        301       1,057     3,598     -         -
+Secondary Unpaved Mountain 2,265 9              372       1,433     4,072     -         -
+Secondary Unpaved Steep          2,706 -        457       1,924     4,855     -         -
+Tertiary   Unpaved Flat          1,566 3        144       312       3,955     -         -
+Tertiary   Unpaved Hilly         1,874 4        177       621       4,398     -         -
+Tertiary   Unpaved Mountain 2,162 5             244       909       5,106     -         -
+Tertiary   Unpaved Steep         2,600 7        326       1,329     6,088     -         -
+
+
+
+
+                                                                                                      30
+  6.6. Flood depth on the three clusters
+Figure 12. Water Levels on the Three Clusters we analyzed, for Different Frequency of Floods, according
+to different models (Return Period in Years). EU_historical is historical rainfall data while the other 3
+curves are based on the outputs of Global Circulation Models taking into account climate change (with a
+RCP8.5 scenario).
+
+
+
+
+                                                                                                      31
+  6.7. Sensitivity analysis on traffic
+Figure 13. Performance of different interventions, for different scenarios, for the three groups of links
+and with an annual 3% growth rate in traffic over the next 30 years
+
+
+
+
+                                                                                                       32
+

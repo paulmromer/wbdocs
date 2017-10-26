@@ -1,0 +1,1312 @@
+                                                       WPS8225
+
+
+  Policy Research Working Paper                      8225
+
+
+
+
+Prospects of Estimating Poverty with Phone Surveys
+                    Experimental Results from Serbia
+
+                                   Vladan Boznic
+                                    Roy Katayama
+                                   Rodrigo Munoz
+                                  Shinya Takamatsu
+                                   Nobuo Yoshida
+
+
+
+
+  Poverty and Equity Global Practice Group
+  October 2017
+Policy Research Working Paper 8225
+
+
+  Abstract
+  Telephone surveys enable us to collect data in a cost-ef-                          affects how households respond to questions. By con-
+  fective and timely manner, but may not be conducive for                            ducting the first survey experiment to examine potential
+  collecting detailed consumption or income data for mea-                            differences in poverty estimates between interview modes,
+  suring poverty due to the required length of the interview                         this study finds that the reporting patterns changed very
+  and complexity of the questions. Combining telephone                               little between the two interview modes, and the bias in
+  surveys with a survey-to-survey imputation technique may                           poverty estimates due to interview mode is statistically
+  be a solution, as this technique can produce reliable poverty                      insignificant. These findings suggest that poverty moni-
+  estimates from only 10 to 20 simple questions. However,                            toring via telephone surveys is promising, but additional
+  this approach may lead to biased results if the interview                          experiments in other country contexts are encouraged.
+  mode, that is, face-to-face versus telephone interviews,
+
+
+
+
+  This paper is a product of the Poverty and Equity Global Practice Group. It is part of a larger effort by the World Bank to
+  provide open access to its research and make a contribution to development policy discussions around the world. Policy
+  Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at
+  nyoshida@worldbank.org, stakamatsu@worldbank.org, and rkatayama@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+           Prospects of Estimating Poverty with Phone Surveys:
+                    Experimental Results from Serbia
+
+                                                   Vladan Boznic #
+                                                   Roy Katayama*
+                                                  Rodrigo Munoz†
+                                                 Shinya Takamatsu*
+                                                  Nobuo Yoshida*
+
+
+
+
+Keywords: poverty data collection; telephone interview; randomized experiment, survey to survey
+imputation; Real-time Poverty Data
+
+JEL: C81, C83, I32
+
+
+
+
+#Statistical Office of the Republic of Serbia, Belgrade, Republic of Serbia
+† Sistemas Integrales, Santiago, Chile
+* World Bank Group, Washington DC., USA
+
+We are grateful to the staff at the Statistical Office of the Republic of Serbia (SORS), in particular Maja Radenkovic, for
+their careful attention and speedy implementation of the survey. We are also grateful to Caterina Ruggeri Laderchi for
+creating this research opportunity and facilitating the partnership with SORS, to Amparo Ballivian and Joao Pedro
+Wagner de Azevedo for sharing their experience from the Listening to LAC project and providing advice for this study,
+to Ghazala Mansuri and Gabriela Inchauste for their helpful suggestions on sampling and experimental design, to Talip
+Kilic for his collaboration on previous survey to survey imputation analysis in Serbia and suggestions on the design of
+experiment, to Diane Steele and Amparo Ballivian for comments on modeling and the data collection process as peer
+reviewers of this report, and to Gero Carletto for advice on how to place this approach in the framework of household
+survey data collection. Lastly but not least, we would like to thank Antonius Verheijen, Lazar Šestović, Cesar A.
+Cancho, and Pierella Paci for helpful comments and kind assistance.
+1    Introduction and Background
+Monitoring progress in poverty reduction is constrained by the limited availability of household
+expenditure or income surveys. According to Serajuddin et al. 2015, around 60 countries had
+either zero or only one household survey for monitoring poverty in a 10-year period between
+2002 and 2011, and additional 20 countries had two surveys in the 10-year period but the
+surveys were not carried out regularly. According to the International Monetary Fund’s General
+Dissemination Data System (GDDS), a country needs to have national poverty estimates every
+three to five years. In this sense, nearly 80 countries or half the countries included in the World
+Bank’s database suffered limited availability of household survey data for estimating poverty
+indicators to some degree. In the Sub-Saharan Africa region, the situation is even more serious.
+More than 80 percent of countries in the region did not have regular household income or
+expenditure surveys to produce national poverty estimates every five years.
+
+The limited availability of poverty data restricts our ability to monitor progress toward the goals
+of ending extreme poverty and promoting shared prosperity – the goals that the World Bank
+Group committed itself to achieving. This is particularly the case for monitoring of the latter. The
+shared prosperity indicator is the growth rate of the mean income or expenditure of the poorest
+40 percent of population over a period of roughly 5 years. Therefore, if a country does not have
+a household expenditure or income survey every five years or less, it is difficult to regularly
+estimate the shared prosperity index.
+
+One of the main reasons why data are so limited is that collecting household expenditure or
+income data is costly and time-consuming if the data are collected via traditional face-to-face
+interviews. To estimate the prevalence of poverty, a household survey needs to collect at
+minimum 50 food items, each of which needs to include different sources of consumption, such
+as purchases, gifts, and own production. Completing an interview of a household survey often
+requires more than one hour, and worse, collection of such data often requires multiple visits by
+enumerators. As a result, it is not rare to see that a country spent more than two million US
+dollars for carrying out a household income or expenditure survey.
+
+A recent surge of telephone coverage even in low income countries gives us hope that the use
+of telephone interviews can save time and costs of data collection significantly. Telephone
+interviews eliminate transportation and lodging costs, which usually comprise a large share of
+costs of data collection via the face-to-face interviews. The cost-effectiveness of telephone
+interviews can be further enhanced using automatic data collection via Short Message Service
+(SMS) or Interactive Voice Response (IVR).1
+
+However, such telephone data collections are not flawless. Telephone surveys often have
+problems in terms of sampling. Since ownership of landlines or even cell phones is skewed
+toward the richer segment of population, responses to telephone interviews are often not
+nationally representative. How to ensure representativeness of the sample is therefore a
+challenge for telephone surveys. Another challenge is that it is difficult to have a long interview
+via telephone, but as mentioned above, collection of consumption or income data takes easily
+
+1
+  SMS stands for Short Message Service and means the text messaging service component of mobile
+phones that allows exchange of short messages between devices. Messages are delivered using “store
+and forward” where messages are first sent to a SMS Center before delivering the text to the recipient.
+IVR stands for Interactive Voice Response and means a technology that allows a computer to interact with
+humans through the use of voice and dial tones through the keypad.
+
+                                                   2
+one hour or more. These might be reasons why, despite high expectations for telephone surveys
+for filling data gaps, there is no country (as of April 2016) that uses telephone interviews to
+collect data for estimating official poverty and inequality statistics.
+
+This paper proposes a new procedure of telephone surveys that can address the
+aforementioned issues, and shows its performance in a pilot that was conducted jointly by the
+Statistical Office of the Republic of Serbia (SORS) and the World Bank. One of the most
+distinctive features of the new approach is the use of a formula for estimating poverty.
+Collection of consumption or income data directly is time-consuming and labor intensive.
+Instead, our proposal is to collect 10 to 15 simple questions and project household expenditure
+or income from them using a formula. This approach is often called a “Survey-to-Survey
+imputation approach” or S2S. It saves on interview time significantly and the literature shows
+that S2S can project poverty rates reasonably well under certain circumstances. But, so far, none
+has tested whether S2S works well in telephone surveys. This paper is one of the first studies
+that systematically analyzes whether S2S can be used for telephone surveys.
+
+This rest of this paper is organized as follows. Section 2 provides a literature review. Section 3
+introduces a new approach for telephone data collection. Section 4 explains the design of this
+pilot in detail. Section 5 presents the results of this pilot, and Section 6 concludes.
+
+
+2 Literature Review
+2.1 S2S Method
+Given that it is difficult to collect consumption or income data directly via telephone interviews,
+a survey-to-survey (S2S) imputation technique is a good alternative for monitoring monetary
+poverty via telephone surveys. This subsection reviews the literature on the S2S method.
+
+The first incidence when S2S played a key role for poverty estimation can be traced to Deaton
+and Dreze (2002) and Kijima and Lanjouw (2003). The Government of India made a slight change
+in the recall period in part of the food consumption module for its National Sample Survey
+Organization (NSSO) survey of 1999-2000, and it was widely argued that the resulting data likely
+overestimated consumption expenditure data. Since consumption data using the recall period
+consistent with the previous rounds for 1999-2000 were unavailable, S2S was needed to
+estimate changes in poverty. Deaton and Dreze (2002) created a model, using the portion of the
+consumption module in which recall remained unchanged, to project total household
+expenditure. Kijima and Lanjouw (2003) applied the same approach, but using non-consumption
+data. Whether using a portion of consumption or non-consumption characteristics leads to
+more accurate predictions remains open to debate. Subsequent analysis using consumption
+data from so called thin rounds of household surveys, which are collected between years with a
+large household survey but are not used to estimate official poverty rates, suggests that the
+finding of Kijima and Lanjouw (2003) seems more plausible. However, there no systematic test
+to examine the reliability of either approach was conducted.
+
+Stifel and Christiaensen (2007) made one of the first attempts of conducting S2S for different
+household surveys. They created consumption models based on the 1997 Kenya Welfare
+Monitoring Survey (WMS) and applied the models to three consecutive rounds of the
+Demographic and Health Survey (DHS) between 1993 and 2003. The 1997 WMS has both
+consumption and non-consumption data while DHS has only non-consumption data.
+
+                                                 3
+In this paper, Stifel and Christiaensen (2007) provide theoretical guidance regarding the choice
+of variables to be included in imputation models, so as to maintain comparability and reliability
+of imputed poverty data. They recommend including variables that change over time, but call
+for the exclusion of variables whose rates of return are likely to change markedly in the face of
+evolving economic conditions. This argument makes sense in theory, but it is difficult to identify
+which variables would satisfy these conditions. For example, Stifel and Christiaensen (2007)
+include ownership of several consumer durables in their imputation models, but Harttgen,
+Klasen and Vollmer (2012) criticize this decision because of the so-called “asset drift” effect—
+where the pace of improvement in asset ownership is much faster than of income growth.
+Unfortunately, this could not be tested in the Kenya data because only one round of
+consumption data was available although in the end, which variables satisfy the
+recommendations of Stifel and Christiaensen (2007) is intrinsically an empirical question.
+
+Christiaensen et al. (2012) moved one step further by conducting an experiment using a series
+of the past household budget surveys available in the Russian Federation, Vietnam, Kenya, and
+rural China. Their empirical strategy is to first create projection models using one round of
+household budget survey, impute household expenditure data into other rounds of household
+budget survey, and then compare poverty rates projected from the imputed expenditure with
+those estimated directly from actual consumption data. The comparison between projected
+poverty rates and directly estimated poverty rates can give us a sense of how reliable the S2S is.
+The results provide suggestive support to the notion that imputation models constructed from
+the past rounds can predict household consumption data of future rounds. Such results are
+encouraging and give us a certain level of confidence on the stability of imputation model
+coefficients over time.
+
+Douidich et al. (2013) is the first attempt of carrying out a test on reliability of S2S between
+different surveys. They created consumption models in one round of Household Expenditure
+Survey (HES), imputed consumption data into more frequent Labor Force Surveys (LFS) and
+estimated poverty rates using the imputed data in Morocco. To examine the accuracy of the
+projected poverty statistics, they compared them with poverty rates directly estimated from
+consumption data of HES conducted in the same year as the LFS. The results are very
+encouraging. Projected poverty rates are very close to directly estimated poverty rates,
+irrespective of which round of HES is used to create the consumption models. But, now, a
+question is whether this is also the case for other countries and other times. The methodology
+was examined further in Newhouse et al. (2014) and Dang et al. (2014).
+
+As shown above, the S2S method has been tested in many different settings, but whether it
+works well with telephone interviews remains an open question. The S2S is attractive for
+telephone interviews because it needs only 10 to 15 simple questions to estimate poverty rates.
+But telephone interviews are not flawless and some potential shortcomings of telephone
+interviews might severely bias poverty estimates produced by the S2S method. The next
+subsection reviews the literature on the telephone interviews.
+
+2.2 Telephone Data Collection
+The literature on the telephone data collection suggests several potential pitfalls of telephone
+interviews. They include (i) high attrition and non-response rates, and lack of
+representativeness; (ii) response bias; and (iii) lack of welfare indicators necessary to monitor
+monetary poverty. This subsection summarizes findings on the three key issues.
+
+
+                                                 4
+    (i)      High attrition and non-response rates, and lack of representativeness
+
+For example, the “Listening to LAC” report (World Bank 2013), which is called L2L hereafter,
+reported that in one of their pilots, nearly 60 percent of households who agreed to participate in
+a subsequent telephone survey did not respond to the telephone interviews. Furthermore, it
+found the non-responses are not non-random. Croke et al. (2012) also show that in their
+Tanzania survey, on average, only 62 percent of households in the baseline survey and 75
+percent of households with telephone access responded to telephone interviews. Leo et al.
+(2015), which used IVR for collecting data in four countries,2 show a connection rate (the
+number of respondents over the number of telephone calls) ranges between 15 percent and 31
+percent.
+
+Such low response rates make it difficult to create a sample representative for a population of
+interest. Croke et al. (2012) found the distribution of a wealth indicator is largely different
+between the baseline survey and the subsequent telephone survey. Leo et al. (2015) show that
+although their surveys are designed to be nationally representative, the distributions of key
+demographic variables differ significantly from those of a Demographic and Health Survey,
+which is nationally representative.
+
+There are several ways to reduce the biases. For example, even if the non-responses or
+attritions are not random, as long as they are associated with observable characteristics of
+respondents, the bias can be addressed by reweighting the remaining respondents by the
+inverse of the probability of attrition (see more details of this argument in Croke et al. 2012).
+Leo et al. (2015) follow an iterative proportional fitting algorithm developed by Bergmann
+(2011). A challenge for this type of adjustment is that it is difficult to find an adjustment in
+weight so that all variables become representative because each variable shows different rates
+of disparity from the nationally representative numbers. As a result, to make one variable
+consistent with the nationally representative number makes others inconsistent.3
+
+    (ii)     Lack of welfare indicators necessary to monitor monetary poverty
+
+It is often argued that telephone surveys can be used to collect poverty data in a cost-effective
+and timely manner. However, we did not find any telephone survey that collects consumption or
+income data necessary to estimate monetary poverty indicators. Croke et al. (2012) collected
+information on asset ownership and constructed a wealth indicator, but they did not collect
+consumption or income data that are necessary to estimate monetary poverty indicators. L2L
+also collected poverty correlates but did not collect consumption or income data directly.
+Demombynes et al. (2013) also did not collect consumption or income data via telephone
+surveys although they linked the telephone surveys with the latest Household Budget Survey so
+that the poverty status of a sampled household is known.
+
+Most telephone surveys did not collect consumption or income data likely because collection of
+consumption or income data is time-consuming. To estimate a good quality monetary poverty
+
+2
+  Afghanistan, Ethiopia, Mozambique, and Zimbabwe.
+3
+ Even if a sample is not representative for a population of interest, Alderman et al. (2001) argued that key
+parameter estimates are often not affected. In other words, as long as we are interested in some
+regression parameters, even if the sample is not representative, we will be able to get estimates of the
+parameters that are not statistically significantly different from those estimated from a representative
+sample.
+
+                                                     5
+indicator, a survey usually needs at least 50 consumption items. Further, food items need to
+include own production and gifts in addition to purchases. As a result, collecting full-fledged
+consumption data requires one hour or more. However, according to L2L, it appears difficult to
+continue telephone interviews for more than 15 minutes. This would be a reason most
+telephone surveys do not collect consumption or income data.
+
+    (iii)   Response bias
+
+Given that collection of consumption or income data via telephone interviews is difficult, S2S is
+very attractive since it requires only 10 to 15 simple questions. But, there might be a problem if
+responses to telephone interviews differ significantly than those to face-to-face interviews and
+the response bias causes a bias in poverty estimation using an S2S approach. An S2S formula is
+usually developed in a household survey that was collected via face-to-face interviews. But, if a
+household responded to telephone surveys differently than face-to-face interviews, projections
+of household expenditure or poverty rates would be biased.
+
+Some studies indeed show evidence of such response bias. L2L conducted comprehensive and
+well-designed experiments on response bias due to interview modes. It compared four different
+interview modes: a face-to-face interview, IVR, SMS, and Computer Assisted Telephone
+Interview (CATI). The study found that responses to CATI are consistent with those to face-to-
+face interviews, while responses to IVR or SMS are significantly different from those to face-to-
+face interviews. Croke et al. (2012) also found similar results. Dillman et al. (2009) compared
+CATI with IVR, web-based data collection, and data collection via mail. They found that
+respondents to CATI and IVR tend to choose more optimistic or socially desirable answers than
+those to the web-based data collection or mailing. In terms of comparison between CATI and
+IVR, there is no clear tendency but they found responses to CATI are significantly different from
+those to IVR. Mu (1998) found respondents to IVR are less likely to select “10” and more likely to
+select “9” than those to CATI. This might be because respondents feel it is more cumbersome to
+type two-digit numbers in a telephone keyboard. Tourangeau et al. (2002) found that answers
+to IVR are slightly more positive than those to CATI.
+
+
+3 A New Approach for Telephone Data Collection
+Based on findings of the previous studies, we propose the following approach for telephone
+surveys to estimate reliable poverty and inequality statistics that are representative at a level
+we are interested in:
+
+    1. Develop a formula using the latest household survey that includes both household
+       expenditures and its correlates;
+    2. Select households so that the sample becomes representative at a level of interest, and
+       conduct a baseline survey to collect telephone numbers from these households. If they
+       do not have any telephone, provide them a cell phone;
+    3. Inform select households that this survey is part of official household surveys;
+    4. Operators call these households, ask questions on correlates of household expenditure,
+       and input the responses to computers using CATI;
+    5. Impute household expenditures from the correlates and estimate poverty and
+       inequality statistics.
+
+
+
+                                                 6
+There are some features of this proposed approach that are worth noting. First of all, this
+approach does not collect consumption or income data directly. As mentioned, the L2L study
+recommends that a telephone survey should not have too many questions; otherwise, a
+telephone interview is likely to be unfinished due to a sudden loss of connection or
+interviewees’ refusal to answer more questions. This is problematic if consumption or income
+data need to be collected because a telephone interview often requires one hour or more.
+
+Instead, the above procedure uses an S2S approach. This approach does not collect
+consumption or income data, but collects simple questions, like ownership of assets, housing
+conditions, employment and education level of household members, and household size, from
+which each household’s consumption or income data are projected using a formula. The
+formula is developed by running regressions using the latest round of a household survey that
+includes both consumption/income and other questions. Literature suggests that the number of
+questions needed for the S2S imputation approach is as few as 10 to 20; as a result, collection of
+these variables usually takes only 5 to 10 minutes. Therefore, even telephone interviews can
+collect enough information necessary to estimate household expenditure or income.
+
+However, there are several challenges for the S2S approach. First, the formula needs to be
+stable over time. This can be a strong assumption because people might change consumption
+patterns. Therefore, when we developed the formula in the first step, we conducted several
+tests to check whether the formula is stable over time using the past data.
+
+Second, reporting patterns can differ across interview modes. As discussed in the literature
+review, for the S2S approach to work, households need to respond to questions in exactly the
+same way as when they responded to the household survey used for developing the formula.
+But, this is not necessarily the case. To minimize the reporting bias, we use CATI for telephone
+interviews because L2L and Croke et al. (2012) show that the reporting bias of CATI appears
+much less than SMS or IVR. Therefore, we select CATI in the fourth step.
+
+The second step is also important to ensure the national representativeness of data collected by
+telephone interviews. Telephone ownership is still skewed in a richer segment of population in
+many developing countries. If we simply call households randomly, the likelihood to select richer
+households is much higher than the proportion of their population. If most of the poor do not
+have telephones, we might not get any information from the poor. As a result, any statistics
+from the telephone survey might not be representative at the national level. To avoid this, prior
+to telephone interviews, we conduct a careful sampling exercise, select a nationally
+representative sample, and carry out a baseline survey with the select households to collect
+their telephone numbers.
+
+To minimize the high non-response rate, the third step is introduced based on
+recommendations from the staff in the Statistical Office of the Republic of Serbia (SORS).
+According to pilots in the L2L study, non-response rates could reach more than 50 percent, and
+the non-response rate could be not random. As a result, even with post-enumeration
+adjustments, it is difficult to produce poverty and inequality statistics that are representative at
+the national level. However, surveys in the L2L study were carried out by a private sector, not a
+national statistics office. Households do not have any obligation to respond to the surveys.
+
+The SORS argued that if a survey were conducted without an official letter of request to select
+households, the non-response rate would be very high in Serbia. This is a reason the SORS staff
+
+
+                                                 7
+prepared and brought an official letter explaining this survey is part of the official data
+collection.
+
+To test the performance of this proposed approach, a pilot was conducted in Serbia. This pilot
+focuses on (i) whether the S2S method works well with telephone interviews, or more
+specifically, whether responses to a questionnaire can differ between face-to-face interviews
+(F2F) and CATI, and (ii) how cost-effective the telephone data collection is. Serbia was chosen
+for this pilot because the SORS had an established telephone call center and extensive
+experience collecting data via telephone interviews, in particular for the Labor Force Survey, and
+the SORS showed interest in participating in this experiment.
+
+
+4 Design of the Pilot
+This section explains how the pilot was designed. It begins by how the formula was developed,
+followed by the description of how samples are selected for F2F and CATI groups. It also
+describes training for enumerators and other logistical arrangements. The results of this pilot
+will be discussed in the next section.
+
+4.1 Model Selection
+In this pilot, consumption data are not collected, but are projected from 10 or 15 simple
+questions using a formula that is developed using an S2S imputation approach. The S2S assumes
+that following relationship between household expenditure and non-monetary indicators:
+
+                                        =    +        +      +
+
+where the dependent variable          is (log) per capita consumption of household h in location c,
+     is a vector of household explanatory variables, is a vector of location specific variables,
+and are vectors of coefficients, and is a constant. The stochastic error term            can be
+divided into a location-specific effect and a household-specific effect         such that       =
+   +       . Hetroskedasticity of the household-specific effect     is allowed in this specification.
+
+The model selection involved an iterative process. At first, we tried the variables that are
+commonly available in the S2S imputation and poverty map literature. We included four
+categories for candidate explanatory variables: (1) demographics and education, (2) durable
+asset ownership, (3) current economic status (employment status, main income source, etc.),
+and (4) location variables (stratum fixed effects). However, the model with the four kinds of
+variables could not predict the change in poverty rates across time.
+
+Next, we included variables that more sensitive to changing economic conditions and in turn
+candidates for picking up short-term changes in poverty rates. We added variables on recent
+purchases, that is, indicators of whether any household member purchased particular items,
+such as clothes and shoes, during the last three months. Secondly, we included subjective
+perception questions such as whether monthly income satisfies a household’s monthly needs
+for your households and how a household’s current situation is compared to one year ago.
+Lastly, we included more employment-related variables based on all of economically active
+household members, in addition to household head’s employment-related variables, in order to
+be able to explain the change in the economic situation. In the end, about 40 variables are used
+in the model and statistically significant variables are selected using the backward stepwise
+selection. The list of variables and coefficients from the identified prediction model using the
+
+                                                  8
+2009 Serbia Household Budget Survey (HBS) is shown in Table 1. Note that although around 40
+variables are needed for the imputation model, as few as 21 questions are needed to construct
+these variables because some variables can be constructed from one question, like location
+dummies.
+Table 1: Estimation Model and Variables used
+
+                                 2009 model                                            National mean
+  Variable description                                        Coeff.        t       2008    2009    2010
+  Intercept                                                  12.3458    414.3079
+  Household: Number of children under 14 years of             0.0462      5.1854     0.402    0.402   0.370
+  Household: Dependency Ratio                                -0.0217      -7.474     1.207    1.702   1.297
+  Household: Number of Household Members                     -0.2807    -22.6336     3.037    3.001   2.939
+  Household: Number of Household Members                      0.0156     10.6496    11.895   11.826   11.39
+  Highest education level: Vocational school                  0.1239      8.3677     0.180    0.182   0.199
+  Highest education level: High school                         0.192      6.6128     0.365    0.368   0.342
+  Highest education level: Higher                             0.2275     12.1566     0.233    0.214   0.214
+  Highest education level: Post-graduate                      0.3132      5.9431     0.007    0.009   0.011
+  Income: Main source is pensions                             0.0703      5.2307     0.375    0.425   0.457
+  Month worked by HHH 12 moth                                 0.0056      5.1801     5.503    5.238   4.703
+  Share of unemployed members                                -0.1365     -7.0911     0.125    0.136   0.164
+  Purchases: Household bought clothes                         0.0905      6.4555     0.622    0.622   0.586
+  Purchases: Household bought men’s clothes                   0.0457      3.6777     0.369    0.366   0.338
+  Purchases: Household bought shoes                           0.0737      6.3058     0.530    0.510   0.436
+  Monthly income meet needs: fully or generally               0.1189      9.7607     0.257    0.242   0.220
+  Durables: number of air conditioner owned                   0.0652      4.8355     0.173    0.187   0.204
+  Durables: number of car owned                               0.1949     18.4621     0.498    0.488   0.459
+  Durables: number of computer owned                          0.0822      6.8392     0.329    0.374   0.389
+  Durables: number of dishwashers owned                       0.0847      3.9108     0.059    0.060   0.067
+  Durables: number of DVD owned                               0.0519      4.4486     0.280    0.332   0.290
+  Durables: number of microwave owned                         0.0536      3.5667     0.155    0.156   0.158
+  Durables: number of two-axis tractor owned                  0.0611      4.7834     0.166    0.169   0.163
+  Durables: number of TV owned                                0.0325      3.4243     1.269    1.326   1.303
+  Durables: number of washing machine                         0.1132       7.604     0.881    0.904   0.903
+  In STRATUM_22                                              -0.1328     -5.1361     0.038    0.038   0.038
+  In STRATUM_24                                              -0.0775        -4.76    0.095    0.095   0.095
+  In STRATUM_25                                              -0.3952    -24.5707     0.081    0.081   0.081
+  In STRATUM_27                                              -0.2856     -12.233     0.051    0.051   0.051
+  In STRATUM_28                                              -0.1085     -5.4496     0.040    0.040   0.040
+  In STRATUM_29                                              -0.0665     -3.2613     0.070    0.070   0.070
+  In STRATUM_32                                              -0.1438     -7.8711     0.093    0.093   0.093
+  In STRATUM_33                                                  0.16     6.1912     0.042    0.042   0.042
+  In rural areas                                             -0.0586     -5.0735     0.411    0.411   0.411
+  Note: Sample size is 4,592 households. R-square is 0.50.
+
+
+
+
+                                                         9
+The models were evaluated for their ability to accurately impute poverty. Each model was used
+to impute poverty in other HBS years, and the results were compared against the direct poverty
+estimates using the consumption data. Table 2 shows the official poverty rates observed from
+the data in the national, urban and rural areas. The national poverty rates increased from 2008
+and 2009 to 2010, and the increase is statistically significant although the size of the increase is
+not so large.4 Although urban poverty rates remained relatively stable over the three years, rural
+poverty increased noticeably from 7.5% to 13.6% from 2008 to 2010.
+
+The poverty rates that are within the 95% confidence interval of the official poverty rates are
+bolded. The table shows, the model developed in the 2009 HBS data could project national,
+rural and urban poverty rates for all three years well. In fact, all poverty rates projected by the
+model based on 2009 HBS are within the 95% confidence intervals of the official poverty rates
+for all of the three years. On the other hand, that is not the case for the 2008 and 2010 models.
+For example, the model developed in the 2008 HBS data cannot project the national and rural
+official poverty rates of 2010, while that of the 2010 HBS data cannot project the national and
+rural official poverty rates of 2008. Therefore, we decided to use the 2009 model since the
+selected models have the ability to predict poverty across time.
+
+
+
+4.2 Questionnaire Design and a Baseline Survey
+The questionnaire used for this experiment was based on the variables in the final imputation
+models discussed above. The main questions that are needed to impute poverty are designed to
+be exactly the same for both the face-to-face interview (F2F) and CATI groups. For CATI group,
+an additional survey, a baseline survey, was needed to collect telephone numbers and
+household identification information.
+
+The baseline survey for the CATI group collects as many phone numbers (both telephone and
+cell phone) as possible from the household to increase the chances for the follow-up interview.
+The questionnaire included only three questions: (1) telephone number for either a land line or
+mobile phone, (2) name of the main user of the telephone number, and (3) relationship to
+respondent.
+
+The main questionnaire administered for both the F2F and CATI groups was comprised of 21
+questions covering the household roster (name, occupancy during last 12 months, sex, age,
+educational attainment, predominant activity, months worked during last 12 months), main
+source of household income, economic status and satisfaction, housing characteristics (water
+supply, sewerage, electricity, district heating, telephone, number of rooms), and ownership of
+12 different durable goods, and purchases of clothing and footwear in the last 3 months. The
+wording of the questions was kept the same as the original questions in the HBS to the extent
+possible. The F2F’s questionnaire includes the main questionnaire and the CATI pre-interview
+questionnaire. Screen shots of the main questionnaire are available in the Appendix.
+
+
+
+
+4
+    95% confidence intervals of the official poverty rates are shown in the Appendix Table .
+
+                                                      10
+Table 2: Model Predictions vs. Official Estimates
+
+  National poverty                                      2008          2009    2010
+    Direct estimates (HBS)                             0.061         0.069   0.092
+    Imputation using: 2008 model                       0.065         0.065   0.076
+    Imputation using: 2009 model                       0.070         0.069   0.082
+    Imputation using: 2010 model                       0.078         0.077   0.092
+  Urban poverty                                         2008          2009    2010
+    Direct estimates (HBS)                               0.05        0.049   0.057
+    Imputation using: 2008 model                       0.051         0.048   0.053
+    Imputation using: 2009 model                       0.051         0.048   0.055
+    Imputation using: 2010 model                       0.059         0.053   0.060
+  Rural poverty                                         2008          2009    2010
+    Direct estimates (HBS)                             0.075         0.096   0.136
+    Imputation using: 2008 model                       0.083         0.089   0.105
+    Imputation using: 2009 model                       0.094         0.096   0.117
+    Imputation using: 2010 model                       0.103         0.108   0.134
+  Source: Authors’ estimation using the HBS 2008, 2009, and 2010 data.
+
+4.3 Sampling and Balance Checks
+Sample selection was conducted to yield two comparable groups, and the samples were
+subsequently checked for balance. A total of 120 enumeration blocks in Belgrade were selected.
+
+In the first stage, 60 enumeration blocks, which can be called Primary Sampling Units (PSUs),
+were drawn with probability proportional to size (PPS) for urban and rural areas separately. In
+the second stage, 10 households were randomly selected from each PSU and assigned to the
+F2F and CATI groups. Also, an additional 10 households were selected randomly from each PSU
+as replacement. The large number of candidates for replacement was due to the relatively high
+non-response rate observed in other surveys in Serbia.
+
+As an extra measure of precaution, we checked for balance of the two randomly selected groups
+using the corresponding 2011 census data. Three household characteristics were checked for
+balance: (1) the average household size, (2) highest education level (percentage of households),
+and (3) home ownership tenure status (percentage of households). In the case that the groups
+were not balanced, the sampling would be redone until the distribution of household
+characteristics were statistically insignificant. Table 3 shows the F2F and CATI samples were
+balanced ex ante in terms of household size and highest education variables in the census.
+
+
+Table 4 shows the number of non-responses and replacement during the F2F survey and the
+CATI survey. Note that the CATI survey has two stages – a baseline survey and a telephone
+interview. According to the table, this pilot experienced relatively high non-response rates for
+both F2F and CATI groups. The non-response rates in F2F and CATI (baseline survey) were 39.7
+and 41.8 percent in urban areas, respectively, and 32.4 and 34 percent in rural areas,
+respectively (see table 4). These households with non-responses were replaced with households
+in the replacement list to make sure that both F2F and CATI groups would have a planned
+sample size of 600 households.
+
+
+
+                                                       11
+For the CATI survey, there is another round of data collection – a telephone survey – after the
+replacement of the sample. Around 10 percent of households that agreed to participate in the
+Table 3: Ex-ante check of balance between the F2F and CATI samples
+
+                                                                  Urban
+  Census variables                             F2F       CATI       diff                P-value
+  Household size                                  2.64        2.68       -0.04               0.564
+  Highest HH education
+    Primary or less                             0.081        0.075        0.005                0.934
+    Vocational school                           0.092        0.084        0.009
+    High school                                 0.352        0.358      -0.006
+    Higher education/university                 0.475        0.483      -0.008
+                                                                   Rural
+  Census variables                             F2F       CATI        diff               P-value
+  Household size                                  3.12        3.22        -0.11              0.225
+  Highest HH education
+    Primary or less                             0.191        0.196           -0.005            0.548
+    Vocational school                           0.214        0.214            0.000
+    High school                                 0.415        0.381            0.033
+    Higher education/university                 0.181        0.209           -0.028
+Source: Authors’ calculations using the census data.
+Note: The t-test and Pearson's chi-squared test are used for the household size and highest education, respectively.
+
+
+Table 4: Non-response for F2F and CATI groups
+
+                                                    Urban                                          Rural
+                                      F2F                  CATI                        F2F                CATI
+                                     Survey        Baseline Telephone                 Survey      Baseline telephone
+  Planned sample size                 300                  300                         300                300
+  Final sample size                   295            299          270                  296          300          273
+  (% response)                       (98.3)         (99.7)      (90.3)                (98.7)      (100.0)      (91.0)
+  - Replacements                      117            125           -                    96          102           -
+     (%)                             (39.7)         (41.8)                            (32.4)       (34.0)
+  - Non-response (phone)                -             -           29                     -           -           27
+     (%)                                                         (9.7)                                          (9.0)
+  Reasons for non-response
+    - Refusal                           33             33           10                  40            32       12
+     (%)                              (28.2)        (26.4)        (34.5)              (40.8)       (31.4)    (44.4)
+    - No one at home                    66             72           17                  48            51       11
+     (%)                              (56.4)        (57.6)        (58.6)              (49.0)       (50.0)    (40.7)
+    - Dwelling unoccupied               12             13           0                   10           10        0
+     (%)                              (10.3)        (10.4)                            (10.2)        (9.8)
+    - No telephone                      0              1              0                 0             2        0
+     (%)                                             (0.8)                                          (2.0)
+    - Unknown                            6             6               2                0             7         4
+     (%)                               (5.1)         (4.8)           (6.9)                          (6.9)    (14.8)
+     Total                              117           125             29               96            102       27
+Source: The authors’ calculations based on the survey implementation data.
+Note that the parentheses show shares.
+
+
+
+                                                          12
+telephone survey did not respond to the telephone survey.5 Given that we did not know
+telephone numbers of households in the remaining list of replacement, we could not fill the
+non-response at this stage.
+
+These non-response rates are certainly not negligible but it is worth noting that they are typical
+for Serbia and similar to rates observed for other household surveys such as the HBS and LFS
+where non-responses were also replaced. Further, the attrition rates at the telephone survey
+are also typical in Serbia LFS telephone surveys, and much lower than the pilots in the L2L study.
+
+In the L2L study, more than 60 percent of households in Peru and around 40 percent of
+households in Honduras did not respond to telephone interviews after they agreed to
+participate in the follow-up telephone surveys at the baseline survey. More important, as long
+as the F2F and CATI samples are balanced after the replacement and attrition, this pilot can
+serve its objective. Indeed, table 5 shows that these two samples were still balanced ex post.
+Although he F2F and CATI samples remained balanced, a comparison between the ex-ante check
+(table 3) and the ex post check (table 5) shows that after the replacement and attrition, the
+summary statistics did not change much.6
+Table 5: Ex-post check of the final sample: testing balance of corresponding census variables
+
+                                                                    Urban
+    Census variables                           F2F          Phone     Diff          P-value
+    Household size                                2.80          2.82       -0.02         0.875
+    Highest HH education
+      Primary or less                             0.079          0.085    -0.006        0.767
+      Vocational school                           0.116          0.104      0.013
+      High school                                 0.322          0.359    -0.037
+      Higher education/university                 0.483          0.452      0.031
+                                                                     Rural
+    Census variables                           F2F          Phone      diff         P-value
+    Household size                                3.19          3.35        -0.16        0.200
+    Highest HH education
+      Primary or less                             0.179          0.183    -0.004        0.413
+      Vocational school                           0.226          0.223     0.003
+      High school                                 0.436          0.385     0.051
+      Higher education/university                 0.159          0.209    -0.050
+    Source: The authors’ estimation using the pilot data.
+
+
+
+
+5
+  58 percent of households responded to telephone interviews via mobile phones.
+6
+  There is another important aspect of selecting households – selection of respondents. Who responds to
+interviews likely has impact on the response patterns. In this experiment, the respondents were chosen in
+the same way as the statistical office does in its household surveys. In the F2F interviews, enumerators of
+this experiment selected respondents following interviewers tried to meet household heads as the
+preferred respondent. If interviewers could not see household heads, they tried to see anyone who knew
+his/her household best. In the CATI interviews, respondents were selected in the same way as the F2F and
+other SORS's surveys in the pre-interview stage and called the persons at the telephone interview stage. If
+the preselected members were not available, Interviewers called other available phone numbers, which
+were collected in the pre-interview stage.
+
+                                                            13
+4.4 Data Collection
+Assignment of enumerators and interviewer effects
+
+As enumerators, experts for each interview mode conducted interviews in their expertise. SORS
+has different groups of enumerators for F2F interviews as in HBS and the first round of LFS and
+for CATI surveys at the second or later round in LFS survey. In this way, each group could build
+their skill and experience on one of these interview modes.
+
+A potential downside of this approach for this pilot was that the difference in enumerators’
+skillset can cause a problem in comparability of data between the F2F and CATI surveys. In other
+words, the differences in data could be attributed to the differences in enumerators’ skillset.
+Instead, we thought it would be better to mix experts of F2F and CATI surveys and select them
+for F2F and CATI surveys randomly. Given that the assignment of enumerators is random, any
+difference in the resulting data between the F2F and CATI surveys cannot be attributed to the
+enumerators’ skillset and experiences.
+
+However, the SORS team argued that using an enumerator for an interview mode with which he
+or she is not familiar can reduce the data quality significantly. This is an important consideration
+since the total number in the sample is limited. Furthermore, in reality, SORS will never use
+experts of F2F surveys for CATI surveys, and vice versa. Therefore, a right comparison should be
+between the F2F survey collected by the experts and the CATI surveys collected by the experts.
+After all these considerations, the SORS and the World Bank teams agreed to assign the F2F
+experts for the F2F survey and the CATI experts for the CATI survey.
+
+Training of enumerators
+
+Interviewer training consisted of three blocks: (1) theoretical training for all interviewers, (2)
+practical training for field interviewers, and (3) practical training for telephone interviewers. The
+study objectives and the instructions on how to apply the different questionnaires, and how to
+identify respondents were explained. The Labor Force Survey (LFS) team explained
+administrative procedures and the questionnaire contents. The HBS team assisted in clarifying
+questions of the interviewers. The theoretical training ended with the filling of a demonstration
+vignette.
+
+During the training for field interviewers, participants did a role-playing exercise, which
+consisted in asking the questions to another participant and filling the questionnaire with the
+answers. Participants were given a vignette and asked to fill in the questionnaire. The
+questionnaires were collected, marked and graded. Finally, participants were asked to fill a
+participant feedback form to evaluate the training.
+
+A separate training session was held for telephone interviewers. First, the LFS team presented
+the electronic version of the questionnaire, developed in the Blaise platform, which participants
+were already familiar with. Second, participants did a role-playing exercise, an evaluation and
+filled the participant feedback form.
+
+Advance notification of interview visits
+
+In order to maximize participation, this experiment followed the same procedure as surveys by
+SORS. For this respect, letters notifying households of upcoming visits by enumerators were sent
+out by SORS in advance. As World Bank (2013) discussed that the attrition rate in Peru’s result
+
+                                                 14
+was much lower than that in Honduras due to people’s perception to the survey company.
+Therefore, we expect that this letter would create impression that this experiment was part of
+the government’s official data collection. As shown below, both non-response and attrition rates
+in this experiment were as good as those of Serbia LFS and HBS.
+
+Survey logistics in F2F and CATI surveys
+
+In the F2F survey and the baseline in the CATI survey, enumerators recorded all responses in
+paper questionnaires and sent them to the headquarters where all data were entered into the
+computer. On the other hand, at the telephone interview in the CATI survey, operators recorded
+all responses into a data enter program directly while they were calling. The same data entry
+program software (BLAISE) was used for entering data collected from both F2F and CATI surveys.
+The data collection was done from June to July in 2013.
+
+
+5 Results
+5.1 Comparison of Variable Means
+This subsection examines whether data collected by F2F and CATI modes are similar. To do this,
+means of variables necessary for consumption projections are calculated in both data collected
+by F2F and CATI, and whether differences in the means are statistically significant by Pearson
+Chi-square tests. Note that since the household size and education variables were balanced in
+the sample for these census variables, the difference found here can be considered to be due to
+the difference in the survey modes. The results are shown in table 6.
+
+Among the two variables that were balanced ex ante, we did not find a difference in household
+sizes, but we found a difference in the education variable between the two modes especially in
+the rural areas although the size of the difference is not very large. The mean household size is
+slightly larger in CATI than in F2F but the difference is statistically insignificant. The educational
+attainments of household heads are also similar between CATI and F2F data sets, and all but
+vocational school attainment in rural areas record statistically insignificant differences.
+
+In labor and income variables, we did not find any statistically significant difference between
+two surveys except for months worked. In demographic and purchase variables, we do not find
+any statistically significant difference. For dwelling and durable good ownership variables, we
+found statistically significant differences in five and two out of 18 items in urban and rural areas,
+respectively.7 In urban areas, more CATI households have district or local heating and freezers
+and washing machines than F2F households, but we found the opposite for satellite dish. So, it is
+not easy to find a pattern for the response in this category. Lastly, for subjective variables, more
+CAPI households are likely to feel worse off than F2F households in rural areas, but the
+difference is small.
+
+
+
+
+7
+ The questions on housing quality (water installations, sewerage, electricity, district or local heating, fixed
+telephones and number of rooms) are not included in the model but included in questionnaires.
+
+                                                      15
+Table 6: Comparison of variable means between face-to-face and telephone interview modes
+
+                                                             Urban                                        Rural
+  Variables                                    FTF      Phone diff           P-           FTF     Phone     diff       P-
+  Balanced variables:
+  Household size                                2.85       2.83      0.03          0.83   3.43       3.56     -0.14      0.341
+  Highest HH education#
+     Primary or less                            0.07       0.07      0.00         0.888   0.10       0.15     -0.05      0.072
+     Vocation school                            0.09       0.08      0.01         0.550   0.24       0.15      0.09      0.008
+     High school                                0.40       0.34      0.05         0.266   0.47       0.45      0.02      0.681
+     University or higher                       0.44       0.50     -0.06         0.147   0.19       0.25     -0.06      0.073
+  Labor and income variables:
+  Share of unemployed members                  0.19        0.20     -0.01         0.743   0.23       0.24     -0.01      0.772
+  Month worked/12 for all worked               0.50        0.51     -0.02         0.667   0.54       0.53      0.00      0.958
+  Month worked by HHH 12 month                 4.91        5.09     -0.18         0.721   5.35       4.03      1.32      0.010
+  Main income source is pensions               0.42        0.41      0.01         0.765   0.36       0.35      0.01      0.717
+  Demographic & economic vars:
+  Dependency ratio                              1.21       1.05      0.16         0.149   1.01       0.89      0.12      0.198
+  Bought clothes last 3 month                   0.58       0.67     -0.08         0.076   0.57       0.62     -0.04      0.319
+  Bought shoes last 3 month                     0.51       0.53     -0.02         0.726   0.54       0.46      0.08      0.092
+  Dwelling and durables:
+  Has water installations                       0.98       1.00     -0.01         0.038   0.94       0.95     -0.01      0.783
+  Has sewerage                                  0.95       0.95      0.00         0.907   0.85       0.77      0.09      0.158
+  Has electricity                               1.00       1.00      0.00         0.951   1.00       0.99      0.00      0.528
+  Has district or local heating                 0.64       0.80     -0.17         0.000   0.47       0.54     -0.08      0.116
+  Has fixed telephone                           0.91       0.93     -0.02         0.418   0.88       0.92     -0.04      0.227
+  Number of rooms                               2.36       2.31      0.06         0.620   3.08       3.16     -0.08      0.564
+  # microwave                                   0.33       0.33      0.00         0.946   0.26       0.27     -0.02      0.652
+  # freezer                                     0.80       0.89     -0.09         0.018   1.01       1.02     -0.01      0.800
+  # washing machine                             0.94       0.98     -0.04         0.029   0.99       0.99      0.00      0.901
+  # dish washers                                0.30       0.29      0.01         0.879   0.12       0.20     -0.08      0.025
+  # air conditioner                             0.63       0.63      0.00         0.987   0.33       0.31      0.02      0.620
+  # TV                                          1.34       1.32      0.02         0.775   1.49       1.49      0.00      0.976
+  # satellite dish                              0.20       0.06      0.14         0.001   0.16       0.15      0.00      0.879
+  # computer                                    0.75       0.79     -0.05         0.440   0.66       0.69     -0.04      0.530
+  # camera                                      0.15       0.11      0.03         0.264   0.04       0.07     -0.03      0.116
+  # car                                         0.58       0.52      0.06         0.221   0.68       0.69     -0.02      0.727
+  # DVD player                                  0.46       0.40      0.06         0.230   0.44       0.41      0.03      0.565
+  # Double axis tractor                         0.04       0.04      0.00         0.992   0.27       0.18      0.09      0.020
+  Subjective Variables:
+  Much better and a little better (%)
+     Better                                      6.8        4.8                   0.789    3.4        4.0                0.005
+     The same                                   34.6       34.9                           36.5       33.7
+     A little worse                             28.8       30.5                           36.5       26.0
+     Much worse                                 29.8       29.7                           23.7       36.3
+  Monthly income satisfy needs (%)
+     Completely and mostly                      33.9       36.1                   0.865   23.3       27.1                0.355
+     Mostly not                                 34.2       33.1                           39.9       41.4
+     It doesn't satisfy                         31.9       30.9                           36.8       31.5
+  Note: Statistically significant differences at 5 % level are in bold; *T-tests with cluster-robust standard errors are used,
+
+
+
+
+                                                           16
+For the first test above, the results need to be carefully interpreted since we have a multiple
+comparison problem (Benjamini and Hochberg, 1995; Glennerster and Takavarasha, 2013,
+p366). For 30 variables, we conducted equality tests (e.g., t-test) 30 times using conventional
+statistical significance levels such as 1 and 5%. However, this approach is problematic since the
+more outcomes we test, the higher probability of false positive (i.e. type I error where the null
+hypothesis is incorrectly rejected) we will have.
+
+To control for such false discovery rates when dealing with multiple tests, we apply both the
+Bonferroni correction and the Benjamini–Hochberg procedure in addition to the standard t-test
+or Pearson’s Chi-squared test.
+
+With the Bonferroni correction, the critical value for the t-tests is adjusted such that it becomes
+α/m, where α is the significance level and m is the number of comparisons. As we will be making
+30 comparisons, the value is 0.05 / 30 = 0.00167. With this correction, it should be noted that
+the likelihood of type I errors decreases at the expense of a greater likelihood of type II errors.
+
+The Benjamini-Hochberg procedure helps to control for the false discovery rate. This involves
+ordering the p-values of the standard t-tests from lowest to highest, and comparing them with
+the corresponding value of i * α/m, where i is the numbered order of the comparison and α and
+m are as above. Comparisons in which the p-value is less than i * α/m are considered
+statistically significant. In this study, a 5 percent is used for the false discovery rate.
+
+Such adjustments are useful for this experiment because poverty projections are a sum of the
+regression variables weighted by regression coefficients. Even if one variable is collected
+differently between the F2F and CATI modes, that might not affect the projection results so
+much. However, if many variables are systematically different, then the regression results can
+be also different.
+
+Table 7 summarizes the results. The column (1) shows the p-value for a difference between a
+mean response to face-to-face interview and one to telephone interview. The table is organized
+by the p-value in an ascending order. The column (2) in both urban and rural sections shows the
+results of Bonferroni correction (α/m), the column (3) shows the results of Bnejamini-Hochberg
+index (iα/m), and the column (4) shows whether the Bnejamini-Hockberge index is significant or
+not. Since variables are organized by p-values in an ascending order, if a difference of one
+variable is statistically significant, then differences of all variables below are also statistically
+significant. The results show except for “district or local heating” and “the number of satellite
+dish” in the urban area, differences in all other variables as a group are not statistically
+significant. In other words, the responses from the two modes are not systematically different in
+general.
+
+
+
+
+                                                 17
+Table 7: Multiple Comparison Corrections
+                                            Urban                                                                                 Rural
+                                                (1)          (2)      (3)        (4)                                                 (1)        (2)       (3)        (4)
+                                              p-value
+  Variable                                   (ordered p < α/m;       iα/m;    p < iα/m;   Variable                                 p-value    p < α/m;   iα/m;    p < iα/m;
+                                                 )         α=0.05    α=0.05    α=0.05                                             (ordered)    α=0.05    α=0.05    α=0.05
+  Has district or local heating                0.000         yes     0.002       yes      Highest HH education: Vocation school     0.008        no      0.002        no
+  # satellite dish                             0.001         yes     0.003       yes      Month worked by HHH 12 month              0.010        no      0.003        no
+  # freezer                                    0.018         no      0.005        no      # Double axis tractor                     0.020        no      0.005        no
+  # washing machine                            0.029         no      0.007        no      # dish washers                            0.025        no      0.007        no
+  Has water installations                      0.038         no      0.008        no      Highest HH education: primary or less     0.072        no      0.008        no
+  Bought clothes last 3 month                  0.076         no      0.010        no      Highest HH education: Univ. or higher     0.073        no      0.010        no
+  Highest HH education: Univ. or higher        0.147         no      0.012        no      Bought shoes last 3 month                 0.092        no      0.012        no
+  Dependency ratio                             0.149         no      0.013        no      Has district or local heating             0.116        no      0.013        no
+  # car                                        0.221         no      0.015        no      # camera                                  0.116        no      0.015        no
+  # DVD player                                 0.230         no      0.017        no      Has sewerage                              0.158        no      0.017        no
+  # camera                                     0.264         no      0.018        no      Dependency ratio                          0.198        no      0.018        no
+  Highest HH education: High school            0.266         no      0.020        no      Has fixed telephone                       0.227        no      0.020        no
+  Has fixed telephone                          0.418         no      0.022        no      Bought clothes last 3 month               0.319        no      0.022        no
+  # computer                                   0.440         no      0.023        no      Household size                            0.341        no      0.023        no
+  Highest HH education: Vocation school        0.550         no      0.025        no      Has electricity                           0.528        no      0.025        no
+  Number of rooms                              0.620         no      0.027        no      # computer                                0.530        no      0.027        no
+  Month worked/12 for all worked               0.667         no      0.028        no      Number of rooms                           0.564        no      0.028        no
+  Month worked by HHH 12 month                 0.721         no      0.030        no      # DVD player                              0.565        no      0.030        no
+  Bought shoes last 3 month                    0.726         no      0.032        no      # air conditioner                         0.620        no      0.032        no
+  Share of unemployed members                  0.743         no      0.033        no      # microwave                               0.652        no      0.033        no
+  Main income source is pensions               0.765         no      0.035        no      Highest HH education: High school         0.681        no      0.035        no
+  # TV                                         0.775         no      0.037        no      Main income source is pensions            0.717        no      0.037        no
+  Household size                               0.834         no      0.038        no      # car                                     0.727        no      0.038        no
+  # dish washers                               0.879         no      0.040        no      Share of unemployed members               0.772        no      0.040        no
+  Highest HH education: primary or less        0.888         no      0.042        no      Has water installations                   0.783        no      0.042        no
+  Has sewerage                                 0.907         no      0.043        no      # freezer                                 0.800        no      0.043        no
+  # microwave                                  0.946         no      0.045        no      # satellite dish                          0.879        no      0.045        no
+  Has electricity                              0.951         no      0.047        no      # washing machine                         0.901        no      0.047        no
+  # air conditioner                            0.987         no      0.048        no      Month worked/12 for all worked            0.958        no      0.048        no
+  # Double axis tractor                        0.992         no      0.050        no      # TV                                      0.976        no      0.050        no
+Source: Authors’ estimation using datasets collected in the pilot.
+5.2 Comparison of Predicted Poverty Rates
+In this subsection, we measure whether data collected by two different interview modes show
+differences in predicted poverty rates. To do this, we used two different poverty lines: the
+official poverty line and 150,000 RSD in a 2009 price. The second line is significantly higher than
+the official poverty line to see the results are robust to different levels of poverty lines. We
+conducted the t-tests to check whether the differences of the predicted poverty rates by the
+two modes are statistically significant or not. All poverty rates were estimated using PovMap2
+software, which follows Elbers, Lanjouw and Lanjouw’s (2003) methodology.
+
+The predicted poverty rates using the two modes are very close and the difference is statistically
+insignificant. Table 8 shows the prediction of poverty rates using the data from the F2F and CATI
+modes in urban and rural data. With the official poverty line, the predicted poverty rates are 4.5
+percent by F2F and 3.3 by CATI in urban areas and 7.4 by F2F and 8.2 by CATI in rural areas. In
+both cases, the differences in the predicted poverty rates by the interview modes are very small
+and are statistically insignificant. Therefore, we can conclude that the two survey modes do not
+make a significant difference in terms of the predicted poverty rates.
+
+Indifference in prediction between the two survey modes is not due to a low level of poverty
+rate with the national poverty line since the difference is still small and statistically insignificant
+with the second higher poverty line. As shown in the table, the predicted poverty rates are 18.6
+and 18.2 percent by the F2F and CATI in urban areas and 28.7 and 31.5 in rural areas,
+respectively. The percentage point differences between the two survey modes remain very
+small relative to the level of poverty rates and are statistically insignificant. Thus, the difference
+in poverty estimates by the F2F and CATI surveys cannot be observed even with the higher
+poverty rate.
+
+To see the results are not specific to the select poverty lines, we compare poverty rates
+measured at different levels of poverty lines (figure 1). It is clear that poverty rates estimated
+from the F2F data are close to those of the CATI data for both urban and rural areas at any level
+of poverty line.
+
+In summary, even if differences in some variables between the F2F and CATI surveys are
+statistically significant, poverty rates estimated from both datasets are very close at any level of
+poverty line. Therefore, we can conclude that interview modes did not cause any bias in poverty
+estimation based on an S2S method.
+Table 8: Imputed Poverty based on survey modes
+
+                    Official poverty line = 96,264 RSD in     Poverty line = 150,000 RSD in 2009
+                                                  Diff                                    Diff
+                      F2F       Phone                           F2F       Phone
+                                               (% point)                               (% point)
+  Urban               4.5         3.3             1.2          18.6        18.2           0.5
+                     (1.3)       (1.3)           (1.8)         (2.1)       (2.3)         (3.1)
+  Rural               7.4         8.2            -0.8          28.7        31.5          -2.9
+                     (1.6)       (1.7)           (2.3)         (2.5)       (2.7)         (3.6)
+  Pooled              6.1         6.0             0.0          24.1        25.6           -1.6
+                     (1.0)       (1.1)           (1.5)         (1.6)       (1.8)         (2.4)
+  Source: The authors’ estimations using PovMap 2 software.
+Figure 1: Predicted Poverty Rates by Interview Mode Using Different Levels of Poverty lines
+   .8
+   .6
+   .4
+   .2
+   0
+
+
+
+
+      50000              100000              150000         200000                   250000   300000
+                                                 Poverty line
+
+                                        CATI in urban                         CATI in rural
+                                        F2F in urban                          F2F in rural
+
+
+   Source: The authors’ estimation using data from the pilot.
+   Note: Vertical lines are the two poverty lines that are used in table 8.
+
+5.3 Resource Considerations
+The cost of implementing the survey experiment was relatively inexpensive. A total of $28,400
+was used for the survey implementation, including recruitment and training of field
+enumerators and telephone operators, sample selection, piloting the questionnaire,
+programming of the data entry software for CATI, etc. An additional $30k was allocated for
+technical assistance to supervise the experiment, including consultant fees for a survey expert
+and trip costs.
+
+In terms of time required to complete the interviews, the average length of the interviews
+ranged from 5 to 12 minutes. The median times for the interviews by area and interview mode
+are shown in Table 9. For the F2F survey and CATI baseline, interviewers manually recorded the
+start and end times of the interviews. By contrast, the times for the telephone interview were
+recorded automatically by the CATI computer program. As each interview would require an
+introduction to explain the purpose of the survey and to identify the appropriate respondent,
+much of the CATI baseline and F2F survey interview time would be for these activities and not
+just for asking questions and recording responses. It should be noted that the sum of the
+median times for the CATI pre-interview and interview stages is similar to time for the F2F
+interviews.
+
+It is also worth noting that a total time needed for the survey implementation was short. The
+preparation of this survey started in March 2013 and was completed by late June 2013. The
+
+
+
+                                                           20
+                    Table 9: Median duration of interviews (minutes)
+                                                   Urban         Rural          Pooled
+                    F2F                              10           12              10
+                    CATI pre-interview                5            7               5
+                    CATI interview                  4:44         5:49            5:05
+                    Source: The authors’ calculation using data collected during the pilot.
+
+survey was in the field between late June and early July 2013. The final data was delivered by
+the end of July 2013. In total, this entire pilot was prepared and implemented in five months.
+
+5.4 Caveats
+While this experiment provides some evidence that differences between F2F and CATI are likely
+to be negligible, several other challenges exist for S2S imputation methods to succeed. One of
+the central assumptions with this approach is that the imputation models are stable across time;
+so one must be alert to potential shifts in the model coefficients. Models might change over
+time, particularly during a crisis and as the period between the model calibration and prediction
+year widens.
+
+Furthermore, this approach is not a substitute for the collection of high quality consumption or
+income data. The full multi-module household surveys allow for more in-depth analysis of
+poverty and distributional analysis and are vital to expanding the evidence base to inform policy
+decisions. Also, to develop reliable and accurate imputation models, we need to have rich and
+reliable multi-topic household surveys. Therefore, it is critical for the S2S approach that high
+quality multi-topic household surveys are implemented every few years.
+
+As for the role of telephone surveys, they can offer several advantages in terms of time, costs,
+and flexibility but they also pose several challenges for sampling to obtain nationally
+representative estimates, particularly in the context of developing countries. First, telephone
+coverage is not 100 percent in most developing countries. If telephone signals do not reach
+some areas, populations in the areas will not be included in telephone surveys; as a result, they
+are not fully nationally representative. This concern is particularly serious in rural areas of
+developing countries. To overcome this, we might need to carry out a household survey with
+mixed interview modes – F2F for areas without telephone signals and CATI for areas with
+telephone signals. In this way, we can maintain representativeness of data while taking
+advantage of cost-effectiveness of telephone data collection. Needless to say, the findings of
+this paper are critical for this mixed interview approach.
+
+Second, even if some areas are covered by telephone networks, poor households tend to be the
+last group of people that own telephones. Given that our main interest is on poverty estimation,
+this is a potentially serious pitfall. Once poor households are selected and they do not own
+telephones, it is necessary to provide cell phones to them for representativeness of data to be
+maintained.
+
+
+6 Conclusion
+The results of this experiment suggest that conducting phone interviews to collect non-
+consumption data to predict poverty using an S2S method would not lead to any systematic
+bias. Indeed, we found that differences in interview mode are not likely to lead to large
+differences in responses and in turn bias poverty projections. Although these results do not
+
+                                                      21
+completely rule out possibility of different response pattern between face to face and telephone
+interview modes, they provide some evidence that the combination of CATI with the S2S
+approach appeared successful.
+
+Attrition rates are significantly lower than the previous telephone surveys. In urban areas,
+around 9.7 percent of sample households did not respond to telephone interviews after
+agreeing to participate in the telephone survey, while in rural areas, around 9 percent of sample
+households did not. These numbers are consistent with the official telephone surveys in Serbia,
+but much lower than the corresponding numbers reported in the L2L study. Such low rates are
+likely to be attributable to SORS’s long experience of telephone data collection.
+
+The sampling for this pilot was conducted very carefully and the non-response rates did not
+affect comparability of treatment and control groups much. Also, the key characteristics of
+households did not change much between the census data and the data collected by the pilot.
+
+The cost for this experiment was relatively inexpensive at a total cost of $28,000. This included
+the cost to visit 1,200 households in the field and 600 phone interviews. The unit cost for this
+experiment was around $23 per interview (similar to L2L). If telephone numbers of households
+were already available, conducting the phone survey would be substantially lower.
+
+As for implementation, the interviews were completed quickly with the average time for an
+interview of about 5 minutes. Also, sending official letters in advance to notify selected
+households of a potential upcoming visit seemed to contain nonresponse and attrition rates.
+
+Other challenges still remain. Telephone coverage in a developing county is still limited to obtain
+nationally representative results, although it is rapidly expanding. Mixed mode data collection
+may be one possible solution in such contexts. The mixed mode data collection approach proved
+to be effective in increasing response rates but is found to be vulnerable reporting biases (see
+more in Dillman 2007). Further research will be necessary.
+
+Finally, it is important to note that this pilot was conducted by SORS, who has a long experience
+of telephone data collection and well-established infrastructure for it, along with respondents
+who are used to it. To introduce this system in other countries where there is no such
+experience or infrastructure, there must be unobservable attributions of SORS that helped this
+pilot succeed well but this paper failed to pick and properly describe. Therefore, if this
+telephone data collection were to be carried out in other countries, it would be useful to review
+all steps carefully and consult SORS staff to make sure all fundamentals for the telephone data
+collection are properly satisfied.
+
+
+
+
+                                                22
+References
+Alderman, H., J. Behrman, H. P. Kohler, J. A. Maluccio, and S. Watkins. 2001. “Attrition in
+Longitudinal Household Survey Data.” Max Planck Institute for Demographic Research 5(4): 79-
+124.
+
+Bergmann, M. 2011. IPF-Algorithm to create adjustment survey weights. Stata Package.
+University of Mannheim.
+
+Benjamini, Y. and Y. Hochberg. 1995. “Controlling the false discovery rate: a practical
+andpowerful approach to multiple testing.” Journal of Royal Statistical Society. Series B
+(Methodological) 57 (1):289-300.
+
+Christiaensen, L., P. Lanjouw, J. Luoto, and D. Stifel. 2012. "Small Area Estimation-Based
+Prediction Methods to Track Poverty: Validation and Applications." Journal of Economic
+Inequality 10 (2): 267–97.
+
+Croke, K., A. Dabalen, G. Demombybes, M. Giugale, and J. Hoogeveen. 2012. “Collecting High
+Frequency Panel Data in Africa Using Mobil Phone Interviews.” Policy Research Working Paper
+Series No. 6097, World Bank, Washington, DC.
+
+Dang, H., P. Lanjouw, and U. Serajuddin. 2014. “Updating Poverty Estimates at Frequent
+Intervals in the Absence of Consumption Data Methods and Illustration with Reference to a
+Middle-Income Country.” Policy Research Working Paper Series No. 7043. The World Bank.
+
+Deaton, A. and J.P.Dreze. 2002. “Poverty and Inequality in India: A Reexamination” Economic
+and Political Weekly, September 7, 2002.
+
+Demombynes, G., P. Gubbins, and A. Romeo. 2013. “Challenges and Opportunities of Mobile
+Phone-Based Data Collection: Evidence from South Sudan.” Policy Research Working Paper
+Series No. 6321, World Bank, Washington, DC.
+
+Dillmana, D. A., G. Phelpsb, R. Tortorab, K. Swiftb, J. Kohrellb, J. Berckb, and B. L. Messer. 2009.
+“Response rate and measurement differences in mixed-mode surveys using mail, telephone,
+interactive voice response (IVR) and the Internet.” Social Science Research 38 (1): 1–18.
+
+Douidich, M., A. Ezzrari, R. Van der Weide, and P. Verme. 2013. “Estimating Quarterly Poverty
+Rates Using Labor Force Surveys: A Primer.” Policy Research Working Paper Series No. 6466,
+World Bank, Washington, DC.
+
+Elbers, C., J. O. Lanjouw, and P. Lanjouw. 2003. “Micro-Level Estimation of Poverty and
+Inequality.” Econometrica 71 (1): 355–64.
+
+Glennerster, R. and K. Takavarasha. 2013. Running Randomized Evaluations: A Practical Guide.
+Princeton: Princeton University Press.
+
+
+
+                                                 23
+Harttgen, K., S. Klasen, and S. Vollmer. 2012. "An African Growth Miracle? Or: What Do Asset
+Indices Tell Us about Trends in Economic Performance?" Poverty, Equity, and Growth Discussion
+Paper 109, Courant Research Centre.
+
+Jäckle, A., Roberts, C., and P. Lynn. 2006. “Telephone versus Face-to-Face Interviewing: Mode
+Effects on Data Quality and Likely Causes. Report on Phase II of the ESS-Gallup Mixed Mode
+Methodology Project.” Institute of Social and Economic Research (ISER) Working Paper 2006-41,
+Colchester: University of Essex.
+
+Kijima, Y. and P. Lanjouw. 2003. "Poverty in India during the1990s - a regional perspective,"
+Policy Research Working Paper Series No. 3141, The World Bank.
+
+Leo, B., R. Morello, J. Mellon, T. Peixoto, and S. Davenport. 2015. “Do Mobile Phone Surveys
+Work in Poor Countries?” Center for Global Development Working Paper No. 398.
+
+Mu, X. 1999. “IVR and Distribution of Responses: An Evaluation of the Effects of IVR on
+Collecting and Interpreting Survey Data.” Unpublished Paper. Princeton, NJ: The Gallup
+Organization.
+
+Newhouse, D. S. Shivakumaran, S. Takamatsu, and N. Yoshida. 2014. “How Survey-to-Survey
+Imputation Can Fail.” Policy Research Working Paper Series No. 6961. The World Bank.
+
+Serajuddin, U., H. Uematsu, C. Wieser, and N. Yoshida. 2015. “Data Deprivation – Another
+Dimension of Deprivation to End.” Policy Research Working Paper Series No. 7252, the World
+Bank.
+
+Stifel, D., and L. Christiaensen. 2007. "Tracking Poverty over Time in the Absence of Comparable
+Consumption Data." World Bank Economic Review 21 (2): 317–41.
+
+Tourangeau, R., R. M. Steiger, and D. Wilson. 2002. “Self-Administered Questions by Telephone:
+Evaluating Interactive Voice Response.” The Public Opinion Quarterly 66 (2): 265-278.
+
+World Bank. 2013. Listening to LAC: Using Mobile Phones for High Frequency Data Collection.
+Washington, DC.
+
+
+
+
+                                                24
+7      Appendix 1
+Table A.1: Official poverty rates
+
+                     Estimate       SE                  95% CI
+    2008                 0.061           0.005       0.051       0.071
+      Urban              0.050           0.006       0.038       0.062
+      Rural              0.075           0.009       0.058       0.092
+    2009                 0.069           0.006       0.058       0.080
+      Urban              0.049           0.007       0.036       0.061
+      Rural              0.096           0.010       0.077       0.116
+    2010                 0.092           0.006       0.080       0.104
+      Urban              0.057           0.007       0.044       0.071
+      Rural              0.136           0.011       0.114       0.158
+    Note: Cluster-robust standard errors are used.
+
+
+
+
+                                                         25
+Table A.2: Comparability of variables between F2F and CATI in pooled, urban and rural samples
+
+                                                                           Pooled
+  Variables
+                                                        F2F        Phone      diff          P-value
+  Balanced variables:
+  Household size                                          3.14          3.2        -0.06         0.57
+  Highest HH education#
+     Primary or less                                      0.08         0.11        -0.03         0.13
+     Vocation school                                      0.17         0.12         0.05         0.01
+     High school                                          0.43          0.4         0.03         0.27
+     University or higher                                 0.32         0.38        -0.06         0.02
+  Labor and income variables:
+  Share of unemployed members                             0.21         0.22        -0.01         0.67
+  Month worked/12 for all worked                          0.52         0.52        -0.01         0.79
+  Month worked by HHH 12 month                            5.13         4.56         0.57         0.12
+  Main income source is pensions                          0.39         0.38         0.01         0.64
+  Demographic & economic vars:
+  Dependency ratio                                        1.11         0.97         0.14         0.06
+  Bought clothes last 3 month                             0.58         0.64        -0.06         0.04
+  Bought shoes last 3 month                               0.52         0.49         0.03         0.39
+  Dwelling and durables:
+  Has water installations                                 0.96        0.97         -0.01        0.51
+  Has sewerage                                              0.9       0.86          0.04          0.2
+  Has electricity                                             1       0.99             0        0.59
+  Has district or local heating                           0.55        0.67         -0.12            0
+  Has fixed telephone                                       0.9       0.92         -0.03        0.14
+  Number of rooms                                         2.72        2.74         -0.01        0.87
+  # microwave                                             0.29         0.3         -0.01        0.79
+  # freezer                                                 0.9       0.96         -0.05        0.09
+  # washing machine                                       0.96        0.98         -0.02        0.33
+  # dish washers                                          0.21        0.25         -0.04        0.16
+  # air conditioner                                       0.48        0.47          0.01        0.72
+  # TV                                                    1.41         1.4          0.01        0.85
+  # satellite dish                                        0.18        0.11          0.07        0.01
+  # computer                                                0.7       0.74         -0.04        0.32
+  # camera                                                0.09        0.09             0        0.88
+  # car                                                   0.63        0.61          0.02        0.52
+  # DVD player                                            0.45        0.41          0.04        0.19
+  # Double axis tractor                                   0.15        0.11          0.05        0.05
+  Subjective Variables:                                 F2F        Phone                    P-value*
+  Much better and a little better (%)
+     Better                                                5.1          4.4                      0.11
+     The same                                             35.5         34.3
+     A little worse                                       32.7         28.2
+     Much worse                                           26.7          33
+  Monthly income satisfy needs (%)
+     Completely and mostly                                28.6         31.6                      0.43
+     Mostly not                                           37.1         37.3
+     It doesn't satisfy                                   34.4         31.2
+  Note: Statistically significant differences at 5 % level are in bold; *T-tests with cluster-robust
+  standard errors are used, except for subjective variables that use the Pearson's chi-square
+  tests; # The p-value for the Pearson's chi-square test is 0.013.
+
+
+                                                            26
+Appendix 2.A: Face to Face Questionnaire
+28
+29
+30
+Appendix 2.B CATI Pre-Interview Form:
+
+
+
+
+                                        31
+32
+Appendix 2.C CATI Main Questionnaire:
+34
+35
+36
+37
+38
+

@@ -1,0 +1,828 @@
+                                                                WPS8191
+
+
+Policy Research Working Paper                                  8191
+
+
+
+
+ Optimal Targeting under Budget Constraints
+         in a Humanitarian Context
+                                  Chiara Gigliarano
+                                    Paolo Verme
+
+
+
+
+Fragility, Conflict and Violence Cross Cutting Solution Area
+September 2017
+Policy Research Working Paper 8191
+
+
+  Abstract
+ The combination of conflict, food insecurity, and displace-                         the United Nations High Commissioner for Refugees.
+ ment generates competing claims for financial resources                             Based on a poverty model, Receiver Operating Charac-
+ that stretch the donors’ ability to provide funding and                             teristic curves are used to optimize coverage and leakage
+ the humanitarian organizations’ capacity to provide social                          rates under budget constraints. The paper shows how
+ assistance. The paper uses Receiver Operating Character-                            policy makers can use these instruments to fine-tune tar-
+ istic curves and related indexes to determine the optimal                           geting using coverage rates, budgets, or poverty lines as
+ targeting strategy of a food voucher program for refu-                              guiding principles to increase the overall efficiency of a
+ gees. The estimations focus on the 2014 food vouchers                               program. As humanitarian organizations operate under
+ administered by the World Food Programme to Syrian                                  increasing budget constraints and increasing demands for
+ refugees in Jordan. The analysis uses data collected by                             efficiency, the proposed approach addresses both concerns.
+
+
+
+
+  This paper is a product of the Fragility, Conflict and Violence Cross Cutting Solution Area. It is part of a larger effort by
+  the World Bank to provide open access to its research and make a contribution to development policy discussions around
+  the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be
+  contacted at pverme@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+        Optimal Targeting under Budget Constraints in a Humanitarian Context
+
+                                         Chiara Gigliarano1 and Paolo Verme2
+
+
+
+
+JEL: I31; I32; I38
+
+Keywords: Food vouchers; Refugees; Receiver Operating Characteristics Curves; Targeting.
+
+
+
+
+1 Department of Economics, Università dell'Insubria, Varese, Italy.
+2 Fragility, Conflict and Violence,World Bank Group. This work is part of the program “Building the Evidence on Protracted Forced
+Displacement: A Multi-Stakeholder Partnership”. The program is funded by UK aid from the United Kingdom’s Department for
+International Development (DFID), it is managed by the World Bank Group (WBG) and was established in partnership with the
+United Nations High Commissioner for Refugees” (UNHCR). The scope of the program is to expand the global knowledge on forced
+displacement by funding quality research and disseminating results for the use of practitioners and policy makers. This work does
+not necessarily reflect the views of DFID, the WBG or UNHCR. The authors would like to thank Lidia Ceriani, Xavier Devictor, Ugo
+Gentilini and Phillippe Leite for very useful comments.
+     1. Introduction
+The United Nations has estimated the number of forcibly displaced people in the world at 65.6 million in
+2016, most of them located in the Middle East and Sub-Saharan Africa.3 More recently, it estimated that
+up to 20 million people may be at risk of famine in Sub-Saharan Africa and the Middle East by the end of
+2017.4 As it is well established in the literature, droughts lead to constrained food supply in drought
+affected areas but they are not, per se, the cause of famines. Famines occur where the capability of
+obtaining food is constrained and where there is an inability to redistribute food from high supply to low
+supply areas (Dreze and Sen, 1989), an activity that the international aid community can do effectively
+under normal circumstances.5
+
+Forced displacement is largely the consequence of conflict as shown by countries such as Nigeria, South
+Sudan, Somalia and the Republic of Yemen. Northern Nigeria has over 2 million internally displaced
+persons (IDPs) as a direct consequence of the conflict with Boko Haram; South Sudan may now have up
+to 80 percent of its population either displaced or hosting displaced people as a consequence of the civil
+war; Somalia has generated millions of refugees over decades of instability who settled in neighboring
+countries or moved to third countries; the Republic of Yemen now has almost 3 million people counted
+as either refugees or IDPs as a consequence of the civil war.6 In these countries, conflict has been the main
+driver of displacement. However, more recently, conflict has contributed to turn droughts into famines
+and further displacement as it constrains the free movement of food to areas in need.
+
+In these contexts, humanitarian organizations are facing increasing budget constraints. Donors find
+themselves pulled between the necessity to mitigate starvation and save lives and provide for shelter,
+services and any other needs of displaced populations in countries where host governments have scarce
+means of their own to face these challenges. Budgets are very stretched and humanitarian organizations
+face tough choices on the ground. Universal coverage of assistance programs such as cash or food
+assistance becomes the exception rather than the rule and humanitarian organizations are forced to
+
+
+
+
+3 http://www.unhcr.org/en-us/figures-at-a-glance.html.
+4 http://www.cnn.com/2017/03/11/africa/un-famine-starvation-aid/
+5 See also Martin-Shields and Stojetz (2017) for a recent review of the literature on conflict and food security, van Weezel (2017)
+
+for a global study of the impact of conflict on food security covering 106 countries and
+ Brück et al. (2017) for a study of the impact of conflict on food security in Gaza. For a study that looks at food security as a means
+to address conflict, see Fatema and Kibriva (2017).
+6 For more details of these crises, see www.unhcr.org (country updates) and www.iom.int (particularly the Displacement Tracking
+
+Matrix – DTM – at http://www.globaldtm.info/).
+
+                                                                                                                                     2
+ration and target resources. This is where targeting becomes a very relevant activity for donors and
+humanitarian organizations alike.
+
+This paper is a contribution in the direction of making targeting more effective when budgets are
+stretched. It exploits Receiver Operating Characteristics (ROC) curves and related indices to devise a
+relatively simple methodology for optimizing coverage, poverty reduction and leakage in the presence of
+budget constraints. We therefore focus on optimizing outcomes of social protection programs based on
+cash transfers.
+
+ROC curves are one of the most common statistical tools employed to assess the performance of a
+diagnostic rule based on a predictive model (Lusted, 1971). They are generated by plotting the fraction of
+true positives out of the positives (true positive rate) versus the fraction of false positives out of the
+negatives (false positive rate), at various probability thresholds. For example, one can estimate from
+microdata the probability of an individual to be poor, which varies between 0 and 1 or between 0 and
+100. To classify these same individuals as poor or nonpoor based on these predictions, one must then
+decide the probability threshold to use as cut point between poor and nonpoor. We may classify as “poor”
+all those who have a probability of being poor above, say, 60 percent and “nonpoor” all individuals whose
+probability is below or equal to 60 percent. This choice affects the true positive and negative rates.
+Therefore, by changing the cut point, one can plot the curve that describes all combinations of true and
+false positive rates that correspond to different probability thresholds. This is the ROC curve. It is useful
+because it allows researchers to select the probability threshold that optimizes the combination of true
+and false positive rates.
+
+The main applications of the ROC curves are in medicine (see, e.g, Hand, 2010) or more generally in
+diagnostics (see, e.g, Hand and Anagnostopoulos, 2013) and in credit risk analysis (see, e.g. Thomas, 2009;
+Gigliarano et al, 2014), and the Area Under the Curve (AUC) is a popular measure to evaluate the
+discriminative power of a predictive model (see, e.g. Hand, 2009; Krzanowski and Hand, 2009; Hand,
+2012). The use of these curves in economics has been less frequent (see Wodon, 1997 for an early
+application) and, to our knowledge, these curves have not been used in the context of humanitarian
+programs, with the exception of our previous contribution on which this paper builds (Verme et al. 2016).
+
+In the context of a welfare program such as cash assistance or food vouchers, the approach proposed can
+be used when policy makers work with a coverage, poverty or budget target. It answers questions such
+as: i) What is the budget required to reduce poverty (or mitigate famine) by X percent? ii) What is the
+
+
+                                                                                                           3
+budget required to increase household coverage by Y percent? iii) What is the coverage or poverty
+reduction we can obtain with a given Z budget? iv) Can the program’s efficiency be improved by shifting
+the poverty line?
+
+The answers to these questions can help donors make funding decisions and humanitarian organizations
+make targeting choices. We show that this approach can be applied to existing programs such as food
+voucher programs administered by the World Food Program (WFP) relying on available micro data
+collected by the United Nations High Commissioner for Refugees (UNHCR). Our main contribution is to
+show how to operationalize such approach in the context of welfare improving humanitarian operations
+using relatively simple visual devices suitable for policy makers. In this respect, the paper is a complement
+to the broader and relatively new literature on targeting food and cash programs in humanitarian contexts
+(Mollis et al., 1999, Maxwell et al., 2011, Coll-Black et al., 2012).
+
+The paper is organized as follows. The next section describes the food voucher program that we use to
+illustrate the methodology proposed. Section 3 describes the data, Section 4 outlines the models
+employed to caliber the methodology, section 5 outlines results and section 6 concludes.
+
+
+       2. The 2014 food voucher program for refugees in Jordan
+As a case study, the paper uses the 2014 food voucher program administered by WFP to Syrian refugees
+in Jordan in 2014. Similarly to the populations mentioned in the introduction, this is a population that
+experienced multiple shocks that eventually led to poverty and refugee status in neighboring countries
+(Verme et al, 2016). There are also some important differences. Jordan is a middle-income country and
+has a very different capacity to provide for displaced populations as compared to countries such as South
+Sudan or Somalia. The quality of data available for refugees in Jordan was also superior to the quality of
+data that is currently available in Sub Saharan Africa. However, we will show that the approach proposed
+can be implemented using micro data that the WFP and UNHCR routinely collect and that this is a method
+not beyond the existing capacity of these organizations.
+
+The material assistance provided to refugees in Jordan in 2014 was essentially structured in two programs:
+i) a cash program administered by the UNHCR and ii) a food voucher program administered by the WFP.
+In 2014, the UNHCR cash program provided 50 Jordanian Dinars (JD)7 per month to cases8 including one
+or two members, 100 JD to cases with 3 to 5 members and 120 JD to cases with more than five members.
+
+7   A Jordanian Dinar in 2014 was roughly equivalent to one Euro.
+8   In the UNHCR jargon, a “case” is the household or family unit used to register refugees.
+
+                                                                                                           4
+The WFP program included two bi-weekly vouchers for a total value of 24 JD per person per month. The
+voucher was provided to the principal applicant and it could be spent via a network of 652 stores
+distributed across all governorates of Jordan. In this paper, we focus on the food voucher program but
+the approach proposed can be equally used for any cash program.
+
+By the end of 2013, the food voucher program reached almost universal coverage and was assessed
+positively by both its administrator and external organizations. In addition to the benefits accrued to the
+direct beneficiaries, the WFP found that “The program has also led to some US$2.5 million investment in
+physical infrastructure by the participating retailers; created over 350 jobs in the food retail sector; and
+generated about US$6 million in additional tax receipts for the Jordanian government. In terms of indirect
+effects, this study finds a predictive multiplier ranging from 1.019 to 1.234. In other words, WFP’s plan to
+distribute US$250 million in vouchers during 2014 would lead to some US$255-US$308 million of indirect
+benefits for the Jordanian economy.” (WFP, 2014a, p. 1) The World Bank and the UNHCR jointly evaluated
+the poverty reduction and targeting capacity of the program and found it to be effective on both fronts at
+a time when targeting was universal (Verme et al., 2016).
+
+Towards the end of 2014, the humanitarian community started to face budget shortages that forced the
+WFP to scale down its food voucher program. The organization found itself with the difficult choice of
+how to prioritize beneficiaries and opted to follow a welfare approach whereby income or consumption
+would be used to assess welfare and target households. Welfare targeting is a well-developed
+methodology in welfare economics and has produced important tools like Proxy Means Targeting (PMT)
+that help organizations such as the World Bank or governments to target cash-based programs. However,
+this is not an exact science and it is known that this approach invariably results in sizeable leakage and
+undercoverage errors. In the case of humanitarian organizations, this task is even more daunting because
+these organizations are not typically staffed by economists and the adoption itself of these methodologies
+requires a lengthy process.
+
+
+    3. Data
+The paper uses a combination of the UNHCR proGres (PG) registry data and the UNHCR Home Visits (HV)
+data. The PG database is the official global registration system of the UNHCR. Most of the published
+statistics on refugees derive from this database and any survey or home visit targeting refugees is usually
+based on this database. ProGres contains information collected from refugees at different stages starting
+from the first brief interview administered when refugees cross the border to more extended interviews
+
+
+                                                                                                          5
+carried out when refugees are settled. Data are updated on a continuous basis and they are principally
+used to identify beneficiaries of the various protection and cash programs that the UNHCR and other
+organizations administer to refugees. It is, in short, the refugee “census” and contains individual and
+household (case) socio-economic information but does not contain information on welfare. The second
+data set is the Home Visits database (HV), which has been administered in Jordan in successive rounds
+starting from 2013 for the purpose of targeting the cash assistance program. The HV questionnaire results
+in almost 200 variables that can be used for analysis and includes questions on income and expenditure,
+which we use to construct our welfare aggregate. For the purpose of this paper, we use the second round
+implemented between November 1, 2013 and September 30, 2014.
+
+The unit of observation used by the study is the “case”. The UNHCR defines a case as: “A processing unit
+similar to a family headed by a Principal Applicant. It comprises (biological and non-biological sons and
+daughters up to the age 18 (or 21) years, but also includes first degree family members emotionally and/or
+economically dependent and for whom a living on their own and whose ability to function independently
+in society/in the community and/or to pursue an occupation is not granted, and/or who require assistance
+from a caregiver.”9 The case identifier is present in both PG and HV data and for this reason it was possible
+to merge the PG and HV data into one dataset. The final sample used for this paper included over 43,000
+observations, about a third of all cases registered in Jordan in 2014. This sample is not a random sample
+of the refugee population but Verme et al. (2016) showed that it is the closest approximation to a random
+sample that one could have with existing data.
+
+The welfare aggregate was constructed using two questions on expenditure present in the HV data. The
+HV data contain questions on income and expenditure. The income question was clearly underreported
+and, as customary when measuring welfare in poor and middle-income countries, expenditure or
+consumption is preferred as a measure of welfare. The two expenditure questions backed each other up
+and by combining them into one indicator it was possible to correct for possible underreporting. The
+resulting welfare aggregate showed common properties to consumption aggregates in terms of
+distribution. We had also knowledge of the households (cases) that received assistance via the UNHCR
+cash program. For these households, the value of the programs was subtracted from the aggregate to
+obtain expenditure net of social assistance. Most households were also receiving food vouchers but
+interviewers and respondents to the home visits questionnaire were instructed to exclude these
+
+
+
+9   Information provided by the UNHCR Jordan office.
+
+                                                                                                           6
+expenditures when filling the questionnaire. Finally and for the purpose of poverty modeling, the welfare
+aggregate was transformed into per capita basis.
+
+Table 1 provides the summary statistics for income and expenditure. It is clearly visible that income per
+capita is underreported when compared to expenditure. It is also evident that the UNHCR cash program
+contributes, on average and per capita, with about 7 JD per month, which is in line with what we should
+expect given the coverage of the program in 2014. Figure 1 also shows how the shape of the welfare
+aggregate of choice (expenditure per capita net of UNHCR cash) exhibits the expected suitable
+characteristics of a bell-shaped distribution.
+
+The poverty line adopted for the study is 50 JD per capita per month. This threshold was selected because
+it was the poverty line adopted by the UNHCR for providing cash assistance. At the end of 2013, this line
+was equivalent to 71 USD and 160 USD at Purchasing Power Parity (PPP) per capita per month. This latter
+amount corresponded to 5.25 USD PPP per day, a significantly higher amount than the international
+poverty line of 1.9 USD PPP recommended for poor countries. Considering that Jordan is a middle-income
+country and that most refugees live in urban areas, this poverty line is not farfetched. Based on the sample
+used for this study, a poverty line of 50 JD/capita/month results in a poverty rate of 52.5 percent for cases
+and 69.2 percent for the population. In other words, 7 in 10 refugees were estimated to be poor based on
+a 50 JD per person poverty line.
+
+Table 1 - Summary statistics of the main case welfare aggregates (in JD)
+
+ Variable                                                  Mean    Std. Dev.   Mi    Max
+ Income per capita                                         34.95   64.41       0     3000
+ Income per capita with no zeroes                          65.50   75.99       0.5   3000
+ Expenditure per capita                                    77.92   74.72       1     1675
+ Expenditure per capita net of UNHCR cash                  70.60   76.29       0     1675
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+
+                                                                                                           7
+Figure 1 - Income and Expenditure Distributions
+    .8
+    .6
+    .4
+    .2
+    0
+
+
+
+
+         -2                  0                      2                 4            6                 8
+                                                            x
+
+                          kdensity Wexp_lncap                             kdensity Winc_lncap
+                          kdensity Wexp_unhcr_lncap
+
+
+Source: Authors’ estimations based on Jordan UNHCR data. On the x-axis is the log of income or expenditure per capita. On the
+y-axis is the density (percentage of population).
+
+
+     4. Models
+
+
+The underlying model of the predictions and simulations that will follow is a simple poverty model
+described as follows:
+
+                                                        =       + 	   +                                                 (1)
+
+where Pi =1 if the case is under the poverty line and Pi =0 if the case is on the poverty line or above;
+Xi=vector of case characteristics that derive from merging the UNHCR proGres registry data and the home
+visits data; ε = normally distributed error term with zero mean; and i=case.
+
+The model is estimated with a probit function and the main objective is to maximize its poverty prediction
+capacity. In order to achieve this objective, we followed a systematic procedure to optimize the
+construction of the independent variables and the explanatory power of the model. For the variables
+
+
+                                                                                                                           8
+construction, we made the most of individual variables by constructing case indicators and turned
+categorical variables into dichotomous variables. This avoided the question of discontinuity between
+categorical variables. To maximize the explanatory power of the model, we first explored the explanatory
+capacity of each individual variable with binomial models to prepare a first shortlist of variables and then
+used this shortlist with a backward and forward stepwise selection method to identify the best model.
+
+The optimal prediction model is then used to predict poverty as follows:
+
+                                               =    + 	                                                (2)
+
+where    can be interpreted as the expected probability of being poor given a set of X characteristics and
+based on the estimated parameters      and    from Equation (1).
+
+To determine whether a household is expected (predicted) to be poor or not, the standard approach is to
+assign a prediction of “i=non-poor” to households with 0 ≤         ≤ 0.5 and “i=poor” to households with
+0.5 <    ≤ 1. This is not particularly efficient because a cut point of 0.5 may not be the cut point that
+maximizes the coverage rate (i.e. the fraction of poor correctly predicted as poor) and minimizes the
+leakage rate (i.e. the fraction of nonpoor predicted as poor), when these are the objectives of the
+program’s administrators. One approach to solve this problem is to use indices that promise to optimize
+coverage and leakage. Two popular indices are the Younden Index (YI) and the Distance Index (DI)
+described as follows:
+
+                                         YI = max     −                                                (3)
+
+
+                                                                                                       (4)
+                                         =            +
+
+
+where N=population; P=number of poor; NP=Number of non-poor; t=targeted; nt=non-targeted.
+
+Consequently: coverage rate =     ; undercoverage rate =     ; and leakage rate =     .
+
+Similarly, one can draw the ROC curve, which plots for each possible cut point between 0 and 1 the
+corresponding leakage rate (x-axis) and coverage rate (y-axis), thus determining the optimal trade-off
+between these two indicators (see also Wodon, 1997). This is represented in Figure 2 below. In such a
+graph, the diagonal represents an equal probability of coverage and leakage, which is what one would
+obtain if targeting was random (blind assignment of the program). All the points on the left of the diagonal
+show the performance of models that do better than random draws. The Area Under the ROC Curve (AUC)
+
+                                                                                                          9
+becomes therefore an indicator of the predicting capability of the model and it can be used in conjunction
+with the R-Squared statistics of a model to assess its predicting capacity. Differently from the R-squared,
+the AUC value varies between 0.5 and 1 where 1 represents perfect prediction capacity.
+
+The example illustrated in Figure 2 shows that the model does better than a random assignment. The
+curve also shows that there is one point where the distance between the diagonal (random assignment)
+and the curve (the model) is maximized (vertical line in the figure). This is the point that offers the best
+coverage while minimizing leakage, given the selected model. To this point corresponds a particular
+probability threshold (equal to 0.703), which is what can be used to maximize the targeting performance
+of the model. The AUC value of the particular example in Figure 2 is 0.8751, which indicates that the model
+is capable of predicting poverty correctly 87.5 percent of the time. As shown above, it is important to note
+that the probability threshold that provides optimal targeting may well be different from 50 percent.
+
+This is precisely what ROC curves can help to do. Each threshold corresponds to a specific coverage rate
+and leakage rate and there is clearly a different trade-off between coverage and leakage in
+correspondence of each probability threshold. Changing the threshold may improve on one of the two
+rates while making the other rate worse. By knowing preferences for minimizing leakage (save money) or
+maximizing coverage (reduce poverty) and the corresponding trade-offs depicted by the ROC curves,
+policy makers can evaluate and compare alternative outcomes in anticipation of implementing a program.
+
+
+
+
+                                                                                                         10
+Figure 2 - Coverage and Leakage rates with different Probability Thresholds (ROC curve)
+
+
+
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+       5. Results
+As in any other econometric effort, the key to a successful implementation of the methodology proposed
+is to find a poverty model with good explanatory power. Table A in the annex shows the results of
+alternative poverty models based on the 2014 UNHCR Jordan data. The dependent variable is the dummy
+variable that indicates whether a case’s expenditure per capita is below the poverty line (equal to 50 JD),10
+whereas the independent variables are divided into groups of variables. In Model 1 we consider only socio-
+demographic variables such as case size, proportion of children, age, education, employment and marital
+status of the Principal Applicant (PA)11, as well as place of destination and origin of the household. In
+Model 2 we also add variables related to characteristics of the house and of the WASH12 system, and
+Model 3 includes also variables related to coping strategies implemented by the refugees as well as
+information on whether the case (household) receives humanitarian assistance.
+
+
+10   See Verme et al. (2016) for a sensitivity analysis based on different poverty lines.
+11 The principal applicant is the reference case person for the UNHCR, similarly to head of household in household budget surveys.
+12   WASH is an acronym frequently used by humanitarian organizations to describe the Water, Sanitation and Hygiene sectors.
+
+                                                                                                                              11
+In Table A, the three models are compared in terms of pseudo R-squared and Area Under the ROC Curve
+(AUC). These indicators show that Model 3 shows the best performance followed by models 2 and 1 in
+this order. Regressors related to housing and WASH included in models 2 and 3 seem to make the
+difference with model 1 and contribute significantly in explaining the probability of being poor. Figure 3
+shows graphically the same results using the ROC curves. The AUC is almost the same in models 2 and 3
+and the corresponding ROC curves practically overlap (the green line in Figure 3), whereas the ROC curve
+corresponding to model 1 (the blue line in Figure 3) is clearly below.
+
+Figure 3 - Comparing poverty models’ ROC curves
+        1
+        .8 .6
+    Coverage
+    .4  .2
+        0
+
+
+
+
+                0           .2                .4             .6            .8         1
+                                                   Leakage
+
+                                        Model 1               Model 2
+                                        Model 3               45 degree line
+
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+Considering Model 3 as our best poverty model, we can now test its capacity to predict poverty correctly.
+The exercise consists in using the parameters estimated by the models to predict the dependent variable
+of the model (poor/non-poor) as if we did not have information on this variable. Table 2 shows the results
+using different probabilities thresholds. For any given cut point between 0 and 1, we can evaluate the
+corresponding coverage rate (that is the probability of correctly classifying the poor) and leakage rate
+(that is the probability of classifying as poor a non-poor). The table compares coverage and leakage rates
+
+
+
+                                                                                                       12
+for three arbitrary cut point values (0.3, 0.5 and 0.6), revealing that in correspondence to a low cut point
+we obtain a very high coverage rate but also a high leakage rate.
+
+In particular, the central panel of Table 2 shows that, using a poverty line of 50 JD and a 50 percent
+threshold, the model would be able to predict correctly if an individual is poor 90.4 percent of the time,
+which implies that 9.6 percent of the time the model would predict poor individuals as non-poor (under-
+coverage rate or exclusion error). The model would also predict correctly if an individual is non-poor 61
+percent of the time, which means that 39 percent of the time the model would predict as poor nonpoor
+individuals (leakage rate or inclusion error). Evidently, the first type of error (under-coverage) is more
+problematic from a policy and welfare perspective, whereas the second type of error (leakage) is more
+problematic from a budget perspective.
+
+The first and the last panels repeat the exercise with a probability threshold of 30 percent and 60 percent,
+respectively. In the former case, the under-coverage rate improves (2.9 percent) while the leakage rate
+worsens (62.4 percent). In the latter case, the under-coverage rate worsens (15.6 percent) while the
+leakage rate decreases considerably (28.8 percent). Clearly, changing probability threshold affects
+targeting results. Hence, it is important to fine tune the parameter related to the probability threshold to
+obtain results the closest as possible to the error we want to minimize (under-coverage or leakage).
+
+Table 2 - Coverage and Leakage rates for different choices of cut point
+
+                                                      Observed poor
+                                             no            yes         Total
+                                                       cut point 30%
+                            no                 37.64           2.92      13.59
+                            yes                62.36         97.08       86.41
+                                                       cut point 50%
+ Predicted poor             no                 61.01           9.59      25.39
+                            yes                38.99         90.41       74.61
+                                                       cut point 60%
+                            no                 71.20         15.63       32.71
+                            yes                28.80         84.37       67.29
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+                                                                                                         13
+We now determine the optimal probability threshold that maximizes coverage and minimize leakage, by
+computing the Youden and the Distance indices (Figure 4). In general, the two indicators may suggest
+different optimal thresholds (indicated in Figure 4 by the two vertical lines). In our case, we find the two
+values rather close: 0.703 for the Youden index (corresponding coverage, 0.766; corresponding leakage,
+0.184), and 0.685 for the Distance index (corresponding coverage, 0.782; corresponding leakage, 0.201).
+Also noteworthy and from a graphical perspective, one could consider as an optimal choice, the maximum
+vertical distance between the Youden and Distance indices curves. This falls indeed within the two optimal
+thresholds indicated respectively by the two indices and could solve the issue of choosing between two
+optimal values.
+
+Figure 4 - Youden and Distance indices for different cut point
+                  1
+    Youden and Distance indices
+    .2     .4     0 .6       .8
+
+
+
+
+                                  0   .2      .4              .6          .8           1
+                                                   Cutpoint
+
+                                               youden              dist
+
+
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+As an alternative, it is possible to select the optimal probability threshold using the available budget for
+the food voucher program as baseline. The WFP would normally know the budget available for targeting
+and this is what frequently drives targeting decisions. The WFP or the UNHCR do not have large regular
+annual budgets and they rely on donors’ contributions pledged in correspondence of humanitarian crises.
+Based on the effective contributions received following the pledges, these organizations take targeting
+
+                                                                                                         14
+decisions accordingly. Therefore, the targeting decisions are largely based on budget rather than coverage
+criteria. Indeed, if programs were to be administered based on purely legal and entitlements criteria,
+these organizations should cover the totality of refugees and coverage would be universal. Targeting is
+therefore a second best option determined by budget constraints.
+
+As an example of targeting based on budget criteria, Figure 5 plots cut points (or probability thresholds)
+corresponding to different mixes of coverage and leakage rates on the y-axis versus different budget
+scenarios on the x-axis. For simplicity, the budget on the x-axis varies between 0 and 100, where 100
+corresponds to the budget needed for universal coverage. For example, if we assume that the WFP has a
+budget sufficient to cover only 80 percent of the refugee population (the vertical line in the figure), the
+probability threshold that would achieve that outcome is 0.42 (the horizontal line in the figure).
+
+Figure 5 - Probability threshold for different budget scenarios
+
+
+
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+
+Vice-versa, one can focus on optimizing coverage and leakage. This can serve organizations that do not
+have a sufficient budget to cover all potential beneficiaries but can choose between different levels of
+expenditure based on efficiency criteria. In this case, one can plot coverage and leakage rates against
+
+
+                                                                                                        15
+different budget scenarios as shown in Figure 6. By drawing a vertical line in correspondence of the
+maximum distance between coverage and leakage rates, we can derive the optimal budget. In the
+example proposed, this budget is equivalent to 58.7% of the budget necessary for universal coverage. This
+is the budget that simultaneously maximizes coverage and minimizes leakage.
+
+
+
+Figure 6 - Coverage rate and Leakage rate for different budget scenarios
+
+
+
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+On the contrary, a decision maker may prefer to fix a priori the percentage of coverage. This is shown in
+Table 3 where, for a given coverage rate, the corresponding percentage of the universal budget, as well
+as the leakage rate and the cut point are given. For example, in order to reach 80% of coverage, one needs
+to use 62.25% of the universal budget, which corresponds to 22% of leakage and to a probability threshold
+equal to 66%.
+
+
+
+
+                                                                                                       16
+Table 3 - Budget, leakage, probability threshold for different % of the universal coverage
+
+                                   Budget (as % of
+       % Coverage                 universal budget)          Leakage            Probability threshold
+           100%                         100.00                 1.00                      0.00
+            80%                          62.25                 0.22                      0.66
+            60%                          43.81                 0.07                      0.83
+            50%                           3.47                 0.00                      1.00
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+
+Summarizing alternative options, Table 4 shows the change in coverage, leakage, probability threshold
+and poverty rates in correspondence of different budgets (represented as different percentages of the
+universal budget). The first line shows that, in case of universal budget, every case receives assistance
+(coverage and leakage are equal to one and cut point is equal to zero) and the poverty rate corresponds
+to 32.3%. Moreover, 69.2% of the overall budget is used for coverage whereas leakage costs 30.8%. When,
+instead, only 80% of the universal budget is used, the poverty rate increases to 38.4%, and the budget is
+split between 81.2% for coverage and 18.8% for leakage. Reducing again the percentage of the universal
+budget to 50%, the poverty rate raises to 50.1%, coverage absorbs 93.1% of the budget and leakage 6.9%.
+Therefore, this approach provides a costing of leakage in addition to coverage and the corresponding
+outcomes in terms of poverty rates. A table like Table 4 is a useful tool for donors and decision makers
+engaged in taking difficult budget choices.
+
+Table 4 - Coverage, leakage, probability threshold and poverty rate for different % of the universal
+budget
+
+  % Universal Coverage Leakage Probability Poverty % Budget for % Budget for
+    budget      rate     rate   threshold rate (%)  coverage      leakage
+        100%       1.00    1.00       0.00   32.30       69.2%         30.8%
+         80%       0.94    0.49       0.42   38.39       81.2%         18.8%
+         60%       0.78    0.20       0.69   45.65       89.8%         10.2%
+         50%       0.67    0.11       0.78   50.10       93.1%          6.9%
+           0%      0.00    0.00       1.00   69.18
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+
+                                                                                                      17
+Adjusting the poverty line may be a further device to optimize coverage and leakage. One can repeat the
+whole exercise of estimating the poverty model for a set of different poverty lines, thus obtaining the
+corresponding predicted probabilities and the cut point that optimizes coverage and leakage, and see
+whether adjusting marginally the poverty line can result in significant gains in terms of coverage and/or
+leakage. This is illustrated in Figure 7. As an example, we use ten alternative poverty lines in
+correspondence of each decile of expenditure per capita and estimate the optimal probability threshold
+and the corresponding coverage and leakage rate for each poverty line. We then connect these ten points
+to show the resulting curves. A policy maker would normally seek the maximum distance between the
+coverage and leakage rate and, as one would expect, this distance grows as we increase the poverty line.
+
+However, the increase in this distance is not linear. For example, using the second decile’s mean value as
+poverty line (23.3 JD), would result in a coverage rate of 72 percent and a leakage rate of 26 percent. If
+the poverty line is increased to the third decile’s mean value (39.9 JD), this would not change the coverage
+rate and would decrease the leakage rate by only 1 percent. In other words, there is almost no gain in
+increasing the poverty line from 23.3 to 30.9 JD. Instead, shifting the poverty line from the sixth to the
+seventh decile’s mean value would increase the coverage rate by 2 percentage points while decreasing
+leakage by 4 percentage points, a significant gain. Poverty lines established for targeting are generally of
+an absolute nature and based on basic needs assessments. However, targeting or budget considerations
+may justify adjusting the poverty line to optimize the use of resources. For this purpose, Figure 7 can be a
+useful instrument for policy makers.
+
+Figure 7 also shows the Cumulative Distribution Function (CDF) built on deciles of expenditure per capita
+(a straight line by construction). The CDF is useful in that it shows the poverty rate on the (y-axis) for each
+possible poverty line (x-axis). For example, with a poverty line of approximately 42 JD, about 50 percent
+of the population would be under the poverty line. Therefore, when one adjusts the poverty line to
+optimize coverage and budget, it is also possible to monitor what the effect of this change would be on
+the poverty rate and, consequently, on the number of people under the poverty line. Again, this is a
+relatively simple device that supplies a set of critical information for policy makers aiming to fine-tune
+targeting decisions.
+
+
+
+
+                                                                                                            18
+Figure 7 - Optimal Coverage rate, Leakage rate and Cut point (%)
+
+
+
+ 1.0
+ 0.9
+ 0.8
+ 0.7
+ 0.6
+ 0.5
+ 0.4
+ 0.3
+ 0.2
+ 0.1
+ 0.0
+           14.6       23.3       30.9       38.5     46.8      57.5     73.3   100.0   155.0   1675.0
+                                                   Poverty line (in JD)
+
+               Optimal coverage                Optimal leakage         Optimal cutpoint        CDF
+
+Source: Authors’ estimations based on Jordan UNHCR data.
+
+
+
+
+    6. Conclusions
+Humanitarian organizations such as the WFP and the UNHCR rely entirely on donors’ contributions to
+administer programs for refugees and IDPs. These contributions are increasingly hard to come by and,
+when crises are multi-dimensional, contributions are typically below the needs generated by the sum of
+these dimensions. This is the case, for example, of the recent crises in Nigeria, South Sudan, Somalia and
+the Republic of Yemen. The conflicts that affected these countries generated the displacement of millions
+of people who became IDPs or refugees. The more recent droughts that affected all these countries are
+contributing to further misery and the combination of conflict and droughts led to food shortages that are
+resulting in famine.
+
+The needs of the affected populations, whether refugees and IDPs or host populations, grow
+disproportionally when these calamities occur simultaneously, donors find themselves stretched between
+
+
+                                                                                                        19
+different calls for funds and humanitarian organizations remain under-funded. In these cases, targeting is
+an obliged choice and optimal and efficient targeting can make the difference between life and death for
+some of the displaced populations. This justifies refining targeting techniques making the most of the
+available technology.
+
+In addition to being technically sound, targeting requires tools that make choice and implementation
+relatively simple for policy makers and field staff. One cannot expect all humanitarian staff working on the
+field to be knowledgeable in econometrics or statistics techniques. Hence the need for relatively simple
+visual devices that can be used for making normative targeting choices based on positive criteria without
+necessarily be cognizant of the econometrics and statistics that lie behind these devices.
+
+This paper has proposed the use of ROC curves and related indices to refine targeting when budgets are
+constrained and has developed relatively simple graphs that can be used by policy makers to make
+decisions on coverage, budgets and poverty lines when targeting is based on welfare criteria. We show
+existing trade-offs between optimal coverage and leakage rates, the optimal use of existing budgets and
+small adjustments that can result in large gains in terms of poverty reduction. The methods proposed can
+be applied to food voucher programs as illustrated in this paper or to any other cash program. We also
+showed that such methods can be applied using existing data collected by the UNHCR in the framework
+of existing programs such as the WFP food voucher program. In other words, these are tools that can be
+readily applied and do not necessarily require the collection of new data or the administration of special
+programs.
+
+It is also clear that the method proposed cannot be applied in all contexts. The Jordan example provided
+in this paper relies on a set of data (proGres and home visits data) that is atypical in humanitarian contexts.
+While proGres data are available in most countries where the UNHCR operates, the quality of these data
+is very variable (the Jordan data are known to be among the best quality data available). Also, home visits
+data that contain information on income or expenditure are the exception rather than the rule in
+humanitarian contexts. Therefore, at present, the replicability of the method proposed elsewhere is
+limited to selected areas and countries. However, all humanitarian operations with budget limitations that
+use cash or food vouchers as a form of social protection face the same targeting challenges described in
+this paper. In the absence of quality data on income or consumption, these operations have to rely on
+alternative and less accurate targeting criteria the outcomes of which (in terms of poverty, coverage and
+leakage) are non-measurable. This paper has implicitly shown that the collection of income or
+
+
+
+                                                                                                            20
+consumption data can lead to improvements in the measurement of outcomes and in the effectiveness
+of targeting.
+
+This paper has also ignored aspects of political economy, administration and other outcomes that may be
+equally important for beneficiaries. Governments have often a bias for geographical targeting covering
+areas relevant for selected constituencies rather than focusing on the poor. Administrative constraints
+such as complex logistics or lack of administrative budgets can make reaching the poor impossible in some
+cases making geographical or other forms of targeting more appealing. Outcomes different from poverty
+reduction such as nutrition levels may be as important or more important than poverty reduction in a
+humanitarian and emergency context. These are all elements to factor in when considering the method
+proposed in this paper.
+
+
+
+
+References
+
+Brück, T., d’Errico, M. and Pietrelli, R. (2017) The Effects of Violent Conflict on Household Resilience and
+Food Security: Evidence from the 2014 Gaza Conflict, World Development, forthcoming.
+
+Coll-Black, S., Gilligan, D. O., Hoddinott, J. F., Kumar, N., Taffesse, A. S., Wiseman, W. (2012) in: Food and
+agriculture in Ethiopia: Progress and policy challenges, chapter 10 International Food Policy Research
+Institute (IFPRI).
+
+Dreze, J and Sen, A. (1989) Hunger and Public Action, Oxford University Press, Oxford.
+
+Fatema, N. and Kibriva. S. (2017) Givers of great dinners know few enemies: The impact of household food
+security on micro-level communal conflict in Eastern Democratic Republic of Congo, World Development,
+forthcoming.
+
+Hand, D.J., 2009. Measuring classifier performance: a coherent alternative to the area under the ROC
+curve. Machine Learning 77, 103–123.
+
+Hand, D.J., 2010. Evaluating diagnostic tests: the area under the ROC curve and the balance of errors.
+Statistics in Medicine 29, 1502–1510.
+
+Hand, D.J., 2012. Assessing the performance of classification methods. International Statistical Review 80,
+400–414.
+
+
+
+                                                                                                           21
+Hand, D.J., Anagnostopoulos, C., 2013. When is the area under the receiver characteristic curve an
+appropriate measure of classifier performance? Pattern Recognition 80, 400–414.
+
+Krzanowski, W.J., Hand, D.J., 2009. ROC Curves for Continuous Data. CRC Press—Chapman and Hall, New
+York.
+
+Gigliarano, C., Figini, S. and Muliere P. (2014) Making classifier performance comparisons when ROC
+curves intersect, Computational Statistics and Data Analysis 77, 300-312.
+
+Lusted, L.B., 1971. Signal detectability and medical decision-making. Science 171, 1217–1219.
+
+Martin-Shields, C. and Stojetz, W. (2017) Framing the Relationship Between Food Security and Violent
+Conflict Data: A Clustering and Typology Approach, World Development, forthcoming.
+
+Maxwell, D. Young, H., Jaspars, S., Burns, J. and Frize, J. (2011) “Targeting and Distribution in Complex
+Emergencies: Participatory Management of Humanitarian Food Assistance.” Food Policy Vol. 36(4), pp.
+535–543.
+
+Morris, S., Levin, C., Armar-Klemesu, M., Maxwell, D. and Ruel, M.T. (1999). “Does Geographic Targeting
+of Nutrition Interventions Make Sense in Cities? Evidence from Abidjan and Accra.” World Development
+Vol. 27(11), pp. 2011–2019.
+
+Thomas, L.C. (2009). Consumer Credit Models: Pricing, Profit, and Portfolios. Oxford University Press.
+
+van Weezel, S. (2017) Food, Drought and Conflict: Evidence from a Case-Study on Somalia.
+
+Verme, P.; Gigliarano, C.; Wieser, C.; Hedlund, K.; Petzoldt, M.; Santacroce, M.. 2016. The Welfare of
+Syrian Refugees : Evidence from Jordan and Lebanon. Washington, DC: World Bank. World Bank.
+https://openknowledge.worldbank.org/handle/10986/23228 License: CC BY 3.0 IGO.”
+
+Wodon, Q. (1997) Targeting the Poor using ROC Curves. World Development, Vol. 25, Issue 12, pp. 2083-
+2092.
+
+
+
+
+                                                                                                         22
+Table A - Poverty Models
+
+
+
+
+Source: Authors’ estimations based on Jordan UNHCR data. Note: PA=Principal Applicant.
+
+                                                                                         23
+

@@ -1,0 +1,1450 @@
+                                                     WPS7974
+
+
+Policy Research Working Paper                       7974
+
+
+
+
+    Assessing the Accuracy of Electricity
+  Demand Forecasts in Developing Countries
+                              Jevgenijs Steinbuks
+
+
+
+
+Development Research Group
+Environment and Energy Team
+February 2017
+Policy Research Working Paper 7974
+
+
+  Abstract
+ This study assesses the accuracy of time-series econometric                        electricity demand grows at an exogenous rate or is propor-
+ methods in forecasting electricity demand in developing                            tional to real gross domestic product growth. The quality
+ countries. The analysis of historical time series for 106                          of the forecasts, however, diminishes for the countries and
+ developing countries over 1960–2012 demonstrates that                              regions, where rapid economic and structural transforma-
+ econometric forecasts are highly accurate for the majority                         tion or exposure to conflicts and environmental disasters
+ of these countries. These forecasts significantly outperform                       makes it difficult to establish stable historical demand trends.
+ predictions of simple heuristic models, which assume that
+
+
+
+
+  This paper is a product of the Environment and Energy Team, Development Research Group. It is part of a larger effort by
+  the World Bank to provide open access to its research and make a contribution to development policy discussions around
+  the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The author may be
+  contacted at jsteinbuks@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+  Assessing the Accuracy of Electricity Demand
+               Forecasts in Developing Countries∗
+                          Jevgenijs Steinbuks
+              Development Research Group, The World Bank
+
+
+
+
+            JEL: Q47
+            Keywords: electricity demand forecasting, time-series econometric mod-
+      els
+
+
+   ∗ Acknowledgments:     The author thanks Deb Chattopadhyay, Vivien Foster, Arthur
+Kochnakyan, Herman Stekler, Mike Toman, Joeri de Wit and the seminar participants at
+the Oxford Institute for Energy Studies and the World Bank for their helpful suggestions and
+comments. Responsibility for the content of the paper is the author’s alone and does not
+necessarily reﬂect the views of his institution or member countries of the World Bank.
+1     Introduction
+Forecasting the future demand of electricity is an important issue for the utility
+companies, policy-makers, and private investors in developing countries. Reli-
+able electricity demand forecasts are essential for long-term planning of future
+generation facilities and transmission augmentation.1 As excess power is not
+easily storable, underestimating electricity demand results in supply shortages
+and forced power outages, which have detrimental eﬀects on productivity and
+economic growth (Calderón and Servén 2004; Fisher-Vanden, et al., 2015; All-
+cott et al., 2016). However, overestimating demand may result in overinvestment
+in generation capacity and ultimately even higher electricity prices because, at
+least for traditional utilities, investment costs need to be recovered to maintain
+ﬁnancial viability.
+    Forecasting long-term electricity demand is a diﬃcult problem as it is subject
+to a range of uncertainties, which include, among other factors, underlying
+population growth, changing technology, economic conditions, and prevailing
+weather conditions (and the timing of those conditions). This problem can be
+particularly challenging in developing countries, where data are often elusive,
+political inﬂuences are often brought to bear, and historical electricity demand
+itself is more volatile owing to macroeconomic or political instability.
+    Despite the vast signiﬁcance of having accurate and reliable electricity de-
+mand forecasts for utilities, investors and policy makers, the electricity demand
+forecasting literature comprises of a handful of studies. Table 1 summarizes
+this limited research on electricity production and consumption econometric
+forecasts.2 Most of the studies focus on developed economies. Only ﬁve studies
+(Abdel-Aal and Al-Garni 1997, Sadownik and Barbosa 1999, Saab et al. 2001,
+Inglesi 2010, and El-Shazly 2013) forecast electricity demand for developing
+countries (Saudi Arabia, Brazil, Lebanon, South Africa, and the Arab Republic
+of Egypt, respectively). As regards data frequency, these studies are almost
+evenly split between short-term forecasts based on monthly data and long-term
+   1 Though not the focus of this study it is worth noting that reliable electricity demand
+
+forecasts are also inportant for short-term load allocation because they help the utilities to
+optimize the amount of generated power, i.e., maximize their revenue and minimize operational
+(including environmental) costs.
+   2 This summary focuses on medium- to long-term econometric projections and does not
+
+include high-frequency forecast studies of day-ahead electricity demand. It also omits non-
+econometric forecast studies based on soft computing techniques such as fuzzy logic, genetic
+algorithm, and neural networks, and bottom-up computational models such as MARKAL
+and LEAP. For a comprehensive review of these methods and their applications to energy
+forecasting, please refer to Suganthi and Samuel (2012).
+
+
+
+                                              2
+                         Table 1: Summary of Previous Studies of Electricity Consumption Forecasts
+
+    Author                          Country            Frequency   Sample      Forecast    Method
+    Abdel-Aal and Al-Garni (1997)   Saudi Arabia       Monthly     1987-1993   12 months   ARIMA
+    Bianco et al. (2009)            Italy              Yearly      1970-2007   5 years     ARDL
+    Baltagi et al. (2002)           United States      Yearly      1970-1990   1-5 years   ARDL
+    Harris and Liu (1993)           United States      Monthly     1969-1990   3 years     ARIMA
+    Dilaver and Hunt (2011)         Turkey             Yearly      1960-2008   12 years    UCM
+    El-Shazly (2013)                Egypt, Arab Rep.   Yearly      1982-2010   2 years     ARDL / ECM
+    Inglesi (2010)                  South Africa       Yearly      1980-2005   15 years    ECM
+    Joutz et al. (1995)             United States      Monthly     1977-1991   10 months   VAR / VECM
+
+
+
+
+3
+    Mohamed and Bodger (2005)       New Zealand        Yearly      1965-1999   15 years    Linear Regression
+    Narayan and Smyth (2005)        Australia          Yearly      1966-1999   10 years    ARDL / ECM
+    Pao (2009)                      Taiwan, China      Yearly      1980-2007   1-6 years   State Space Models
+    Saab et al. (2001)              Lebanon            Monthly     1970-1999   10 years    ARIMA
+    Sadownik and Barbosa (1999)     Brazil             Monthly     1990-1994   1 month     UCM
+    Tserkezos (1992)                Greece             Monthly     1975-1989   24 months   ARIMA
+    Zachariadis (2010)              Cyprus             Yearly      1960-2007   43 years    ARDL
+
+    Notes. ARIMA: Autoregressive integrated moving average model. ARDL: Autoregressive distributed
+    lag model. VAR: Vector autoregressive model. (V)ECM: (Vector) error correction model.
+    UCM: Unobserved components model.
+forecasts based on yearly data. The largest part of these studies employs uni-
+variate time series methods with exogenous regressors. Few other studies use
+multivariate time series methods or state space econometric models. With the
+exception of Baltagi et al. (2002), none of these studies attempt to compare the
+forecast accuracy of diﬀerent forecasting models.3 Given signiﬁcant variation in
+country coverage, time frame, forecast horizons, and econometric methods, the
+results of these studies are diﬃcult, if not impossible, to reconcile.
+    The purpose of this study is to assess the accuracy of diﬀerent econometric
+methods in forecasting electricity demand in developing countries. Based on the
+time series econometrics literature we ﬁrst develop an econometric framework for
+forecasting electricity demand. We then obtain a number of electricity demand
+forecasts based on historical time series of 106 developing countries over the
+period 1960-2012. Finally, we evaluate the accuracy of the electricity demand
+forecasts resulting from diﬀerent econometric methods and model speciﬁcations.
+    Our results demonstrate that time-series econometric forecasts yield highly
+accurate predictions for the evolution of electricity demand in the majority of
+developing countries. The forecasts based on the best performing method do
+signiﬁcantly improve over the predictions of two heuristical models, commonly
+used by development practitioners, which assume that electricity demand grows
+at an exogenous rate or is proportional to real GDP growth. The quality of the
+forecasts, however, diminishes for the countries and regions, where rapid eco-
+nomic and structural transformation or exposure to conﬂicts and environmental
+disasters makes it diﬃcult to establish stable historical demand trends.
+
+
+2     Forecasting Methods and Accuracy Tests
+This section brieﬂy documents the econometric framework for forecasting elec-
+tricity demand and evaluating its forecast accuracy. It ﬁrst discusses implica-
+tions of the stationarity property on forecastability of electricity demand time
+series. It then summarizes econometric methods employed for forecasting elec-
+tricity demand. Finally, it describes measures of forecast errors for assessing
+forecast accuracy and comparing the quality of diﬀerent forecasting methods.
+   3 Baltagi et al. (2002) only focus on a small set of estimators within Autoregressive dis-
+
+tributed lag (ARDL) model.
+
+
+
+
+                                             4
+2.1     Testing for Data Stationarity
+As electricity generation and consumption data series are typically nonstation-
+ary (i.e., their mean and/or variance are varying with time), an important aspect
+of forecasting model selection concerns the appropriate treatment of nonstation-
+ary data. The diﬀerence-stationary processes contain stochastic trends that are
+integrated of order k, so that diﬀerencing k times yields a stationary series.
+The diﬀerence stationary processes have poor forecastability as forecast error
+variances grow linearly in the forecast horizon for these processes (Clements
+and Hendry 2001). Establishing whether the data generating process is the
+diﬀerence stationary one is therefore of particular concern.
+    To test whether the data are the diﬀerence stationary we perform the modi-
+ﬁed Dickey–Fuller test (also known as the DF-GLS test) proposed by Elliott et
+al (1996).4 The test involves ﬁtting a regression of the form
+
+                                                  k
+                                                  X
+                           y t = ↵ + yt     1+          k   yt   k   + "t                  (1)
+                                                  i=1
+
+    where yt are the electricity production series, "t is the error term, ↵,
+and    are the parameters to be estimated, k is the lag order of time t, and
+is the diﬀerence operator. The DF-GLS test is performed on detrended data
+by Generalized Least Squares (GLS) and involves testing the null hypothesis
+H0 :    = 0. If the test cannot reject the null hypothesis, this implies that yt is
+a random walk, possibly with drift and the data are diﬀerence stationary. Our
+choice of lag order in regression (1) is based on the modiﬁed Akaike information
+criterion developed by Ng and Perron (2000).
+
+
+2.2     Forecasting Methods
+Table 2 summarizes econometric methods employed for forecasting electricity
+demand. A brief formal representation of these methods is documented in Ap-
+pendix A.1. For advanced textbook treatment of these methods, please refer to
+Harvey (1989), Hamilton (1994), Lütkepohl (2005), and Enders (2010).
+    4 For robustness purposes we have also performed other tests for data stationarity, such as
+
+Augmented Dickey–Fuller test and Phillips and Perron (1988) unit root test. The results were
+little changed.
+
+
+
+
+                                              5
+       Table 2: Methods for Assessing Electricity Production Forecasts
+ Method             Description
+ VAR3/VECM3         Trivariate vector autoregressive model /
+                    Vector error correction model
+ VAR2/VECM2         Bivariate vector autoregressive model /
+                    Vector error correction model
+ ARIMA              Autoregressive integrated moving average model
+ GARCH              Generalized autoregressive conditional
+                    heteroskedasticity model
+ Holt-Winters       Holt–Winter’s linear smoothing model
+ UCM-RWD            Unobserved components model:
+                    Random walk with a drift
+ UCM-LLTM           Unobserved components model:
+                    Local level with deterministic trend
+ UCM-RWSC           Unobserved components model:
+                    Random walk with a stochastic cycle
+
+
+   These methods can be broadly grouped into three categories. Vector autore-
+gressive model (VAR) and Vector error correction model (VECM) are the mul-
+tivariate time series forecasting methods that are most appropriate when elec-
+tricity demand is closely related to other macroeconomic fundamentals. Over
+the long term, electricity demand is inﬂuenced by economic and demographic
+growth, changes in energy intensity, and shifting input prices. Among these
+drivers, gross domestic product (GDP) is often the strongest correlate of elec-
+tricity demand (Steinbuks et al., 2017). And the data for input prices and
+structural fundamentals aﬀecting energy intensity are scarce for most of the de-
+veloping countries. In light of the above, we employ trivariate methods, which
+assume that a country’s electricity demand is co-determined by GDP and popu-
+lation growth and bivariate methods, which assume that the country’s electricity
+demand is co-determined by its GDP growth only.
+   Autoregressive integrated moving average (ARIMA) and generalized autore-
+gressive conditional heteroskedasticity (GARCH) models are univariate time se-
+ries forecasting methods that work best when other drivers of electricity demand
+are exogenous and have a small eﬀect on electricity demand. These models as-
+sume that the best predictors of electricity demand are its past realizations.
+Additionally, the GARCH model is particularly helpful for forecasting electric-
+ity demand in countries, where electricity supply is highly volatile.
+   Finally, Holt-Winters and unobserved components methods are the most
+suitable for forecasting electricity demand that evolves around a linear trend,
+
+
+                                        6
+which can be either deterministic or stochastic. Additionally, the random walk
+with a stochastic cycle model (RWSC) may further improve forecasting accuracy
+in countries, where electricity demand exhibits cyclical behavior.
+   Autoregressive time series models (both multivariate and univariate) and the
+Holt-Winters method are applied to forecast both stationary and non-stationary
+electricity demand time series. Unobserved components models are only applied
+to forecast non-stationary electricity demand series. For all autoregressive time
+series models, we also estimate diﬀerent speciﬁcations, assuming diﬀerent lag
+structures (for details, please refer to Appendix). Altogether we estimate 33
+model speciﬁcations for stationary electricity demand series and 36 model spec-
+iﬁcations for non-stationary series.
+
+
+2.3    Measures of Forecast Accuracy of Individual Methods
+We employ two popular measures of forecast errors for assessing forecast accu-
+racy of an individual method: symmetric mean absolute percent error (sMAPE)
+and root mean squared error (RMSE). sMAPE is deﬁned as the average absolute
+percent error of electricity consumption forecasts, y F , minus actuals divided by
+the average of absolute values of forecasts and actuals across all forecasts made
+for a given horizon:
+
+                                    T
+                                            "                      #
+                                 1X                 F
+                                                   yt   yt
+                       sM AP E =                  F
+                                                                              (2)
+                                 T t=1           yt + |yt | /2
+
+   By using the symmetric MAPE, we avoid the problem of large errors when
+the actual values are close to zero, and the problem of the large diﬀerence
+between the absolute percentage errors when actuals are greater than forecasts
+and vice versa (Makridakis and Hibon, 2000).
+   The RMSE is a quadratic scoring rule which measures the average mag-
+nitude of the error. RMSE is deﬁned as the diﬀerence between forecast and
+corresponding observed values that are each squared and then averaged over
+the sample:
+                                       s
+                                           PT         F        2
+                                               t=1   yt   yt
+                         RM SE =                                              (3)
+                                                     T
+   As forecast errors are squared before they are averaged, the RMSE gives a
+relatively high weight to larger errors. The RMSE is, therefore, most useful
+when large errors are particularly undesirable.
+
+
+                                           7
+2.4          Measures of Forecast Accuracy of Competing Meth-
+             ods
+An important question that occurs in assessing the accuracy of electricity de-
+mand forecasts is how to formally compare the quality of diﬀerent forecasting
+methods. Makridakis and Hibon (2000, p. 457) argue that “the absolute ac-
+curacy of the various methods is not as important as how well these methods
+perform relative to some benchmark.” We choose two benchmarks, the random
+walk model (Näıve), and the ﬁxed GDP multiplier model (Näıve2). The for-
+mer is a standard benchmark in the forecasting literature, which sets predicted
+electricity demand to the last available data value of stationary series. The
+latter benchmark assumes that electricity demand grows at the exogenous rate,
+which is the same rate as country’s GDP growth.5 The choice of this bench-
+mark is motivated by common practices by development professionals. Given
+the paucity of data and the methodological challenges, they frequently derive
+electricity demand forecasts from GDP-based demand growth forecasts as prox-
+ies for the growth in demand for electricity (Bhattacharyya and Timilsina 2010,
+Steinbuks et al. 2017).
+      To assess the accuracy of electricity demand forecasts, we calculate the me-
+dian relative absolute error (MdRAE), which is the absolute error for the pro-
+posed model relative to the absolute error for a random walk model. It is deﬁned
+as
+                                                 8                     9
+                                                        F,i
+                                                 <     yt       yt     =
+                              M dRAE = p50                                                (4)
+                                                 : y F,N a¨
+                                                          ıve
+                                                                     yt ;
+                                                    t
+
+      It ranges from 0 (a perfect forecast) to 1.0 (equal to the random walk), to
+greater than 1 (worse than the random walk). The RAE is similar to Theil’s
+U2, except that it is a linear rather than a quadratic measure. It is designed
+to be easy to interpret, and it lends itself easily to summarizing across horizons
+and series as it controls for scale and the diﬃculty of forecasting. The median
+RAE is recommended for comparing the accuracy of alternative models as it
+also controls for outliers (for information on the performance of this measure,
+see Armstrong and Collopy, 1992). We also compute the median percentage
+better measure, which reports the median of the percentage diﬀerence between
+sMAPE forecasting error of proposed model and one of the two benchmark
+     5 For   a more detailed description of these models, please refer to Appendix A.2.
+
+
+
+                                                  8
+models. Finally, we perform the Diebold and Mariano (1995) test to assess
+whether diﬀerences between competing forecasts are statistically signiﬁcant or
+simply due to sampling variability.6
+
+
+3      Electricity Demand Measurement, Data and
+       the Forecast Horizon
+The ultimate goal of this study is to forecast electricity demand, i.e., the to-
+tal ﬁnal consumption.7 However, in many developing countries, particularly in
+South Asia and Sub-saharan Africa regions, these data are either not available or
+available for a relatively short time frame due to diﬃculties with an accurate ac-
+counting of electricity at the end use level.8 In light of these limitations, we have
+to rely on the more accurate electricity production (output) data for forecasting
+purposes. As electricity is a nonstorable and poorly tradable commodity, the
+output is a reasonable proxy for the total ﬁnal consumption. However, we have
+to acknowledge that using electricity output data may lead to biased forecasts
+in a handful of developing countries with high exposure to electricity trade.
+     As regards data sources, the electricity generation (output) data come from
+the OECD/IEA Extended World Energy Balances database (IEA, 2016). The
+data on population and real GDP come from Penn World Tables, version 8
+(Feenstra et al., 2013). The resulting dataset covers 106 developing countries
+over the period between 1960 and 2012.
+     Finally, we have to specify the within sample forecast horizons for assessing
+the accuracy of the forecasting methods. These are set to ﬁve and ten years,
+conditional on at least ten observations in the forecast validation sample. Addi-
+tionally, we report out of sample forecasts over the period 2013-2022. For each
+country in the dataset, the out of sample forecasts are chosen based on the fore-
+    6 Fora more detailed description of the Diebold and Mariano (1995) test please refer to
+appendix section A.3.
+    7 Bhattacharyya and Timilsina (2010) point out that the reliance on consumption data for
+
+the demand forecasting implies that only the satisﬁed demand is captured the suppressed
+demand is not taken into consideration. This problem can be potentially important in the
+presence of electricity market distortions and, correspondingly, unrealized demand (e.g., load
+shedding). As estimating unrealized demand typically requires high-quality micro-level panel
+data of enterprises and households, which are typically not available, addressing this problem
+is beyond the scope of this paper.
+    8 These diﬃculties include the inaccurate recording of electricity consumption due to the
+
+poor technical capacity of electric utilities (Jamasb 2006), the absence of reliable electricity
+meters (Victor and Heller 2007), and large unaccounted losses from electricity theft (Smith
+2004, Joseph 2010).
+
+
+
+                                               9
+casting method corresponding to lowest within sample 5 year forecast horizon
+sMAPE. Appendix Table A3.1 shows the historical and forecasted electricity
+demand growth rates for each country. Country-speciﬁc forecast plots are also
+shown in the appendix.
+
+
+4     Evaluating Accuracy of Diﬀerent Methods
+This section describes the evaluation of diﬀerent forecasting methods’ accuracy.
+In subsection 4.1 we compare diﬀerent forecasting methods based on the chosen
+measures of predictive accuracy (for a description of these measures see subsec-
+tion 2.3). In subsection 4.2 we examine the eﬀectiveness of the best performing
+method across diﬀerent categories of developing countries.
+
+
+4.1    Comparisons across error measures
+Tables 3 and 4 report frequencies of best-performing methods according to
+sMAPE and RFSE criteria, respectively.9 For both measures of forecasts accu-
+racy, the GARCH model has the highest incidence of delivering best predictions
+over both 5- and 10-year forecast horizons, followed by the bivariate VAR / VEC
+model over the 5-year forecast horizon and the trivariate VAR / VEC model over
+the 10-year forecast horizon. None of the chosen forecasting methods appears
+clearly superior to other methods. However, VAR/VEC and ARIMA/GARCH
+models cumulatively account for a dominant share of best performing models.
+Other methods (Holt-Winters and Unobserved Components models) tend to
+perform better in a relatively small number of cases.
+   9 For VAR/VEC and ARIMA/GARCH models, the best performing method is a speciﬁca-
+
+tion with the number of lagged terms that minimizes sMAPE and RFSE forecast errors.
+
+
+
+
+                                        10
+Table 3: Frequency Tabulation of Best Performing Methods: sMAPE criterion
+
+                       5 year forecast horizon   10 year   forecast horizon
+ Model
+                       Count Frequency           Count      Frequency
+ VAR3 / VEC3           15       14.15%           30         28.57%
+ VAR2 / VEC2           21       19.81%           20         19.03%
+ GARCH                 39       36.79%           34         32.35%
+ ARIMA                 13       12.25%           9          8.55%
+ HOLT-WINTERS          6        5.66%            8          7.62%
+ UCM-RWD               3        2.83%            2          1.90%
+ UCM-RWC               9        8.49%            2          1.90%
+ Total                 106      100%             105        100%
+
+
+
+
+Table 4: Frequency Tabulation of Best Performing Methods: RMSE criterion
+
+                       5 year forecast horizon   10 year   forecast horizon
+ Model
+                       Count Frequency           Count      Frequency
+ VAR3 / VEC3           15       14.15%           33         31.41%
+ VAR2 / VEC2           23       21.69%           19         18.09%
+ GARCH                 29       27.35%           33         31.41%
+ ARIMA                 17       16.02%           7          6.65%
+ HOLT-WINTERS          7        6.60%            10         9.52%
+ UCM-RWD               5        4.72%            2          1.90%
+ UCM-LLTM              1        0.94%            0          0.00%
+ UCM-RWC               9        8.49%            1          0.95%
+ Total                 106      100%             105        100%
+
+
+
+   Tables 5 and 6 show how well the forecasting methods perform compared to
+benchmark models, Näıve and Näıve2. For each forecast horizon, these tables
+report the median percentage better measure (see subsection 2.4) as well as
+the percentage of times the diﬀerence between the forecast errors is statistically
+signiﬁcant based on the Diebold and Mariano (1995) forecast accuracy test.
+   Table 5 compares the accuracy of forecasting methods relative to the Näıve
+model, which assumes that electricity demand is a random walk. We see that
+the best performing model based on sMAPE criterion yields considerable im-
+provement over Näıve model. The median sMAPE forecast error of the Näıve
+model is 77 percent higher than forecast error of the best performing model
+over the 5-year forecast horizon and 74 percent higher over the 10 year forecast
+
+
+
+                                       11
+    Table 5: Comparison of various methods with Näıve as the benchmark
+
+                       5 year forecast horizon      10 year forecast horizon
+ Model
+                       Median      % signiﬁcant     Median      % signiﬁcant
+                       % Better (p = 0.05)          % Better (p = 0.05)
+ Lowest sMAPE          77%         85.0%            74%         67.5%
+ VAR3 / VEC3           19%         83.3%            16%         68.3%
+ VAR2 / VEC2           7%          96.5%            11%         72.5%
+ GARCH                 37%         84.6%            10%         69.3%
+ ARIMA                 13%         83.9%            -8%         70.1%
+ HOLT-WINTERS          -2%         86.0%            -11%        78.1%
+ UCM-RWD               -9%         86.8%            -22%        82.5%
+ UCM-LLTM              -10%        88.4%            -23%        82.5%
+ UCM-RWC               -40%        94.8%            -58%        87.9%
+
+
+
+horizon. And the diﬀerence between forecast errors is statistically signiﬁcant
+(assuming 5 percent level) for 85 percent of countries over the 5 year forecast
+horizon and for 67.5 percent of countries over the 10-year forecast horizon. As
+regards speciﬁc forecasting methods, VAR/VEC and GARCH methods yield
+more accurate forecasts than the Näıve model over both 5- and 10-year forecast
+horizons, with median accuracy improvement ranging between 7 and 37 percent.
+To the contrary, the Holt-Winters method and Unobserved Components Models
+yield less accurate forecasts over both 5- and 10-year forecast horizons, with me-
+dian accuracy decline ranging between 2 and 58 percent. Finally, the ARIMA
+model produces more accurate forecasts than the Näıve model over the 5-year
+forecast horizon, with median accuracy improvement of 13 percent. However,
+the ARIMA model yields less accurate forecasts than the Näıve model over 10-
+year forecast horizon, with median accuracy decline of 8 percent. Regardless of
+the direction of forecast error diﬀerences, they are mostly statistically signiﬁcant
+across all methods, ranging between 83.3 to 96.5 percent of countries over the
+5-year forecast horizon, and between 68.3 and 87.9 percent of countries over the
+10-year forecast horizon.
+   Table 6 compares the accuracy of forecasting methods relative to Näıve2
+model, which assumes that electricity demand grows at the same rate as GDP.
+The results are qualitatively similar to those reported in Table 5, and the quan-
+titative improvements over forecasts of Näıve2 model are even more pronounced.
+The median sMAPE forecast error of the Näıve2 model is 184% percent higher
+than forecast error of the best performing model over the 5-year forecast hori-
+
+
+                                        12
+   Table 6: Comparison of various methods with Näıve2 as the benchmark
+
+                      5 year forecast horizon     10 year forecast horizon
+ Model
+                      Median      % signiﬁcant    Median      % signiﬁcant
+                      % Better (p = 0.05)         % Better (p = 0.05)
+ Lowest sMAPE         184%        88.0%           124%        73.0%
+ VAR3 / VEC3          68%         91.2%           52%         73.5%
+ VAR2 / VEC2          57%         95.2%           43%         73.7%
+ GARCH                121%        85.1%           54%         74.5%
+ ARIMA                69%         91.8%           23%         76.3%
+ HOLT-WINTERS         45%         90.2%           17%         81.7%
+ UCM-RWD              35%         90.5%           1%          79.5%
+ UCM-LLTM             31%         90.8%           0%          77.1%
+ UCM-RWC              -16%        94.2%           -40%        91.2%
+
+
+
+zon and 124 percent higher over the 10-year forecast horizon. The performance
+of speciﬁc forecasting methods over the Näıve2 forecasting model is also im-
+proved. Speciﬁcally, VAR/VEC, GARCH, ARIMA, and Holt-Winters methods
+all yield more accurate forecasts than the Näıve2 model over both 5- and 10-
+year forecast horizons, with median accuracy improvement ranging between 17
+and 121 percent. As regards Unobserved Components models, both RWD and
+LLTM methods deliver more accurate forecasts over the 5-year forecast hori-
+zon, whereas their forecast accuracy over the 5 year forecast horizon is of the
+same magnitude as that of the Näıve2 model. Finally, the RWC model yields
+less accurate forecasts than the Näıve2 model over both 5- and 10-year forecast
+horizons, with median accuracy decline between 16 and 40 percent. Similar to
+results reported in Table 5, the diﬀerences in predicted forecasts between fore-
+casting methods and the Näıve2 model are mostly statistically signiﬁcant across
+all methods, ranging between 85.1 to 95.2 percent of countries over the 5-year
+forecast horizon, and between 73 and 91.2 percent of countries over the 10-year
+forecast horizon.
+
+
+4.2    Comparisons across developing country groups
+Tables 7 - 10 compare eﬀectiveness of the best performing method (based on
+sMAPE criterion) across developing countries based on their regional, income,
+generation capacity and energy intensity characteristics. Table 7 reports the
+average sMAPE and MdRAE measures of forecast accuracy across regions over
+
+
+                                      13
+            Table 7: Comparison of Forecast Errors across Regions
+
+           5 year forecast horizon    10 year forecast horizon
+ Region
+           sMAPE MdRAE                sMAPE MdRAE
+ AFR       0.09       0.44            0.11       0.63
+ EAP       0.05       0.54            0.05       0.53
+ ECA       0.06       0.45            0.07       0.49
+ LAC       0.05       0.52            0.08       0.62
+ MENA      0.05       0.42            0.08       0.52
+ SAR       0.02       0.25            0.05       0.41
+
+
+
+the 5- and 10-year forecast horizons. All in all, the best performing method
+is highly accurate with average sMAPE varying between 2 and 9 percent over
+the 5-year forecasting horizon and between 5 and 11 percent over the 10-year
+forecasting horizon, respectively. Consistent with the results from the previous
+section, the best performing method is also more accurate than the Näıve model,
+with average MdRAE varying between 0.25 and 0.54 over the 5-year forecast-
+ing horizon, and between 0.41 and 0.63 over the 10-year forecasting horizon,
+respectively.
+   It follows from Table 7 that the forecast accuracy is the highest for the coun-
+tries of the South Asia region over both 5- and 10-year forecasting horizons and
+across both types of error accuracy measures. The forecast accuracy is the low-
+est for the Sub-Saharan Africa region based on the sMAPE criterion over both
+5- and 10- year forecasting horizons, with other regions having broadly com-
+parable forecast errors. The forecast accuracy based on the MdRAE criterion
+is the lowest for the East Asia and Paciﬁc and the Latin America regions over
+the 5-year forecasting horizon, and for the Sub-Saharan Africa and the Latin
+America regions over the 10-year forecasting horizon.
+   To frther elucidate the observed diﬀerences in the forecast accuracy across
+regions, this study also reports the average sMAPE and MdRAE measures of
+forecast accuracy for individual countries, grouped across regions over the 5- and
+10-year forecast horizons (see Appendix Table A3.2). For most countries, both
+sMAPE and MdRAE errors are small, which indicates that the best performing
+method is both highly accurate and yields considerable improvements over the
+Näıve model. However, the forecasting accuracy is greatly diminished for coun-
+tries that have recently undertaken major investments (Ethiopia, Cameroon,
+Myanmar) or disinvestments (Lithuania) in electricity generation assets; coun-
+
+
+                                       14
+tries that have volatile electricity demand and / or rely heavily on electricity
+imports (Albania, Benin, Botswana); or countries aﬀected by major conﬂicts
+(Iraq, Libya, Syrian Arab Republic) or environmental disasters (Haiti).
+   Table 8 shows the average sMAPE and MdRAE measures of forecast accu-
+racy across country income groups over the 5- and 10-year forecast horizons.
+It follows from Table 8 that electricity demand forecasts are less accurate for
+the lower income countries. For low income countries, the average sMAPE is
+9 and 12 percent over the 5- and 10-year forecast horizons, respectively. These
+errors are twice as high compared to high-income countries. The accuracy of
+forecasting methods relative to the Näıve model is also considerably diminished
+for lower income countries. For low-income countries, the value of MdRAE is
+0.79 over the 10-year forecast horizon, which indicates that the best performing
+method is just 21 percent more accurate than the Näıve model.
+
+
+        Table 8: Comparison of Forecast Errors across Income Groups
+
+                  5 year forecast horizon    10 year forecast horizon
+ Income
+                  sMAPE MdRAE                sMAPE MdRAE
+ Low              0.09       0.49            0.12       0.79
+ Low-Middle       0.05       0.39            0.07       0.44
+ Upper-Middle     0.06       0.50            0.08       0.59
+ High             0.05       0.46            0.06       0.49
+
+
+
+   Table 9 shows the average sMAPE and MdRAE measures of forecast accu-
+racy across installed capacity categories over the 5 and 10 year forecast horizons.
+Forecast accuracy is the highest for the countries with large installed capacity
+and diminishes signiﬁcantly as the size of the installed capacity falls. For coun-
+tries with the largest installed capacity (over 100GW), the average sMAPE is
+3 and 4 percent over the 5 and 10 year forecast horizons, respectively. These
+errors are twice as low as compared to countries with medium installed capac-
+ity size (1 to 10 GW). For countries with the smallest installed capacity (less
+than 1GW), electricity generation is particularly diﬃcult to forecast, with the
+average sMAPE of 9 and 10 percent over the 5- and 10-year forecast horizons,
+respectively. The countries with large installed capacity also have higher accu-
+racy of forecasting methods relative to the Näıve model. The value of MdRAE
+for countries with the largest installed capacity (over 100GW) is 0.34 and 0.23
+over the 10-year forecast horizon, which is 1.5-2 times smaller as compared to
+
+
+                                        15
+countries with the smallest installed capacity size (less than 1GW).
+
+
+ Table 9: Comparison of Forecast Errors across Installed Capacity Categories
+
+                        5 year forecast horizon     10 year forecast horizon
+ Installed Capacity
+                        sMAPE MdRAE                 sMAPE MdRAE
+ less than 1GW          0.09       0.50             0.10       0.57
+ 1GW-10GW               0.06       0.47             0.08       0.59
+ 10GW-100GW             0.02       0.41             0.04       0.47
+ more than 100GW        0.03       0.34             0.04       0.23
+
+
+
+   Table 10 shows the average sMAPE and MdRAE measures of forecast accu-
+racy across energy intensity categories over the 5 and 10 year forecast horizons.
+Forecast accuracy is the highest for the most energy intensive countries (more
+than 12$/kgoe) with average sMAPE of 2 and 4 percent over the 5 and 10 year
+forecast horizons, respectively. Compared to other countries these errors are 2
+to 3 times smaller over the 5 year forecast horizon and 1.5 to 2 times smaller
+over the 10 year forecast horizon. However, the more energy intensive countries
+also have the lower accuracy of forecasting methods relative to the Näıve model,
+at least for the shorter term forecast horizon. The value of MdRAE for the most
+energy intensive countries is 0.75 over the 5 year forecast horizon, which is twice
+as high as compared to the most energy eﬃcient countries. To the contrary, the
+most energy eﬃcient countries have the lowest forecast accuracy relative to the
+Näıve model over the 10 year forecast horizon, with MdRAE of 0.68.
+
+
+ Table 10: Comparison of Forecast Errors across Energy Intensity Categories
+
+                      5 year forecast horizon     10 year forecast horizon
+ Energy Intensity
+                      sMAPE MdRAE                 sMAPE MdRAE
+ <3$/kgoe             0.04       0.34             0.09       0.68
+ 3$/kg-6$/kgoe        0.06       0.41             0.08       0.47
+ 6$/kg-9$/kgoe        0.07       0.43             0.09       0.56
+ 9$/kg-12$/kgoe       0.06       0.50             0.06       0.46
+ >12$/kgoe            0.02       0.75             0.04       0.52
+
+
+
+
+                                        16
+5    Conclusions
+Accurate projections of electricity demand are essential for planning power sys-
+tems and appraising investment projects in developing countries. Nonetheless,
+demand forecasting issues are not rigorously studied and are not always given
+adequate attention among development practitioners. This study demonstrates
+that time-series econometric methods yield highly accurate forecast predictions
+for the majority of developing countries. Econometric forecasts signiﬁcantly out-
+perform simple heuristical rules used by practitioners, who frequently assume
+that electricity demand grows at some exogenous rate or is proportional to
+real GDP growth. These improvements notwithstanding, relying on time-series
+econometric methods alone may produce inaccurate forecasts in some developing
+countries. We show that econometric forecasts of electricity demand are chal-
+lenging for developing countries that are in the process of rapid economic and
+structural transformation or are prone to conﬂicts and environmental disasters.
+These include, among other, the countries in Sub-Saharan Africa region, the
+low-income countries, and the countries with small electricity generation sys-
+tems. For those countries, in particular, a more rigorous forecasting approach,
+using a combination of micro-econometric and computational modeling methods
+would be preferred.
+
+
+References
+ [1] Abdel-Aal, R. E., and Al-Garni, A. Z. (1997). Forecasting Monthly Electric
+    Energy Consumption in Eastern Saudi Arabia Using Univariate Time-series
+    Analysis. Energy, 22(11), 1059-1069.
+
+ [2] Allcott, H., Collard-Wexler, A., and O’Connell, S. D. (2016). How Do Elec-
+    tricity Shortages Aﬀect Productivity? Evidence from India. American Eco-
+    nomic Review, 106(3), 587-624.
+
+ [3] Armstrong, J. S., and Collopy, F. (1992). Error Measures for Generalizing
+    about Forecasting Methods: Empirical Comparisons. International Journal
+    of Forecasting, 8(1), 69-80.
+
+ [4] Baltagi, B. H., Bresson, G., and Pirotte, A. (2002). Comparison of Forecast
+    Performance for Homogeneous, Heterogeneous and Shrinkage Estimators:
+    Some Empirical Evidence from US Electricity and Natural Gas Consump-
+    tion. Economics Letters, 76(3), 375-382.
+
+
+                                       17
+ [5] Bhattacharyya, S. C., and Timilsina, G. R. (2010). Modelling Energy De-
+    mand of Developing Countries: Are the Speciﬁc Features Adequately Cap-
+    tured? Energy Policy, 38(4), 1979-1990.
+
+ [6] Bianco, V., Manca, O., and Nardini, S. (2009). Electricity Consumption
+    Forecasting in Italy using Linear Regression Models. Energy, 34(9), 1413-
+    1421.
+
+ [7] Calderón, C., and Servén, L. (2004). The Eﬀects of Infrastructure Devel-
+    opment on Growth and Income Distribution. World Bank Policy Research
+    Paper 3400.
+
+ [8] Clements, M. P., and Hendry, D. F. (2001). Forecasting Non-Stationary
+    Economic Time Series. MIT Press.
+
+ [9] Diebold, F.X., and Mariano, R.S. (1995). Comparing Predictive Accuracy.
+    Journal of Business and Economic Statistics 13, 253-63.
+
+[10] Dilaver, Z., & Hunt, L. C. (2011). Modelling and Forecasting Turkish Res-
+    idential Electricity Demand. Energy Policy, 39(6), 3117-3127.
+
+[11] Elliott, G. R., Rothenberg, T. J. and Stock, J. H. (1996). Eﬃcient Tests
+    for an Autoregressive Unit Root. Econometrica 64, 813–836.
+
+[12] El-Shazly, A. (2013). Electricity Demand Analysis and Forecasting: A
+    Panel Cointegration Approach. Energy Economics, 40, 251-258.
+
+[13] Enders, W. (2008). Applied Econometric Time Series. John Wiley & Sons.
+
+[14] Feenstra, R.C., Inklaar, R. and Timmer, M. (2013). The Next Generation
+    of the Penn World Table. NBER Working Paper 19255
+
+[15] Fisher-Vanden, K., Mansur, E. and Wang, Q. (2015). “Electricity Shortages
+    and Firm Productivity: Evidence from China’s Industrial Firms.” Journal
+    of Development Economics, 114, 172-188.
+
+[16] Gardner, E. S., Jr. (1985). Exponential Smoothing: The State of the Art.
+    Journal of Forecasting 4, 1–28.
+
+[17] Hamilton, J.D. (1994). Time Series Analysis. Princeton University Press.
+
+[18] Harris, J. L., and Liu, L. M. (1993). Dynamic Structural Analysis and
+    Forecasting of Residential Electricity Consumption. International Journal
+    of Forecasting, 9(4), 437-455.
+
+
+                                      18
+[19] Harvey, A.C. (1989). Forecasting, Structural Time Series Models and the
+    Kalman Filter. Cambridge University Press.
+
+[20] IEA (2016). Extended World Energy Balances. IEA World Energy Statis-
+    tics and Balances (database). DOI: http://dx.doi.org/10.1787/data-00513-
+    en (Accessed on 23 June 2016).
+
+[21] Inglesi, R. (2010). Aggregate Electricity Demand in South Africa: Condi-
+    tional Forecasts to 2030. Applied Energy, 87(1), 197-204.
+
+[22] Jamasb, T. (2006). Between the State and Market: Electricity Sector Re-
+    form in Developing Countries. Utilities Policy, 14(1), 14-30.
+
+[23] Johansen, S. (1995). Likelihood-Based Inference in Cointegrated Vector Au-
+    toregressive Models. Oxford University Press.
+
+[24] Joseph, K. L. (2010). The Politics of Power: Electricity Reform in India.
+    Energy Policy, 38(1), 503-511.
+
+[25] Joutz, F. L., Maddala, G. S., and Trost, R. P. (1995). An Integrated
+    Bayesian Vector Auto Regression and Error Correction Model for Fore-
+    casting Electricity Consumption and Prices. Journal of Forecasting, 14(3),
+    287-310.
+
+[26] Luger, R. (2004). Exact Tests of Equal Forecast Accuracy with an Appli-
+    cation to the Term Structure of Interest Rates. Bank of Canada Working
+    Paper 2004-2.
+
+[27] Lütkepohl, H. (2005). New Introduction to Multiple Time Series Analysis.
+    Springer.
+
+[28] Makridakis, S., Andersen, A., Carbone, R., Fildes, R., Hibon, M.,
+    Lewandowski, R., Newton, J., Parzen, E., and Winkler, R. (1982). The
+    Accuracy of Extrapolation (Time Series) Methods: Results of a Forecast-
+    ing Competition. Journal of Forecasting, 1(2), 111-153.
+
+[29] Makridakis, S., Chatﬁeld, C., Hibon, M., Lawrence, M., Mills, T., Ord, K.,
+    and Simmons, L. F. (1993). The M2-competition: A Real-time Judgmen-
+    tally Based Forecasting Study. International Journal of Forecasting, 9(1),
+    5-22.
+
+
+
+
+                                      19
+[30] Makridakis, S., and Hibon, M. (2000). The M3-Competition: Results, Con-
+    clusions and Implications. International Journal of Forecasting, 16(4), 451-
+    476.
+
+[31] Mohamed, Z., and Bodger, P. (2005). Forecasting Electricity Consump-
+    tion In New Zealand Using Economic and Demographic Variables. Energy,
+    30(10), 1833-1843.
+
+[32] Narayan, P. K., and Smyth, R. (2005). Electricity Consumption, Employ-
+    ment and Real Income in Australia: Evidence from Multivariate Granger
+    Causality Tests. Energy Polic y, 33(9), 1109-1116.
+
+[33] Ng, S., and Perron, P. (2000). Lag Length Selection and the Construction of
+    Unit Root Tests with Good Size and Power. Econometrica, 69, 1519–1554.
+
+[34] Pao, H. T. (2009). Forecast of Electricity Consumption and Economic
+    Growth in Taiwan by State Space Modeling. Energy, 34(11), 1779-1791.
+
+[35] Phillips, P. C. B., and Perron, P. (1988). Testing for a Unit Root in Time
+    Series Regression. Biometrika, 75, 335–346.
+
+[36] Saab, S., Badr, E., & Nasr, G. (2001). Univariate Modeling and Forecasting
+    of Energy Consumption: The Case of Electricity in Lebanon. Energy, 26(1),
+    1-14.
+
+[37] Sadownik, R., and Barbosa, E. P. (1999). Short-Term Forecasting of In-
+    dustrial Electricity Consumption in Brazil. Journal of Forecasting, 18(3),
+    215-224.
+
+[38] Smith, T. B. (2004). Electricity Theft: A Comparative Analysis. Energy
+    Policy, 32(18), 2067-2076.
+
+[39] Steinbuks, J., de Wit, J., Kochnakyan A. and Foster, V. (2017). Forecasting
+    Electricity Demand: An Aid for Practitioners. Live Wire 2017/1. World
+    Bank, Washington, DC.
+
+[40] Suganthi, L., and Samuel, A. A. (2012). Energy Models for Demand Fore-
+    casting—A Review. Renewable and Sustainable Energy Reviews, 16(2),
+    1223-1240
+
+[41] Tserkezos, E. D. (1992). Forecasting Residential Electricity Consumption
+    in Greece using Monthly and Quarterly Data. Energy Economics, 14(3),
+    226-232.
+
+
+                                      20
+[42] Victor, D. G., and Heller, T. C. (Eds.). (2007). The Political Economy of
+    Power Sector Reform: The Experiences of Five Major Developing Coun-
+    tries. Cambridge University Press.
+
+[43] Zachariadis, T. (2010). Forecast of Electricity Consumption in Cyprus up
+    to the Year 2030: The Potential Impact of Climate Change. Energy Policy,
+    38(2), 744-750.
+
+
+
+
+                                     21
+Appendix
+
+A.1      Description of Forecasting Methods
+A.1.1     VAR / VEC Model
+Vector autoregressive model (VAR) is a commonly used tool for forecasting
+multivariate stationary time series that are simultaneously determined, e.g.,
+electricity demand, and its drivers such as GDP, population, etc. The structure
+of VAR model is that each variable is a linear function of past lags of itself
+and past lags of the other variables. The VAR model with lag order p with k
+endogenous and m exogenous variables can be written as
+
+
+                            yt = AYt−1 + B0 xt + "t ,                             (A1.1)
+
+   where yt is the K ⇥ 1 vector of endogenous variables, A is a K ⇥ Kp matrix
+of coeﬃcients, Yt is the Kp ⇥ 1 matrix of endogenous variables of lag order
+p, B0 is a K ⇥ M matrix of coeﬃcients, xt is the M ⇥ 1 vector of exogenous
+variables, and "t is the K ⇥ 1 vector of white noise innovations.
+   Vector error correction model (VECM) provides a framework for estimation,
+inference, and forecasting of diﬀerence stationary multivariate time series, when
+these variables are simultaneously determined. VECM representation of VAR
+model of lag order p deﬁned by equation (A1.1) is given by
+
+                                       p
+                                       X 1
+                     yt = Pyt−1 +             Gi   yt−i + B0 xt + "t              (A1.2)
+                                       i =1
+               Pj =p                       Pj =p
+   where ⇧ =      j =1 Aj   Ik ,   i   =        j =i+1 Aj ,   and other terms are same as
+in equation (A1.1). If the variables yt are diﬀerence stationary, the matrix P
+in A1.2 has rank 0  r < K , where r is the number of linearly independent
+cointegrating vectors. As matrix P has reduced rank the cointegrating vectors
+are not identiﬁed without further restrictions. We apply standard normalization
+restrictions suggested by Johansen (1995). For both VAR and VECM models
+we set the maximum number of lagged terms, p, equal to four.
+
+
+A.1.2     ARIMA Model
+AutoRegressive Integrated Moving Average (ARIMA) models are appropriate
+if there is a reason to believe that other drivers of electricity consumption are
+
+
+                                           22
+exogenous or have little eﬀect on electricity demand forecasts. They provide a
+parsimonious description of a weakly stationary stochastic processes in terms
+of two polynomials, one for the auto-regression and the second for the moving
+average. Pure ARMA models can be written as autoregressions in the dependent
+variable. An ARIMA(p,d,q) model can be written as
+
+                                    p
+                                    X                        q
+                                                             X
+                     d                         d
+                         yt = ↵ +         ⇢i       yt   i+         ✓ i "t   i   + "t ,   (A1.3)
+                                    i=1                      i=1
+
+   where yt is the dependent variable, ↵ is a constant term, ⇢ and ✓ are the
+coeﬃcients of autoregressive and moving average processes of lag orders p and q,
+d is the order of time-series integration (zero for stationary series), and "t is the
+error term that is assumed to be a white noise. We set the maximum number
+of lagged autoregressive terms, p, equal to four and the maximum number of
+lagged moving average terms, q, equal to two.
+
+
+A.1.3      GARCH Model
+Generalized autoregressive conditional heteroskedasticity (GARCH) models are
+frequently used for forecasting univariate time series when there is reason to
+believe that the error terms have a characteristic size or variance. This model
+is particularly relevant for developing countries with highly volatile electricity
+demand. The variance equation in the GARCH(p,q) model can be written as
+
+                                           p
+                                           X                     q
+                                                                 X
+                      Var ("t ) =     +            µ i "2
+                                                        t   i+
+                                                                          2
+                                                                        i t i,           (A1.4)
+                                           i=1                   j =1
+
+   where p is the length of squared innovations (ARCH terms) lags and p is the
+length of variances (GARCH terms) lags. The GARCH model simultaneously
+combines equations (A1.3) and (A1.4).
+
+
+A.1.4      Holt-Winters Method
+Holt-Winters method is used for forecasting time series that can be modeled as
+a linear trend in which the intercept and the coeﬃcient on time vary over time.
+The method was shown to produce optimal forecasts for the ARIMA(0,2,2)
+model and some local linear models (Gardner, 1985). The Holt-Winters method
+forecasts series of the form
+
+
+
+
+                                               23
+                                  bt+1 = at + bt t
+                                  y                                            (A1.5)
+
+         bt is the forecast of the original series yt , and at and bt are coeﬃcients
+   where y
+that drift over time. Given starting values, a0 and b0 , the updating equations
+are recursively formulated as
+
+
+                        at = ↵yt + (1        ↵)(at      1   + bt     1)        (A1.6)
+
+   and
+
+                        bt = ( a t     at   1)   + (1         ) bt   1         (A1.7)
+
+   where smoothing parameters ↵ and              are chosen by an iterative process to
+minimize the in-sample sum-of-squared prediction errors.
+
+
+A.1.5     Unobserved Components Models
+The Random Walk with a Drift (RWD) and the Local Level with Deterministic
+Trend (LLTD) models are most appropriate for forecasting diﬀerence-stationary
+time series that evolve around a linear appearing trend. Mathematical repre-
+sentation of the RWD and LLDT models is given by equations
+
+                                       yt = µ t
+
+
+
+                                µt = µt−1 + ↵ + "t ,                           (A1.8)
+
+   (RWD) and
+
+                                     yt = µ t + u t
+
+
+
+                                µt = µt−1 + ↵ + "t ,                           (A1.9)
+
+   (LLDT), where µt is the conditional expectation of electricity demand series,
+yt , ↵ is a drift parameter, and "t and ut are the white noise error terms.
+   The Random Walk with a Stochastic Cycle Model (RWSC) is most ap-
+propriate for forecasting diﬀerence-stationary time series that exhibit cyclical
+behavior. Mathematical representation of the RWSC model is given by
+
+
+                                            24
+                                     yt = µ t +        t
+
+
+
+
+                                   µt = µt−1 + "t ,
+
+
+
+                         t   =   t−1 ⇢cos     + et−1 ⇢sin + !t ,
+
+
+                       et =       t−1 ⇢sin    + et−1 ⇢cos + !
+                                                            et ,        (A1.10)
+
+   where  is a frequency of the cyclical component, ⇢ is a unit less scaling (or
+dampening) factor, et is auxiliary variable, and "t , !t , and !
+                                                               et are the white
+noise error terms.
+
+
+A.2      Description of Benchmark Models
+A.2.1      Naïve Model
+The forecasts of the Näıve model for covariance stationary data are simply the
+last available data value. It is deﬁned as follows:
+
+
+                                       yt+i = yt ,                      (A1.11)
+
+   where i = 1, 2, ..., m, and m = 5 for 5-year ahead forecasts and m = 10 for
+10-year ahead forecasts. In statistical terms the Näıve model is a random walk
+model, which assumes that the trend in the data cannot be predicted, and that
+the best forecast for the future is their own most recent value.
+    The forecasts of the Näıve model for diﬀerence stationary data are the dif-
+ference of the last available data value summed over the forecast period, and
+added to the last available data value. It is deﬁned as follows:
+
+                                             t
+                                             X +m
+                             yt+i = yt +            ( yt   yt   1) ,    (A1.12)
+                                            i=t+1
+
+   where m = 5 for 5-year ahead forecasts and m = 10 for 10-year ahead
+forecasts. In statistical terms the Näıve model holds the same interpretation as
+
+
+
+                                             25
+a random walk model.
+
+
+A.2.2      Naïve2 Model
+The Näıve2 model assumes that electricity demand grows at exogenous rate,
+which is the same rate as country’s GDP growth. It is deﬁned as follows:
+
+                                                  i
+                                 yt+i = (1 + k ) yt ,                        (A1.13)
+
+   where k is the expected growth in GDP. In this study we assume it is equal
+to the historical GDP growth average over last 5 years in the sample.
+
+
+A.3      Diebold-Mariano (1995) Test
+The Diebold and Mariano (1995) (DM) parametric test is a well-known pro-
+cedure for testing the null hypothesis of no diﬀerence in the accuracy of two
+competing forecasts.
+                    T
+   Let {(e1t , e2t )}t=1 be a bivariate time series vector of competing forecast
+errors. The quality of the forecasts is to be evaluated according to a speciﬁed
+loss function, g (·). Let us assume that the loss function depends only on the
+forecast errors, and let dt = g (e1t )    g (e2t ) be the loss diﬀerential. Then, the
+null hypothesis of unconditional equal forecast accuracy is
+
+                                  H0 : E [ d t ] = 0 ,                       (A1.14)
+
+   i.e., the errors associated with the two forecasts are, on average, of equal
+magnitude. If the null is rejected, the forecasting method that yields the smallest
+                                                               T
+loss will be chosen. Given a series of loss diﬀerentials, {dt }t=1 , a test of (A1.14)
+is based on their sample mean:
+
+                                        XT
+                                   ¯= 1
+                                   d        dt .                             (A1.15)
+                                      T t=1
+
+   The DM test it is given by
+
+                                         d¯
+                                  DM = q                                     (A1.16)
+                                        Vˆ ( d)
+
+         ˆ (d) is an estimate of the asymptotic variance of d. Whenever an
+   where V
+
+
+
+                                          26
+optimal forecast is produced from a proper information set, the resulting h-step
+forecast errors will follow a moving-average (MA) process of order (h         1) of the
+form et = ✓0 "t + ✓1 "t   1 + ... + ✓h 1 "t h+1 .   Diebold and Mariano (1995) propose
+estimating the variance using the truncated kernel with a bandwidth of (h           1)
+for h-step forecasts:
+                                           "            h 1
+                                                                  #
+                                                        X
+                              ˆ ( d) = 1
+                              V                ˆ0 + 2         ˆk ,            (A1.17)
+                                       T
+                                                        k=1
+
+   where ˆk is an estimate of the kth auto covariance of dt , given by
+
+                                    T
+                                  1 X               ¯)(dt             ¯) :
+                           ˆk =       ( dt          d         k       d
+                                  T
+                                    t=k+1
+
+
+   Luger (2004, p. 2) argues that “if the loss-diﬀerential series satisﬁes some
+regularity assumptions such as covariance stationarity, short memory, and the
+existence of moments that ensure the applicability of a central limit theorem,
+then the DM test statistic has an asymptotic standard normal distribution under
+the null hypothesis.”
+
+
+
+
+                                               27
+Tables
+
+ Table A3.1: Historical and Forecast Rates of Electricity Demand Growth
+                                      Historical growth            Forecast growth, 2015-2020
+country
+                             2000-2004 2005-2009 2010-2014⇤        5% CI Mean        95% CI
+Sub-Saharan Africa
+Angola                       18.6%        19.1%       3.5%         -2.1%    3.2%     7.0%
+Benin                        5.5%         8.0%        1.2%         -7.5%    0.0%     2.3%
+Botswana                     -1.7%        -7.7%       -2.0%        -20.0%   -10.0%   -4.9%
+Cameroon                     3.0%         9.5%        2.1%         1.3%     1.5%     1.7%
+Congo                        9.3%         16.3%       14.2%        -20.0%   4.3%     8.7%
+Congo, Dem. Rep.             4.7%         1.3%        0.1%         -2.1%    0.1%     1.5%
+Côte d’Ivoire                3.7%         1.0%        2.1%         2.0%     1.9%     1.8%
+Eritrea                      7.4%         1.6%        5.2%         4.3%     4.1%     3.8%
+Ethiopia                     14.0%        15.0%       22.3%        23.2%    24.4%    25.4%
+Gabon                        3.8%         5.3%        2.8%         1.6%     2.1%     2.6%
+Ghana                        -1.2%        10.0%       3.3%         1.6%     1.4%     1.2%
+Kenya                        8.6%         5.0%        4.8%         4.1%     4.4%     4.6%
+Mauritius                    5.6%         3.7%        2.2%         1.4%     2.2%     2.8%
+Mozambique                   7.4%         5.1%        1.1%         -5.1%    -1.1%    1.1%
+Namibia                      3.6%         -4.3%       1.5%         0.3%     0.4%     0.5%
+Nigeria                      12.0%        2.2%        2.3%         3.3%     3.0%     2.8%
+Senegal                      11.7%        4.2%        3.9%         3.6%     3.5%     3.4%
+South Africa                 3.3%         1.2%        0.1%         -1.0%    0.2%     1.1%
+Sudan                        9.8%         19.2%       22.0%        26.6%    26.3%    26.0%
+Tanzania                     8.8%         9.2%        0.5%         -20.0%   0.5%     71.1%
+Togo                         1.6%         -1.1%       -4.2%        n/a      -2.8%    5.7%
+Zambia                       2.9%         5.3%        5.3%         6.6%     8.5%     9.7%
+Zimbabwe                     6.8%         -1.6%       0.7%         -9.6%    -3.3%    0.1%
+East Asia and Paciﬁc
+Brunei                       5.7%         3.2%        1.6%         1.4%     2.4%     3.2%
+Cambodia                     23.0%        0.6%        -0.5%        -11.3%   -1.6%    1.2%
+China                        16.9%        13.5%       17.1%        12.1%    12.4%    12.7%
+Indonesia                    7.4%         6.6%        7.8%         6.5%     6.9%     7.3%
+Korea, Dem. People’s Rep.    3.6%         -1.1%       0.8%         n/a      4.0%     212.8%
+Malaysia                     3.9%         10.2%       5.8%         -2.7%    -1.4%    -0.2%
+Mongolia                     3.2%         5.2%        6.4%         3.9%     5.8%     7.4%
+Myanmar                      3.5%         5.1%        21.4%        n/a      3.4%     203.3%
+Philippines                  5.0%         4.0%        2.7%         2.3%     2.7%     3.0%
+Singapore                    4.1%         3.7%        2.2%         1.6%     2.2%     2.7%
+Thailand                     7.5%         4.1%        1.3%         2.1%     2.0%     2.0%
+Vietnam                      20.4%        15.4%       13.9%        12.8%    12.9%    13.0%
+
+Notes. * - includes mean forecasts for 2013-2014. CI: Conﬁdence Interval
+
+
+                                     28
+ Table A3.1 Historical and Forecast Rates of Electricity demand Growth
+                              (continued)
+                                 Historical growth            Forecast growth, 2015-2020
+country
+                        2000-2004 2005-2009 2010-2014⇤        5% CI Mean 95% CI
+Europe and Central Asia
+Albania                  3.0%          7.9%     -4.5%         -4.1%      0.7%    2.0%
+Armenia                  1.2%          0.6%     7.9%          n/a        6.8%    8.6%
+Azerbaijan               4.5%          -3.6%    5.0%          -20.0%     -1.3%   -0.7%
+Belarus                  3.7%          2.5%     -2.3%         -0.5%      -1.1%   -1.5%
+Bosnia and Herzegovina 4.2%            7.2%     -1.6%         1.6%       3.3%    4.4%
+Bulgaria                 1.6%          0.9%     2.8%                     1.8%
+Croatia                  3.1%          2.7%     0.8%          1.0%       1.6%    2.0%
+Cyprus                   6.0%          4.3%     -1.5%         -1.5%      0.0%    1.2%
+Georgia                  -0.4%         7.9%     9.2%          13.6%      12.6%   11.8%
+Hungary                  0.3%          0.9%     -0.7%         -1.4%      0.2%    1.5%
+Kazakhstan               6.4%          4.4%     4.3%          -3.5%      3.3%    7.6%
+Kyrgyz Republic          -0.1%         -3.7%    0.8%          -0.7%      0.1%    0.7%
+Latvia                   3.7%          7.0%     -6.1%                    -0.2%
+Lithuania                5.9%          -13.1%   8.1%          37.3%      15.1%   14.6%
+Macedonia                0.4%          0.9%     0.5%          1.4%       1.2%    1.1%
+Malta                    3.4%          -1.1%    0.8%          -1.9%      -0.2%   1.1%
+Moldova                  1.4%          0.4%     0.4%          0.4%       0.4%    0.4%
+Poland                   1.7%          0.2%     1.2%          -1.2%      0.5%    1.8%
+Romania                  2.9%          0.4%     1.7%                     1.0%
+Russian Federation       1.7%          1.8%     1.3%          1.4%       1.9%    2.4%
+Serbia                   1.4%          0.5%     0.4%          0.9%       0.5%    0.3%
+Tajikistan               4.0%          -0.8%    -0.4%         -0.3%      -0.3%   -0.2%
+Turkey                   5.9%          6.1%     7.0%          -20.0%     2.8%    53.4%
+Turkmenistan             6.0%          6.0%     2.6%          1.4%       1.4%    1.3%
+Ukraine                  1.7%          0.3%     0.2%          -2.8%      -2.5%   -2.2%
+Uzbekistan               1.0%          1.0%     2.9%          3.6%       3.4%    3.3%
+Latin America and Caribbean
+Argentina                3.7%          3.7%     4.2%          3.4%       3.8%    4.1%
+Bolivia                  5.2%          8.4%     6.4%          6.3%       7.1%    7.8%
+Brazil                   3.1%          5.6%     4.1%          3.8%       4.0%    4.2%
+Chile                    6.2%          3.0%     3.9%          -1.0%      1.6%    3.8%
+Colombia                 3.3%          3.6%     2.4%          2.2%       2.1%    2.0%
+Costa Rica               3.9%          3.2%     2.3%          n/a        2.0%    n/a
+Cuba                     0.4%          2.7%     0.0%          -0.8%      0.5%    1.4%
+Dominican Republic       9.7%          4.2%     2.6%          2.3%       2.1%    1.9%
+Ecuador                  4.0%          10.7%    3.7%          -0.6%      2.9%    6.0%
+El Salvador              8.6%          4.8%     -0.6%         -2.0%      -0.2%   1.2%
+Guatemala                6.6%          2.1%     2.2%          1.8%       1.8%    1.7%
+Haiti                    0.3%          1.1%     13.6%         3.3%       2.7%    2.3%
+Honduras                 10.7%         4.2%     3.5%          2.2%       2.1%    2.1%
+Jamaica                  2.5%          -8.4%    1.7%          2.3%       2.0%    1.8%
+
+                                  29
+ Table A3.1 Historical and Forecast Rates of Electricity Demand Growth
+                               (continued)
+                                Historical growth           Forecast growth, 2015-2020
+country
+                       2000-2004 2005-2009 2010-2014⇤       5% CI Mean        95% CI
+Latin America and Caribbean (continued)
+Mexico                 3.9%        2.2%         3.6%        2.1%     2.0%     2.0%
+Nicaragua              6.0%        4.0%         3.6%        3.1%     2.9%     2.8%
+Panama                 3.8%        5.5%         5.0%        3.0%     2.9%     2.8%
+Paraguay               -0.9%       1.1%         3.5%        -0.4%    2.2%     2.8%
+Peru                   5.6%        8.2%         9.1%        7.0%     8.8%     10.4%
+Trinidad & Tobago      5.9%        4.0%         5.2%        n/a      6.5%     n/a
+Uruguay                0.2%        8.6%         3.7%        2.3%     3.1%     3.7%
+Venezuela, RB          4.7%        2.4%         2.3%        1.7%     2.2%     2.7%
+Middle East and North Africa
+Algeria                6.7%        7.0%         6.3%        5.1%     5.8%     6.3%
+Bahrain                8.0%        4.2%         2.3%        0.6%     2.2%     3.5%
+Egypt, Arab Rep.       7.8%        7.0%         6.3%        4.7%     4.7%     4.6%
+Iran, Islamic Rep.     9.3%        6.2%         2.9%        2.2%     2.2%     2.3%
+Iraq                   -0.9%       13.0%        3.9%                 2.1%
+Israel                 2.8%        4.1%         2.1%        2.1%     2.0%     1.9%
+Jordan                 6.2%        10.6%        0.7%        -20.0%   1.3%     20.7%
+Kuwait                 7.1%        6.1%         3.2%        3.4%     3.3%     3.3%
+Lebanon                5.5%        5.3%         0.7%        1.6%     2.5%     3.1%
+Libya                  9.3%        8.9%         -6.9%       n/a      17.6%    86.7%
+Morocco                10.0%       4.5%         6.0%        2.2%     3.8%     5.1%
+Oman                   7.8%        11.3%        13.6%       13.6%    14.3%    15.1%
+Qatar                  11.5%       19.1%        13.5%       14.1%    13.9%    13.7%
+Saudi Arabia           7.9%        7.3%         6.3%        5.1%     6.0%     6.8%
+Syrian Arab Republic 7.7%          6.6%         -14.6%      -20.0%   -20.0%   -20.0%
+Tunisia                3.9%        6.4%         3.1%        3.2%     3.7%     4.1%
+United Arab Emirates 10.4%         12.2%        1.8%        2.1%     2.1%     2.0%
+Yemen                  7.9%        12.5%        -1.1%       2.5%     2.3%     2.1%
+South Asia
+Bangladesh             13.5%       11.6%        10.0%       10.3%    10.4%    10.5%
+India                  5.1%        7.4%         9.2%        9.7%     9.2%     8.6%
+Nepal                  10.5%       5.3%         7.3%        6.1%     6.0%     5.9%
+Pakistan               7.5%        0.2%         0.2%        -1.6%    -0.1%    1.0%
+Sri Lanka              6.6%        3.2%         3.8%        2.2%     2.1%     2.0%
+
+
+
+
+                                  30
+       Table A3.2: Comparison of Forecast Errors across Countries
+                            5 year forecast horizon   10 year forecast horizon
+Country
+                            sMAPE MdRAE               sMAPE MdRAE
+Sub-Saharan Africa
+Angola                      0.09        0.34          0.08      0.26
+Benin                       0.29        0.7           0.2       0.44
+Botswana                    0.34        0.66          0.15      0.51
+Cameroon                    0.01        0.08          0.22      0.88
+Congo                       0.38        0.89          0.24      0.39
+Congo, Dem. Rep.            0.02        0.17          0.08      0.58
+Côte d’Ivoire               0.03        0.29          0.03      0.38
+Eritrea                     0.02        0.23          0.07      0.68
+Ethiopia                    0.06        0.26          0.38      1.38
+Gabon                       0.04        0.86          0.03      0.98
+Ghana                       0.19        0.71          0.13      0.97
+Kenya                       0.03        0.45          0.15      1.08
+Mauritius                   0.01        1.02          0.01      0.07
+Mozambique                  0.06        1.14          0.07      0.78
+Namibia                     0.07        0.26          0.07      0.99
+Nigeria                     0.08        0.14          0.08      0.31
+Senegal                     0.02        0.37          0.03      0.26
+South Africa                0.02        0.23          0.03      0.46
+Sudan                       0.04        0.18          0.13      0.6
+Tanzania                    0.02        0.16          0.06      0.31
+Togo                        0.19        0.36          0.15      0.61
+Zambia                      0.02        0.18          0.05      1.09
+Zimbabwe                    0.04        0.51          0.08      0.58
+East Asia and Paciﬁc
+Brunei                      0.01        0.44          0.04      0.3
+Cambodia                    0.17        0.84          n/a       n/a
+China                       0.04        0.38          0.06      0.3
+Indonesia                   0.02        0.13          0.02      0.26
+Korea, Dem. People’s Rep.   0.06        0.62          0.08      0.71
+Malaysia                    0.03        0.23          0.05      0.36
+Mongolia                    0.05        0.47          0.04      0.43
+Myanmar                     0.11        0.84          0.14      2.29
+Philippines                 0.02        0.49          0.02      0.22
+Singapore                   0.02        1.03          0.01      0.61
+Thailand                    0.02        0.96          0.02      0.2
+Vietnam                     0.02        0.07          0.02      0.09
+
+
+
+
+                                   31
+ Table A3.3: Comparison of Forecast Errors across Countries (continued)
+                         5 year forecast horizon   10 year forecast horizon
+Country
+                         sMAPE MdRAE               sMAPE MdRAE
+Europe and Central Asia
+Albania                  0.17      0.3             0.26      0.85
+Armenia                  0.05      0.29            0.07      0.35
+Azerbaijan               0.06      0.57            0.09      0.59
+Belarus                  0.06      0.74            0.08      0.33
+Bosnia and Herzegovina 0.08        0.16            0.07      0.21
+Bulgaria                 0.03      0.73            0.03      0.56
+Croatia                  0.1       0.66            0.09      1.08
+Cyprus                   0.05      0.2             0.05      0.31
+Georgia                  0.04      0.33            0.09      0.35
+Hungary                  0.08      0.64            0.04      0.34
+Kazakhstan               0.02      0.23            0.02      0.08
+Kyrgyz Republic          0.09      0.6             0.11      0.57
+Latvia                   0.07      0.29            0.11      0.39
+Lithuania                0.28      0.43            0.23      0.79
+Macedonia                0.05      0.66            0.06      0.64
+Malta                    0.04      0.4             0.06      1.02
+Moldova                  0.02      0.1             0.02      0.05
+Poland                   0.03      0.42            0.03      0.96
+Romania                  0.04      0.49            0.03      0.48
+Russian Federation       0.02      0.3             0.02      0.17
+Serbia                   0.01      0.6             0.02      0.33
+Tajikistan               0.04      0.46            0.07      0.71
+Turkey                   0.05      1.06            0.09      0.63
+Turkmenistan             0.01      0.06            0.02      0.05
+Ukraine                  0.05      0.8             0.04      0.22
+Uzbekistan               0.01      0.12            0.02      0.68
+Latin America and Caribbean
+Argentina                0.03      0.29            0.09      0.66
+Bolivia                  0.02      0.12            0.11      0.83
+Brazil                   0.01      0.08            0.11      1.22
+Chile                    0.03      0.52            0.04      0.16
+Colombia                 0.01      0.58            0.02      0.46
+Costa Rica               0.01      0.65            0.02      0.44
+Cuba                     0.03      0.64            0.03      0.9
+Dominican Republic       0.02      0.94            0.08      0.53
+Ecuador                  0.04      0.31            0.17      1.25
+El Salvador              0.03      0.41            0.07      0.53
+Guatemala                0.02      0.58            0.07      0.39
+Haiti                    0.39      0.92            0.2       1.14
+Honduras                 0.02      0.95            0.12      0.63
+Jamaica                  0.2       0.4             0.27      0.86
+
+
+                                   32
+ Table A3.3: Comparison of Forecast Errors across Countries (continued)
+                       5 year forecast horizon   10 year forecast horizon
+Country
+                       sMAPE MdRAE               sMAPE MdRAE
+Latin America and Caribbean (continued)
+Mexico                 0.02       0.65           0.02      0.31
+Nicaragua              0.04       0.68           0.02      0.3
+Panama                 0.04       0.54           0.03      0.39
+Paraguay               0.02       0.47           0.03      0.52
+Peru                   0.02       0.19           0.02      0.13
+Trinidad & Tobago      0.01       0.22           0.07      0.56
+Uruguay                0.06       0.94           0.15      0.51
+Venezuela, RB          0.01       0.42           0.05      0.82
+Middle East and North Africa
+Algeria                0.08       0.58           0.14      1.24
+Bahrain                0.01       0.99           0.07      0.47
+Egypt, Arab Rep.       0.01       0.22           0.02      0.12
+Iran, Islamic Rep.     0.01       0.15           0.02      0.21
+Iraq                   0.26       0.95           0.16      0.66
+Israel                 0.02       0.61           0.02      0.55
+Jordan                 0.02       0.51           0.15      0.82
+Kuwait                 0.01       0.22           0.04      0.32
+Lebanon                0.05       0.31           0.06      0.99
+Libya                  0.07       0.3            0.22      1.15
+Morocco                0.05       0.76           0.05      0.35
+Oman                   0.05       0.24           0.06      0.38
+Qatar                  0.02       0.11           0.03      0.17
+Saudi Arabia           0.06       0.49           0.04      0.36
+Syrian Arab Republic 0.1          0.07           0.07      0.06
+Tunisia                0.02       0.29           0.05      1.13
+United Arab Emirates 0.05         0.21           0.05      0.17
+Yemen                  0.08       0.46           0.09      0.21
+South Asia
+Bangladesh             0.01       0.05           0.07      0.27
+India                  0.02       0.18           0.06      0.52
+Nepal                  0.02       0.18           0.03      0.3
+Pakistan               0.01       0.06           0.04      0.47
+Sri Lanka              0.03       0.8            0.07      0.51
+
+
+
+
+                                   33
+

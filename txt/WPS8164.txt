@@ -1,0 +1,2190 @@
+                                                        WPS8164
+
+
+Policy Research Working Paper                          8164
+
+
+
+
+   The Poverty Implications of Alternative Tax
+                   Reforms
+       Results from a Numerical Application to Pakistan
+
+                               Andrew Feltenstein
+                             Carolina Mejia-Mantilla
+                                David Newhouse
+                                Gohar Sedrakyan
+
+
+
+
+Poverty and Equity Global Practice Group
+August 2017
+Policy Research Working Paper 8164
+
+
+  Abstract
+ This paper presents results from four simulations of the impact                    to household survey data that are incorporated in a micro
+ of potential tax reforms in Pakistan on poverty, shared pros-                      simulation model. The combined models suggest that equal
+ perity, and inequality. The simulations are carried out in the                     yield increases in sales and corporate tax rates differ mildly in
+ context of a dynamic computational general equilibrium                             their impacts on consumption and poverty. Endogenously
+ model that incorporates endogenous tax evasion. The sim-                           modeled tax evasion plays an important role in the results.
+ ulations link the computational general equilibrium model
+
+
+
+
+  This paper is a product of the Poverty and Equity Global Practice Group. It is part of a larger effort by the World Bank to
+  provide open access to its research and make a contribution to development policy discussions around the world. Policy
+  Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at
+  dnewhouse@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+          THE POVERTY IMPLICATIONS OF ALTERNATIVE TAX REFORMS: RESULTS FROM A
+                        NUMERICAL APPLICATION TO PAKISTAN
+
+                                                 By
+
+                Andrew Feltenstein (Georgia State University, afeltenstein@gsu.edu)1
+                              Carolina Mejia-Mantilla (World Bank)
+                                  David Newhouse (World Bank)
+                           Gohar Sedrakyan (Georgia State University)
+
+
+
+
+JEL Classification: C68, H22
+
+Keywords: Tax incidence, Distributional Effects, Computable General Equilibrium Models
+
+
+
+
+1
+ This paper was partially funded by a Poverty and Social Impact Analysis Trust Fund provided
+to the World Bank by the Department of International Development. The views expressed here
+are our own and do not reflect those of the World Bank or its Executive Directors.
+I.     Introduction
+
+       Many countries, particularly in the developing world, suffer from volatile revenue
+
+sources, which make it difficult to finance essential projects. They also have large numbers of
+
+poor people and there are concerns that revenue increases will negatively impact those people.
+
+Accordingly, attempts are often made to increase public revenues, while at the same time trying
+
+to minimize the impact of these revenue increases on the poor. The general intuition is often that
+
+increases in regressive taxes, such as the sales tax, will have a more negative impact upon the
+
+poor than will increases in progressive taxes, such as the corporate income tax. In this paper, we
+
+will analyze the problem of how to increase tax revenues while trying to minimize the impact of
+
+this revenue increase on the poorest segment of society. We will use a numerical analysis
+
+calibrated and applied to Pakistan, a country that faces both problems of poverty, as well as very
+
+poor public revenue performance. Our results will indicate that the standard intuition, at least in
+
+this case, may often be incorrect.2
+
+       Pakistan is in a delicate fiscal situation, with a budget deficit of around 5.8 percent of
+
+GDP for 2014 and with tax revenues amounting to only 10.3 percent of GDP. Tax reform is
+
+therefore high on the political agenda.3 Although reforms may seek to raise revenue or improve
+
+efficiency, in particular by reducing tax evasion, changes in the tax code will also affect the
+
+income distribution and the welfare of households. The objective of this paper is to shed light on
+
+
+
+
+2
+  Many authors have examined the relationships between tax regimes and poverty. See, for
+example Tanzi and Zee (2001, 2000), and Keen and Simone (2004) for a number of general
+insights, and Lustig (1998) for an application to the case of Mexico. Bird (2005) looks at the re-
+distributive role of the personal income tax in developing countries.
+3 Fiscal data obtained from the World Bank’s Spring 2014 South Asia Economic Focus Time to
+
+Refocus.
+                                                  2
+the potential distributional effects of tax reforms in Pakistan, by linking the output of a
+
+Computational General Equilibrium (CGE) model to a nationally representative household
+
+survey (the Pakistan Standard of Living Measurement Survey, PSLM). A top-down approach is
+
+utilized, in which the macro and sectoral outputs of the CGE model are used as inputs into
+
+micro-simulations.4 A particular characteristic of the CGE model is that it incorporates tax
+
+evasion as an endogenous outcome of optimizing behavior by the corporate sector. Given
+
+Pakistan’s relatively low rate of overall tax collection, as well as high statutory tax rates, it is
+
+important to be able to include the impact of evasion.
+
+        Our paper will be structured as follows. The next section will be a review of the relevant
+
+literature on tax evasion in the context of general equilibrium models, while Section III will give
+
+the intuition behind the treatment of tax evasion in our model. Section IV will develop the
+
+dynamic computational general equilibrium (CGE) model that we use to analyze tax changes at
+
+the macro level. The next section will give the numerical results of the simulations of alternative
+
+tax policies in the CGE model. Section VI will discuss the micro simulation model that links the
+
+CGE macro results to poverty analysis, and will present the poverty outcomes of alternative tax
+
+regimes. The final section will be a conclusion.
+
+II.     Literature Review
+
+        A number of studies consider the sustainability of poverty reduction in Pakistan. Thus,
+
+the World Bank report from 2013 analyzes the trends of poverty reduction by regions in
+
+Pakistan. It concludes that, for the period 2001-2008, Pakistan had a positive performance in
+
+linking economic growth with poverty reduction. The study addresses both urban and rural
+
+
+
+4
+ This is a commonly used approach in trying to analyze the impact of fiscal policy such as taxes
+and tariffs on heterogeneous consumer groups (See Feltenstein, Lopes, Porras-Mendoza, and
+Wallace, 2014 for a survey).
+                                                   3
+households with different levels of income. However, it also notes that the main issue for
+
+Pakistan has been to ensure sustainable economic growth, as the country has had only one period
+
+of four consecutive years of growth (Newman J. (2013)). A more recent World Bank report
+
+prioritizes the steps for strengthening Pakistan's public finance. This improvement is linked with
+
+a continued enhancement of tax collection, helping to maintain the sustainability of the
+
+government's growth-oriented agenda (World Bank, 2016). The same source suggests, as a
+
+proposed measure in the improvement of revenue mobilization, an increased reliance on direct
+
+taxes and less on the general sales tax (GST). Notably, the rebalancing of revenue collection
+
+responsibilities between federal and provincial governments is an additional step in the agenda
+
+towards improvement of tax efficiency efforts, as provinces contribute significant amounts to the
+
+budget deficit of Pakistan (IMF, 2016).
+
+         There have been a number of papers that consider the most appropriate tax structures for
+
+specific developing economies, with the aim of providing the highest possible tax revenues with
+
+the lowest negative impact on poverty. Among these, during the recent decade, are Tanzi, 2000,
+
+Tanzi and Zee, 2001, Keen et al., 2004, Martinez-Vazquez et al., 2011, and Feltenstein and
+
+Cyan, 2013. Different authors have taken alternative approaches to estimating an optimal tax
+
+level. Thus, for comparison, the tax level as a share of GDP in major industrialized countries
+
+(members of the OECD) is about 38%, compared with a sample of developing countries with an
+
+average of 18% (Tanzi and Zee. 2001). Authors have also mentioned the necessity of dealing
+
+with a tradeoff between economic growth and income inequality while designing a tax structure
+
+(Atkinson and Stiglitz, 1976; Gentry and Ladd, 1994; Arnold, 2008; Liu and Martinez-Vazquez,
+
+2015).
+
+
+
+
+                                                 4
+       Some authors have analyzed tax structures in low-income countries with weak tax
+
+mobilization. They have concluded that the weaknesses were a conseqiuence of the fact that the
+
+formal sector of the economy represented a relatively small share of employment and business
+
+activities. Therefore, the effect of reforms associated with those taxes levied on personal or
+
+corporate income have had quite limited impact on government revenues (Tanzi, 1987, 2000;
+
+Gemmel and Morrissey, 2003). Given the limited public administration tools in many
+
+developing countries, the empirical evidence suggests that perhaps the best policies are through
+
+introduction of indirect taxation mechanisms to finance necessary government expenditures
+
+(Heady, 2004, Bird and Zolt, 2005). As “in many developing countries, the effects of even the
+
+most progressive income tax on distributional outcomes are likely to be small compared to the
+
+effects of taxes on consumption…” (Bird and Zolt, 2005).
+
+       The general equilibrium analysis of tax systems has added interesting dimensions missing
+
+in studies with partial equilibrium models. These complex interdependencies are included in the
+
+analysis of public policies and its linkage to economic output. See, for example, Thissen, M.
+
+(1998), Devarajan and Hossein (1998), and Ke-young Chu et al. (2000). Additionally, the social
+
+accounting matrices (SAM) used in the CGE studies have become more user-friendly for
+
+programming. See Keuning et al. (1988), Robinson (1989), Round (2003), Ahmed, V. and
+
+O’Donoque, C. (2007).
+
+       Computational general equilibrium tools have been used in studies of the fiscal system of
+
+Pakistan by both domestic and international economists (Shah and Walley (1991), Feltenstein
+
+and Cyan, (2013), Feltenstein et al. (2014)). Studies of tariffs, with application to Pakistan, have
+
+led to the general notion of reducing tariffs. See, for example, Kemal M. A. et al. (2001),
+
+Martinez-Vazquez J. (2006), and Guilherme and Taglioni (2013). Some recent studies have
+
+
+
+                                                  5
+addressed the possibilities of widening the tax base and rationalizing tax rates. These papers
+
+favor the GST as relatively easier to collect and more amenable to tax reforms than changes to
+
+direct taxation. Among such studies are Refaqat, S. (2003), Ahmed, V. and O’Donoque, C.
+
+(2007), and Ahmed, S. et al. (2010).
+
+III.    Modeling Tax Evasion
+
+        Pakistan has severe problems with tax evasion. In particular, apart from having a poor
+
+tax collection effort, Pakistan has had a steadily declining tax to GDP ratio. In recent years, tax
+
+collection has come down from 10.9 percent of GDP in 2003 to around 9 percent of GDP in
+
+2012. Widespread evasion is reported; for example, only 2 percent of the working age population
+
+pays personal income taxes (Kleven and Waseem, 2013). Additionally, a study in 2011 found
+
+that of the 46,000 registered firms, only around 24,000 filed corporate income tax returns.5 Thus
+
+Pakistan provides a case study of a country in which there are both high degrees of tax evasion,
+
+as well as a steadily declining tax effort.6
+
+        We confine our analysis of tax evasion to business’s evasion of the corporate income tax.
+
+There are, of course, many other forms of tax evasion. There might be evasion of the personal
+
+income tax, as well as under-invoicing of the sales tax. We will emphasize the corporate income
+
+tax since it is generally the most problematic source of tax revenue. The personal income tax is
+
+typically withheld at the source, making it relatively difficult to evade. Sales taxes are also not
+
+simple to evade, since doing so requires falsification of receipts, as well as corresponding
+
+
+
+
+5
+  This study was carried out by the International Center for Public Policy, Andrew Young School
+of Policy Studies in 2011 to develop a micro-simulation model for the Federal Board of
+Revenue, Pakistan.
+6
+  We should be clear that we cannot prove that the low tax effort in Pakistan is the result of evasion,
+or of an inefficient collection mechanism. However, in this paper, we are implicitly assuming that
+evasion is responsible for a major part of the revenue shortfall.
+                                                  6
+manipulation of income statements. If, in fact, a firm did evade sales tax, then this would tend to
+
+increase the profitability of the firm and so at least some of this increase profit would be captured
+
+by the corporate income tax. Accordingly, our omission of sales tax evasion probably leads to an
+
+underestimation of the increased profitability of the evading firm, as well as its corresponding rate
+
+of investment.
+
+       We model the cost of operating in the underground economy in terms of the inability to
+
+borrow from the official banking system. Banks in the model are assumed not to have perfect
+
+information about the firm’s true ownership of assets and its associated true tax obligation. We
+
+assume that due to collateral requirements, credit is provided only in relation to the firm’s
+
+implied ownership of assets, which is determined from its actual tax payment. The idea here is
+
+that in the face of default, banks can only seize those assets that have been officially declared by
+
+the firm. Hence, the higher the extent of tax evasion, the lower the implied value of firm assets,
+
+and the lower the amount of credit provided by the banking system. Our approach has some
+
+similarity to Kiyotaki and Moore (1997) who model credit limits on loans. These limits are
+
+determined by estimates of collateral which, in turn, are determined by estimates of durable asset
+
+holdings by borrowers. Here, tax payments are used to estimate the value of the durable asset of
+
+the borrower, as the asset cannot be directly observed.
+
+       We assume that firms can operate partially in the formal and partially in the underground
+
+economy. That part of their operation that takes place in the legal economy pays taxes and can
+
+borrow from the banking system. That part that is underground does not pay taxes and cannot
+
+borrow. Admittedly this distinction is artificial, but captures some of the benefits and costs of
+
+operating in the underground economy discussed in the literature.
+
+
+
+
+                                                  7
+         Our approach also assumes that firms can evade taxes without any real risk of detection
+
+or punishment. Shleifer and Vishny (1993) point out that where public pressure on corruption or
+
+the enforcement ability of the government is relatively weak - as is the case in many developing
+
+countries - this is in fact a fitting assumption. Of course, the specific case of Pakistan may well
+
+deviate from this general assumption, as variable enforcement of tax collection in different
+
+sectors of the economy may occur. Such differential levels of enforcement could impact revenue
+
+collections across sectors, independently of access to credit issues. However, we lack
+
+information on differential tax enforcement, and hence have not attempted to incorporate it in
+
+our stylized model.
+
+IV.      A General Equilibrium Specification
+
+         In this section, we develop the formal structure of a dynamic general equilibrium model
+
+that endogenously generates an underground economy. Much of the structure of our model is
+
+designed to permit numerical implementation for Pakistan. Our model has n discrete time
+
+periods. All agents optimize in each period over a 2-period time horizon. That is, in period t
+
+they optimize given prices for periods t and t  1 and expectations for prices for the future after
+
+t  1 . When period t  2 arrives, agents re-optimize for period t  2 and t  3 , based on new
+
+information about period t  2 .
+
+Production
+
+There are 8 factors of production and 3 types of financial assets:
+       1-5     Capital types 9.       Domestic currency
+       6.      Urban labor 10.        Bank deposits
+       7.      Rural labor 11.        Foreign currency
+       8.      Land
+
+      The five types of capital correspond to five aggregate nonagricultural productive sectors.
+
+These sectors are:
+
+
+
+                                                   8
+  SECTOR 1=LIGHT MANUFACTURING
+  SECTOR 2=HEAVY INDUSTRY
+  SECTOR 3=ELECTRICITY,WATER, SEWAGE
+  SECTOR 4=TRANSPORT
+  SECTOR 5=HOTELS, HOUSING, HEALTH SERVICES
+
+
+    An input-output matrix, At, is used to determine intermediate and final production in period t.
+
+The matrix is 50 x 50, and is taken from Samwalk 2010, the most recent social accounting matrix
+
+for Pakistan. The first 50 rows and columns of the input-output matrix correspond to domestic
+
+production. The final row and column represents imports of intermediate and final goods, which
+
+are treated as a single aggregate commodity. Corresponding to each sector in the input-output
+
+matrix, sector-specific value added is produced using capital and urban labor for the
+
+nonagricultural sectors, and land and rural labor in agriculture.
+
+                                                                        j      j
+    The specific formulation of the firm's problem is as follows. Let y Ki , y Li be the inputs of
+
+capital and urban labor to the jth nonagricultural sector in period i. Let YGi be the outstanding
+
+stock of government infrastructure in period i. The production of value added in sector j in
+
+period i is then given by:
+
+                                   va ji  va ji ( y Ki
+                                                     j      j
+                                                        , y Li , YGi )                           (1)
+
+where we suppose that public infrastructure may act as a productivity increment to private
+
+production.
+
+    Sector j pays income taxes on inputs of capital and labor, given by t Kij , t Lij respectively, in
+
+period i. The interpretation of these taxes is that the capital tax is a tax on firm profits, while the
+
+labor tax is a personal income tax that is withheld at source. There are no pure profits here, since
+
+production functions are constant returns to scale, and hence the corporate income tax is treated
+
+as a tax on returns to capital.
+
+
+                                                          9
+   We suppose that each type of sectoral capital is produced via a sector-specific investment
+
+technology that uses inputs of capital and labor to produce new capital. Investment is carried out
+
+by the private sector and is entirely financed by domestic borrowing.
+
+   Let us define the following notation:
+
+    CHi        = The cost of producing the quantity H of capital of a particular type in period i.
+    ri         = The interest rate in period i.
+    PKi        = The return to capital in period i.
+    PMi        = The price of money in period i.
+    i         = The rate of depreciation of capital.
+
+
+   Suppose, then, that the rental price of capital in period 1 is P1 . If CH1 is the cost-minimizing
+
+
+
+cost of producing the quantity of capital, H1 , then the cost of borrowing must equal the present
+
+value of the return on new capital. Hence:
+
+                                                                
+                                          n   P (1   )i  2 H 
+                                  CH 1    Ki i 1            1
+                                                                                                 (2)
+                                         i2                    
+                                               (1  rj ) 
+                                              j 1              
+
+where     is the interest rate in period j, given by:
+
+                                              rj  1/ PBj
+
+where     is the price of a bond in period j. The tax on capital is implicitly included in the
+
+investment problem, as capital taxes are paid on capital as an input to production.
+
+   The decision to invest depends not only on the variables in the above equation, but also upon
+
+the decision the firm makes as to whether it should pay taxes. This decision determines the
+
+
+
+
+                                                       10
+firm’s entry into the underground economy.7 We assume that the firm’s decision is based upon a
+
+comparison of the tax rate on capital with the rate of return on new capital. Formally, suppose
+
+that we were in a two-period world. Suppose that:
+
+                                            PK 2
+                                                   tK 1
+                                           1  r1
+
+that is, the present value of the return on one unit of new capital is greater than the current tax
+
+rate on capital. In this case we assume the investor pays the full tax rate on capital inputs.
+
+Suppose, on the other hand, that:
+
+                                            PK 2
+                                                   tK 1
+                                           1  r1
+
+    Here the discounted rate of return is less than the tax rate. The extent to which the firm goes
+
+into the underground economy is determined by the gap between the tax rate and the rate of
+
+return to investment. That is, the firm pays a tax rate of tK1 where:
+
+                                                                       
+                                                        PK 2    
+                                                tK1  1  r     
+                                 tK 1  t K 1 1            2
+                                                                                         (3)
+                                                    tK 1        
+                                                                
+                                                                
+
+    Here 0   and higher values of  lead to lower values of taxes actually paid. That is, the
+
+        tK 1
+ratio        reflects the share of the sector that operates in the above ground economy. Hence 
+        tK 1
+
+represents a firm-specific behavioral variable. An “honest” firm would set   0 , while a firm
+
+that is prone to evasion would have a high value for  . Thus ∝ may reflect not only inherent
+
+honesty of the firm, but also perceptions of the risk of getting caught. We have not modeled
+
+
+7
+ We should again emphasize the limitations in our modeling of tax evasion. The firm here will be
+evading only the corporate income tax, based upon a comparison between the tax rate and the
+return to investment.
+                                                      11
+endogenous risk or punishment, so the use of ∝ is admittedly ad hoc. We should also note that
+
+the tax evasion mechanism of eq. 3 is not fully consistent with the present value calculation of
+
+eq. 2. Ideally, the tax paying firm would decide upon the rate of tax evasion, in advance, for
+
+each time period. Recall that our model is 2 period perfect foresight, with adaptive expectations
+
+thereafter. Hence it is not possible to derive optimum rates of tax evasion for each forthcoming
+
+period since the firm does not know all future prices. Accordingly, we have the again ad hoc
+
+specification of eq. 3 which is a simplified version of 2 period optimization, combined with the
+
+behavioral assumption represented by ∝.
+
+Banking
+
+   We will suppose that there is one bank for each nonagricultural sector of the economy. There
+
+are 5 such sectors, and hence 5 banks, corresponding to each of the aggregate capital stocks.
+
+Each bank lends primarily to the sector with which it is associated. The banks are, however, not
+
+fully specialized in the sector they correspond to. We make the simplifying assumption that each
+
+bank holds a fixed share of the outstanding debt of its particular sector. It then holds additional
+
+fixed shares of the debt of each of the remaining sectors. We make this assumption of
+
+diversification of assets in order to allow for a situation in which a firm that evades taxes, and
+
+thereby enters the underground economy, might receive varying degrees of credit rationing from
+
+the different banks to which it applies for loans.
+
+   We assume the borrower is required to show the bank his tax returns in order to obtain a
+
+loan. There is a single, flat corporate tax rate that the borrowing firm faces. Hence, suppose that
+
+TK 1 represents taxes actually paid by the borrower in period 1. This is known to the bank, as the
+
+potential borrower is required to present his tax returns. Thus, if the borrower fully complied
+
+
+
+
+                                                 12
+                                                                                                  ˆ
+with his tax obligation, and hence carried out no underground activity, the value of his capital, K 1
+
+
+
+, would be given by:
+
+                                           ˆ  TK 1
+                                           K 1
+                                               tK 1
+
+    In this case the bank lends an amount L1 , where L1  CH1 , as the bank would not be able to
+
+seize the full value of the loan in the case of a default. The situation we have described would, in
+
+the case of perfect certainty, have credit rationing when the estimated value of the firm’s capital
+
+is less than its loan request. If the firm’s capital is greater than its loan request, there would be no
+
+credit rationing.
+
+    In a more realistic case of uncertainty about both the true value of the firm, as well as about
+
+the bank’s own ability to seize the firm, one might expect the lending process to be somewhat
+
+different. Accordingly, we will suppose that a simple functional form determines bank lending as
+
+a function of the amount requested as well as the estimated value of the firm’s capital. We define
+
+the amount the bank lends, L1 , as:
+
+
+
+
+              =                    =                     																																																							(4)
+                                                +
+                       1+
+
+    Here  represents a measure of risk aversion by the bank. If   0 , there are no credit
+
+restrictions, and the bank ignores estimates of the borrower’s estimated net worth. As  rises,
+
+the bank increasingly restricts lending if the term in brackets is less than 1. Thus, if a firm
+
+operates entirely in the underground economy it will not be able to borrow to finance investment.
+
+If banks are highly risk averse, they will never lend more than a firm’s estimated net worth,
+
+
+
+                                                    13
+which is based on its tax return. This tax return therefore represents all the information the bank
+
+needs in order to determine its response to a request for a loan.
+
+
+
+Consumption
+
+       There are 18 different consumer categories, each of which has either urban or rural labor,
+
+initial allocations of the 5 capital types, and land. They also have initial allocations of financial
+
+assets; money, bonds, and foreign exchange. The 18 categories are taken from the SAM for
+
+Pakistan (SAMWALK 2010). They are given by:
+
+   1. Urban quintile 1
+   2. Urban quintile 2
+   3. Urban other
+   4. Medium farm Sindh
+   5. Medium farm Punjab
+   6. Medium farm Other Pakistan
+   7. Small farm Sindh
+   8. Small farm Punjab
+   9. Small farm Other Pakistan
+   10. Landless Farmer Sindh
+   11. Landless Farmer Punjab
+   12. Landless Farmer Other Pakistan
+   13.Waged rural landless farmers Sindh
+   14.Waged rural landless farmers Punjab
+   15.Waged rural landless farmers Other Pakistan
+   16.Rural non-farm quintile 1
+   17.Rural non-farm quintile 2
+   18.Rural non-farm other
+
+       The consumer classes have differing Cobb-Douglas demand functions with weights
+
+derived from the SAM consumption data. Endowments are similarly taken from the SAM. The
+
+consumers maximize intertemporal utility functions, which have as arguments the levels of
+
+consumption and leisure in each of the two periods. See Appendix 3 for the complete consumer’s
+
+optimization problem.
+
+
+                                                  14
+The Government
+
+       The government collects personal income, corporate profit, and value-added taxes, as
+
+well as import duties. It pays for the production of public goods, as well as for subsidies. In
+
+addition, the government must cover both domestic and foreign interest obligations on public
+
+debt. The resulting deficit is financed by a combination of monetary expansion, as well as
+
+domestic and foreign borrowing.
+
+The Foreign Sector
+
+       The foreign sector is represented by a simple export equation in which aggregate demand
+
+for exports is determined by domestic and foreign price indices, as well as world income. The
+
+specific form of the export equation is:
+
+                                            1 
+                              X n 0   1                2 ywi
+                                            ei   Fi 
+
+where the left-hand side of the equation represents the change in the dollar value of exports in
+
+period i, πi is inflation in the domestic price index, ei is the percentage change in the exchange
+
+rate, and  Fi is the foreign rate of inflation. Also, ywi represents the percentage change in world
+
+income, denominated in dollars. Finally, σ1 and σ2 are corresponding elasticities.
+
+       Imports are treated as a single aggregate good produced by the foreign sector.
+
+Consumption demand for imports is determined as part of the consumer’s demand given by
+
+equation (5) in Appendix 3, in which consumers have an elasticity of demand for imported
+
+goods. Imports are also the final row and column of the input-output matrix. Thus, imports are
+
+both intermediate and final goods, with intermediate demand being generated by the input-output
+
+matrix and final demand coming from consumer optimization. Accordingly, both intermediate
+
+and final demand for imports are dependent upon the exchange rate.
+
+
+                                                    15
+V.     Simulations of the Pakistan General Equilibrium Model
+
+Benchmark Simulation
+
+       After having calibrated our model to historical Pakistan macro data, we carry out an out
+
+of sample simulation based upon 2012. That is, we assume that all fiscal policy parameters (tax
+
+rates, real public core spending, and deficit financing rules) remain constant for the 8 years of the
+
+simulation. We assume that the country runs a managed exchange rate, and arbitrarily assume
+
+that the exchange rate is devalued by 6 percent per year. At the same time, we assume that the
+
+world inflation rate is 4 percent annually and world growth is 2 percent per year. We chose the
+
+exchange rate devaluation rate so as to approximate the gap between world and Pakistan inflation
+
+over recent years. The world inflation and growth projections were taken from the World
+
+Economic Outlook (WEO) of the International Monetary Fund. The model is then run forward
+
+for 8 periods and generates a set of macro-economic variables. In addition, year by year real
+
+incomes are calculated for each of the 18 household categories. The results for this simulation
+
+are given in Appendix Table 1.
+
+       As our simulations generate a large of endogenous outcomes for different economic
+
+parameters, there is a question of how best to compare different policy simulations. We have, in
+
+general, chosen to make comparisons in terms of 8 period averages of key variables. In some
+
+instances, we will also use averages rates of change in particular variables to make comparisons.
+
+Such averages and overall rates of change are, of course, broad measures. The interested reader
+
+can use the Appendix tables to compare individual years.
+
+         We see in Appendix Table 1 that annual real growth averages 3.2 percent. The average
+
+inflation rate is 9.9 percent over the same 8 year forward looking time horizon. Thus, the
+
+
+
+
+                                                 16
+forward looking growth rate is roughly in line with the current Pakistan growth rate, while the
+
+future inflation rate is somewhat higher than the current rate.
+
+       Tax revenues stabilize at about 19 percent of GDP, which is higher than their actual share
+
+in GDP. This discrepancy is the result of our previously discussed modeling of tax evasion.
+
+Since we only incorporate evasion of the corporate tax, we implicitly assume that the statutory
+
+rates are the effective rates for the sales, personal income, and tariff rates. Of course, there is
+
+evasion of all of these taxes and tariffs and, in particular, there is evidence of a considerable
+
+amount of smuggling. Our simulated tax revenues are thus higher than the historical numbers
+
+which incorporate broader evasion. We have increased current expenditure by an amount equal
+
+to the over-shooting of the tax revenues. We have done so in order to replicate the budget
+
+deficit, which is a primary determinant of interest rates, which in turn influences investment and
+
+growth. We see that the budget deficit stabilizes at approximately 7.5 percent of GDP, after
+
+starting out quite high.8 This is somewhat higher than the current budget deficit, as might be
+
+expected since we assume no change in tax or expenditure patterns. Finally, the trade deficit
+
+starts off at 5.2 percent of GDP, in line with its current value, and then gradually improves to
+
+become a small surplus by the end of the simulation. This outcome is a result of our assumed
+
+rate of future devaluation combined with the assumptions for world growth and inflation.
+
+       If we turn to the next part of the table, showing real income by household group, we see
+
+that almost all sectors exhibit growth over the 8 periods, although there are exceptions. Thus, for
+
+example, the category “urban other” suffers income losses over the simulation, as does the
+
+category “waged rural landless farmers Punjab”. The overall average growth rate of real
+
+
+
+
+8
+  This is probably due to our attributing some of the stock of private debt to the public sector, as
+these debts are sometimes difficult to differentiate in the data.
+                                                  17
+income is 2.5 percent, and the urban sector experiences a very slight decline in real income,
+
+while the rural sector’s real income grows by 4.3 percent annually. We should not attribute any
+
+absolute significance to these numbers. Rather, they should be used in comparison to the
+
+counterfactual examples which will come next.
+
+17 Percent Sales Tax
+
+       As our first counterfactual simulation, we will suppose that the sales tax is increased from
+
+16 percent in the base case to 17 percent as part of an attempt to improve tax collection. This
+
+particular increase is chosen because, at the time, the government proposed changing the tax rate
+
+to 17 percent. Hence our changes will reflect both reality as well as the marginal performance of
+
+sales tax increases. Our later goal will be to determine how large a corporate tax increase needs
+
+to be, in the absence of any administrative changes, to generate the same revenue increase. We
+
+should note that this exercise does not reflect the many possible measures that could be
+
+undertaken to increase revenues in Pakistan. For example, the country could introduce property
+
+taxes, transaction taxes, and excise taxes. In addition, one might try to examine the effects of
+
+improved tax administration upon revenue efficiency. We have, however, chosen to stay with
+
+this set of rather simple exercises since they reflect proposals that are currently under
+
+consideration. In fact, the sales tax increase has been proposed by the World Bank as well as the
+
+Pakistan government. The search for revenue neutral changes in other tax rates would then be a
+
+standard exercise. We do not know how other tax regime changes would be implemented, so
+
+that their introduction would be purely hypothetical. Similarly, improved tax administration is
+
+clearly an important issue, but very difficult to model within our general equilibrium model
+
+context. We are thus implicitly assuming that tax evasion behavior, as well as tax
+
+administration, remain constant for our exercise. This assumption of constant tax administration
+
+
+
+                                                 18
+does not imply that improved tax administration is not important. Rather, it requires a new study
+
+that is beyond our scope.
+
+        The results are given in Appendix Table 2. We see that the average share of revenues to
+
+GDP rises from 20.4 percent to 21.1 percent. At the same time, real GDP declines initially, but
+
+by period 7 is slightly higher than in the base case. Inflation also declines slightly. It is
+
+interesting to note that there is a decline in tax compliance, as compared to the base case, as the
+
+increased sales tax has lowered the profitability of investment. Aggregate annual real income
+
+across all households over the 8 periods of the simulations remains virtually unchanged from the
+
+base case (0.04 percent higher). The urban sector sees a 0.03 percent increase in real income,
+
+while the rural sector sees a 0.04 percent increase in real income.
+
+45 Percent Corporate Income Tax Rate
+
+       As a further experiment, suppose we ask what would happen if we try to use a corporate
+
+income tax rate increase to achieve the same increase in tax revenue as was brought about by the
+
+17 percent sales tax. Accordingly, we will derive a corporate tax rate that depends endogenously
+
+upon the sales tax increase. Such an equivalent increase cannot be derived analytically, but must
+
+be determined by repeated simulations with different capital tax rates. As shown in Table 3, an
+
+increase in the corporate income tax from 35 to 45 percent leads to an average tax to GDP ratio
+
+of 21.1 percent, which is precisely what was generated by the 17 percent sales tax rate. At the
+
+same time, as might be expected, there is a significant deterioration in tax compliance, as the tax
+
+increase reduces the return to capital. Final period capital stocks are also lower across all
+
+sectors, leading to a reduced marginal product of labor.
+
+         The negative impact of the corporate tax increase causes aggregate real household
+
+income to be 1.0 percent lower than it was in the base. Rural consumption growth suffers
+
+
+
+                                                  19
+disproportionately, declining by 1.1 percent, while urban consumption declines considerably
+
+less, by 0.7 percent. This is largely due to the fact that the decline in capital has impacted the
+
+rural sector more severely than the urban sector. Additionally, the urban sector holds a
+
+preponderance of the stock of public and private debt and hence realizes an income increase
+
+from the capital gains on their bond holdings, as interest rates have decreased. We may thus
+
+conclude that, from a macro and household income point of view, the 17 percent sales tax rate is
+
+superior to the 45 percent corporate income tax rate in generating the same 21.1percent tax to
+
+GDP ratio.
+
+19 Percent Tariff
+
+         As a final example, we will experiment with a 5-percentage point increase in the tariff
+
+rate on imports, increasing it from 14 to 19 percent. The results of this simulation are given in
+
+Table 4. The average tax to GDP ratio, 21.0 percent, is virtually the same as with either the 17
+
+percent sales tax or the 45 percent corporate income tax.9 At the same time, the aggregate
+
+household real income is essentially unchanged (0.06 percent higher than in the base case). It is
+
+interesting to note that the tariff increase benefits the urban sector slightly more than the rural
+
+sector. Finally, the tariff increase has relatively little impact on the rates of tax evasion. This is
+
+intuitively clear, as imports are not domestically produced, so the increased tariff rate has little
+
+impact upon the rate of return to capital.
+
+         It would thus appear that for the macro economy the 17 percent sales tax has the best
+
+overall outcome of the various counter-factual policies. The 45 percent corporate income tax
+
+rate, which generates the same overall tax to GDP ratio as does the 17 percent sales tax, produces
+
+
+
+9
+ In order to achieve a precise 21.1 percent tax to GDP ratio, we need to set the tariff rate at 19.2 percent. Since this
+would seem to be an unrealistic rate for a real-world tariff rate, we set the rate at 19 percent, which brings us to
+total tax revenues of 21.0 of GDP, which we would claim is close enough for our comparison.
+
+                                                          20
+lower real GDP in all periods than does the sales tax increase. In addition, average real
+
+household income growth is lower with the corporate income tax increase than it is with the sales
+
+tax increase. Thus, a modest sales tax increase would appear to be our choice among revenue
+
+equivalent tax changes, if we consider only macro aggregates. If we turn to poverty indicators,
+
+we find certain additional results. This will be the subject of the next section.
+
+VI. Poverty Calculations
+
+       As noted in the previous section, three particular changes to the tax code are considered:
+
+a one percentage point increase in the General Sales Tax, a ten percentage point increase in the
+
+corporate tax rate, and a five percentage point increase in the tariff rate. Changing the corporate
+
+tax rate from 35 to 45 percent, and changing the GST from 16 to 17 percent are revenue
+
+equivalent policies, increasing revenue by 0.7 percentage points of GNP (from 20.4 percent in
+
+the baseline to 21.1 percent of GNP). Raising the tariff to 19 percent, from 14 percent, increases
+
+revenue by only 0.6 percentage points of GNP, while having a less favorable macro outcome
+
+than does the sales tax increase.
+
+       In this section, we allow the endogenous outputs of the CGE model, in particular the
+
+series of real consumption indices reported in Appendix Tables 1-4, to be entered as data inputs
+
+to our micro-simulation model of Pakistan households. We report the simulated effects of the
+
+tax reforms on two outcomes: 1) the average change in real consumption for each quintile
+
+(incidence), as well as the share of the benefits or burden accruing to each quintile of the
+
+consumption distribution (targeting performance), 2) the poverty rate, as compared to the
+
+baseline case. In order to calculate these outcomes, we apply the CGE generated growth rates in
+
+real household income uniformly within the corresponding household groups in the 2010-11
+
+Pakistani Social and Living Standards Measurement Survey (PSLM) to simulate the effect of the
+
+
+
+                                                 21
+four reforms.10 In each case, we compare the effects under the reform to the baseline scenario to
+
+assess the effects on household welfare, following a “top down” procedure in which the
+
+endogenous outcomes generated by the CGE model are fed into a micro-simulation model
+
+(MSM). This approach has been used extensively as a way of connecting the more aggregate
+
+outputs of CGE models with the detailed household data available in MSM models. A survey of
+
+such models is given in Feltenstein, Lopes, Porras-Mendoza, and Wallace (2014).
+
+Incidence and Targeting
+
+       First, we examine the implications of the model in terms of the incidence and targeting
+
+implications of the three proposed tax increases. Appendix Table 5, as well as the subsequent
+
+graphs, shows the average change in real consumption for each expenditure quintile under the
+
+alternative scenarios, in comparison to the baseline. The base case generates highest overall
+
+growth rate in real consumption. Of the alternative tax policies, raising the sales tax gives the
+
+highest aggregate level of real consumption. Thus, the real consumption is higher for each
+
+quintal with the 17 percent sales tax than it is with the 45 percent corporate income tax.
+
+Similarly, the sales tax increase generates higher aggregate real consumption than does the tariff
+
+increase, although all of the counterfactual scenarios have lower aggregate consumption levels
+
+than the base case. It is useful to look at the relative impacts of these alternative tax policies on
+
+different income categories. It is interesting to note that the lowest quintal suffers a greater
+
+consumption loss under the corporate tax increase than it does under either the sales tax or tariff
+
+increases, contradicting standard intuition. Similarly, it is useful to note that the highest quintal
+
+is impacted relatively more by the sales and tariff changes than any of the four lower quintals,
+
+
+
+
+10
+ The growth rate we use is the average growth rate of the simulated real income produced by the
+model in periods one through eight.
+                                                  22
+but is not affected by the corporate tax increase as much as is the third quintal. The negative
+
+impact of the corporate tax upon the lowest quintal is explained by the fact that the end of period
+
+sectoral capital stocks are considerably lower with the corporate income tax than with either of
+
+the other simulations (Appendix Tables 1-4), so that the marginal product of labor is also lower.
+
+This reduced marginal product, and hence wage, tends to impact the poorest households most
+
+severely since most of their income comes from labor. Thus, there seems to be strong support
+
+for the conclusion that the sales tax increase is welfare superior to the equal tax yield corporate
+
+tax increase, at least from the point of view of impact upon consumption.
+
+        Finally, it should be noted that the tariff increase leads to nearly as large an overall
+
+reduction in consumption as does the sales tax increase. This outcome occurs because although
+
+the sales tax impacts a broader set of consumption goods than does the import tariff, the tariff
+
+also directly affects the cost of production for many sectors of the economy. The resulting price
+
+increases are passed on to consumption.
+
+Poverty Rates
+
+       Over the past 15 years, Pakistan has made important progress in reducing poverty.
+
+According to the latest available household survey data, the incidence of poverty decreased from
+
+64.3 percent in 2001 to 29.5 percent in 2013 (See Figure 1). Despite a temporary setback
+
+between 2010 and 2011, poverty resumed its rapid decline thereafter. Poverty has declined in
+
+both urban and rural areas, although the headcount rate remains twice as high in the latter as in
+
+the former (36.9 percent vs. 18.2 percent).11
+
+
+
+
+11
+  Our estimates follow closely the official methodology, even though slight discrepancies may
+arise due to differences in data cleaning protocols.
+                                                  23
+        Pakistan’s poverty is determined using a standard methodology. The official poverty line
+
+used was defined in 2001 based on a food energy intake approach (minimum caloric intake of
+
+2,350 calories per adult equivalent per day), using 1999 data. The poverty line is currently
+
+updated using the inflation rate from the Consumer Price Index (CPI), and the consumption data
+
+comes from the integrated household study known as the Pakistan Social and Living Standards
+
+Measurement (PSLM) Survey. This survey is collected by the Pakistan Bureau of Statistics over
+
+an entire year, every three years.12
+
+        Despite the use of standard methods, poverty measurement in Pakistan is the subject of
+
+an ongoing controversy. The latest official estimate of poverty found that 29.5 percent of the
+
+total population was poor in 2013. There are several concerns among experts regarding the
+
+limitations of the current methodology. First, questions are raised about the appropriateness of
+
+using the CPI to deflate the poverty line, because the reference basket is based on a typical urban
+
+household, which spends a lower share of its budget on food than poor households in the PSLM.
+
+Since food prices have been increasing more than non-food prices, using the CPI underestimates
+
+the actual price increases faced by the poor, which leads poverty to be understated about 3
+
+percentage points (Newman 2013). Second, the most recent population census was carried out in
+
+1998, and the lack of a more recent sampling frame makes recent rounds of the PSLM less
+
+representative of the national population. In addition, it is particularly difficult to collect data in
+
+the province of Baluchistan because it is a vast territory with a highly dispersed population.13
+
+These are important methodological issues that should be addressed, but initial indications
+
+
+
+12
+   The first integrated household survey was implemented in 1998-99. Since then, consumption
+data was collected in 2001-02, 2004-05, 2005-06, 2007-08, 2010-11, and 2014-2015, and the
+consumption module has experienced minor changes.
+13
+   Additional concerns of lesser importance are the exclusion of durable goods from the poverty
+line and the fact that spatial deflation is based purely on food prices.
+                                                   24
+suggest that they will have a limited effect on both the decline in measured poverty and the
+
+simulated effects of changes to the tax code on poverty.14 Finally, we should note that for our
+
+simulations we choose a time period that is based upon the year after this most recent survey.
+
+Also, we have used an 8 period out of sample simulation, since adding more periods would not
+
+seem to add additional information. Finally, our results are based upon the single household
+
+study discussed earlier. It would, of course, be better if we had access to other household
+
+surveys, so as to test the robustness of our results. However, we are limited to this single survey.
+
+        How do the simulated tax reforms affect poverty in the model? For each of the four tax
+
+reform scenarios, Appendix Table 6 presents estimates of the percentage point change in poverty
+
+headcount relative to the baseline. In the baseline simulation, the share of poverty in the
+
+economy slowly increases over the first 4 years of the simulation and then declines to
+
+approximately its original level, the sharp decline in the final year is a result of the closure rule in
+
+the model and is not relevant. Rises in the sales tax rate and the tariff rate have similar, and very
+
+slight negative impacts upon the shares of poverty, as compared to the baseline case. When the
+
+higher corporate tax is imposed, the share of the population in poverty is, on average, 1.15
+
+percent higher than in the base case. The reasons for these differential impacts upon poverty are
+
+essentially the same as those that explain the consumption changes. The increase in the
+
+corporate tax rate severely lowers the rate of capital formation, thereby reducing the marginal
+
+product of labor and thereby causing all sectors of society, but especially the poor, to realize a
+
+
+
+
+14
+   Although the sample frame is old, it is only used to sample villages in the first stage. Thus, the
+PSLM samples are only failing to capture new villages, largely in peri-urban areas. With respect
+to Baluchistan, the recent wild fluctuations in poverty rates have had a limited impact on national
+poverty trends because Baluchistan only contains roughly 5 percent of the nation’s population.
+Finally, while the poverty line is old, the measured reduction in poverty is robust to a wide
+variety of poverty lines, including the $1.25 per day used by the World Bank.
+                                                  25
+negative income effect. Hence poverty increases relative to the base case. Thus, based upon
+
+the impact on poverty, we would again rank the sales tax rate increase as superior to the equal
+
+yield corporate tax increase, since it generates a slightly greater, if very small, improvement in
+
+poverty rates, while generating higher tax revenues.
+
+        As a final measure of the relative benefits of the different tax reforms, we have also
+
+estimated inequality, as measured by the Gini coefficient. Table 7 gives the Gini coefficients for
+
+the baseline case, as well as each of the policy reform scenarios. If we consider the part of the
+
+table that shows changes in the Gini coefficient relative to the baseline, we see that the
+
+coefficient declines in both the case of the sales tax increase, as well as that of the tariff increase,
+
+although the changes are quite small. These decreases would indicate that inequality declines in
+
+both cases. The corporate tax simulation, on the other hand, causes the Gini coefficients to
+
+increase on average, indicating a worsening in the measure of inequality. Thus, the corporate
+
+income tax increase appears to be worse in terms of poverty impacts than do either of the other
+
+two tax changes.
+
+
+
+
+                                                   26
+                                           Figure 1. Poverty Headcount Rate, 2001 - 2013
+
+
+                                      100%
+Percent of the population under the national
+
+
+
+                                               90%
+                                               80%
+                                               70%
+                                                     64.3%
+                                               60%
+                poverty line
+
+
+
+
+                                               50%                 51.7% 50.4%
+                                                                                       44.1%
+                                               40%
+                                                                                                       36.8% 36.3%
+                                               30%                                                                   29.5%
+                                               20%
+                                               10%
+                                               0%
+
+
+
+                                                         Year      Urban         Rural         Total
+
+
+                                           Note: Author’s calculation using PSLM 2001, 2004, 2007 and 2010.
+
+
+
+
+                                                                                  27
+VII. Conclusions
+
+       This paper examines the potential effects of changes to the tax code on income
+
+distribution and welfare in Pakistan. It relies on a top-down approach, where the outputs of a
+
+dynamic CGE model are used as inputs into a micro-simulation model based on household data.
+
+In particular, the estimated effects on the income of 18 household groups taken from the model
+
+were applied uniformly to the per capita consumption of each group in the 2011 Pakistan Living
+
+Standards Measurement Survey. This approach imposes strong assumptions and is constrained
+
+by the nature of the Social Accounting Matrix that underpins the numerical implementation of
+
+the CGE model, as well by the structure of the CGE model itself. However, the set of
+
+assumptions nonetheless provides a useful and logically consistent framework for considering
+
+how tax reforms may affect the poor.
+
+       The most striking result is that an equal yield increase in the corporate and sales tax rates
+
+has quite different impacts upon consumption and poverty in the model. Due to its significant
+
+negative impact upon capital formation, the increased corporate income tax has to be raised by
+
+10 percentage points to generate an equivalent yield as a 1 percentage point increase in the sales
+
+tax, which lowers the rate of capital formation. The lower marginal product of labor and
+
+corresponding negative income effect tend to increase poverty, relative to both the base case as
+
+well as to the case in which the sales tax rate is increased. This result may be a reflection of the
+
+assumptions made in the model, namely that the general equilibrium model incorporates
+
+endogenous evasion of the corporate income tax as optimizing behavior. This tax evasion causes
+
+corporate profit taxes to be relatively less effective in raising revenues than are sales taxes. As
+
+noted earlier in the paper, we do not incorporate evasion of the sales, personal income, or trade
+
+taxes. Accordingly, our results should be taken with caution because of this omission.
+
+
+
+                                                  28
+       Increasing the tariff rate by 5 percentage points yields almost the same revenue increase
+
+as the two other hypothetical changes (21.0 percent of GDP on average versus 21.1 percent for
+
+the sales and corporate tax increases). Footnote 9 discusses the reason for why the tax to GDP
+
+ratios are not precisely the same The tariff increase has a similar welfare effect, both in terms of
+
+consumption and poverty, to the sales tax increase. However, the tariff increase generates a
+
+lower average rate of real GDP growth, as well as final period real GDP, than does the sales tax
+
+increase. None of the alternative tax scenarios generates significant income redistribution, a
+
+result that is consistent with the theoretical argument that very little income redistribution is
+
+possible through indirect taxation (Sah 1983). Ultimately, we conclude that, given Pakistan’s
+
+goal of increasing tax revenue, a uniform sales tax increase is the superior tax instrument,
+
+assuming that the government also wishes to reduce negative impacts on poverty.
+
+
+
+
+                                                  29
+APPENDIX 1: GENERAL EQUILIBRIUM SIMULATIONS
+   Table 1: BASE CASE (BASED ON 2010)
+  YEAR                            1                        2           3          4           5           6          7           8
+  REAL GDP                       100                      100       98.7        102.4       109.7       114.2      119.8       124.6
+  NOMINAL GDP                    100                     120.4      129.6       146.4       175.9       192.3      233.3        241
+  PRICE LEVEL                    100                     120.4      131.3        143        160.3       168.4      194.7       193.4
+  INFLATION                        0                      20.4         9         8.9        12.1           5       15.6         -0.7
+  TAX REVENUES/GDP              22.3                     21.5         21        20.3        20.2        19.5       19.8          19
+  GOV. EXPENDITURES/GDP         36.6                     33.6       30.4        28.9        27.8          27       26.5        26.7
+  GOVERNMENT DEFICIT            -14.3                    -12.1       -9.4        -8.6        -7.6        -7.5       -6.7        -7.7
+  INTEREST RATE                 21.6                      6.3        5.6         3.9         4.1         2.6        2.7         1.6
+  EXPORTS/GDP                   15.7                     16.1       17.2        18.7        18.4        20.8       20.1        24.3
+  IMPORTS/GDP                     21                      20.7      20.7        19.9        19.2        18.5         18        17.2
+  TRADE DEFICIT/GDP              -5.2                     -4.5       -3.5        -1.2        -0.8        2.4        2.2         7.1
+  SHARE OF SECTOR PAYING TAXES (normalized)
+  PERIOD          2     4    6       8
+  SECTOR 1       100   100  100     100 SECTOR 1=LIGHT MANUFACTURING
+  SECTOR 2       100   100  100     100 SECTOR 2=HEAVY INDUSTRY
+  SECTOR 3       100   100  100     100 SECTOR 3=ELECTRICITY,WATER, SEWAGE
+  SECTOR 4       100   100  100     100 SECTOR 4=TRANSPORT
+  SECTOR 5       100   100  100     100 SECTOR 5=HOTELS, HOUSING, HEALTH SERVICES
+  REAL INCOME (PERIOD) 1/                         1          2            3          4          5            6          7           8
+  Urban quintile 1                              3.68       3.58         3.91       3.93        4.42        4.52       4.69        4.92
+  Urban quintile 2                              5.71       5.25         5.39       5.44        5.71        5.88       5.87        6.19
+  Urban other                                   31.72      29.5         25.06      25.33      26.11       26.94       26.59       28.06
+  Med farm Sindh                                3.45       3.91         5.32       5.41        6.87        6.98       8.38        8.46
+  Med farm Punjab                               16.73      16.77        17.53       18         19.1       19.66       21.37       21.85
+  Med farm OthPak                               4.07        3.6         3.69        3.8        3.89        4.02       4.26        4.37
+  Small farm Sindh                              3.18       2.88          2.95      3.03        3.18        3.28       3.52        3.61
+  Small farm Punjab                             5.56       5.93         5.82       5.94        6.63        6.79       7.49        7.67
+  Small farm OthPak                             3.42       3.37          3.58      3.65        4.17        4.26       4.75        4.86
+  Landless Farmer Sindh                          1.2        1.2         1.36       1.39        1.64        1.67       1.92        1.95
+  Landless Farmer Punjab                        1.07       1.29         1.52       1.55        1.87        1.91        2.2        2.24
+  Landless Farmer OthPak                        0.46       0.48         0.55       0.55        0.67        0.68       0.78         0.8
+  Waged rural landless farmers Sindh            2.58       2.34         2.28       2.32        2.36        2.44       2.45        2.56
+  Waged rural landless farmers Punjab           3.32       2.91         2.65        2.7        2.58        2.67       2.55        2.69
+  Waged rural landless farmers OthPak           2.43       2.81         2.93       2.98        3.09        3.19       3.24        3.38
+  Rural non-farm quintile 1                     3.01       2.93         2.91       2.93        3.22        3.31        3.4        3.57
+  Rural non-farm quintile 2                     3.65       3.63         3.68       3.81        4.14        4.38        4.4        4.79
+  Rural non-farm other                          7.33       7.31          6.6       7.17        7.87        8.44       9.14         9.9
+  TOTAL                                        102.57      99.7         97.73      99.91      107.53      111.03     117.01      121.88
+1/ These should be interpreted as index numbers that have relative significance, but are not connected to current monetary values.
+
+  SECTORAL CAPITAL PERIOD 8 1/
+  (Stock; relative to base case)
+  SECTOR 1             100       SECTOR 3            100     SECTOR 5           100
+  SECTOR 2             100       SECTOR 4            100
+
+                                                                   30
+Table 2: Sales Tax = 17%
+ YEAR                               1        2             3           4          5            6           7           8
+ REAL GNP                          99.6     99.8        98.7        102.2       109.2       113.8       120.2       126.7
+ Nominal GDP                       97.9    117.8        126.1       142.7       169.8       185.9       225.1       235.6
+ PRICE LEVEL                       98.3    118.1        127.9       139.6       155.6       163.4       187.3       185.9
+ INFLATION                         0.0      20.1          8.3         9.2       11.4          5.1       14.6         -0.7
+ TAX REVENUES/GDP                  23.0     22.3        21.7        20.9        20.9        20.1        20.4        19.6
+ GOV. EXPENDITURES/GDP             37.2     34.1        30.7        29.1        28.1        27.2        26.6        26.4
+ GOVERNMENT DEFICIT               -14.2    -11.8         -9.0        -8.2        -7.2        -7.0        -6.2        -6.8
+ INTEREST RATE                    21.3      6.4          5.5         3.8         3.6         2.4         2.4         1.4
+ EXPORTS/GDP                       16.1     16.5        17.6        19.2        18.9        21.4        20.6        24.5
+ IMPORTS/GDP                       21.2     20.9        21.0        20.1        19.5        18.7        18.3        17.5
+ TRADE DEFICIT/GDP                 -5.2     -4.5         -3.4        -1.0        -0.5         2.7         2.4         7.0
+ CHANGE IN TAX COMPLIANCE FROM BASE CASE (PERCENT)
+ PERIOD      2    4    6    8
+ SECTOR 1    0    0    0    0   SECTOR 1=LIGHT MANUFACTURING
+ SECTOR 2   -4.3 -4.5 -3.7 -6.9 SECTOR 2=HEAVY INDUSTRY
+ SECTOR 3    0   -4.9 -6.5 -8.7 SECTOR 3=ELECTRICITY,WATER, SEWAGE
+ SECTOR 4   -1.5 -2.4 -1.7 -2.2 SECTOR 4=TRANSPORT
+ SECTOR 5   1.5 -5.2 -4.8 -5.7 SECTOR 5=HOTELS, HOUSING, HEALTH SERVICES
+ REAL INCOME (PERIOD)                       1     2             3           4           5           6           7           8
+ Urban quintile 1                         3.68  3.57        3.91        3.93        4.42        4.51         4.7         4.97
+ Urban quintile 2                         5.72  5.25         5.4        5.46        5.72        5.87        5.89         6.25
+ Urban other                              31.62 29.37       25.01      25.34       26.12       26.85       26.64        28.33
+ Med farm Sindh                           3.45   3.9        5.29         5.4        6.84        6.91        8.33         8.45
+ Med farm Punjab                          16.86 16.87       17.57       18.09       19.09       19.57       21.3        21.91
+ Med farm OthPak                          4.11  3.63        3.71        3.82        3.89          4         4.25         4.39
+ Small farm Sindh                         3.21   2.9        2.96        3.05        3.18        3.26        3.51         3.62
+ Small farm Punjab                        5.56  5.93        5.81        5.95        6.61        6.75        7.47         7.69
+ Small farm OthPak                        3.43  3.37        3.57        3.65        4.16        4.23        4.73         4.87
+ Landless Farmer Sindh                    1.21   1.2        1.36        1.39        1.63        1.66        1.91        1.95
+ Landless Farmer Punjab                   1.07  1.28        1.52        1.54        1.87        1.89        2.19        2.25
+ Landless Farmer OthPak                   0.46  0.48        0.54        0.55        0.67        0.68        0.78         0.8
+ Waged rural landless farmers Sindh        2.6  2.35        2.28        2.33        2.37        2.43        2.46        2.59
+ Waged rural landless farmers Punjab      3.34  2.92        2.66        2.72        2.58        2.67        2.56        2.72
+ Waged rural landless farmers OthPak      2.44  2.82        2.94          3          3.1        3.18        3.25        3.41
+ Rural non-farm quintile 1                3.01  2.92        2.91        2.93        3.22        3.29         3.4         3.6
+ Rural non-farm quintile 2                3.65  3.62        3.68        3.81        4.14        4.37        4.41        4.83
+ Rural non-farm other                     7.32   7.3        6.59        7.17        7.85         8.4        9.11        9.96
+ TOTAL                                   102.72 99.69       97.71      100.12      107.44      110.53      116.91       122.6
+ SECTORAL CAPITAL (relative to base case)
+ PERIOD 8
+ SECTOR 1 100 SECTOR 3               99.23 SECTOR 5       100.06
+ SECTOR 2 100 SECTOR 4 100.13
+
+                                                    31
+Table 3: Corporate tax =45%
+YEAR                                        1        2             3        4        5        6        7         8
+REAL GNP                                 98.8     99.1          97.9    101.5    108.8    113.7    119.6    126.4
+Nominal GDP                              96.8    114.5         120.7    134.2    158.3    170.3    204.7      210
+PRICE LEVEL                                 1      1.2           1.2      1.3      1.5      1.5      1.7       1.7
+INFLATION                                   0     17.9           6.7      7.3     10.1        3     14.3     -2.9
+TAX REVENUES/GDP                         23.2     22.4          21.7     20.9     20.8       20     20.2     19.3
+GOV. EXPENDITURES/GDP                    37.5     34.8          30.6     29.3     27.7     27.1     26.3     26.5
+GOVERNMENT DEFICIT                      -14.3    -12.4          -8.8     -8.4     -6.9     -7.1     -6.1     -7.2
+INTEREST RATE                            20.2      5.6           4.7        3      3.1      1.9        2      1.1
+EXPORTS/GDP                              16.3       17          18.1     20.4     19.4     22.4     21.1     25.7
+IMPORTS/GDP                              21.3     21.1          21.3     20.2     19.6     19.1     18.7     18.1
+TRADE DEFICIT/GDP                          -5     -4.1          -3.1      0.2     -0.2      3.3      2.4      7.6
+
+CHANGE IN TAX COMPLIANCE FROM BASE CASE (PERCENT)
+PERIOD      2     4     6     8
+SECTOR 1    0     0     0     0   SECTOR 1=LIGHT MANUFACTURING
+SECTOR 2   -44  -48.1 -50.8 -55.9 SECTOR 2=HEAVY INDUSTRY
+SECTOR 3 -37.7 -39.6 -40.2 -42.7 SECTOR 3=ELECTRICITY,WATER, SEWAGE
+SECTOR 4 -38.4 -41.3   -44  -45.8 SECTOR 4=TRANSPORT
+SECTOR 5 -41.9 -46.8 -48.9 -52.1 SECTOR 5=HOTELS, HOUSING, HEALTH SERVICES
+
+                                        1        2             3        4         5        6        7       8
+REAL INCOME (PERIOD)
+Urban quintile 1                       3.63     3.54          3.86      3.9      4.39     4.52     4.69       5
+Urban quintile 2                       5.67     5.23          5.34     5.44      5.69      5.9     5.89    6.31
+Urban other                            30.98    28.93         24.57    25.05    25.88    26.87    26.58    28.51
+Med farm Sindh                         3.46     3.89          5.22      5.3      6.68     6.76     8.12     8.24
+Med farm Punjab                        16.87    16.91         17.38    17.92     18.74    19.32    20.87   21.53
+Med farm OthPak                        4.12     3.65          3.67     3.79      3.83     3.96     4.17     4.32
+Small farm Sindh                       3.21     2.91          2.93     3.02      3.13     3.23     3.44     3.56
+Small farm Punjab                      5.51      5.9          5.72     5.85      6.48     6.65     7.32     7.56
+Small farm OthPak                      3.41     3.35          3.52      3.6      4.08     4.18     4.65      4.8
+Landless Farmer Sindh                   1.2      1.2          1.34     1.37       1.6     1.63     1.87    1.91
+Landless Farmer Punjab                 1.06     1.28          1.49     1.52      1.83     1.86     2.15     2.2
+Landless Farmer OthPak                 0.45     0.48          0.53     0.54      0.66     0.67     0.77    0.79
+Waged rural landless farmers Sindh     2.58     2.34          2.26     2.31      2.34     2.43     2.44    2.59
+Waged rural landless farmers Punjab    3.32     2.92          2.63     2.71      2.57     2.69     2.56    2.74
+Waged rural landless farmers OthPak    2.42     2.82          2.91     2.98      3.07     3.18     3.23    3.41
+Rural non-farm quintile 1              2.96     2.89          2.86      2.9       3.2      3.3     3.39    3.62
+Rural non-farm quintile 2               3.6     3.58          3.63     3.78      4.11     4.38      4.4    4.87
+Rural non-farm other                   7.24     7.25          6.47     7.06      7.69     8.29     8.93     9.84
+TOTAL                                 101.68    99.07         96.34    99.05    105.93   109.81   115.47   121.8
+SECTORAL CAPITAL (relative to base case)
+PERIOD 8
+SECTOR 1  97.88 SECTOR 3        92.62 SECTOR 5            99.26
+SECTOR 2  99.99 SECTOR 4        99.44
+                                                         32
+Table 4: Tariff = 19 percent
+  YEAR                              1        2         3          4        5        6       7         8
+  REAL GNP                        99.9      100     98.9       102.4    109.6     114     120.4    126.6
+  Nominal GDP                     99.8     119.7    128.7      145.1    173.9    189.6    230.8    240.3
+  PRICE LEVEL                       1       1.2      1.3         1.4      1.6     1.7      1.9      1.9
+  INFLATION                         0      19.9      8.7         8.9      12      4.9     15.3       -1
+  TAX REVENUES/GDP                22.8     22.1     21.5       20.8     20.7      20      20.3     19.5
+  GOV. EXPENDITURES/GDP           36.6     33.7     30.4       28.9     27.8      27      26.4     26.4
+  GOVERNMENT DEFICIT              -13.8    -11.6     -8.9       -8.1     -7.1      -7      -6.1     -6.9
+  INTEREST RATE                   21.3      6.2      5.5         3.7      3.8     2.5      2.5      1.4
+  EXPORTS/GDP                     14.9     15.3     16.2       17.7     17.4     19.8       19     22.7
+  IMPORTS/GDP                     20.5     20.2     20.3       19.4     18.8     18.1     17.6     16.9
+  TRADE DEFICIT/GDP                -5.6     -4.9      -4        -1.7     -1.3     1.7      1.4      5.8
+  CHANGE IN TAX COMPLIANCE FROM BASE CASE (PERCENT)
+  PERIOD         2    4    6     8
+  SECTOR 1       0    0    0     0 SECTOR 1=LIGHT MANUFACTURING
+  SECTOR 2    -4.2  0.5  2.6  -2.1 SECTOR 2=HEAVY INDUSTRY
+  SECTOR 3       0 -2.3 -3.2    -5 SECTOR 3=ELECTRICITY,WATER, SEWAGE
+  SECTOR 4    -0.7 -0.8 -0.5  -1.9 SECTOR 4=TRANSPORT
+  SECTOR 5     4.8 -1.9 -3.8  -2.5 SECTOR 5=HOTELS, HOUSING, HEALTH SERVICES
+                                               1     2         3        4        5        6        7        8
+  REAL INCOME (Period)
+  Urban quintile 1                          3.69  3.58       3.91     3.94     4.41     4.52     4.69     4.96
+  Urban quintile 2                          5.72  5.25       5.39     5.45     5.71     5.88     5.87     6.24
+  Urban other                              31.74 29.49      25.04    25.38    26.08    26.92    26.58    28.29
+  Med farm Sindh                            3.45  3.91       5.31     5.41     6.86     6.95     8.36     8.49
+  Med farm Punjab                          16.74  16.8      17.52    18.04    19.08    19.62    21.32    21.95
+  Med farm OthPak                           4.07  3.61       3.69     3.81     3.89     4.01     4.25     4.39
+  Small farm Sindh                          3.18  2.89       2.95     3.04     3.18     3.27     3.51     3.62
+  Small farm Punjab                         5.56  5.93       5.81     5.95     6.61     6.77     7.48      7.7
+  Small farm OthPak                         3.42  3.37       3.58     3.65     4.16     4.25     4.74     4.88
+  Landless Farmer Sindh                      1.2  1.21       1.36     1.39     1.64     1.67     1.91     1.96
+  Landless Farmer Punjab                    1.07  1.29       1.52     1.55     1.87      1.9      2.2     2.25
+  Landless Farmer OthPak                    0.46  0.48       0.54     0.55     0.67     0.68     0.78      0.8
+  Waged rural landless farmers Sindh        2.58  2.34       2.28     2.32     2.36     2.44     2.45     2.58
+  Waged rural landless farmers Punjab       3.32  2.91       2.65     2.71     2.57     2.67     2.55     2.72
+  Waged rural landless farmers OthPak       2.43  2.82       2.93     2.99     3.09     3.18     3.24     3.41
+  Rural non-farm quintile 1                 3.02  2.93       2.91     2.93     3.22      3.3      3.4     3.59
+  Rural non-farm quintile 2                 3.66  3.63       3.68     3.82     4.13     4.38      4.4     4.83
+  Rural non-farm other                      7.32  7.31       6.59     7.17     7.86     8.42     9.12     9.96
+  TOTAL                                   102.65 99.76      97.67   100.08   107.37   110.84   116.86   122.63
+  SECTORAL CAPITAL (relative to base case)
+  PERIOD 8
+  SECTOR 1        99.9 SECTOR 3        99.5 SECTOR 5     100
+  SECTOR 2         100 SECTOR 4       100.1
+                                                    33
+Table 5: Consumption under Alternative Tax Regimes 1/
+
+ Baseline
+  Quintile    2013      2014      2015       2016        2017     2018     2019       2020
+     1       2227.1    2174.4    2246.1     2274.1      2436.6   2495.0   2534.8     2632.7
+     2       3038.6    2901.8    2801.5     2830.3      2979.4   3058.4   3078.6     3221.3
+     3       3796.0    3655.1    3353.8     3387.0      3503.8   3585.3   3595.3     3733.3
+     4       4805.7    4655.8    4395.7     4427.3      4561.9   4638.3   4673.1     4807.3
+     5       8564.0    8417.9    8257.4     8297.1      8608.0   8697.7   8948.6     9092.1
+
+ Sales Tax Increase
+  Quintile    2013      2014      2015       2016        2017     2018     2019       2020
+     1       2225.0    2168.8    2243.4     2276.5      2436.8   2488.7   2537.9     2649.2
+     2       3040.6    2897.9    2799.6     2835.0      2980.8   3050.6   3084.0     3247.2
+     3       3789.0    3645.2    3349.6     3388.9      3503.8   3576.1   3598.8     3756.1
+     4       4798.4    4646.0    4391.0     4428.3      4560.5   4627.9   4675.7     4829.4
+     5       8557.3    8407.2    8250.4     8296.9      8600.5   8678.1   8945.1     9113.4
+
+
+ Corporate Tax Increase
+  Quintile    2013        2014     2015       2016        2017     2018     2019       2020
+     1      2203.4      2155.2   2218.7     2260.5      2420.5   2489.7   2531.9     2658.4
+     2      3015.0      2880.1   2765.2     2813.9      2960.7   3055.2   3078.6     3265.0
+     3      3742.7      3611.8   3310.9     3362.4      3479.6   3575.4   3589.4     3768.3
+     4      4745.4      4612.2   4354.0     4401.2      4534.8   4624.2   4661.1     4835.5
+     5      8496.1      8369.4   8206.1     8259.3      8551.0   8653.6   8892.5     9081.9
+
+
+ Tariff Increase
+  Quintile      2013     2014      2015       2016        2017     2018     2019       2020
+      1       2229.9   2175.2    2245.4     2277.8      2434.4   2493.1   2533.8     2647.2
+      2       3041.6   2902.7    2800.9     2835.8      2976.3   3056.2   3077.6     3243.3
+      3       3797.6   3654.6    3352.5     3391.6      3500.6   3582.7   3594.0     3753.3
+      4       4807.6   4655.8    4394.2     4431.2      4558.7   4635.4   4671.2     4827.5
+      5       8566.6   8418.9    8255.0     8300.6      8602.4   8691.2   8942.6     9117.0
+1/ The units of measurement are billions of real 2013 Pakistan Rs. (National accounts Main
+Aggregates at current prices), Table 2, 2017.
+
+
+
+
+                                             34
+Quintile 1: Comparison of Tax Regimes to the Baseline
+  Quintile1                          2013           2014          2015        2016            2017        2018      2019     2020
+  Baseline                               0              0             0           0               0           0         0        0
+  Sales Tax Increase                 -0.09          -0.26         -0.12        0.11            0.01       -0.25      0.12    0.63
+  Corporate Tax Increase             -1.07          -0.88         -1.22       -0.60           -0.66       -0.21     -0.12     0.98
+  Tariff Increase                     0.12           0.03         -0.03        0.16           -0.09       -0.08     -0.04     0.55
+
+
+                         Quintile 1: Comparison of tax regimes to the baseline
+              1
+
+            0.5
+
+              0
+                     2013      2014         2015       2016        2017       2018        2019        2020
+           -0.5
+
+             -1
+
+           -1.5
+
+                                   Baseline                          Sales Tax Increase
+                                   Corporate Tax Increase            Tariff Increase
+
+
+Quintile 2: Comparison of Tax Regimes to the Baseline
+ Quintile2                          2013           2014          2015        2016         2017           2018       2019    2020
+ Baseline                               0              0             0           0            0              0          0       0
+ Sales Tax Increase                  0.06          -0.13         -0.07        0.17         0.05          -0.26       0.17   0.80
+ Corporate Tax Increase             -0.78          -0.75         -1.30       -0.58        -0.63          -0.10       0.00    1.36
+ Tariff Increase                     0.10           0.03         -0.02        0.20        -0.10          -0.07      -0.03    0.68
+
+
+                               Quintile 2: Comparison of tax regimes to the baseline
+                    1
+
+                  0.5
+
+                    0
+                            2013      2014         2015       2016        2017         2018       2019       2020
+                  -0.5
+
+                   -1
+
+                  -1.5
+
+                                        Baseline                           Sales Tax Increase
+                                        Corporate Tax Increase             Tariff Increase
+
+
+
+
+                                                            35
+Quintile 3: Comparison of Tax Regimes to the Baseline
+ Quintile 3                    2013           2014         2015       2016         2017     2018    2019    2020
+ Baseline                          0              0            0          0            0        0       0       0
+ Sales Tax Increase            -0.18          -0.27        -0.13       0.06         0.00    -0.25    0.10   0.61
+ Corporate Tax Increase        -1.40          -1.18        -1.28      -0.72        -0.69    -0.27   -0.17    0.94
+ Tariff Increase                0.04          -0.01        -0.04       0.14        -0.09    -0.07   -0.04    0.53
+
+
+
+                      Quintile 3: Comparison of tax regimes to the baseline
+              1
+            0.5
+              0
+                   2013     2014       2015       2016       2017      2018        2019    2020
+           -0.5
+             -1
+           -1.5
+             -2
+
+                              Baseline                        Sales Tax Increase
+                              Corporate Tax Increase          Tariff Increase
+
+
+Quintile 4: Comparison of Tax Regimes to the Baseline
+ Quintile 4                    2013           2014         2015       2016         2017     2018    2019    2020
+ Baseline                          0              0            0          0            0        0       0       0
+ Sales Tax Increase            -0.15          -0.21        -0.11       0.02        -0.03    -0.22    0.05   0.46
+ Corporate Tax Increase        -1.26          -0.94        -0.95      -0.59        -0.59    -0.30   -0.26    0.59
+ Tariff Increase                0.04           0.00        -0.03       0.09        -0.07    -0.06   -0.04    0.42
+
+
+                      Quintile 4: Comparison of tax regimes to the baseline
+              1
+
+            0.5
+
+              0
+                   2013     2014       2015       2016       2017      2018        2019    2020
+           -0.5
+
+             -1
+
+           -1.5
+
+                              Baseline                        Sales Tax Increase
+                              Corporate Tax Increase          Tariff Increase
+
+
+
+
+                                                      36
+Quintile 5: Comparison of Tax Regimes to the Baseline
+  Quintile 5                         2013          2014         2015       2016         2017      2018         2019     2020
+  Baseline                               0             0            0          0            0         0            0        0
+  Sales Tax Increase                 -0.08         -0.13        -0.08       0.00        -0.09     -0.23        -0.04     0.23
+  Corporate Tax Increase             -0.79         -0.58        -0.62      -0.46        -0.66     -0.51        -0.63    -0.11
+  Tariff Increase                     0.03          0.01        -0.03       0.04        -0.07     -0.08        -0.07     0.27
+
+
+                           Quintile 5: Comparison of tax regimes to the baseline
+            1
+
+
+
+
+            0
+                    2013      2014      2015         2016        2017      2018        2019     2020
+
+
+
+           -1
+                                  Baseline                        Sales Tax Increase
+                                  Corporate Tax Increase          Tariff Increase
+
+
+Change in Total from the Baseline
+  Change in total from base       Baseline   Sales Tax Increase         Corporate Tax Increase        Tariff Increase
+  Quintile 1                         0              -1.93                       -2.39                      -1.88
+  Quintile 2                         0              -1.85                       -2.27                      -1.86
+  Quintile 3                         0              -1.97                       -2.54                      -1.90
+  Quintile 4                         0              -1.98                       -2.48                      -1.92
+  Quintile 5                         0              -2.01                       -2.49                      -1.94
+                                     Change in total from the baseline
+                1
+
+                0
+                     Quintile 1       Quintile 2       Quintile 3        Quintile 4      Quintile 5
+             -1
+
+             -2
+
+             -3
+
+                                  Baseline                        Sales Tax Increase
+                                  Corporate Tax Increase          Tariff Increase
+
+
+
+
+                                                           37
+Average 8 period deviation of consumption of quintals under different regimes
+
+    Quintile           Baseline          Sales tax                Corporate tax              Tariff
+       1                0.00               0.03                      -0.43                   0.08
+       2                0.00               0.11                      -0.32                   0.10
+       3                0.00              -0.01                      -0.59                   0.06
+       4                0.00              -0.02                      -0.53                   0.04
+       5                0.00              -0.05                      -0.54                   0.02
+     Total              0.00              -0.01                      -0.51                   0.05
+
+
+
+                       Average 8 period deviation of consumption of quintals under
+                                            different regimes
+               0.20
+
+               0.00
+                       Quintile 1   Quintile 2      Quintile 3    Quintile 4   Quintile 5
+               -0.20
+
+               -0.40
+
+               -0.60
+
+                             Baseline            Sales tax         Corporate tax            Tariff
+
+
+
+
+                                                             38
+Table 6: Share of Overall Poverty in the Economy and Deviation of Counterfactual Cases from Baseline (In Percent)
+
+
+ Share                                                             Deviation from Baseline
+    Year    Baseline    Sales tax   Corporate tax         Tariff               Year Baseline   Sales tax   Corporate tax      Tariff
+    2013       29.5         29.4            30.0          29.4               2013        0.0       -0.3            1.6        -0.3
+    2014       33.3         33.5            34.2          33.3               2014        0.0        0.7            2.8         0.0
+    2015       40.8         40.8            42.5          40.8               2015        0.0        0.1            4.3         0.2
+    2016       39.3         39.0            40.1          39.0               2016        0.0       -0.9            1.8        -0.8
+    2017       32.3         32.3            33.4          32.5               2017        0.0       -0.2            3.4         0.7
+    2018       27.9         28.4            28.1          28.0               2018        0.0        1.7            0.4         0.4
+    2019       26.9         26.6            26.9          27.0               2019        0.0       -1.2            0.0         0.3
+    2020       19.6         18.4            17.5          18.6               2020        0.0       -6.4          -10.8        -5.3
+ Average       31.2         31.0            31.6          31.1            Average        0.0       -0.5            1.2        -0.4
+
+Table 7: Inequality as Measured by the Gini Coefficient
+
+                                                                            Change relative to
+  Gini Coefficient                                                          baseline (percent)
+  Year         Baseline Sales Tax Corp Tax       Tariff                   Year       Baseline Sales tax    Corp tax           Tariff
+        2013       29.73     29.73         29.84    29.72                    2013        0.0%         0.0%             0.3%      -0.1%
+        2014       30.27     30.30         30.38    30.27                    2014        0.0%         0.1%             0.3%       0.0%
+        2015       30.52     30.53         30.72    30.52                    2015        0.0%         0.0%             0.7%       0.0%
+        2016       30.25     30.22         30.33    30.22                    2016        0.0%        -0.1%             0.2%      -0.1%
+        2017       29.63     29.61         29.68    29.64                    2017        0.0%        -0.1%             0.2%       0.0%
+        2018       29.18     29.20         29.13    29.19                    2018        0.0%         0.1%            -0.2%       0.0%
+        2019       29.53     29.48         29.43    29.52                    2019        0.0%        -0.2%            -0.3%       0.0%
+        2020       28.81     28.69         28.51    28.72                    2020        0.0%        -0.4%            -1.0%      -0.3%
+  Average          29.73     29.73         29.84    29.72                 Average        0.0%         0.0%             0.3%      -0.1%
+
+
+
+
+                                                                   39
+Appendix 2: Data Sources
+
+Production
+
+        The input-output (IO) matrix is taken from the social accounting matrix (SAM)
+
+developed in Debowicz et al (2013), where we use the tab PSAM2C to derive the matrix
+
+representing 2010 technology. The IO matrix is 50x50, but in order to simplify computations we
+
+have aggregated the matrix to 27x27, where row and column 27 represent a single aggregate
+
+import. Sectoral value-added functions are assumed to be Cobb-Douglas, with shares of the 5
+
+different types of capital, urban and rural labor, and land giving the weights in the valued added
+
+function. These are also derived from PSAM2C. We have not directly estimated sectoral
+
+investment functions. Rather, we have assumed that the investment function, as in equation (2)
+
+is uniform across the 5 types of sectoral capital and is given by the value-added function for the
+
+construction industry, taken from the SAM. Rates of investment will differ across capital types
+
+because of the differing rates of return to capital in different sectors. Finally, the coefficients
+
+ , representing the tax evasion and credit rationing in equations (3), (4) are taken to be uniform
+
+across sectors and are determined from calibration. For this exercise, we have assumed that 	 =
+
+0, that is, no credit rationing.
+
+
+Consumption
+
+
+        For the utility function described in equation (5), Appendix 3, we use weights derived
+
+from the SAM, tab EH. This gives shares of consumption for each household type, and we
+
+assume Cobb-Douglas utilities for each household. Factor allocations for each household
+
+category are taken from PSAM2C, which allocates various types of capital, labor and land across
+
+households. We aggregate land into a single type, and labor is aggregated into urban and rural.
+
+
+
+
+                                                  40
+We suppose that there is a uniform money demand function across all consumers, and we take
+
+the parameters of the equation from Qayyum, A. (2005).
+
+
+Fiscal Parameters
+
+
+           Tax rates for the benchmark case are taken from KPMG (2012). Levels of public
+
+expenditure are taken from Pakistan Statistical Yearbook (various issues), Table 10. We assume
+
+that the public sector produces current expenditure with a Cobb-Douglas function whose shares
+
+of capital and labor are given by the aggregate shares of these factors in private production,
+
+where the shares are taken from the Pakistan National Income Accounts. The public investment
+
+function, which determines public capital spending, is taken to have the same parameters as the
+
+private investment functions.
+
+
+Appendix 3: Consumer’s optimization problem
+
+
+           Consumers maximize intertemporal utility functions, which have as arguments the levels
+
+of consumption, including imports, and leisure in each of the two periods. Formally, the
+
+consumer’s problem is then given by equation 5.15
+
+
+        U ( x), x  ( x1, xLu1, xLr1, x2 , xLu 2 , xLr 2 )
+Max                                                          (5)
+Such that:
+
+           i i  P
+(1  ti ) Px      Lui xLui  pLri xLri  PMi xMi  PBi xBi  ei PBfi xBfi  Ci
+                                                                                   (5a)
+
+PK1K0  PA1 A0  PLu1Lu1  PLr1Lr1  PM 1M 0  r0 B0  PB1B0  e1PBF1BF 0  TR1  N1
+
+PK 2 (1   ) K0  PA2 A0  PLu 2 Lu 2  PLr 2 Lr 2  PM 2 xM 1  r1xB1  e2 PBF 2 xBF1  TR2  N2
+
+Ci  Ni
+
+
+15
+     See Feltenstein and Shamloo (2013) for a discussion of this modelling approach.
+
+                                                               41
+                                                       ei 1
+log PBi xBi  log ei PBFi xBFi     (log ri  log         rFi )
+                                                        ei           (5b)
+                                 PLui  PLri
+log( Lui / Lri )  a1  a2 log
+                                 PLui  PLri                         (5c)
+
+log PMi xMi  a  b log(1  ti ) Px
+                                  i i                                (5d)
+
+                                         r  2 
+PB 2 xB 2  d0  d1 (1  t2 ) P2 x2  d2  2     
+                                          1 2                    (5e)
+Where:
+Pi = price vector of consumption goods in period i.
+xi = vector of consumption in period i. This includes final demand consumption of imports.
+Ci = value of aggregate consumption in period i (including purchases of financial assets).
+Ni = aggregate income in period i (including potential income from the sale of real and financial
+assets).
+ti = vector of value added tax rates in period i.
+PLui = price of urban labor in period i.
+Lui = allocation of total labor to urban labor in period i.
+xLui = demand for urban leisure in period i.
+PLri = price of rural labor in period i.
+Lri = allocation of total labor to rural labor in period i.
+xLri = demand for rural leisure in period i.
+a2 = elasticity of rural/urban migration.
+PKi = price of capital in period i.
+K0 = initial holding of capital.
+PAi = price of land in period i.
+A0 = initial holding of land.
+δ = rate of depreciation of capital.
+PMi = price of money in period i. Money in period 1 is the numeraire.
+
+
+                                                            42
+xMi = holdings of money in period i.
+PBi = discount price of a certificate of deposit in period i.
+πi = domestic rate of inflation in period i.
+
+ri , rFi = the domestic and foreign interest rates in period i.
+
+xBi = quantity of bank deposits, that is, CDs in period i.
+ei = the exchange rate in terms of units of domestic currency per unit of foreign currency in
+period i.
+xBFi = quantity of foreign currency held in period i.
+TRi = transfer payments from the government in period i.
+
+a, b,  ,  = estimated constants.
+
+di
+     = constants estimated from model simulations.
+
+
+
+
+                                                    43
+References
+
+Ahmed S., V. Ahmed, and A. Abbas (2010), “Taxation Reforms: A CGE-Microsimulation
+Analysis for Pakistan”, Poverty and Economic Policy Research Network, MPIA Working
+Paper 2010-12
+
+Ahmed V. and C. O’Donoghue (2007). “Using CGE and Microsimulation Models for
+Income Distribution Analysis”. Deapartment of Economics, National University of Ireland
+Galway, Working Paper 0089
+
+Arnold, J. (2008), “Do Tax Structures Affect Aggregate Economic Growth? Empirical
+Evidence from a Panel of OECD Countries”, OECD Economics Department Working
+Papers, No. 643, OECD Publishing
+
+Atkinson, A.B. and J.E Stiglitz, 1976. “The design of tax structure: Direct versus indirect
+taxation”. Journal of Public Economics 6, 55-75
+
+Bird, Richard, and Eric Zolt (2005), “The Limited Role of the personal income tax in
+developing countries”, Journal of Asian Economics, Volume 16, Issue 6, December, pp.
+928–946.
+
+Bourguignon, Francois, Bussolo, M., and Pereira Da Silva, Luiz A. (2003). “Impact of
+Macroeconomic Policies on Poverty and Income Distribution. Macro-Micro Evaluation
+Techniques and Tools”, A copublication of Palgrave Macmillan and the World Bank
+
+Bourguignon, Francois, Pereira Da Silva, Luiz A., and Stern, N. (2006). “Evaluating the
+Poverty Impact of Economic Policies: some analytical challenges”, in “Macroeconomic
+Policies and Poverty Reduction”, Routledge Studies in the Modern World Economy”,
+eds. Mody, Asoka, and Pattillo, Catherine
+
+Chu, Ke-young, Hamid R Davoodi., and Gupta, Sanjeev (2000). “Income distribution and
+Tax and Government Social Spending Policies in Developing Countries”, International
+Monetary Fund, Working Paper, WP/00/62
+
+Debowicz, Dario, Paul Dorosh, Hamza Syed Haider, Sherman Robinson (2013), “A
+Disaggregated and Macro-consistent Social Accounting Matrix for Pakistan”, Journal of
+Economic Structures (2013) 2:4.
+
+Devarajan, Shantayanan and Hossain, Shaikh I., (1998). “The Combined Incidence of
+Taxes and Public Expenditures in the Philippines”, World Development v.26, no.6 (June
+1998): 963-77
+
+Feltenstein, A, and M. Cyan (2013), “A Computational General Equilibrium Approach to
+Sectoral Analysis for Tax Potential: An Application to Pakistan, Journal of Asian
+Economics 27, pp. 57-80.
+
+
+
+                                        44
+Feltenstein, A., and Maral Shamloo (2013), “Tax Reform, the Informal Economy, and
+Bank Financing of Capital Formation”, International Tax and Public Finance, Vol. 20,
+no. 1: pp. 1–28.
+
+Feltenstein, Andrew, Luciana Lopes, Janet Porras-Mendoza, and Sally Wallace.
+“Modeling Tax Reform in Developing Countries” (2014), in Taxation and Development:
+The Weakest Link? Bird, R. and J. Martinez-Vazquez (eds.), Edward Elgar Publishing,
+pp. 69-102.
+
+Gemmell, N. and Morrissey, O. (2003) Tax Structure and the Incidence on the Poor in
+Developing Countries. CREDIT Research Paper 03/18. Nottingham: School of
+Economics, University of Nottingham (at www.nottingham.ac/econonomic/credit).
+
+Gemmell, Norman, and Oliver Morrissey, (2005). “Distribution and Poverty Impacts of
+Tax Structure Reform in Developing Countries: How Little We Know”, Development
+Policy Review, 23 (2): pp. 131-144
+
+Gentry, William M. and Helen F. Ladd, (1994). “State Tax Structure and Multiple Policy
+Objectives”, National Tax Journal, Vol. 47, no. 4, (December, 1994), pp. 747-772
+
+Guilherme, Jose and Daria Taglioni (2013). “Pakistan: Reinvigorating the Trade
+Agenda”, Policy Paper Series on Pakistan PK 15/12, World Bank, no. 86255
+
+Heady, C. (2004), “Taxation Policy in Low-Income Countries,” in T. Addison and A. Roe
+(eds.), Fiscal Policy for Development: Poverty, Reconstruction, and Growth, London:
+Palgrave Macmillan.
+
+International Center for Public Policy, Andrew Young School of Policy Studies (2011),
+“The Development of a Micro-Simulation Model for the Federal Board of Revenue,
+Pakistan.”
+
+Keen, Michael, and Alejandro Simone (2004), “Tax Policy in Developing Countries:
+Some Lessons from the 1990s and Some Challenges Ahead,” in Helping Countries
+Develop: The Role of Fiscal Policy, Eds. Sanjeev Gupta, Benedict Clements, Gabriela
+Inchauste, International Monetary Fund, Washington, D.C.
+
+Kemal M. A, Siddiqui, R. and Siddiqui R. (2001). “Tariff Reduction and Income
+Distribution: A CGE-based Analysis for Urban and Rural Households in Pakistan”.
+
+Keuning, Steven J. and Willem A. De Ruijter, (1988). “Guidelines to the Construction of
+a Social Accounting Matrix”, Institute of Social Studies and TEBODIN Consulting
+Engineers, The Hague
+
+Ke-young Chu, Hamid Davoodi, and Sanjeev Gupta (2000). “Income Distribution and Tax
+and Government Social Spending Policies in Developing Countries”. International
+Monetary Fund, IMF Working Paper WP/00/62
+
+
+                                       45
+Kiyotaki, N. and J. Moore (1997), “Credit Cycles”. Journal of Political Economy,
+105(2): 211–248.
+
+
+Kleven, H., & Mazhar Waseem, 2013. "Using Notches to Uncover Optimization
+Frictions and Structural Elasticities: Theory and Evidence from Pakistan," The Quarterly
+Journal of Economics, vol. 128(2), pages 669-723.
+
+Liu, Yongzheng and Jorge Martinez-Vazquez, 2015. “The Growth-Inequality Tradeoff in
+the Design of Tax Structure: Evidence from a Large Panel of Countries”, Pacific Economic
+Review
+
+Lustig, Nora (1998), Mexico: The Remaking of an Economy, Second Edition, Brookings
+Institution Press, Washington, D.C.
+
+Martinez-Vazquez, J. (2006) Pakistan: A Preliminary Assessment of Federal Tax
+System. International Studies Programme, Working Paper 06-24, 2006, Andrew
+Young School of Public Policy.
+
+Martinez-Vazquez, Jorge, Violeta Vulovic and Yongsheng Liu (2011). “Direct versus
+indirect taxation: Trends, Theory, and Economic Significance”, Georgia State University,
+Economics Faculty Publications
+
+Newman, John L., (2013), “Some Anomalous Results Related to the Calculation of
+Poverty Estimates in Pakistan”, World Bank, mimeo.
+
+Newman, John (2013). “Recovering Strong Positive Trends in Poverty and Opportunity”.
+The World Bank Group, South Asia Region, Pakistan Policy Note 8, report no. 79572
+
+“Pakistan Development Update. Making Growth Matter”. (2016), The World Bank Group,
+November, 2016
+
+Pakistan National Income Accounts (Various Issues)
+
+Qayyum, A. (2005). “Modelling the Demand for Money in Pakistan”, Pakistan
+Development Review, 44(3): 233.
+
+Raihan, S. (2010), “Welfare and Poverty Impacts of Trade Liberalization: A Dynamic
+CGE Microsimulation Analysis”, International Journal of Microsimulation, Vol 3, No 1,
+pp 123-126.
+
+Refaqat, S. (2003) Social Incidence of the General Sales Tax in Pakistan. IMF
+working paper 03/216.
+
+
+
+
+                                       46
+Robinson S. (1989). Multisector Models. Handbook of Development Economics. North-
+Holland, Amsterdam, pp. 885-947
+
+Round, J., 2003. Social accounting matrices and SAM-based multiplier analysis. In:
+Bourguignon, F., Pereira Da Silva, L.A. (Eds.), The Impact of Economic Policies on
+Poverty and Income Distribution: Evaluation Techniques and Tools. The World
+Bank, Washington, D.C, pp. 301–320.
+Sah, Raaj, (1983), "How much Redistribution is Possible through Commodity Taxes?"
+Journal of Public Economics 20: pp.89-101.
+
+Samwalk (2010), “A Social Accounting Matrix for Pakistan.” This is based upon
+Debowicz et al (2013) and was provided by the World Bank.
+
+Shah, A. and Whalley, J. (1991) ‘The redistributive impact of taxation in developing
+countries’, in J. Khalilzadeh-Shirazi and A. Shah (eds). Tax Policy in Developing
+Countries. Washington DC: World Bank.
+
+Shleifer, A. and R.W. Vishny (1993), “Corruption”. The Quarterly Journal of Economics,
+108(3): 599‒618.
+
+Tanzi, V. (1987) ‘Quantitative Characteristics of the Tax Systems of Developing
+Countries’, in D. Newbery and N. Stern (eds), The Theory of Taxation for Developing
+Countries. Oxford: Oxford University Press.
+
+Tanzi, V. (2000), ‘Taxation and economic structure’, in G. Perry et al. (eds)
+
+Tanzi, Vito, and Howell Zee (2001), Tax Policy for Developing Countries, International
+Monetary Fund
+________________________ (2000), “Tax Policy for Emerging Markets: Developing
+Countries,” National Tax Journal, Vol. 53, No. 2 June, pp. 299-322
+
+
+“Twelfth and Final Review under the Extended Arrangement, Request for Waivers of
+Nonobservance of Performance Criteria, and Proposal for Post-Program Monitoring—
+Press Release; Staff Report; and Statement by the Executive Director For Pakistan”,
+International Monetary Fund, IMF Country Report no. 16/325
+
+
+
+
+                                        47
+

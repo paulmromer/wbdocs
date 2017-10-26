@@ -1,0 +1,1198 @@
+                                                     WPS7994
+
+
+Policy Research Working Paper                       7994
+
+
+
+
+      For India’s Rural Poor, Growing Towns
+        Matter More than Growing Cities
+                                   John Gibson
+                                  Gaurav Datt
+                                  Rinku Murgai
+                                 Martin Ravallion
+
+
+
+
+Poverty and Equity Global Practice Group
+March 2017
+Policy Research Working Paper 7994
+
+
+  Abstract
+  It is theoretically ambiguous whether growth of cities mat-                       poverty measures for rural India, calibrated to a panel
+  ters more to the rural poor than growth of towns. This                            of 59 regions observed four times over 1993–2012. The
+  paper empirically examines whether growth of India’s                              expansion of lit area had greater effect on the rural poverty
+  secondary towns or big cities mattered more to recent                             measures than did intensive margin growth in the bright-
+  rural poverty reduction, noting that data deficiencies                            ness of light from urban areas. For India’s current stage of
+  have made this a difficult question to answer previously.                         development, growth of secondary towns may do more to
+  Satellite observations of night lights are used to measure                        reduce rural poverty than big city growth, although the
+  urban growth on the extensive and intensive margins                               theoretical model suggests that cities may eventually take
+  in the context of a spatial Durbin fixed-effects model of                         over from towns as the drivers of rural poverty reduction.
+
+
+
+
+  This paper is a product of the Poverty and Equity Global Practice Group. It is part of a larger effort by the World Bank to
+  provide open access to its research and make a contribution to development policy discussions around the world. Policy
+  Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at
+  rmurgai@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+         For India’s Rural Poor, Growing Towns Matter More than
+                                          Growing Cities
+
+
+              John Gibson, Gaurav Datt, Rinku Murgai and Martin Ravallion1
+
+
+
+
+        JEL Codes: O15, R12
+
+        Keywords: Cities, luminosity, poverty, secondary towns, spatial Durbin model, India
+
+
+
+1
+  Gibson is with the Department of Economics, University of Waikato, Datt is with the Department of
+Economics, Monash University, Murgai is with the World Bank and Ravallion is with the Department of
+Economics, Georgetown University. These are the views of the authors and need not reflect those of their
+employers. We are grateful to participants in the Secondary Towns, Jobs and Poverty Reduction Conference at
+the World Bank for their helpful comments, and to Geua Boe-Gibson for the preparation of the maps.
+I.      Introduction
+
+        There appears to be a broad consensus among development economists that
+agricultural growth, and rural development more broadly, is good for rural poverty reduction
+(although this was not always widely accepted).2 Models of the development process have
+also attached importance to the scope for rural poverty reduction through urban economic
+growth, and some observers have seen this as the more important channel for rural poverty
+reduction.3 Urban economic growth is expected to contribute to reducing rural poverty
+through two main channels:
+        (i) Labor absorption: an expanding urban economy will benefit the rural poor by
+either absorbing surplus rural labor, as in the classic Lewis (1954) model, or by tightening
+rural labor markets (leading to higher wage rates).
+        (ii) Backward linkages: growth in the urban economy increases public or private
+resources that benefit the rural poor; for example, greater urban demand for rural products
+may increase rural incomes or labor-augmenting technical progress in urban areas may
+increase the remittances sent back to rural families.
+        The strength of these channels has been an important issue for setting development
+priorities for India, as elsewhere. The evidence suggests that India’s urban economic growth
+in the post-Independence period up to around 1990 did rather little to reduce rural poverty,
+although urban growth had reduced urban poverty, and rural poverty was primarily driven by
+rural growth (Ravallion and Datt, 1996). Since economic reforms began in earnest in India in
+the early 1990s, there has been considerable progress in reducing poverty, with trend rates of
+decline that are higher than in the pre-reform era (Datt, Ravallion and Murgai, 2016). The
+indications are that urban economic growth since the early 1990s has been more poverty
+reducing, and that this has come with larger gains to India’s rural poor (Datt and Ravallion,
+2011; Datt et al., 2016).
+        Lanjouw and Murgai (2014) conjecture that the link from urban development to rural
+poverty reduction is stronger if urban economic growth stems from India’s secondary towns
+rather than from the big cities. The secondary towns may be more tightly connected to the
+surrounding rural hinterland than are the cities, so growth in small towns may have more
+effect on rural poverty. Yet it is the big cities, defined as those with population above one
+
+
+2
+  For an overview of past debates on the relationship between economic growth (including by sector) and
+poverty reduction see Ravallion (2016, Chapter 8).
+3
+  See, for example, Collier (2009), with reference to Africa.
+
+
+                                                      2
+million, that have the lowest poverty rates and that appear to be growing faster than the
+smaller statutory towns, with the share of the urban population in the big cities rising from
+38 percent in 2001 to 42 percent in 2011 (Tripathi, 2013). Higher wage rates in larger cities
+will to some degree spill over to the towns and rural areas both through labor market
+adjustment and because they may also generate larger trade and remittance flows. Thus, it is
+theoretically ambiguous whether larger cities generate larger gains to the rural poor.
+       The Lanjouw and Murgai hypothesis that India may have experienced faster poverty
+reduction if smaller towns had grown as fast as the cities is consistent with evidence from
+other countries on the relationship between poverty and city size (Ferré, Ferreira and
+Lanjouw, 2012). However, it is difficult to test this hypothesis for India, or more generally to
+relate variation in growth of different types of cities to variation in rural poverty reduction.
+One difficulty arises because it is only once every ten years that city growth (in terms of
+population rather than economic output) is measured in India, using the census. A lot of the
+variation in rural poverty reduction occurs within a ten-year censual period and so would be
+missed by studies that rely on the census data to measure urban growth. Another difficulty is
+the absence of timely and spatially detailed (e.g. at city level) economic statistics.
+       This study uses a proxy for urban growth to test the hypothesis that it is the growth
+rates of India’s secondary towns, rather than the big cities, that matter most for rural poverty
+reduction. We use nighttime lights, as detected by satellite, to measure urban growth,
+distinguishing between growth on the extensive and intensive margins, and between the
+growth of cities and of secondary towns. These new measures of urban growth are
+econometrically related to sub-national poverty estimates that are formed at a finer spatial
+resolution than in the existing literature. Specifically, we use a division of India into 59
+National Sample Survey (NSS) regions that are more finely-grained than the usual division
+into states and union territories. Our study covers four observations for each of these regions
+between 1993/94 and 2011/12, based on NSS “thick” rounds (with larger sample sizes such
+that the survey is representative at the NSS regional level). We also account for the spatial
+autocorrelation that is increasingly apparent in patterns of rural poverty in India.
+       The following section provides a simple theoretical model of a three-sector labor
+market in which one of the sectors—the “big city”—has a labor market distortion, but wages
+are flexible in the other two sectors, the secondary towns and the rural hinterland, with
+workers free to move between the two. For this model, we derive conditions under which
+technical progress in the big cities has less impact on the rural wage rate than does technical
+progress in the secondary towns. However, this is only one possible outcome. Even in this
+
+
+                                                 3
+simple model, city growth could more effectively “trickle down” to the rural poor. It is an
+empirical question as to which type of urban growth is better for the rural poor.
+        Section III describes our data for addressing that question, in which we have formed a
+regional panel data set, combining results from household surveys with data on the extent of
+night light. Section IV explains our econometric model, which is calibrated to the panel data.
+Alternative models are also described, and shown to be testable restrictions on our preferred
+(encompassing) specification. Our results are then presented in Section V, which provide
+strong support for the hypothesis that economic growth in secondary towns has more impact
+on rural poverty than does growth of the big cities. Section VI concludes.
+
+II.     A Simple Theoretical Model
+
+        The purpose of the following model is to illustrate one source of urban-rural linkage,
+namely through the labor market, for which urban economic growth emanating from cities
+brings different gains to the rural poor than growth in towns.
+        We suppose that the urban economy comprises two sectors, a town and a city. In the
+spirit of the classic Harris-Todaro (1970) model of rural-urban migration in the presence of
+an urban labor-market distortion, we assume that the wage rate in the city is fixed above the
+market clearing level, but the wages in the town and the rural economy are fully flexible, and
+come into parity. Technical progress in the town is assumed to increase the marginal product
+of labor there, which will lead to higher wages in the town, and also in the rural hinterland
+due to the integrated labor markets; indeed, in equilibrium the wage gains will be the same.
+Technical progress in the cities will increase employment there, which will attract workers
+out of unemployment and from both the town and rural areas. This will bring gains to wages
+in the latter sectors.
+        In the context of this model, we ask whether technical progress in the town has more
+impact on poverty than that in the city. There is no inequality within sectors (although this
+can be relaxed to assume an inequality-neutral growth processes). The poor in this model are
+taken to be all workers except those who get a job in the city (i.e., rural plus township
+workers, plus the urban unemployed). In other words, the poverty line is below the city wage
+rate but above the rural and town wage rates.
+        In more formal terms, the model is as follows: The production functions are Ai Fi ( N ie )
+
+(i=c,t,r) for the city, town and rural areas respectively, where N ie denotes employment in
+
+sector i and Ai is the shift parameter for (Hicks-neutral) technical progress; we will only
+
+
+                                                4
+consider the comparative static effects of changes in Ac and At so we set Ar  1 . All three
+
+production functions are strictly increasing and strictly concave. The respective wage rates
+are Wi for i=c,t,r. These are all taken to be normalized by the poverty line. The town and
+
+rural wage rates are flexible, such that all those who want work can find it; in equilibrium,
+Wt  Wr . The city wage rate is fixed, such that N c  N ce are left unemployed and they are
+
+assumed to earn nothing (where N c is the city workforce, including the unemployed). In
+equilibrium, the rural wage rate is equated with the expected wage rate in the city (the
+probability of getting a city job times the city wage rate), Wr  ( N ce / N c )Wc . Firms maximize
+
+profits, requiring that wage rates equate with marginal products, Wi  Ai Fi( N ie ) (i=c,t,r), with
+
+(variable) wage elasticities of labor demand denoted i ( 0) . Total population is normalized
+
+at unity ( N c  N te  N re  1 ).
+         We now consider the effects on rural poverty of technical progress in the town versus
+the city. Since all rural workers are taken to be poor, we will only consider impacts on the
+rural poverty gap index (PG), which is the mean distance of the rural wage rate below the
+poverty line. Since PG  1  Wr in our model, we focus solely on the rural wage rate.4
+         Proposition 1: Technical progress in the town will have a larger (smaller)
+proportionate impact on the rural wage rate if the ratio of the city workforce (employed plus
+unemployed) to the town’s workforce is greater than (less than) the ratio of the wage
+elasticity of the town’s labor demand to that of city labor demand.
+         To verify this claim, consider the effects on the rural wage rate of an increase in Ac
+
+and compare this to the effect of an increase in At . On log differentiating and solving
+
+(invoking the usual implicit function theorem) we obtain:5
+                             ln Wr          t N te
+                                                            0                                             (1.1)
+                             ln At  r N re  t N te  N c
+
+                             ln Wr        c N c
+                                                          0                                               (1.2)
+                             ln Ac r N r  t N te  N c
+                                         e
+
+
+
+
+  For the economy as a whole, PG  (1  W )(1  N c ) where W  Wr ( N r  Nt ) /(1  N c ) is the mean wage
+4                                                    e                     e     e         e
+
+
+rate of the poor in the economy as a whole. As long as the workforce-weighted mean labor demand elasticity in
+the town and rural sectors is less than unity, the direction of change in the overall poverty gap also depends on
+the change in the rural wage rate.
+5
+  Note that the following derivatives are not symmetric since it is the total city workforce (including the
+unemployed) in the numerator of (1.2). This feature stems from the fixity of the city wage rate. An addendum is
+available from the authors with more detail on the derivation.
+
+
+                                                         5
+Growth in either urban sector reduces the rural poverty gap. The ratio of the two
+proportionate effects on rural wages is:
+                             ln Wr      ln Wr c N c
+                                                                                                          (2)
+                             ln Ac      ln At t N te
+Thus Proposition 1 follows.
+        So even in this simple model we cannot predict which urban sector will be the most
+rural-poverty reducing. When city size is small ( N c approaches zero) technical progress in
+
+that sector will bring negligible gains to the rural poor via the labor market. Alternatively,
+even when the city workforce is as large as that in the secondary towns, economic growth in
+the cities will bring less gain to the rural poor if labor demand is less wage elastic in the cities
+than the towns. But these are special cases, and one can readily find counter-examples, such
+as when the city workforce is either relatively large or its labor demand is more wage elastic.
+        Proposition 1 also suggests that we may well find that town growth tends to matter
+more to the rural poor at early stages of overall economic development, assuming that this
+entails that cities expand (in number or size). But in due course, this will change, such that
+cities become the stronger driver of rural poverty reduction. This is implied by the above
+model if the wage elasticities of labor demand change little as the share of the workforce
+living in cities grows, with that in towns falling.
+
+III.    Data and Descriptive Statistics
+
+3.1     Poverty Data
+
+        Our poverty data are based on estimates of real household consumption that are
+measured in four “thick” rounds of household surveys conducted by the National Sample
+Survey Organization (NSSO). These “thick” rounds each have a sample size of over 100,000
+households as opposed to the more frequent “thin” rounds. We use data from 1993/94 (50th
+round), 2004/05 (61st round), 2009/10 (66th round), and 2011/12 (68th round). The NSSO
+surveys began in the early 1950s and in terms of the international norms for consistency of
+expenditure or consumption surveys they have maintained a high degree of comparability
+over time, with the exception of the late 1990s (Datt et al, 2016).6 For the four surveys that
+we use, a mixed-recall period (MRP) is used, with a 30-day recall for food and frequently
+
+
+
+6
+ There is debate about the consumption and poverty estimates from the 55th round (1999/00) that is described in
+detail by Deaton and Kozel (2005). We do not use the results from this round.
+
+
+                                                      6
+consumed items, and a one-year recall for clothing, footwear, health, education, and durable
+goods.
+         The monthly per capita consumption estimates are put in spatially and temporally real
+terms by using India’s official poverty lines as deflators.7 We use two poverty measures. The
+first is the headcount index, given by the percentage of the population living in households
+with consumption per capita less than the poverty line. The second is the poverty gap index,
+given by the mean distance below the poverty line expressed as a proportion of that line,
+where the mean is formed over the entire population (counting the non-poor as having zero
+poverty gap). In keeping with our focus on how urban economic growth has impacted rural
+poverty we confine attention to the rural poverty measures.8
+         Much of the research on poverty in India is based on a disaggregation into the urban
+and rural sectors of each state or union territory (UT). Here we use instead more finely
+grained data, based on “NSS Regions”. These regions have been used by the NSSO since the
+4th round, where disaggregation below the state level was first available. Initially, 52 regions
+were formed, where a region was defined as a group of contiguous districts from within the
+same state that had similar geographical features and had similar population densities in the
+1951 population census. With the subsequent splitting of states and districts, the number of
+NSS regions grew to 88 by the 68th round survey in 2011/12. We only use data for 19 major
+states, and we also control for state- and district-level splitting by anchoring our panel to the
+administrative geography of India as of the 55th round survey in 1999/00. Consequently, the
+number of regions we have poverty estimates for is 59, with these available for four years,
+giving a balanced panel of N=236.
+         The pattern of change in rural poverty over time is shown in Table 1. The headcount
+index halved over the two decades considered, falling from 50 percent in 1993/94 to
+25 percent in 2011/12. The poverty gap index declined even faster, with a fall from 0.123 in
+1993/94 to 0.045 in 2011/12. The reductions in poverty rates are spread fairly evenly between
+the four survey years, but since there is a ten-year gap between the first two surveys and then
+gaps of four years and two years, it is clear that the pace of poverty reduction is increasing.
+
+
+
+7
+  These are the “Tendulkar” poverty lines, after Suresh Tendulkar who headed an expert group that revised
+India’s official poverty lines. Among several revisions were a smaller rural-urban cost of living differential than
+the original Planning Commission poverty lines. At 2011 purchasing power parity (PPP) the Tendulkar poverty
+lines have a value of $2.09 per day.
+8
+  The NSSO follows the Census in defining areas as urban, based on criteria in terms of minimum population,
+minimum population density, and the percentage of the population working outside of agriculture, or whether an
+area is a Statutory town (e.g., has a Municipality, Corporation, Cantonment Board, etc.).
+
+
+                                                        7
+         The NSS is a weighted survey but the weights do not affect the estimated downward
+trends in poverty rates in Table 1. This is reassuring because the spatial panel estimators that
+we use in the econometric analyses below do not handle variable sampling weights. We
+therefore rely on the unweighted data; based on Table 1 this should provide similar patterns
+to the weighted data. The other pattern in Table 1 is the regional divergence in poverty rates;
+the coefficient of variation of rural poverty rates based on the NSS regions rises
+monotonically over time, for both poverty measures and whether using sampling weights or
+not. In other words, even though India has been escaping from mass absolute poverty it is
+doing so at an uneven rate over space.
+         The spatial pattern of rural poverty at baseline is shown in Figure 1, for the headcount
+index (left panel) and poverty gap index (right panel). The spatial autocorrelation in the data
+is apparent, with regions having high poverty likely to be neighbors with other high poverty
+regions and vice versa for regions with low poverty rates. Roughly speaking, if one drew a
+straight line from Nashik in Maharashtra (which is about 100 miles northwest of Mumbai)
+that went at a 50 degree angle to pass west of Kanpur in Uttar Pradesh (UP), all but three
+regions to the southeast of that line would be in the highest three poverty classes, which had
+headcount poverty rates of 42 percent or more in 1993/94.9 Conversely, almost all regions
+along the Arabian Sea coast, and in northwest India were in the lowest classes for poverty. A
+common test for spatial autocorrelation is Moran’s I test, which has some parallels with the
+Durbin-Watson statistic.10 This test reveals significant positive spatial autocorrelation with
+I=0.30 for the headcount index in 1993/94 and I=0.26 for the poverty gap index.
+         The spatial pattern of rural poverty at the endpoint of our panel, in 2011/12, is even
+more apparent than it was a baseline. In the left panel of Figure 2 a belt of high headcount
+poverty is apparent, which extends from the northeast in Assam and comes west across India
+at a slight downward angle to reach the Eastern Gujarat region, located on the Arabian Sea
+coast about midway between Mumbai and Ahmedabad. The Moran statistic for the headcount
+index in 2011/12 is 0.43 while for the poverty gap index it is 0.38. These increases in the
+Moran statistic from the baseline show that rural poverty has become increasingly spatially
+
+
+
+9
+  The three exceptions were the Central Plains of West Bengal (WB) which surround Kolkata, Coastal Tamil
+Nadu (TN) and Inland Southern Andhra Pradesh (AP).
+10
+   For any variable z in deviation from mean form and spatial weights matrix W, Moran’s I is equivalent to the
+slope coefficient in a linear regression of Wz on z (Anselin, 1988). In other words, it examines the strength of the
+relationship between one observation and the spatially weighted average of its neighboring observations. The
+weights matrix used here is based on contiguity; any region sharing any boundary point with another region is
+considered its neighbor. These are known as Queen weights, based on where pieces move on a chessboard.
+
+
+                                                         8
+concentrated. This growing inequality over space in the poverty rate also featured in the rise
+over time in the coefficients of variation for the poverty statistics in Table 1.
+        The description of poverty patterns over time and space is completed by Figure 3,
+which shows the proportion of baseline poverty eliminated by 2011/12. The spatial patterns
+are especially clear when considering the poverty gap index in the right panel of Figure 3.
+The southern states of Kerala, Karnataka, TN, and AP, and all of Maharashtra except the
+Coastal region (where the poverty gap index increased) eliminated from 60-95 percent of the
+baseline poverty gap index in the rural sector and similar progress is seen in much of
+northwest India. However, in Assam, Bihar, Chhattisgarh, Jharkhand, Orissa, and parts of
+Madhya Pradesh, a much smaller proportion of rural poverty was eliminated. Thus, the rate
+of reduction in poverty is also spatially auto-correlated, with Moran statistics of 0.30 for the
+proportion of the rural poverty gap eliminated and 0.15 for the proportion of the rural
+headcount poverty that was eliminated. In other words, rural poverty started out as spatially
+concentrated, the poverty reduction process has also been spatially uneven, and so rural
+poverty at the end-line for our data is even more spatially concentrated than it was at the start.
+
+3.2     Night Lights Data
+
+        If India were China it would be fairly easy to examine how growth of different types
+of cities affects rural areas. China has annual GDP data for prefectures, a sub-provincial unit
+a little more disaggregated than NSS regions are with respect to India’s states, and also for
+each city and county. One could compare how rural poverty is affected by growth in big
+cities versus growth in smaller ones, such as county-level cities.11 However, the available
+sub-national economic statistics are much more limited for India. For example, annual data
+on Gross District Domestic Product are reported by the Planning Commission, but exclude
+some big states like Gujarat, and for many states the data end in 2005/06 and so miss the
+recent period of rapid poverty reduction. The Population Census for 1991 and 2011 roughly
+lines up with the 50th and 66th or 68th round NSS data but not with the 61st round, and does
+not inform about economic growth. The lack of agglomeration-level boundaries, like the
+Metropolitan Statistical Areas (MSA) in other countries, also means that India’s census data
+correspond to administrative rather than to economic definitions of cities.
+
+
+
+
+11
+ Deng et al (2010) are an example of studying patterns of urban change in China using these spatially detailed
+GDP data.
+
+
+                                                       9
+         To measure urban growth, we therefore rely on data that are not limited by India’s
+statistical infrastructure, namely night-time lights, as detected by satellite. These data are
+originally from the Defence Meteorological Satellite Program (DMSP) and are processed by
+the National Oceanic and Atmospheric Administration. They provide annual estimates over
+1992-2012 at a one square kilometer resolution (in some years two satellites are in orbit so
+there are 33 satellite-year observations). Gibson et al (2015) use these data to estimate rates
+of area expansion over 1992-2012 for 47 Indian agglomerations with a population of at least
+one million in the 2011 census.12 These agglomerations are shown in Figure 4, in terms of
+their lit area in 2012. We treat these 47 agglomerations as India’s “big cities” and contrast the
+effects of their growth with the effects of the growth of smaller towns.13 The threshold of one
+million population is also used by Chatterjee et al (2015) and Li and Rama (2015) to
+demarcate between India’s large and small urban areas.
+         Figure 4 also shows the NSS regions; 39 of 59 have one or more of the big cities in
+them. For the others, the city effects come indirectly, with these spatial spillovers captured by
+our econometric model. We consider city growth on the extensive and intensive margins,
+since it is a priori unclear which matters more to poverty reduction. For example, extensive
+margin growth may offer easier commuting from rural areas but more sprawling cities may
+be less efficient. Specifically, we use the night lights to both demarcate the edge of cities for
+examining effects of expanded areas (the extensive margin), and to calculate the intensity of
+light—the “digital number” (DN)— emanating from within these boundaries (the intensive
+margin).14
+         There is also a measurement reason for distinguishing between lit area and light
+output within an area. Some DMSP satellites distribute measured light less intensely over a
+wider area and others focus it into a smaller area.15 For example, Liu et al (2012) note that
+
+12
+   The census lists 53 million-plus cities but two are within the Delhi agglomeration (Faridabad and Ghaziabad)
+and four others (Malappurum, Srinigar, Kollam and Kannur) were too dim to be detected at the 50% threshold
+used for the other cities. At the 20% luminosity threshhold we use to distinguish towns from rural areas, these
+four cities contribute just 0.4% of total lit area (and 1.3% of big city lit area, if measured at that threshold).
+13
+   The area expansion rate of the 23 cities that were million plus in 1991 was not significantly different from the
+others that crossed the million threshhold between 1991 and 2011, indicating that there is no evident selection or
+survivorship bias by defining the sample of big cities by their meeting a criteria set at the end of the period.
+14
+   Technically, we measure areas by starting at the center of each big city, where lights should be brightest, and
+as the algorithm moves outwards and comes across pixels less illuminated than the brightness threshold it
+searches in a different direction. If the algorithm finds no contiguous pixels with light above the threshold
+except those closer to the city center that it has already scanned over, it sets a boundary.
+15
+   To briefly digress, DMSP was to detect clouds, for daily weather forecasts to help Air Force pilots, rather than
+to detect ground level activity to help economists. Photons from the observed area enter a scanner and create a
+pulse of electrons that map to a DN ranging from 0-63; this range was because on-board data holding could
+spare just six bits of memory (26=64) for each datum (Abrahams et al 2015). Given the original purpose, sensors
+on board DMSP satellites were adjusted over the lunar cycle to keep the brightness of cloud tops the same, with
+
+
+                                                        10
+satellite F15 in orbit in 2008 gave an average DN value of 16.6 across 0.9 million lit pixels in
+China, while F16 in orbit in the same year gave an average DN value of only 10.7 but spread
+over 1.7 million lit pixels. Similarly, Gibson et al (2015) show that satellites F14 and F15
+differ by 85 km2 (11 percent of the two-satellite mean), when estimating area for Bangalore in
+2001. A related issue is that night-lit activity with a particular DN value on one day may not
+map to the same DN on another day due to sensor adjustments and inter-satellite differences.
+         We respond to these measurement issues in four ways.16 First, we use an annual
+composite of non-ephemeral lights so unrecorded adjustments may wash out over the course
+of the year as repeated observations converge to some average amplification level. Second,
+we average over all satellite-year observations in a two-year window centered on the timing
+of the NSS rounds to ameliorate errors due to inter-satellite differences. Third, we measure
+smaller cities using two different luminosity thresholds, of 20 percent and 30 percent of the
+maximum (equivalent to DN values of 13 and 19), to check that the patterns we find are not
+sensitive to a particular choice of DN values.17 Finally, we use the decomposition of night
+lights into lit area effects and average DN values within lit areas. We note in passing that
+most studies using DMSP data are not from economics and are typically concerned with
+urban area rather than with average DN values, while studies in economics typically just use
+average DN values.
+         In order to distinguish between cities and towns, and between towns and rural areas,
+we need luminosity thresholds. Several are used in practice, with examples of some close to
+what we use including Small and Elvidge (2013), who use DN12 for their Asia-wide study
+of urban areas, and Alvarez-Berrios et al (2013), who use DN20 for intermediate urban
+areas in Latin America. Lower thresholds are needed for towns than are used for cities
+because even some million-plus agglomerations were undetectable at a 50 percent threshold
+(DN>31). Conversely, a low threshold for all urban areas clumps big cities together along lit
+
+
+no record kept of these adjustments and produce data that are top-coded at DN=63. Also, comparability between
+satellites and sensor decay were less important for daily cloud monitoring than for measuring long-term changes
+in ground-level lights.
+16
+   Various ‘calibrated’ night lights series are also available but these typically involve extrapolations from
+spatially and temporally limited episodes when amplification levels on the sensors were adjusted to suit the
+needs of researchers rather than of Air Force pilots (Hsu et al, 2015) or extrapolations from areas such as Sicily
+that were assumed to have stable lights (Elvidge et al, 2009). These assumptions may not be broadly acceptable.
+17
+   We refer to percentages of the maximum DN value to make the point that it is relative luminosity that is being
+measured, rather than the DN being a constant unit of measurement like a kilometer. For big cities, we use a
+single threshold of 50 percent because Gibson et al (2015) show the robustness of temporal and spatial patterns
+to using alternative thresholds of 40 and 60 percent. Cross-validation exercises also supported results using the
+50 percent threshold, which contrasts with findings from Abrahams et al (2015) who found greatly exaggerated
+city sizes if night lights are used without correcting for various features causing blurring.
+
+
+                                                       11
+corridors; for example, with a 20 percent threshold one big agglomeration extends 500 km
+along India’s National Highway 1 from Delhi through Chandigarh and Ludhiana all the way
+to Amritsar. This clumping results in implausibly large cities and reduces the number of them
+separately distinguishable, yielding a smaller sample for examining variation in different
+types of urban growth.
+         Our approach to distinguishing growth in cities from towns is shown in Figure 5,
+using the example of three of the big cities in southern India. In 1993, the Inland Southern
+region of Karnataka, which is where Bangalore is located, had about 900 km2 of urbanized
+area, if using a luminosity threshold of 30 percent.18 This was split roughly equally between
+areas of Bangalore that were at or above 50 percent of the maximum brightness, and areas
+elsewhere in the region that were between 30 and 50 percent of the maximum. Some of these
+less bright areas include the outskirts of Bangalore and we discuss our treatment of fringe
+areas of big cities below. The map on the right of Figure 5 shows that by 2011 the area of
+Bangalore had almost quadrupled, using the 50 percent threshold to demarcate this big city
+from other urban areas. The rate of expansion of the secondary towns in this NSS region was
+even faster, so the total urban area of the region (using the 30 percent threshold to separate
+urban from non-urban) was almost five times what it was in 1993.
+         In the adjacent region of Inland Tamil Nadu, the city of Coimbatore grew almost as
+fast as Bangalore; the annual trend expansion rate was 4.6 percent compared to 4.9 percent
+for Bangalore (Gibson et al, 2015). However, the growth in less brightly lit areas of Inland
+Tamil Nadu was even faster, and so between 1993 and 2011 Coimbatore contributed just
+12 percent of the total urban area expansion for the Inland Tamil Nadu region. In contrast,
+Bangalore contributed 35 percent of the total urban area expansion for the Inland Southern
+Karnataka region. At the heart of our empirical strategy is the fact that for some regions the
+urban growth has mainly come from a brightly lit big city like Bangalore while for other
+regions the urban growth has come mainly from the expansion of less brightly lit secondary
+towns, as in Inland Tamil Nadu. Across all the regions we study, the typical pattern is more
+like Inland Tamil Nadu than like Inland Southern Karnataka; a larger share of the growth in
+total lit area was due to secondary towns, which contributed about two-thirds of the growth
+from 1993/94 to 2004/05 and about four-fifths thereafter. Finally, note that a less rapidly
+growing big city, such as Thissur in Kerala, provides another contrast.19 While the limited
+
+
+18
+  The map in the left-hand panel of Figure 5 truncates part of the Inland Southern region, to focus on big cities.
+19
+  Across all 47 big cities the trend annual expansion rates ranged from -1.6 to 8 percent and the coefficient of
+variation over cities in expansion rates was 0.7 (Gibson et al, 2015) so there is a lot of variability to exploit.
+
+
+                                                        12
+expansion of this city is apparent in Figure 5 it is part of an NSS region (Southern Kerala)
+that has three big cities (Kochi and Thiruvananthapuram are the other two) and so provides
+one of the few examples of big city multi-polar growth.
+         The approach to splitting big city growth from smaller town growth in Figure 5 raises
+a question of whether the dimmer fringe of a city should be considered as part of that city or
+as a separate, smaller, town. Such areas could be existing, distinct, towns that get engulfed by
+the expanding big city or they may be new parts of the city built on virgin land that are yet to
+be as brightly lit as the center of the city. To check if our method of putting dim areas on the
+edge of the city into the secondary towns component of total urban growth affects the results,
+we created another data set by using a ‘fixed mask’ approach. (This terminology is because
+our algorithm masks the area covered by the big cities when it calculates statistics on urban
+area and average DN values for the secondary towns within an NSS region.) Specifically, we
+take the area covered by each city when it is at its maximum extent, which is in 2012, and
+exclude that area when smaller town area and the average DN values in smaller towns are
+calculated for any of the satellite-years. In other words, land that eventually gets engulfed in
+the city is treated as never being part of the area that small towns could occupy and is
+reserved as only available for the city even if the city has not yet grown into that area at the
+time of a particular satellite-year observation. In contrast, our main results use what we call a
+‘variable mask’ where the boundary between big cities and smaller towns changes satellite-
+year by satellite-year.
+
+IV.      The Econometric Model
+
+         Spatial autocorrelation in levels of, and changes in, poverty was noted in Section 3.1,
+and our econometric modeling recognizes this by using the spatial panel estimator of Belotti
+et al (2014). The regional N-vector of poverty measures for date t (=1,…,T) is denoted Pt and
+
+the matrix of explanatory variables is X t which includes our measures of urban economic
+
+activity as indicated by the night lights data. Our spatial Durbin model (SDM) can be written
+as:20
+                  Pt  WPt  X t 1  WX t  2    vt (i=1,…,N; t=1,…,T)                                 (3)
+
+
+
+
+20
+   For an excellent overview of the spatial Durbin model see Elhorst (2012). Note that the model is static. A
+temporal lag of Pt can also be included. We found that such a temporal lag of the NSS region poverty rate was
+statistically insignificant so we dropped it from the model. This allows us to keep the first year of our data.
+
+
+                                                       13
+Here the spatial weighting matrix W describes the structure of spatial relationships between
+the NSS regions. The W matrix has zeros along the main diagonal, given that no region is its
+own neighbor, while (to allow for geographic spillover effects) the off diagonals are set to
+unity for immediate neighbors and zero otherwise. This model allows for changes in an
+explanatory variable in a particular region to not only affect the poverty rate in that region,
+but also in surrounding regions.
+        The error term in (3) has two components. The term  represents time-invariant
+regional fixed effects. The second error term, vt , is assumed to be a white-noise process,
+
+orthogonal to the X’s. The fact that we have regional fixed effects gives us greater confidence
+in assuming exogeneity in that threats to validity could be expected to come in large part
+from latent factors that are relatively constant over time. For example, higher latent
+agricultural productivity in a region could simultaneously cause lower rural poverty and
+higher urban living standards. This could happen through urban commercial activity
+responding to rural demand induced by higher agricultural productivity. The regional fixed
+effect should soak up the bulk of the variance due to such factors. However, we acknowledge
+that the exogeneity assumption can still be questioned. Probably the most plausible threat is
+that temporal (positive or negative) shocks to local agricultural productivity may induce
+changes in urban activity levels, making urban areas more or less bright. We will maintain
+the exogeneity assumption but make some observations that offer some support.
+        Two other possible specifications are the spatial autoregressive model (SAR) and the
+spatial error model (SEM). Both are nested within the SDM. The SAR model is:21
+                          Pt  WPt  X t     vt                                                    (4)
+
+The SAR is obtained from the SDM under the testable restriction on equation (3) that β2=0.
+The restrictions to get the SEM from the SDM are analogous to the common factor
+(COMFAC) restrictions of Hendry and Mizon (1978), where a static model with AR(1) errors
+is a restricted version of an autoregressive, distributed lag model ADL(1,1). The SEM takes
+the form:
+                          Pt  X t     vt with vt  Wv t   t                                     (5)
+
+This can be derived from the SDM under the nonlinear parameter restriction that 2   1 .
+The SDM will give unbiased coefficient estimates even if the true data-generation process is
+a SAR or SEM but the reverse is not true; for example, imposing data-inconsistent COMFAC
+
+21
+  The SAR model may also have autoregressive disturbances, but these may be an artefact of mis-specifying the
+spatial lags by omitting the lagged X variables in equation (3).
+
+
+                                                     14
+restrictions by estimating a SEM when the true model is SDM involves omitting relevant
+variables. For either poverty measure, and irrespective of using either lit area or the sum of
+lights (lit area times the average brightness within lit areas), the two sets of restrictions to
+derive the SAR and SEM from the SDM are rejected at the p<0.01 level. So, our results focus
+on the more general SDM specification in (3).
+        A feature of the SDM is that the total effect of changes in an X variable – such as
+expansion in cities or towns – may be quite different to what is shown by ˆ since a local
+
+change in poverty rate affects the poverty rates of neighbors which, in turn, affects the
+poverty rate of their neighbors, including the original region. These spillover and feedback
+effects let us decompose effects of urban growth on rural poverty into direct and indirect
+components. To see how, note first that equation (3) can also be written as (in matrix notation
+and dropping t subscripts):
+                 P  ( I  W ) 1 ( X1  WX 2 )  ( I  W ) 1 v                               (6)
+Following Elhorst (2012), the partial derivatives w.r.t. the kth explanatory variable can then
+be written as (noting that the diagonal elements of W are zero):
+                            P
+                                 ( I  W ) 1 ( 1k I N   2kW )                                (7)
+                           X k
+
+(Here 1k is the kth element of the vector 1 and similarly for  2 k .) The first RHS term is the
+direct effect and the second is the indirect effect. The indirect effects are of two types: local
+effects arise from a region’s neighbors and occur as long as  2 k  0, while global effects
+
+need not arise just from neighbors, and occur as long as   0. The direct and indirect
+effects can vary over regions, so the spatial panel estimator that we use follows LeSage and
+Pace (2009) in reporting a single direct effect, that averages the diagonal elements of the
+matrix in (7) and a single indirect effect that averages the row sums of the non-diagonal
+elements of that matrix.
+        The indirect effects are important for three reasons. First, influences on rural poverty
+may be stronger from surrounding regions than the own-region, depending on the geography
+of labor market linkages and the variation over space in stages of urban development. Also,
+the indirect pathway allows big cities to have a potential effect on poverty of NSS regions
+that lack a big city. Finally, the decomposition provides a straightforward way to deal with
+big cities that sprawl over region boundaries; for example, in Figure 5, Bangalore extends
+across the boundary into Inland Tamil Nadu in 2011. The effect of big city lights within the
+
+
+
+
+                                                      15
+NSS region are part of the direct effect and the lights from the part of a city that has spilled
+over the border are part of the indirect effect that comes from neighbors.22
+
+V.       Types of Urban Growth and Rural Poverty
+
+5.1      Effects of Unmasked Regional Lights on Rural Poverty
+
+         We start by examining whether night lights have any effect at all, before we compare
+effects of lights coming from big cities with those from smaller towns. We refer to these
+results as ‘unmasked’ since we consider the entire area of each NSS region without first
+masking the pixels lit by the big cities.
+         Table 2 reports the estimates of the SDM for the headcount index, H and the poverty
+gap index, PG that consider four different ways to use the night lights data. In columns (1)
+and (5), the total lit area for each NSS region, for any clusters of lights exceeding 20 percent
+of maximum brightness (DN=13) is used as the proxy for urban development. Variables in
+these models are in logarithms for the convenience of using elasticities.23 The results suggest
+an absolute elasticity of rural poverty with respect to own-region lit urban area of about 0.1 to
+0.2, with a slightly more precisely estimated elasticity for H than for PG. The elasticities with
+respect to the spatially weighted average of lit area in neighboring regions are larger, at
+between 0.3 and 0.4, and the spatial lag of the poverty rate has an elasticity of 0.3. Allowing
+for the spillover to neighbors and the feedback effects shown in equation (7), the total effect
+of growth in lit area on H has an elasticity of -0.6 and on PG has an elasticity of almost -0.9.
+These indirect effects will have both local and global components, given that  2 k  0 and
+
+  0.
+         When the average DN value is used, either solely in columns (2) and (6), or jointly
+with lit area in columns (3) and (7), it has no statistically significant association with the
+poverty gap index, and a positive relationship with rural headcount poverty (albeit one that is
+not significant when lit area is also in the model). In contrast to the mixed and imprecise
+
+
+22
+   Chandigarh and Delhi lit area includes Union Territory (UT) area that is not part of our data set of 19 major
+states. The omitted area averages 7.6% of all big city area. In sensitivity analyses we apportion the UT area into
+the neighboring NSS regions, according to each region’s share of the Delhi or Chandigarh lit area agglomeration
+in the particular year. The differences in effect of big city growth and smaller town growth on rural poverty are
+somewhat more precisely estimated in these analyses, while the qualitative pattern of results is unchanged.
+23
+   When urban growth is split into big city and smaller town components not all regions have a big city and the
+logarithm of zero is undefined. To address this problem, we use the inverse hyperbolic sine transformation
+whereby ihs( x )  ln( x  ( x  1) ) which is shown in Appendix Table 1 to give identical results to using
+                               2    0.5
+
+
+logarithms.
+
+
+                                                       16
+evidence for average DN values, the significant negative effect of lit area on rural poverty is
+almost the same regardless of whether average DN values are included in the model.
+         As noted in Section IV, our assumption that night lights are exogenous to rural
+poverty can be questioned. Recall that long-run cross-sectional differences that would
+otherwise be a threat to identification will be picked up by the fixed effect. The main
+remaining threat to identification is likely to be shocks to agricultural productivity that spill
+over into urban areas. However, one would expect to see brightness being more closely
+associated with rural poverty reduction than is lit area. Yet we find the opposite.24
+         The last results reported in Table 2 (columns (4) and (8)) use the sum of lights within
+each region, by multiplying lit area by the average DN value within lit areas; by comparing
+results in column (4) with (1) and column (8) with (5), it is clear that just using lit area is
+sufficient to capture this combined effect. In other words, it is the expansion of India’s cities
+and other urban areas on their extensive margin that seems to have the most significant
+relationship with rural poverty reduction. We use this finding to guide our specifications for
+comparing the effects of growth of the big cities with that of the smaller towns, which we
+proxy for by using either the lit area or the sum of lights.25
+
+5.2      Direct Effects of City and Town Expansion on Rural Poverty
+
+         The results in Table 2 consider the lit area (or the sum of lights) within an NSS
+region, irrespective of whether it is part of a big city or smaller town. In Table 3 we
+distinguish growth in lit area (or in the sum of lights) into the component from big cities and
+the component from smaller towns.
+         The instantaneous elasticity of the rural headcount index with respect to the lit area of
+smaller towns within an NSS region is -0.13, and for big cities it is -0.04. Total elasticities are
+higher, both direct and indirect, with the latter being larger (in absolute value). Specifically,
+the total effect shows an elasticity of H with respect to smaller town lit area of -0.55 (with a
+standard error of 0.09) while the elasticity with respect to big city area is a statistically
+insignificant -0.09. For the poverty gap index the elasticity w.r.t. secondary town area is even
+larger, at -0.85, than for H, reflecting gains below the poverty line, while the elasticity w.r.t.
+big city area is insignificantly different from zero. A statistically significantly larger town
+
+
+24
+   A related sensitivity analysis used time fixed effects, which reduced the precision of the results somewhat
+while not causing much change in the magnitude of the elasticities.
+25
+   The same pattern is also clear, although a little less precisely estimated, if the 30 percent threshold is used to
+distinguish urban areas from non-urban areas (Appendix Table 1).
+
+
+                                                          17
+effect than big city effect is apparent in the test statistics reported at the foot of Table 3,
+especially for the poverty gap index and in the indirect and total effects.
+        These differences between big city effects and smaller town effects are not an artefact
+of less brightly lit fringe areas of big cities being counted as part of the smaller, more dimly
+lit, towns. If a fixed mask approach is used that excludes areas that ultimately become part of
+the big city from being ever counted as part of small towns, the results are largely the same
+(columns (3) and (4)). The elasticities have slightly smaller magnitude than under the variable
+mask approach in columns (1) and (2) but the dominance of small town over big city effects
+is just as apparent. Another sensitivity analysis is to use the sum of lights approach, by
+multiplying lit area by the average DN within that area and the results in columns (5) to (8)
+confirm significantly larger secondary town effects. The results also hold if the distinction
+between smaller towns and rural areas is based on a 30% luminosity threshold rather than the
+20% threshold used in Table 3 (Appendix Table 2 has these sensitivity analyses).
+        It might be argued that the “town effect” we identify may be in large part an indirect
+“city effect,” i.e., that city growth drives town growth, which then helps drive rural poverty
+reduction. Table 4 takes this argument seriously by providing analogous results to Table 3 but
+dropping the variables for towns and only reporting results for H since the results have
+similar patterns to those for PG. (For balance, the table also gives the results when we drop
+the city lights variables.) We find a total effect of the area of city lights of -0.715. Combined
+with the results of Table 3, this suggests that 87% of the total big city effect is via induced
+town growth, and 13% is direct. However, it should also be noted that the R2 has fallen from
+0.631 to 0.546 in comparing columns 1 of Tables 3 and 4. This suggests there is a sizeable
+share of the variance that may be a direct effect of town growth, independently of city
+growth. Moreover, the tests of the nesting restrictions needed to derive the ‘big city only’ or
+‘small town only’ models show that the models that drop the variables for smaller towns are
+not consistent with the data, whereas one would not reject the restrictions needed for
+dropping the big city variables.
+        To summarize, our key finding is that the lights data indicate that the effects of urban
+economic growth on rural poverty are almost entirely attributable to towns rather than cities.
+
+5.3     Distributional Effects of City and Town Expansion
+
+        Do the effects we have seen on rural poverty measures entail significant systematic
+changes in the extent of inequality within rural areas? A simple test for such effects is to
+
+
+
+                                                 18
+replace the dependent variable in our SDM in equation (3) by estimates of the Gini index of
+consumption inequality from the same NSS data.
+       Table 5 provides the results. Whether we use illuminated area or total light, or
+variable or fixed masks, we find no sign of significant effects on inequality. The effects of
+urban growth on rural poverty appear to be transmitted entirely via growth in mean rural
+consumption. This result does not differ between secondary towns or cities.
+
+VI.    Conclusions
+
+       The scope for escaping rural poverty through urban economic growth has been a
+longstanding development issue, going back to the classic model of Lewis (1954). We have
+revisited this issue, focusing specifically on the question of whether cities or towns are better
+generators of rural-poverty reducing growth in India, using data on 59 regions observed four
+times from 1993/94 to 2011/12. The rural headcount poverty rate fell by half in this period
+and the poverty gap index fell by two-thirds. The pace of poverty reduction was spatially
+uneven. Using night lights as the indicator of urban economic activity, we find that the
+geographic expansion of urban areas is associated with lower rural poverty measures; these
+effects are consistently found using different specifications, while there is little apparent
+effect on the rural sector from the brightness of lights coming from urban areas. It is urban
+growth on the extensive rather than the intensive margin that matters for rural poverty
+reduction.
+       When the effects of big-city growth on rural poverty are compared to those of
+secondary towns, some consistent associations emerge, indicating that the growth of towns
+matters far more than cities to reducing rural poverty in India. This effect is close to
+inequality-neutral, in that it was not associated with higher, or lower, inequality within rural
+areas. In expectation, the poverty effect is transmitted through mean consumption.
+       We remind readers that here we have only studied this question for India, at its stage
+of economic development. The pattern we have uncovered may not hold at all stages of
+development. Indeed, our theoretical model suggests that cities may eventually take over
+from towns as the drivers of rural poverty reduction. For now, however, India should look to
+its towns, not its cities, to help reduce rural poverty, on top of promoting agricultural and
+rural development.
+
+
+
+
+                                                19
+References
+
+Abrahams, Alexei, Nancy Lozano-Gracia, and Christopher Oram (2015) Correcting Over-
+       glow in Night-time Lights Data. Unpublished manuscript. Accessed at:
+       https://sites.google.com/site/alexeiabrahams2/
+Álvarez-Berríos, Nora, Isabel Parés-Ramos, and Mitchell Aide (2013) Contrasting patterns of
+       urban expansion in Colombia, Ecuador, Peru, and Bolivia between 1992 and
+       2009. Ambio 42(1): 29-40.
+Anselin, L. (1988) Spatial Econometrics: Methods and Models Dordrecht: Kluwer Academic
+       Publishers.
+Belotti, Federico, Gordon Hughes, and Andrea Piano Mortari (2014) XSMLE: Stata module
+       for spatial panel data models estimation. Statistical Software Components Boston
+       College. https://ideas.repec.org/c/boc/bocode/s457610.html
+Chatterjee, Urmila, Rinku Murgai, and Martin Rama (2015) Job opportunities along the rural-
+       urban gradation and female labor force participation in India. World Bank Policy
+       Research Working Paper No. 7412.
+Collier, Paul (2009) Africa’s Organic Peasantry. Harvard International Review October 26,
+       http://hir.harvard.edu/agricultureafrica-s-organic-peasantry/
+Datt, Gaurav and Martin Ravallion (2011) Has India’s economic growth become more
+       pro-poor in the wake of economic reforms? World Bank Economic Review, 25(2):
+       157-189.
+Datt, Gaurav, Martin Ravallion, and Rinku Murgai (2016) Growth, Urbanization and Poverty
+       Reduction in India. National Bureau of Economic Research Working Paper No.
+       w21983.
+Deaton, Angus, and Valerie Kozel (2005) Data and dogma: the great Indian poverty
+       debate. The World Bank Research Observer 20(2): 177-199.
+Deng, Xiangzheng, Jikun Huang, Scott Rozelle, and Emi Uchida (2010) Economic growth
+       and the expansion of urban land in China. Urban Studies 47(4): 813-843.
+Elhorst, J. Paul (2012) Dynamic spatial panels: models, methods, and inferences. Journal of
+       Geographic Systems 14: 5–28.
+Elvidge, Christopher, Daniel Ziskin, Kimberly Baugh, Benjamin Tuttle, Tilottama Ghosh,
+       Dee Pack, Edward Erwin, and Mikhail Zhizhin (2009) A fifteen year record of global
+       natural gas flaring derived from satellite data. Energies 2(3): 595-622.
+
+
+
+
+                                              20
+Ferré, Celine, Francisco Ferreira and Peter Lanjouw (2012) Is There a Metropolitan Bias?
+       The relationship between poverty and city size in a selection of developing countries.
+       World Bank Economic Review 26(3): 351-382.
+Gibson, John, Geua Boe-Gibson and Glen Stichbury (2015) Urban land expansion in India
+       1992-2012. Food Policy 56(1): 100-113.
+Harris, John, and Michael Todaro (1970) Migration, Unemployment and Development:
+       A Two Sector Analysis. American Economic Review 40: 126-142.
+Hendry, David, and Grayham Mizon (1978) Serial Correlation as a Convenient Simplification,
+       Not a Nuisance: A Comment on a Study of the Demand for Money by the Bank of
+       England. Economic Journal 88(351): 549-563
+Hsu, Feng-Chi, Kimberly Baugh, Tilottama Ghosh, Mikhail Zhizhin, and Christopher Elvidge
+       (2015) DMSP-OLS Radiance Calibrated Night-time Lights Time Series with
+       Intercalibration. Remote Sensing 7(2): 1855-1876.
+Lanjouw, Peter and Rinku Murgai (2014) Urban growth and rural poverty in India:
+       1983-2005. in N. Hope, A. Kochar, R. Noll, and T.N. Srinivasin (editors) Economic
+       Reform in India: Challenges, Prospects, and Lessons pp. 371-404, Cambridge
+       University Press, New York.
+LeSage, James and Robert Kelley Pace (2009) Introduction to Spatial Econometrics
+       Chapman and Hall and CRC Press, Boca Raton.
+Lewis, Arthur (1954) Economic Development with Unlimited Supplies of Labor, Manchester
+       School of Economic and Social Studies 22: 139-191.
+Li, Yue and Martin Rama (2015) Households or locations? Cities, catchment areas and
+       prosperity in India. World Bank Policy Working Paper No. 7473.
+Liu, Zhifeng, Chunyang He, Qiaofeng Zhang, Qingxu Huang, and Yang Yang (2012)
+       Extracting the dynamics of urban expansion in China using DMSP-OLS nighttime
+       light data from 1992 to 2008. Landscape and Urban Planning 106(1): 62-72.
+Ravallion, Martin (2016) The Economics of Poverty: History, Measurement, and Policy. New
+       York: Oxford University Press.
+Ravallion, Martin and Gaurav Datt (1996) How Important to India's Poor is the Sectoral
+       Composition of Economic Growth? World Bank Economic Review 10:1-26.
+Small, Christopher, and Christopher Elvidge (2013) Night on Earth: Mapping decadal
+       changes of anthropogenic night light in Asia. International Journal of Applied Earth
+       Observation and Geoinformation 22(1): 40-52.
+
+
+
+                                             21
+Tripathi, Sabya (2013) Do large agglomerations lead to economic growth? Evidence from
+       urban India. Review of Urban and Regional Development Studies 25(2) 176-200.
+Van de Walle, Dominique, Martin Ravallion, Vibhuti Mendiratta and Gayatri Koolwal (2016)
+       Long-Term Gains from Electrification in Rural India, World Bank Economic Review.
+
+
+
+
+                                           22
+  Table 1: Trends in Rural Poverty Rates, India 1993/94 to 2011/12
+
+                      Unweighted                            Weighted By Rural Population
+              Headcount       Poverty                       Headcount      Poverty Gap
+                Rate         Gap Index                        Rate             Index
+1993/94         0.495          0.123                          0.504            0.125
+                0.29            0.44                          0.26              0.39
+2004/05          0.417                0.094                    0.422               0.094
+                 0.36                  0.56                    0.33                 0.48
+2009/10          0.310                0.062                    0.337               0.069
+                 0.52                  0.70                    0.45                 0.59
+2011/12          0.245                0.045                    0.256               0.047
+                 0.58                  0.77                    0.51                 0.66
+
+Note: Based on averages for 59 NSS regions from 19 major States, using the Tendulkur poverty
+line. Coefficient of variation in italics.
+
+
+
+
+                                                    23
+           Table 2: Effects of Unmasked Regional Lights (at 20% threshold) on Rural Poverty Rates for 59 NSS Regions from 1993/94 to 2011/12
+                                                                        ---------------Headcount Poverty Rate---------------                        ------------------Poverty Gap Index------------------
+                                                                     (1)                 (2)            (3)                 (4)                  (5)                 (6)              (7)                (8)
+Lit area in the NSS region                                        -0.149                             -0.151                                   -0.188                               -0.192
+                                                                  (1.75)*                            (1.76)*                                  (1.59)                               (1.61)
+Average DN value within lit areas                                                      0.070         -0.129                                                       -0.350           -0.687
+                                                                                      (0.16)         (0.32)                                                       (0.59)           (1.21)
+Sum of lights (lit area × average DN)                                                                                   -0.154                                                                       -0.216
+                                                                                                                        (1.88)*                                                                      (1.91)*
+W × Lit area in the NSS region                                    -0.267                             -0.271                                   -0.391                               -0.413
+                                                                  (2.79)***                          (2.82)***                                (2.94)***                            (3.09)***
+W × Average DN value within lit areas                                                  1.168         -0.122                                                        1.945           -0.089
+                                                                                      (1.71)*        (0.18)                                                       (2.07)**         (0.10)
+W × Sum of lights (lit area × average DN)                                                                               -0.272                                                                       -0.384
+                                                                                                                        (2.93)***                                                                    (2.97)***
+Spatial lag of poverty rate (delta)                                0.318               0.738          0.315              0.314                 0.333               0.752            0.320             0.322
+                                                                  (4.01)***          (18.53)***      (3.95)***          (3.94)***             (4.23)***         (19.46)***         (4.00)***         (4.04)***
+R-squared (within)                                                 0.629               0.124          0.630              0.630                 0.638               0.117            0.643             0.642
+Restrictions to nest spatial lag model (β2 = 0)                    7.80***             2.92*          8.01**             8.57***               8.64***             4.28**           9.57***           8.84***
+COMFAC to nest spatial error model (β2 = - β1)                   20.50***             4.14**        20.63***           22.18***              22.29***             4.15**         23.34***           23.30***
+Total effects – direct
+Lit area in the NSS region                                        -0.175                                -0.178                                -0.227                                 -0.232
+                                                                  (2.56)**                              (2.58)***                             (2.41)**                               (2.43)**
+Average DN value within lit areas                                                     0.445             -0.110                                                     0.195             -0.668
+                                                                                     (1.12)             (0.25)                                                    (0.35)             (1.09)
+Sum of lights (lit area × average DN)                                                                                      -0.180                                                                       -0.254
+                                                                                                                           (2.74)***                                                                    (2.79)***
+Total effects – indirect
+Lit area in the NSS region                                        -0.435                                -0.444                                -0.642                                 -0.665
+                                                                  (5.35)***                             (5.61)***                             (5.67)***                              (6.08)***
+Average DN value within lit areas                                                     4.512             -0.227                                                     6.592             -0.437
+                                                                                     (1.88)*            (0.27)                                                    (1.87)*            (0.37)
+Sum of lights (lit area × average DN)                                                                                      -0.441                                                                       -0.633
+                                                                                                                           (5.56)***                                                                    (5.75)***
+Total effects
+Lit area in the NSS region                                        -0.610                                -0.621                                -0.869                                -0.897
+                                                                 (13.21)***                            (12.54)***                            (13.26)***                            (13.06)***
+Average DN value within lit areas                                                     4.958             -0.337                                                     6.787            -1.105
+                                                                                     (1.91)*            (0.38)                                                    (1.78)*           (0.89)
+Sum of lights (lit area × average DN)                                                                                      -0.621                                                                      -0.887
+                                                                                                                          (13.29)***                                                                  (13.54)***
+Notes: All variables in logs; all models include fixed effects for 59 NSS regions; nesting tests are chi-sq with 1 df (2 df for col (3), (7)); z-statistics in ( ), ***, **, ** for p<0.01, 0.05, 0.1. N=236.
+                    Table 3: Effects of City Growth and Town Growth on Rural Poverty Rates for 59 NSS Regions from 1993/94 to 2011/12
+                                                                     -------------------Illuminated Area-------------------                 ------------Sum of Lights (area × average DN)------------
+                                                                   Variable Maska                          Fixed Maskb                         Variable Maska                       Fixed Maskb
+                                                             Headcount          Poverty Gap        Headcount         Poverty Gap        Headcount         Poverty Gap       Headcount      Poverty Gap
+                                                                 (1)                  (2)              (3)                  (4)              (5)               (6)              (7)              (8)
+Smaller town lit area (or sum of lights)                      -0.127               -0.197           -0.095              -0.128           -0.114            -0.196            -0.078          -0.114
+                                                              (1.49)               (1.66)*          (1.13)              (1.10)           (1.45)            (1.79)*           (0.99)          (1.05)
+City lit area (or sum of lights)                              -0.041                0.000           -0.038               0.002           -0.056            -0.050            -0.053          -0.047
+                                                              (0.97)               (0.01)           (0.90)              (0.04)           (2.10)**          (1.35)            (1.96)*         (1.24)
+W × Town lit area (or sum of lights)                          -0.245               -0.358           -0.241              -0.381           -0.268            -0.363            -0.269          -0.399
+                                                              (2.42)**             (2.52)**         (2.50)**            (2.82)***        (2.87)***         (2.76)***         (2.98)***       (3.15)***
+W × City lit area (or sum of lights)                          -0.020               -0.015           -0.015              -0.003            0.013             0.026             0.017           0.035
+                                                              (0.27)               (0.15)           (0.20)              (0.03)           (0.27)            (0.40)            (0.36)          (0.55)
+Spatial lag of poverty rate (delta)                            0.316                0.339            0.317               0.333            0.323             0.336             0.322           0.330
+                                                              (3.96)***            (4.32)***        (3.93)***           (4.18)***        (4.07)***         (4.26)***         (4.01)***       (4.11)***
+R-squared (within)                                             0.631                0.637            0.630               0.637            0.634             0.641             0.633           0.641
+Total effects – direct
+Town lit area (or sum of lights)                              -0.151             -0.235            -0.118             -0.165             -0.140            -0.234             -0.103             -0.153
+                                                              (2.18)**           (2.45)**          (1.73)*            (1.75)*            (2.20)**          (2.65)***          (1.62)             (1.72)*
+City lit area (or sum of lights)                              -0.040              0.003            -0.037              0.007             -0.055            -0.047             -0.051             -0.042
+                                                              (0.86)             (0.05)            (0.78)             (0.10)             (1.76)*           (1.07)             (1.61)             (0.95)
+Total effects – indirect
+Town lit area (or sum of lights)                              -0.398             -0.612            -0.379             -0.606             -0.430            -0.616             -0.415             -0.623
+                                                              (3.88)***          (4.22)***         (3.99)***          (4.54)***          (4.82)***         (4.91)***          (4.97)***          (5.33)***
+City lit area (or sum of lights)                              -0.050             -0.026            -0.042             -0.007             -0.009             0.012             -0.002              0.027
+                                                              (0.48)             (0.18)            (0.40)             (0.05)             (0.14)            (0.12)             (0.02)             (0.28)
+Total effects
+Town lit area (or sum of lights)                            -0.548           -0.848                -0.496             -0.771             -0.570            -0.851             -0.518             -0.775
+                                                            (5.85)***        (6.30)***             (5.74)***          (6.28)***          (7.32)***         (7.70)***          (7.21)***          (7.68)***
+City lit area (or sum of lights)                            -0.091           -0.023                -0.079             -0.001             -0.064            -0.035             -0.053             -0.015
+                                                            (0.76)           (0.13)                (0.65)             (0.00)             (0.77)            (0.30)             (0.62)             (0.13)
+Test of equal total effect on poverty of big city growth versus smaller town growth
+ Direct effects                                              1.73             4.21**                0.93               2.21              1.44               3.62*              0.52              1.23
+ Indirect effects                                            5.69**           7.98***               5.64**             8.92***          14.26***           15.95***           14.73***          18.50***
+ Total effects                                               9.18***        14.40***                7.77***           13.08***          19.64***           25.28***           17.22***          23.19***
+Notes: Poverty rates are in logs and other variables are inverse hyperbolic sine transformed so coefficients can be treated as elasticities. Variables interacted with W are spatial lags; all models include
+fixed effects for 59 NSS regions; tests for the effect of big city growth versus smaller town growth are chi-sq with 1 degree of freedom; z-statistics in ( ), ***, **, ** for p<0.01, 0.05, 0.1. N=236.
+a
+  The variable mask approach changes the boundary between big city lit area (using a 50% luminosity threshold) and smaller town lit area (using a 20% threshold) satellite-year by satellite-year.
+b
+  The fixed mask approach reserves area for the eventual expansion of the big cities based on their boundaries in the satellite-year (F18, 2012) that shows maximum big city area (and thus leaves less
+unmasked area available for the measured expansion in lit area of the smaller towns).
+                     Table 4: Effects of City Growth or Town Growth on Rural Poverty Rate for 59 NSS Regions from 1993/94 to 2011/12
+                                                                   -------------------Illuminated Area-------------------                 ------------Sum of Lights (area × average DN)------------
+                                                                   Variable Maska                        Fixed Maskb                          Variable Maska                      Fixed Maskb
+                                                                 (1)                 (2)             (3)                (4)                 (5)              (6)              (7)             (8)
+Town lit area (or sum of lights)                                                 -0.148                             -0.117                                -0.151                           -0.111
+                                                                                 (1.79)*                            (1.45)                                (1.94)*                          (1.44)
+City lit area (or sum of lights)                              -0.097                              -0.097                                 -0.106                            -0.106
+                                                              (2.36)**                            (2.36)**                               (4.01)***                         (4.01)***
+W × Town lit area (or sum of lights)                                             -0.258                             -0.248                                -0.260                           -0.260
+                                                                                 (2.77)***                          (2.75)***                             (2.93)***                        (2.98)***
+W × City lit area (or sum of lights)                          -0.239                              -0.239                                 -0.120                            -0.120
+                                                              (3.76)***                           (3.76)***                              (2.90)***                         (2.90)***
+Spatial lag of inequality rate (delta)                         0.530              0.323            0.530             0.320                0.604            0.321            0.604           0.316
+                                                              (8.49)***          (4.08)***        (8.49)***         (4.00)***           (11.02)***        (4.05)***       (11.02)***       (3.92)***
+R-squared (within)                                             0.546              0.628            0.546             0.627                0.504            0.628            0.504           0.628
+Total effects – direct
+Town lit area (or sum of lights)                                                 -0.174                                -0.140                               -0.176                                -0.135
+                                                                                 (2.62)***                             (2.17)**                             (2.84)***                             (2.18)**
+City lit area (or sum of lights)                              -0.143                                -0.143                               -0.142                                -0.142
+                                                              (4.28)***                             (4.28)***                            (6.15)***                             (6.15)***
+Total effects – indirect
+Town lit area (or sum of lights)                                                 -0.427                                -0.396                               -0.429                                -0.408
+                                                                                 (5.36)***                             (5.23)***                            (5.62)***                             (5.52)***
+City lit area (or sum of lights)                              -0.572                                -0.572                               -0.427                                -0.427
+                                                              (6.50)***                             (6.50)***                            (5.33)***                             (5.33)***
+Total effects
+Town lit area (or sum of lights)                                                 -0.600                               -0.537                                -0.605                               -0.543
+                                                                                (13.08)***                           (13.05)***                            (13.11)***                           (13.12)***
+City lit area (or sum of lights)                              -0.715                               -0.715                                -0.569                               -0.569
+                                                              (7.82)***                            (7.82)***                             (6.37)***                            (6.37)***
+Test of nesting restrictions to derive this modelc            28.26***            1.18             26.63***             0.94             35.52***            4.51             33.71***            4.03
+Notes: Dep variable is log of rural headcount index, other variables are inverse hyperbolic sine transformed so coefficients can be treated as elasticities; variables interacted with W are spatial lags; all
+models include fixed effects for 59 NSS regions; z-statistics in ( ), ***, **, ** for p<0.01, 0.05, 0.1. N=236.
+a
+  The variable mask approach changes the boundary between big city lit area (using a 50% luminosity threshold) and smaller town lit area (using a 20% threshold) satellite-year by satellite-year.
+b
+  The fixed mask approach reserves area for the eventual expansion of the big cities based on their boundaries in the satellite-year (F18, 2012) that shows maximum big city area (and thus leaves less
+unmasked area available for the measured expansion in lit area of the smaller towns).
+c
+  The test of nesting restrictions is a test of zero coefficients on the relevant encompassing models in Table 3 that are needed to derive models that have either big city growth or smaller town growth
+as the explanatory variables.
+             Table 5: Effects of Big City Growth and Smaller Town Growth on Rural Gini Index for 59 NSS Regions from 1993/94 to 2011/12
+                                                                    -------------------Illuminated Area-------------------                  ------------Sum of Lights (area × average DN)------------
+                                                                    Variable Maska                        Fixed Maskb                          Variable Maska                      Fixed Maskb
+                                                                         (1)                                  (2)                                    (3)                               (4)
+Town lit area (or sum of lights)                                        -0.036                               -0.027                                  -0.029                           -0.021
+                                                                         (1.06)                               (0.81)                                 (0.93)                           (0.67)
+City lit area (or sum of lights)                                          0.014                                0.014                                  0.004                             0.004
+                                                                         (0.81)                               (0.84)                                 (0.36)                           (0.40)
+W × Town lit area (or sum of lights)                                      0.045                                0.028                                  0.030                             0.017
+                                                                         (1.18)                               (0.77)                                 (0.87)                           (0.51)
+W × City lit area (or sum of lights)                                    -0.008                                 0.001                                  0.015                             0.019
+                                                                         (0.26)                               (0.04)                                 (0.81)                           (1.06)
+Spatial lag of inequality rate (delta)                                    0.145                                0.143                                  0.145                             0.143
+                                                                         (1.46)                               (1.45)                                 (1.46)                           (1.45)
+R-squared (within)                                                        0.011                                0.009                                  0.013                             0.011
+Total effects – direct
+Town lit area (or sum of lights)                                         -0.035                               -0.027                                -0.029                               -0.021
+                                                                         (1.25)                               (0.97)                                (1.12)                               (0.81)
+City lit area (or sum of lights)                                          0.015                                0.016                                 0.005                                0.006
+                                                                         (0.80)                               (0.84)                                (0.44)                               (0.49)
+Total effects – indirect
+Town lit area (or sum of lights)                                          0.046                                 0.028                                0.030                                 0.016
+                                                                         (1.24)                                (0.80)                               (0.91)                                (0.51)
+City lit area (or sum of lights)                                         -0.007                                 0.003                                0.018                                 0.024
+                                                                         (0.20)                                (0.09)                               (0.77)                                (1.00)
+Total effects
+Town lit area (or sum of lights)                                       0.011                                    0.001                                0.001                               -0.005
+                                                                      (0.37)                                   (0.04)                               (0.03)                               (0.22)
+City lit area (or sum of lights)                                       0.008                                    0.019                                0.023                                0.030
+                                                                      (0.19)                                   (0.46)                               (0.82)                               (1.01)
+Test of equal total effect on inequality of big city growth versus smaller town growth
+ Direct effects                                                         2.20                                    1.62                                 1.43                                  0.90
+ Indirect effects                                                       1.05                                    0.23                                 0.08                                  0.04
+ Total effects                                                          0.01                                    0.13                                 0.36                                  0.88
+Notes: Dep variable is log of rural Gini, other variables inverse hyperbolic sine transformed so coefficients can be treated as elasticities; variables interacted with W are spatial lags; all models include
+fixed effects for 59 NSS regions; tests for the effect of big city growth versus smaller town growth are chi-sq with 1 degree of freedom; z-statistics in ( ), ***, **, ** for p<0.01, 0.05, 0.1. N=236.
+a
+  The variable mask approach changes the boundary between big city lit area (using a 50% luminosity threshold) and smaller town lit area (using a 20% threshold) satellite-year by satellite-year.
+b
+  The fixed mask approach reserves area for the eventual expansion of the big cities based on their boundaries in the satellite-year (F18, 2012) that shows maximum big city area (and thus leaves less
+unmasked area available for the measured expansion in lit area of the smaller towns).
+Figure 1: Spatial Patterns in Rural Poverty Rates at Baseline
+Figure 2: Spatial Patterns in Rural Poverty Rates at the End of the Sample Period
+Figure 3: Spatial Patterns in Rates of Rural Poverty Elimination
+Figure 4: Location of Big Cities and NSS Regions
+Figure 5: Illustration of Splitting Urban Growth into Big City and Smaller Town Growth
+Appendix Table 1: Sensitivity Analyses for Effects of Lights on Rural Headcount Poverty Rates for 59 NSS Regions from 1993/94 to 2011/12: Spatial Durbin Fixed Effects Model
+                                                          ---------------Inverse Hyperbolic Sine---------------          --------------Using 30% lights threshold--------------
+                                                         (1)                (2)            (3)               (4)        (5)                (6)             (7)              (8)
+Lit area in the NSS region                            -0.149                           -0.152                        -0.145                            -0.102
+                                                      (1.75)*                          (1.76)*                       (1.85)*                           (1.22)
+Average DN value within lit areas                                         0.070        -0.129                                           -0.665         -0.648
+                                                                         (0.16)        (0.32)                                           (1.24)         (1.19)
+Sum of lights (lit area × average DN)                                                                     -0.154                                                         -0.154
+                                                                                                          (1.88)*                                                        (2.09)**
+W × Lit area in the NSS region                        -0.267                           -0.271                        -0.283                            -0.325
+                                                      (2.79)***                        (2.82)***                     (3.13)***                         (3.40)***
+W × Average DN value within lit areas                                     1.169        -0.124                                            0.893           0.931
+                                                                         (1.71)*       (0.18)                                           (1.03)         (1.09)
+W × Sum of lights (lit area × average DN)                                                                 -0.272                                                         -0.271
+                                                                                                          (2.93)***                                                      (3.15)***
+Spatial lag of poverty rate (delta)                    0.318              0.738         0.314              0.314      0.325              0.757           0.326            0.328
+                                                      (4.01)***        (18.53)***      (3.94)***          (3.94)***  (4.10)***         (19.93)***      (4.13)***         (4.15)***
+R-squared (within)                                     0.629              0.124         0.630              0.630      0.626              0.002           0.628            0.625
+Restrictions to nest spatial lag model (β2 = 0)        7.78***            2.92*         7.99**             8.57***    9.80***            1.06          11.66***           9.93***
+COMFAC to nest spatial error model (β2 = - β1)      20.46***             4.14**       20.59***          22.18***    24.59***            0.23          25.34***         25.76***
+Long-run effects – direct
+Lit area in the NSS region                            -0.175                           -0.178                        -0.173                            -0.133
+                                                      (2.56)**                         (2.58)***                     (2.75)***                         (1.98)**
+Average DN value within lit areas                                         0.446        -0.110                                           -0.522         -0.547
+                                                                         (1.12)        (0.25)                                           (0.97)         (0.92)
+Sum of lights (lit area × average DN)                                                                     -0.180                                                         -0.181
+                                                                                                          (2.74)***                                                      (3.07)***
+Long-run effects – indirect
+Lit area in the NSS region                            -0.435                           -0.443                        -0.461                            -0.507
+                                                      (5.35)***                        (5.61)***                     (5.91)***                         (6.48)***
+Average DN value within lit areas                                         4.517        -0.229                                            1.814           1.012
+                                                                         (1.88)*       (0.27)                                           (0.50)         (0.94)
+Sum of lights (lit area × average DN)                                                                     -0.441                                                         -0.451
+                                                                                                          (5.56)***                                                      (6.04)***
+Long-run effects – total
+Lit area in the NSS region                            -0.610                           -0.622                        -0.634                            -0.640
+                                                    (13.21)***                        (12.55)***                    (13.00)***                        (13.21)***
+Average DN value within lit areas                                         4.963        -0.339                                            1.291           0.465
+                                                                         (1.91)*       (0.38)                                           (0.33)         (0.39)
+Sum of lights (lit area × average DN)                                                                     -0.621                                                         -0.632
+                                                                                                        (13.29)***                                                     (12.92)***
+Notes: All models include fixed effects for 59 NSS regions; models (5) - (8) use logs; nesting tests are chi-sq with 1 df (2 df for col (3), (7)); z-statistics in ( ), ***, **, ** for p<0.01, 0.05, 0.1. N=236.
+                               Appendix Table 2: Sensitivity Analyses for Effects of Big City Growth and Smaller Town Growth on Rural Poverty Rates:
+                                                              Using 30% Luminosity Threshold to Measure Smaller Towns
+                                                              -------------------Illuminated Area-------------------       ------------Sum of Lights (area × average DN)------------
+                                                                                a                                b
+                                                              Variable Mask                         Fixed Mask                 Variable Maska                      Fixed Maskb
+                                                        Headcount         Poverty Gap       Headcount        Poverty Gap Headcount       Poverty Gap       Headcount      Poverty Gap
+                                                            (1)                 (2)             (3)                (4)       (5)              (6)              (7)             (8)
+Smaller town lit area (or sum of lights)                 -0.124             -0.230           -0.068            -0.114     -0.101           -0.210           -0.057          -0.112
+                                                         (1.61)             (2.15)**         (0.91)            (1.10)     (1.42)           (2.13)**         (0.82)          (1.17)
+Big city lit area (or sum of lights)                     -0.054             -0.017           -0.051            -0.013     -0.058           -0.049           -0.055          -0.046
+                                                         (1.32)             (0.29)           (1.22)            (0.23)     (2.14)**         (1.29)           (1.97)**        (1.19)
+W × Smaller town lit area (or sum of lights)             -0.249             -0.329           -0.256            -0.379     -0.280           -0.354           -0.282          -0.397
+                                                         (2.53)**           (2.38)**         (2.83)***         (2.97)***  (3.17)***        (2.84)***        (3.42)***       (3.41)***
+W × Big city lit area (or sum of lights)                 -0.026             -0.029           -0.021            -0.014      0.016            0.027            0.021           0.041
+                                                         (0.35)             (0.28)           (0.29)            (0.14)     (0.33)           (0.42)           (0.44)          (0.63)
+Spatial lag of poverty rate (delta)                       0.316              0.336            0.321             0.335      0.336            0.343            0.337           0.340
+                                                         (3.95)***          (4.24)***        (3.98)***         (4.18)***  (4.27)***        (4.37)***        (4.24)***       (4.25)***
+R-squared (within)                                        0.630              0.638            0.628             0.635      0.630            0.639            0.628           0.638
+Long-run effects – direct
+Smaller town lit area (or sum of lights)                 -0.148             -0.266           -0.091            -0.151     -0.129           -0.249           -0.083          -0.151
+                                                         (2.37)**           (3.07)***        (1.50)            (1.79)*    (2.25)**         (3.13)***        (1.49)          (1.94)*
+Big city lit area (or sum of lights)                     -0.055             -0.016           -0.051            -0.011     -0.056           -0.045           -0.052          -0.041
+                                                         (1.20)             (0.25)           (1.09)            (0.17)     (1.79)*          (1.02)           (1.61)          (0.90)
+Long-run effects – indirect
+Smaller town lit area (or sum of lights)                 -0.402             -0.582           -0.389            -0.598     -0.451           -0.619           -0.434          -0.628
+                                                         (3.90)***          (4.01)***        (4.21)***         (4.60)***  (5.06)***        (4.98)***        (5.35)***       (5.57)***
+Big city lit area (or sum of lights)                     -0.065             -0.055           -0.058            -0.032     -0.007            0.014            0.002           0.036
+                                                         (0.63)             (0.38)           (0.55)            (0.21)     (0.10)           (0.14)           (0.03)          (0.36)
+Long-run effects – total
+Smaller town lit area (or sum of lights)                 -0.550             -0.849           -0.481            -0.749     -0.580           -0.868           -0.517          -0.780
+                                                         (5.76)***          (6.24)***        (5.60)***         (6.16)***  (7.03)***        (7.51)***        (6.87)***       (7.43)***
+Big city lit area (or sum of lights)                     -0.120             -0.071           -0.108            -0.043     -0.063           -0.031           -0.050          -0.005
+                                                         (1.04)             (0.43)           (0.90)            (0.25)     (0.73)           (0.26)           (0.56)          (0.04)
+Test of equal long-run effect on poverty of big city growth versus smaller town growth
+ Direct effects                                           1.45               5.42**           0.28              1.73       1.22             5.02*            0.23            1.51
+ Indirect effects                                         5.31**             6.53**           5.62**            8.21***  15.45***         16.05***         16.33***        19.48***
+ Total effects                                            8.21***           13.22***          6.35**           11.34***  18.70***         24.90***         15.85***        22.34***
+Notes: See Table 3 for all notes, except growth of smaller towns in these sensitivity analyses is based on 30% luminosity thresholds instead of the 20% thresholds in the main analyses.
+

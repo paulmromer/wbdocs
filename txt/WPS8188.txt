@@ -1,0 +1,1529 @@
+                                                     WPS8188
+
+
+Policy Research Working Paper                       8188
+
+
+
+
+      Natural Disaster Damage Indices Based
+            on Remotely Sensed Data
+                     An Application to Indonesia
+
+                                Emmanuel Skoufias
+                                   Eric Strobl
+                                  Thomas Tveit
+
+
+
+
+Poverty and Equity Global Practice Group
+September 2017
+Policy Research Working Paper 8188
+
+
+  Abstract
+  Combining nightlight data as a proxy for economic activity                         the size of the annual fiscal transfers from the central gov-
+  with remote sensing data typically used for natural hazard                         ernment to the subnational governments. Ex post, or after
+  modeling, this paper constructs novel damage indices at the                        the incidence of a natural disaster, damage indices are useful
+  district level for Indonesia, for different disaster events such                   for quickly assessing and estimating the damages caused
+  as floods, earthquakes, volcanic eruptions and the 2004                            and are especially useful for central and local governments,
+  Christmas Tsunami. Ex ante, prior to the incidence of a disas-                     emergency services, and aid workers so that they can respond
+  ter, district-level damage indices could be used to determine                      efficiently and deploy resources where they are most needed.
+
+
+
+
+  This paper is a product of the Poverty and Equity Global Practice Group. It is part of a larger effort by the World Bank to
+  provide open access to its research and make a contribution to development policy discussions around the world. Policy
+  Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be contacted at
+  eskoufias@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+    Natural Disaster Damage Indices Based on Remotely Sensed
+                Data: An Application to Indonesia∗
+                                Emmanuel Skouﬁas (World Bank)
+                                 Eric Strobl (University of Bern)
+                            Thomas Tveit (University of Cergy-Pontoise)
+
+
+
+
+JEL Classiﬁcation: Q54, C63, R11, R5,O18
+Keywords: Remotely Sensed Data, Natural Disasters, Natural Hazard model, Damage Index, Floods,
+Earthquakes, Volcanic Eruptions
+
+  ∗ This paper was ﬁnanced in part by the Disaster Risk Finance Impact Analytics project of the Disaster Risk Financing
+
+and Insurance Program of The World Bank Group
+1     Introduction
+Quickly assessing and estimating the damage caused after the incidence of a natural disaster is important
+for both central and local governments, emergency services and aid workers, so that they can respond
+eﬃciently and deploy resources where they are most needed. Recently, remote sensing technologies have
+been used to analyze the impact of disasters, such as hurricanes (Myint et al., 2008; Klemas, 2009),
+ﬂoods (Haq et al., 2012; Wu et al., 2012, 2014; Chung et al., 2015), landslides (Nichol et al., 2006),
+earthquakes (Fu et al., 2005; Yamazaki & Matsuoka, 2007), wildﬁres (Holden et al., 2005; Roy et al.,
+2006), volcanoes (Carn et al., 2009; Ferguson et al., 2010) and tsunamis (R¨  omer et al., 2012). These
+remote sensing techniques are useful for providing quick damage estimates shortly after the disasters
+giving emergency services a chance to respond quickly and local governments an overview of estimated
+costs and necessary repairs.
+
+    In addition to their usefulness in the aftermath of a disaster, estimates of the potential damage as-
+sociated with a natural disaster are also useful for policy making prior to the realization of the natural
+hazard event. In many cases the incidence of a natural hazard event can turn into a natural disaster
+simply because of inadequate preparation ex-ante. Indonesia, for example, is highly exposed to natural
+disasters by being situated in one of the worlds most active disaster hot spots, where several types of
+disasters such as earthquakes, tsunamis, volcanic eruptions, ﬂoods, landslides, droughts and forest ﬁres
+frequently occur. The average annual cost of natural disasters, over the last 10 years, is estimated at 0.3
+percent of Indonesian GDP, although the economic impact of such disasters is generally much higher at
+local or subnational levels (The Global Facility for Disaster Reduction and Recovery, 2011). The high
+frequency of disasters experienced has important impacts on expenditures by local governments that
+could be anticipated, at least in part, through upward adjustments in the annual ﬁscal transfers from
+the central government to the subnational governments.1 Such ex-ante adjustments in the level of ﬁscal
+transfers would be more useful if they could be based on estimates of the potential damages associated
+with the incidence of a natural disaster as opposed to estimates of the intensity of the potential natural
+hazard that might occur. However, although in recent years there has been much progress towards the
+modeling of the main natural hazards, there continues to be a scarcity of estimates of the damages
+associated with the incidence of these disasters. The value of damage caused by a natural disaster is typ-
+ically a complicated function of the size of population living in that area, the level and type of economic
+activity carried out, the value of the physical infrastructure in place, and the resilience of infrastructure
+and people’s livelihoods to the natural hazards.
+
+   This paper ﬁlls some of the gaps in the literature by using diﬀerent remote sensing sources and data
+on the physical characteristics of the events to construct four damage indices for natural disasters in
+Indonesia. The indices cover ﬂoods, earthquakes, volcanic eruptions and a tsunami, and are all weighted
+by local economic activity in an area, and then aggregated up to a district level.2 All data used in the
+construction of the indices are free and publicly available, making the methods used a potentially very
+useful alternative for both central and local governments to quickly get a rough estimate of the damages
+caused by a disaster (either ex-ante or ex-post).3
+
+    Importantly, all of the indices constructed take into account local exposure. Given limited access
+to highly disaggregated local economic activity data, nightlight intensity derived from satellite imagery
+has proved to be a good proxy; see, for instance, Henderson et al. (2012), Hodler & Raschky (2014) and
+Michalopoulos & Papaioannou (2014). By utilizing the grid cells of approximately 1 square kilometer we
+can break down areas in cities and districts into where they are busiest, and thus take into account not
+only the local physical characteristics of a natural disaster but also the local economic activity exposed
+to it.
+
+   The paper is structured as follows. Section 2 of the paper discusses in more detail the incidence and
+types of natural disasters. Section 3 discusses the nightlights data. Sections 4-7 discuss in detail the
+construction of the four damage indices, while section 8 concludes.
+   1 For example, Indonesia experienced 4,000 disasters between 2001 and 2007 alone, including ﬂoods (37%), droughts
+
+(24%), landslides (11%) and windstorms (9%) (The Global Facility for Disaster Reduction and Recovery, 2011).
+   2 A tropical cyclone index was also constructed, but no hurricanes had strong enough winds to cause any damage on
+
+land.
+   3 In a separate paper, Skouﬁas et al. (2017), we correlate the damage indices of these disasters at the district level with
+
+the ex-post allocation of district expenditures in diﬀerent sectors and by economic classiﬁcation.
+
+
+                                                              2
+2     Natural Disasters in Indonesia
+Natural disasters are prevalent events across most parts of Indonesia. According to the Indonesian Na-
+tional Disaster Management Authority (BNPB) there were more than 19,000 natural disasters in the
+period 2001 - 2015 (National Disaster Management Agency, BNPB, 2016), making Indonesia a useful
+country for any natural disaster analysis. The most frequent disasters are ﬂoods and landslides (52 per-
+cent), strong winds (21 percent) and ﬁres (15 percent), while the most damaging ones are earthquakes,
+tsunamis and volcanic eruptions, which all cause major damage to buildings and infrastructure in ad-
+dition to the human casualties. The deadliest year according to the BNPB data was 2004, where there
+were more than 167,000 deaths due to natural disasters and 166,671 of them stemming from the tsunami
+in December 2004.
+
+
+2.1     Floods
+The tropical climate of Indonesia often leads to annual ﬂoods. The BNPB data registered more than
+10,000 incidents of ﬂoods or landslides leading to more than 3,500 fatalities from 2001 through 2015.
+During the period from 1985 to 2016, The Darthmouth Flood Observatory (DFO) registered 3,808 ﬂoods
+of magnitude 4 or more and 1,175 ﬂoods of magnitude 6 and up.4 Of these ﬂoods, there were 126 large
+scale ﬂoods with a centroid within Indonesia in the period from 2001 to 2016 as can be seen in Figure 1.
+Of the 34 provinces, 27 experienced having a centroid of a large scale ﬂood event during these years.5
+
+
+
+                          Figure 1: DFO Large Scale Floods in Indonesia 2001-2016
+
+
+
+
+                                                Source: G.R.Brakenridge (2016)
+
+    4 Magnitude is deﬁned as: M = log(D ∗ S ∗ AA), where D is the duration of the ﬂood; S is the severity on a scale
+
+consisting of 1 (large event), 1.5 (very large event) and 2 (extreme event); and AA is the size of the aﬀected area. Flood
+events registered by DFO have mainly been derived from news and governmental sources.
+    5 The provinces where no large scale centroid was present were Bangka Belitung, Riau Islands, Kalimantan Barat,
+
+Yogyakarta, Sulawesi Barat, Kalimantan Utara and Maluku. Note that some of these, like Kalimantan Utara, Kalimantan
+Barat, Sulawesi Barat and Yogakarta, did most likely experience large scale ﬂood during these years, but that the centroid
+was in another province. The remaining three provinces consist mainly of smaller islands, so the ﬂooded area will most
+likely not constitute a large scale ﬂood event.
+
+
+
+                                                              3
+2.2     Earthquakes
+Due to Indonesia’s location inside the Paciﬁc Ring of Fire, one of the most seismically active areas in
+the world, it is often struck by earthquakes. BNPB counted almost 400 earthquakes from 2001 to 2015,
+with the largest number of casualties coming from the tsunami created by a 9.0 earthquake located oﬀ
+the coast of Aceh, otherwise known as the earthquake that caused the 2004 tsunami. Apart from that,
+there were more than 8,000 registered fatalities due to earthquakes over the same period. Overall, this
+makes earthquakes the deadliest of the natural disasters that strike Indonesia.
+
+   Figure 2 shows how common earthquakes are in Indonesia by displaying contour maps6 of all earth-
+quakes of magnitude 5.0 and above that struck Indonesia from 2004 through 2014. In total, the United
+States Geological Survey (USGS) registered 261 earthquakes.7
+
+
+
+                                 Figure 2: Earthquakes in Indonesia 2004-2014
+
+
+
+
+                                                      Source: USGS
+
+
+
+
+2.3     Volcanic activity
+Indonesia has the highest number of active volcanoes in the world, numbering almost 150. Of these, many
+have had eruptions in both more historical times and after the year 2000. The most famous eruption is
+probably the explosion of Krakatau in August 1883, when two-thirds of the Krakatau Island erupted and
+disappeared, killing more than 35,000 people and causing a global mini ice age and weather disruptions
+for years. BNPB have registered 92 eruptions over our 15-year time period and more than 60 major
+volcanoes that have had eruptions since 1900. The most recent one is the 2010 Mount Merapi eruption
+  6 These   maps are also known as ShakeMaps, which are produced by USGS.
+  7 There   are 1,002 earthquakes registered by USGS that were of magnitude 5.0 or more that had a point with a PGA of
+at least 0.05 within Indonesia. Many of these points create little to no damage. The 261 earthquakes mentioned above are
+quakes that are mostly contained within Indonesia.
+
+
+
+                                                           4
+that killed 324 people and dislocated more than 320,000.
+
+    In addition to the BNPB data, during the years 2004 through 2015 the Darwin Volcanic Ash Advisory
+Centre (DVAAC) had 587 days where they issued a red warning, implying an ongoing or imminent
+volcanic eruption. The most active volcanoes - measured by number of days with red warnings - are
+shown in Table 1, with the top 5 volcanoes constituting almost 75 percent of the red warnings. These are
+also volcanoes that have been in the media, with Merapi already mentioned and Sinabung, which had
+several eruptions in 2010, 2013 and 2014. These two volcanoes are located close to densely populated
+areas, with Sinabung located in North Sumatra and Merapi in central Java.
+
+
+                              Table 1: Most Active Volcanoes 2004-2015
+                            Volcano    Number of Days with Red Warning
+                            Sinabung                  224
+                            Merapi                     92
+                            Manam                      74
+                            Egon                       36
+                            Soputan                    31
+
+
+
+2.4    2004 Christmas Tsunami
+The Christmas Tsunami in 2004 is the worst singular natural disaster during the modeling period, and
+one of the worst natural disasters in world history. As seen in the photo in Figure 3 the destruction was
+absolute in parts of Indonesia. The total death toll across Indonesia and 13 other countries was more
+than 230,000 people and there were many more missing. In addition, the World Bank (2005) estimated a
+total economic impact of 4.5 billion US dollars. The oﬃcial BNPB data for Indonesia estimates 166,671
+deaths due to the tsunami.
+
+    The cause of the tsunami was an earthquake of magnitude 9.0 150 miles south-south east of Banda
+Aceh on the morning of 26 December. This quake created a tsunami with waves more than 20 meters
+high at the highest. Due to the fault line of the earthquake being in a north-south direction, the greatest
+strength of the tsunami was in an east-west direction (Athukorala & Resosudarmo, 2005). This led to
+the largest damages being in the northern part of Sumatra, in the province of Aceh, where entire villages
+were wiped out as seen in the photo of Banda Aceh (Figure 3).
+
+
+                                  Figure 3: Destruction in Banda Aceh
+
+
+
+
+                                           Source: The Atlantic (2014)
+
+
+
+
+                                                       5
+3     Nightlight Data
+Natural disasters are inherent local phenomena in that they either aﬀect only parts of areas and/or
+aﬀect parts within areas diﬀerently. It is thus important to take the local population/asset exposure
+into account when constructing more aggregate proxies. Arguably one would like to have measures of
+exposure as spatially disaggregated as possible. For a country like Indonesia, data are usually sparse and
+at a very aggregated spatial level.
+
+    An alternative approach is thus to use nightlights as a proxy for local economic activity. As a matter
+of fact, nightlights have found widespread use where no other measures are available; see, for instance,
+Henderson et al. (2012), Hodler & Raschky (2014) and Michalopoulos & Papaioannou (2014). In Hender-
+son et al. (2012), Indonesia is used as an example of using nightlights to capture an economic downturn
+following the Asian ﬁnancial crisis in the late 1990s. Their results show that swings in GDP change can
+generally be captured. Nevertheless one has to account for factors such as cultural diﬀerences in light
+usage, latitude and gas ﬂares. In our case this is unlikely to aﬀect our results since we use nightlights to
+capture exposure within a country rather than across countries.
+
+    The nightlight imagery we employ is provided by the Defense Meteorological Satellite Program
+(DMSP) satellites. In terms of coverage each DMSP satellite has a 101 minute near-polar orbit at
+an altitude of about 800km above the surface of the earth, providing global coverage twice per day, at
+the same local time each day, with a spatial resolution of about 1km near the equator. The resulting
+images provide the percentage of nightlight occurrences for each pixel per year normalized across satel-
+lites to a scale ranging from 0 (no light) to 63 (maximum light). Yearly values were then constructed as
+simple averages across daily values of grids, and are available from 1992.8 We use the stable, cloud-free
+series; see Elvidge et al. (1997).
+
+    The data revealed 414,644 cells which had a nightlight value greater than 0 in them at least once
+during the period 2001-2013. Figure 4 - containing all cells with nightlights in 2012 - shows that the
+large cities and densely populated areas on Java, Sunda Islands, coastal Kalimantan and Sumatra are
+fully covered in lights. Inner parts of Kalimantan and most parts of New Guinea are more sparsely lit.
+
+
+
+                                Figure 4: Cells with Registered Nightlights in 2012
+
+
+
+
+   8 For the years where satellites were replaced, DMSP provides an average from both the new and old satellite. In this
+
+paper we use the imagery from the most recent satellite but as part of our sensitivity analysis we also re-estimated our
+results using an average of the two satellites and the older satellite only. The results of these latter two options were almost
+quantitatively and qualitatively identical.
+
+
+                                                               6
+4     Flood Damage Index
+The modeling of ﬂoods can be done by remote sensing (Brakenridge & Anderson, 2006; Wu et al., 2012;
+Haq et al., 2012) or through a combination of weather data and GIS systems as for example in Knebl
+et al. (2005); Asante et al. (2007); Dessu et al. (2016). We utilize the latter, as remote sensing is useful
+for assessing whether an area is ﬂooded or not, but it is weaker on modeling the intensity of the ﬂood.
+Moreover, cloud cover generally limits the accurate detection of ﬂoods from remote sensing sources.
+
+    To model ﬂoods we have decided to use the Geospatial Stream Flow Model (GeoSFM) which is
+a software that is “designed to use remotely sensed meteorological data in data sparse parts of the
+world”(Artan et al., 2008). GeoSFM was developed by USGS and USAID and is a hydrological model-
+ing tool used to model stream ﬂows across large areas, in particular areas where highly localized data are
+lacking. It has been used in regions such as the Great Horn of Africa (Asante et al., 2007; Mati et al.,
+2008; Dessu et al., 2016) and Nepal (Shrestha et al., 2011), with Dessu et al. (2016) ﬁnding that the
+model captures 76% of the monthly average variability, making it useful for ﬂood simulation.
+
+    The inputs needed to model stream ﬂow for basins are soil- and terrain-based - such as digital el-
+evations models (DEM) and land cover and soil data - and weather-based, such as precipitation and
+potential evapotranspiration (PET) data. The HYDRO1K data set from USGS, which is a DEM made
+for hydrological modeling based on the USGS’ 30 arc-second DEM of the world, is used as elevation
+input. The land cover data are the Global Land Cover Characterization (GLCC) data set also from
+USGS, while the soil data are from the FAO Digital Soil Map of the World.
+
+   The daily precipitation data are from the 3-hourly data set from the Tropical Rainfall Measurement
+Mission Project (TRMM) and the PET data are 6-hourly data from the Global Data Assimilation Sys-
+tem (GDAS), both data sets are aggregated up to daily data. The PET data are available from February
+2001 and onwards, while the precipitation data are available for the period 1998-2014. Given that we
+only have nightlight data through 2013, we will focus on ﬂoods for the period 2001-2014.
+
+   GeoSFM uses the inputs to construct basins based on the terrain and then uses a linear soil moisture
+accounting routine to model surface runoﬀ and soil moisture based on precipitation and PET. It is worth
+noting that although a more complex and better non-linear routine is also supported, it does not work
+well for our more generalized macro-modeling with fairly low resolution data. Finally, GeoSFM models
+the stream ﬂow for each basin for each day of our time period.
+
+   Note that GeoSFM does not model coastal ﬂoods, nor does it model ﬂash ﬂoods in areas where there
+are no rivers or streams of a certain length. Figure 5 shows that there are parts of Indonesia and even
+one province - Riau Islands - which have no basins. Another weakness is that it does not take into
+consideration the speciﬁc terrain within each basin. Floods are generally very localized events and the
+low resolution of our data makes it impossible to model the intensity of the stream ﬂow within a basin
+and also causes some river outlets to be slightly inland instead of running all the way to the ocean.
+
+4.1    Creation of Index and Results
+The ﬁrst part of constructing the index involves deﬁning when a ﬂood event is happening. In Wu et al.
+(2012) they propose four runoﬀ based methods to deﬁne a ﬂood threshold, and in addition Wu et al.
+(2014) propose a slightly modiﬁed ﬂood threshold deﬁnition with a point being ﬂooded when:
+
+                                  R > P95 + σ       and     Q > 10m3 /s                                 (1)
+
+   where R is the routed runoﬀ in millimeters, P95 is the 95th percentile value and σ is the standard
+deviation of the routed runoﬀ. Q is the discharge in cubic meters.
+
+   We found that with the GeoSFM modeled data, runoﬀ was not a good proxy for ﬂooding, due to it
+only capturing a limited number of ﬂoods. Discharge, Q, was a better proxy, leading to a new - but very
+similar - equation:
+                                Q > P95 + σ     and      Q > 10m3 /s                                (2)
+
+
+
+
+                                                     7
+                                      Figure 5: Basins by Province
+
+
+
+
+   By manually checking against the DFO ﬂoods, we ﬁnd that our data do hit several of the large scale
+events in Figure 1.
+
+
+4.1.1   Damage Index
+Due to ﬂoods being very localized, the modeling of damage is diﬃcult, and no standard exists in the
+literature. Penning-Rowsell et al. (2005) base destruction on value of housing stock and the Standards of
+Protection and then uses an estimate of number of properties aﬀected by diﬀerent return period ﬂoods.
+Scawthorn et al. (2006) use a combination of building stock and velocity of the stream ﬂow, whereas
+Kreibich et al. (2009) look at diﬀerent parameters such as velocity, depth, energy head, stream ﬂow
+and intensity. They ﬁnd velocity to be a poor parameter for assessing damage, while water depth and
+energy head show the best results. Stream ﬂow and intensity are also weak as parameters. Finally, Merz
+et al. (2010) assess diﬀerent damage inﬂuencing parameters and point to the fact that most “damage
+inﬂuencing factors are neglected in damage modeling, since they are very heterogeneous in space and
+time, diﬃcult to predict, and there is limited information on their (quantitative) eﬀects”. Overall, there
+is limited support in the literature for a strong correlation between these parameters and damages on
+anything but a very localized scale.
+
+    As for assessing the damage itself, Merz et al. (2010) discuss damage functions and the two main
+approaches, which involve one empirical approach where damage data are collected after the ﬂood and
+one synthetic approach where they construct potential what if-scenarios. Once again the assessments
+rest on very localized data, which we do not have for Indonesia. Overall, it means that we cannot expect
+anything more than rough estimates. A common denominator for the papers mentioned above is that
+there is some measurement of intensity. Given that stream ﬂow is an intensity proxy, we have used that
+to construct a simple measurement for intensity. The equation is:
+
+                                              0          : F lood = 0
+                                    Ib,t =          ¯b
+                                              Qb,t −Q                                                  (3)
+                                                 σb      : F lood = 1
+
+
+                                                    8
+    where Ib,t is the intensity of the ﬂood in basin b at date t, Qb,t is the stream ﬂow in the same basin
+at the same time and Q   ¯ b and σb are mean and standard deviation of stream ﬂow in b. The intensity
+is set to zero if the ﬂood threshold - 95th percentile plus 1 standard deviation above the average - has
+not been exceeded. By normalizing, we obtain a measure that is comparable across all regions and that
+is independent of the absolute river ﬂows. The assumption is that people living close to rivers will be
+prepared for variations in water levels, and that people living close to rivers with highly variable stream
+ﬂows are more prepared for these events than people living close to more stable rivers.
+
+   To aggregate the ﬂood impact each basin is weighted based on the nightlights in it. The weights per
+basin, Wb,t−1 , used are:
+                                                                     I
+                                                       Lb,t−1        i   Li,t−1
+                                           Wb,t−1 =           =      J
+                                                                                                        (4)
+                                                       Lp,t−1        j   Lj,t−1
+   where Lb,t−1 is the sum of lights in basin b one year, t − 1, before the ﬂood year and Lp,t−1 is the
+same at a province level.
+
+    Finally, the weights from (4) are multiplied with the intensity from (3) to get the overall ﬂood impact,
+FI b,t in that basin on the province:
+
+                                                 FI b,t = Wb,t−1 ∗ Ib,t                                 (5)
+   One thing to note here is that for basins that span several provinces or districts, we have assumed
+the same intensity, but the weight is based on nightlights within each individual province.
+
+
+4.1.2      Results
+The stream ﬂow was simulated for 5,082 consecutive days, from 1 February 2001 to 31 December 2014.9
+Table 2 shows that the top 10 basins with most ﬂood days had close to 200 days of ﬂooding over the
+14-year period. As expected, these basins do overlap with some of the busiest ﬂood areas according to
+the DFO, as shown in Figure 6. The lower part of Table 2 reveals that the driest basin had a mere
+12 days of ﬂooding. All 33 provinces with a basin had days that went above our ﬂood threshold set in
+Equation (2).
+
+   All months in our model have ﬂood events, but there are big diﬀerences. The range goes from 527
+events every March and down to 154 events every August, with the traditional rainy season (November-
+March) producing the highest number of ﬂood events, whereas the dry season months (June-October)
+are the driest. Aggregating the numbers for the rainy season, there are 2,215 events every year across
+the basins, while there are only 995 events every year during the dry season.
+
+    Total number of basins that are partly or fully inside Indonesia is 495, and these basins have a total
+of 55,605 ﬂood events or slightly more than 112 per basin. In other words, the average basin has been
+ﬂooded for a total of 8 days a year over the 14-year period in question. This is not entirely unexpected
+given the climate in Indonesia and the way our threshold is made. Also, if we compare with the DFO
+data where they have 3,808 ﬂoods of magnitude 4 or higher through their period from 1985-2016, which
+converts to almost 123 fairly large scale ﬂood events per year, our model provides a reasonable proxy for
+events.
+
+    Even though the results seem logical on a per basin basis, the time steps in the model are 1 day at a
+time, which is too slow for the unfolding of a ﬂood event, implying that downstream basins that would
+normally ﬁll up very quickly will now only be ﬁlled up the day after, and then the next basin will be
+ﬁlled two days later and so forth. This means that the amount of days with ﬂoods are inﬂated. We
+believe that this does not aﬀect our results much, though, as the number of events per province will not
+aﬀect the end results, since we weigh by aﬀected nightlight and not by number of days of ﬂoods.
+
+   Despite the numerous ﬂoods in Indonesia, they generally do not aﬀect a large percentage of the pop-
+ulation, as per Table 3. The mean of nightlights when excluding areas with 0 nightlight is 3.39 percent.
+  9 For   Bali we did it for 5,080 days due to problems with 30 and 31 December 2014.
+
+
+                                                            9
+                      Figure 6: Top 10 Most Flooded Basins and DFO Floods
+
+
+
+
+                         Table 2: Basins with Most and Least Flood Events
+
+         Basin Number      Aﬀected Provinces                                Number of ﬂood
+                                                                            events
+         2                 Bangka-Belitung                                  192
+         705               Sumatera Selatan                                 190
+         133               Aceh                                             189
+         632               Jambi, Sumatera Barat                            189
+         282               Sumatera Utara                                   187
+         872               Jawa Barat                                       186
+         868               Jawa Barat, Banten                               183
+         916               Jawa Tengah, Jawa Timur                          183
+         558               Sulawesi Barat, Sulawesi Selatan                 180
+         709               Papua                                            177
+
+         256               Kalimantan Barat, Kalimantan Tengah              12
+         444               Riau                                             17
+         197               Sulawesi Tengah                                  21
+         316               Kalimantan Barat                                 24
+         314               Kalimantan Barat                                 27
+
+
+If we assume that 3.39 percent of the approximately 250 million people of Indonesia are aﬀected, the
+ﬂoods would impact 8.5 million people.
+
+
+
+
+                                                10
+         Table 3: Descriptives of Weights and Intensity (excluding zero damage observations)
+
+                 Statistic            N        Mean        St. Dev.        Min      Max
+                 Weights            45,005     0.034           0.060      0.00003   0.557
+                 Intensity          45,005     4.516           2.608        0.989   50.944
+                 Damage Index       45,005     0.155           0.351       0.0001   12.780
+
+
+4.1.3   Comparison of Model versus DFO Floods
+The DFO ﬂood database is mostly based on news sources, providing an overview of the big ﬂoods in
+Indonesia. To check the database against the GeoSFM model, the focus will be on the largest events of
+magnitude 6 and above. Given how the DFO data do not give any intensity estimates and focus primar-
+ily on displacement numbers and area, while our model is driven by intensity the comparison will only
+focus on whether GeoSFM results do overlap in time and/or province with the centroid of the DFO ﬂoods.
+
+    Table 4 shows the DFO data on the left side, ﬁrst column being the start month of the ﬂood, followed
+by duration, magnitude, the province where the centroid of the ﬂood is, dead and displaced. The right
+side shows the modeling results where the focus is on duration. The ﬁrst column under model results
+shows the number of days for the centroid province, then overall number of days with ﬂoods anywhere
+in Indonesia during the period, then looking at the same island - using that as a proxy for neighboring
+regions - where one examines total days the island provinces were ﬂooded during the ﬂood and ﬁnally
+how many of the days of the ﬂood duration that a province on the same island was ﬂooded.
+
+    Generally, the model performs well, in particular on Sumatra and Kalimantan (Borneo), with the
+example where the 2008 ﬂood was captured for all 25 days in the centroid province. Overall, it shows
+at least one ﬂooded basin on Kalimantan and Sumatra for 85% of the days the major ﬂoods happened.
+The results are somewhat worse on Java, where only 37% of the days have a ﬂood. A primary reason
+for this might be that Java is very narrow and hence the streams are short and might not be cap-
+tured in our model. Java also has larger percentage of land not covered by a basin, ref Figure 5, also
+due to its narrowness which makes the low resolution landcover data underestimate the size of the basins.
+
+
+4.1.4   Aggregated numbers
+Finally, to aggregate up to a district or province level, we have used a simple method for the total damage
+experienced per year:
+                                                     T     B
+                                          P Dj,T =             FI j,b,t                                (6)
+                                                       t   b
+
+    where j is the province or district, T is the year, sum of t is all the days for year T , sum of b are
+all the basins in the province or district and FI b,t is the ﬂood impact from Equation 5. Normally one
+might use an average ﬂood impact across the year, but by doing this, we capture repeated ﬂood events
+and areas that experience generally high ﬂooding.
+
+   Using the above method, Table 5 provides the aggregated data for all provinces across all years. The
+impact is fairly even for the most impacted ones, with the impact numbers for the top 10 ranging from
+44 to 55. Furthermore, Sumatera Selatan, Lampung and Yogyakarta make up 8 of the top 10 impacted
+provinces. The overall picture ﬁts with the DFO ﬂoods in Figure 1, with the populous provinces in Java,
+Sumatra and Sulawesi being impacted, whereas the smaller island provinces and parts of Kalimantan
+are not aﬀected much. For some of the island provinces the numbers are probably underestimated, no
+basins will have been constructed and modeled there due to the many small islands.
+
+    Finally, Table 6 shows the most impacted districts over the years 2001 through 2014. The impact is
+much larger than for the provinces as one would expect due to the more localized data and impact. The
+districts are also more geographically spread out than the provinces.
+
+
+
+                                                     11
+                                                   Table 4: DFO Floods Compared with GeoSFM Results
+                                                  DFO Data                                                              Model Results
+
+                                                                                  Flooded days   Total Flood Days    Total Flood Days   Days Flooded on Island
+     Date       Duration   Magnitude DFO   Centroid Province   Dead   Displaced
+                                                                                  in Province    Sum All Provinces   Sum on Island      During Period
+     Jan 2002     17            6.1            Jawa Timur      147    380,000          5                17                  8                     7
+
+
+
+
+12
+     Dec 2003     45            6.9              Jambi         148    350,000         18                45                 180                   41
+     Jan 2005     31            6.4         Sumatera Selatan    9         0           16                30                 105                   30
+     Jan 2006     20            6.2            Jawa Barat      19      10,000          6                20                  13                   9
+     May 2007     25            6.0        Kalimantan Tengah    0      3,000          23                25                 79                    25
+     Mar 2008     25            6.3               Riau          0     60,000          25                25                 149                   25
+     Apr 2010     17            6.2        Kalimantan Tengah    0         0           14                17                  38                   17
+     Feb 2012      8            6.2         Sumatera Selatan    0       1,200          6                8                   27                    8
+     Jan 2014     31            6.2            Jawa Barat      23      20,000          9                31                  31                   13
+                                             Table 5: Aggregated Flood Intensity Data by Province
+     Province                2001     2002     2003     2004     2005     2006     2007     2008     2009     2010     2011     2012     2013     2014
+     Aceh                  12.674    7.400   14.712   11.213   18.127   15.643   23.155   20.799   17.918   20.076   17.665   10.116   14.864   10.571
+     Bali                   3.614   11.780   13.083   11.676   10.359   10.783    8.080    5.786    9.042    7.851    7.882    7.609    8.580
+     Bangka-Belitung        1.380    1.756    1.194    1.525    1.973    0.803    0.794    0.306    0.456    0.745    1.165    0.606    0.623    0.691
+     Banten                 7.118    7.632   13.076   14.360   11.899    9.668   27.980   19.316   14.921   21.456   12.783   15.288    7.630    4.890
+     Bengkulu               6.394    6.756   25.205   13.606   14.273   10.266   11.683   16.207   13.145   17.983   17.417    6.351   21.045    7.279
+     Gorontalo             54.770   16.760   37.260   25.281   35.026   37.234   27.620   21.607   31.719    5.607   10.702    3.680   20.092   15.921
+     Irian Jaya Barat       1.368    0.647    1.242    0.565    1.167    0.921    0.985    0.508    1.107    0.356    0.343    1.837    1.710    1.307
+     Jakarta Raya          15.099    7.370   12.681    3.931   18.294    9.950   22.154   40.751   23.394   22.670   24.347   25.294   21.573    9.362
+     Jambi                 44.338   11.141   10.589   11.677   19.131   13.241   16.989   34.894   31.627   32.430   15.023   21.463   32.401   30.362
+     Jawa Barat            16.616   17.697   29.439   18.629   30.536   23.842   36.484   28.958   27.030   35.907   25.600   27.714   29.462   11.156
+     Jawa Tengah           29.271   41.395   42.206   35.024   26.358   24.512   28.825   27.113   31.001   22.795   20.560   20.117   25.344   14.672
+     Jawa Timur            13.567   17.287   25.731   21.652   22.093   19.205   28.864   19.975   24.997   28.016   12.384   16.611   28.322   11.372
+     Kalimantan Barat       3.833    6.570    7.145    6.320   13.792    5.801    8.921    9.740    8.574    6.321    4.663    6.273   13.122   17.092
+     Kalimantan Selatan    26.550   10.917   19.599   21.410   15.397   12.302   21.088   29.202   21.391   16.995   10.598   29.563   32.648   21.549
+     Kalimantan Tengah     11.208   16.090   38.512   37.649   27.149   20.731   32.001   29.097   26.581    8.915   17.965   18.792   31.707   23.723
+
+
+
+
+13
+     Kalimantan Timur       7.603    3.046   11.437    7.066    9.124    9.208   15.114   14.168   24.098   15.236   15.408   11.198   16.020   10.496
+     Kalimantan Utara       1.098    3.949    8.894    1.245    5.471    6.455   12.065   24.721   16.620    6.085    4.615    5.597    7.374   10.416
+     Lampung               25.228   20.499   30.012   32.566   31.452   21.910   23.642   37.172   39.414   49.285   25.333   22.493   43.979   47.995
+     Maluku                 0.000    0.000    0.216    0.000    0.000    0.014    0.000    0.000    0.000    0.000    0.358    0.000    0.278    0.705
+     Maluku Utara           0.904    0.959    0.241    0.510    1.006    2.406    1.574    1.873    0.353    1.230    1.749    2.629    0.913    0.796
+     Nusa Tenggara Barat    0.014    0.083    0.035    0.021    0.080    0.034    0.059    0.093    0.036    0.038    0.064    0.068    0.048    0.009
+     Nusa Tenggara Timur    6.168    9.770   15.109   15.209   15.937    7.311   10.590   10.489    6.032    9.166    9.506    8.517   12.688    5.676
+     Papua                 17.567    5.837   18.616   15.338   18.461   11.763   30.377   31.351   24.332   31.378   25.779   24.328   35.261   28.788
+     Riau                   7.063   20.727   17.103   11.778   20.699   17.433   35.765   26.883   23.667   29.925   25.391   15.855   20.114   41.465
+     Sulawesi Barat         6.880    9.094    2.650    3.918    4.512    4.888    5.244   14.403    4.637    5.044    5.727    3.625    3.596   14.663
+     Sulawesi Selatan      14.729    9.733   14.866   12.397    8.112   15.667   11.431   14.619   12.996    9.001   10.157    7.805   11.202   12.707
+     Sulawesi Tengah        2.798    2.603   10.433   24.693   10.258   14.202    2.255   12.771    8.280    0.427    9.320    4.415    7.999    5.688
+     Sulawesi Tenggara      2.861    2.092    6.197    2.396   13.335    5.188   14.381   11.368    3.927    4.990    4.428    2.474    4.780    1.015
+     Sulawesi Utara         4.253    2.709    8.590    6.575    5.250    6.360    6.551    7.062    3.813    8.950    4.976    5.710    4.719    6.018
+     Sumatera Barat         8.944   16.785   26.946   21.787   28.464   18.737   35.011   24.624   24.595   18.317    9.770   10.559   17.472   18.169
+     Sumatera Selatan      27.938   17.191   47.852   33.865   34.345   23.193   39.282   55.345   34.210   34.032   24.159   23.462   51.858   27.107
+     Sumatera Utara        13.788   11.627   17.135   11.155   19.981   14.664   15.477   19.144   16.001   18.513   15.272   15.037   21.185   20.517
+     Yogyakarta            37.598   27.613   42.810   24.707   25.250   37.895   20.736   49.592   44.909   29.360   35.296   41.184   41.429   30.332
+          Table 6: 10 Most Impacted Districts
+
+District        Province            Year   Flood Impact
+Seruyan         Kalimantan Tengah   2010        175.080
+Aceh Tengah     Aceh                2010        165.381
+Bener Meriah    Aceh                2010        139.742
+Pasaman         Sumatera Barat      2010        125.854
+Sarolangun      Jambi               2010        118.244
+Lubuk Linggau   Sumatera Selatan    2003        114.790
+Keerom          Papua               2009        114.289
+Tana Toraja     Sulawesi Selatan    2013        106.886
+Klaten          Jawa Tengah         2002        106.488
+Sukoharjo       Jawa Tengah         2002        106.488
+
+
+
+
+                          14
+5    Earthquake Damage Index
+The measurement of earthquake detection and intensity has improved with remote sensing techniques.
+There are diﬀerent methods to assess intensity and damage, ranging from satellite images (Dell’Acqua
+& Gamba, 2012; Tralli et al., 2005; Gillespie et al., 2007) to contour maps generated by seismological
+ground stations (De Groeve et al., 2008; GeoHazards International and United Nations Centre for Re-
+gional Development, 2001; Federal Emergency Management Agency, 2006).
+
+    This paper uses the latter method, by utilizing ShakeMaps from USGS, which are automatically
+generated maps providing several key parameters following an earthquake, such as peak ground accel-
+eration (PGA), peak ground velocity (PGV) and modiﬁed Mercalli intensity (MMI). More speciﬁcally,
+the ShakeMaps use data from seismic stations that is interpolated using an algorithm which is similar
+to kriging. To model the intensity in a given coordinate, the model also takes into account ground con-
+ditions and the depth of earthquake. Wald et al. (2005) point to the magnitude and epicenter location -
+which are parameters common for the entire earthquake - that have historically been used to determine
+how severe earthquakes were, but that the damage pattern is not just dependent on those two parame-
+ters, but also on other, more localized parameters that the ShakeMaps use to generate intensity measures.
+
+    This is exempliﬁed by several earthquakes such as magnitude 6.7 and 6.9 earthquakes in California
+in 1994 and 1989, respectively, where some areas further away from the epicenters got more damaged
+than closer areas. The reason why the more localized ShakeMaps with their ground shaking parameters
+are a better gauge than magnitude and epicenter distance is explained on page 13 of Wald et al. (2005)
+which states that: “..., although an earthquake has one magnitude and one epicenter, it produces a range
+of ground shaking levels at sites throughout the region depending on distance from the earthquake, the
+rock and soil conditions at sites, and variations in the propagation of seismic waves from the earthquake
+due to complexities in the structure of the Earth’s crust.” The ShakeMaps are interpolated grids with
+point coordinates spaced approximately 1.5 kilometers apart (0.0167 degrees). Figure 2 shows contoured
+maps of these points.
+
+    The PGA is a measure of the maximum horizontal ground acceleration as a percentage of gravity,
+PGV is the maximum horizontal ground speed in centimeters per second and MMI is the perceived
+intensity of the earthquake, a subjective measure. Figure 7 - which is originally found in Wald et al.
+(1999) - explains the relationship between the diﬀerent parameters and the potential damage from dif-
+ferent values. The assumption is that damage starts at an MMI level of V and a PGA of 3.9 percent of
+g . These levels are found for California in Wald et al. (1999), but the relationship has been found for
+other areas in the US in Atkinson & Kaka (2006) and Atkinson & Kaka (2007) and for places such as
+Costa Rica (Linkimer, 2007) and Japan, Southern Europe and Western US (Murphy & O’Brien, 1977).
+It should be noted that the numerical relationship diﬀers from region to region. There are no known
+papers estimating these values speciﬁcally for Indonesia.
+
+
+
+                       Figure 7: ShakeMap Instrumental Intensity Scale Legend
+
+
+
+
+                                           Source: Wald et al. (1999)
+
+
+
+
+   The diﬀerent measures are largely interchangeable, and in GeoHazards International and United
+Nations Centre for Regional Development (2001) report, they use PGA to measure damage, pointing to
+the fact that PGA, unlike MMI is an objective measure, implying that MMI is not easy to obtain reliably
+across the globe. Also, for large scale modeling, where it is unfeasible for one to model local conditions
+precisely, PGA serves as a good proxy for intensity of earthquakes.
+
+
+
+                                                      15
+5.1     Creation of Damage Index and Results
+5.1.1    Damage Index
+To construct the damage index, two types of data will be used; the intensity data - expressed as PGA -
+and building inventory data, to assess what damage one could expect for diﬀerent intensities.
+
+    To take into account the building types in Indonesia, we use information from the USGS building
+inventory for earthquake assessment, which provides estimates of the proportions of building types ob-
+served by country; see Jaiswal & Wald (2008). The data provide the share of 99 diﬀerent building types
+within a country separately for urban and rural areas. For Indonesia the building type information was
+compiled from a World Housing Encyclopedia survey, while the split between urban and rural is from the
+urban extent map of Center for International Earth Science Information Network - CIESIN - Columbia
+University et al. (2011). Without any other information available, we use this as an indication of the
+distribution of building types in Indonesia, but, necessarily, assume that the distribution is homogenous
+within urban and rural areas.
+
+    Fragility curves by building type are derived from the curves constructed by Global Earthquake
+Safety Initiative project; see GeoHazards International and United Nations Centre for Regional Devel-
+opment (2001). More speciﬁcally, buildings are ﬁrst divided into 9 diﬀerent types.10 Each building type
+itself is then rated according to the quality of the design, the quality of construction, and the quality
+of materials. Total quality is measured on a scale of zero to seven, depending on the total accumu-
+lated points from all three categories. According to the type of building and the total points acquired
+through the quality classiﬁcation, each building is then assigned one of nine vulnerability curves which
+provides estimates of the percentage of building damage for a set of 28 peak ground acceleration intervals.
+
+    In order to use these vulnerability curves for Indonesia we ﬁrst allocated each of the 99 building types
+given in the USGS building inventory to one of the 9 more aggregate categories of the GESI building
+classiﬁcation. However, to assign a building type its quality-speciﬁc vulnerability curve we would fur-
+ther need to determine its quality in terms of design, construction, and materials, an aspect for which
+we unfortunately have no further information. We instead assume that building quality is homogenous
+across building type in Indonesia and experiment with seven diﬀerent sets of vulnerability curves, each
+set under a diﬀerent quality ratings scenarios (ranging from 0 to 7).
+
+   Figure 8 depicts the building share weighted vulnerability curves of Indonesia for urban and rural
+areas.
+
+
+
+                                            Figure 8: Vulnerability Curves
+                        Rural                                                               Urban
+
+
+
+
+  10 Wood, steel, reinforced concrete, reinforced concrete or steel with unreinforced masonry inﬁll walls, reinforced masonry,
+
+unreinforced masonry, adobe and adobe brick, stone rubble, and lightweight shack or lightweight traditional.
+
+
+
+
+                                                             16
+    To model estimated damage due to a particular earthquake event the data from the ShakeMaps and
+GESI are used. Then, one identiﬁes the value of peak ground acceleration that each nightlight cell in
+Indonesia experiences by matching each earthquake point with its nearest nightlight cell. If the cell is
+further away than 1.5 kilometers or if it experiences shaking (PGA) of less than 0.05 the value is set to 0.
+In order to derive at a region j speciﬁc earthquake damage index, ED , the following equation is applied:
+                                         I             K
+                                                                   pgak,q
+                           ED q,j,t =         wi,t−1           DR i,j,k,t        q = 0, . . . , 7                  (7)
+                                        i=1            k=1
+
+   where DR is the damage ratio according to the peak ground acceleration, pga , and the urban-rural
+qualiﬁcation of cell i, deﬁned for a set of 8 diﬀerent building quality q categories. The weight wi is
+the same as before; the sum of the nightlights of the aﬀected cells over the sum of the total provincial
+nightlights.
+
+
+5.1.2    Results
+With the above method, we ﬁnd that 27 of the 34 provinces were damaged by earthquakes at some point
+in time.11 Table 7 shows that the big islands Java and Sumatra have the most aﬀected nightlight cells,
+given how densely populated they are and how much seismic activity is experienced there this is expected.
+
+
+
+               Table 7: Times a Lit Nightlight Cell is Damaged by Earthquake by Province
+
+                Province                 Times Nightlight Cell Damaged            Percentage of Total
+                Aceh                                         1,170                          22.28
+                Sumatera Utara                                722                           13.75
+                Sumatera Barat                                511                           9.73
+                Sulawesi Tengah                               354                           6.74
+                Jawa Barat                                    353                           6.72
+                Sumatera Selatan                              283                           5.39
+                Jawa Tengah                                   259                           4.93
+                Jawa Timur                                    242                           4.61
+                Bengkulu                                      165                            3.14
+
+
+    Finally, there were 5,251 cases where the instance hit a nightlight cell that was lit. Table 8 shows
+that the individual nightlight cell weights are small, as expected, but the impact of having buildings
+of quality 4 is that within a cell that is hit, on average a bit more than 6 percent of the buildings are
+destroyed.12
+
+
+   Table 8: Descriptives of Weights and Intensity for Building Quality 4 (excluding weights of zero)
+
+                        Statistic            N         Mean        St. Dev.    Min        Max
+                        Weights         5,251          0.226         0.407     0.009      9.328
+                        Damage          5,251          0.062         0.043     0.046      0.547
+                        Intensity       5,251          0.016         0.035    0.0004      0.859
+                          Weights and Intensity multiplied by 1,000
+
+   11 The seven not aﬀected were Bangka Belitung, Kalimantan Barat, Kalimantan Selatan, Kalimantan Tengah, Kalimantan
+
+Timur, Kalimantan Utara and Kepualauan Riau.
+   12 We did the same for buildings of quality 0 (the best) and 7 (the worst), something which led to maximum damage
+
+values of 33% for the best buildings and 84% for the worst versus 55% for our base case, showing how the overall damage
+is highly dependent on building quality information.
+
+
+
+
+                                                                17
+5.1.3   Aggregated data
+When aggregating, a similar method as in section 4 is used, but now the aggregation is done directly by
+nightlight cells instead of by basin. The equation is:
+                                                       L
+                                             EDj,t =          ED l,t                                      (8)
+                                                          l
+
+where t is year, l is all nightlight cells in the province or district j and ED is the damage from equation 7.
+
+    Table 9 provides the full overview of damage by province, showing the large diﬀerences between the
+provinces and how they vary from year to year, as one can expect with highly randomized events such
+as earthquakes. Using Yogyakarta - which was only impacted by earthquakes in 2006 - as an example,
+there was a loss of 0.4 percent of the total building mass, causing damages estimated to be approxi-
+mately 3.1 billion US dollars in addition to more than 5,000 deaths and tens of thousands of injured
+and displaced people. Apart from that, provinces on Sumatra make up 6 of the top 10 most damaging
+years. Even though Indonesia is often hit by severe earthquakes, even in the worst of years they only
+destroy about 1 percent of the buildings in a province. That being said, 1 percent of total building mass
+and infrastructure being damaged does constitute a signiﬁcant portion of local budgets. As another
+example, the September 2009 earthquake in West Sumatra inﬂicted damages for an estimated 2.3 billion
+US dollars, with repair costs and losses of 64 million US dollars on government buildings (Raschky, 2013).
+
+   The numbers per district are shown in Table 10, and they suﬀer much more damage than the provinces,
+with the most impacted district losing 5 percent of building mass.
+
+
+
+
+                                                     18
+                                 Table 9: Aggregated Earthquake Damage Data by Province
+
+     Province                      2004    2005    2006    2007    2008    2009    2010    2011    2012    2013    2014
+     Aceh                         0.040   0.728   0.160   0.152   0.044   0.010   0.269   0.345   4.597   3.869   0.000
+     Bali                         0.557                                   0.014           0.184
+     Banten                               0.003   0.268                   0.032                   0.142   0.022
+     Bengkulu                     0.447   0.623           8.905   0.380   0.270   0.378   0.154   1.224   0.176
+     Gorontalo                                    0.021           0.929   0.000                   0.404   0.000
+     Irian Jaya Barat             0.030                           0.178   0.410   0.000           0.000           1.217
+     Jakarta Raya                                                         0.060
+     Jambi                                                1.071   0.033   0.070   0.000
+     Jawa Barat                                   0.018   0.047           0.171   0.007           0.047   0.000
+     Jawa Tengah                                  0.404
+     Jawa Timur                                   0.012                                                   0.190
+     Lampung                                      0.019   0.040           0.000
+
+
+
+
+19
+     Maluku                       0.000   0.253   0.378   0.176   0.000   0.000   0.049           5.202   0.105
+     Maluku Utara                                 0.095   0.769   0.644   0.000   0.000   0.147   0.238   4.216   0.918
+     Nusa Tenggara Barat                  0.006   0.248   0.771   0.038   0.187   0.031
+     Nusa Tenggara Timur          0.215   0.000           0.048   0.070   0.274           0.026   0.804           1.056
+     Papua                        1.070           0.000   0.000   0.056   0.021   0.235   0.272   0.687   0.392   0.048
+     Riau                                 0.003           0.056           0.360
+     Sulawesi Barat                       0.000                           0.123           1.431
+     Sulawesi Selatan                                                                     0.261   0.000
+     Sulawesi Tengah              0.000   0.654   0.185           0.180   0.659   0.050   1.513   5.346   0.000
+     Sulawesi Tenggara                    0.110   0.052           0.060                   0.464
+     Sulawesi Utara                       0.069   0.050   0.651   0.011   0.263                                   0.111
+     Sumatera Barat               0.032   0.175   0.000   9.094   0.173   3.072   0.008   0.000   0.000   0.316
+     Sumatera Selatan                     0.000           0.816   0.000
+     Sumatera Utara               0.002   0.208   0.072   0.010   0.041   0.022   0.175   2.175   0.048           0.000
+     Yogyakarta                                   4.318
+     Note: Multiplied by 1,000
+               Table 10: 10 Most Impacted Districts
+
+District                    Province              Year   Intensity
+Alor                        Nusa Tenggara Timur   2014     53.184
+Waropen                     Papua                 2010     45.070
+Mukomuko                    Bengkulu              2007     44.215
+Aceh Tengah                 Aceh                  2013     41.736
+Nabire                      Papua                 2004     39.864
+Bener Meriah                Aceh                  2013     37.750
+Sangihe Talaud              Sulawesi Utara        2009     32.947
+Lembata                     Nusa Tenggara Timur   2012     31.692
+Halmahera Selatan           Maluku Utara          2013     31.511
+Aceh Barat                  Aceh                  2012     22.141
+Note: Multiplied by 1,000
+
+
+
+
+                                20
+6       Volcano Damage Index
+A volcanic eruption consists of ash clouds, pyroclastic ﬂows and lava ﬂows, the latter two which are very
+diﬃcult to model without extensive local data. Unfortunately, there is little to no academic research that
+has looked into large scale volcanic modeling for all aspects of eruptions. For modeling ash clouds, Joyce
+et al. (2009) points to remote sensing through satellite images that detect SO2 emissions as a potential
+method.
+
+   To construct a damage index for eruptions, we use a two-fold process. First, volcanic ash advisory
+data are used from Volcanic Ash Advisory Centers (VAAC) to detect eruptions; second, satellite images
+containing sulphur dioxide data from the OMI/AURA satellite are used to model the intensity of the
+eruptions. The OMI/AURA images have been utilized by Carn et al. (2009) and Ferguson et al. (2010)
+to model eruption intensity.
+
+
+6.1     Volcano Modeling
+There are at least two types of software that are used to model eruptions. Voris (Felpeto et al., 2007),
+which models ash clouds, lava ﬂows and energy cones, and HYSPLIT from Air Resources Laboratory,
+which models air pollution dispersion. Voris relies on highly localized data due to the lava ﬂow and
+energy cone modeling, which one will not have in most cases and that does not ﬁt well for large scale
+modeling across time and space. HYSPLIT does have batch inputs, but still requires several inputs per
+eruption, some which are not easily obtainable.
+
+   The third solution, which is related to the ash clouds mentioned by Joyce et al. (2009), is based oﬀ ash
+advisory data to determine whether an eruption happened and OMI/AURA satellite data to determine
+the scale of the eruption. This will not help with modeling lava ﬂows and energy cones, but due to the
+very localized nature of the ﬂows, there are no good sources or methods to model it for several eruptions
+from diﬀerent volcanoes, leaving the ash clouds as a good proxy for all damages.
+
+6.1.1    Ash advisory data
+Ash advisories from the Darwin VAAC (DVAAC), which are ash cloud warnings for airplanes, are used
+to determine whether an eruption is happening. The warnings show relevant data such as volcano name,
+position, summit height, height of clouds and a color code that reﬂects the condition of the air/volcano.
+There are 4 diﬀerent codes ranking from the normal state, green, to imminent danger of or ongoing
+volcanic eruption, red. Over the period from 2004 until 2015, the DVAAC issued 12,962 warnings and
+of these more than 90 percent were either of code red or orange. Data on advisories from code orange
+or below were not used, due to eruptions of this scale not being large enough to be properly captured
+by the SO2 -data. By limiting the data to code red events, there are 1,785 events spread across 587 dates.13
+
+
+6.1.2    OMI/AURA Satellite images
+To measure the intensity of an eruption, data from the Sulphur Dioxide images of the OMI/Aura
+project (Krotkov & Li, 2006) are used. These consist of satellite images from October 2004 and on-
+wards. The data have been used to model ash cloud intensity and movement in several articles such as
+Carn et al. (2009) and Ferguson et al. (2010).
+
+    The satellite images have a spatial resolution of 13 ∗ 24km and are taken from 80km above ground.
+The spectral imaging shows the SO2 vertical column density in Dobson Units and there are 14 or 15
+orbits per day, where one orbit covers an area approximately 2,600km wide. A dobson unit is a measure
+of density, and at sea level the typical concentration in clean air is less than 0.2DU. The images contain 4
+values for column density based on the center of mass altitude (CMA), which is a measure of the altitude
+one assumes the center of the distribution is at. There are 4 diﬀerent estimates for the vertical column
+density, ranging from 0.9km above ground to 18km above ground.
+
+ 13 There   were 571 diﬀerent dates, but some of these dates issued red warnings to 2 or more volcanoes.
+
+
+
+
+                                                            21
+    For volcanic activities one normally uses a CMA of either 8km or 18km (OMI team, 2012), where
+the former is a middle tropospheric column (TRM) and is for use in medium eruptions, while the latter
+is an upper tropospheric and stratospheric column (STL) and is for explosive eruptions. Despite this
+diﬀerence, the data are interchangeable in the sense that one can interpolate from one CMA to the others.
+
+   OMI is more sensitive above clouds, which both measures mentioned will normally be. The standard
+deviation for both measures is as low as 0.1DU over Indonesia. The data for both STL and TRM are
+very similar and this paper uses the STL-data as that are most useful for the biggest events.
+
+6.2     Creation of Damage Index and Results
+6.2.1   Damage Index
+When constructing a damage index based on SO2 values from ash clouds, one has to set thresholds for
+distance from the event and from the centroid of the nightlight cell and also a lower sulphur dioxide-value.
+There are no papers or literature that have estimated any parameter values and there are no usable local
+data, so the thresholds have been set somewhat arbitrarily.
+
+    First oﬀ, one wants to set a distance threshold estimating how far away the eruption could cause
+damage. Note that one wants ground results and not for the aviation industry, since planes can be
+aﬀected very far away as evidenced by the total stand still of planes across Europe during the 2010
+           okull eruption. We decided to set a very relaxed condition with any point closer than 10
+Eyjafjallaj¨
+degrees of latitude and longitude included. Figure 9 portrays the plume approximately 7 hours after one
+of the biggest Merapi eruptions on 4 November 2010, where the plume moved relatively slowly and after
+1000km it dissipated at the lower altitudes, which shows that our 10 degree threshold works well.
+
+    Secondly, to match the nightlight data with the OMI/Aura data, a maximum distance between a
+nightlight point and the nearest SO2 point is set at 50km. The SO2 points are fairly scattered due to
+cloud covers, hence to get a more consistent grid of nightlight and SO2 values we have chosen a distance
+that is approximately two times the longest side of an OMI cell.
+
+   Finally, a minimum SO2 value in Dobson Units is chosen. According to the Belgian Institute for
+Space Aeronomy, a typical normal level in air is 0.1DU and a strong eruption is above 10, which is the
+threshold value chosen.
+
+    Once the thresholds have been set, the same nightlight weighting method as for our other indices is
+applied and then the weights are multiplied with the SO2 value to get an intensity value. The equation
+is:
+
+                                           0                  : V SO2 < 10
+                               V Di,t =                                                                 (9)
+                                           wi,T −1 ∗ VSO2 i   : V SO2 ≥ 10
+   where i is the nightlight cell on date t, and wi,T −1 is the previously used weight where i is the
+nightlight cell, T − 1 is the nightlight strength from the prior year and it is divided by the sum of total
+nightlights in the province or district.
+
+
+
+
+                                                    22
+            Figure 9: Merapi Ash-Cloud 4 November 2010 at 05.33UTC (7h post-eruption)
+
+
+
+
+6.2.2   Results
+Applying our constraints, the 587 dates with a red warning have been reduced to 16 days. Of these, 7
+are from the 2010 eruption on Merapi, the biggest event during the time period.
+
+   Table 11 provides the aﬀected nightlight cells by year and volcano and the results are closely correlated
+with the events of the period. The main one is the Merapi eruption in 2010, Soputan with volcanic
+explosivity index events of level 2 and 3 in 2004, 2005, 2007 and 2008 (Global Volcanism Program, 2013)
+and Sinabung with several eruptions in 2014, which all ﬁt the model well.
+
+
+                             Table 11: Nightlight Cells by Year and Volcano
+
+               Volcano           2004    2005    2007    2008       2010     2014     Total
+               Kelut                                                        2,311     2,311
+               Manam                       62                                            62
+               Merapi                                            129,352            129,352
+               Sangeang Api                                                 1,156     1,156
+               Sinabung                                                     3,566     3,566
+               Soputan          6,164     586   4,672    3,704                       15,126
+               Total            6,164     648   4,672    3,704   129,352    7,033   151,573
+
+    Table 12 refer to province impacts, and the eruptions aﬀected numerous provinces on Java and Suma-
+tra, with Jawa Barat and Jawa Tengah being the most aﬀected with more than 120,000 cells with an
+SO2 -value above 10 at some point. This is further underlined by nine of the ten most aﬀected districts
+in Table 13 being in these two provinces, which are linked to the Merapi eruption in 2010. Apart from
+that, Sulawesi Utara were aﬀected all the years from 2004 through 2008 by the eruptions on Soputan.
+
+    The ﬁnal table in this section, Table 14, provide descriptives of the SO2 variable and the nightlight
+weights, as well as the product of the two. Overall, the mean SO2 value during these events is almost
+20, with a max close to 60, which is 600 times the normal level of 0.1DU SO2 .
+
+
+
+                                                    23
+                       Table 12: Aﬀected Nightlight Cells by Province and Year
+
+           Province                  2004    2005      2007       2008        2010    2014      Total
+           Aceh                                                                      2,078      2,078
+           Banten                                                              940                940
+           Jawa Barat                                                       52,034             52,034
+           Jawa Tengah                                                      71,356             71,356
+           Jawa Timur                                                        2,320   2,311      4,631
+           Nusa Tenggara Timur                                                       1,156      1,156
+           Papua                               62                                                  62
+           Sulawesi Utara           6,164     586      4,672     3,704                         15,126
+           Sumatera Utara                                                            1,488      1,488
+           Yogyakarta                                                        2,702              2,702
+           Total                    6,164     648      4,672     3,704     129,352   7,033    151,573
+
+
+                    Table 13: Top 10 Districts with Most Aﬀected Nightlight Cells
+
+                          District              Province                 Aﬀected Cells
+                          Cilacap               Jawa Tengah                    16,114
+                          Sukabumi              Jawa Barat                     10,724
+                          Kebumen               Jawa Tengah                    10,080
+                          Ciamis                Jawa Barat                       9,612
+                          Banyumas              Jawa Tengah                      9,384
+                          Cianjur               Jawa Barat                       8,260
+                          Brebes                Jawa Tengah                      6,112
+                          Minahasa Selatan      Sulawesi Utara                   5,960
+                          Garut                 Jawa Barat                       5,622
+                          Bandung               Jawa Barat                       5,342
+
+
+              Table 14: Descriptives of Weights and Intensity (Excluding weights of zero)
+
+                   Statistic        N         Mean          St. Dev.        Min      Max
+                   Weights       114,587      0.046          0.084          0.007     2.354
+                   SO2 level     114,587      19.748        10.556         10.083    57.231
+                   Intensity     114,587      0.855         1.707          0.075     42.857
+                     Weights and Intensity multiplied by 1,000
+
+
+6.2.3   Aggregated data
+To aggregate the data, the same method as before is applied, with:
+                                                       T    I
+                                           V Dj,T =             VD i,t                                  (10)
+                                                       t    i
+
+   where all days t of year T and all nightlight cells i in province or district j are aggregated.
+
+   The province overview, shown in Table 16, is caused by the Merapi eruption, with 3 of the top 4
+being due to that eruption. Jawa Tengah and Yogyakarta are the two most aﬀected provinces, given
+their immediate proximity to Merapi. One thing to note is that Jawa Timur, which is east of Merapi,
+was hardly aﬀected at all.
+
+   For districts, the Merapi results are even more pronounced, with all districts in the top 10 being from
+the 2010 eruption. All the Jawa Tengah districts are west of the volcano. It is somewhat surprising to
+ﬁnd that some of the districts in the immediate vicinity of Merapi are not on the list, but this can be
+due to the timing and quality of the satellite images. Given the time interval between images, the SO2
+
+
+                                                       24
+clouds could have traveled past the closest districts by the time an image was taken. Regardless, the
+results are uniform in that all aﬀected districts are neighbors. Overall, the model seems to give a fair
+picture of when and where the eruptions were at their most intense, although the ground level intensity
+can be hard to specify.
+
+
+                                Table 15: 10 Most Impacted Provinces
+
+                             Province                     Year   Intensity
+                             Jawa Tengah                  2010     34.641
+                             Yogyakarta                   2010     18.607
+                             Sulawesi Utara               2004     16.224
+                             Jawa Barat                   2010     10.271
+                             Sulawesi Utara               2007       6.387
+                             Sulawesi Utara               2008       4.861
+                             Nusa Tenggara Timur          2014       2.356
+                             Aceh                         2014       2.134
+                             Sulawesi Utara               2005       0.684
+                             Jawa Timur                   2010       0.660
+                             Note: Multiplied by 1,000
+
+
+
+                 Table 16: Aggregated Volcano Intensity Data by Province and Year
+
+               Province                   2004    2005    2007    2008       2010    2014
+               Aceh                                                                 2.134
+               Banten                                                     0.163
+               Jawa Barat                                                10.271
+               Jawa Tengah                                               34.641
+               Jawa Timur                                                 0.660     0.432
+               Nusa Tenggara Timur                                                  2.356
+               Papua                             0.061
+               Sulawesi Utara           16.224   0.684   6.387   4.861
+               Sumatera Utara                                                       0.487
+               Yogyakarta                                                18.607
+
+
+
+
+                                                  25
+           Table 17: 10 Most Impacted Districts
+
+District                    Province      Year    Intensity
+Purwokerto                  Jawa Tengah   2010     184.673
+Banyumas                    Jawa Tengah   2010     168.916
+Cilacap                     Jawa Tengah   2010     149.878
+Kebumen                     Jawa Tengah   2010     141.635
+Banjarnegara                Jawa Tengah   2010     106.472
+Purbalingga                 Jawa Tengah   2010      98.697
+Purworejo                   Jawa Tengah   2010      92.593
+Kulon Progo                 Yogyakarta    2010      72.177
+Wonosobo                    Jawa Tengah   2010      69.568
+Banjar                      Jawa Barat    2010      60.208
+Note: Multiplied by 1,000
+
+
+
+
+                            26
+7       Tsunami Damage Index
+The ﬁnal disaster damage index constructed is for the 2004 Christmas tsunami. There is little local dis-
+trict level damage data available, so it was decided to use the methodology from Heger (2016), whereby
+inundation maps are used to construct a district level damage index assuming a uniform damage across
+all ﬂooded areas.
+
+
+7.1     Creation of Damage Index and Results
+7.1.1    Damage Index
+Despite all the media coverage and attention the 2004 tsunami had, there is not much detailed spatial
+information readily available for research. Heger (2016) has done some research on the causal eﬀects of
+the tsunami in his PhD thesis, and we will follow his method closely to model ﬂood impact.
+
+    To construct an inundation map of the aﬀected areas, a map based on MODIS satellite pictures from
+Anderson et al. (2004) is used. The map itself is fairly low resolution, but it provides a good overview
+of the inundated areas. In terms of the intensity of the ﬂood, there are no existing data on that, but a
+uniform ﬂood intensity across all ﬂooded areas is assumed, just as in Heger (2016). The resulting map is
+shown in Figure 10, which shows that a large proportion of the Aceh coastline was struck by the tsunami.
+
+    To make this map, the inundation map from DFO was used as a base. Spatial algorithms were
+then applied to detect the diﬀerence in color between inundated and non-inundated areas. This process
+started with overlaying the base map on a regular shapeﬁle of Indonesia, then detecting the speciﬁc color
+of inundated areas, before constructing a new shapeﬁle where all inundated areas (areas with the same
+color) have value 1 and all other areas have value 0.
+
+
+
+                              Figure 10: Inundation Map of 2004 Tsunami
+
+
+
+
+7.1.2    Results
+Figure 11 shows the inundated area nightlight cells, combined with the nightlight cells in all of Aceh. The
+tsunami did not strike the most densely populated areas, 460 nightlight cells were hit, out of a total of
+13,456 cells in all of Aceh. Given that the tsunami happened 26 December 2004, it is more appropriate to
+link the incident with the 2004 nighlights, instead of 2003, as is done for the other disaster types. Using
+the 2004 numbers, there were 364 lit inundated cells out of 7,607 total lit cells in Aceh. Interestingly, in
+2005, the year after the disaster, there is a strong decline, with 306 and 6,352 lit cells for the inundated
+
+
+                                                    27
+areas and Aceh, respectively. The average light intensity has gone down, from 7.39 per cell to 6.33 in
+the inundated areas and from 6.37 to 5.18 in the province as a whole.
+
+
+
+                    Figure 11: Aceh Nightlights and Tsunami Aﬀected Nightlights
+
+
+
+
+    Finally, Table 18 shows the weights which are - again - deﬁned as nightlight in the cell over total
+nightlight in the province. Although the numbers look very small, by multiplying the means by number
+of cells, one gets approximately 5.5 percent. Knowing that the census numbers for Aceh in 2000 gave
+a population of just under 4 million and in 2010 of just under 4.5 million and if one multiplies the
+population numbers with the aﬀected cells number of 5.5 percent of the total, one gets 221,894 and
+249,631, respectively. Given the oﬃcial numbers of 166,671 dead due to the tsunami, an assumption of
+total destruction in all inundated areas seem a bit high, given that 166,671 of 230,000 is 72.47 percent.
+A damage of 75 percent in the inundated cells is chosen, giving a ﬁnal damage index formula:
+
+                                                      TD i = Wi ∗ D                                 (11)
+                                                                                           li
+   where TD i is the province weighted damage from nightlight cell i, Wi = I l i.e. the light in cell i
+                                                                             i i
+over the sum of all nightlight in the province and D is the ﬂat damage number of 0.75.
+
+
+                                    Table 18: Descriptives of Weights by Year
+
+                                          All Cells                       Only Lit Cells
+                                                a        a
+                 Year       Cells         Mean (st.dev )          Total Cells   Meana (st.deva )
+                 2003       460           0.0965 (0.1356)            295        0.1505 (0.1433)
+                 2004       460           0.1206 (0.1369)            364        0.1524 (0.1373)
+                 2005       460           0.1281 (0.1656)            306        0.1925 (0.1698)
+                  a. Multiplied by 1000
+
+
+
+
+                                                             28
+7.1.3   Aggregated data
+Aggregating the data is done using the same method as in all previous sections, where the nightlight
+cells across the province or district is summed up:
+                                                       I
+                                             T Dj =        TD i                                   (12)
+                                                       i
+
+   where all nightlight cells i in province or district j are aggregated.
+
+    Since the tsunami only aﬀected one province, it is easy to see the total damage done by it on Aceh.
+With our assumptions, the tsunami destroyed about 4 percent of the buildings in Aceh. This is clearer
+once broken down into district level damage. There were 6 districts aﬀected by the tsunami, with Aceh
+Jaya, Banda Aceh and Pidie all experiencing damage of more than 20 percent. The other 3 aﬀected
+districts - Aceh Barat, Aceh Besar and Bireuen - experienced damage between 5 and 10 percent due to
+the tsunami.
+
+                   Table 19: Aggregated Tsunami Damage by District and Province
+
+                                   District        Province       Intensity
+                                   Aceh Barat      Aceh           0.071
+                                   Aceh Besar      Aceh           0.078
+                                   Aceh Jaya       Aceh           0.221
+                                   Banda Aceh      Aceh           0.229
+                                   Bireuen         Aceh           0.055
+                                   Pidie           Aceh           0.210
+
+                                   Aggregated      Aceh           0.042
+
+
+
+
+                                                    29
+8    Conclusion
+With the continuous increase in remote sourcing data, it has gotten much easier and cheaper to monitor
+and assess the damages from natural disasters. Joyce et al. (2009) and Gillespie et al. (2007) have done
+an extensive review of how satellite images can be used to map natural disasters, while this paper has
+contributed with providing new techniques that utilize other remote sourced data such as ShakeMaps
+and ash advisory data.
+
+   Throughout, techniques based on freely available data have been used to construct damage indices for
+diﬀerent disaster types. Generally the indices can be used in any area of the world, and if calibrated with
+local data, they could provide an excellent tool for local governments or stakeholders in early disaster
+assessments.
+
+    The indices can be used to get quick damage estimates and inform where to provide relief, as well as
+in research such as what the authors have done in Skouﬁas et al. (2017), where the indices are used to
+analyze district budget redistributions following natural disasters.
+
+   The main caveat is the indices have not been validated against local level damage data. If one had
+access to high resolution monetary or intensity data, the estimates would be much more precise.
+
+    Table 20 gives an overview of the diﬀerent data sources and software used. All disasters have used
+the DMSP global nightlights data to weight the indices based on economic activity. Recently, the VIIRS
+nightlight data provide an alternative for assessing economic activity or events, as showcased for GDP in
+China (Li et al., 2013; Shi et al., 2014) and Africa (Chen & Nordhaus, 2015) and for storms and ﬂoods
+in the US (Cao et al., 2013; Sun et al., 2015). If one is interested in events after 2012, the VIIRS data
+provide higher spatial resolution and track changes by month instead of yearly.
+
+    Alternatives do exist for choice of software if one wants everything to be open source and free. Instead
+of ArcGIS, packages such as QGIS and RGDAL for R are potential alternatives. R and Python are used
+more and more for spatial data and can often provide the necessary tools to do the modeling. Instead of
+statistical software such as Matlab and Stata, R and Python once more provide excellent alternatives.
+
+
+
+                     Table 20: Disasters and the Data Sources and Softwares used
+
+             Disaster Type         Data Sources                      Software Used
+                                   Hydro1K
+                                                                     GeoSFM (ArcView 3.3)
+                                   GLCC
+                                                                     Python
+             Flood                 FAO Digital Soil Map
+                                                                     Stata
+                                   TRMM
+                                                                     ArcGIS
+                                   GDAS
+                                   USGS ShakeMaps
+                                   USGS Building Inventory           Python
+             Earthquake            World Housing Encyclopedia        Stata
+                                   Urban Extent Map (CIESIN)         ArcGIS
+                                   GESI
+                                                                     Python
+                                   Ash Advisory Data                 Matlab
+             Volcanic Eruption
+                                   OMI/AURA Satellite Images         Stata
+                                                                     ArcGIS
+                                                                     Python
+             Tsunami               DFO Inundation Map                ArcGIS
+                                                                     Stata
+
+
+
+
+                                                    30
+References
+                                                 ebastien. 2004. DFO Event number 2004 - 193 -
+Anderson, Elaine, Brakenridge, G.R., & Caquard, S´
+ Aceh Province Inundation Map 1. http://www.dartmouth.edu/ ﬂoods/2004193.html. Online; accessed
+ 1 June 2016.
+Artan, G.A., Asante, K., Smith, J., Pervez, S., Entenmann, D., Verdin, J., & Rowland, J. 2008. Users
+  Manual for the Geospatial Stream Flow Model (GeoSFM): U.S. Geological Survey Open-File Report
+  20071440. User Manual. USGS.
+Asante, Kwabena O., Macuacua, Rodrigues D., Artan, Guleid A., Lietzow, Ronald W., & Verdin,
+  James P. 2007. Developing a Flood Monitoring System From Remotely Sensed Data for the Limpopo
+  Basin. IEEE Transactions on Geoscience and Remote Sensing, 45(6), 1709–1714.
+
+Athukorala, Prema-chandra, & Resosudarmo, Budy P. 2005. The Indian Ocean Tsunami: Economic
+  Impact, Disaster Management, and Lessons. MIT Press, 4(1), 1–39.
+Atkinson, Gail M., & Kaka, SanLinn I. 2007. Relationships between Felt Intensity and Instrumental
+  Ground Motion in the Central United States and California. Bulletin of the Seismological Society of
+  America, 97(2), 497–510.
+
+Atkinson, Gail Marie, & Kaka, SanLinn I. 2006. Relationships between felt intensity and instrumental
+  ground motion for New Madrid ShakeMaps. Department of Earth Sciences, Carleton University.
+Balk, D.L., Deichmann, U., Yetman, G., Pozzi, F., Hay, S.I., & Nelson, A. 2006. Determining Global Pop-
+  ulation Distribution: Methods, Applications and Data. Pages 119–156 of: Advances in Parasitology.
+  Elsevier.
+Brakenridge, R., & Anderson, E. 2006. MODIS-based ﬂood detection, mapping and measurement: The
+  potential for operational hydrological applications. Pages 1–12 of: Marsalek, Jiri, Stancalie, Gheo-
+  rghe, & Balint, Gabor (eds), Nato Science Series: IV: Earth and Environmental Sciences. Springer
+  Netherlands.
+
+Cao, Changyong, Shao, Xi, & Uprety, Sirish. 2013. Detecting Light Outages After Severe Storms Using
+  the S-NPP/VIIRS Day/Night Band Radiances. IEEE Geoscience and Remote Sensing Letters, 10(6),
+  1582–1586.
+Carn, Simon A., Krueger, Arlin J., Krotkov, Nickolay A., Yang, Kai, & Evans, Keith. 2009. Tracking
+  volcanic sulfur dioxide clouds for aviation hazard mitigation. Natural Hazards, 51(2), 325–343.
+
+Center for International Earth Science Information Network - CIESIN - Columbia University, Interna-
+  tional Food Policy Research Institute - IFPRI, The World Bank, & Centro Internacional de Agri-
+  cultura Tropical - CIAT. 2011. Global Rural-Urban Mapping Project, Version 1 (GRUMPv1): Ur-
+  ban Extents Grid. Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC).
+  http://dx.doi.org/10.7927/H4GH9FVG. Accessed 02 01 2017.
+
+Chen, Xi, & Nordhaus, William. 2015. A Test of the New VIIRS Lights Data Set: Population and
+  Economic Output in Africa. Remote Sensing, 7(4), 4937–4947.
+Chung, Hsiao-Wei, Liu, Cheng-Chien, Cheng, I-Fan, Lee, Yun-Ruei, & Shieh, Ming-Chang. 2015. Rapid
+  Response to a Typhoon-Induced Flood with an SAR-Derived Map of Inundated Areas: Case Study
+  and Validation. Remote Sensing, 7(9), 11954–11973.
+
+De Groeve, Tom, Annunziato, A, Gadenz, S, Vernaccini, L, Erberik, A, & Yilmaz, T. 2008. Real-time
+  impact estimation of large earthquakes using USGS Shakemaps. Proceedings of IDRC2008, Davos,
+  Switzerland.
+Dell’Acqua, Fabio, & Gamba, Paolo. 2012. Remote Sensing and Earthquake Damage Assessment: Ex-
+  periences, Limits, and Perspectives. Proceedings of the IEEE, 100(10), 2876–2890.
+Dessu, Shimelis Behailu, Seid, Abdulkarim Hussein, Abiy, Anteneh Z., & Melesse, Assefa M. 2016. Flood
+  Forecasting and Stream Flow Simulation of the Upper Awash River Basin, Ethiopia Using Geospatial
+  Stream Flow Model (GeoSFM). Cham: Springer International Publishing. Pages 367–384.
+
+
+                                                  31
+Elvidge, Christopher, Baugh, Kimberly, Hobson, Vinita, Kihn, Eric, Kroehl, Herbert, Davis, Ethan, &
+  Cocero, David. 1997. Satellite inventory of human settlements using nocturnal radiation emissions: A
+  contribution for the global toolchest. Global Change Biology, 3(5), 387–395.
+Federal Emergency Management Agency. 2006. HAZUS-MH MR2 Technical Manual. Federal Emergency
+  Management Agency, Washington, D.C.
+Felpeto, Alicia, Mart, Joan, & Ortiz, Ramon. 2007. Automatic GIS-based system for volcanic hazard
+  assessment. Journal of Volcanology and Geothermal Research, 166(2), 106 – 116.
+Ferguson, David J., Barnie, Talfan D., Pyle, David M., Oppenheimer, Clive, Yirgu, Gezahegn, Lewi,
+  Elias, Kidane, Tesfaye, Carn, Simon, & Hamling, Ian. 2010. Recent rift-related volcanism in Afar,
+  Ethiopia. Earth and Planetary Science Letters, 292(34), 409 – 418.
+Fu, Bihong, Awata, Yasuo, Du, Jianguo, Ninomiya, Yoshiki, & He, Wengui. 2005. Complex geometry and
+  segmentation of the surface rupture associated with the 14 November 2001 great Kunlun earthquake,
+  northern Tibet, China. Tectonophysics, 407(1-2), 43–63.
+GeoHazards International and United Nations Centre for Regional Development. 2001. Final report:
+ Global Earthquake Safety Initiative (GESI) pilot project. Report. GHI.
+Gillespie, T. W., Chu, J., Frankenberg, E., & Thomas, D. 2007. Assessment and prediction of natural
+  hazards from satellite imagery. Progress in Physical Geography, 31(5), 459–470.
+Global Volcanism Program. 2013. Volcanoes of the World, v. 4.5.3. Venzke, E (ed.). Smithsonian Insti-
+  tution. Downloaded 25 Jan 2017.
+G.R.Brakenridge. 2016. Global Active Archive of Large Flood Events, Dartmouth Flood Observatory,
+  University of Colorado. http://ﬂoodobservatory.colorado.edu/Archives/index.html. Online; accessed
+  29 May 2016.
+Haq, Mateeul, Akhtar, Memon, Muhammad, Sher, Paras, Siddiqi, & Rahmatullah, Jillani. 2012. Tech-
+  niques of Remote Sensing and GIS for ﬂood monitoring and damage assessment: A case study of Sindh
+  province, Pakistan. The Egyptian Journal of Remote Sensing and Space Science, 15(2), 135–141.
+Heger, Martin Philipp. 2016. The Causal Eﬀects of the Indian Ocean Tsunami and Armed Conﬂict on
+  Acehs Economic Development. Ph.D. thesis, London School of Economics.
+Henderson, J. Vernon, Storeygard, Adam, & Weil, David N. 2012. Measuring Economic Growth from
+  Outer Space. American Economic Review, 102(2), 994–1028.
+Hodler, Roland, & Raschky, Paul A. 2014. Regional Favoritism. The Quarterly Journal of Economics,
+ 129(2), 995–1033.
+Holden, Z. A., Smith, A. M. S., Morgan, P., Rollins, M. G., & Gessler, P. E. 2005. Evaluation of novel
+  thermally enhanced spectral indices for mapping ﬁre perimeters and comparisons with ﬁre atlas data.
+  International Journal of Remote Sensing, 26(21), 4801–4808.
+Jaiswal, K.S., & Wald, D.J. 2008. Creating a global building inventory for earthquake loss assessment
+  and risk management: U.S. Geological Survey Open-File Report 2008-1160. Tech. rept. USGS.
+Joyce, K. E., Belliss, S. E., Samsonov, S. V., McNeill, S. J., & Glassey, P. J. 2009. A review of the status
+  of satellite remote sensing and image processing techniques for mapping natural hazards and disasters.
+  Progress in Physical Geography, 33(2), 183–207.
+Klemas, Victor V. 2009. The Role of Remote Sensing in Predicting and Determining Coastal Storm
+  Impacts. Journal of Coastal Research, 256(nov), 1264–1275.
+Knebl, M.R., Yang, Z.-L., Hutchison, K., & Maidment, D.R. 2005. Regional scale ﬂood modeling using
+ NEXRAD rainfall, GIS, and HEC-HMS/RAS: a case study for the San Antonio River Basin Summer
+ 2002 storm event. Journal of Environmental Management, 75(4), 325–336.
+Kreibich, H., Piroth, K., Seifert, I., Maiwald, H., Kunert, U., Schwarz, J., Merz, B., & Thieken, A. H.
+  2009. Is ﬂow velocity a signiﬁcant parameter in ﬂood damage modelling? Natural Hazards and Earth
+  System Sciences, 9(5), 1679–1692.
+
+
+                                                    32
+Krotkov, Nickolay A., & Li, Can. 2006. OMI/Aura Sulphur Dioxide (SO2) Total Column 1-orbit L2
+  Swath 13x24 km V003, Greenbelt, MD, USA, Goddard Earth Sciences Data and Information Services
+  Center (GES DISC), , Accessed 30 August 2016.
+Li, Xi, Xu, Huimin, Chen, Xiaoling, & Li, Chang. 2013. Potential of NPP-VIIRS Nighttime Light
+  Imagery for Modeling the Regional Economy of China. Remote Sensing, 5(6), 3057–3081.
+Linkimer, Lepolt. 2007. Relationship between peak ground acceleration and Modiﬁed Mercalli intensity
+                             ogica de Am´
+  in Costa Rica. Revista Geol´           erica Central.
+Mati, Bancy M., Mutie, Simon, Gadain, Hussein, Home, Patrick, & Mtalo, Felix. 2008. Impacts of
+ land-use/cover changes on the hydrology of the transboundary Mara River, Kenya/Tanzania. Lakes
+ & Reservoirs: Research & Management, 13(2), 169–177.
+Merz, B., Kreibich, H., Schwarze, R., & Thieken, A. 2010. Review article ”Assessment of economic ﬂood
+ damage”. Natural Hazards and Earth System Sciences, 10(8), 1697–1724.
+Michalopoulos, Stelios, & Papaioannou, Elias. 2014. National Institutions and Subnational Development
+ in Africa. The Quarterly Journal of Economics, 129(1), 151–213.
+Murphy, J. R., & O’Brien, L. J. 1977. The correlation of peak ground acceleration amplitude with
+ seismic intensity and other physical parameters. Bulletin of the Seismological Society of America,
+ 67(3), 877–915.
+Myint, S. W., Yuan, M., Cerveny, R. S., & Giri, C. 2008. Categorizing natural disaster damage assessment
+ using satellite-based geospatial techniques. Natural Hazards and Earth System Science, 8(4), 707–719.
+National Disaster Management Agency, BNPB. 2016. DiBi database (Data and Information on Disaster
+  in Indonesia).
+Nichol, Janet E., Shaker, Ahmed, & Wong, Man-Sing. 2006. Application of high-resolution stereo satellite
+  images to detailed landslide hazard assessment. Geomorphology, 76(1-2), 68–75.
+OMI team. 2012. Ozone Monitoring Instrument (OMI) Data Users Guide. User Manual. OMI.
+Penning-Rowsell, Edmund, Johnson, Clare, Tunstall, Sylvia, Tapsell, Sue, Morris, Joe, Chatterton, John,
+  & Green, Colin. 2005. The beneﬁts of ﬂood and coastal risk management: a handbook of assessment
+  techniques. Tech. rept. Middlesex University Press.
+Raschky, Paul A. 2013. Discussion Paper: Estimating the Eﬀects of West Sumatra Public Asset Insurance
+  Program on Short-Term Recovery after the September 2009 Earthquake. Tech. rept. 2013-35. ERIA.
+ omer, H., Willroth, P., Kaiser, G., Vafeidis, A. T., Ludwig, R., Sterr, H., & Diez, J. Revilla. 2012.
+R¨
+  Potential of remote sensing techniques for tsunami hazard and vulnerability analysis – a case study
+  from Phang-Nga province, Thailand. Natural Hazards and Earth System Science, 12(6), 2103–2126.
+Roy, D.P., Boschetti, L., & Trigg, S.N. 2006. Remote Sensing of Fire Severity: Assessing the Performance
+  of the Normalized Burn Ratio. IEEE Geoscience and Remote Sensing Letters, 3(1), 112–116.
+Scawthorn, Charles, Flores, Paul, Blais, Neil, Seligson, Hope, Tate, Eric, Chang, Stephanie, Miﬄin,
+  Edward, Thomas, Will, Murphy, James, Jones, Christopher, et al. 2006. HAZUS-MH ﬂood loss
+  estimation methodology. II. Damage and loss assessment. Natural Hazards Review, 7(2), 72–81.
+Shi, Kaifang, Yu, Bailang, Huang, Yixiu, Hu, Yingjie, Yin, Bing, Chen, Zuoqi, Chen, Liujia, & Wu,
+  Jianping. 2014. Evaluating the Ability of NPP-VIIRS Nighttime Light Data to Estimate the Gross
+  Domestic Product and the Electric Power Consumption of China at Multiple Scales: A Comparison
+  with DMSP-OLS Data. Remote Sensing, 6(2), 1705–1724.
+Shrestha, M.S., Artan, G.A., Bajracharya, S.R., Gautam, D.K., & Tokar, S.A. 2011. Bias-adjusted
+  satellite-based rainfall estimates for predicting ﬂoods: Narayani Basin. Journal of Flood Risk Man-
+  agement, 4(4), 360–373.
+Skouﬁas, Emmanuel, Strobl, Eric, & Tveit, Thomas. 2017. The Reallocation of District-Level Spend-
+  ing and Natural Disasters: Evidence from Indonesia. World Bank Policy Research Working Paper
+  (Forthcoming).
+
+
+                                                  33
+Sun, Donglian, Li, Sanmei, Zheng, Wei, Croitoru, Arie, Stefanidis, Anthony, & Goldberg, Mitchell. 2015.
+  Mapping ﬂoods due to Hurricane Sandy using NPP VIIRS and ATMS data and geotagged Flickr
+  imagery. International Journal of Digital Earth, 9(5), 427–441.
+The Atlantic. 2014 (December). Ten Years Since the 2004 Indian Ocean Tsunami.
+
+The Global Facility for Disaster Reduction and Recovery. 2011. Indonesia: Advancing a National Dis-
+  aster Risk Financing Strategy Options for Consideration. Report. World Bank.
+Tralli, David M., Blom, Ronald G., Zlotnicki, Victor, Donnellan, Andrea, & Evans, Diane L. 2005.
+  Satellite remote sensing of earthquake, volcano, ﬂood, landslide and coastal inundation hazards. ISPRS
+  Journal of Photogrammetry and Remote Sensing, 59(4), 185–198.
+Wald, David J., Quitoriano, Vincent, Heaton, Thomas H., Kanamori, Hiroo, Scrivner, Craig W., &
+ Worden, C. Bruce. 1999. TriNet ShakeMaps: Rapid Generation of Peak Ground Motion and Intensity
+ Maps for Earthquakes in Southern California. Earthquake Spectra, 15(3), 537–555.
+Wald, D.J., Worden, B.C., Quitoriano, V., & Pankow, K.L. 2005. ShakeMap Manual - Technical Manual,
+ User’s Guide, and Software Guide. Technical Manual. USGS.
+World Bank. 2005 (January). Indonesia: Preliminary Damage and Loss Assessment: The December 26,
+ 2004 Natural Disaster.
+Wu, Huan, Adler, Robert F., Hong, Yang, Tian, Yudong, & Policelli, Fritz. 2012. Evaluation of Global
+ Flood Detection Using Satellite-Based Rainfall and a Hydrologic Model. Journal of Hydrometeorology,
+ 13(4), 1268–1284.
+Wu, Huan, Adler, Robert F., Tian, Yudong, Huﬀman, George J., Li, Hongyi, & Wang, JianJian. 2014.
+ Real-time global ﬂood estimation using satellite-based precipitation and a coupled land surface and
+ routing model. Water Resources Research, 50(3), 2693–2717.
+
+Yamazaki, Fumio, & Matsuoka, Masashi. 2007. Remote Sensing Technologies in Post Disaster Damage
+  Assessment. Journal of Earthquake and Tsunami, 01(03), 193–210.
+
+
+
+
+                                                  34
+
