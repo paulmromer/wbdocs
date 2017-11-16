@@ -1,0 +1,2153 @@
+                                                                       103519
+
+
+
+
+       Price Transmission from International to
+                  Domestic Markets
+
+
+
+                Friederike Greb, Nelissa Jamora, Carolin Mengel,
+            Stephan von Cramon-Taubadel and Nadine Würriehausen
+          Department of Agricultural Economics and Rural Development
+                            University of Göttingen
+
+
+
+
+                            Report prepared for
+
+ Rural Policies Thematic Group of ARD (RPTG), Development and Research
+Group’s Agriculture and Rural Development (DECAR), and Poverty Reduction
+                         and Equity Unit (PRMPR)
+
+
+
+
+                                                                           1
+Executive Summary
+
+1. This study aims to improve our understanding of the extent and speed of the transmission of
+   international cereal prices to local markets in developing countries. We undertake three types of
+   analysis:
+            a. First, we extract a sample of estimated measures of cereal price transmission (PT)
+               from a comprehensive literature sample of published papers and studies.
+            b. Second, we use the FAO’s GIEWS dataset to estimate our own sample of measures of
+               cereal PT. In a subsequent meta-regression analysis we measure how much of the
+               variation in each of the resulting samples of PT estimates (the literature sample and
+               the GIEWS sample) can be explained by factors that might be expected to influence
+               the strength of PT such as whether the country in question is landlocked.
+            c. Third, we present the results of simple, non-parametric analysis of price transmission
+               using the GIEWS data. This analysis measures the share of periods in which domestic
+               and international prices have jointly increased or decreased.
+2. 79% of the international/domestic price pairs in our sample of PT studies from the literature are
+   cointegrated compared with 43% in our own estimates based on FAO GIEWS data. Hence,
+   regardless of which database is used, many of the studied price pairs are not cointegrated and
+   thus do not provide evidence of stable PT. This is especially the case if we consider that the
+   literature sample most likely suffers from publication bias that leads to an overrepresentation of
+   findings of cointegration.
+3. Overall, maize markets are characterized by a below-average prevalence of cointegration, and
+   rice markets by an above-average prevalence. Which regions of the world display higher/lower
+   shares of cointegration depends on which dataset is considered: according to the literature
+   sample, domestic prices in Africa are less likely than average to be cointegrated with
+   corresponding international prices, but the estimates generated with GIEWS data suggest that
+   domestic prices in Asia are least likely to be cointegrated with international prices.
+4. Both the literature and the GIEWS-based estimated point to average long-run PT coefficients of
+   roughly 0.75 and average short-run adjustment parameters of roughly 0.09-0.11. This suggests
+   that on average roughly three-quarters of a change in international prices will be transmitted to
+   domestic markets, and that it takes approximately 6-7 months for one-half of a given price shock
+   on international cereal markets to be transmitted to domestic markets.
+5. Comparing PT in the period prior to July 2007 with PT in the period thereafter reveals no clear
+   pattern. On maize markets the long-run PT coefficients have fallen considerably since mid-2007.
+   This could be interpreted as evidence of a decoupling of domestic from international prices. On
+   rice and wheat markets there is evidence that the long-run PT coefficients have increased, but at
+   the same time the short-run adjustment coefficients have fallen, suggesting that PT has become
+   more complete but slower since mid-2007 for rice and wheat.
+6. Employing meta-regression analysis to explain variations in long-run PT coefficients between
+   domestic and international prices fails to generate compelling results. The meta-regressions for
+   the short-run adjustment parameters provide evidence of more rapid PT for maize than for
+   wheat and rice, and more rapid PT in West Africa than in other regions. An increasing ratio of net
+   imports to domestic consumption is associated with slower PT, which may be an indication of
+   increased intervention on politically more sensitive markets. There is evidence that trade
+   openness is positively associated with the speed of PT, but this effect is only significant in the
+   pre-July 2007 period. Finally, there is some counterintuitive indication that improved logistics are
+   correlated with slower PT.
+
+                                                                                                     2
+7. The analysis of agreement in the direction in price changes on international and domestic
+   markets suggests that the frequency of agreement is quite low at the monthly level, and only
+   somewhat higher at the quarterly level. This lack of agreement is especially pronounced when
+   international prices are falling; in this case domestic prices only fall as well in roughly 50% of all
+   cases, which is what one would expect if price movements on international and domestic
+   markets were completely independent. When international prices are increasing, there is a
+   higher probability that domestic prices will increase as well, especially at the quarterly level for
+   Europe, Asia, East Africa and Latin America. Overall these results support the findings of generally
+   weak PT that were derived from the cointegration analysis.
+8. The analysis of domestic price volatility reveals that median volatility has increased since July
+   2007. But there is no difference between the median volatilities of those prices that are
+   cointegrated with the corresponding international prices and those that are not. This suggests
+   that on average, local factors play the major role in determining volatility of local food prices
+   even for countries where local prices are cointegrated with international prices. The analysis
+   reveals that in general, domestic prices are most volatile in East and West Africa, followed by
+   Latin America and Asia. Furthermore, on average domestic maize and wheat prices are more
+   volatile than the corresponding international prices, while domestic rice prices are less volatile.
+
+
+
+
+                                                                                                       3
+Table of contents
+
+
+Executive Summary .................................................................................................................... 2
+Table of contents ........................................................................................................................ 4
+1. Introduction ............................................................................................................................ 5
+2. Methods: the vector error correction model ......................................................................... 5
+2.1 The structure of the vector error correction model ......................................................................... 5
+2.2 Limitations of the vector error correction model, and alternatives ................................................. 7
+3. Literature-based and GIEWS data-based estimates of international-domestic cereals price
+transmission ............................................................................................................................... 9
+3.1 Estimates of cereal price transmission in the literature ................................................................. 10
+3.2 Own estimates of cereal price transmission based on FAO GIEWS data ........................................ 11
+3.3 Comparing literature and GIEWS-based estimates of price transmission ...................................... 11
+       3.3.1 Cointegration ........................................................................................................................ 11
+       3.3.2 Estimates of the long-run price transmission coefficient ( ) ............................................... 12
+       3.3.3 Estimates of the adjustment parameter ( ) ........................................................................ 13
+       3.3.4 Before and after July 2007 ................................................................................................... 15
+4. Analysis of the determinants of the strength of price transmission ................................... 17
+4.1 Method ............................................................................................................................................ 17
+4.2 Results ............................................................................................................................................. 17
+5. Analysis of agreement in the direction of domestic and international price movements .. 22
+6. Price volatility ....................................................................................................................... 29
+7. Discussion ............................................................................................................................. 34
+8. References ............................................................................................................................ 37
+9. Appendix............................................................................................................................... 39
+
+
+
+
+                                                                                                                                                          4
+1. Introduction
+
+This study aims to improve our understanding of the extent and speed of the transmission of
+international cereal prices to local markets in developing countries. Spurred by the recent peaks in
+international food prices, many studies of world-to-domestic price transmission (PT) have been
+produced. However, to date no one has attempted to extract general lessons about the factors that
+determine the strength of PT from this extensive empirical literature. Neither has anyone attempted
+to extract such lessons by estimating PT processes with a consistent set of price data for a large
+number of countries using a uniform methodology.
+To address this gap, we undertake three types of analysis in this study. First, we extract a sample of
+estimated measures of cereal PT from a comprehensive literature sample of published papers and
+studies. Second, we use the FAO’s GIEWS dataset to estimate our own sample of measures of cereal
+PT. In a subsequent meta-regression analysis we measure how much of the variation in each of the
+resulting samples of PT estimates (the literature sample and the GIEWS sample) can be attributed to
+factors that might be expected to influence the strength of PT. Third, we present the results of
+simple, non-parametric analysis of price transmission using the GIEWS data. This analysis measures
+the share of periods in which domestic and international prices both either increased or decreased.
+This enables us to determine whether domestic prices at least tend to move in the same direction as
+international prices, even if they are not linked by a stable parametric relationship.
+The rest of this study is structured as follows. In section 2 we begin by providing a brief summary of
+the vector error correction model that has been used in the great majority of empirical studies of PT
+over the last decade. In section 3 we then describe how we assembled our literature sample of PT
+estimates (section 3.1), and how we used the GIEWS dataset to generate our own set of PT estimates
+(section 3.2). In Section 4 we then describe the meta-analysis that we use to explain differences in
+the estimated strength of PT, beginning with a description of the covariates that we employ as
+possible determinants of PT (section 4.1) followed by a discussion of the results (section 4.2). Section
+5 then presents the results of the non-parametric analysis of the direction of price movements.
+Section 6 presents some evidence on the volatility of domestic compared with international prices
+for different cereals and regions, and section 7 concludes.
+
+
+2. Methods: the vector error correction model
+2.1 The structure of the vector error correction model
+The study of PT for homogeneous commodities in space, or for a product as it is transformed along
+the stages of the marketing chain (e.g. wheat – flour – bread), has attracted the interest of
+agricultural economists for many decades (Meyer 2004). Early empirical studies of PT were based on
+simple correlation and regression analyses that did not account for dynamics and lead-lag
+relationships in price data (for a survey, see Fackler and Goodwin, 2001). In the course of the 1980s,
+these methods were increasingly replaced by dynamic regression models that include lagged prices
+(e.g. Ravallion, 1986) and studies based on the concept of Granger causality (Gupta and Mueller,
+1982). The emerging cointegration literature highlighted several pitfalls associated with the
+regression analysis of price data. In particular, since price data are often non-stationary, regression
+can lead to spurious results (Hassouneh et al, 2012). The basic insight of the cointegration approach
+is that to avoid the pitfall of spurious regression one must test whether non-stationary prices series
+(also referred to as ‘integrated’ price series) are not only correlated with one another but are rather
+‘co-integrated’. Cointegrated means that there exists a linear combination of the non-stationary
+series that is itself stationary, in other words that the series share a common form of non-stationarity
+and cannot drift apart indefinitely.
+
+
+
+                                                                                                      5
+Ardeni (1989) published the first study of PT on agricultural markets based on cointegration
+methods. It is fair to say that with the exception of a comparatively small literature based on so-
+called parity bounds models (Barrett and Li, 2002) today essentially the entire empirical PT literature
+draws on cointegration methods and, in particular, the so-called vector error correction model
+(VECM). The VECM is a re-parametrization of the standard vector autoregressive (VAR) model which
+relates the current levels of a set of time series to lagged values of those series. A simple VECM that
+captures the interactions between international or world prices and domestic price takes the
+following form:
+    (1)                                                                                      (a)
+
+                                                                                             (b).
+
+    where
+      is the domestic price;
+       is the world price; and
+     , , , , and are parameters to be estimated.
+In matrix notation, and allowing for more than one lag of the price difference terms, this VECM can
+be written compactly as:
+
+    (2)                                                                                             .
+
+From the perspective of empirical PT analysis, the main advantage of the VECM over the VAR is that
+it separates the long-run equilibrium (or ‘cointegrating’) relationship between       and      – which is
+captured by the error correction term                      – from the short-run dynamics that ensure
+that any deviations from this long-run equilibrium are ‘corrected’ and thus only temporary. The key
+parameters in the VECM are , which describes how one price reacts to changes in the other in the
+long run1, and the so-called ‘adjustment’ parameters and . If             and    are cointegrated, then
+    and    must have negative and positive signs, respectively. If this is the case, then if for example
+    becomes too large relative to        and the error correction term is correspondingly positive, a
+decrease in     in the first equation of the VECM, and an increase in       in the second equation, will
+drive the prices back towards their long-run equilibrium. One-to-one price transmission in the long
+run requires that         , while              , with large (small) values of and        indicating that
+errors are corrected rapidly (slowly).2
+Figure 1 outlines the basic empirical strategy for estimating PT. The first step is to determine whether
+the individual price series        and     are both non-stationary (also referred to as ‘integrated’ or
+‘I(1)’). This is usually carried out using the ADF (Dickey and Fuller, 1979) and KPSS tests (Kwiatkowski
+et al., 1992). If the prices are not both I(1), they cannot be cointegrated. If they are both stationary or
+‘I(0)’ they can be studied using Auto-Regressive Distributed Lag (ARDL) models. If the series are both
+I(1), the null hypothesis that they are not cointegrated can be tested using a two-step OLS procedure
+proposed by Engle and Granger (1987) or a maximum likelihood procedure developed by Johansen
+(1988). If the null of no cointegration is rejected, the VECM in equation (2) can be estimated, again
+
+1
+  If estimation is based on prices in logarithms then can be interpreted as the long-run elasticity of price
+transmission.
+2
+  The speed of error correction captured by the magnitude of an adjustment parameter must be interpreted
+relative to the frequency of the data that is used to estimate it. An of 0.4 estimated with annual data implies
+that 40% of any deviation from long-run equilibrium is corrected within the space of one year. An of 0.25
+estimated with monthly data is smaller in magnitude but would nevertheless lead to over 95% correction of
+any deviation from long-run equilibrium in the course of one year. Some authors transform ’s into so-called
+half-lives that indicate how many units of time are required for the correction of one-half of a deviation from
+the long-run equilibrium. An of 0.25 estimated with monthly data corresponds to a half-life of 2.41 months.
+                                                                                                             6
+using methods proposed by Engel and Granger or Johansen. Finally, the resulting estimates of                and
+  are interpreted.
+Figure 1: Conceptual framework for assessing price transmission and market integration
+
+
+
+                                               Test for order of integration
+                                                                                   if not the same
+
+                  if both I(1)                                if both stationary         No cointegration
+
+                                      accept
+     Test H0: no cointegration                               Estimate ARDL
+
+                   reject
+
+  Specify and estimate VECM; assess            Assess overall PT and market
+    dynamics, speed of adjustment                       integration
+
+
+Source: Own depiction based on Rapsomanikis et al. (2003).
+
+
+
+
+2.2 Limitations of the vector error correction model, and alternatives
+While the VECM underlies most empirical work in PT analysis, it is restrictive is some settings. In
+particular, the VECM in equation (2) is linear in two senses (Hassouneh et al., 2012). First, it is linear
+in the sense that all of the parameters in the model are assumed to be constant over the entire
+sampling period. Second, it is linear in the sense that the dependent variables react linearly to
+changes in the independent variables. Numerous studies have shown that in many applications one
+or both of these types of linearity cannot be expected to hold (Hassouneh et al., 2010; Serra and
+Goodwin, 2003; Serra et al. 2006; von Cramon-Taubadel, 1998; von Cramon-Taubadel and
+Amikuzuno, 2012).
+For our purposes, the first type of linearity is especially restrictive. The PT relationship that links an
+international price to a country’s domestic market price need not be constant over time. Changes in
+the country’s trade policy (for example an increase or reduction of import tariffs) can alter the nature
+of the PT relationship, as can a switch from a net export to a net import position. Furthermore,
+spatial equilibrium theory (Takayama and Judge, 1971) predicts that short-run price adjustments due
+to arbitrage will take place only if the difference between international and domestic prices exceeds
+a threshold that is determined by transport and transaction costs (Barrett and Li, 2002). If the
+difference between prices is less than this threshold, there is no incentive for traders to engage in
+arbitrage, and prices can move independently of one another.
+In such cases PT will be characterized by different so-called ‘regimes’ (for example, one regime
+before and one regime after an import tariff change; or one regime for the net export situation, and
+one for the net import situation). In recent years several models of regime-dependent PT have been
+developed and applied in the literature. Most of these can be described as piecewise linear models in
+which each regime is characterized by a standard VECM as in equation (2) above, and some trigger or
+transition mechanism determines when the model jumps from one regime to another. This trigger
+can be exogenous (e.g. coinciding with the date of a policy change) or endogenous (e.g. determined
+by whether the distance between the international and the domestic prices exceeds a certain
+threshold). Hassouneh et al. (2012) review a number of the regime-dependent PT models that are
+
+                                                                                                              7
+common in current research, including the threshold VECM (Goodwin and Piggott, 2001), the
+asymmetric VECM (von Cramon-Taubadel, 1998), and the smooth transition VECM (Teräsvirta, 1994).
+Estimating regime-dependent PT models is considerably more complicated than estimating a
+standard VECM. Some of these models require additional exogenous variables in addition to the
+endogenous prices, for example information on the timing of policy changes or other exogenous
+shocks that lead to regime changes. Others regime-dependent models such as the threshold VECM
+can be estimated using prices alone, but require additional information and testing to determine the
+appropriate number of thresholds.3 Finally, there is no unified testing framework for comparing
+these regime-dependent models with one another.
+Authors who are interested in analyzing PT in a specific product/country setting, or who use such a
+specific setting to illustrate a new regime-dependent PT model that they have developed or refined,
+can afford to engage in the additional data collection, specification, testing and interpretation that
+this entails. As outlined in section 3.2 below, however, the FAO GIEWS data provides us with
+domestic price series for three main cereal products (maize, rice and wheat) in 71 countries. It is
+beyond the scope of this study to carry out detailed regime-dependent PT analysis for each of these
+individual settings. Instead, we are obliged to use a comparatively simple PT model, such as the
+VECM, the estimation of which can be automated to permit the analysis of a large number of
+domestic-international price pairs. We recognize that the simple VECM specification in (2) will not be
+appropriate for all of the domestic-international price pairs in the GIEWS data. The additional insights
+that can be generated by estimating PT for a large number of price pairs and then analyzing the
+resulting cross-section sample of results come at the cost of a necessarily simple method of analysis
+that is not appropriate for each of these pairs individually.
+In an attempt to deal with the shortcomings of the simple VECM, we propose two alternative
+methods of analysis. First, to allow for at least one possible source of non-linearity we modify the
+basic VECM in equation (2) to include a structural break which we postulate to have taken place in
+July 2007. This roughly corresponds to the beginning of the first agricultural price peak and the
+beginning of the recent phase of increased volatility on international commodity markets. Hence, we
+estimate the following model which allows the nature of price transmission between international
+and domestic cereal prices to change with the onset of higher and more volatile price in recent years.
+The resulting specification is as follows, where the superscript * distinguishes between pre-break and
+post-break parameters:
+
+
+                                                                                         uly
+(3)
+
+
+
+Equation (3) is thus a regime-dependent VECM that links two standard VECMs, one for the period
+prior to July 2007, and one for the period thereafter. To check whether July 2007 is a plausible cut-
+off, we applied the Gregory and Hansen (1996) test of the null of no cointegration against the
+alternative of cointegration with a possible regime shift to each domestic/international price pair in
+the GIEWS data. Figure 2 shows the distribution of the break dates selected by the Gregory and
+Hansen test. While there is evidence of regime shifts in some domestic/international price
+relationships in 2003/04 for rice and 2004/05 for maize, for all three products (rice, maize and
+wheat) by far the most regime shifts are indicated in 2007/08. July 2007 therefore appears to be a
+reasonable choice for the cut-off date in the regime-dependent VECM in equation (3).
+
+
+
+3
+ Furthermore, Greb et al. (2011) demonstrate that the maximum likelihood method used to estimate
+threshold VECMs in the literature to date is biased.
+                                                                                                      8
+Our second alternative to the standard VECM abandons the assumption of a parametric relationship
+between domestic and international prices entirely. Instead, we simply measure how often domestic
+and international prices have increased or decreased together in the past, and how often they have
+moved in opposite directions. Hence, for each of the GIEWS price series in each month we code
+whether it has increased or decreased. We do the same thing for the corresponding international
+price and then count the number of agreements (i.e. months in which both the domestic price and
+the corresponding international price increased or decreased) and the number of disagreements (i.e.
+months in which one price increased while the other decreased). The result is the simplest possible
+measure of price co-movement that indicates how often producers and consumers on domestic
+markets are at least receiving the correct qualitative price signals. To account for possible delays in
+price responses and short-run fluctuations we repeat this analysis using quarterly and annual price
+changes, and we also modify the analysis with monthly data to measure the agreement between the
+direction of international price changes in month t and the direction of domestic price changes in
+month t+1.
+Figure 2: The distribution of break dates chosen by the Gregory and Hansen (1996) test
+
+             80
+             70
+             60            Rice      Wheat        Maize
+             50
+ Frequency
+
+
+
+
+             40
+             30
+             20
+             10
+              0
+
+
+                        Later
+                  01.01.2007
+
+
+
+
+                  01.07.2009
+                  01.07.1998
+                  01.01.1999
+                  01.07.1999
+                  01.01.2000
+                  01.07.2000
+                  01.01.2001
+                  01.07.2001
+                  01.01.2002
+                  01.07.2002
+                  01.01.2003
+                  01.07.2003
+                  01.01.2004
+                  01.07.2004
+                  01.01.2005
+                  01.07.2005
+                  01.01.2006
+                  01.07.2006
+
+                  01.07.2007
+                  01.01.2008
+                  01.07.2008
+                  01.01.2009
+
+                  01.01.2010
+                  01.07.2010
+                  01.01.2011
+                  01.07.2011
+
+
+
+                                                    Break date
+
+Source: Own calculations with GIEWS price data.
+
+
+
+3. Literature-based and GIEWS data-based estimates of international-
+domestic cereals price transmission
+Following the discussion of methods in the previous section, we follow a three-part approach to
+generate insights into the nature of international to domestic PT for major cereal products. First,
+many studies that report VECM estimates for international to domestic PT have been published in
+recent years. As outlined in section 3.1, we have collected these studies and analyze the estimates of
+  and that they report. Second, using the extensive FAO GIEWS price data set, we generate our
+own estimates of and for a large number of countries using the VECM in equation (2) and the
+regime-dependent VECM in equation (3). This work is outlined in section 3.2 below. Third, using the
+GIEWS price data we carry out the non-parametric analysis of agreements and disagreements in price
+increases and decreases described above. In all three types of analysis we consider maize, rice and
+wheat.
+
+                                                                                                     9
+Each of these approaches has its advantages and disadvantages. Most studies in the literature only
+report a few PT estimates, typically for a single product and one or relatively few counties. As a
+result, the estimates in these studies can be expected to reflect detailed work by authors who have a
+comprehensive understanding of the markets that they study, and who have undertaken careful
+specification searches, for example to determine appropriate lag-lengths for the VECMs that they
+estimate, etc. As discussed above, the FAO GIEWS price data includes hundreds of price series.
+Hence, we are obliged to automate the estimation and work with simple uniform specifications that
+may not be appropriate in all cases. On this count the literature-based estimates might be more
+reliable.
+The other side of this coin, however, is publication bias. The literature might be biased towards
+studies that report evidence of cointegration, and authors might be inclined to experiment with
+different specifications and only report on those that provide such evidence. Indeed, in some of the
+studies we surveyed, the authors openly state that they only report results for those markets for
+which they find evidence of cointegration. In this regard, our own estimates with the GIEWS price
+data might provide a more representative picture of PT (or the lack thereof) around the world.
+Moreover, a problem that is common to all meta-analyses of existing publications is that results can
+be presented in numerous ways and standards of documentation often differ considerably from
+study to study. In our context, some studies present only ’s and others only ’s; some work with
+prices data in levels, others with price series in logarithms; and not all studies clearly explain the
+nature of the price data that they use (for example, what international reference price was
+employed).
+Finally, the advantage of the analysis of agreements and disagreements in price increases and
+decreases is that it is free of any assumptions about the functional relationship between domestic
+and international prices. If this relationship has been subject to numerous changes over time,
+imposing a parametric model such as the VECM (with or without a single structural break) will lead to
+inappropriate results. The non-parametric approach avoids this pitfall. However, it also produces
+results that are correspondingly less informative. Even if we find that domestic and international
+prices show a tendency to increase and decrease together, this does not mean that producers and
+consumers on domestic markets are receiving undistorted price signals; it could be that the
+magnitude of the domestic price changes is considerably larger (or smaller) on average than the
+magnitude of the corresponding international price changes.
+
+3.1 Estimates of cereal price transmission in the literature
+
+The set of literature-based estimates of cereal PT is based on a thorough literature search including
+journal publications, institutional reports, conference papers, thesis and dissertations. We consider
+only studies that estimate error correction models of PT from international to domestic markets for
+maize, rice and wheat. We therefore exclude studies that assess only cointegration, causality, or
+pass-through effects. We also exclude studies that analyze domestic PT, i.e. within country markets,
+or bilateral country PT. In the end, we consider the 31 studies listed in Appendix Table 1, 30 of which
+were published in the last 10 years. Since most studies cover more than one country/location, the 31
+studies provide 678 individual estimates of PT, 215 for rice (32%), 271 for wheat (40%), and 192 for
+maize (28%).
+16 of the 31 studies consider one or two countries, while 15 consider between 3 and 15 countries. In
+total, the literature-based estimates of PT cover 52 countries, 9 of which are in East Africa, 7 in West
+Africa, 14 in Asia, 13 in Latin America, 6 in Europe, 2 in North America, and 1 in Oceania. 15 of the 31
+studies were published in institutional reports or as working/discussion papers, 8 were published in
+peer-reviewed journals, and the rest are conference papers, book chapters or theses/dissertations.
+23 of the studies are based on monthly price data, while 5 use annual and 5 use weekly prices. 26 of
+the 31 studies analyze prices in logarithms, while the remaining 5 work with prices in levels. Beyond
+simple VECMs, 3 out of 31 studies also test for asymmetric price transmission (Meyer and von
+                                                                                                     10
+Cramon-Taubadel, 2004), 3 articles estimate so-called threshold VECMs (Goodwin and Piggott, 2001),
+and 3 consider both thresholds and asymmetry.
+There is no consensus on what constitutes ‘the’ international or world price for a commodity such as
+maize, rice or wheat. However, certain prices or export markets do dominate (see Appendix Figures
+1-3). In our literature sample, US No. 2 yellow FOB Gulf is used as the international price in 67% of all
+estimations involving yellow maize. Thailand export prices are used for 72% of all rice market pairs.
+While Thailand 5% brokens dominate (55%), several studies also use other qualities such as Thai A1,
+Thai 100B, Thai 15%, and Thai 35%. For wheat a greater variety of international references prices are
+used, but 68% of the observations are based on US prices, and US No. 2 hard red winter (HRW) is
+used in 24% of all cases. The domestic price underlying 36% of the observations is a border price, but
+producer (21%), wholesale (14%), and retail (15%) prices are also used.
+
+3.2 Own estimates of cereal price transmission based on FAO GIEWS data
+
+The FAO Global Information and Early Warning System (GIEWS) food price data set was established
+in 2009 as part of the FAO Initiative on Soaring Food Prices (ISFP).4 The prices reported in GIEWS are
+collected from national official sources and non-official institutions. The GIEWS price series are
+monthly and most run through to the end of 2011; some start as early as 1995, others as late as
+2008. We impose a minimum length of 10 observations for a time series to be considered in our
+analysis and analyze PT between domestic and the following international prices:
+     wheat -> US No. 2 HRW
+     rice -> Thai 5%
+     yellow maize -> US No. 2 yellow Gulf
+     white maize -> Randfontein (South Africa).
+The GIEWS data includes a total of 57 domestic prices for wheat, 262 domestic prices for rice and 180
+domestic prices for maize. As is the case with the literature sample, GIEWS mainly provides results
+for countries in Africa, Asia/Pacific and Latin America. However, while the literature sample also
+provides results for countries in Europe and North America, GIEWS only includes a small number of
+observations (7 of 499) for Europe. To estimate the VECMs in equation (2) and (3) above with the
+GIEWS data a decision about the number of lags (k) to include must be reached. As shown in Table 1,
+the Akaike Information Criterion (AIC – Akaike, 1974) indicates that k=1 in the great majority of cases,
+so for simplicity we employ one lag throughout.
+Table 1: The optimal number of lags to include in VECM estimation as indicated by the AIC
+                                                           Number of lags
+Commodity
+                         1            2                    3             4                5              6
+Maize         167      92.8% 7        3.9%      3           1.7% 1         0,6%      2        1.1%   0       0%
+Rice          185      70.6% 44       16.8%     13          5.0% 10        3,8%      5        1.9%   5       1.9%
+Wheat         45       78.9% 9        15.8%     2           3.5% 1         1,8%      0        0%     0       0%
+Source: Own calculations with GIEWS price data.
+
+3.3 Comparing literature and GIEWS-based estimates of price transmission
+3.3.1 Cointegration
+
+Tables 2 and 3 present information on the numbers and shares of international/domestic price pairs
+which are found to be cointegrated according to the literature sample and the GIEWS estimates,
+respectively. Overall, the literature sample suggests that international and domestic prices are
+cointegrated more often than is indicated by our own estimation with GIEWS data. 79% of all market
+pairs reported in the literature sample are cointegrated, compared with 55% in the GIEWS sample.
+
+4
+    We are grateful to David Hallam for providing us with this data in electronic form.
+                                                                                                               11
+This is presumably due to the literature bias discussed above, i.e. the fact that the literature tends to
+report findings of cointegration. The literature sample indicates the lowest prevalence of
+cointegration for East and West Africa compared with Asia/Pacific and especially Europe and the
+Americas, but this pattern is not confirmed by the GIEWS results. In the literature sample, the lower
+prevalence of cointegration for East and West Africa primarily is due to maize (46 and 58% shares of
+cointegration for East and West Africa, respectively) rather than rice, for which most African prices
+are cointegrated with international prices (83 and 73%, respectively), or wheat, for which there are
+only 8 observations for Africa. In both the literature and the GIEWS results there is less frequent
+evidence of cointegration for maize than for rice. For wheat, however, the literature indicates that
+cointegration is relatively frequent (88% of all international/domestic price pairs), while the GIEWS
+results suggest that it is less so (44%). However the wheat results in the literature are strongly
+influenced by a single study that produces over 100 observations for North America, all of which
+indicate that domestic and international prices are cointegrated.
+Table 2: The prevalence of cointegration in the literature sample
+Region                     Maize                     Rice                    Wheat                    Total
+                     #       #        %       #       #        %       #       #        %       #       #        %
+                    obs.   coint.   coint.   obs.   coint.   coint.   obs.   coint.   coint.   obs.   coint.   coint.
+East Africa        107      49      46       24      20      83         8      5       63       139     74     53
+West Africa         12       7      58       26      19      73         0      0        -        38     26     68
+Asia/Pacific        25      17      68       93      79      85        28     17       61       146    113     77
+Latin America       44      38      86       64      57      89        61     57       93       169    152     90
+Europe               4       4      100       7       6      86        20     18       90        31     28     90
+North America        0       0       -        1       1      100      122    122      100       123    123     100
+Oceania              0       0       -        0       0       -        32     20       63        32     20     63
+Total              192 115          60      215 182          85      271 239           88      678 536         79
+Note: We report results of cointegration tests reported in the individual studies in the literature sample. There is
+no uniform methodology - different authors use different tests and levels of significance.
+Source: Own calculations with literature sample.
+Table 3: The prevalence of cointegration in the GIEWS estimates
+Region                     Maize                     Rice                    Wheat                    Total
+                     #       #        %       #       #        %       #       #        %       #       #        %
+                    obs.   coint.   coint.   obs.   coint.   coint.   obs.   coint.   coint.   obs.   coint.   coint.
+East Africa         59      21     36      35      22     63       14       8          57      108     51      47
+West Africa         43       9     21      81      58     72        6       1          17      130     68      52
+Asia/Pacific        15       2     13      63      18     29       24       3          13      102     23      23
+Latin America       58      22     38      70      39     56       11       2          18      139     63      45
+Europe               4       1     25       1      1      100       2       0           0       7       2      29
+North America        0       0      -       0      0       -        0       0           -       0       0       -
+Oceania              0       0      -       1      1      100       0       0           -       1       1      100
+Total              179      55     31     251 139         55       57      14          25      487    208      43
+Note: Cointegration is determined by Johansen Test with 5% significance level.
+Source: Own calculations with GIEWS price data.
+
+3.3.2 Estimates of the long-run price transmission coefficient ( )
+
+Table 4 summarizes the average estimates of the long-run PT coefficient taken from the literature
+and GIEWS samples by cereal product and region, and Figures 2a and 2b provide an overview of the
+averages by region and by cereal, respectively. On average the literature and the GIEWS estimates of
+  are similar (0.74 and 0.76, respectively). These averages indicate that on average changes in
+international prices are transmitted by roughly three-quarters to domestic prices. However, for all
+regions with the exception of West Africa, the GIEWS estimates are on average roughly 0.2 higher
+than the literature estimates, and Figure 2a reveals that the literature average is boosted
+                                                                                                 12
+considerably by a large number of observations from North America with an average = 0.89.
+Otherwise, Figure 2b shows that the average s are similar for maize and rice, but that the GIEWS
+average for wheat is much higher than the corresponding average from the literature sample. These
+results change very little if only those product/country combinations are retained in the comparison
+for which there are observations in both the GIEWS and the literature samples (Appendix Table 3).
+Table 4: Average estimates of the long-run PT coefficient                      taken the literature and GIEWS
+samples, by product and region
+                                  Maize                    Rice               Wheat          All three cereals
+                            GIEWS       Lit.       GIEWS          Lit.   GIEWS      Lit.    GIEWS         Lit.
+Asia & ME                    0.77       1.03        0.53          0.60    1.97      1.09     0.87        0.67
+E. Africa                    0.93       0.76        0.87          0.48    0.76      0.65     0.89        0.72
+W. Africa                    0.42       1.74        0.64          0.46    1.27        -      0.60        0.63
+Europe                       0.82       0.61        0.92          0.54    0.98      0.94     0.88        0.71
+L. America                   0.69         -         0.69          0.55    1.14        -      0.73        0.55
+N. America                     -          -           -           1.00      -       0.89       -         0.89
+Oceania                        -          -         0.91            -       -         -      0.91          -
+All regions                  0.72       0.78        0.66          0.55    1.41      0.89     0.76        0.74
+Note: Averages by region and cereal weighted by the number of observations in each category.
+Source: Own calculations with literature sample and GIEWS price data.
+Figure 2a: Average estimates of the long-run price transmission coefficient (β) by region
+                   1.0
+
+
+                   0.9                                                                     1
+                                        109                                       121
+                              113                                 7
+
+                   0.8
+Estimated 'beta'
+
+
+
+
+                                                                                                         499
+                                                                                                         362
+                                        117                       5      139
+                   0.7
+                              50
+                                                    15
+                   0.6                              130
+                                                                         54
+                   0.5
+
+                                                                                 GIEWS      Literature
+                   0.4
+                         Asia&ME E Africa      W Africa   Europe L America N America Oceania       All
+Note: Numbers indicate the number of observations underlying each average.
+Source: Own calculations with literature sample and GIEWS price data.
+
+3.3.3 Estimates of the adjustment parameter ( )
+
+Table 5 present average estimates of the adjustment parameters taken from the literature and
+GIEWS samples by product and region. We focus on the adjustment parameter from the first
+equation in (2) above, i.e. the equation that explains changes in domestic prices, because in the
+majority of all cases, only this is statistically significant. In other words, the dynamics of
+international/domestic cereal PT are such that domestic prices adjust to deviations from the long-run
+
+                                                                                                               13
+price relationship, but international prices do not. The only notable exception to this rule is rice, to
+which we return below. As discussed above, the adjustment parameter from the first equation in (2)
+above is expected to be negative.
+
+Figure 2b: Average estimates of the long-run price transmission coefficient (β) by cereal
+                      1.6
+                             GIEWS        Literature
+
+                      1.4                                                     57
+
+
+                      1.2
+   Estimated 'beta'
+
+
+
+
+                      1.0
+
+                                                                             131
+                      0.8
+                                    103                                                           499
+                                    180                                                           362
+                                                          262
+                      0.6
+                                                          128
+
+                      0.4
+                                Maize              Rice                 Wheat               All
+
+Note: Numbers indicate the number of observations underlying each average.
+Source: Own calculations with literature sample and GIEWS price data.
+Table 5: Average estimates of the adjustment parameter                    taken from the literature and GIEWS
+samples, by product and region
+                                  Maize                  Rice                 Wheat         All three cereals
+                            GIEWS       Lit.    GIEWS            Lit.   GIEWS       Lit.   GIEWS         Lit.
+Asia & ME                    -0.11      0.10     -0.04          -0.14    -0.05     -0.07    -0.05       -0.13
+E. Africa                    -0.16      0.02     -0.17          0.37     -0.12     -0.25    -0.16        0.06
+W. Africa                    -0.14     -0.10     -0.13          -0.16    -0.18       -      -0.14       -0.16
+Europe                       -0.10     -0.09     -0.04          -0.15    -0.10     -0.08    -0.09       -0.11
+L. America                   -0.14        -      -0.09          -0.36    -0.07     -0.10    -0.11       -0.26
+N. America                     -          -        -              -        -       -0.14      -         -0.14
+Oceania                        -          -      -0.10            -        -       -0.08    -0.10       -0.08
+All regions                  -0.13     -0.02     -0.10          -0.09    -0.10     -0.12    -0.11       -0.09
+Note: Averages by region and cereal weighted by the number of observations in each category. The expected
+sign of is negative.
+Source: Own calculations with literature sample and GIEWS price data.
+The results presented in Table 5 and summarized by region and by cereal in Figures 3a and 3b,
+respectively, point to relatively slow PT for most cereal products and regions, irrespective of whether
+literature averages or averages based on own estimates with GIEWS price data are considered. The
+average estimated using GIEWS data is slightly larger in magnitude than the average in the
+literature (-0.11 as opposed to -0.09) but both indicate a relatively slow rate of PT whereby roughly
+10% of any deviation from the long-run equilibrium relationship between international and domestic
+prices is corrected in the course of one month. This implies that it will take between 6 and 7 months
+
+                                                                                                            14
+to correct one-half of any disequilibrium that emerges due to unexpected price movements on
+international or domestic markets.
+Somewhat more rapid responses are indicated by the GIEWS averages across all cereals for East and
+West Africa (average = -0.16 and -0.14, which correspond to a half-lives of 4 and 5 months) and in
+particular by the literature estimates for Latin America (average = -0.26, corresponding to a half-life
+of somewhat more than 2 months). However, the literature also produces positive average estimates
+of for maize in Asia and the Middle East as well as for rice in East Africa. This is counterintuitive,
+because it suggests that deviations from the long-run equilibrium are not corrected but rather
+amplified, which would drive domestic and international prices apart over time. However, the
+average of = 0.10 for maize in Asia and the Middle East is based on only one observation, and the
+average of = 0.37 for rice in East is based on only 15 observations. Finally, viewed by product the
+only obvious discrepancy is that the average literature estimates of for maize are considerably
+lower (= -0.02) than all other averages (Figure 3b). 99 of the 103 observations that underlie this
+average are from East Africa, which also explains why the average literature-based estimates of for
+East Africa as a whole are so low (compare Table 5 and Figure 3a). If only those product/country
+combinations for which there are observations in both the GIEWS and the literature samples are
+included in the comparison (see Appendix Table 4), the results point to slightly slower PT on average
+in the GIEWS sample (average = -0.09 rather than the -0.11 above), but considerably more rapid PT
+on average in the literature sample (average = -0.17 rather than the -0.09 above).
+Figure 3a: Average estimates of the long-run price transmission coefficient ( ) by region
+     0.10
+                                                                                        GIEWS      Literature
+                     0.05                      117
+
+
+                     0.00
+ Estimated 'alpha'
+
+
+
+
+                     -0.05          113
+                                                                                                  32          429
+                     -0.10                                          7
+                                                                    5          139                1           499
+                                    50
+                                                          130                           120
+                     -0.15                     109        15
+
+                     -0.20
+
+                     -0.25                                                     90
+
+                     -0.30
+                             Asia and ME E Africa    W Africa   Europe   L America N America Oceania    All
+Note: Numbers indicate the number of observations underlying each average.
+Source: Own calculations with literature sample and GIEWS price data.
+
+If the adjustment parameters from the second equation in (2) above are considered, we see that
+these are generally insignificant, except for rice (Appendix Table 6). Hence while countries are mostly
+price takers for wheat and maize, this is not always the case for rice. Specifically, there is evidence of
+statistically significant reaction by international prices to disequilibrium between domestic and
+international prices in 121 market pairs (24%), of which 111 involve rice. Roughly 40% of all rice
+prices are affected, and in most cases the adjustment parameter in question has the appropriate
+(positive) sign. These pairs involve many countries and are not confined to a few ‘large’ countries
+
+                                                                                                               15
+such as China or India. As pointed out above, the simple linear VECM is restrictive and probably not
+appropriate for many of the individual price pairs in the GIEWS data. Hence, a certain number of
+spuriously significant adjustment parameters for international prices can be expected. Nevertheless,
+the fact that significant adjustment parameters for international prices occur, if at all, almost
+exclusively for rice price pairs suggests that the determination of international rice prices differs
+fundamentally from the determination of international wheat and maize prices. We can conclude
+that most countries are price takers on wheat and maize markets, but the evidence for rice is mixed.
+
+3.3.4 Before and after July 2007
+
+Table 6 contrasts median estimates of the coefficient of PT on cereal markets before and after the
+onset of the recent phase of price peaks and increased price volatility in mid-2007. If we compare the
+median estimates from the period prior to July 2007 with the median estimates from the period
+thereafter, no clear pattern emerges. On maize markets the long-run PT coefficients () have fallen
+considerably since mid-2007, from 0.385 to 0.116 or from 0.438 to 0.103 depending on whether all
+price pairs or only cointegrated price pairs are considered. On rice and wheat markets the results Are
+ambiguous. If we consider only the international/domestic price pairs that are cointegrated, the
+median long-run PT coefficients have increased, from 0.547 to 0.705 for rice and from 0.576 to 1.013
+for wheat. However, at the same time the short-run adjustment coefficients () have fallen, from
+0.201 to 0.140 for rice and from 0.683 to 0.212 for wheat. This suggests that PT has become more
+complete but slower since mid-2007 for rice and wheat. However, these results must be interpreted
+with caution. We have used the median rather than the mean because the median is more robust
+vis-à-vis outliers (for example, implausibly large estimates of for some international/domestic price
+pairs). The prevalence of such outliers is nevertheless high in particular in the post-July 2007 VECM
+results, presumably due to the short length of the available time series.
+Figure 3b: Average estimates of the long-run price transmission coefficient ( ) by cereal
+     0.00
+                                                                             GIEWS   Literature
+                     -0.02       103
+
+                     -0.04
+ Estimated 'alpha'
+
+
+
+
+                     -0.06
+
+                     -0.08
+                                                   127                                      429
+                     -0.10                         262                  57
+                                                                                            499
+                     -0.12                                              199
+                                 180
+                     -0.14
+
+                     -0.16
+                             Maize          Rice                  Wheat               All
+Note: Numbers indicate the number of observations underlying each average.
+Source: Own calculations with literature sample and GIEWS price data.
+
+
+
+
+                                                                                                   16
+Table 6: Median price transmission parameters estimated with GIEWS data before and after July
+2007 (only for international/domestic price pairs that are cointegrated)
+
+                               Maize                       Rice                        Wheat
+Time period
+
+                                All international/domestic price pairs
+Before July 2007        -0.192        0.385        -0.204        0.623        -0.136           1.208
+After July 2007         -0.221        0.116        -0.053        0.553        -0.143           0.463
+                         Only cointegrated international/domestic price pairs
+Before July 2007        -0.216        0.438        -0.201        0.547        -0.683           0.576
+After July 2007         -0.308        0.103        -0.140        0.705        -0.212           1.013
+Source: Own calculations with GIEWS price data.
+
+
+
+4. Analysis of the determinants of the strength of price transmission
+4.1 Method
+
+The averages presented above hide considerable variation in the literature-based and GIEWS-based
+estimates of and for individual country/product combinations. To explain this variation, and thus
+to generate insights into the factors that influence the strength of PT from international to domestic
+markets, we estimate meta-regressions. In each regression a set of estimated parameters ( ’s or ’s)
+from the literature or from GIEWS is regressed on a set of covariates that might be expected to
+influence PT. These covariates are listed and described in Table 7 and cover geographic (e.g.
+landlocked), infrastructural (e.g. logistics), institutional (e.g. STE) and market or commodity specific
+factors (e.g. net importer). We include dummy variables for cereals (omitting rice) and regions
+(omitting Asia/Pacific) to capture any corresponding fixed effects.
+
+4.2 Results
+
+We first present the results of logit regressions that predict whether pairs of international and
+domestic prices are cointegrated. The dependent variable equals 1 when the two prices are
+cointegrated, and 0 otherwise, and this variable is explained using the covariates listed in Table 7 –
+for example whether the country in question is landlocked, whether it has an STE for cereals, etc.
+
+The results for the literature estimates in the first column of Table 8 indicate that wheat markets
+have an almost 50% higher probability of being cointegrated than rice or maize markets, and that
+West African prices have a roughly 14% lower probability of being cointegrated with international
+prices than prices in the default region, Asia. A high net import ratio for a product reduces the
+probability of cointegration with international prices by 31%; a high import ratio may lead to more
+policy intervention to insulate domestic markets from international price movements. If an STE is
+responsible for trading the product in question, the probability of cointegration increases by roughly
+11%, and if the domestic price being considered is a retail price, the probability that it is cointegrated
+with international prices falls by almost 30%. The former result is puzzling but the latter is plausible,
+as retail prices are further removed from international prices than wholesale or border prices.
+
+
+
+
+                                                                                                       17
+Table 7: Covariates used in the meta-analysis of the determinants of price transmission
+ Name            Description                           Source / link           Expectation / theory
+ Commodity                                                                     Unobserved commodity-
+                 Wheat, maize, rice
+ fixed effects                                                                 specific heterogeneity
+                 Europe; East and South Africa;        http://unstats.un.org
+ Region fixed                                                                  Unobserved region-specific
+                 West and Central Africa; MENA         /unsd/methods/m49
+ effects                                                                       heterogeneity
+                 and Asia; Oceania; Latin America      /m49regin.htm
+                                                                               For landlocked countries,
+ Landlocked      1 if country has no access to sea     Google maps             international trade must cross
+                                                                               more borders
+                 Total trade as a share of income      World Bank              Open economies are better
+ Trade
+                 ,average 2006-2010 (Import +          Development             integrated into world markets
+ openness
+                 Export /GDP)                          Indicators              and thus PT should be stronger
+                                                                               STEs interfere with trade and
+                 1 for countries that have state
+ STE                                                   Literature*             insulate the domestic prices
+                 trading enterprises (STEs)
+                                                                               from international fluctuations
+                                                       World Bank, Doing
+ Ease of         Ease of trading across borders,       Business, Ease of
+                                                                               Transaction costs reduce PT
+ trade           between 0 (worst) to 1 (best)         Trading across
+                                                       borders.
+                 Logistics performance index of
+                 quality of trade and transport-                               Better logistics mean lower
+ Logistics                                             World Bank 2007
+                 related infrastructure between 1                              costs of trade and higher PT
+                 (worst) to 5 (best)
+                                                                               If the share of staple imports in
+                 Net cereal import ratio (export –
+ Net                                                                           domestic consumption is high,
+                 import, 3 year average 2009-          USDA , PSD Online
+ importer                                                                      more is undertaken to insulate
+                 2011) to domestic consumption
+                                                                               domestic markets
+                 1 if domestic price is measured at                            The farther ‘inland’ a domestic
+ Retail          the retail rather than a more         Literature / GIEWS      price is measured, the weaker
+                 upstream level                                                its link to international prices
+Note: * See Appendix Table 5 for a list of the countries with STEs.
+The logit results for the GIEWS sample in Table 8 also indicate that retail prices are less likely to be
+cointegrated with international prices, but otherwise they differ in several respects from the logit
+results for the literature sample. Maize and wheat are less likely to be cointegrated with the
+corresponding international prices than rice prices are (by roughly 30 and 20%, respectively), and
+domestic prices in East Africa, West Africa and Latin America are more likely to be cointegrated with
+international prices (by 25, 32 and 19%, respectively). If an STE is in place, the probability of
+cointegration falls by almost 22%. Improvements in logistics have a surprising negative impact on the
+probability of cointegration between domestic and international prices. Ease of trade has the
+expected positive impact, and being landlocked the expected negative impact on the probability of
+cointegration, but neither of these effects is significant. Most of these results also hold if only the
+time period after July 2007 is considered. However, if the period prior to July 2007 is considered the
+logit regression is much less informative. This is probably due to the fact that many GIEWS price
+series are very short prior to July 2007, leaving too few observations for dependable cointegration
+testing. Hence, the logit regression for the pre-July 2007 period is based on fewer and less
+trustworthy test results.
+
+
+
+
+                                                                                                                  18
+Table 8: Logit regression of cointegration status on factors that might influence price transmission
+(marginal effects rather than coefficient estimates are reported)
+
+
+                                                                       GIEWS before            GIEWS after
+Covariate                Literature         GIEWS entire period
+                                                                         July 2007              July 2007
+
+Maize                     0.050                 -0.296 ***             0.044                  -0.269 ***
+Wheat                     0.476 ***             -0.202 ***            -0.151                  -0.130 *
+East Africa              -0.146                  0.251 **              0.091                   0.310 ***
+West Africa              -0.136 *                0.321 ***             0.093                   0.388 ***
+Europe                       -                   0.189                -0.175 ***               0.163
+Latin America            -0.049                  0.189 **             -0.041                   0.286 ***
+Trade openness           -0.001                  0.000                 0.002                   0.000
+Net importer             -0.312 ***              0.035                 0.033                   0.136
+STE                       0.107 **              -0.216 ***             0.283                   0.009
+Retail                   -0.291 ***             -0.126 **              0.064                  -0.127 **
+Ease of trade             0.437                  0.395                 0.245                   0.509
+Logistics                 0.027                 -0.527 ***            -0.152                  -0.460 ***
+Landlocked                0.051                 -0.125                -0.074                   0.119
+Note: The literature sample includes too few observations for Europe to permit estimation. *, ** and *** refer
+to significance at the 10%, 5% and 1% levels, respectively.
+Meta-regression results for individual estimates of and are summarized in Tables 9, 10 and 11.
+Table 9 presents results for all of the estimates of and derived from the literature sample, and for
+the GIEWS estimates of and from all domestic/international price pairs. Table 10 again presents
+results for all of the estimates of and derived from the literature sample. However, in Table 10
+the Heckman procedure is used to generate results for the literature sample that are conditional on
+cointegration. Moreover, in Table 10 the GIEWS estimates are based only on and from
+cointegrated domestic/international price pairs. Finally, Table 11 presents only GIEWS-based
+estimates, in this case only for estimates of and from non-cointegrated domestic/international
+price pairs.
+Table 9: Estimated coefficients for the meta-regressions (GIEWS results based on estimates of
+and using all international/domestic price pairs)
+                        Literature         GIEWS entire period    GIEWS before 07/2007    GIEWS after 07/2007
+Covariate
+
+Intercept         0.782**        3.869*   -0.323***   -0.712       0.265      -2.765     -0.082       4.230
+Maize             0.066          0.163    -0.067***    0.131      -0.033      -0.046     -0.137***    0.719
+Wheat             0.077          0.363*    0.002       0.491**    -0.025       5.088**   -0.112***    5.091***
+East Africa       0.448***      -0.331    -0.013       0.148      -0.339***    2.360      0.004       3.164
+West Africa       0.052          0.751*   -0.051*      0.148      -0.408***    2.216     -0.149***    2.648
+Europe               -              -      0.038       0.644      -0.050      -0.033      0.025       3.108
+Latin America    -0.156***      -0.407*    0.008       0.252      -0.356***    2.275     -0.005       3.722**
+Trade openness    0.000          0.004     0.000       0.000      -0.004***    0.077**    0.000      -0.008
+Net importer      0.060*         0.401*    0.054**    -0.227       0.014       0.102     -0.004       0.362
+STE              -0.090         -0.144     0.031       0.390*     -0.244***   -3.216      0.019      -1.115
+Retail            0.001         -0.437     0.002       0.197      -0.025      -2.418     -0.020       1.095
+Ease of trade    -1.414**       -5.383*   -0.035       1.303       0.197      -7.242     -0.173       9.935
+Logistics         0.015         -0.022     0.094***   -0.013      -0.023       0.878      0.054      -6.168***
+Landlocked       -0.736***      -0.562     0.023       0.447*     -0.076      -1.765      0.048       0.316
+R²                0.424          0.524     0.170       0.041       0.225       0.052      0.210       0.072
+Note: All meta-regressions estimated using OLS. The literature sample includes too few observations for Europe
+to permit estimation. *, ** and *** refer to significance at the 10%, 5% and 1% levels, respectively.
+
+
+
+
+                                                                                                                 19
+Table 10: Estimated coefficients for the meta-regressions (GIEWS results based on estimates of
+and only from cointegrated international/domestic price pairs)
+                   Literature (Heckman
+                                           GIEWS entire period    GIEWS before 07/2007    GIEWS after 07/2007
+Covariate               procedure)
+
+Intercept          0.720**     4.834**    -0.262*     0.725       0.718      -0.504       0.045      -5.871
+Maize              0.035       0.187      -0.069**    0.057      -0.068       0.009      -0.167***   -1.441
+Wheat              0.139**     0.218       0.034      0.146      -0.591       0.279      -0.170**     8.762**
+East Africa        0.446***   -0.298      -0.033     -0.017      -0.778***   -0.178      -0.041       5.596
+West Africa        0.087       0.790*     -0.031     -0.008      -0.977***    0.024      -0.184**     3.069
+Europe                -           -        0.078      0.393          -           -        0.130       5.941
+Latin America     -0.130**    -0.460*     -0.015      0.142      -1.043***    0.300      -0.023       4.023
+Trade openness     0.001       0.005       0.000      0.001      -0.008***    0.004       0.000       0.000
+Net importer       0.021       0.666**     0.053     -0.160       0.278      -0.900*     -0.005       0.720
+STE               -0.060      -0.117      -0.023      0.141      -0.826***   -0.038       0.043      -2.963
+Retail            -0.084      -0.268      -0.020      0.004       0.008      -0.094      -0.054       1.546
+Ease of trade     -1.498**    -6.490*      0.118      0.433       0.882      -0.826       0.148       3.976
+Logistics          0.037      -0.125       0.038     -0.282      -0.006       0.504      -0.113      -0.152
+Landlocked        -0.711***   -0.865       0.008      0.156      -0.089       0.211       0.143**     1.633
+R²                 0.435       0.538       0.101      0.032       0.489       0.212       0.265       0.119
+Note: Meta-regression with literature data estimated using Heckman procedure. The literature sample and the
+GIEWS sample before July 2007 includes too few observations for Europe to permit estimation. *, ** and ***
+refer to significance at the 10%, 5% and 1% levels, respectively.
+Consider first the meta-regressions based on estimates of and derived from the literature. We
+see first that the results in the first column of Table 9 (estimated with OLS) are very similar to the
+results in the first column of Table 10 (estimated with the Heckman procedure). This suggests that
+estimating these meta-regressions conditional on cointegration does not have a significant impact on
+the results.5 Similarly, the GIEWS-based meta-regressions in Table 9, which are based on all estimates
+of and , are generally quite similar to the corresponding GIEWS-based meta-regressions in Table
+10, which are based only on estimates of and from cointegrated domestic/international price
+pairs. For example, in both tables we see in the second column that is roughly 7 percentage points
+more negative for maize prices than for rice and wheat prices, suggesting that PT on maize markets is
+somewhat more rapid. This supports the finding in Table 5 and Figure 3b that ’s for maize tend to
+be somewhat larger (in magnitude). Indeed, this result is also corroborated by the results in Table 11
+which are based only on non-cointegrated price pairs. Here the estimated coefficient for maize
+indicates that is roughly 8 percentage points more negative for maize prices.
+Similar parallels can be found across all three tables for example for the West Africa fixed effect (-5.1
+percentage points in Table 9, -3.1 percentage points in Table 10, and -7.7 percentage points in Table
+11) and for the ratio of net imports to consumption (5.4, 5.3 and 5.8 percentage points less error
+correction according to the results in Tables 9, 10 and 11, respectively). Some parallel findings are
+counter-intuitive, however. In particular, in both Table 9 and Table 11 we see that improvements in
+logistics are associated with large (less negative) values of , and therefore with slower PT.
+
+
+
+
+5
+ This conclusion is supported by the fact that the inverse Mills Ratio is only significant at the 10% level in the
+equation for in Table 10, and not significant in the equation for .
+                                                                                                                20
+Table 11: Estimated coefficients for the meta-regressions (GIEWS results based on estimates of
+and only from non-cointegrated international/domestic price pairs)
+                    GIEWS entire period     GIEWS before 07/2007      GIEWS after 07/2007
+Covariate
+
+Intercept        -0.315***    -1.893       0.285         -5.128     -0.021         6.038
+Maize            -0.083***     0.200      -0.036          0.406     -0.150***      1.342
+Wheat            -0.007        0.639*      0.009          7.028**   -0.115***      4.451*
+East Africa       0.001        0.250      -0.253***       4.144      0.038         2.742
+West Africa      -0.077**      0.161      -0.348***       3.155     -0.105***      2.651
+Europe            0.016        0.807       0.016          0.122     -0.001         3.242
+Latin America     0.029        0.263      -0.211***       3.624      0.013         4.422*
+Trade openness    0.001**     -0.002      -0.002***       0.093**    0.000        -0.006
+Net importer      0.058*      -0.187      -0.012          0.311     -0.015         0.592
+STE               0.043*       0.431      -0.130***      -5.846*     0.020        -0.318
+Retail            0.007        0.362      -0.039         -3.046     -0.012         0.636
+Ease of trade    -0.194        2.220      -0.149       -12.210      -0.347**     12.656
+Logistics         0.120***     0.191      -0.032          2.257      0.073       -7.854***
+Landlocked        0.010        0.629      -0.082         -2.150      0.008       -1.625
+R²                0.239        0.059       0.222          0.080      0.293         0.075
+Note: The literature sample and the GIEWS sample before July 2007 includes too few observations for Europe to
+permit estimation. *, ** and *** refer to significance at the 10%, 5% and 1% levels, respectively.
+Moving to the GIEWS-based results for the pre-July 2007 period, we again see many parallels
+between Tables 9, 10 and 11. In particular, all three tables display evidence of significantly more
+negative ‘s (and therefore more rapid PT) for East and West Africa, for Latin America, for more
+trade open countries and, surprisingly, for countries with STEs. In the post-July 2007 period, the
+results in all three tables point to significantly more negative ‘s for maize and wheat, and for West
+Africa.
+These parallels are less apparent for the meta-regressions in Tables 9, 10 and 11 that explain the
+variation in the ’s. Overall, the meta-regressions indicate that the selected covariates are able to
+explain a larger proportion of the variance in the adjustment parameters (the ‘s) than of the
+variance in the long-run price transmission coefficients (the ’s). The meta-regressions for the
+GIEWS-based estimates of generally produce fewer significant coefficients, and they also produce
+many coefficients that are implausibly large, especially in the pre- and post-July 2007 subsamples.
+Since is expected to be close to 1, it is difficult for example to interpret coefficients that suggest
+that increases by over 7 for price pairs involving wheat, or falls by almost 6 in the presence of an
+STE (see the second column of Table 11).
+In summary, the meta-regressions for the ‘s do generate a few signals. In particular, there is strong
+evidence of more rapid PT for maize across all of the GIEWS results regardless of what period is
+considered and whether cointegrated and/or non-cointegrated results are considered. Similarly,
+evidence of more rapid PT in Latin America appears repeatedly in Tables 9 through 11. There is
+weaker evidence for a positive relationship between trade openness and the speed of PT, and a
+negative relationship between net import ratios and PT. Before July 2007 it appears that PT was
+stronger in the presence of STEs, and when estimation is carried out without allowance for a break in
+July 2007, it appears that better logistics are associated with slower PT. These last two results run
+counter to our a priori expectations. The meta-regressions for the ’s have lower explanatory power
+than those for the ‘s, and they fail to produce many robust and plausible results.6
+
+
+
+
+6
+ We also experimented with weighted meta-regressions that account for the fact that some studies provide
+more observations to the literature sample than others, and that some countries are more prevalent in the
+GIEWS data than others. These meta-regressions did not generate any additional insights.
+                                                                                                          21
+5. Analysis of agreement in the direction of domestic and international
+price movements
+The analysis presented in section 4 above is based on the assumption that PT is characterized by the
+specific parametric structure embodied in the VECM. The VECM is a popular and powerful model, but
+it might be too restrictive in present setting. For example, the VECM assumes that a domestic price
+will adjust by a fixed proportion of any given change in the international price, regardless of the
+magnitude of this change. To relax this assumption, we next study whether domestic prices and
+international prices simply move in the same directions in most periods, regardless of the
+magnitudes of these movements. If domestic and international prices tend to move in the same
+directions, then producers and consumers are at least confronted with appropriate qualitative price
+signals.
+Table 12 first presents results for monthly price changes by region and by cereal, and Figures 4a and
+4b provide corresponding visual summaries by region and cereal. Table 13 and Figures 5a and 5b
+present corresponding results for lagged monthly price changes (international price change in month
+t compared with the domestic price change in month t+1);Table 14 and Figures 6a and 6b present the
+results for quarterly price changes; and Table 15 and Figures 7a and 7b for annual price changes.
+
+Table 12: The direction of monthly price movements on domestic and international markets –
+agreement and disagreement by region and cereal
+                    Agree:          Agree:          Disagree:       Disagree:
+                    ∆pw<0           ∆pw>0            ∆pw>0           ∆pw<0            Sum:             Sum:
+                      &               &                 &               &             agree          disagree
+                    ∆pd<0           ∆pd>0             ∆pd<0          ∆pd>0
+                                                    By region
+    Asia and ME      23%              30%              21%             26%             53%             47%
+    E. Africa        22%              31%              25%             22%             53%             47%
+    W. Africa        21%              33%              23%             22%             54%             46%
+    Europe           27%              29%              24%             20%             56%             44%
+    L. America       19%              33%              23%             26%             51%             49%
+                                                    By cereal
+    Maize            20%              32%              25%             23%             52%             48%
+    White maize      20%              34%              24%             21%             54%             46%
+    Rice             24%              30%              22%             25%             54%             46%
+    Wheat            24%              30%              22%             25%             53%             47%
+                                             All regions and cereals
+ Total               22%            32%               23%             23%              54%             46%
+Source: Own calculations with GIEWS price data.
+
+The results indicate that there is a slight preponderance of positive changes in international market
+prices over the time periods covered by the GIEWS data; international price increased in 55% of all
+months (32% + 23% in the last row of Table 12), and decreased in 45% of all months.7 In 58% of the
+months in which international prices increased, domestic prices increased as well (32 of 55%).
+However, domestic prices decreased in only 49% of the months in which international prices
+decreased, as well (22 of 45%).
+
+
+
+
+7
+ Note that the share of months in which international prices increase is not the same over all regions or cereals
+because for each region and cereal different periods in which domestic prices overlap with international prices
+are available in the GIEWS data.
+                                                                                                                22
+Figure 4a: The direction of monthly price movements on domestic and international markets –
+agreement and disagreement by region
+
+ 100%
+  90%           26%                22%             22%               20%              26%
+  80%
+  70%                              22%             21%
+                23%                                                  27%              19%
+  60%
+  50%
+                                   25%             23%                                23%
+  40%           21%                                                  24%
+  30%
+  20%
+                30%                31%             33%               29%              33%
+  10%
+   0%
+            Asia and ME          E Africa      W Africa         Europe              L America
+                          agree: ∆pw>0 & ∆pd>0     disagree: ∆pw>0 & ∆pd<0
+                          agree: ∆pw<0 & ∆pd<0       disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+Figure 4b: The direction of monthly price movements on domestic and international markets –
+agreement and disagreement by cereal
+
+ 100%
+  90%             23%                     21%                25%                   25%
+  80%
+  70%             20%                     20%
+  60%                                                        24%                   24%
+  50%
+                  25%                     24%
+  40%                                                        22%                   22%
+  30%
+  20%                                     34%
+                  32%                                        30%                   30%
+  10%
+   0%
+                 Maize               White maize             Rice                 Wheat
+                          agree: ∆pw>0 & ∆pd>0       disagree: ∆pw>0 & ∆pd<0
+                          agree: ∆pw<0 & ∆pd<0       disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+
+Overall, the agreement between the direction of price changes on international markets and on
+domestic markets is quite low, especially when international prices are falling. Table 12 and Figures
+4a and 4b show that this result holds quite uniformly across regions and products. The only slight
+exception is that prices in Europe tend to move in the same direction as international prices in a
+slightly higher proportion of all months (56%), while prices in Latin America tend to move in the same
+direction somewhat less often (51%). While falling international prices tend to be passed on to
+markets in Europe (27 of 47%, or in 57% of all cases), this is not the case in Latin America, where
+falling international prices are only passed on in 42% of all cases (19 or 45%).
+
+
+                                                                                                   23
+Table 13: The direction of lagged monthly price movements on international (month t) and
+domestic (month t+1) markets – agreement and disagreement by region and cereal
+                   Agree:          Agree:           Disagree:           Disagree:
+                   ∆pw<0           ∆pw>0             ∆pw>0               ∆pw<0            Sum:          Sum:
+                     &               &                  &                   &             agree       disagree
+                   ∆pd<0           ∆pd>0             ∆pd<0               ∆pd>0
+                                                    By region
+ Asia and ME         23%            32%                21%                24%             55%             45%
+ E. Africa           21%            31%                26%                22%             53%             47%
+ W. Africa           20%            33%                24%                23%             53%             47%
+ Europe              24%            28%                27%                21%             52%             48%
+ L. America          19%            34%                22%                24%             53%             47%
+                                                    By cereal
+ Maize               20%            33%                 25%               21%             53%             47%
+ White maize         19%            34%                 25%               21%             54%             46%
+ Rice                23%            30%                 23%               25%             52%             48%
+ Wheat               24%            31%                 22%               24%             54%             46%
+                                              All regions and cereals
+ Total               21%            32%                 23%               23%             54%             46%
+Source: Own calculations with GIEWS price data.
+Figure 5a: The direction of lagged monthly price movements on international (month t) and
+domestic (month t+1) markets – agreement and disagreement by region
+
+ 100%
+   90%           21%                                       24%                                      22%
+                                    26%                                             27%
+   80%
+   70%           23%                                                                                19%
+                                    21%                    20%
+   60%                                                                              24%
+   50%
+                 24%                                       23%                                      24%
+   40%                              22%
+                                                                                    21%
+   30%
+   20%
+                 32%                31%                    33%                      28%             34%
+   10%
+    0%
+             Asia and ME           E Africa             W Africa                Europe            L America
+
+                            agree: ∆pw>0 & ∆pd>0             disagree: ∆pw>0 & ∆pd<0
+                            agree: ∆pw<0 & ∆pd<0             disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+Table 13 and Figures 5a and 5b show that these results do not change appreciably when lagged price
+changes are considered (international price changes in month t and domestic price change in month
+t+1). The only perhaps notable change is that the share of agreements between international and
+European price changes falls from 56% to 52% when lagged changes are considered. Hence, to the
+extent that European prices co-move with international prices, they appear to do so
+contemporaneously at the monthly frequency.
+
+
+
+                                                                                                                 24
+Figure 5b: The direction of lagged monthly price movements on international (month t) and
+domestic (month t+1) markets – agreement and disagreement by cereal
+
+ 100%
+   90%             21%                     21%                 25%                    24%
+   80%
+   70%             20%                     19%
+                                                               23%                    24%
+   60%
+   50%
+                   25%                     25%
+   40%                                                         23%                    22%
+   30%
+   20%                                     34%
+                   33%                                         30%                    31%
+   10%
+    0%
+                   Maize               White maize             Rice                  Wheat
+
+                           agree: ∆pw>0 & ∆pd>0       disagree: ∆pw>0 & ∆pd<0
+                           agree: ∆pw<0 & ∆pd<0       disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+As expected, agreement between the direction of international and domestic price becomes more
+frequent when quarterly rather than monthly price changes are considered (Table 14). Focusing on
+quarterly rather than on monthly price changes eliminates smaller short-run price fluctuations and
+accounts for possible lags in PT. With quarterly data the overall share of agreements in the direction
+of price changes increases to 56% (from 54% with monthly data in Table 12). This increase in the
+share of agreements takes place only in phases of increasing international prices. With monthly data
+58% of all increasing international prices coincide with increasing domestic prices; with quarterly
+data this share increases to 61% (35% of 57%). In contrast, the share of decreasing international
+prices that coincide with decreasing domestic prices is unaffected by the shift from monthly to
+quarterly data, remaining unchanged at 49% (21% of 43%).
+The share of agreements increases in particular in Asia (from 53% with monthly data to 60% with
+quarterly data) and in Europe (from 56% with monthly data to 72% with quarterly data). The share of
+agreements also increases for East Africa and for Latin America, but it decreases (from 53% with
+monthly data to 51% with quarterly data) for West Africa (see also Figure 6a). Comparing Tables 12
+and 14 also reveals that moving from monthly to quarterly price changes leads to an increased share
+of agreement for all cereals except white maize (see also Figure 6b).
+Finally, Table 15 reveals that with annual data the overall share of agreements in the direction of
+price changes remains unchanged at 56% as with quarterly data. However, the share of agreements
+in phases of increasing international prices increases strongly; with quarterly data 61% of all
+increasing international prices coincide with increasing domestic prices; with annual data this share
+climbs to 67%. In contrast, the share of decreasing international prices that coincide with decreasing
+domestic prices falls from 49% with quarterly data to 38% with annual data. Especially striking are
+the increases in the shares of agreements for Asia (from 60% with quarterly data to 65% with annual
+data) and Europe (from 72% to 100%) and for rice (from 59% to 64%) and wheat (from 58% to 69%)
+(see also Figures 7a and 7b).
+
+
+
+
+                                                                                                   25
+Table 14: The direction of quarterly price movements on domestic and international markets –
+agreement and disagreement by region and cereal
+                   Agree:          Agree:         Disagree:           Disagree:
+                   ∆pw<0           ∆pw>0           ∆pw>0               ∆pw<0        Sum:              Sum:
+                     &               &                &                   &         agree           disagree
+                   ∆pd<0           ∆pd>0           ∆pd<0               ∆pd>0
+                                                  By region
+ Asia and ME         22%            38%               22%               18%         60%               40%
+ E. Africa           22%            35%               20%               23%         57%               43%
+ W. Africa           18%            33%               24%               25%         51%               49%
+ Europe              31%            41%               14%               14%         72%               28%
+ L. America          20%            36%               23%               21%         57%               43%
+                                                   By cereal
+ Maize               22%            36%               21%               22%         58%               42%
+ White maize         17%            34%               25%               24%         51%               49%
+ Rice                22%            37%               20%               21%         59%               41%
+ Wheat               23%            35%               22%               20%         58%               42%
+                                            All regions and cereals
+ Total               21%            35%               22%               22%         56%               44%
+Source: Own calculations with GIEWS price data.
+
+Figure 6a: The direction of quarterly price movements on domestic and international markets –
+agreement and disagreement by region
+
+ 100%
+  90%           18%                                                           14%
+                                   23%                 25%                                    21%
+  80%
+  70%           22%                                                           31%             20%
+                                   22%                 18%
+  60%
+  50%           22%                                                           14%             23%
+                                   20%                 24%
+  40%
+  30%
+  20%           38%                                                           41%             36%
+                                   35%                 33%
+  10%
+   0%
+            Asia and ME           E Africa       W Africa         Europe                    L America
+                            agree: ∆pw>0 & ∆pd>0     disagree: ∆pw>0 & ∆pd<0
+                            agree: ∆pw<0 & ∆pd<0          disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+Overall, the results presented here support the findings of generally weak PT that were derived from
+the VECM analysis in the previous sections. They suggest that co-movement of international and
+domestic prices is more frequent than movement in opposite directions, but the imbalance is not
+pronounced and movement in opposite directions occurs often (47% of all monthly price
+movements, 44% of all quarterly price movements, and 44% of all annual price movements). Perhaps
+surprisingly, differences in the direction of change are as often due to falling international prices that
+are not reflected in falling domestic prices (23%, 22% and 24% of all cases in monthly, quarterly and
+annual data, respectively) as they are to increasing international prices that are not reflected in
+                                                                                                               26
+increasing domestic prices (23%, 22% and 20% of all cases, respectively). Intervention to shield
+domestic markets from increasing international prices would lead to the latter type of disagreement,
+but cases in which domestic markets fail to fall with international prices are equally common.
+
+Figure 6b: The direction of quarterly price movements on domestic and international markets –
+agreement and disagreement by cereal
+
+ 100%
+  90%              22%                      24%                      21%               20%
+  80%
+  70%                                                                22%               23%
+                   22%                      17%
+  60%
+  50%
+                   21%                      25%                      20%               22%
+  40%
+  30%
+  20%              36%                                               37%               35%
+                                            34%
+  10%
+   0%
+                  Maize               White maize                 Rice                 Wheat
+                            agree: ∆pw>0 & ∆pd>0          disagree: ∆pw>0 & ∆pd<0
+                            agree: ∆pw<0 & ∆pd<0          disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+
+Table 15: The direction of annual price movements on domestic and international markets –
+agreement and disagreement by region and cereal
+                   Agree:          Agree:         Disagree:      Disagree:
+                   ∆pw<0           ∆pw>0           ∆pw>0          ∆pw<0        Sum:              Sum:
+                     &               &                &              &         agree           disagree
+                   ∆pd<0           ∆pd>0           ∆pd<0          ∆pd>0
+                                                  By region
+ Asia and ME         16%             49%            20%              15%       65%               35%
+ E. Africa           16%             40%            19%              25%       56%               44%
+ W. Africa           11%             35%            22%              32%       46%               54%
+ Europe              67%             33%             0%              0%        100%               0%
+ L. America          15%             45%            22%              18%       60%               40%
+                                                  By cereal
+ Maize               12%             34%            25%              30%        46%              54%
+ White maize         11%             38%            19%              32%        49%              51%
+ Rice                18%             46%            19%              17%        64%              36%
+ Wheat               20%             49%            18%              13%        69%              31%
+                                           All regions and cereals
+ Total               15%            41%              20%             24%        56%              44%
+Source: Own calculations with GIEWS price data.
+
+
+
+
+                                                                                                          27
+Figure 7a: The direction of annual price movements on domestic and international markets –
+agreement and disagreement by region
+
+ 100%
+   90%           0.15                                                               0.18
+                                    0.25
+                                                      0.32
+   80%
+                 0.16                                                               0.15
+   70%
+                                    0.16                                0.67
+   60%                                                0.11
+                 0.20                                                               0.22
+   50%                              0.19
+                                                      0.22
+   40%
+   30%
+                 0.49                                                               0.45
+   20%                              0.40              0.35              0.33
+   10%
+    0%
+             Asia and ME           E Africa          W Africa          Europe     L America
+
+                           agree: ∆pw>0 & ∆pd>0         disagree: ∆pw>0 & ∆pd<0
+                           agree: ∆pw<0 & ∆pd<0         disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+Figure 7b: The direction of annual price movements on domestic and international markets –
+agreement and disagreement by cereal
+
+ 100%
+                                                                17%               13%
+   90%
+                   30%                        32%
+   80%
+                                                                                  20%
+                                                                18%
+   70%
+                   12%                        11%
+   60%                                                                            18%
+                                                                19%
+   50%
+                   25%                        19%
+   40%
+   30%
+                                                                46%               49%
+   20%                                        38%
+                   34%
+   10%
+    0%
+                   Maize               White maize              Rice              Wheat
+
+                           agree: ∆pw>0 & ∆pd>0         disagree: ∆pw>0 & ∆pd<0
+                           agree: ∆pw<0 & ∆pd<0         disagree: ∆pw<0 & ∆pd>0
+
+Source: Own calculations with GIEWS price data.
+
+
+                                                                                              28
+6. Price volatility
+
+In this section we compare cereal price volatility on international and domestic markets. Volatility is
+measured as the standard deviation of returns (the log ratio of prices in month t to prices in month t-
+1). Results are summarized in Figures 8 through 11 and Table 15.
+First, Figure 8 illustrates that median volatility over all domestic cereal prices in the GIEWS dataset is
+higher after July 2007 than before (see also Table 15). There is no difference between the median
+volatilities of those prices that are cointegrated with the corresponding international prices and
+those that are not. This suggests that on average, local factors play the major role in determining
+volatility of local food prices even for countries where local prices are cointegrated with international
+prices.
+Figure 8: Boxplots of volatilities for cointegrated and non-cointegrated domestic prices, pre- and
+post-2007, maize, rice and wheat combined
+
+
+
+
+Source: Own calculations with GIEWS price data.
+
+Table 16 and the results presented in Figures 9 through 11 for maize, rice and wheat respectively
+indicates that in general, domestic prices are most volatile in East and West Africa, followed by Latin
+America and Latin America. This pattern is interrupted somewhat for wheat, but the calculated
+volatilities for wheat are based on relatively few observations and, therefore, are less reliable. For
+maize in all regions we observe that median volatilities are lower for prices that are not cointegrated
+with the corresponding international prices, suggesting that decoupling prices does results in lower
+volatility on average for maize. However, this is not the case for rice and wheat, where non-
+cointegrated domestic prices are more, rather than less volatile than cointegrated prices.
+
+
+
+
+                                                                                                       29
+Table 16: The volatility of monthly international and domestic cereal prices
+                                                   Maize                                  Rice                                Wheat                                All cereals
+Prices                                Median       Standard                  Median       Standard                  Median     Standard                   Median       Standard
+                                                                    n                                      n                                      n                                      n
+                                     volatility    deviation                volatility    deviation                volatility deviation                  volatility deviation
+International                          0.06                                   0.07                                   0.06                                  0.06
+All domestic                           0.11           0.06         179        0.06            0.05          262      0.08         0.04            57       0.07           0.06           498
+Cointegrated                           0.14           0.06         55         0.06            0.06          139      0.09         0.04            14       0.07           0.07           208
+Non-cointegrated                       0.11           0.06         124        0.06            0.03          123      0.07         0.04            43       0.07           0.05           290
+Pre-2007                               0.10           0.08         153        0.04            0.04          234      0.05         0.04            51       0.06           0.07           438
+Post-2007                              0.11           0.06         179        0.06            0.05          262      0.09         0.05            57       0.08           0.06           498
+Cointegrated pre-2007                  0.14           0.10         51         0.05            0.05          119      0.08         0.06            14       0.06           0.08           184
+Cointegrated post-2007                 0.14           0.06         55         0.06            0.06          139      0.10         0.03            14       0.08           0.07           208
+Non-cointegrated pre-2007              0.09           0.07         102        0.04            0.03          115      0.05         0.03            37       0.06           0.06           254
+Non-cointegrated post-2007             0.11           0.06         124        0.06            0.03          123      0.08         0.05            43       0.08           0.05           290
+East Africa                            0.15           0.05         59         0.09            0.03           35      0.09         0.03            14       0.11           0.05           108
+West Africa                            0.13           0.05         43         0.07            0.03           81      0.13         0.06             6       0.08           0.05           130
+Latin America                          0.08           0.05         58         0.05            0.02           70      0.07         0.03            11       0.06           0.04           139
+Asia                                   0.07           0.08         15         0.05            0.07           74      0.06         0.03            24       0.05           0.07           113
+Other                                  0.11           0.03          4         0.04            0.02            2      0.10         0.00             2       0.10           0.04             8
+E Africa cointegrated                  0.18           0.05         21         0.09            0.03           22      0.09         0.04             8       0.12           0.06            51
+E Africa non-cointegrated              0.13           0.05         38         0.09            0.03           13      0.09         0.02             6       0.11           0.05            57
+W Africa cointegrated                  0.16           0.02          9         0.06            0.03           58      0.14           -              1       0.07           0.04            68
+W Africa non-cointegrated              0.11           0.06         34         0.07            0.04           23      0.11         0.07             5       0.09           0.06            62
+L America cointegrated                 0.09           0.06         22         0.04            0.02           39      0.05         0.04             2       0.05           0.05            63
+L America non-cointegrated             0.08           0.04         36         0.06            0.02           31      0.07         0.02             9       0.07           0.04            76
+Asia cointegrated                      0.07           0.01          2         0.06            0.14           18      0.09         0.01             3       0.06           0.12            23
+Asia non-cointegrated                  0.06           0.08         13         0.05            0.02           56      0.05         0.03            21       0.05           0.04            90
+Other cointegrated                     0.11              -          1         0.04            0.02            2        -            -              0       0.05           0.04             3
+Other non-cointegrated                 0.11           0.04          3           -               -             0      0.10         0.00             2       0.10           0.03             5
+Note: ‘n’ is the number of individual price series that underlie the volatility calculation. Volatility is calculated as the stan dard deviation of the log ratio of prices in the current
+month to prices in the previous month.
+Source: Own calculations with GIEWS price data.
+
+
+                                                                                                                                                                                        30
+Figure 9: Boxplots of domestic price volatilities for maize by region, and the volatility of the international maize price (vertical dotted line)
+
+
+
+
+Source: Own calculations with GIEWS price data.
+
+                                                                                                                                                    31
+Figure 10: Boxplots of domestic price volatilities for rice by region, and the volatility of the international rice price (vertical dotted line)
+
+
+
+
+Source: Own calculations with GIEWS price data.
+
+                                                                                                                                                   32
+Figure 11: Boxplots of domestic price volatilities for wheat by region, and the volatility of the international wheat price (vertical dotted line)
+
+
+
+
+Source: Own calculations with GIEWS price data.
+
+                                                                                                                                                     33
+Finally, comparing domestic price volatility with international price volatility (first lines of Table 15)
+reveals that on average, domestic maize and wheat prices are more volatile than the corresponding
+international prices, while domestic rice prices are less volatile. Figures 9 through 11, in which
+international price volatility is depicted by the dashed vertical lines, break this comparison down by
+region. Figure 9 shows that the great majority of domestic maize prices in all regions are considerably
+more volatile than the international maize price. For rice (Figure 10), domestic prices in East Africa
+are more volatile than the international price, equally volatile on average in West Africa, and less
+volatile in Latin America and Asia. For wheat the picture (Figure 11) is very mixed, with domestic
+prices in East and West Africa considerably more volatile than the international price, and Latin
+America and Asia showing mixed results. Again, as Table 15 shows, there are relatively few
+observations for wheat in some regions in the GIEWS data, so these last results must be interpreted
+with caution.
+
+
+7. Discussion
+The analysis above generates a number of insights into the nature of PT from international to
+domestic cereal markets. First, 79% of the international/domestic price pairs in our sample of PT
+studies from the literature are cointegrated compared with 43% in our own estimates based on FAO
+GIEWS data. Hence, regardless of which database is used, many of the studied price pairs are not
+characterized by cointegration and thus do not provide evidence of stable PT. This is especially the
+case if we consider that the literature sample most likely suffers from publication bias that leads to
+an overrepresentation of findings of cointegration. Overall, maize markets are characterized by a
+below average prevalence of cointegration, and rice markets by an above average prevalence. Which
+regions of the world display higher/lower shares of cointegration depends on which dataset is
+considered: according to the literature sample, domestic prices in Africa are less likely than average
+to be cointegrated with corresponding international prices, but our own estimates generated with
+GIEWS data suggest that domestic prices in Asia are least likely to be cointegrated with international
+prices.
+Overall, both the literature and our own GIEWS-based estimated point to average long-run PT
+coefficients of roughly 0.75 and average adjustment parameters of roughly 0.09-0.11. This suggests
+that on average roughly three-quarters of a change in international prices will be transmitted to
+domestic markets, and that it takes approximately 6-7 months for one-half of a given price shock on
+international cereal markets to be transmitted to domestic markets. If we compare PT in the period
+prior to July 2007 with PT in the period thereafter, no clear pattern emerges. On maize markets the
+long-run PT coefficients () have fallen considerably since mid-2007. This could be interpreted as
+evidence of a certain degree of decoupling of domestic from international prices. On rice and wheat
+markets the results depend on whether all price pairs or only cointegrated price pairs are considered.
+In the latter case there is evidence that the long-run PT coefficients have increased, but at the same
+time the short-run adjustment coefficients () have fallen, suggesting that PT has become more
+complete but slower since mid-2007 for rice and wheat.
+Employing meta-regression analysis to explain variations in long-run PT coefficients () between
+domestic and international prices fails to generate compelling results. The meta-regressions for the
+adjustment parameters () do produce some more suggestive results. All other things being equal,
+there is some evidence of more rapid PT for maize than for wheat and rice, and more rapid PT in
+West Africa than in other regions. An increasing ratio of net imports to domestic consumption is
+associated with slower PT, which may be an indication of increased intervention on politically more
+sensitive markets. There is evidence that trade openness is positively associated with the speed of
+PT, but this effect is only significant in the pre-July 2007 period. In this period there is also robust
+evidence that the presence of an STE is associated with more rapid PT. Finally, there is some puzzling
+indication that improved logistics is correlated with slower PT.
+                                                                                                       34
+The analysis of agreement in the direction in price changes on international and domestic markets
+suggests that the frequency of agreement is quite low at the monthly level, and only somewhat
+higher at the quarterly level. This lack of agreement is especially pronounced when international
+prices are falling; in this case domestic prices only fall as well in roughly 50% of all cases, which is
+what one would expect if price movements on international and domestic markets were completely
+independent. When international prices are increasing, there is a higher probability that domestic
+prices will increase as well, especially at the quarterly level for Europe, Asia, East Africa and Latin
+America. Overall these results support the findings of generally weak PT that were derived from the
+cointegration analysis.
+The analysis of domestic price volatility reveals that median volatility has increased since July 2007.
+There is no difference between the median volatilities of those prices that are cointegrated with the
+corresponding international prices and those that are not. This suggests that on average, countries
+that have decoupled their domestic cereal prices from international prices have not benefited from
+reduced price volatility as a result. The analysis reveals that in general, domestic prices are most
+volatile in East and West Africa, followed by Latin America and Latin America. Furthermore, on
+average domestic maize and wheat prices are more volatile than the corresponding international
+prices, while domestic rice prices are less volatile.
+The results presented here must be interpreted with caution. First, a lack of cointegration between
+two prices does not necessarily mean that there is no PT between (McNew and Fackler, 1997). The
+underlying PT relationship may be characterized by regime-dependence, for example as a result of
+policy intervention or shifts between net import and net export positions. Hence, failure to find
+evidence of cointegration might be due to a failure to test for the right type of cointegration. The
+higher share of cointegrated price pairs in the literature sample is likely due to publication bias that
+leads to an overrepresentation of ‘significant’ results. However, the authors of studies in the
+literature might also find more evidence of cointegration because they employ models and tests that
+are better tailored to the specific country/product settings that they study. The strength of the
+GIEWS price data is that it provides broad and consistent coverage of a large number of
+country/product combinations. However, the sheer number of price series available in GIEWS means
+it is not possible to implement a detailed modeling strategy for each individual series. Instead, we
+must resort to a uniform modeling strategy that can be automated. We have estimated one slightly
+more flexible VECM that allows for a regime shift in July 2007, but this is no substitute for careful,
+case-by-case specification and estimation of an appropriate model for each individual price pair.
+Second, the GIEWS price series are quite short. Few series have more than 150 monthly
+observations, and many have considerably less. It is reasonable to expect that the nature of cereal
+price transmission from international to domestic markets has changed in recent years at prices have
+increased and become more volatile, and some of the results that we produce with the GIEWS data
+appear to confirm this expectation. There are, however, only roughly 55 monthly observations
+available for the period since 2007.
+Additional work might lead to additional or more robust insights into PT. First, the simple VECM
+employed to estimate the GIEWS price data might be made somewhat more flexible. It could be
+modified to allow for asymmetric price transmission, i.e. to test whether increases in international
+prices are transmitted to domestic prices in the same manner as decreases (von Cramon-Taubadel,
+1998). The results of the simple non-parametric analysis of agreement in the direction of
+international and domestic price changes suggests that increasing international prices are being
+transmitted more often to domestic prices than decreasing international prices. Alternatively, it
+might be possible to estimate threshold VECMs (TVECMs) with the GIEWS data (Goodwin and
+Piggott, 2001; Greb et al., 2011). The TVECM can account for phases with and without trade and
+trade reversals and by distinguishing between these phases or regimes provide better estimates of
+PT parameters.
+
+
+                                                                                                     35
+Second, the analysis of agreement in the direction of price changes on international and domestic
+markets could be extended to consider half-yearly and annual price changes, and to explore possible
+delays in the response of domestic to international prices. It may be that more agreement in the
+direction of price changes is found if current international price changes are aligned with domestic
+price changes several months later, and that the length of this lag varies between countries and/or
+products.
+
+
+
+
+                                                                                                 36
+8. References
+
+Akaike, H. (1974). A new look at the statistical model identification. IEEE Transactions on Automatic
+        Control 19: 716–723.
+Ackerman, K. (1997). State trading enterprises: their role as importers. Agricultural Outlook.
+      Economic Research Service/USDA. November 1997: 31-37.
+Ackerman, K. (1998). State trading enterprises in world agricultural trade. Agriculture in the WTO.
+      Economic Research Service/USDA. December 1998: 43-47.
+Ackermann, K. & Dixit, P. (1999): Introduction to State Trading in Agriculture. Economic Research
+      Service/USDA, Agricultural Economics Report No. AER 783, November 1999.
+Ardeni, P. G. (1989). Does the Law of One price Really Hold for Commodity Prices? American Journal
+        of Agricultural Economics 71: 661-669.
+Barrett, C. and Li, J. (2002). Distinguishing between equilibrium and integration in spatial price
+        analysis. American Journal of Agricultural Economics 84: 292–307.
+Chang, H.-H., & de Gorter, H. (2004). Tariff rate import quotas, domestic market structure and
+       agricultural support programs - The Case of Taiwanese Rice Imports. Selected paper prepared
+       for presentation at the Western Agricultural Economics Association Annual Meeting,
+       Honolulu, Hawaii, June 30-July 2, 2004.
+Dickey, D.A. and Fuller, W.A. (1979). Distribution of the estimators for autoregressive time series
+        with a unit root. Journal of the American Statistical Association 74: 427–431.
+Engle, R.F. and Granger, C.W.J. (1987). Cointegration and Error-correction: Representation,
+        Estimation and Testing. Econometrica 55: 251-276.
+Fackler, P. L. and Goodwin B. K. (2001). Spatial Price Analysis. In: Gardner B. and Rausser, G. (eds.),
+        Handbook of Agriculture Economics, Vol. 1: 971-1024. Amsterdam: Elsevier Science B.V.
+Gregory, A.W. and Hansen, B.E. (1996). Residual-based tests for cointegration in models with regime
+       shifts. Journal of Econometrics, 70: 99-126.
+Gonzalez- Rivera, G. and Helfand, S. M. (2001). The Extent, Pattern, and Degree of Market
+       Integration: A Multivariate Approach for the Brazilian Rice Market. American Journal of
+       Agricultural Economics 83: 576-592.
+Goodwin, B.K. and Piggott, N.E. (2001). Spatial Market Integration in the Presence of Threshold
+      Effects. American Journal of Agricultural Economics 83(2): 302-317.
+Greb, F., von Cramon-Taubadel, S., Krivobokova, T. and Munk, A. (2011). Threshold estimation in
+        price transmission analysis. Discussion paper of the Courant Research Centre "Poverty, Equity
+        and Growth in Developing Countries: Statistical Methods and Empirical Analyses" No. 103.
+        Georg-August University Göttingen.
+Gupta, S. and Mueller, R. (1982). Analyzing the Pricing Efficiency in Spatial Markets; Concept and
+        Applications. European Review Agricultural Economics 9: 301-312.
+Hassouneh, I., Serra, T. and Gil, J.M. (2010). Price transmission in the Spanish bovine sector: the BSE
+       effect. Agricultural Economics 41:33-42.
+Hassouneh, I., von Cramon-Taubadel, S., Serra, T. and Gil, J.M. (2012). Recent Developments in the
+       Econometric Analysis of Price Transmission. TRANSFOP (Transparency of Food Pricing)
+       Working Paper No. 2, www.transfop.eu.
+Johansen, S. (1988). Statistical analysis of cointegrating vectors. Journal of Economic Dynamics and
+       Control 12: 231-254.
+
+                                                                                                          37
+Kwiatkowski, D., Phillips, P., Schmidt, P. and Shin, Y. (1992). Testing the null hypothesis of stationarity
+       against the alternative of a unit root. Journal of Econometrics 54: 159-178.
+Meyer, J. (2004). Methoden zur Analyse von Preistransmissionsprozessen. Dissertation, Georg-
+       August-Universität Göttingen.
+Meyer, J., and von Cramon-Taubadel, S. (2004). Asymmetric Price Transmission: A Survey. Journal of
+       Agricultural Economics 55(3): 581-611.
+McNew, K., and Fackler, P.L. (1997). Testing Market Equilibrium: Is Cointegation Informative? Journal
+     of Agricultural and Resource Economics 22(2): 191-207.
+OECD (2007). Agricultural Policies in Non-OECD Countries - Monitoring and Evaluation. OECD, Paris.
+Rapsomanikis, G., Hallam, D. and Conforti, P. (2003). Market Integration and Price Transmission in
+      Selected Food and Cash Crop Markets of Developing Countries: Review and Applications.
+      Commodity Market Review, FAO Commodities and Trade Division, Rome.
+Ravallion, M. (1986). Testing Market Integration. American Journal of Agriculture Economics 68: 102-
+        109.
+Serra, T., Gil, J.M. and Goodwin, B. K. (2006). Local polynomial fitting and spatial price relationship:
+        price transmission in EU pork markets. European Review of Agricultural Economics 33: 415-
+        436.
+Serra, T. and Goodwin, B. K. (2003). Price transmission and asymmetric adjustment in the Spanish
+        dairy sector. Applied Economics 35: 1889-1899.
+Takayama, T. and Judge G.G. (1971). Spatial and Temporal Price Allocation Models. Amsterdam:
+      North-Holland.
+Teräsvirta, T., 1994. Specification, estimation, and evaluation of smooth transition autoregressive
+        models. Journal of the American Statistical Association 89: 208-218.
+Vavra, P. and Goodwin, B.K. (2005). Analysis of Price Transmission Along the Food Chain. OECD Food,
+        Agriculture and Fisheries Working Papers 3, Paris, OECD.
+von Cramon-Taubadel, S. (1998). Estimating asymmetric Price Transmission with the Error Correction
+       Representation: An Application to the German Pork Market. European Review of Agricultural
+       Economics 25: 1-18.
+von Cramon-Taubadel, S. and Amikuzuno, J. (2012). Seasonal Variation in Price Transmission
+       between Tomato Markets in Ghana. Journal of African Economies, doi:10.1093/jae/ejs008.
+Young, L. M. (1999). Prevalence and Reform of State Trading Importers in World Grain Markets.
+       Canadian Journal of Agricultural Economics 47(4): 351-362.
+Young, L. M., & Abbott, P. C. (1998). Wheat-Importing State Trading Enterprises  : Impacts on the
+       World Wheat Market. Paper presented at the meetings of the American Agricultural
+       Economics Association, Salt Lake City, August 2-5, 1998.
+
+
+
+
+                                                                                                        38
+9. Appendix
+
+Appendix Table 1: Studies included in the literature sample
+                                                                                                                                           Number
+        Authors,                                                                                       Institution /         Type of
+                                                            Title                                                                         of market
+     Year Published                                                                                     Publication         publication
+                                                                                                                                             pairs
+ Baquedano, Liefert,        World market integration for export and food crops in developing        Agricultural
+                                                                                                                              Journal         4
+ &Shapouri, 2011            countries: a case study for Mali and Nicaragua                          Economics
+ Djuric, Götz, & Glauben,   Effects of the governmental market interventions on the wheat
+                                                                                                    IAMO                    Conference        2
+ 2011                       market in Serbia during the food crisis 2007/2008
+                            Underlying Trends and International Price Transmission of
+ Ghoshray, 2011                                                                                     ADB                       Report         10
+                            Agricultural Commodities
+ Gilbert, 2011              Grains Price Pass-Through, 2005-09                                      FAO                       Report         10
+                            Transmission of World Food Price Changes to Markets in Sub-Saharan
+ Minot, 2011                                                                                        IFPRI                     Report         58
+                            Africa
+                                                                                                    American Journal of
+                            Multiple-regime spatial price transmission with an application to
+ Myers & Jayne, 2011                                                                                Agricultural              Journal         3
+                            maize markets in southern Africa
+                                                                                                    Economics
+ Aldaz-Carroll, Varela, &   Boom, Bust and Up Again? Evolution, Drivers and Impact of
+                                                                                                    World Bank                Report          2
+ Iacovone, 2010             Commodity Prices: Implications for Indonesia
+                            How did policy interventions in wheat export markets in Russia and
+ Goetz, Glauben, &                                                                                  IAMO, U of
+                            Ukraine during the food crisis 2007/2008 influence world market                                 Conference       10
+ Bruemmer, 2010                                                                                     Göttingen
+                            price transmission?
+ Robles & Torero, 2010      Understanding the Impact of High Food Prices in Latin America           ECONOMIA                  Journal         4
+                            Evidence of non-linear price transmission between maize markets in
+ Araujo Enciso, 2009                                                                                U of Göttingen          Conference       18
+                            Mexico and the US
+                            World market integration and price transmission in selected markets
+ Bamuturaki, 2009                                                                                   U of Hohenheim            Thesis          2
+                            in Tanzania
+ Dutoit, Hernandez-
+                                                                                                    UN ECLAC, U of
+ Villafuerte, & Urrutia,    Price transmission in Latin American maize and rice markets                                       Report         46
+                                                                                                    Göttingen
+ 2009
+ Rapsomanikis et al.,       The 2007-2008 Food Price Swing: Impact and policies in Eastern and
+                                                                                                    FAO                       Report         42
+ 2009                       Southern Africa
+                            Eastern Africa: A study of the regional maize market and marketing      U of Göttingen,
+ World Bank, 2009                                                                                                             Report         12
+                            costs                                                                   World Bank
+ Cudjoe, Breisinger, &      Local impacts of a global crisis: food price transmission and poverty
+                                                                                                    IFPRI                     Report          2
+ Diao, 2008                 impacts in Ghana
+                            Asymmetric Adjustment of Rice Export Prices: The Case of Thailand       International Journal
+ Ghoshray, 2008                                                                                                               Journal         5
+                            and Vietnam                                                             of Applied Economics
+ Imai, Gaiha, & Thapa,      Transmission of World Commodity Prices to Domestic Commodity            Brooks World
+                                                                                                                              Report         12
+ 2008                       Prices in India and China                                               Poverty Institute
+                            Making the world market price endogenous within AGMEMOD                 UniversitàPolitecnica
+ Listorti & Esposti, 2008                                                                                                   Conference        1
+                            modeling framework: an econometric solution                             delle Marche
+                            The transmission of import prices to domestic prices: an application    Applied Economics
+ Warr, 2008                                                                                                                   Journal         3
+                            to Indonesia                                                            Letters
+ Myint, 2007                Myanmar rice market: market integration and price causality             Yezin Agricultural U      Thesis         2
+ Reddy, 2006                Commodity market integration: case of Asian rice markets                CSIRD                     Report         18
+ Thomas & Morrison,
+                            Trade reforms and food security: Country Case Studies and Synthesis     FAO                       Report         18
+ 2006
+ Yavapolkul, Gopinath, &    Post–Uruguay Round price linkages between developed and                 Agricultural
+                                                                                                                              Journal         4
+ Gulati, 2006               developing countries: the case of rice and wheat markets                Economics
+ Conforti, 2004             Price transmission in selected agricultural markets                     FAO                       Report         134
+                                                                                                    Kyiv-Mohyla
+ Sagidova, 2004             Price transmission in grain market: case of Ukraine                                               Thesis          4
+                                                                                                    Academy
+                            The transmission of world commodity prices to domestic markets          Journal of Policy
+ Baffes & Gardner, 2003                                                                                                       Journal        44
+                            under policy reforms in developing countries                            Reform
+                            Rice markets in the Mekong river delta, Vietnam: a market               Centre for ASEAN
+ Hai, 2003                                                                                                                    Report          1
+                            integration analysis                                                    Studies
+ Rapsomanikis et al.,       Market integration and price transmission in selected food and cash
+                                                                                                    FAO                       Report          3
+ 2003                       crop markets of developing countries: review and applications
+                            The transmission of world price signals: the concept, issues, and
+ Sharma, 2003                                                                                       OECD                       Book          16
+                            some evidence from Asian cereal markets
+                                                                                                    Journal of
+ Ghoshray, 2002             Asymmetric Price Adjustment and the World Wheat Market                  Agricultural              Journal        180
+                                                                                                    Economics
+ Mohanty, Smith, &          Time series evidence of relationships between U.S. and Canadian
+                                                                                                    Iowa State University     Report          8
+ Peterson, 1996             wheat prices
+
+
+
+
+                                                                                                                                                   39
+Appendix Table 2: Cointegration between international and domestic prices in the GIEWS dataset by product and country
+
+                                                  Maize                                              Rice                                              Wheat
+                           entire period     pre- break         post- break    entire period     pre- break       post- break    entire period     pre- break        post- break
+Country                    # of             # of               # of            # of             # of             # of            # of             # of              # of
+                          cointe # of      cointe # of        cointe # of     cointe # of      cointe # of      cointe # of     cointe # of      cointe # of       cointe # of
+                          grated pairs     grated pairs       grated pairs    grated pairs     grated pairs     grated pairs    grated pairs     grated pairs      grated pairs
+                           pairs            pairs              pairs           pairs            pairs            pairs           pairs            pairs             pairs
+Afghanistan                                                                                                                        3       4        0       4         2       4
+Argentina                    1       1        0           1     1       1                                                          0       3        0       3         0       3
+Bangladesh                                                                                                                         0       4        0       3         0       4
+Benin                        7       7        5           7     2       7       4       4        3          4     1       4
+Bhutan                                                                          1       2                         1       2       0       1                          0       1
+Bolivia                      1       3        1           3     1       3       4       6        0          6     4       6       0       3        0           3     0       3
+Brazil                       1       2        0           2     0       2       3       5        0          5     0       5       1       2        0           2     0       2
+Burkina Faso                                                                    8       9        0          3     8       9
+Burundi                      0       1        0           1     0       1       0       1        0          1     0       1       0       1        0           1     0       1
+Cambodia                                                                        0       4        0          3     1       4
+Cameroon                     0       5        0           5     0       5       5       5        2          5     4       5
+Cape Verde                   1       9        0           3     2       9       2       6        2          6     0       6
+Chad                         1       3        0           3     3       3       3       3        2          3     2       3
+China                                                                           0       2        1          2     0       2
+Colombia                     3       3        0           3     1       3       4       5        0          5     5       5
+Costa Rica                   0       2        0           1     0       2       0       2        0          2     0       2
+D.R. Congo                   0       3                          0       3       2       4                         2       4
+Djibouti                                                                        2       2        1          2     1       2
+Dominican Republic           0       2        0           2     1       2       3       4        2          4     4       4
+Ecuador                      2       8        2           8     0       8       4       9        0          9     3       9
+Egypt                        0       4                          0       4       2       4                         2       4       0       2                          0       2
+El Salvador                  0       2        1           2     0       2       2       2        0          2     2       2
+Note: Empty cells indicate that there were no or insufficient (<10) observations for the country/product/period combination in question. Cointegration tested by Johansen at 5%.
+
+
+                                                                                                                                                                              40
+Appendix Table 2: Cointegration between international and domestic prices in the GIEWS dataset by product and country (continued)
+
+                                                  Maize                                              Rice                                               Wheat
+                           entire period     pre- break         post- break    entire period     pre- break        post- break    entire period     pre- break        post- break
+Country                    # of             # of               # of            # of             # of              # of            # of             # of              # of
+                          cointe # of      cointe # of        cointe # of     cointe # of      cointe # of       cointe # of     cointe # of      cointe # of       cointe # of
+                          grated pairs     grated pairs       grated pairs    grated pairs     grated pairs      grated pairs    grated pairs     grated pairs      grated pairs
+                           pairs            pairs              pairs           pairs            pairs             pairs           pairs            pairs             pairs
+Eritrea                                                                                                                             1        1                         0        1
+Ethiopia                     1       8        0           4     4       8                                                           7       11      2       11         7       11
+Gabon                                                                           0        1                         0       1
+Ghana                        0       3        0           3     0       3       0        2       0          2      0       2
+Guatemala                    3       3        1           3     3       3       2        3       0          2      1       3
+Guinea                                                                          0        2                         1       2
+Haiti                        1       14       2       14        1      14       3       14       2          13     1      14
+Honduras                     3       3        0        1        1      3        2        2                         2       2
+India                                                                           2        8       2          8      2       8       0       8        0           8     0       8
+Indonesia                                                                       1        1                         1       1
+Israel                       0       1        0           1     0       1                                                          0       1        0           1     0       1
+Kenya                        0       6        1           5     1       6
+Lao People's Dem. Rep.                                                           1       3       1          3      0       3
+Lesotho                                                                          0       1                         0       1
+Madagascar                                                                       0       2       0          2      0       2
+Malawi                       0       6                          2       6        0       2                         0       2
+Mali                                                                            11      14       0          4     11      14
+Mauritania                                                                       0       1       0          1      0       1       0       1                          0       1
+Mexico                       4       5        2           5     2       5        1       4       0          4      3       4
+Mongolia                                                                         0       1                         0       1
+Mozambique                  11       14       9       14        5      13        8      10       2          10     4      10
+
+Note: Empty cells indicate that there were no or insufficient (<10) observations for the country/product/period combination in question. Cointegration tested by Johansen at 5%.
+
+                                                                                                                                                                               41
+Appendix Table 2: Cointegration between international and domestic prices in the GIEWS dataset by product and country (continued)
+
+                                                  Maize                                              Rice                                               Wheat
+                           entire period     pre- break         post- break    entire period     pre- break        post- break    entire period     pre- break        post- break
+Country                    # of             # of               # of            # of             # of              # of            # of             # of              # of
+                          cointe # of      cointe # of        cointe # of     cointe # of      cointe # of       cointe # of     cointe # of      cointe # of       cointe # of
+                          grated pairs     grated pairs       grated pairs    grated pairs     grated pairs      grated pairs    grated pairs     grated pairs      grated pairs
+                           pairs            pairs              pairs           pairs            pairs             pairs           pairs            pairs             pairs
+Myanmar                                                                          1       1                          1       1
+Namibia                      0       1                          0       1
+Nicaragua                    3       6        3           5     2       6       10      10       1           8    10      10
+Niger                        0       6        0           6     2       6        9      12       5          12     6      12
+Nigeria                      0       1        0           1     0       1
+Pakistan                                                                        0        5       2           5     1       5       0       4        0           4     4       4
+Panama                       0       2        0           2     0       2       1        2       1           2     2       2
+Peru                         0       2        0           2     0       2       0        1       0           1     0       1       1       2        0           2     0       2
+Philippines                  2       8        0           8     0       8       6       28      19          28     2      28
+Republic of Moldova          0       2                          0       2
+Russian Federation           0       1        0           1     0       1       1       1        0          1      0       1       0       1                          0       1
+Rwanda                       1       1        0           1     1       1       1       1        0          1      1       1
+Samoa                                                                                            0          1
+Senegal                                                                         9       11                         8      11
+Somalia                      6       11       0       10        5      11       9       12       6          11     3      12
+South Africa                 0       1        1        2        0      2                                                           0       1        0           1     0       1
+Sri Lanka                                                                       1       1        0          1      1       1
+Sudan                                                                                                                              1       5        0           5     2       5
+Thailand                     0       1        0           1     0       1       1       1        1          1      0       1
+Timor-Leste                  0       1                          0       1       1       1                          1       1
+Togo                         0       6        0           6     2       6       4       6        1          6      2       6
+Tunisia                                                                         1       1        1          1      1       1
+Note: Empty cells indicate that there were no or insufficient (<10) observations for the country/product/period combination in question. Cointegration tested by Johansen at 5%.
+
+
+                                                                                                                                                                               42
+Appendix Table 2: Cointegration between international and domestic prices in the GIEWS dataset by product and country (continued)
+
+                                                   Maize                                                 Rice                                                   Wheat
+                            entire period      pre- break        post- break      entire period      pre- break         post- break      entire period      pre- break        post- break
+Country                     # of              # of              # of              # of              # of               # of              # of              # of              # of
+                           cointe # of       cointe # of       cointe # of       cointe # of       cointe # of        cointe # of       cointe # of       cointe # of       cointe # of
+                           grated pairs      grated pairs      grated pairs      grated pairs      grated pairs       grated pairs      grated pairs      grated pairs      grated pairs
+                            pairs             pairs             pairs             pairs             pairs              pairs             pairs             pairs             pairs
+Uganda                        0       3         0       1         1       2         2       3         0       3          2       3
+Ukraine                       1       1         0       1         1       1                                                               0           1     0           1     0           1
+United Rep. of Tanzania       2       5         1       1         3       5
+Uruguay                                                                            0           1                        0           1     0           1     0           1     0           1
+Vietnam                                                                            1           1                        0           1
+Zambia                       0           1     0           1     0           1     0           1                        0           1
+Zimbabwe                     0           1     1           1     0           1
+Sum                          55      179      30       141      47       178      139      251      57          193    108      251       14      57        2          50    15       57
+Share of cointegrated
+                                 30.7%             21.3%             26.4%             55.4%          29.5%                 43.0%             24.6%             4.0%              26.3%
+pairs
+
+Note: Empty cells indicate that there were no or insufficient (<10) observations for the country/product/period combination in question. Cointegration tested by Johansen at 5%.
+
+
+
+
+                                                                                                                                                                                          43
+Appendix Table 3: Average estimates of the long-run PT coefficient taken from the literature and
+GIEWS samples, by product and region. Comparison only includes those product/country
+combinations for which there are observations in both the GIEWS and literature samples.
+                     Maize                       Rice                Wheat               All three cereals
+               GIEWS       Lit.         GIEWS           Lit.    GIEWS      Lit.         GIEWS         Lit.
+Asia & ME       0.90       1.03          0.31           0.60     1.51      0.11          0.60        0.59
+E. Africa       0.85       0.84          1.28           0.58     1.04      0.65          0.98        0.80
+W. Africa       1.62       1.74          0.52           0.40       -         -           0.63        0.59
+L. America      0.70         -           0.73           0.62     0.95        -           0.74        0.62
+All regions     0.85       0.86          0.56           0.59     1.24      0.43          0.75        0.69
+Note: Averages by region and cereal weighted by the number of observations in each category.
+Source: Own calculations with literature sample and GIEWS price data.
+
+
+Appendix Table 4: Average estimates of the adjustment parameter taken from the literature and
+GIEWS samples, by product and region. Comparison only includes those product/country
+combinations for which there are observations in both the GIEWS and literature samples.
+                     Maize                       Rice                 Wheat              All three cereals
+               GIEWS       Lit.         GIEWS            Lit.   GIEWS       Lit.        GIEWS         Lit.
+Asia & ME       -0.07      0.10          -0.02          -0.12    -0.02     -0.07         -0.03       -0.12
+E. Africa       -0.12     -0.09          -0.09          -0.06    -0.15     -0.25         -0.12       -0.10
+W. Africa       -0.26     -0.10          -0.15          -0.14                            -0.16       -0.13
+L. America      -0.16                    -0.07          -0.34    -0.12                   -0.11       -0.34
+All regions     -0.13     -0.09          -0.07          -0.22    -0.09       -0.18       -0.09       -0.17
+Note: Averages by region and cereal weighted by the number of observations in each category.
+Source: Own calculations with literature sample and GIEWS price data.
+
+
+Appendix Table 5: Countries with state trading enterprises (STEs) for maize, rice or wheat
+ Product          Countries with STEs
+ Maize            China, Kenya, Malawi, Zambia, Zimbabwe
+ Rice             Australia, China, Dominican Republic, India, Iraq, Japan, Kenya, Korea, Malaysia,
+                  Pakistan, Philippines, Thailand, Vietnam
+ Wheat            Australia, Canada, China, Cyprus, Egypt, Arab Rep., India, Iran, Japan, Korea,
+                  Pakistan, Sri Lanka, Sudan, Syria, Tajikistan, Tunisia
+Source: Compiled using Ackerman (1997; 1998), Ackerman and Dixit (1999), Chang and de Gorter (2004), OECD
+(2007), Young (1999) and Young and Abbott (1998).
+
+
+
+
+                                                                                                         44
+Appendix Table 6: Numbers and shares of cases in which the adjustment parameter for the
+international price is significant
+
+                                                             Number of cases
+                                                             in which PINT           Of which in the
+Product and                              Of which
+                     Number of series                        reacts to               appropriate
+Market level                             cointegrated
+                                                             disequilibrium          direction ( > 0)
+                                                             ( significant)
+
+Maize wholesale              71                29 (41)               6 (8)                 4 (6)
+Maize retail                109                26 (24)               3 (3)                 2 (2)
+Wheat wholesale              26                 4 (15)               0 (0)                 0 (0)
+Wheat retail                 31                10 (32)               1 (3)                 0 (0)
+Rice wholesale               97                53 (55)             46 (47)                41 (42)
+Rice retail                 165                86 (52)             65 (39)                63 (38)
+Total                       499               208 (42)             121 (24)              110 (22)
+Note: Number in brackets is the share of the corresponding number of series, in %.
+Source: Own calculations with GIEWS price data.
+
+
+
+
+                                                                                                    45
+Appendix Figure 1: The prevalence of different international maize prices in the literature sample
+
+
+
+                                       Not specified
+
+
+
+                        White maize export, Durban
+
+
+
+                       US yellow, FOB Louisiana Gulf
+
+
+
+                           US No 2 yellow, FOB Gulf
+
+
+
+ South African white maize, FOB Johannesburg
+
+
+                                                       0    20    40     60     80 100    120   140
+                                                                       Number of cases
+
+Source: Own calculations with literature sample.
+
+
+Appendix Figure 2: The prevalence of different international rice prices in the literature sample
+
+
+ Not specified
+
+             US
+
+       Uruguay
+
+        Thai A1
+
+       Thai 5%
+
+      Thai 35%
+
+      Thai 15%
+
+       Thai 100
+
+           India
+
+     Argentina
+
+                   0            20         40           60        80        100     120         140
+                                                       Number of cases
+
+Source: Own calculations with literature sample.
+
+
+
+                                                                                                    46
+Appendix Figure 3: The prevalence of different international wheat prices in the literature sample
+
+                                   Not specified
+                     US Western White, Pacific
+                       US Soft Red Winter, Gulf
+           US No 2 Hard Red Winter, FOB Gulf
+           US No 1 Hard Red Winter, FOB Gulf
+              US Dark Northern Spring, Pacific
+                 US Dark Northern Spring, Gulf
+           French Channel Class 1, FOB Rouen
+                                              EU
+ Can. Western Red Spring No 1, St. Lawrence
+        Can. Western Red Spring No 1, Pacific
+                      Amber Durum No 1, Lake
+               Amber Durum No 1, Vancouver
+                     Australian Standard White
+
+                                                   0   10   20     30     40     50     60     70
+                                                                 Number of cases
+
+Source: Own calculations with literature sample.
+
+
+
+
+                                                                                                 47
+

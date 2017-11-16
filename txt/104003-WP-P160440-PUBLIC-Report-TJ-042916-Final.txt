@@ -1,0 +1,1572 @@
+Report No. 104003-TJ
+
+
+
+
+POVERTY MAPPING IN TAJIKISTAN:
+METHOD AND KEY FINDINGS
+April 25, 2016
+Europe and Central Asia Region
+
+
+
+
+Document of the World Bank
+                      CURRENCY AND EQUIVALENT UNITS
+
+                      Exchange Rate Effective as of December 3, 2015
+                           Currency Unit = Tajik Somoni (TJS)
+                                   US$1 = TJS 7.8696
+
+                                   ABBREVIATIONS
+
+
+ECA       Europe and Central Asia
+EB        Empirical Best
+ELL       Elbers et al
+HBS       Household Budget Survey
+GBAO      Gorno-Badakhshan Autonomous Oblast
+GLS       General Least Squares
+MPI       Multi-dimensional Poverty Index
+OLS       Ordinary Least Squares
+RRS       Regional Republics of Subordination
+SAE       Small Area Estimation
+TLSS      Tajikistan Living Standards Measurement Survey
+TajStat   Agency of Statistics under the President of Tajikistan
+Census    2010 Population and Housing Census
+
+
+
+
+                              Vice President   :    Cyril E. Muller
+                           Country Director    :    Mariam J. Sherman
+                             Senior Director   :    Ana L. Revenga
+                           Practice Manager    :    Carolina Sanchez-Paramo
+                                Task Leader    :    William Seitz
+
+
+
+
+                                               ii
+                                                TABLE OF CONTENTS
+
+CHAPTER 1 METHOD, DATA, AND MODELING ............................................................. 13
+
+CHAPTER 2 POVERTY MAP ................................................................................................. 24
+
+CHAPTER 3 MULTIDIMENSIONAL POVERTY INDEX (MPI) MAPS .......................... 27
+
+
+List of Tables
+
+Table 1.1: Comparison of Means between Survey and Census ‚Äì Individual level data ............... 20
+Table 1.2: Comparison of Means between Survey and Census ‚Äì Household level data .............. 20
+Table 1.4: Final Specification Using National Model .................................................................. 22
+Table 5: Individual-level Variable Comparisons .......................................................................... 23
+Table 6: Household-level Variable Comparisons ......................................................................... 23
+Table 2.1: Poverty Estimates from the Census (using Povmap) and Survey (observed), in % .... 25
+Table 3.1: MPI Indicators by Region, in % .................................................................................. 27
+
+List of Figures
+
+Figure 1.1: Number of Households and Individuals, by district ................................................... 18
+Figure 1.2: Distributions with Actual and Imputed Testing Sample ............................................ 21
+Figure 2.1: Poverty Map of Tajikistan .......................................................................................... 24
+Figure 2.2: Poor Population of Tajikistan ..................................................................................... 25
+Figure 3.1: Multidimensional Poverty Index Map of Tajikistan using Census 2010 ................... 28
+Figure 3.2: MPI Maps vs. Monetary Poverty ............................................................................... 28
+
+List of Boxes
+
+Box 1.1: Step-by-step Summary of the Modelling Approach ...................................................... 15
+
+
+
+
+                                                                1
+                                   ACKNOWLEDGEMENTS
+This report is the joint product of the World Bank Group (WBG) and the Agency of Statistics under the
+President of Tajikistan (TajStat). The World Bank team was led by William Seitz (Economist, GPVDR)
+under the direction of Sarosh Sattar (Senior Economist, TTL of Central Asia Poverty and Equity Program)
+and Joao Pedro Wagner De Azevedo (Lead Economist, GPVDR). Modeling and estimations were jointly
+conducted by William Seitz, Minh Cong Nguyen (Economist, GPVDR), and Furkat Mirpochoev (Data
+Specialist, TajStat) with the support of Alisher Rajabov (Economist, GPVDR), and finalized by the World
+Bank Poverty and Equity team.
+The report was developed under the guidance of Carolina Sanchez-Paramo (Practice Manager, GPVDR)
+and Patricia Veevers-Carter (Country Manager, ECCTJ). The TajStat team participated under the guidance
+of Qiemuddin Davlatzoda (Deputy Director, TajStat) and Abduvali Kulov (Head of Demography, HBS and
+Social Statistics Department, TajStat) and under the leadership of Gulnora Hasanzoda (Director, TajStat).
+The teams would like to thank the UK Department for International Development (DfID) for their financial
+support of this product.
+
+
+
+
+                                                   2
+                                            INTRODUCTION
+1. National poverty rates are traditionally measured using survey data. To allow for frequent monitoring
+and to contain the costs of gathering detailed information, such surveys sample only a small subset of the
+population. When this sample of the population is representative, welfare surveys provide reliable estimates
+of poverty incidence for the entire population at a small fraction of the cost that would be required to survey
+each person in the country.
+
+2. This approach necessarily leads to sampling errors however, and as a consequence, a typical household
+income or expenditure survey cannot produce statistically reliable poverty estimates for small geographic
+units. In the Republic of Tajikistan, the standard official poverty rates are not produced below the oblast
+level for this reason.
+
+3. This report discusses two means of addressing the issue. The first is commonly referred to as ‚Äúpoverty
+mapping‚Äù, and derives estimates of monetary poverty as it was officially measured in Tajikistan at the time
+of the surveys used in the analysis. The second is a multi-dimensional poverty index (MPI) that combines
+information about individual deprivations to summarize a complimentary, but unofficial, measure of
+poverty incidence.
+
+4. Poverty mapping is a powerful approach to measuring welfare for highly disaggregated geographic
+units. Using the techniques of multiple imputation, poverty mapping efforts are undertaken to estimate
+poverty for small areas; indicators that would be impossible to construct with traditional survey data alone.
+The results are often used to target policies and assign resources to have greater poverty-reducing impact.
+Globally, poverty maps have been used to highlight geographic variations, simultaneously display different
+dimensions of poverty, understand poverty determinants, and to both design and select interventions.
+
+5. A variety of poverty mapping methods have been devised to overcome the increasing imprecision of
+poverty estimates as they are disaggregated. The standard approach, used in most cases when sufficient
+data are available, is described in Elbers, Lanjouw, and Lanjouw (2003, henceforth ELL) and elaborated in
+Bedi, Coudouel, and Simler (2007). The ELL method is used for the official map described in this report.
+
+6. The ELL approach to generating small area estimates (SAE) leverages the strengths of two data
+sources. First, the method makes use of traditional survey data that include detailed information on
+consumption and wellbeing. Second, the method employs individual or household-level information from
+the national Census. While censuses usually provide less detail than surveys for any individual or
+household, the main advantage of using census data is that they provide complete coverage of the entire
+population, and are therefore free of sampling error.
+
+7.   The standard strategy for estimating a poverty map involves three main stages:
+
+     a. First, identify a comparable set of variables that appear in both the census and the household survey;
+     b. Second, estimate consumption as a function of the comparable set of variables; and
+     c. Finally, compute welfare indicators on census records based on the parameters derived from the
+        estimations carried out on data from the household survey.
+
+8. For Tajikistan, the estimation procedure uses: (i) the Tajikistan Living Standards Measurement Survey
+(TLSS) conducted in 2009, and (ii) the Population and Housing Census (2010). The poverty map described
+
+                                                      3
+below reports poverty estimates at the rayon level. All 58 rayons of the Republic of Tajikistan are included,
+and because some urban areas hold similar status to rayons in Tajikistan, several cities for which data was
+collected in the TLSS survey were also included in the mapping exercise. Dushanbe itself is divided into 4
+rayons, but for the purposes of the estimation, the city was treated as a single unit.
+
+9. The second approach to investigating welfare for small areas described below is a highly disaggregated
+MPI measure. This indicator is intended to compliment the imputed monetary measure, and help to identify
+concentrations of deprivation. There are several advantages to using an MPI. Depending on the specific
+indicators included, they are often relatively easy to collect, and in some cases can be less prone to
+measurement error. But perhaps the most important advantage in this context is that because all of the
+indicators needed to estimate the MPI were present in the 2010 national Census of Tajikistan, no imputation
+is required.
+
+10. However, MPI estimates have some drawbacks as well. Countries define MPI indicators in many
+different ways, but unlike monetary measures, such indexes are not always directly comparable. This is due
+in part to simple differences in definition, but also because there are often differences in the importance of
+deprivations from one country or context to the next. Data availability issues also commonly discourage
+the use of multidimensional indexes in practice. The MPI indicators reported below add significant detail
+about the lived experience and the acuteness of poverty, but should be viewed as complimentary to
+monetary indicators, rather than a replacement for them.
+
+
+
+
+                                                      4
+                                               CHAPTER 1
+                                   METHOD, DATA, AND MODELING
+
+
+      MONETARY IMPUTATION METHOD
+
+1.1     Because numerous methods are available, selecting an appropriate method is a critical first step in
+deriving a poverty map. An SAE method developed by Elbers et al. (2003) has gained wide popularity
+among development practitioners, and is preferred within the World Bank when sufficient data are
+available.
+
+1.2     The poverty map described in this report relies on the ELL approach on the basis of household-
+level data from the Population Census and the 2009 Tajikistan Living Standards Measurement Survey
+(TLSS). The ELL model utilizes detailed income/consumption information from a household survey, such
+as the TLSS, to estimate a model of monetary welfare, given a set of observable household characteristics.
+The parameter estimates from the model are then applied to the same set of characteristics in the population
+census to impute monetary welfare.
+
+1.3       As a consequence of computing poverty incidence based on imputed consumption, SAE estimates
+of poverty are also subject to imputation error. One advantage of the ELL method over similar approaches
+is that it not only allows estimation of poverty incidence, but also the relevant standard errors. Elbers et al.
+(2003) analyze the properties of these errors in detail (the section below provides greater detail on the
+method). Experience to date suggests that poverty estimates are in most cases sufficiently precise for the
+purposes of informing policy choices (Bedi, Coudouel, and Simler, 2007; World Bank, 2012b).
+
+1.4     Formally, the ELL model can be estimated as the (log) of per capita household consumption:
+
+                                           Ì†µÌ±¶Ì†µÌ±ê‚Ñé = Ì†µÌ±ã‚Ä≤Ì†µÌ±ê‚Ñé Ì†µÌªΩ + Ì†µÌ±¢Ì†µÌ±ê‚Ñé
+
+where Ì†µÌ±¶Ì†µÌ±ê‚Ñé is the per capita consumption of household h residing in area c, Ì†µÌ±ãÌ†µÌ±ê‚Ñé are household and
+area/location characteristics, and Ì†µÌ±¢Ì†µÌ±ê‚Ñé = Ì†µÌºáÌ†µÌ±ê + Ì†µÌºÄÌ†µÌ±ê‚Ñé , representing the residual, which is composed of the area
+component Ì†µÌºáÌ†µÌ±ê and the household component Ì†µÌºÄÌ†µÌ±ê‚Ñé . These two residual components have expected values of
+                                                                           2)       2      2
+zero, and are independent of each other. It is assumed that Ì†µÌ∞∏(Ì†µÌ±¢Ì†µÌ±ê            = Ì†µÌºéÌ†µÌºá + Ì†µÌºéÌ†µÌºÄ . To estimate variance
+parameters, the following results rely on Henderson's method III, a commonly used estimator for the
+variance parameters of a nested error model (see Henderson, 1953; and Searle et al., 1992).
+
+1.5     The variance of the remaining residual Ì†µÌºÄÌ†µÌ±ê‚Ñé is modeled via a logistic transformation as a function
+                                                  2
+                                                Ì†µÌ±íÌ†µÌ±ê‚Ñé
+of household and area characteristics Ì†µÌ±ôÌ†µÌ±õ [         2    ] = Ì†µÌ±ç‚Ä≤Ì†µÌ±ê‚Ñé Ì†µÌªº + Ì†µÌ±üÌ†µÌ±ê‚Ñé in order to obtain an estimate of the
+                                               Ì†µÌ∞¥‚àíÌ†µÌ±íÌ†µÌ±ê‚Ñé
+            2
+         Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé
+variance ÃÇ        . Note that this approach allows for heteroscedasticity, such that the model is subsequently
+re-estimated to get a GLS estimate of Ì†µÌªΩ and of the variance-covariance matrix.
+
+1.6      The small area estimates (and their standard errors) are obtained by means of simulation, which is
+ideally suited for estimating quantities that are non-linear functions of y (and thus non-linear function of
+
+
+                                                            13
+the errors and the model parameters), such as measures of poverty and inequality. Let R denote the number
+of simulations. The estimator then takes the form:
+
+                                                ÃÇ = 1 ‚àëÌ†µÌ±Ö
+                                                Ì†µÌ∞ª             ÃÉ Ì†µÌ±ü )
+                                                            ‚Ñé(Ì†µÌ±¶
+                                                    Ì†µÌ±Ö Ì†µÌ±ü=1
+
+where ‚Ñé(Ì†µÌ±¶) is a function that converts the vector y with (log) incomes for all households into a poverty
+                                                  ÃÉ Ì†µÌ±ü denotes the r-th simulated vector with elements:
+measure (such as the head-count rate), and where Ì†µÌ±¶
+
+
+                                              Ì†µÌ±¶           ÃÉÌ†µÌ±ü + Ì†µÌºá
+                                              ÃÉ Ì†µÌ±ü = Ì†µÌ±ã ‚Ä≤ Ì†µÌªΩ        Ì†µÌ±ü
+                                                                  ÃÉÌ†µÌ±ê       Ì†µÌ±ü
+                                                                       + Ì†µÌºÄÃÉÌ†µÌ±ê‚Ñé
+
+
+1.7      With each simulation, both the model parameters Ì†µÌªΩ  ÃÉÌ†µÌ±ü and the errors Ì†µÌºá Ì†µÌ±ü
+                                                                                 ÃÉÌ†µÌ±ê         Ì†µÌ±ü
+                                                                                      and Ì†µÌºÄÃÉÌ†µÌ±ê‚Ñé are drawn from
+                                               ÃÉ Ì†µÌ±ü
+their estimated distributions. The parameters Ì†µÌªΩ are drawn by re-estimating the model parameters using the
+                                                             ÃÉÌ†µÌ±ü may be drawn from its estimated asymptotic
+r-th bootstrap version of the survey sample. Alternatively, Ì†µÌªΩ
+distribution (called ‚Äúparametric drawing‚Äù). The advantage of parametric drawing is that it is
+computationally fast. A potential disadvantage is that the true distribution of the estimator for the model
+parameter vector does not necessarily coincide with the asymptotic distribution. The use of bootstrapping,
+albeit more computationally intensive, provides a means of identifying the finite-sample distribution, and
+is thus expected to provide more accurate results when the sample size is small. The sample size of the
+TLSS used in this case is large enough for the asymptotic results to apply, and there is therefore little to no
+expected difference between estimates obtained with parametric drawing and bootstrapping.
+
+1.8      A further alternative at this stage is to employ Empirical Best (EB) estimation. The idea of EB
+estimation is that the residuals for households sampled in area c, Ì†µÌ±íÌ†µÌ±ê‚Ñé = Ì†µÌ±¶Ì†µÌ±ê‚Ñé ‚àí Ì†µÌ±ã‚Ä≤Ì†µÌ±ê‚Ñé Ì†µÌªΩ, are informative of
+the latent area error Ì†µÌºáÌ†µÌ±ê . This means that conditioning on the residuals observed for sampled households
+should enable tightening the distributions from which Ì†µÌºáÌ†µÌ±ê is simulated. It should be noted that EB only
+concerns the drawing of the area errors, and only areas that have been sampled in the TLSS benefit from
+the improvement offered by EB; for areas not sampled in the survey we still draw from the unconditional
+distribution, in which case EB we will refer to it as ELL-EB) coincides with standard ELL.
+
+1.9     Any of these options yields R simulated poverty rates. The point estimates and their corresponding
+standard errors are obtained by computing respectively the average and the standard deviation over these
+simulated values. Box 1.1 below provides greater detail on this method.
+
+
+
+
+                                                        14
+ Box 1.1: Step-by-step Summary of the Modelling Approach
+
+ 1. Bootstrap the survey (unless parametric drawing of the model parameters is used).
+
+ 2. Estimate Ì†µÌªΩ by means of Ordinary Least Squares (OLS), and extract the residuals.
+
+                                                                                 2        2
+ 3. Estimate the unconditional variance parameters of the nested error model (Ì†µÌºéÌ†µÌºá and Ì†µÌºéÌ†µÌºÄ ) by applying
+ Henderson-method-III (see Henderson, 1953).
+
+ 4. If heteroskedastic household errors are assumed, then: (a) derive estimates of the household errors by
+ subtracting the area averages from the residuals (i.e. deviations from the area mean residual), (b) apply
+ a logistic transformation to the errors derived under (a) to obtain the left-hand side (LFS) of the
+ regression (also referred to as the ‚Äúalpha-model‚Äù) that will be used to predict the conditional variance of
+                                            2
+ household component Ì†µÌºÄÌ†µÌ±ê‚Ñé , denoted by Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé , (c) ensure that the unconditional variance is still equal to
+    2              2            2
+ Ì†µÌºéÌ†µÌºÄ , i.e. Ì†µÌ∞∏[Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé ] = Ì†µÌºéÌ†µÌºÄ
+                                                                2                              2
+ 5. Given estimates of the unconditional variance Ì†µÌºéÌ†µÌºÄ             and conditional variance Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé , the covariance
+                   Ì†µÌ±á      Ì†µÌ±á |Ì†µÌ±•]      2                    2
+ matrix Œ© = Ì†µÌ∞∏[Ì†µÌºÇÌ†µÌºÇ + Ì†µÌºÄÌ†µÌºÄ         = Ì†µÌºéÌ†µÌºÇ Ì†µÌ∞ºÌ†µÌºÇ + Ì†µÌ±ëÌ†µÌ±ñÌ†µÌ±éÌ†µÌ±î(Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé ) can be constructed, which is used to obtain the
+ GLS estimator for Ì†µÌªΩ .
+
+ 6. At this stage, estimates for all the model parameters Ì†µÌªΩÃÉÌ†µÌ±ü , ÃÉ  2,Ì†µÌ±ü
+                                                                  Ì†µÌºéÌ†µÌºÇ Ì†µÌ±éÌ†µÌ±õÌ†µÌ±ë ÃÉ  2,Ì†µÌ±ü
+                                                                                Ì†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé are available. The next step
+                                                                              Ì†µÌ±ü            Ì†µÌ±ü
+ is to draw the area errors and the household idiosyncratic errors: ÃÉ       Ì†µÌºÇÌ†µÌ±ê Ì†µÌ±éÌ†µÌ±õÌ†µÌ±ë ÃÉ Ì†µÌºÇÌ†µÌ±ê‚Ñé from their respective
+                                            2,Ì†µÌ±ü    2,Ì†µÌ±ü
+ normal distributions with variances ÃÉ   Ì†µÌºéÌ†µÌºÇ , ÃÉÌ†µÌºéÌ†µÌºÄ,Ì†µÌ±ê‚Ñé .
+
+ 7. From this basis, all that is needed to compute the round r simulated (log) household expenditure
+                                                                    Ì†µÌ±ü      Ì†µÌ±á ÃÉ Ì†µÌ±ü            Ì†µÌ±ü
+ values for all households in the population census is available: ÃÉ
+                                                                  Ì†µÌ±¶Ì†µÌ±ê‚Ñé = Ì†µÌ±•Ì†µÌ±ê‚Ñé      Ì†µÌºÇ Ì†µÌ±ü + Ì†µÌºÄÌ†µÌ±ê‚Ñé
+                                                                                Ì†µÌªΩ + ÃÉ
+
+ 8. With the simulated household income data, the poverty and inequality measures can now be computed
+ as if the population census came with household income data from the start.
+
+ 9. This yields a simulated poverty and inequality measure for each of the R simulation rounds. The
+ average and standard deviation give the poverty point estimate and the corresponding standard error
+ respectively.
+
+
+
+        MULTIDIMENSIONAL POVERTY METHOD
+
+1.10    A Multidimensional poverty index (MPI) is a common non-monetary compliment to monetary
+poverty estimates. In the case of Tajikistan, sufficient information is collected in the Census to derive such
+a measure without using any imputation approaches. For most such non-monetary measures, ‚Äúdeprivations‚Äù
+or ‚Äúvulnerabilities‚Äù are identified, and summarized in the form of an index.
+
+1.11     There are several strengths to this method:
+
+    ÔÇ∑    Firstly, it is easy to reproduce and to estimate, and does not require sophisticated econometrics or
+         programming.
+
+
+                                                         15
+    ÔÇ∑    A second benefit is that the measure does not require substantial data collection efforts. A relatively
+         small module could be added to a survey for the purposes of estimating the index.
+
+    ÔÇ∑    Non-monetary approaches are also more straightforward to estimate when information on inflation
+         is unavailable or unreliable
+
+1.12     But there are also drawbacks:
+
+    ÔÇ∑    In Tajikistan, poverty is officially monitored using a monetary measure of consumption. This
+         implies that a non-monetary measure would not necessarily coincide with official measures of
+         poverty in the country.
+
+    ÔÇ∑    MPI indicators are not always comparable across regions or countries, due to the nature of the
+         deprivations included. For instance, lacking access to heating is fundamentally incomparable
+         between a county with a tropical climate and a country with a continental one.
+
+1.13     The variables used to create the MPI reported below are grouped by three dimensions: i)
+demographic and labor, ii) education, and iii) services and infrastructure. Each dimension is equally
+weighted, and within each dimension, each indicator is also equally weighted. A household is defined as
+multi-dimensionally poor when the household is deprived on 33 percent or more of the weighted indicators
+in the index. In addition, severe poverty is defined as a household which is deprived on 50 percent or more
+of the weighted indicators in the index. A household is ‚Äúvulnerable‚Äù for multidimensional poverty when
+deprived on at least 20 percent, but less than 33 percent of weighted indicators in the index.
+
+1.14    For Tajikistan, the dimensions and indicators were informed by deprivation index analysis across
+countries and by Azevedo, Rajabov et al. (2015), and include:
+
+    ÔÇ∑    Education
+            o Households with individuals (18+) who cannot read or write
+            o At least one individual (20+) who has not completed secondary school
+            o No household member has completed tertiary education
+
+    ÔÇ∑    Demographic and Labor
+            o Dependency ratio>1
+            o Both household heads are not employed
+
+    ÔÇ∑    Services and infrastructure
+             o No access to sewage system
+             o No access to piped water
+             o Heating from oven, or heating is absent
+             o No garbage disposal system
+             o No toilet inside the house
+
+        DATA
+
+1.15    The data for the monetary poverty map come from two sources: the Tajikistan Living Standard
+Measurement Survey 2009 (TLSS) collected by the State Statistical Agency of Tajikistan in collaboration
+with the World Bank, and the 2010 Census of Tajikistan.
+
+
+
+                                                      16
+1.16     An alternative data source, the household budget survey (HBS), was also available for estimating
+the poverty map. After thorough evaluation however, the HBS was not selected. Though the HBS has a
+number of advantages over the TLSS (including larger sample size, and the fact that it is currently the
+official source of poverty statistics for the country), the specific requirements of the poverty mapping
+method employed resulted in unstable results. More specifically, an HBS-based version of the model
+yielded an accurate prediction for the whole of Tajikistan when used for imputation, but the model could
+not capture the heterogeneity across oblasts reflected by poor oblast level predictions compared to direct
+estimates from TLSS. It was therefore decided that the TLSS was the preferred poverty data source for this
+undertaking, in light of the survey‚Äôs timing and greater geographic coverage.
+
+1.17    The TLSS provides information on food and non-food expenditure, labor activities, migration,
+agriculture, education, dwelling, utilities, and durable goods. The sample is representative at the national
+and regional level (Sugd, RRS, Khatlon, GBAO, plus Dushanbe) and for urban and rural strata. The survey
+was designed as a panel of 1,500 households interviewed during the Tajikistan 2007 Living Standards
+Survey (TLSS07). The households were revisited in November 2009, during the same time of year in which
+they were visited originally in 2007.
+
+1.18     The original TLSS07 sampling design followed the enumeration areas defined for the census. The
+survey was stratified by region, and by urban and rural location of residence (9 strata: 4 rural, 5 urban). The
+sampling was designed in two stages. In the first stage, sampling units representing clusters were selected.
+In the second stage, a random sample of households was drawn from each clusters using the official clusters
+household book (a register maintained by officials in the enumeration area).
+
+1.19     The Census of Tajikistan covers approximately 1.6 million households and 8 million individuals.
+The Republic of Tajikistan is administratively divided in 4 regions: Sogd oblast, Khatlon oblast, Gorno-
+Badagakashan (GBAO), Direct Rule District commonly known as the RRS (or the Regional Republics of
+Subordination, in which there are 13 autonomous districts) and Dushanbe. There are a total of 58 rayon
+(districts), 4 districts of Dushanbe, and 17 cities subordinated either to the Republic or to the oblast. There
+are 356 jamoats (rural administrative areas) and 13 towns of rural type. For the estimates that follow, the
+entire census database was available.
+
+1.20    While most of the population in Tajikistan is located in the west of the country, districts in the east
+are generally less densely populated. Figure 1.1 described the population density of Tajikistan according to
+the 2010 Census.
+
+
+
+
+                                                      17
+Figure 1.1: Number of Households and Individuals, by district
+
+
+
+
+    Source: Census 2010.
+
+
+      MODELLING FOR MONETARY POVERTY
+
+1.21     Since the ELL approach relies on estimating a welfare model on the TLSS data and applying it to
+the Population and Housing Census data, one of the key requirements of the model building stage is the
+similarity between the variables in the TLSS and the census. As part of building a welfare model, a two-
+stage process was undertaken:
+
+        a. Step 1: comparison of the TLSS and census questionnaires to identify ‚Äúcandidate variables‚Äù
+           that exist both in the survey and the census and that are generated from identical or similar
+           questions;
+
+        b. Step 2: comparison of the distributions of the ‚Äúcandidate variables‚Äù identified in step 1 in order
+           to examine whether they capture the same underlying phenomena or whether, despite similar
+           questions, their empirical distributions differ in any important ways.
+
+1.22     The goal of model construction is to explain the variation in per capita household expenditure. The
+choice of candidate variables is typically constrained by the overlap between the survey and census
+questionnaires, and based on a heuristic model of household expenditure. Expenditure is often assumed to
+be a function of the demographic characteristics of the household (e.g. small children, working-age adults,
+or elderly), and individual education and occupation characteristics of the household and its members (e.g.
+
+
+                                                    18
+maximum level of education in the household, education level, the employment status of household
+members, and the type of employment for those who are employed).
+
+1.23     In addition, other indicators such as the type of dwelling a household resides in, or the types of
+assets the household possesses (e.g. whether or not there is a bath or toilet in the dwelling), commonly
+proxy for variation in other welfare measurements. Accesses to basic services such as water and electricity
+are also assumed to reflect the income level and/or expenditure of the household. Household expenditure
+may also vary based on the location of the household (e.g. rural vs. urban; proximity to big cities; area with
+low or high employment rates etc.).
+
+1.24    In Tajikistan, the pool of variables common to the two questionnaires included:
+
+    a. Demographic characteristics: Gender, age, marital status, household size, number of children,
+       adults, and elderly in the household, dependency ratio
+    b. Education: Education level of the household head, highest level of education by any household
+       member
+    c. Occupation: Employment status, occupation, sector of employment
+    d. Housing characteristics: Type of housing unit, main construction material of wall, total area of
+       land and dwelling, ownership and occupancy status of dwelling, source of drinking water and
+       electricity, type of sewage and toilet
+    e. Productive and durable assets: Ownership of cooler, refrigerator, freezer, electrical generator,
+       cooker, television, washing machine, dishwasher, water heater, heater, electric fan, air conditioner,
+       vacuum cleaner, motorcycle, car, and PC.
+
+1.25    Some of the candidate variables were defined by taking the district-level average from the census,
+and including these indicators to generate more precise survey-based estimates. By construction, these
+variables are identical in the census and survey micro-data. Other spatial variables include a dummy
+variable for rural location and a dummy variable for the RRP oblast.1
+
+1.26     The level at which regression models are run must be chosen carefully. If a single model is specified
+for the entire country, the implicit assumption is that the parameter estimates for the explanatory variables
+included in the model are the same for all regions of the country. In other words, a national model assumes
+that the relationship between household expenditure and household characteristics are uniform throughout
+the country. This may not be a tenable assumption in a country like Tajikistan, with wide spatial
+heterogeneity. For example, returns to education are likely higher in Dushanbe where formal job market is
+more robust than in the poorest areas with thin labor markets.
+
+1.27    The approach employed for Tajikistan proceeded in a top-down fashion to decide the level at which
+to model the relationship. However, as the sample size must be no smaller than 300 for each regression to
+avoid the problem of over-fitting (Ahmed, Dorji, Takamatsu, & Yoshida, 2014), oblast level regressions
+were not feasible. The Beta model for Tajikistan thus used a national-level regression.
+
+1.28    Assignment of candidate variables for matching proceeded by hand, comparing nationally-
+representative means in the two data sources. Those variables deemed acceptable were included in the
+model selection process. For those that were deemed to differ too greatly from one another ‚Äì due, for
+instance, to slight differences in the wording of the question ‚Äì the variable was excluded and not used in
+the model development process. Tables 1.1 and 1.2 provide comparisons of averages of a subset of variables
+
+
+1
+ The district level variables in the model were: ‚ÄúTotal number 26 to 30 years old‚Äù, ‚ÄúTotal number 31 to 35 years
+old‚Äù, ‚ÄúTotal number 41 to 45 years old‚Äù, and ‚ÄúDistrict-average of working adults in Mining sector‚Äù.
+
+                                                        19
+compared at this stage. Each was evaluated at the household level, including for questions that were
+gathered at the individual level in the questionnaire.
+
+Table 1.1: Comparison of Means between Survey and Census ‚Äì Individual level data
+                                 Survey (Individual)                   Census (Individual)
+                                       Mean Mean        Mean                Mean Mean        Mean
+                            Share                                  Share
+                                         of      of      of                   of     of       of
+                           Missing                                Missing
+                                        Sum Mean        Max                 Sum Mean         Max
+         married            0.00        3.39    0.42    0.96       0.00      2.61   0.42     0.91
+         widow              0.00        0.24    0.04    0.22       0.00      0.20   0.05     0.19
+         age_0_6            0.00        1.15    0.13    0.61       0.00      0.92   0.13     0.52
+         age_1_14           0.00        2.76    0.33    0.89       0.00      2.25   0.33     0.81
+         age_15_24          0.00        1.90    0.24    0.78       0.00      1.41   0.22     0.67
+         age_25_64          0.00        3.04    0.39    0.99       0.00      2.44   0.41     0.96
+         age_65pl           0.00        0.30    0.04    0.24       0.00      0.21   0.04     0.17
+
+         preschool            0.00       0.04   0.01    0.03       0.00       0.04   0.01    0.03
+         educyn               0.00       6.48   0.83    1.00       0.00       5.48   0.88    1.00
+         educ_none            0.00       0.93   0.12    0.57       0.00       1.83   0.26    0.73
+         educ_prim            0.00       1.16   0.15    0.64       0.00       0.77   0.12    0.47
+         educ_basic           0.00       1.10   0.14    0.56       0.00       0.88   0.14    0.50
+         educ_secgen          0.00       2.66   0.34    0.87       0.00       2.22   0.36    0.85
+         educ_sectech         0.00       0.49   0.07    0.37       0.00       0.30   0.05    0.23
+         educ_higher          0.00       0.44   0.06    0.30       0.00       0.31   0.06    0.22
+         educ_grad            0.00       0.00   0.00    0.00       0.00       0.00   0.00    0.00
+Source: Authors calculation from Census 2010.
+
+Table 1.2: Comparison of Means between Survey and Census ‚Äì Household level data
+                                      Survey (Household)              Census (Household)
+                                  Share Missing     Mean           Share Missing   Mean
+            work_share                 0.00          0.39              0.00         0.58
+            pre_share                  0.00          0.03              0.00         0.03
+            depmems                    0.00          2.47              0.00         2.46
+            depratio                   0.00          0.70              0.00         0.77
+            hhsize                     0.00          6.67              0.00         6.31
+            hhsize2                    0.00         53.49              0.00        50.47
+            hh_wi                      0.00          0.17              0.00         0.14
+            hh_fem                     0.00          0.18              0.00         0.26
+            hh_work                    0.00          0.59              0.00         0.63
+            hh_mar                     0.00          0.79              0.00         0.81
+            hh_ds                      0.00          0.03              0.00         0.02
+            hh_absec                   0.00          0.00              0.00         0.15
+            hh_abbasic                 0.00          0.41              0.00         0.28
+            hh_abprim                  0.00          0.78              0.00         0.80
+            rural                      0.00          0.67              0.00         0.68
+            telephone                  0.00          0.19              0.00         0.21
+Source: World Bank calculations from Census 2010.
+
+Poverty line
+
+1.29    The poverty line was constructed for the 2007 TLSS survey results using the cost-of-basic-needs
+approach, and updated for use in 2009 when another round of the TLSS was conducted. The resulting
+poverty line depends on the cost of buying a diet of 2,250 calories per capita per day and an allowance for
+non-food consumption. The nominal poverty line was set at 4.56 Somoni a day per capita (2007 prices), of
+
+                                                       20
+which 64 percent is food-consumption and 36 percent is non-food consumption.2 After adjusting for
+different price levels across the country, the poverty line corresponds to a per capita monthly expenditure
+of 138.7 Somoni per month in 2007 and 162.1 Somoni per month in 2009.
+
+Model selection
+
+1.30     From the pool of variables not excluded due to comparability concerns, a variety of model selection
+techniques were employed and evaluated on the basis of several alternative criteria. Automated model
+selection techniques (lasso, forward stepwise, backward stepwise, etc.) were complimented by manually
+designed models and assessed in terms of out of sample performance. Thorough checks on the variance
+composition were also conducted. The final model was partially selected on the basis of the combination
+of a good adjusted R- squared and for a small ratio of location variance over total variance. For the model
+used in this exercise, the ratio is 3%, which is smaller than the recommended 5% level. The hierarchical
+error structure (province, psu, and household error) was also considered in the model selection process. In
+this case, the variance share of the location/psu is small: var(psu) = .0134, var(epsilon or residual) = .188,
+for a ratio of 6.6% of overall error variance.
+
+1.31    Model validation (within the TLSS data) proceeded in several stages. First, a visual assessment was
+conducted to ensure the similarity between predicted and empirical consumption distributions. This was
+accomplished by withholding a subset of data, using the remainder as the ‚Äútraining‚Äù data, and subsequently
+imputing into the withheld data to ensure the robustness of the approach. The resulting distributions can be
+seen graphically in Figure 1.2. Poverty indices were then calculated to further validate the approach and
+confirm the consistency of poverty estimates.
+
+Figure 1.2: Distributions with Actual and Imputed Testing Sample
+
+
+
+
+Source: TLSS-2009, World Bank calculations.
+
+1.32     Using both Stata and World Bank‚Äôs PovMap software to build the mode with the above-mentioned
+validation procedures, the final model is presented as in Table 1.43.
+
+
+2For more explanation, see the Basic Information Document of the 2007 TLSS, Poverty Assessment in 2009, and the update
+Poverty note with TLSS2009 in 2010/2011.
+3The final model is based on the combination variables constructed from the survey and the district-area variables
+constructed from the census. The adjusted R-square is moderate at 33%. The ratio of variance of area-level and over
+mean squared error is 3%, which is low compared with other countries‚Äô studies. This means the prediction for the
+
+                                                           21
+Table 1.3: Final Specification Using National Model
+                                                                                   Coefficie     Std.    |Prob|>
+ Variable             Description                                                      nt        Err.       t
+ Intercept            Intercept                                                      5.011      0.130     0.000
+ activity13_sum       Total number of working adults in Public sector               -0.059      0.030     0.040
+ activity2_dist       District-average of working adults in Mining sector           13.750      3.930     0.000
+ activity6_mean       Total number of working adults in Trade sector                 0.112      0.040     0.010
+                      Number of dependency members (less than 15 and more
+ depmems                                                                            -0.031      0.010     0.000
+                      than 65)
+ educyn_mean          Average number of adults with some education level             0.316      0.090     0.000
+ educ_grad_max        Maximum number of adults with graduate level education         0.989      0.150     0.000
+ educ_higher_mean     Average number of adults with higher education level           0.475      0.100     0.000
+ educ_sectech_sum     Total number of adults with technical secondary education      0.051      0.020     0.010
+ hhsize               Household size                                                -0.118      0.020     0.000
+ hhsize2              Household size squared                                         0.004      0.000     0.000
+ hh_fem               Female headed household                                       -0.083      0.040     0.020
+                      Total number of adults working as managers and senior
+ mainocc1_sum                                                                        0.277      0.060     0.000
+                      officials
+                      Average number of adults working as professional
+ mainocc2_mean                                                                       0.220      0.070     0.000
+                      specialists
+                      Total number of adults working as operators, machine
+ mainocc8_sum                                                                        0.141      0.040     0.000
+                      operators
+ mainocc9_mean        Average number of adults with unskilled work                   -0.172     0.040     0.000
+ PROV_STR_4           Dummy for RRP oblast                                            0.309     0.040     0.000
+ RURAL_1              Dummy for rural                                                 0.159     0.040     0.000
+ telephone            Household with telephone                                        0.147     0.040     0.000
+ tot26_30_dist        Total number 26 to 30 years old                                0.0001     0.000     0.000
+ tot31_35_dist        Total number 31 to 35 years old                               -0.0003     0.000     0.000
+ tot41_45_dist        Total number 41 to 45 years old                                0.0002     0.000     0.000
+ work_share           Share of working adults in the household                        0.113     0.060     0.050
+
+Source: World Bank calculations from TLSS 2009 and Census 2010.
+
+
+
+
+district enjoys much more benefits when aggregating households‚Äô welfare within a district, thus estimation becomes
+more precise.
+
+                                                       22
+Table 4: Individual-level Variable Comparisons between Survey and Census for Selected Model
+                              Survey                                   Census
+                                                Mean                                    Mean
+                 Share    Mean of    Mean of     of       Share    Mean of    Mean of    of
+                Missing    Sum        Mean      Max      Missing    Sum        Mean     Max
+ activity13        0       0.26       0.14      0.22        0       0.27       0.05     0.22
+ activity6         0       0.22       0.12      0.18        0       0.18       0.03     0.14
+ educyn            0       6.48       0.83      1.00        0       5.48       0.88     1.00
+ educ_grad         0       0.00       0.00      0.00        0       0.00       0.00     0.00
+ educ_higher       0       0.44       0.06      0.30        0       0.31       0.06     0.22
+ educ_sectech      0       0.49       0.07      0.37        0       0.30       0.05     0.23
+ mainocc1          0       0.06       0.03      0.06        0       0.02       0.00     0.02
+ mainocc2          0       0.14       0.08      0.13        0       0.16       0.03     0.14
+ mainocc8          0       0.13       0.07      0.12        0       0.10       0.02     0.09
+ mainocc9          0       0.37       0.16      0.22        0       1.15       0.18     0.55
+
+
+
+Table 5: Household-level Variable Comparisons between Survey and Census for Selected Model
+                                    Survey (Household)   Census (Household)
+                                     Share                Share
+                                    Missing    Mean      Missing     Mean
+                    depmems            0        2.47        0         2.46
+                    hhsize             0        6.67        0         6.31
+                    hhsize2            0       53.49        0        50.47
+                    hh_fem             0        0.18        0         0.26
+                    rural              0        0.67        0         0.68
+                    telephone          0        0.19        0         0.21
+                    work_share         0        0.39        0         0.58
+
+
+
+
+                                                 23
+                                            CHAPTER 2
+                                            POVERTY MAP
+
+2.1     The final poverty map results for the method outlined above is included in Figure 2.1.
+Districts that had lower poverty rates than the national average are presented in blue, while those
+with a higher poverty rate than the national average are presented in orange. As expected, Dushanbe
+had the lowest poverty rate in 2010, while GBAO had the highest. Rural areas are poorer than urban
+areas on average, but low density areas represent a smaller share of the total poor in the country.
+As is clear from Figure 5, the majority of the country‚Äôs poor live in the eastern districts, despite the
+mountainous GBAO region recording the highest rate.
+
+
+Figure 2.1: Poverty Map of Tajikistan
+
+
+
+
+Note: Poverty rates refer to the share of poor in the district.
+Source: World Bank calculations based on TLSS2009 and Census 2010.
+
+
+
+
+                                                   24
+Figure 2.2: Poor Population of Tajikistan
+
+
+
+
+Note: Blue dots refer to the population of poor in the districts. The bigger is the dot the bigger is the population
+of the poor.
+Source: World Bank calculations based on TLSS2009 and Census 2010.
+
+2.2    One approach to validate the results of the poverty map is to compare the poverty rates
+implied by the aggregated small area rates from the poverty map, with the regional poverty rates
+from the TLSS. This test succeeds in this case: the aggregated results from the poverty mapping
+exercise were very close to the estimates obtained from the TLSS (Table 2.1).
+
+Table 2.1: Poverty Estimates from the Census (using Povmap) and Survey (observed), in %
+                                  TLSS                                              PovMap
+                      Poverty Rate           Standard error                Poverty Rate             Standard error
+ National                 47.20                   1.30                        47.50                     1.90
+ Dushanbe                 33.90                   2.90                        35.60                     2.30
+ Sogd                     48.30                   2.50                        46.60                     2.40
+ Khatlon                  53.90                   2.60                        57.50                     2.50
+ RRP                      38.90                   2.80                        36.80                     3.80
+ GBAO                     61.90                   4.10                        60.40                     4.20
+Source: World Bank calculations based on TLSS2009 and Census 2010.
+
+
+
+
+                                                        25
+2.3     For rural areas, the survey poverty rate estimate was 49.2%, while the estimate using aggregated
+poverty map results stood at 51.0%. For urban areas, the survey estimate was 41.8%, while the aggregated
+poverty map estimate stood at 39.0%. The standard errors were of similar magnitude in the survey
+estimates and the poverty map aggregated estimates. This is not ideal, as the standard errors are
+often smaller for poverty map estimates in comparison to direct survey estimates. However,
+previous modeling exercises suffered from even greater imprecision. The results reported here are
+consistent between the small area estimates and the aggregated regional results.
+
+
+
+
+                                                  26
+                                               CHAPTER 3
+                       MULTIDIMENSIONAL POVERTY INDEX (MPI) MAPS
+
+3.1      There are several complimentary ways to present results from the MPI analysis. Figure 3.1 provides
+the headline result: The national rate is 64 percent and the rates for the regions vary substantially. Driving a
+considerable portion of these results are high levels of deprivation relating to education, and for those
+districts outside of Dushanbe and other urban areas, access to infrastructure. In multidimensional terms,
+Dushanbe is clearly the least poor out of the regions.
+
+3.2       As Table 3.1 reports however, in contrast to estimates for monetary poverty, in the case the MPI,
+RRP fares worst in terms of both multidimensional poverty and in terms of severe multidimensional poverty.
+It is therefore not very surprising that there is only a weak correlation between the MPI measure of poverty
+and the monetary measure, as shown in Figure 3.2.
+
+
+Table 3.1: MPI Indicators by Region, in %
+
+                                             National        Dushanbe   Sogd   Khatlon      RRP      GBAO
+ Multidimensional Poverty                       64              22       63       72         75        61
+ Multidimensional Vulnerability                 22              24       24       21         19        30
+ Severe Multidimensional Poverty                33              5        31       38         44        29
+
+ Households with adults 18+ cannot read
+ or write                                       39              1        1        1          1         1
+ Age dependency>1                               22              17       19       27         26        16
+ Household member (+20) does not have
+ complete secondary education                   41              32       37       41         53        29
+ No household member (+25) has tertiary
+ education                                      79              58       81       84         83        65
+ Both heads are unemployed
+ Yes=deprived                                   13              16       12       13         16        16
+ No access to sewage                            73              19       76       80         85        88
+ No access to piped water                       67              8        70       80         72        89
+ Heating from oven, or heating is absent        70              9        77       78         80        73
+ No garbage disposable system                   63              4        64       73         76        76
+ No toilet inside the house                     78              21       82       88         89        90
+
+Source: Census 2010.
+
+
+
+
+                                                        27
+Figure 3.1: Multidimensional Poverty Index Map of Tajikistan using Census 2010
+
+
+
+
+Source: World Bank calculations using Census 2010.
+
+3.3      It should be noted that although one might anticipate a strong correlation between each deprivation
+and monetary measures of poverty (or consumption), it is not always the case that monetary poor households
+are also multi-dimensionally poor, or vice versa. This is due to the fact that weighting in the deprivation
+index introduces dissimilarities in the measure, as does the overlapping nature of deprivations. Indeed,
+deprivation index approaches were developed because monetary poverty measures often miss important
+attributes of poverty which are better captured in multidimensional measures.
+
+Figure 3.2: MPI Maps vs. Monetary Poverty
+
+
+
+
+Source: World Bank calculations using Census 2010 and TLSS 2009.
+
+
+
+
+                                                     28
+                                       ANNEX A ‚Äì POVERTY RATES BY DISTRICTS4
+
+                           Dushanbe and Districts of Republican Subordination/
+                           –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+                  District                         Poverty,%                         Standard Error            Number of Poor
+ Dushanbe             –î—É—à–∞–Ω–±–µ                         35.6                                0.02                    260,066
+ Faizobod             –§–∞–π–∑–∞–±–∞–¥                        37.9                                0.10                     31,259
+ Hisor                –ì–∏—Å—Å–∞—Ä                          44.0                                0.08                    107,287
+ Jirgatol             –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                      39.2                                0.09                     21,629
+ Nurobod              –ù—É—Ä–∞–±–∞–¥                         45.5                                0.07                     29,941
+ Rasht                –†–∞—à—Ç                            44.1                                0.07                     45,237
+ Roghun               –†–æ–≥—É–Ω                           44.0                                0.08                     15,870
+ Rudaki               –†—É–¥–∞–∫–∏                          50.6                                0.07                    197,700
+ Shahrinaw            –®–∞—Ö—Ä–∏–Ω–∞–≤                        26.2                                0.07                     25,317
+ Tavildara            –¢–∞–≤–∏–ª–¥–∞—Ä–∞                       41.4                                0.09                      7,956
+ Tojikobod            –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                      45.5                                0.10                     17,053
+ Tursunzoda           –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                      12.7                                0.04                     30,405
+ Vahdat               –í–∞—Ö–¥–∞—Ç                          25.9                                0.08                     72,476
+ Varzob               –í–∞—Ä–∑–æ–±                          43.5                                0.08                     28,370
+Source: World Bank calculations using Census 2010 and TLSS 2009.
+
+    Gorno-Badakhshan Autonomous Province/–ì–æ—Ä–Ω–æ-–ë–∞–¥–∞—Ö—à–∞–Ω—Å–∫–∞—è –ê–≤—Ç–æ–Ω–æ–º–Ω–∞—è –æ–±–ª–∞—Å—Ç—å
+                District                       Poverty,%         Standard Error                               Number of Poor
+ Darvoz             –î–∞—Ä–≤–æ–∑                        61.8                0.07                                       12,384
+ Ishkoshim          –ò—à–∫–∞—à–∏–º                       72.3                0.09                                       21,053
+ Khorugh            –•–æ—Ä–æ–≥                         48.2                0.08                                       13,070
+ Murghob            –ú—É—Ä–≥–∞–±                        56.7                0.09                                        7,539
+ Roshtqala          –†–æ—à—Ç–∫–∞–ª–∞                      76.2                0.06                                       18,590
+ Rushon             –†—É—à–∞–Ω                         54.0                0.09                                       12,880
+ Shughnon           –®—É–≥–Ω–∞–Ω                        59.3                0.10                                       20,429
+ Vanj               –í–∞–Ω—á                          54.4                0.08                                       16,695
+Source: World Bank calculations using Census 2010 and TLSS 2009.
+
+
+
+
+4
+  Please note that for many individual districts, the standard errors are substantial. For instance, 9 percent standard error means
+the 95% confidence interval will be almost +/-20 percent. Individual district level results should be considered bearing in mind
+the imprecision of specific estimates, and particularly in those cases with small populations.
+
+                                                                 29
+                                    Khatlon / –•–∞—Ç–ª–æ–Ω—Å–∫–∞—è –æ–±–ª–∞—Å—Ç—å
+                                                                                      Number of
+                         District                        Poverty,%   Standard Error
+                                                                                         Poor
+     Baljuvon                   –ë–∞–ª—å–¥–∂—É–≤–æ–Ω                  55.7         0.09           13,639
+     Bokhtar                    –ë–æ—Ö—Ç–∞—Ä                      64.5         0.07          139,967
+     Danghara                   –î–∞–Ω–≥–∞—Ä–∞                     51.8         0.09           63,475
+     Farkhor                    –§–∞—Ä—Ö–æ—Ä                      49.3         0.08           67,774
+     Hamadoni                   –•–∞–º–∞–¥–æ–Ω–∏                    66.9         0.08           82,270
+     Jilikul                    –î–∂–∏–ª–∏–∫—É–ª—å                   62.3         0.08           56,104
+     Jomi                       –ê. –î–∂–æ–º–∏                    61.8         0.07           83,576
+     Khovaling                  –•–æ–≤–∞–ª–∏–Ω–≥                    64.1         0.06           31,384
+     Khuroson                   –•—É—Ä–æ—Å–æ–Ω                     57.9         0.08           53,103
+     Kulob                      –ö—É–ª—è–±                       61.7         0.07          111,940
+     Muminobod                  –ú—É–º–∏–Ω–æ–±–æ–¥                   61.5         0.08           47,729
+     Norak                      –ù—É—Ä–µ–∫                       67.4         0.07           32,957
+     Nosiri Khisrav             –ù–æ—Å–∏—Ä–∏ –•–∏—Å—Ä–∞–≤               54.6         0.08           16,556
+     Panj                       –ü—è–Ω–¥–∂                       46.4         0.09           43,146
+     Qabodiyon                  –ö–∞–±–æ–¥–∏—ë–Ω                    38.3         0.09           56,698
+     Qumsangir                  –ö—É–º—Å–∞–Ω–≥–∏—Ä                   54.1         0.10           59,733
+     Qurghonteppa               –ö—É—Ä–≥–∞–Ω-–¢—é–±–µ                 58.6         0.08           43,719
+     Rumi                       –î–∂–∞–ª–æ–ª–∏–¥–¥–∏–Ω –†—É–º–∏            53.9         0.08           84,869
+     Sarband                    –°–∞—Ä–±–∞–Ω–¥                     69.7         0.09           27,092
+     Shahrtuz                   –®–∞–∞—Ä—Ç—É–∑                     61.7         0.08           62313
+     Shuroobod                  –®—É—Ä–æ–æ–±–æ–¥                    69.0         0.09           30,995
+     Temurmalik                 –¢–µ–º—É—Ä–º–∞–ª–∏–∫                  60.6         0.07           35,574
+     Vakhsh                     –í–∞—Ö—à                        54.0         0.08           85,998
+     Vose                       –í–æ—Å–µ                        52.4         0.07           92,845
+     Yovon                      –Ø–≤–∞–Ω                        62.7         0.09          111,729
+Source: World Bank calculations using Census 2010 and TLSS 2009.
+
+
+
+
+                                                    30
+                         Sughd/ –°–æ–≥–¥–∏–π—Å–∫–∞—è –æ–±–ª–∞—Å—Ç—å
+                                                               Standard   Number
+                     District                     Poverty,%
+                                                                 Error    of Poor
+Asht                        –ê—à—Ç                         54.4       0.08    73,352
+Ayni                        –ê–π–Ω–∏                        31.4       0.08    22,644
+Bobojon Ghafurov            –ë. –ì–∞—Ñ—É—Ä–æ–≤                  48.8       0.07   160,139
+Chkalovsk                   –ß–∫–∞–ª–æ–≤—Å–∫                    48.0       0.10    13,272
+Ghonchi                     –ì–∞–Ω—á–∏–Ω—Å–∫–∏–π                  62.5       0.06    88,513
+Isfara                      –ò—Å—Ñ–∞—Ä–∞                      66.5       0.06   153,076
+Istaravshan                 –ò—Å—Ç–∞—Ä–∞–≤—à–∞–Ω                  51.9       0.06   115,137
+Jabbor Rasulov              –î–∂. –†–∞—Å—É–ª–æ–≤                 40.4       0.07    45,638
+Khujand                     –•—É–¥–∂–∞–Ω–¥                     32.4       0.06    52,015
+Konibodom                   –ö–∞–Ω–∏–±–∞–¥–∞–º                   33.9       0.07    61,230
+Kuhistoni Mastchoh          –ö—É—Ö. –ú–∞—Å—Ç—á–æ—Ö—Å–∫–∏–π            64.3       0.08    13,543
+Mastchoh                    –ú–∞—Ç—á–∏–Ω—Å–∫–∏–π                  45.4       0.07    45,924
+Panjakent                   –ü–µ–Ω–¥–∂–∏–∫–µ–Ω—Ç                  27.2       0.06    66,648
+Qayraqqum                   –ö–∞–π—Ä–∞–∫–∫—É–º                   14.0       0.06     5,603
+Shahriston                  –®–∞—Ö—Ä–∏—Å—Ç–∞–Ω                   62.3       0.08    21,371
+Spitamen                    –°–ø–∏—Ç–∞–º–µ–Ω                    62.4       0.08    73,294
+ Zafarobod                  –ó–∞—Ñ–∞—Ä–æ–±–æ–¥                   45.9       0.10    27,488
+Source: World Bank calculations using Census 2010 and TLSS 2009.
+
+
+
+
+                                          31
+                                                                                                               ANNEX B
+                                                                                           MULTIDIMENSIONAL POVERTY INDICATOR BY DISTRICT, in %
+
+
+
+
+                                                                                                         Dep Demo1
+
+
+                                                                                                                     Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                                                MPI Severe
+                                                                                                                                                                                                           Dep_Infra4
+                                                                                                                                                                                              Dep_Infra3
+
+
+
+
+                                                                                                                                                                                                                        Dep_Infra5
+                                                                                                                                 Dep Educ1
+
+
+                                                                                                                                             Dep Educ2
+
+
+
+
+                                                                                                                                                                                                                                                             Vulnerable
+                                                                                                                                                                    Dep Infra1
+
+
+                                                                                                                                                                                 Dep Infra2
+                                                                                                                                                         Dep Emp1
+
+
+
+
+                                                                                                                                                                                                                                     MPI Poor
+
+
+
+
+                                                                                                                                                                                                                                                               MPI
+                                                                                       District
+                                                                            Dushanbe       –î—É—à–∞–Ω–±–µ           1       17          32          58          16         19            8            9            4           21           22          5              24
+                                        –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ
+
+
+
+
+                                                                            Faizobod       –§–∞–π–∑–∞–±–∞–¥          2       26          45          75          21         90           81           90           92           94           78         49              17
+ Dushanbe and Districts of Republican
+
+
+
+
+                     Hisor            –ì–∏—Å—Å–∞—Ä                                                                 1       25          57          82          11         89           80           87           81           92           79         46              18
+                     Jirgatol         –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                                                             1       34          29          88          13         95           96           93           84           99           83         45              17
+                     Nurobod          –ù—É—Ä–∞–±–∞–¥                                                                1       32          62          91          16         86           88           80           83           99           85         54              14
+                     Rasht            –†–∞—à—Ç                                                                   1       29          54          88          20         86           72           83           82           96           79         49              19
+                     Roghun           –†–æ–≥—É–Ω                                                                  1       28          39          84          14         51           33           50           47           53           49         28              21
+                     Rudaki           –†—É–¥–∞–∫–∏                                                                 1       27          60          83          15         87           69           80           77           93           77         44              19
+                     Shahrinaw        –®–∞—Ö—Ä–∏–Ω–∞–≤                                                               1       22          49          78          15         89           81           86           67           93           71         40              24
+                     Tavildara        –¢–∞–≤–∏–ª–¥–∞—Ä–∞                                                              1       42          53          79          11         93           91           92           89           99           85         56              13
+ Subordination
+
+
+
+                                        –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+
+
+
+
+                     Tojikobod        –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                                                             1       27          44          88          19         95           92           93           93           98           87         53              12
+                     Tursunzoda       –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                                                             1       22          42          84          13         74           53           72           65           76           63         34              21
+                     Vahdat           –í–∞—Ö–¥–∞—Ç                                                                 1       23          59          83          18         82           77           76           72           84           76         45              17
+                     Varzob           –í–∞—Ä–∑–æ–±                                                                 1       26          62          72          24         90           77           80           90           98           81         49              18
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                                                                   32
+                                                                                                                                   Dep Demo1
+
+
+                                                                                                                                                           Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                  MPI Severe
+                                                                                                                                                                                                                                                                                                              Dep_Infra3
+
+
+                                                                                                                                                                                                                                                                                                                                        Dep_Infra4
+
+
+                                                                                                                                                                                                                                                                                                                                                                  Dep_Infra5
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                 Vulnerable
+                                                                                                                                                                                   Dep Educ1
+
+
+                                                                                                                                                                                                           Dep Educ2
+
+
+
+
+                                                                                                                                                                                                                                                          Dep Infra1
+
+
+                                                                                                                                                                                                                                                                                    Dep Infra2
+                                                                                                                                                                                                                                  Dep Emp1
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                          MPI Poor
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                    MPI
+                                      District
+                        Dushanbe          –î—É—à–∞–Ω–±–µ                                                                                      1                   17                      32                      58                     16                      19                         8                         9                         4                        21                      22                       5                    24
+                        Faizobod          –§–∞–π–∑–∞–±–∞–¥                                                                                     2                   26                      45                      75                     21                      90                        81                        90                        92                        94                      78                      49                    17
+                                                       –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ
+    Dushanbe and Districts of Republican
+
+
+
+
+                        Hisor             –ì–∏—Å—Å–∞—Ä                                                                                       1                   25                      57                      82                     11                      89                        80                        87                        81                        92                      79                      46                    18
+                        Jirgatol          –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                                                                                   1                   34                      29                      88                     13                      95                        96                        93                        84                        99                      83                      45                    17
+                        Nurobod           –ù—É—Ä–∞–±–∞–¥                                                                                      1                   32                      62                      91                     16                      86                        88                        80                        83                        99                      85                      54                    14
+                        Rasht             –†–∞—à—Ç                                                                                         1                   29                      54                      88                     20                      86                        72                        83                        82                        96                      79                      49                    19
+                        Roghun            –†–æ–≥—É–Ω                                                                                        1                   28                      39                      84                     14                      51                        33                        50                        47                        53                      49                      28                    21
+                        Rudaki            –†—É–¥–∞–∫–∏                                                                                       1                   27                      60                      83                     15                      87                        69                        80                        77                        93                      77                      44                    19
+                        Shahrinaw         –®–∞—Ö—Ä–∏–Ω–∞–≤                                                                                     1                   22                      49                      78                     15                      89                        81                        86                        67                        93                      71                      40                    24
+                        Tavildara         –¢–∞–≤–∏–ª–¥–∞—Ä–∞                                                                                    1                   42                      53                      79                     11                      93                        91                        92                        89                        99                      85                      56                    13
+    Subordination
+
+
+
+
+                                                       –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+
+
+
+
+                        Tojikobod         –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                                                                                   1                   27                      44                      88                     19                      95                        92                        93                        93                        98                      87                      53                    12
+                        Tursunzoda        –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                                                                                   1                   22                      42                      84                     13                      74                        53                        72                        65                        76                      63                      34                    21
+                        Vahdat            –í–∞—Ö–¥–∞—Ç                                                                                       1                   23                      59                      83                     18                      82                        77                        76                        72                        84                      76                      45                    17
+                        Varzob            –í–∞—Ä–∑–æ–±                                                                                       1                   26                      62                      72                     24                      90                        77                        80                        90                        98                      81                      49                    18
+Source: World Bank calculations using Census 2010.
+                                                                                                                       Dep Demo1
+
+
+                                                                                                                                               Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                     MPI Severe
+                                                                                                                                                                                                                                                                                                 Dep_Infra3
+
+
+                                                                                                                                                                                                                                                                                                                           Dep_Infra4
+
+
+                                                                                                                                                                                                                                                                                                                                                     Dep_Infra5
+                                                                                                                                                                       Dep Educ1
+
+
+                                                                                                                                                                                               Dep Educ2
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                           Vulnerable
+                                                                                                                                                                                                                                             Dep Infra1
+
+
+                                                                                                                                                                                                                                                                       Dep Infra2
+                                                                                                                                                                                                                       Dep Emp1
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                               MPI Poor
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                             MPI
+                                                                                                       District
+                                                                                           Darvoz           –î–∞—Ä–≤–æ–∑         1                   24                      45                      68                      12                    98                        98                        71                        91                        99                        71                    39                        28
+                                           –ì–æ—Ä–Ω–æ-–ë–∞–¥–∞—Ö—à–∞–Ω—Å–∫–∞—è
+ Autonomous Province
+
+
+
+
+                                                                                                            –ò—à–∫–∞—à–∏–º
+                                           –ê–≤—Ç–æ–Ω–æ–º–Ω–∞—è –æ–±–ª–∞—Å—Ç—å
+
+
+
+
+                                                                                           Ishkoshim                       1                   17                      43                      75                      14                    89                        93                        80                        84                        94                        73                    38                        22
+ Gorno-Badakhshan
+
+
+
+
+                                                                                           Khorugh          –•–æ—Ä–æ–≥          1                    9                      19                      44                      15                    54                        55                        32                        29                        56                        26                     9                        33
+                                                                                           Murghob          –ú—É—Ä–≥–∞–±         1                   21                      22                      84                      36                    93                        97                        86                        84                        95                        79                    50                        19
+                                                                                           Roshtqala        –†–æ—à—Ç–∫–∞–ª–∞       0                   13                      28                      68                      19                    97                        97                        83                        91                        99                        71                    34                        28
+                     Rushon            –†—É—à–∞–Ω                                                                               0                   13                      25                      65                      11                    97                        95                        71                        80                        99                        57                    21                        40
+                     Shughnon          –®—É–≥–Ω–∞–Ω                                                                              0                   11                      26                      60                      19                    99                        97                        89                        92                        99                        68                    33                        31
+                     Vanj              –í–∞–Ω—á                                                                                1                   23                      28                      71                       9                    88                        94                        88                        81                        96                        67                    29                        31
+Source: World Bank calculations using Census 2010.
+
+                                                                                                                                                                         33
+                                                                                                                                                                                                                                  MPI Vulnerable
+                                                                             Dep Demo1
+
+
+                                                                                         Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                     MPI Severe
+                                                                                                                                                                   Dep_Infra3
+
+
+                                                                                                                                                                                Dep_Infra4
+
+
+                                                                                                                                                                                             Dep_Infra5
+                                                                                                      Dep Educ1
+
+
+                                                                                                                  Dep Educ2
+
+
+
+
+                                                                                                                                         Dep Infra1
+
+
+                                                                                                                                                      Dep Infra2
+                                                                                                                              Dep Emp1
+
+
+
+
+                                                                                                                                                                                                          MPI Poor
+                                      District
+                        Dushanbe          –î—É—à–∞–Ω–±–µ                                1       17           32          58          16         19            8            9            4           21           22          5           24
+                        Faizobod          –§–∞–π–∑–∞–±–∞–¥                               2       26           45          75          21         90           81           90           92           94           78         49           17
+                                         –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ
+  Dushanbe and Districts of Republican
+
+
+
+
+                        Hisor             –ì–∏—Å—Å–∞—Ä                                 1       25           57          82          11         89           80           87           81           92           79         46           18
+                        Jirgatol          –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                             1       34           29          88          13         95           96           93           84           99           83         45           17
+                        Nurobod           –ù—É—Ä–∞–±–∞–¥                                1       32           62          91          16         86           88           80           83           99           85         54           14
+                        Rasht             –†–∞—à—Ç                                   1       29           54          88          20         86           72           83           82           96           79         49           19
+                        Roghun            –†–æ–≥—É–Ω                                  1       28           39          84          14         51           33           50           47           53           49         28           21
+                        Rudaki            –†—É–¥–∞–∫–∏                                 1       27           60          83          15         87           69           80           77           93           77         44           19
+                        Shahrinaw         –®–∞—Ö—Ä–∏–Ω–∞–≤                               1       22           49          78          15         89           81           86           67           93           71         40           24
+                        Tavildara         –¢–∞–≤–∏–ª–¥–∞—Ä–∞                              1       42           53          79          11         93           91           92           89           99           85         56           13
+  Subordination
+
+
+
+
+                                         –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+
+
+
+
+                        Tojikobod         –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                             1       27           44          88          19         95           92           93           93           98           87         53           12
+                        Tursunzoda        –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                             1       22           42          84          13         74           53           72           65           76           63         34           21
+                        Vahdat            –í–∞—Ö–¥–∞—Ç                                 1       23           59          83          18         82           77           76           72           84           76         45           17
+                        Varzob            –í–∞—Ä–∑–æ–±                                 1       26           62          72          24         90           77           80           90           98           81         49           18
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                                     34
+                                                                                                                                                                                                                   MPI Vulnerable
+                                                               Dep Demo1
+
+
+                                                                           Dep Demo2
+
+
+
+
+                                                                                                                                                                                                      MPI Severe
+                                                                                                                                                    Dep_Infra3
+
+
+                                                                                                                                                                 Dep_Infra4
+
+
+                                                                                                                                                                              Dep_Infra5
+                                                                                       Dep Educ1
+
+
+                                                                                                   Dep Educ2
+
+
+
+
+                                                                                                                          Dep Infra1
+
+
+                                                                                                                                       Dep Infra2
+                                                                                                               Dep Emp1
+
+
+
+
+                                                                                                                                                                                           MPI Poor
+                                           District
+                                Baljuvon     –ë–∞–ª—å–¥–∂—É–≤–æ–Ω            1       37          62          86           7         83           89           90           77           97           83         49           16
+                                Bokhtar      –ë–æ—Ö—Ç–∞—Ä                1       26          44          84          12         83           83           81           80           96           74         39           23
+                                Danghara     –î–∞–Ω–≥–∞—Ä–∞               1       30          52          82          20         85           82           80           75           94           77         46           20
+                                Farkhor        –§–∞—Ä—Ö–æ—Ä              1       28          39          78          15         88           86           87           85           96           77         42           21
+                                Hamadoni       –•–∞–º–∞–¥–æ–Ω–∏            1       26          34          78          14         92           85           88           87           95           76         39           21
+                                Jilikul        –î–∂–∏–ª–∏–∫—É–ª—å           1       28          46          88          11         84           93           84           78           91           80         43           18
+                                Jomi           –ê. –î–∂–æ–º–∏            1       27          44          89          12         92           91           84           86           95           82         47           15
+                                Khovaling      –•–æ–≤–∞–ª–∏–Ω–≥            1       34          60          84          16         86           88           89           83           96           84         54           15
+                                Khuroson       –•—É—Ä–æ—Å–æ–Ω             1       28          53          90          18         81           84           83           76           94           81         48           17
+                                Kulob          –ö—É–ª—è–±               1       24          34          68          17         68           53           63           46           75           52         24           29
+                                Muminobod      –ú—É–º–∏–Ω–æ–±–æ–¥           1       29          50          79          13         73           78           87           76           94           74         38           23
+                                Norak          –ù—É—Ä–µ–∫               1       25          49          81          13         50           44           37           43           50           49         24           25
+                                Nosiri         –ù–æ—Å–∏—Ä–∏ –•–∏—Å—Ä–∞–≤
+                                                                   1       26          35          92             7       88           93           85           92           97           80         38           19
+                                Khisrav
+                                Panj   –ü—è–Ω–¥–∂                       1       26          39          89           8         88           88           81           77           93           75         36           22
+                                       –ö–∞–±–æ–¥–∏—ë–Ω
+                                Qabodiyon                          1       22          30          95           8         77           91           86           71           96           73         30           26
+                                       –ö—É–º—Å–∞–Ω–≥–∏—Ä
+                                Qumsangir                          2       28          55          91          11         84           88           82           78           91           81         46           17
+                                       –ö—É—Ä–≥–∞–Ω-–¢—é–±–µ
+                                Qurghonteppa                       1       21          26          69          11         26           11           22            4           26           21          6           28
+                                Rumi   –î–∂–∞–ª–æ–ª–∏–¥–¥–∏–Ω
+                                                                   2       27          42          87          11         85           82           81           81           89           76         43           18
+                                       –†—É–º–∏
+           –•–∞—Ç–ª–æ–Ω—Å–∫–∞—è –æ–±–ª–∞—Å—Ç—å
+
+
+
+
+                     Sarband           –°–∞—Ä–±–∞–Ω–¥                     1       24          50          80          23         54           50           53           38           57           56         29           24
+                     Shahrtuz          –®–∞–∞—Ä—Ç—É–∑                     1       26          22          90           9         93           88           87           83           94           77         34           19
+                     Shuroobod         –®—É—Ä–æ–æ–±–æ–¥                    1       31          36          76          11         96           92           81           93           98           77         40           22
+                     Temurmalik        –¢–µ–º—É—Ä–º–∞–ª–∏–∫                  1       28          49          84          17         87           87           86           87           96           80         48           18
+                     Vakhsh            –í–∞—Ö—à                        1       29          45          89          10         92           91           77           86           96           81         44           18
+ Khatlon
+
+
+
+
+                     Vose              –í–æ—Å–µ                        1       29          42          80          12         88           88           86           83           95           77         41           21
+                     Yovon             –Ø–≤–∞–Ω                        1       30          45          86          14         75           73           75           72           78           71         42           18
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                       35
+                                                                                                                                                                                                                                  MPI Vulnerable
+                                                                             Dep Demo1
+
+
+                                                                                         Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                     MPI Severe
+                                                                                                                                                                   Dep_Infra3
+
+
+                                                                                                                                                                                Dep_Infra4
+
+
+                                                                                                                                                                                             Dep_Infra5
+                                                                                                      Dep Educ1
+
+
+                                                                                                                  Dep Educ2
+
+
+
+
+                                                                                                                                         Dep Infra1
+
+
+                                                                                                                                                      Dep Infra2
+                                                                                                                              Dep Emp1
+
+
+
+
+                                                                                                                                                                                                          MPI Poor
+                                      District
+                        Dushanbe          –î—É—à–∞–Ω–±–µ                                1       17           32          58          16         19            8            9            4           21           22          5           24
+                        Faizobod          –§–∞–π–∑–∞–±–∞–¥                               2       26           45          75          21         90           81           90           92           94           78         49           17
+                                         –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ
+  Dushanbe and Districts of Republican
+
+
+
+
+                        Hisor             –ì–∏—Å—Å–∞—Ä                                 1       25           57          82          11         89           80           87           81           92           79         46           18
+                        Jirgatol          –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                             1       34           29          88          13         95           96           93           84           99           83         45           17
+                        Nurobod           –ù—É—Ä–∞–±–∞–¥                                1       32           62          91          16         86           88           80           83           99           85         54           14
+                        Rasht             –†–∞—à—Ç                                   1       29           54          88          20         86           72           83           82           96           79         49           19
+                        Roghun            –†–æ–≥—É–Ω                                  1       28           39          84          14         51           33           50           47           53           49         28           21
+                        Rudaki            –†—É–¥–∞–∫–∏                                 1       27           60          83          15         87           69           80           77           93           77         44           19
+                        Shahrinaw         –®–∞—Ö—Ä–∏–Ω–∞–≤                               1       22           49          78          15         89           81           86           67           93           71         40           24
+                        Tavildara         –¢–∞–≤–∏–ª–¥–∞—Ä–∞                              1       42           53          79          11         93           91           92           89           99           85         56           13
+  Subordination
+
+
+
+
+                                         –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+
+
+
+
+                        Tojikobod         –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                             1       27           44          88          19         95           92           93           93           98           87         53           12
+                        Tursunzoda        –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                             1       22           42          84          13         74           53           72           65           76           63         34           21
+                        Vahdat            –í–∞—Ö–¥–∞—Ç                                 1       23           59          83          18         82           77           76           72           84           76         45           17
+                        Varzob            –í–∞—Ä–∑–æ–±                                 1       26           62          72          24         90           77           80           90           98           81         49           18
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                                     36
+                                                                                                                                                                                                                      MPI Vulnerable
+                                                                 Dep Demo1
+
+
+                                                                             Dep Demo2
+
+
+
+
+                                                                                                                                                                                                         MPI Severe
+                                                                                                                                                       Dep_Infra3
+
+
+                                                                                                                                                                    Dep_Infra4
+
+
+                                                                                                                                                                                 Dep_Infra5
+                                                                                          Dep Educ1
+
+
+                                                                                                      Dep Educ2
+
+
+
+
+                                                                                                                             Dep Infra1
+
+
+                                                                                                                                          Dep Infra2
+                                                                                                                  Dep Emp1
+
+
+
+
+                                                                                                                                                                                              MPI Poor
+                                             District
+                                Asht               –ê—à—Ç               1       21          31           81          12         93           88           96           92           98           79         40           19
+                                Ayni               –ê–π–Ω–∏              1       23          30           79           8         88           90           89           86           93           74         34           21
+                                Bobojon            –ë. –ì–∞—Ñ—É—Ä–æ–≤
+                                                                     1       16          40           79          12         84           74           85           63           91           63         30           29
+                                Ghafurov
+                                Chkalovsk          –ß–∫–∞–ª–æ–≤—Å–∫          0       15          26           60           9         17            7           22           12           18           15          4           26
+                                Ghonchi            –ì–∞–Ω—á–∏–Ω—Å–∫–∏–π        1       24          43           84           9         96           95           92           91           99           84         47           15
+                                Isfara             –ò—Å—Ñ–∞—Ä–∞            1       18          33           84          15         86           78           86           73           90           69         33           25
+                                Istaravshan        –ò—Å—Ç–∞—Ä–∞–≤—à–∞–Ω        1       22          43           86           9         86           78           87           70           89           73         35           22
+                                Jabbor Rasulov     –î–∂. –†–∞—Å—É–ª–æ–≤       1       16          29           83          12         80           86           83           79           88           66         28           29
+                                Khujand           –•—É–¥–∂–∞–Ω–¥            0       11          23           62           9         14            3           15            2           24           13          2           21
+                                Konibodom         –ö–∞–Ω–∏–±–∞–¥–∞–º          1       15          39           84          16         91           86           84           74           92           72         37           23
+                                Kuhistoni         –ö—É—Ö.
+                                                                     2       35          85           89             5       95           95           95           73           99           93         66                 6
+                                                  –ú–∞—Å—Ç—á–æ—Ö—Å–∫–∏–π
+           –°–æ–≥–¥–∏–π—Å–∫–∞—è –æ–±–ª–∞—Å—Ç—å
+
+
+
+
+                                Mastchoh
+                                Mastchoh          –ú–∞—Ç—á–∏–Ω—Å–∫–∏–π         2       21          45           84          10         84           71           87           60           90           66         30           28
+                                Panjakent         –ü–µ–Ω–¥–∂–∏–∫–µ–Ω—Ç         1       22          50           86          11         83           76           82           70           88           72         38           22
+                     Qayraqqum           –ö–∞–π—Ä–∞–∫–∫—É–º                   1       16          32           80          16         36           19           47           24           32           34         15           26
+                     Shahriston          –®–∞—Ö—Ä–∏—Å—Ç–∞–Ω                   1       28          31           77          11         86           91           93           94           88           73         35           26
+ Sughd
+
+
+
+
+                     Spitamen            –°–ø–∏—Ç–∞–º–µ–Ω                    1       15          38           84          15         88           79           87           79           91           72         37           23
+                     Zafarobod           –ó–∞—Ñ–∞—Ä–æ–±–æ–¥                   1       20          39           87          10         50           77           74           57           79           57         24           31
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                         37
+                                                                                                                                                                                                                                  MPI Vulnerable
+                                                                             Dep Demo1
+
+
+                                                                                         Dep Demo2
+
+
+
+
+                                                                                                                                                                                                                     MPI Severe
+                                                                                                                                                                   Dep_Infra3
+
+
+                                                                                                                                                                                Dep_Infra4
+
+
+                                                                                                                                                                                             Dep_Infra5
+                                                                                                      Dep Educ1
+
+
+                                                                                                                  Dep Educ2
+
+
+
+
+                                                                                                                                         Dep Infra1
+
+
+                                                                                                                                                      Dep Infra2
+                                                                                                                              Dep Emp1
+
+
+
+
+                                                                                                                                                                                                          MPI Poor
+                                      District
+                        Dushanbe          –î—É—à–∞–Ω–±–µ                                1       17           32          58          16         19            8            9            4           21           22          5           24
+                        Faizobod          –§–∞–π–∑–∞–±–∞–¥                               2       26           45          75          21         90           81           90           92           94           78         49           17
+                                         –î—É—à–∞–Ω–±–µ –∏ –†–∞–π–æ–Ω—ã –†–µ—Å–ø—É–±–ª–∏–∫–∞–Ω—Å–∫–æ–≥–æ
+  Dushanbe and Districts of Republican
+
+
+
+
+                        Hisor             –ì–∏—Å—Å–∞—Ä                                 1       25           57          82          11         89           80           87           81           92           79         46           18
+                        Jirgatol          –î–∂–∏—Ä–≥–∏—Ç–∞–ª—å                             1       34           29          88          13         95           96           93           84           99           83         45           17
+                        Nurobod           –ù—É—Ä–∞–±–∞–¥                                1       32           62          91          16         86           88           80           83           99           85         54           14
+                        Rasht             –†–∞—à—Ç                                   1       29           54          88          20         86           72           83           82           96           79         49           19
+                        Roghun            –†–æ–≥—É–Ω                                  1       28           39          84          14         51           33           50           47           53           49         28           21
+                        Rudaki            –†—É–¥–∞–∫–∏                                 1       27           60          83          15         87           69           80           77           93           77         44           19
+                        Shahrinaw         –®–∞—Ö—Ä–∏–Ω–∞–≤                               1       22           49          78          15         89           81           86           67           93           71         40           24
+                        Tavildara         –¢–∞–≤–∏–ª–¥–∞—Ä–∞                              1       42           53          79          11         93           91           92           89           99           85         56           13
+  Subordination
+
+
+
+
+                                         –ü–æ–¥—á–∏–Ω–µ–Ω–∏—è
+
+
+
+
+                        Tojikobod         –¢–∞–¥–∂–∏–∫–æ–±–æ–¥                             1       27           44          88          19         95           92           93           93           98           87         53           12
+                        Tursunzoda        –¢—É—Ä—Å—É–Ω–∑–∞–¥–µ                             1       22           42          84          13         74           53           72           65           76           63         34           21
+                        Vahdat            –í–∞—Ö–¥–∞—Ç                                 1       23           59          83          18         82           77           76           72           84           76         45           17
+                        Varzob            –í–∞—Ä–∑–æ–±                                 1       26           62          72          24         90           77           80           90           98           81         49           18
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                                                                     38
+                                        ANNEX C ‚Äì MPI INDICATOR MAPS
+
+                                   Figure C1: MPI Map with 8 Indicators
+
+
+
+
+Note: Poverty rates refer to the share of poor in the district.
+Source: World Bank calculations using Census 2010.
+
+                              Figure C2: MPI Map with 7 Indicators
+
+
+
+
+Note: Poverty rates refer to the share of poor in the district.
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                       39
+                                 Figure C3: MPI Map with 6 Indicators
+
+
+
+
+Note: Poverty rates refer to the share of poor in the district.
+Source: World Bank calculations using Census 2010.
+
+
+
+
+                                                       40
+

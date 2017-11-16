@@ -7,8 +7,10 @@ num_pages = 0
 # World Bank public API for documents is on: http://search.worldbank.org/api/v2/wds
 # Use filters in the GUI to generate the URL
 # Do a first request to the API to discover the total number of pages
+# Loop in the different pages, and get the txturl field of each document
+# Save the files locally using a streaming and keep a log of the last downloaded file and page number
 document_type = "Working+Paper"
-start_date = "2016-01-01"
+start_date = "2016-02-01"
 end_date = "2016-05-01"
 
 url = "http://search.worldbank.org/api/v2/wds?format=json&docty_exact=" + document_type  +"&str_docdt=" + start_date + "&end_docdt=" + end_date + "&srt=docdt&order=desc"
@@ -16,14 +18,14 @@ response = requests.get(url).json()
 num_pages = response['total']
 
 # Loop in the pages
-for page in range(1, int(num_pages)):
-	print (page)
+for page in range(8, int(num_pages)):
+	print (str(page) + " of " + str(num_pages))
 	req = "http://search.worldbank.org/api/v2/wds?format=json&os=" + str(page) + "&docty_exact=" + document_type  +"&str_docdt=" + start_date + "&end_docdt=" + end_date + "&srt=docdt&order=desc"
 
 	response = requests.get(req).json()
 	# For every item in the page, get the txturl field
 	for item in response['documents']:
-		# Test if a txturl field exists for this specific item (otherwise might throw an error)
+		# Test if a txturl field exists for this specific item
 		if "txturl" in response["documents"][item]:
 			# Get the url of the file to download
 			txturl = (response["documents"][item]["txturl"])
@@ -42,4 +44,4 @@ for page in range(1, int(num_pages)):
 					fd.write(chunk)
 
 			with open('log.txt', 'w') as log_file:
-				log_file.write("page: " + str(page) + ', guid: ' + response["documents"][item]["guid"] + ' , url: ' + txturl)
+				log_file.write("page: " + str(page) + ', guid: ' + response["documents"][item]["guid"])
