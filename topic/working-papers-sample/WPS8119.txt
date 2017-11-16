@@ -1,0 +1,1782 @@
+                                                     WPS8119
+
+
+Policy Research Working Paper                       8119
+
+
+
+
+                   Deliberative Inequality
+  A Text-As-Data Study of Tamil Nadu’s Village Assemblies
+
+                              Ramya Parthasarathy
+                                Vijayendra Rao
+                              Nethra Palaniswamy
+
+
+
+
+Development Research Group
+Poverty and Inequality Team
+June 2017
+Policy Research Working Paper 8119
+
+
+  Abstract
+  The resurgence of deliberative institutions in the developing                      officials to bluster and read banal announcements, but
+  world has prompted a renewed interest in the dynamics of                           rather, provide opportunities for citizens to challenge their
+  citizen engagement. Using text-as-data methods on an orig-                         elected officials, demand transparency, and provide infor-
+  inal corpus of village assembly transcripts from rural Tamil                       mation about authentic local development needs. Second,
+  Nadu, India, this paper opens the “black box” of delibera-                         the study finds that across multiple measures of deliberative
+  tion to examine the gendered and status-based patterns of                          influence, women are at a disadvantage relative to men;
+  influence. Drawing on normative theories of deliberation,                          women are less likely to speak, set the agenda, and receive
+  this analysis identifies a set of clear empirical standards for                    a relevant response from state officials. Finally, the paper
+ “good” deliberation, based on an individual’s ability both to                       shows that although quotas for women on village councils
+  speak and be heard, and uses natural language processing                           have little impact on the likelihood that they speak, they
+  methods to generate these measures. The study first shows                          do improve the likelihood that female citizens are heard.
+  that these assemblies are not mere “talking shop” for state
+
+
+
+
+  This paper is a product of the Poverty and Inequality Team, Development Research Group. It is part of a larger effort by
+  the World Bank to provide open access to its research and make a contribution to development policy discussions around
+  the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may
+  be contacted at vrao@worldbank.org.
+
+
+
+
+          The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+          issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+          names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+          of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+          its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                        Produced by the Research Support Team
+                       Deliberative Inequality:
+                  A Text-As-Data Study of Tamil Nadu’s
+                           Village Assemblies∗
+                                          Ramya Parthasarathy†
+
+                                               Vijayendra Rao‡
+
+                                           Nethra Palaniswamy§
+
+
+
+                                                  JEL Codes
+                                            O12, C49, D02, D70, J16
+
+
+                                             Key Words
+              gender, deliberation. village democracy, India, text-as-data, participation
+
+
+
+
+   ∗
+        is paper is a product of the World Bank’s Social Observatory. Financial support from the contributions of (1)
+UK Aid from the UK government, (2) the Australian Department’s of Foreign A airs and Trade, and (3) the European
+Commission (EC) through the South Asia Food and Nutrition Security Initiative (SAFANSI), which is administered
+by the World Bank, is gratefully acknowledged. e authors are indebted to R.V. Shajeevana, the former Additional
+Project Director of the Pudhu Vaazhu Project, for her advice and assistance; Kevin Crockford and Samik Sundar Das
+for their support; as well as Madhulika Khanna, Nishtha Kochhar, Smriti Sakhamuri, G. Manivannan, and GFK-Mode
+for their help with the eldwork. e authors also thank Avidit Acharya, Lisa Blaydes, Nick Eubank, Adriane Fresh,
+Justin Grimmer, David Laitin, Jeremy Weinstein, and participants of the Indian Political Economy working group in
+Washington, D.C. for comments and suggestions. e views expressed here do not necessarily re ect the UK, EC, or
+Australian government’s o cial policies or the policies of the World Bank and its Board of Executive Directors.
+    †
+      Dept. of Political Science, Stanford University. ramyap1@stanford.edu
+    ‡
+      Development Research Group, World Bank. vrao@worldbank.org
+    §
+      Poverty Global Practice, World Bank. npalaniswamy@worldbank.org
+1    Introduction
+
+In the face of concerns that aid programs have not beem serving those who need them most,
+community-led development has moved to center stage in the aid industry (Mansuri and Rao,
+2012). Participatory development programs draw on theories of deliberative democracy, which
+emphasize the role of citizens in coming to reasoned compromises with one another over ma ers
+of public interest. By moving decision-making power from government o ce to the village itself,
+these programs have been viewed as a way to wrest power from elite capture and improve the
+equity of allocations across local communities. Whether in village meetings or neighborhood as-
+sociations (Auerbach, 2017), citizen engagement of this sort is thought to result in more e ciently
+implemented and inclusively distributed development outcomes.         ese instrumental aims, how-
+ever, are only part of the reason that international organizations and national governments have
+embraced community-led development; the other key reason is that we increasingly think that
+citizen’s voice has inherent normative value (Elster, 1998; Dryzek, 1994; Gu man and       ompson,
+2004). As such, this shi towards deliberation has accompanied a shi in our understanding of
+development itself — from narrow economic transformation to a more holistic view that includes
+human capabilities, social development, and justice (Sen, 2001).
+    Despite their promise, however, there are strong reasons to think that deliberative institutions
+may be ill-equipped to deliver on their instrumental or normative goals (Heller and Rao, 2015). Of
+particular concern are the ways in which inequalities — across gender, class, caste, and position
+— may be reinforced or even exacerbated in deliberative fora. First, deliberative forums may
+perpetuate existing inequalities among citizens. Unlike aggregative forms of democracy, where
+standing among voters is leveled by the equal weighting of ballots, and institutional safeguards
+like the secret ballot protect against coercion, deliberation requires public, o en costly, exercise
+of voice. It takes place in highly localized se ings, where social norms shape the actions of
+individuals within the group.      ese issues may be particularly acute for women, who tend to
+be perceived as less in uential than men, who are less likely to set the agenda, and who are less
+likely to impact outcomes (Karpowitz and Mendelberg, 2014).
+
+                                                 2
+   Second, inequality between voters and state o cials can undermine the promise of deliber-
+ative institutions. When participation is induced by the state, as in decentralization e orts or
+community-driven development programs, agents of the state o en are stuck in the ironic situ-
+ation of having to act against their self-interest by promoting institutions whose purpose is to
+undermine their power (Mansuri and Rao, 2012).        erefore, local bureaucrats and politicians may
+try to undermine these institutions by canceling them (Besley et al., 2005), crowding out mean-
+ingful deliberation with bureaucratic announcements, and ignoring voters’ claims and evading
+their requests (Bha acharjee and Cha opadhyay, 2011).
+   Whether and to what extent these forms of dominance — of men over women, of the elite over
+the poor, of state o cials over citizens — a ect deliberative institutions in practice is an empirical
+question, but one that has been challenging to study systematically on a large scale, particularly
+in real-world, citizen-centered deliberative forums. In this paper, we overcome these challenges
+by applying Natural Language Processing (NLP, or text-as-data) methods to an original corpus of
+village assembly transcripts from rural India to systematically examine variation in the quality
+of deliberation. In particular, we examine the relationship between deliberative in uence and the
+gender or position (citizen versus o cial) of a speaker. By using NLP methods, we are able to
+quantitatively examine not only the relative oor time enjoyed by di erent types of speakers,
+but also their ability to in uence the topic of conversation (agenda-se ing power) and to make
+claims on state o cials (responsiveness of the state).
+   We nd that, despite women’s high rates of a endance in Tamil Nadu’s village assemblies,
+they are indeed the “silent sex.” Women make up 58 percent of a endees on average, but are
+responsible for one-third of the available oor time. Moreover, when women do speak on a
+particular topic, they are signi cantly less likely than men to elicit a topical or relevant response
+from state o cials — suggesting a meaningful inequality in deliberative in uence across the sexes.
+Importantly, these results hold even if we control for the particular topic that is being raised; that
+is, for any given topic, a man is more likely to get a response from an o cial than a woman.
+   In contrast to our ndings on gender inequality, we do not nd evidence that assemblies are
+
+
+                                                  3
+dominated by elected o cials. A majority of oor time is taken up by citizens, who are more likely
+than o cials to set the agenda. Moreover, while o cials o en read a set of announcements at
+the beginning of meetings, these statements are generally in response to issues raised by citizens,
+not e orts to direct conversation.         is is consistent with previous work (Ban et al., 2012), which
+ nds that India’s gram sabhas are more than mere “talking shops,” and that conversation within
+the sabhas actually re ects median household preferences within the village.
+       Our work also speaks to the literature on the impact of descriptive representation on social
+norms. In particular, we explore whether and how gender quotas for the village council presi-
+dents a ect deliberative equality. Advocates of quotas have long argued that this policy not only
+improves representation of women and minorities via the election of policy makers who may
+share their preferences, but also creates a precedent for women voicing their own preferences
+(Mansbridge, 1999). We nd that the presence of a female president has a meaningful and sig-
+ni cant impact on the ability of women to be heard and responded to. We show that women are
+not only more likely to drive conversation under female presidents, but that female presidents
+themselves are signi cantly more responsive to women constituents, consistent with the argu-
+ment that “descriptive representation facilitates vertical communication between representatives
+and constituents” (Mansbridge, 1999, p. 641) in conditions where women have been historically
+marginalized. However, the mere presence of female incumbents has no e ect on the frequency
+or volume of women’s speech — suggesting that reservations are not a panacea for gendered
+inequality in these deliberative forums.
+         is paper contributes to the growing empirical literature on deliberation, which began with
+rich and careful ethnographies of deliberation in Western se ings,1 and has since expanded to
+study developing country contexts as well. While the bulk of this literature has been limited
+to “successful” examples of deliberative resource allocation, such as participatory budgeting in
+Brazil (Baiocchi et al., 2011) and the People’s Campaign in Kerala (Heller et al., 2007), scholars
+   1
+    See Mansbridge’s (1980) study of town meetings in New England; Fung’s (2004) study of neighborhood gover-
+nance in Chicago’s South Side; Polle a’s (2004) and Polle a and Lee’s (2006) analyses of a variety of deliberative
+spaces in the US.
+
+
+
+                                                        4
+are now turning to deliberation in more challenging contexts.      rough detailed qualitative and
+ethnographic work, scholars have shown how deliberative forums can be used as a space to make
+dignity claims for underprivileged groups (Rao and Sanyal, 2010), and even as a tool to solve
+social problems such as female genital mutilation (Mackie, 2015). Other work has expanded the
+scope of deliberation to include everyday communication outside the context of formal forums
+(Swidler and Watkins, 2015). Our work builds upon this scholarship by examining deliberative
+outcomes in a challenging rural context, but departs methodologically from this earlier literature
+by quantifying inequalities in participation.
+   Beyond these observational studies, there is a growing literature that tests hypotheses de-
+rived from deliberative theory in the context of lab experiments (Fishkin and Luskin, 2005; List
+et al., 2013; Goeree and Yariv, 2011; Karpowitz et al., 2012; Karpowitz and Mendelberg, 2014).
+While such work has helped inform our understanding of how institutional contexts (e.g. deci-
+sion rules, moderators, etc.) a ect deliberative quality, studying systematic variation in the real
+world has been much more challenging. A notable exception has been the study of parliamen-
+tary debates, where the availability of data has enabled scholars to leverage temporal variation
+to study pa erns in deliberative quality (Clayton et al., 2016); unfortunately, this strand of work
+has o en been limited in its ability to test the e ects of institutional variation due to the focus
+on any single deliberative body. By contrast, our study provides a new source of transcript data
+from numerous local deliberative bodies — enabling us to correlate deliberative outcomes with
+local institutional variation, including the gender of the local politicians moderating discussion.
+Moreover, the focus on local, rather than national-level institutions, allows us to examine citizen
+voice rather than o cial debate; in doing so, we are able to address normative questions about
+whether and how citizens are able to participate in their own governance.
+      is paper also provides an important bridge between empirical work and normative theories
+of deliberation by generating a clear set of metrics that can be coded using automated methods.
+Given the considerable debate within the normative literature both about deliberative standards
+as well as the more basic question of what constitutes deliberation, there has been meaningful
+
+
+                                                5
+disagreement within the empirical literature as to how to systematically assess deliberative qual-
+ity (Myers and Mendelberg, 2013). Here, we build upon the minimalist approach to deliberation
+outlined by Mansbridge (2015), and focus on a set of context-relevant standards that relate to the
+political and ethical functions of deliberation. In doing so, we outline qualities of good delibera-
+tion that are both applicable to development contexts and that can be operationalized by future
+scholars.
+   Furthermore, this paper contributes methodologically to the study of deliberation. We show
+that the use of unsupervised but validated measures can enable scholars to evaluate large bodies
+of transcript data, even among ordinary citizens in developing country contexts. While this ap-
+proach has been used in more literate contexts — be they elite speakers in parliaments or citizens
+from rich countries — the bulk of scholarship in contexts similar to ours has engaged in time-
+intensive manual coding of data, o en to capture nuanced aspects of debate and argumentation;
+this can be prohibitively costly, limiting the volume of scholarship in this area. By contrast, our
+approach uses text as data methods to analyze a large body of transcripts and generate consistent
+measures for speakers’ oor time, agenda-se ing power, and ability to generate a response from
+the state. By validating these measures against survey data, we hope to encourage scholars that
+textual analysis for the study of deliberation is not prohibitively costly.
+      e remainder of the paper is organized as follows: In Section 2, we provide the institutional
+context behind the Indian gram sabha, or village assembly, in which we study deliberative in-
+equality. In Section 3, we identify the standards of good deliberation relevant to this and other
+developing country contexts. In Section 4, we describe data and measures we use to evaluate the
+quality of deliberation. Here, we also describe the topic modeling methodology used to evalu-
+ate speech content. In Section 5, we descriptively document pa erns of deliberative quality and
+examine how design of the gram sabha, speci cally the use of gender quotas, may alter those
+pa erns. Finally, we discuss the implications of these results and conclude in Section 6.
+
+
+
+
+                                                  6
+2        Institutional Context: Panchayati Raj
+
+    e institutional se ing in which we examine deliberation is the gram sabha, or village assembly.
+Gram sabha were created in 1993 as part of a transfer of responsibility for the delivery of local
+public goods and services to a three-tier local government, with the village panchayat (VP) at
+the bo om level. Under the constitutional mandate, all Indian villages are to be governed by an
+elected council, composed of ward members (representing roughly 500 people each), and a pres-
+ident. In recognition of historical disadvantage for women and low castes, the amendment also
+mandated that 33 percent of seats in village councils would be reserved for women, and a number
+proportionate to their population in the village reserved for disadvantaged castes. Relevant for
+this study, the process for assigning gender quotas is as-if-random, allowing us to interpret any
+observed di erences between male and female incumbents as causal.2 In doing so, we follow a
+signi cant body of literature that leverages this assignment process to study the e ect of female
+incumbents on Indian local government (Cha opadhyay and Du o, 2004; Bhavnani, 2009; Ban
+and Rao, 2008b; Besley et al., 2005). Lastly, in addition to this executive council, the legislature
+of the village would be the gram sabha, to which every citizen of the village would be a member,
+with gram sabha meetings held at least two times a year.
+        While these mandates represented the minimal requirements for the village panchayat sys-
+tem, every Indian state was given a wide degree of leeway in how the VPs would function —
+leading to considerable variation in the VPs’ budgets, functions, and implementation of the gram
+sabha (Besley et al., 2005). In Tamil Nadu, where this study is located, the speci c functions
+and requirements of the VPs were de ned by the Tamil Nadu Panchayats Act (1994). Formally,
+the functions devolved to the VP have been to identify target populations for federal and state
+poverty alleviation programs; the construction and maintenance of basic public goods (village
+roads, streetlights, drinking water, drains); and the provision of sanitation services.
+    2
+        e speci c process for assigning women’s reservations is described in the Tamil Nadu Panchayats Rules of 1995,
+Section 7.3, Rule 7, which mandates the creation of a “list of Wards or Panchayats arranged in descending order of
+the percentage of…Women,” and then details the rotation of reservations every 10 years by proceeding down the list.
+Since the percentage of women in the population is roughly the same across the state’s Panchayats, assignment is
+as-if-random.
+
+
+                                                         7
+       Today, these assemblies constitute the most widely used deliberative institution in human
+history, a ecting over 840 million people living in approximately one million villages in rural
+India. Deliberative democracy has deep historical roots in India where, for centuries, deliber-
+ative bodies were central to systems of local governance, and religious discourse and dialogue
+(Parthasarathy and Rao, 2017). In the period of colonial rule in the 19th century the interplay
+of ideas between Western liberal philosophers and Indian intellectuals led to India becoming a
+fertile ground for experiments in governance.                   e idea of self-sustaining village democracy, in
+particular, appealed greatly to Mohandas Gandhi, who made it a central tenet of his philosophy.
+In 1993, 45 years a er independence, the Gandhian push for deliberative village democracy was
+given constitutional sanction with the passing of the 73rd amendment to the Indian constitution.
+       In general, Tamil Nadu has not been a front-runner in devolving much power to VPs, nor
+have recent improvements signi cantly improved policy devolution.3                            ough Tamil Nadu VPs
+are not su ciently well- nanced to actually deliver public goods and services on their own, they
+do play a vital role in (a) implementing the last mile of various functions and programs, and (b)
+relaying information about local needs to the higher block tier of government, which has nal
+authority on the provision of key services. For example, the VPs identify areas that need more
+drinking water; keep track of repair and construction needs; collect census data on household
+toilet access; provide information on local infrastructure needs (such as roads and drainage); and
+identify bene ciaries from the target population for several other federal and state anti-poverty
+programs.        e VP also provides information to higher levels of government on public service
+problems that range from the functioning of the public food distribution systems to glitches in
+the new electronic payments system for public works. Lastly, the VP is fully responsible for
+the full implementation (including payment of salaries) of the federal rural employment scheme
+(NREGA), which guarantees 100 days of work on public works for any individual who wants this
+work.4
+   3
+      http://www.iipa.org.in/upload/panchayat devolution index report 2012-13.
+pdf
+    4
+      Recently, payment of salaries has begun transitioning to an electronic system; as such, it is not directly controlled
+by the VP.
+
+
+                                                            8
+    Much of this information is collected via the village-wide assembly, or gram sabha, which
+serves a key venue for citizens to engage with local o cials to discuss the administration of gov-
+ernment programs. In 1998, in response to the widely acknowledged problem of infrequent gram
+sabhas, the State Government of Tamil Nadu mandated that all VPs hold a minimum of four gram
+sabhas each year: January 26th (Republic Day), May 1 (May Day), August 15th (Independence
+day) and October 2nd (the birthday of Mahatma Gandhi). Since passage, this mandate has had
+near universal compliance; today, panchayat elections and the quarterly ritual of the gram sabha
+have become ingrained into the political culture of rural Tamil Nadu.
+
+
+
+3    What Counts as (Good) Deliberation?
+
+Deliberation is a process of “mutual communication that involves weighing and re ecting on
+preferences, values and interests regarding ma ers of common concern,” (Mansbridge, 2015, 27).
+In contrast to forms of democracy that emphasize aggregate preferences via the ballot, for exam-
+ple, deliberation ideally fosters agreement by persuading people of a di erent way of thinking
+(e.g. by providing new information or changing their preferences), or by a process of reasoned
+compromise. When it is e ective, deliberation can be transformative; it can empower poor com-
+munities, enhance the capacity for collective action, and harness the capacity of communities to
+manage their own a airs (Heller and Rao, 2015).
+    De nitions of deliberation, and the normative standards underlying them, have evolved con-
+siderably over the last decade, partly as a consequence of empirical work from eld and lab set-
+tings. While more traditional de nitions of deliberation (Habermas, 1990; Elster, 1998; Dryzek,
+1994; Gu man and       ompson, 2004; Goodin, 2005) o en presume equality among actors and
+limit what counts as deliberation to claims rooted in rationality and impartiality, these standards
+have been challenged by the rapid revival of deliberative institutions in the developing world. In
+this section, we de ne the metrics by which we evaluate deliberative quality in such a se ing —
+that is, one in which inequality and illiteracy may shape pa erns of discussion and debate.
+
+
+
+                                                9
+       We begin with Mansbridge’s (2015) minimalist de nition, which explicitly acknowledges that
+deliberation, particularly among the less educated, may depart from purely “rational” speech;
+rather, deliberation may involve story-telling and emotional claims that are meant to build em-
+pathy, trigger a sense of injustice, and establish credibility. Indeed prior studies show that low
+literacy may contribute to limited “oratory competency” (Sanyal et al., 2015), where speech may
+engage in identity claims and declarations rather than rational re ection focused on communi-
+cating, and weighing between, competing interests (Rao and Sanyal, 2010).                       ough such speech
+would be excluded by a more traditional de nition of deliberation, it still constitutes “mutual
+communication regarding ma ers of common concern.” Moreover, even this type of speech can
+still provide functional bene ts, such as improving the transmission of information, coordinating
+collective action, and bolstering the legitimacy of decisions (Fearon, 1998).
+       In using this more minimalist standard for deliberation, we also depart from previous a empts
+                                                          achtiger et al.’s (2005) Discourse
+to measure deliberative quality, including, for example, B¨                                                        al-
+ity Index (DQI), which derives largely from a Habermasian vision and include measures for the
+“level” and “content” of justi cations used in arguments — components which value “rational”
+arguments over persuasive story telling or identity claims. Instead, we focus on measures that
+relate explicitly to the political and ethical functions of deliberation (Mansbridge, 2015).5                    at is,
+we conceive of good deliberation as that which (1) gives all participants an equal opportunity to
+in uence the outcome by promoting “an inclusive and egalitarian political process,”6 ; (2) embod-
+ies the ideal of mutual respect, whereby citizens listen a entively to one another, and (3) allows
+citizens to be agents who participate in the governance of their society (Mansbridge, 2015, p. 43).
+We address each of these in turn.
+   5
+      Deliberation also includes an epistemic function — to “generate opinions, preferences, and decisions that are
+appropriately informed by facts and logic and derive from substantive and meaningful consideration of relevant
+reasons” (Mansbridge, 2015, p. 42). Since we do not collect information on the subsequent outcomes from these
+assemblies, or the welfare consequences of the decisions made, we do not include measures of the epistemic quality
+of deliberation in this paper.
+    6
+      Mansbridge (2015) describes such a process as one that includes “multiple and plural voices, interests, concerns,
+and claims on the basis of feasible equality” (p. 43).
+
+
+
+
+                                                          10
+3.1       Equality of Participation
+
+First, good deliberation must give participants equal opportunity to in uence the outcome —
+at its most basic, this can be captured with a measure of oor time. While the frequency or
+volume of speech alone may not be a measure of equality, the ability or willingness to speak
+does re ect one’s authority or standing in the community. By viewing speech as a social act, we
+follow Karpowitz and Mendelberg (2014), who de ne speech is “a form of symbolic political or
+civic participation that may re ect and contribute to the sense of political e cacy and authority
+— in short, as a political act that creates civic standing” (Karpowitz and Mendelberg, 2014, 5-
+6). Understood as a political act, then, speakers’ relative amount of oor time can be a useful
+indicator of social equality.
+       Equality, of course, may be de ned across multiple axes of di erence, including class, race,
+caste, and gender. While each of these merits consideration, in this study, we focus on gender
+for three reasons: rst, there is a signi cant body of scholarship that suggests that di erences in
+communication styles may limit women’s ability to be heard, to exercise authority, and to shape
+outcomes in deliberative se ings (Karpowitz and Mendelberg, 2014). In other words, deliberation
+as a method of collective decision-making may have a gendered component — and it is of nor-
+mative importance to understand the extent of such di erences, and how they can be overcome.
+Second, concerns of gender equality are perhaps more acute in contexts like rural Tamil Nadu,
+where this study is located. In such se ings, women are o en deeply disadvantaged across key
+welfare metrics — from health outcomes to education and labor force participation. For example,
+female signature literacy in Tamil Nadu is at a mere 64.5 percent in rural areas according to the
+2011 census, with male literacy at 82.4 percent.7 Gaps in labor force participation are even more
+acute, with rural women employed half as o en as rural men (31.8 percent versus 59.3 percent).8
+Given that women enter deliberative fora at a disadvantage, then, it is important to understand
+the ways in which gender — as a description of a person’s social identity, as a dimension of style
+   7
+   “Signature” literacy is de ned as the ability to sign one’s own name — another minimalist standard.
+   8
+   Directorate of Census Operations, Government of Tamil Nadu, http://www.tn.gov.in/dear/
+Employment.pdf
+
+
+                                                  11
+of interaction, as a characteristic of the se ing — a ects pa erns and content of speech.      ird,
+from a practical perspective, gender is a relatively easy marker of social identity to observe and
+code in deliberative se ings; in contrast to class or caste, which may be hard to identify visu-
+ally, gender di erences are immediately perceptible, allowing data collection on whether men or
+women are speaking at any given moment.
+
+
+3.2   Agenda-Setting Power
+
+Second, good deliberation is characterized by citizens “listening a entively” to one another out of
+mutual respect (Mansbridge, 2015, p. 43).     at is, participants should acknowledge what is said
+by others — not merely push their own agenda forward. To capture this concept, we examine
+whether a given citizen is as likely as another to have his issue addressed by the speakers that
+follow. Consider the following example from Neganur village, in which citizens are complaining
+about various public goods and infrastructure needs.
+
+
+      Female 1: ere are many wells in our village, but the wells are without a pulley
+      wheel. Moreover, since the water is not used for any purpose, it gets wasted. So if
+      you can de-silt the wells, we can not only use the water for drinking purposes but
+      for other purposes also…
+      Male 1: e kitchen has been constructed in the balwadi [pre-school] in our village.
+      It is not used. Please arrange for the construction of a toilet for women. We also
+      need a play ground for games. e canals are muddy. We have to de-silt the canals.
+      We need a library. All our children are going to school with a dream of becoming
+      IAS and IPS o cers. But to get general knowledge, they need books in the library.
+      Our President has not say ‘no’ for any of our requests. With the hope that he will
+      de nitely do whatever we have asked, I take leave.
+      Male (O cial): We have a library in our panchayat. We have arranged for 5 magazines
+      — an English paper, e Hindu and 4 Tamil magazines. All the elderly persons and
+      children are reading. I am also asking the o cers to improve the library and have
+      passed resolution in this regard. We have already de-silted the canal and cleaned
+      it under Mahatma Gandhi Rural Employment guarantee scheme.
+                                                                        Viluppuram District
+                                                                               Vallam Block
+                                                                        Neganur Panchayat
+
+
+                                                12
+Here, a woman raises a particular issue about well water, but before she is able to get a resolution,
+a man interrupts to raise a separate set of issues, which then generate a response and resolution
+from the village o cial.    at a speaker is so obviously ignored by other participants represents
+a marked departure from good deliberation.
+   More generally, by examining pa erns in the topic of discussion across whole assemblies,
+we can identify the speakers who are most likely to drive conversation. As the example above
+highlights, we ought to be particularly concerned about the way in which gender my in uence
+agenda se ing power — a disparity that has been well documented in other contexts (Karpowitz
+and Mendelberg, 2014), and that may be present here as well.
+
+
+3.3    Responsiveness of the State
+
+Finally, good deliberation enables citizens to be active participants in their own governance.     is
+is particularly relevant given the se ing studied here, which was explicitly designed so that citi-
+zens could play a greater in local development. As described above, the rural Indian gram sabha
+was formalized to give communities greater voice in the development process and to improve
+governmental transparency and accountability. Indeed, most gram sabhas begin with an explicit
+call for citizen participation; for example, the opening remarks from the village secretary in Ma.
+Kolukkudi begin as follows:
+
+
+      Male (O cial): is gram sabha meeting takes place on the occasion of the 65th Re-
+      public Day. is is a special gram sabha. I greet the panchayat president, women’s
+      self help group members and higher o cials who have come to participate in this
+      [sabha], and I extend a warm welcome. In this gram sabha many action plans are
+      adopted. If you, the people, nd merit and demerit, you can discuss frankly
+      and settle [the issue]… You can ask any question; we are duty bound to reply
+      to them. You can nd out mistakes; you can make us feel what is wrong; you can
+      say this is wrong. We are ready to correct our mistakes. If you do not ask [anything],
+      you will not get [anything]…
+                                                                           Cuddalore District
+                                                                           Komaratchi Block
+                                                                   Ma. Kolakkudi Panchayat
+
+                                                 13
+   While most assemblies begin with such a call, the extent to which o cials actually respond to
+citizen requests varies tremendously. In Mullangudi, for example, the village president actively
+engages with a citizen who requests the construction of new infrastructure — not only exchanging
+information about potential sources of land for the requested projects, but also identifying the
+a ected parties and determining who needs to approve of the proposed solution before making
+a nal decision.
+
+
+      Male 1: My name is Veerapandiayan… A marriage hall is needed for our village,
+      crematorium is needed. Drainage is needed near the tank. Also, pathway is needed
+      for crematorium. Cement road is needed for both streets…. we place these demands
+      before you [the president]. Importantly, community hall is necessary. President,
+      you have to respond.
+      Male (President): You said that community hall is needed for the village. A er se-
+      lecting the place for this, you should ask the village administrative o cer. If you give
+      a memorandum to him he will consider the place needed for that and give consent for
+      the place where it can be built. I will get it built without any hesitation… You have
+      also asked for a marriage hall.         ere is a plot for it. But there is no poramboke
+      [government] land. ere is a poramboke [government] land near the temple. In that
+      place there is a public toilet. We do not need that. All the public are ready to give
+      in writing that [the public toilet] is not needed? Can you get it built there?
+      Male 1: at is women’s sanitary complex. So I cannot do as you say…         e women’s
+      self help groups should say that it is not needed…
+      Male 2 : We will get consent from the women’s association. A toilet facility will
+      come in the marriage hall. Let them use that. ere is no problem.     at sanitary
+      complex is only lying waste.
+      Male (President): Your demand is, of course, correct. But to a build marriage hall,
+      that place is not su cient…
+                                                                          Cuddalore District
+                                                                           Komaratchi Block
+                                                                      Mullangudi Panchayat
+
+
+Here, the president acknowledges the male citizen’s request for a community hall and a marriage
+hall, o ers a potential solution, and solicits feedback from the community about whether that
+solution is feasible. In many ways, this back-and-forth re ects the ideal form of deliberation, in
+
+
+
+                                                14
+which participants are communicating to reach a mutually agreeable decision, and where citizens
+are able to actively participate in their governance.
+     By contrast, the citizens of Veeranam receive no response to their concerns about corruption
+within their local government. Not only does the president fail to respond to citizen’s speci c
+accusation, but the panchayat secretary swi ly punts the issue to the end of the meeting, and
+redirects the conversation to another issue. Perhaps not surprisingly, the meeting ends before
+the corruption charge has been addressed.
+
+
+       Male 1: So far, no work has been without bribing anybody.
+       (Crowd murmurs.)
+       Male 2 : Wait. You answer his question.
+       Male 1: So far, has our President done any work without ge ing a bribe?
+       Male 3 (Secretary): e answer for this question will be given at the end of the meet-
+       ing. Discussion before gram sabha now regards unused open bore wells in
+       public lands and individual lands…
+                       Tiruvannamalai District,        andarampet Block, Veeranam Panchayat
+
+
+    ese starkly di erent excerpts suggest the meaningful variation in responsiveness by the state.
+As such, our last measure of deliberative quality examines how likely citizens are to receive a
+relevant response from o cials, and how that varies by the gender of the speaker, the content of
+the speech, or the characteristics of the o cials who are present.
+
+
+
+4     Data & Measures
+
+To evaluate the quality of deliberation in Tamil Nadu’s gram sahbas, we recorded, transcribed,
+and translated the proceedings of assemblies conducted on Republic Day 2014, one of the four
+mandated days for all villages in the state to hold a gram sabha.   e full sample, which consisted of
+100 such assemblies, was collected as part of a broader impact evaluation of the Pudhu Vaazhvu
+
+
+
+
+                                                  15
+Project, a woman-centered poverty alleviation program funded by the World Bank.9 For this
+paper, we focus only on villages in the control group to describe what deliberation looks like,
+absent any additional policy interventions.              ese 50 villages are spread across 9 districts, chosen
+to ensure geographic representation.10
+       From these 50 villages, we collected two forms of data: (1) full audio recordings of the gram
+sabha, and (2) a standardized questionnaire to collect information on the a endance of citizens
+and local o cials, on the nature of issues raised by citizens, and demographic data on who raised
+these issues (gender and caste).          is survey data also included a roster of state and local govern-
+ment o cials in a endance, how information on the timing of the gram sabha was communicated,
+the physical location of the assembly, and a endance at regular intervals.
+       In order to implement both the assembly recording and collection of surveys, two eld enu-
+merators were assigned to each village — one from outside the village to record data on the is-
+sues raised, and another, who was local, to collect a endance data and help identify the speaker.11
+Given that the average a endance across our gram sabhas was nearly 120 people, the introduction
+of a single enumerator from a neighboring village was unlikely to a ect local citizens’ behavior.
+   e local enumerator, who was necessary to correctly provide information on the participants’
+positions, only recorded a endance data and assisted the outside enumerator with information
+on the identities of speakers. O cial a endance data in such meetings are typically recorded
+   9
+      Village selection for the impact evaluation leveraged our knowledge of program implementation to reconstruct
+the selection process, thereby creating a matched sample of comparable treatment and control villages. More specif-
+ically, within the set of eligible districts (chosen for geograhpic representativeness, blocks were selected for assign-
+ment based on two sets of criterion: (1) a population criterion that equally weighted the SC and the ST population
+proportions and the number of below poverty line (BPL) households from census data; (2) a set of block level in-
+frastructural variables that measure the quality of infrastructure, public services and industrial backwardness. We
+generate our matched sample by matching project and non-project blocks within 9 active project districts on these
+two factors. is process allowed us to nearly replicate the original assignment process for PVP.
+   10
+      Districts include: Cuddalore, Kancheepuram, Nagapa inam, Namakkal, urvallur, Tirunelveli, Tiruppur, Tiruvan-
+namalai, and Vuluppuram.
+   11
+      Since all data had to be collected on a single day, this required a team of at least 200 enumerators — a number
+larger than any survey rm could provide. Moreover, familiarity with the gram sabha meetings was essential to our
+being able to collect this data accurately and in real time. In order to address both these constraints, we hired and
+trained local women as our eld enumerators. Using these enumerators was advantageous in being able to record
+the gram sabha proceedings without the disruption having an “outside” observer. To maintain independence of the
+data collection process, however, we ensured that eld enumerators who recorded the proceedings of the meeting
+were assigned collect data from a village in her neighboring, rather than home, district. Enumerators who helped
+identify the speakers were local residents, as local knowledge is essential in order to do this accurately.
+
+
+                                                          16
+only at the beginning of the meeting, if at all. Where available, our data on a endance at the
+time the meeting began were cross-validated with this o cial data by the external enumerator.
+       e audio recordings of meetings were transcribed and translated into a corpus of textual data
+by an independent survey rm. Transcripts included verbatim transcriptions and translations of
+the assemblies, as well identi ers on the gender and position of each speaker.12                     ese transcripts
+form the backbone of the following analysis. Each “document” in the corpus consists of an un-
+interrupted speech by a administrator, elected o cial, or citizen. From the 50 village assemblies,
+we have 1,736 such documents, each of which is identi ed by the position and gender. Table
+1 presents descriptive information about the number and character of documents within each
+village. Assemblies have relatively good a endance (with 123 people a ending on average), and
+consist of roughly 34 speeches, of which one-third are made by women. Citizens deliver just over
+half (54 percent) of speeches, with the remainder distributed between administrators (29 percent)
+and politicians (16 percent).
+
+                                 Table 1: Village-Level Summary Statistics
+                                               Mean     Std. Dev.    Median    Min       Max.
+                       Total A endance         123.51     83.77      103.00    25.00    462.00
+                       Number of Speeches      34.72      22.27       29.50    4.00      97.00
+                       Speech Length           109.92    158.22       71.68    25.60    1090.75
+                       Percent Female           0.32      0.21         0.30    0.00      0.92
+                       Percent Citizen          0.53      0.14         0.53    0.20      0.88
+                       Percent Admin            0.31      0.17         0.28    0.00      0.75
+                       Percent Politician       0.16      0.16         0.14    0.00      0.50
+
+
+
+
+4.1     A Text-As-Data Approach to Deliberation
+
+While these descriptive statistics allow us to examine who speaks within the gram sabha, to un-
+derstand the agenda-se ing power of speakers and the state’s responsiveness to citizen issues, we
+  12
+       e original data contain rich information on the position of each speaker, from school headmasters and ration
+shop owners, to elected o cials and administrators. For the purpose of our analysis, we code the speaker into
+three types: (1) administrators, who include all persons employed by the state or local government (e.g. panchayat
+secretary, block development o cer, school headmaster, village administrative o cer, etc.); (2) elected o cials, who
+include all persons who are in elected o ce (e.g. president, vice president, ward member); and (3) citizens, all people
+who neither hold a formal government job or elected o ce. ese may include members of social groups (e.g. SHGs)
+and other organizations, but are not direct employees of the state.
+
+
+                                                          17
+also examine what is said. More speci cally, we draw on natural language processing methods
+that use text as data to be er understand the content and character of speech. By treating our
+transcripts as textual data, we can estimate an unsupervised topic model, which is a computa-
+tional tool to “discover” a set of a salient topics within a document collection.
+       While the complexity of language will never be fully captured by an automated method such
+as ours, this sort of analysis can help to overcome meaningful challenges in hand-coded analyses
+of deliberation — including biases due to the researcher’s priors and inconsistencies in coding
+across various se ings. Hand-coding begins with a pre-determined set of categories into which
+documents are classi ed — based on their content, tone, etc. By contrast, the unsupervised ap-
+proach allows us to learn the underlying features of the text without imposing our own assump-
+tions.      ough this is necessarily imperfect and requires ex-post validation, it can be useful for
+identifying previously understudied or theoretically new aspects of speech in these se ings, as
+well as scaling up large volumes of textual data.
+       Prior to estimating the topic model, we pre-process the set of 1,736 documents such that
+infrequent words (those with fewer than 5 occurrences in the corpus) and certain proper nouns,
+as well as overly common “stopwords” are removed.13 Infrequent and proper nouns are o en
+names of bene ciaries, townships, or neighborhoods that are mentioned in meetings, but are not
+in common usage.        e remaining terms are then “stemmed” such that various forms of the same
+word are counted together.14 We also exclude numbers. From the original set of citizen speeches,
+1,700 documents remain a er processing.
+       Using this processed corpus, we adopt the approach of Roberts et al. (2016) to estimate a
+Structural Topic Model (STM), which allows us to inductively discover topics, or clusters of words
+that commonly co-occur within the data.            e model outputs (1) a set of topics, which are de ned
+as mixtures of words, where each word has a probability of belonging to each topic, and (2) for
+each document analyzed, the proportion of the document associated with each topic. As such,
+  13
+     Stopwords are overly common words which are ltered out before the use of natural language processing meth-
+ods to improve the estimation process. ey o en include functional words, including articles, prepositions, basic
+verbs such as “is,” and pronouns.
+  14
+     For example “repair,” “repairs,” “repairing” and “repaired” all stem to “repair.”
+
+
+                                                      18
+each document is characterized by a vector of proportions, representing the share of the document
+associated with each topics. Using STM, we identify a set of 15 topics15 discussed within the gram
+sabhas, and explore how these topics vary with the identi able characteristics of speakers and
+villages — including the gender of the speaker, the position of the speaker, and the reservation
+status of the village council president (female and/or Scheduled Caste).                             e generated topics are
+presented in Table 2, which lists the highest probability words in each topic, as well as the FREX
+words, which are both frequent and exclusive, thereby identifying the words that distinguish
+topics.16 Figure 1 presents the distribution of these topics across the full corpus.
+
+                                          Table 2: Top Word Stems by Topic
+
+   Topic                                            Top Word Stems
+   Water                                            Highest Prob: water, road, tank, street, get, facil, arrang
+                                                    FREX: road, water, x, tank, pipe, street, drink
+   Bene ciary & Voter Lists                         Highest Prob: get, give, given, card, name, person, list
+                                                    FREX: give, get, card, name, given, poverti, receiv
+   Employment & Wages                               Highest Prob: ask, peopl, work, one, told, talk, know
+                                                    FREX: talk, told, ask, whatev, know, one, mistak
+   Service Failures                                 Highest Prob: come, tell, want, say, money, done, commot
+                                                    FREX: say, tell, commot, money, want, come, bus
+   Greetings and      anks                          Highest Prob: presid, take, meet, panchayat, request, o c, member
+                                                    FREX: request, thank, hospit, particip, presid, conduct, meet
+   Ration Shop                                      Highest Prob: day, need, time, proper, shop, ration, petit
+                                                    FREX: day, need, time, proper, petit, ration, shop
+   Housing and Land Titles                          Highest Prob: hous, place, construct, month, pa a, make, everi
+                                                    FREX: pa a, said, construct, hous, gave, remain, make
+   Allocation of Funds                              Highest Prob: rupe, scheme, govern, panchayat, fund, amount, provid
+                                                    FREX: rupe, amount, allot, govern, fund, thai, scheme
+   Toilet Construction                              Highest Prob: build, toilet, land, built, govern, pay, use
+                                                    FREX: build, built, toilet, pay, land, hall, maintain
+   Education                                        Highest Prob: school, villag, children, women, panchayat, complex, pass
+                                                    FREX: school, children, complex, sanitari, pass, educ, villag
+   Intro to PVP                                     Highest Prob: group, loan, plf, regard, bank, vprc, inform
+                                                    FREX: loan, plf, bank, vprc, regard, certif, appoint
+   SHGs                                             Highest Prob: women, group, peopl, panchayat, help, list, self
+                                                    FREX: self, award, poor, status, help, women, survey
+   Environmental Protection                         Highest Prob: scheme, hous, work, employ, subject, canal, select
+                                                    FREX: canal, gandhi, subject, employ, guarante, propos, set
+   Announcements, Resolutions, and Voter’s Pledge   Highest Prob: sabha, gram, approv, panchayat, inform, place, report
+                                                    FREX: sabha, gram, approv, audit, read, report, pledg
+   Maintenance of Public Goods                      Highest Prob: panchayat, expens, discuss, use, regard, plastic, mainten
+                                                    FREX: plastic, mainten, expens, releas, avoid, discuss, instal
+
+
+
+
+       A key challenge in the text as data literature, particularly with unsupervised methods, lies
+  15
+      Since this method assumes a xed, user-speci ed number of topics, we rst assess the relative performance of
+models under a range of values (K ∈ 5, 50), and choose K = 15 for the preferred speci cation. is speci cation
+performs relatively well on a number of empirical tests (residuals t, held-out likelihood, semantic coherence, and
+exclusivity of topics), and yields topic clusters consistent with our substantive understanding of village assembly
+discussions. For robustness, we also show full results for K =20 and K =30 models in Appendix B.
+   16
+      See Roberts et al. (2016) for a fuller explanation of FREX.
+
+
+                                                             19
+                        Figure 1: Distribution of Topics Across Corpus
+
+
+
+
+in how to interpret the topics that are produced. Here, we use highest probability and FREX
+words, as well as example documents associated with each topic, to generate a substantive label
+for each topic. Consider the top documents most associated with the two most frequent topics in
+the corpus:
+
+
+     Topic: Water
+     “I request you to repair the road in Mukkarumbur East colony. Drinking water, drink-
+     ing water, drinking water, drinking water, water problem of colony has to be set
+     right.”
+     “If the tap is in regular use, water will be in good condition. You are not using the
+     tap regularly so water is not in good condition.”
+     “Please repair the pump in the junction of 3 roads. ere is no water. Or, the motor
+     has to be repaired. we have to go around for water.”
+
+     Topic: Bene ciary and Voter Lists
+     “Checking the voters’ list, and adding names in voters list for 2014: ose who have
+     completed 18 years recently may apply now for addition of their name. e corrected
+     list a er addition and deletion of names, up to October 31st has been received… If
+     anyone has come from outside to the village, they could also add their name in that
+     special camp. Application was given to the eligible persons. Now we will readout the
+     names, please listen…”
+     “As per the scheme, priority should be given to di erently-abled persons. 2 or 3
+     persons have given a list in our Panchayat. It is not known who all have given their
+
+                                              20
+        names. NREGS cards have been given to 9 villages. NREGS cards should de nitely
+        be given to di erently-abled persons.      ey should be paid salary even when they
+        simply stay at the site. is mission is mainly to identify the di erently-abled persons.
+        All should participate in the peoples status survey.        en only we will be able to
+        di erentiate the poor and the di erently abled persons.”
+        “I now read the newly included voters name at No.14, Seliambedu village. Amsaveni
+        daughter of Ramakrishnan. Suganya daughter of Gnaprakasam. Gayathri wife of
+        Kamalakannan. Kanimozhi wife of Devaraj. Aruldass. Babu son of Gnanaprakasam.
+        Sridhar son of Ragupathi. Kalaiselvan son of Madasami. Arul son of Panneer Selvam.
+           angamuthu son of Arumugam. e voters ID cards are with me. If anybody’s name
+        is omi ed, you get the form from me and ll up the form.”
+
+
+4.1.1    Topic Validation
+
+While the topics identi ed by this method are largely consistent with what we would expect in
+a gram sabha meeting, we further validate the topics generated in two ways. First, as a test of
+predictive validity, we examine whether the topics that capture proforma features of the assem-
+bly are indeed more likely to be discussed by o cials, rather than citizens. More speci cally,
+the topic model identi es a set of standard remarks — such as the reading of resolutions, the
+formal greetings and votes of thanks, and discussion of government funding allocation — as dis-
+tinct topics. If these topics capture the rote features of assemblies as they are conducted, these
+should be primarily spoken by o cials, who are responsible for convening and adjourning the
+meeting, as well as sharing information about recent public expenditures. Figure 2 plots the dif-
+ference between the expected proportion of these proforma topics between citizens and o cials
+(both elected and administrative) for the documents in the corpus. As expected, these proforma
+speeches are all signi cantly more likely to be raised by o cials, suggesting that the topics re ect
+our substantive interpretation of their content.
+   Second, we also validate the topics against the survey data collected by enumerators sent to
+each village. More speci cally, as part of the data collection process, enumerators were asked to
+record information on the types of issues raised during the assemblies. Given this data, we can
+coarsely examine whether the type and frequency of issues counted in the survey-collected data
+correspond to their counterparts in transcript data.     is comparison, while helpful, is necessarily
+
+
+                                                   21
+            Figure 2: Topical Prevalence of Proforma Topics, by Position of Speaker
+
+
+
+
+                         Note:    e gure above plots the expected topic proportion and 95%
+                         con dence interval for each proforma topic, by the speaker’s position.
+                         Coe cients greater than zero indicate topics that are more frequently
+                         raised by o cials, while those less than zero indicate topics that are
+                         more frequently raised by citizens.
+
+
+
+imperfect for two reasons: First, while the survey-collected data merely count whether an issue
+was raised within a village assembly, the transcript data shares are calculated based on the propor-
+tion of documents associated with that topic. As such, the transcript data will overweight topics
+that are discussed at length or by many speakers, relative to those that are brie y mentioned.
+Second, while many topics have clear analogues across the datasets, others are coded di erently
+across the two sources. For example, whereas the survey data identify a single topic for envi-
+ronment and sanitation issues, in the transcript data, the inductive process of topic modeling
+distinguishes between environmental protection and the maintenance of public goods, including
+sanitation and recycling issues. Given these discrepancies, we nd the closest possible analogues,
+or aggregate where necessary.          ere are also a handful of topics for which clear analogues are
+not available. For example, while the unsupervised topic model identi es “Voter and Bene ciary
+Selection” this does not come up in the survey data as an explicit issue — likely because the pro-
+cess of identifying the target poor is a regular procedure at most gram sabhas, and therefore was
+not picked by enumerators as an explicit issue.
+   Despite these di erences in measurement, however, we can still evaluate whether the relative
+
+
+
+                                                          22
+                   Table 3: Validation of Topical Prevalence Using Survey Data
+                                                     Transcript Data        Survey Data
+                    Water                                 0.1487               0.1743
+                    Wages and Employment                  0.0990               0.0647
+                    Housing                               0.0668               0.0540
+                    Ration Shop                           0.0735               0.0625
+                    Toilets                               0.0606               0.0625
+                    Environment and Sanitation            0.0617               0.0511
+                    Education                             0.0446               0.0945
+                    Funding                               0.0612               0.0260
+                    Women’s Issues                        0.0810               0.1261
+                    Note: is table presents the relative frequency of topics across both
+                    our survey and transcript data. Categories collected in the survey
+                    data were post-coded by issue area. For transcript data, documents
+                    were coded as a mixture of topics. As such, we take the share of all
+                    documents associated with that topic. Direct comparisons across the
+                    dataset was not possible for all topics, as there were only a limited set
+                    of clear analogues.
+
+
+frequency of speci c topics (water, housing, etc.) are roughly similar across the two datasets (Ta-
+ble 3).    e similar proportions (both in levels and rank) for topics with ready analogues suggests
+that our unsupervised methods re ect substantively what hand-coded results would yield.
+
+
+4.2       Measures of Deliberative Equality
+
+Having validated the output of the topic model, we can generate a set of quantitative measures
+to capture deliberative quality across our sample of villages. Deliberative quality here is assessed
+based on the three metrics identi ed above — namely, the equality of participation, agenda-se ing
+power, and responsiveness by the state.
+    To evaluate the equality of participation, we look at both the frequency and volume of speech
+by gender and position.        at is, we can examine counts for the number of speakers with each
+demographic category of interest (men versus women, citizens versus o cials). We also examine
+the length of speech as a proxy for the amount of oor time that speakers occupy.
+    To be er understand who drives the topic of conversation, we examine the sequence of speech
+topics to estimate the likelihood that a given speech is followed a speech that addresses the same
+topic. Since any given speech is modeled as a mixture across multiple documents, we focus on the
+
+
+
+                                                       23
+primary and secondary topics that are associated with each topic. More speci cally, we generate
+three measures for agenda se ing power: (1) an indicator if either the the primary or secondary
+topic of speech i is the same as the primary or secondary topic of speech i + 1 (nextSame); (2)
+the share of the next ve speeches that address either the primary or secondary topic of speech i
+(prop5same); and (3) the length of speeches for which the primary or secondary topic of speech i
+is continues to be addressed (lengthTopic ). Given the frequency of topic changes, we only measure
+this for a maximum of 5 subsequent speeches. Based on these measures, we can then examine
+whether features of the speaker or assembly are associated with greater agenda-se ing power
+within the gram sabha.
+     Lastly, since a key objective of the gram sabha is to provide citizens with the opportunity to
+speak directly to the state — to ask questions, to demand accountability, to voice complaints —
+one measure of deliberative in uence is whether state o cials directly address citizen concerns.
+To measure this, we generate a series of indicator variables to capture (a) whether a citizen’s
+speech is followed by an o cial, either elected or administrative, and (b) whether that response
+addresses the topics raised by the citizen.    e la er consideration ensures that o cials are not
+merely co-opting the conversation by switching topics, but actually engaging with the concerns
+raised by citizens.
+
+
+
+5     Patterns of Deliberative                     ality
+
+Using these measures — for equality of participation, agenda-se ing power, and ability to address
+the state — we can now examine pa erns of deliberative quality within Tamil Nadu’s gram sabhas.
+
+
+5.1     Equality of Participation
+
+    e most basic measure of equality relates to whether everyone has relatively equitable access
+to the oor. To examine this, we rst look at the share of speeches within each sabha that are
+made by citizens versus o cials, as well as for men versus women. Given that a key aim of
+
+
+                                                 24
+the assembly is to give citizens a chance to voice needs to o cials, and for o cials to respond,
+we would expect a healthy sabha to have roughly equal shares of speeches from both groups.
+Indeed, we nd that on average, citizens deliver 55.41 percent of speeches, while o cials deliver
+the remaining 44.59 percent.       ese raw speech shares support the notion that the gram sabha
+is not merely a state-dominated space, in which o cials disseminate info or overtake the space;
+rather, citizens are able to speak up and engage others in a deliberative fashion.
+   In terms of gender equity, however, we focus on speeches made by citizens and nd that
+di erences in speaking frequency are quite stark — a full 65 percent of speeches are made by
+men, while women speak only 35 percent of the time (Row 1, Table 4). Of course, such a disparity
+may simply re ect the shares of men and women in a endance; as such Table 4 also presents
+di erences in speaking frequency normalized by percent of men / women in a endance (Row 2),
+and normalized by percent of men / women among voters (Row 3). For these measures, a value
+of 1 indicates that women (or men) are speaking as frequently as their population share would
+suggest, while values greater than 1 indicate they women (or men) are speaking more frequently
+than their population share would warrant. Even with these normalizations, however, we see that
+the gender gap remains wide and signi cant. In part, this is because the a endance gap between
+men and women is not pronounced in Tamil Nadu, with women o en a ending the sabha in
+greater numbers than men.
+
+                        Table 4: Frequency of Citizen Speeches, by Gender
+                                   Mean, Male Speeches   Mean, Female Speeches   t-statistic   p value
+   Raw Di erences                        0.6623                  0.3377            7.1362      0.0000
+   Normalized by A endance Share         2.5208                  0.5979            3.7940      0.0004
+   Normlized by Population Share         1.3202                  0.6801            6.8730      0.0000
+
+
+   To understand what might be driving the relative infrequency of female speech, we perform a
+series of multivariate regressions, which allow us to correlate village-level factors with the likeli-
+hood of female speech. Here, we look not just at citizens, but also at administrators and politicians
+to examine what role formal status may have in improving the women’s voice. In particular, we
+examine three factors that theoretically should improve the frequency of women’s speech: the
+
+
+                                                 25
+presence of a female president, the level of female a endance, and village-level female literacy.
+   ough female a endance and literacy are likely endogenous, we can intepret the coe cient on
+the female incumbent causally. In doing so, we follow a signi cant body of literature that lever-
+ages the as-if-random assignment of gender quotas in Indian local government (Cha opadhyay
+and Du o, 2004; Bhavnani, 2009; Ban and Rao, 2008b; Besley et al., 2005) to determine the ef-
+fect of the incumbent’s gender on local governance outcomes.                    e speci c process for assigning
+women’s reservations is described in the Tamil Nadu Panchayats Rules of 1995, Section 7.3, Rule
+7, which mandates the creation of a “list of Wards or Panchayats arranged in descending order
+of the percentage of…Women,” and then details the rotation of reservations every 10 years by
+proceeding down the list. Since the percentage of women in the population is roughly the same
+across the state’s Panchayats, assignment is as-if-random.
+       Results are presented in Table 5. Models 1, 3, and 5 present the basic results: While female
+citizens speak slightly more o en when women a end the gram sabha in greater numbers, they
+are not more vocal in the presence of a female president or in more educated villages. Among
+politicians and administrators, the presence of a female president does positively correlate with
+female politician speech, likely due to the actions of the president herself.                      ese results hold
+even when we control for the overall “backwardness” of the district, using an indexed score that
+includes demographic and infrastructural variables (Models 2, 4, and 6).17
+       In addition to looking at the frequency of speech, we can also examine whether the total oor
+time occupied by men and women is roughly equal. Given that women speak signi cantly less
+o en than men, they would have to speak longer per speech to equalize oor time — but perhaps
+consistent with our expectations, they do not. Women on average speak a mere 55 words per
+speech, where as men average roughly 77 words per speech (Table 6). In other words, these per
+speech disparities only exascerbate the overall gender gap in oor time within each village. If
+  17
+     Variables used for the indexed score include: the number of villages in the block, average distance of the village
+to the nearest town, total population,the population shares of the Scheduled Caste and Scheduled Tribe communities,
+the number of households below the poverty line, the percentage of villages in the block which had primary and
+middle schools, commercial banks, cooperatives, agricultural and non-agricultural societies, medical facilities and
+drinking water facilities.
+
+
+
+                                                          26
+                                        Table 5: Frequency of Female Speech
+
+                                                                            Dependent variable:
+                                                                              Female Speech
+                                       Citizens     Citizens     Admin.         Admin.     Politicians            Politicians
+                                         (1)           (2)          (3)           (4)             (5)                    (6)
+      Female President                   0.10         0.11       0.21∗∗∗        0.19∗∗∗       0.90∗∗∗                  0.88∗∗∗
+                                        (0.08)       (0.09)       (0.09)         (0.08)        (0.07)                   (0.08)
+
+      Female A endance                 0.001∗∗      0.001∗∗       0.0003        0.0000       −0.0002               −0.0002
+                                       (0.0005)     (0.001)       (0.001)       (0.001)      (0.0004)              (0.0004)
+
+      Female Literacy                    0.34         0.42         0.06         −0.14         −0.11                    −0.34
+                                        (0.40)       (0.41)       (0.66)        (0.81)        (0.43)                   (0.46)
+
+      District FE
+      Backwardness Score Control
+      Observations                       913          913          473            473             322                   322
+       Note: ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01.   Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+       Score is an measure of village level development, calculating using demographic and infrastructal variables, including the
+       share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+       secondary school, hospital or medical clinic, and bank.
+
+
+
+we compare average male to female oor time (measured by total number of words spoken by
+men versus women within a village), we see that men almost always occupy signi cantly more
+ oor time than women (Table 7).                   e one exception is female politicians, who still speak less on
+average than male politicians, though the di erences are not statistically signi cant.                                           at female
+politicians are able to approach parity with men in terms of oor time suggests that providing
+women with a formal role or position may be important to closing the gender gap in deliberation.
+
+                                      Table 6: Length of Speeches, by Gender
+                                      Mean, Male Speeches            Mean, Female Speeches               t-statistic      p value
+         All Speakers                       77.3307                          55.0601                       2.7035         0.0069
+         Citizens Only                      34.1925                          32.0133                       0.6526         0.5142
+         Administrators Only               152.8220                         184.6585                      -0.9009         0.3690
+         Politicians Only                   70.1786                          41.0845                       2.2511         0.0251
+
+
+
+                                     Table 7: Assembly Floortime, by Gender
+                                      Mean, Male Floortime           Mean, Female Floortime              t-statistic       p value
+         All Speakers                      1758.5000                        659.6200                       6.1285          0.0000
+         Citizens Only                      399.4600                        233.0698                       3.1440          0.0023
+         Administrators Only               1204.3778                        590.5172                       3.4689          0.0009
+         Politicians Only                   529.0385                        343.1765                       1.1740          0.2478
+
+
+
+
+                                                                  27
+5.2    Agenda-Setting Power
+
+While the mere amount of speech — in terms of frequency or volume — can be a useful indicator of
+deliberative equality, neither provides a full picture of a speakers’ ability to in uence discussion.
+A er all, a long-winded speech may be ignored just as easily as a short one. To that end, we
+examine the pa erns in agenda-se ing power. Here, we are speci cally concerned with whether
+there is a disparity between men and women in their ability to re-direct conversation toward their
+own ends. For this, we examine three measures of agenda se ing power — whether a speech is
+followed by one on the same topic (nextSame), the share of the following ve speeches that are on
+that same topic (prop5same), and the number of uninterrupted speeches that continue to discuss
+that topic (lengthTopic ).
+
+                         Table 8: Agenda Power by Position (All Speeches)
+                                           Mean, O cials   Mean, Citizens   t-statistic   p value
+            Next Topic Same                   0.5309          0.6006         -2.8386      0.0046
+            Perc. Same (Next 5 speeches)      0.4473          0.5152         -4.3642      0.0000
+            Length Topic                      1.1620          1.3709         -2.6726      0.0076
+
+
+                       Table 9: Agenda Power by Position (New Topics Only)
+                                           Mean, O cials   Mean, Citizens   t-statistic   p value
+            Next Topic Same                   0.4698          0.5287         -1.5152      0.1303
+            Perc. Same (Next 5 speeches)      0.3870          0.4773         -3.8086      0.0002
+            Length Topic                      0.9457          1.1205         -1.5720      0.1165
+
+
+   Tables 8 through 10 present an initial look at the results. Strikingly, across all measures of
+agenda se ing power, citizens seem to have a much greater in uence on the direction of conver-
+sation than do o cials (Table 8). When a citizen raises a topic, the probability that the following
+speech will continue that topic is nearly 7 percent higher than when o cials raise a topic; sim-
+ilarly, citizen speeches are likely to generate conversation for a greater share of the following
+speeches and for longer uninterrupted stretches. Of course, this may simply be a function of o -
+cials’ resolution power, or ability to de nitely end a subject on a particular ma er, thus providing
+an open avenue for a new subject to be raised. To address this concern, we do two things: rst,
+we include topic xed e ects to make sure that it is not the speci c content that is driving the re-
+
+                                                   28
+sults (Table 11), and second, limit our sample to only those speeches in which a speaker is raising
+a new topic, and even then, the pa erns generally hold (Table 9).18                is suggests that the gram
+sabha is not merely a state-dominated space, in which o cials disseminate info or overtake the
+space. Rather, citizens are able to raise coherent issues and have others engage in a deliberative
+fashion.
+                         Table 10: Agenda Power by Gender (Citizen Speeches)
+                                       Mean, Male Speakers   Mean, Female Speakers     t-statistic   p value
+        Next Topic Same                      0.6150                  0.5785              1.1011      0.2712
+        Perc. Same (Next 5 speeches)         0.5234                  0.5025              1.0094      0.3132
+        Length Topic                         1.4444                  1.2592              1.7064      0.0883
+
+
+
+       With respect to gender, Table 10 initially suggests that di erences across the sexes are not
+striking — this, despite the fact that women speak signi cantly less o en than men. However,
+when we break down the results by position to see if these pa erns in agenda-se ing power holds
+across both citizens and o cials, the pa erns suggest important gendered di erences. In Table
+11, we regress our measures of agenda se ing power on the interaction between an indicator for
+female speakers, and an indicator for a citizen speaker. Here, we nd that male citizens are the
+most likely to set the agenda; they are 10 percentage points more likely than the male politicians
+(the omi ed category) to have the speech following theirs stay on the same topic; given that only
+56 percent of male politician speeches drive the conversation, this is an 18 percent increase in the
+agenda se ing power of male citizens — suggesting that the common man is incredibly powerful
+within the gram sabha. Notably, the dominance of male citizens persists to the inclusion of topic
+ xed e ects, suggesting it is not that men are merely raising particular issues that others care
+about.
+         e dynamic for women, however, is markedly di erent.              ough village citizenship confers a
+relative advantage on men, it tends to disadvantage women. While male citizens are more likely to
+drive the agenda than male politicians, the same does not hold true for female citizens relative to
+female politicians. To be er understand the ways in which one’s position may condition the e ect
+  18
+    Here, a new topic is de ned simply as a deviation from the previous speech; the issue may have been raised at
+a much earlier point within the assembly.
+
+
+                                                       29
+                        Table 11: Agenda Se ing Power, by Gender and Position
+
+                                                                              Dependent variable:
+                                               Next Same                 % Next 5 Same                        Length Topic
+                                             (1)          (2)           (3)            (4)            (5)               (6)
+         Female                             0.07          0.06          0.02           0.02           0.13              0.10
+                                           (0.05)        (0.04)        (0.04)         (0.03)         (0.17)            (0.14)
+
+         Citizen                          0.11∗∗∗      0.08∗∗∗       0.08∗∗∗         0.06∗∗∗        0.32∗∗∗           0.24∗∗∗
+                                           (0.03)       (0.03)        (0.02)          (0.02)         (0.07)            (0.08)
+
+         Female x Citizen                 −0.11∗        −0.10∗         −0.05          −0.04         −0.33              −0.31
+                                          (0.06)        (0.05)         (0.05)         (0.04)        (0.23)             (0.20)
+
+         District FE
+         Backwardness Score Control
+         Topic FE
+         Female President Control
+         Observations                       1,651        1,651         1,456          1,456          1,605             1,605
+          Note:∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01. Robust Standard Errors, clustered at the district, in parenthesis. e Back-
+          warndess Score is an measure of village level development, calculated using demographic and infrastructal vari-
+          ables, including the share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the
+          presence of a primary or secondary school, hospital or medical clinic, and bank.
+
+
+
+of gender, we plot the interaction between gender and position in Figure 3. Among politicians,
+women are slightly more likely to shape the agenda than men (Figure 3a); by contrast, among
+citizens, women are consistently less likely than men to drive the agenda, and for the length of
+the topic discussed, these di erences are statistically signi cant at the 0.05 level (Figure 3b).
+   Finally, to ensure that these results are robust to alternative speci cations of the topic model
+itself, we re-run the analysis with varying number of topics (K =∈ {20, 30}) and nd largely
+consistent results (presented in Appendix 2B).
+   To be fair, disparities in agenda-se ing power may be inconsequential from a development
+perspective if men and women tend to discuss the same issues; however, if there are issues that are
+disproportionately addressed by women, who are also more likely to get ignored, then we may
+be particularly worried about development outcomes. To examine whether men and women
+do in fact overlap or di er in the issues they discuss, we plot the expected di erence in topic
+proportions between male and female citizens, along with the 95 percent con dence interval,
+for all non-proforma topics (Figure 4). While we see no signi cant di erences between men
+and women for the bulk of issues (sanitation, employment, service failures, housing, etc.), we do
+see stark di erences on particularly gendered issues, including self-help groups (women) and the
+
+                                                                  30
+                         Figure 3: Agenda-Se ing Power by Gender and Position
+                     (a) Next Same                                                          (b) Length Topic
+
+
+
+
+       Note: e gures above plot the interaction between gender and position on agenda se ing power within the gram sabha.
+          e x-axis charts the whether speakers are citizens, and the y -axis graphs the coe cient for the e ect of being a woman
+       and the 95 percent con dence interval. e model speci cation includes controls for village level demographics and infras-
+       tructure, district xed e ects, and topic xed e ects.
+
+
+
+introduction of PVP (which is a women-centered poverty alleviation project). To the extent that
+female citizens are more likely to be ignored in the gram sabha, then, we ought to be concerned
+that issues that uniquely impact women will be the least likely to be resolved.
+
+
+5.3   Responsiveness of the State
+
+While the ability to drive conversation is a meaningful indicator of one’s in uence in a deliber-
+ative se ing, perhaps of even more relevance for the gram sabha is whether citizens are able to
+elicit a meaningful response from state actors.                     at is, when citizens raise an issue to administra-
+tors or politicians, how likely are they to get an on-topic response, and does this responsiveness
+vary by gender?
+   To examine state responsiveness, we generate an indicator variable which takes on a value
+of 1 if a citizen’s speech is followed by an administrator or politician and addresses either the
+primary or secondary topic of that speech. Table 12 examines citizen speeches and presents basic
+
+
+                                                                 31
+                   Figure 4: Topical Prevalence of Issues, by Gender (Citizens Only)
+
+
+
+
+       Note: e gure above plots the expected topic proportion and 95% con dence interval for each issue area, by the speaker’s
+       gender. Data include only citizens speeches. Coe cients greater than zero indicate topics that are more frequently raised
+       by women, while those less than zero indicate topics that are more frequently raised by men.
+
+
+
+di erences in means across the genders both on whether an o cial responded, and whether that
+response was on topic. Results are further broken down by the o cial’s position: administrator
+or politician. While men and women are equally likely to get a response from o cials, men are
+signi cantly more likely to get an on-topic response. Interestingly, this di erence is driven pri-
+marily by politicians; while politicians respond in a relevant manner to male speakers 70 percent
+of the time, they only respond to women 49 percent of the time. By contrast, administrators
+respond to all citizens on topic about 60 percent of the time.
+
+                            Table 12: Likelihood of O cial Response, by Gender
+                                                Mean, Male Citizens         Mean, Female Citizens           t-statistic    p value
+    Any O cial Response                               0.5657                       0.5541                     0.3503       0.7262
+    On Topic O cial Response (All)                    0.6316                       0.5415                     2.0461       0.0414
+    On Topic Politician Response                      0.7034                       0.4860                     3.5253       0.0005
+    On Topic Administrator Response                   0.5730                       0.6020                    -0.4674       0.6408
+
+
+   To be fair, these di erences may be driven simply by whether the topic raised is new to the
+discussion — that is, if women are bringing up issues that few other people care about, politicians
+may be less likely to respond than if the issue were more popular. To address this, we not only
+control for whether a topic is “new” to the discussion (Table 13, Model 1), but also include topic
+
+
+                                                                 32
+ xed e ects (Table 13, Model 3); unsurprisingly, new topics are 20 percentage points less likely
+to elicit a response from politicians; however, even when we control for this, women are 18
+percentage points less likely than men to receive a response from their elected o cial.
+
+                                    Table 13: O cial Responsiveness, by Gender
+
+                                                                            Dependent variable:
+                                             On Topic Politician Response                     On Topic Admin. Response
+                                            (1)          (2)             (3)           (4)          (5)               (6)
+      Female                            −0.18∗∗∗      −0.27∗∗∗      −0.28∗∗∗         −0.003       −0.17∗∗∗         −0.20∗∗∗
+                                         (0.05)        (0.03)        (0.04)          (0.06)        (0.05)           (0.04)
+
+      Female President                                  −0.10          −0.12                       −0.11            −0.08
+                                                        (0.07)         (0.08)                      (0.10)           (0.10)
+
+      New Topic                         −0.20∗∗∗      −0.20∗∗∗      −0.20∗∗∗         −0.12         −0.12            −0.09
+                                         (0.04)        (0.04)        (0.04)          (0.09)        (0.10)           (0.08)
+
+      Female x Female President                        0.18∗∗∗         0.20∗∗∗                    0.43∗∗∗           0.42∗∗∗
+                                                        (0.08)          (0.09)                     (0.07)            (0.08)
+
+      District FE
+      Backwardness Score Control
+      Topic FE
+      Observations                          251          251            251           259           259               259
+       Note:   ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01. Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+       Score is an measure of village level development, calculating using demographic and infrastructal variables, including the
+       share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+       secondary school, hospital or medical clinic, and bank.
+
+
+
+
+5.4   E ect of Mandated Representation on Deliberative Equality
+
+  ese pa erns suggest that women, and women citizens in particular, are at a considerable disad-
+vantage in the gram sabha.                ey speak less, are less likely to drive conversation, and are less likely
+to get a response from government o cials. And these disadvantages hold even in sabhas when
+we control for the issues that are raised. Indeed, it was in recognition of these deeply gendered
+inequalities that the Government of India pro-actively designed the gram sabha with quotas for
+women to serve on the village council and as village president. Here, we examine whether the
+presence of a female incumbent — to lead the discussion, to respond to citizens, and to act as a
+role model for female villagers — has an impact on the measures of deliberative equality explored
+above. Importantly, the assignment process for women’s reservations, established by the Tamil
+Nadu Panchayats Act (1994), is as-if-random — allowing us to interpret these e ects in a causal
+
+                                                                  33
+manner (Ban and Rao, 2008b).
+   First, we nd that the presence of a female president has no discernible impact on the like-
+lihood that female citizens participate within the gram sabha (Table 4, Models 1 and 2).        at is,
+the mere presence of a female president does not seem to encourage more women to a end or
+speak within the gram sabha, suggesting that the “role model” e ects of such incumbents may
+not be su cient to a ect deliberative participation in the short term.    ough these results might
+seem surprising given the optimism around female quotas, they are quite consistent with evi-
+dence from Bengal in Cha opadhyay and Du o (2004) and South India in Ban and Rao (2008a),
+which nd no e ect of female reservation on the political behavior of ordinary women.
+   By contrast, we nd that the presence of a female president does have a meaningful and sig-
+ni cant impact on the ability of women to be heard and responded to. Focusing only on citizen
+speakers, Table 14 regresses our measures of agenda-se ing power on indicators for gender of
+the speaker and the gender of the village council president. As expected, women speakers are at
+a considerable disadvantage relative to male speakers (roughly 14 percentage points less likely to
+drive the next issue discussed), but this disadvantage is essentially reversed under female presi-
+dents. For clarity, we visualize the interactions in Figure 5, which plots the coe cient estimates
+for the e ect of being a female speaker under male and female presidents respectively. While un-
+der male presidents, women are signi cantly less likely than men to set the agenda, under female
+presidents, di erences between the genders are not only smaller in magnitude, but statistically
+insigni cant.
+   To be er understand whether and how female presidents themselves might be elevating the
+voices of other women, we also look at whether women citizens are more likely to generate a
+relevant response from state o cials. Table 13 presents the results for both politician responsive-
+ness (Models 1 - 3) and administrator responsiveness (Models 4 - 6).     e data are striking: overall,
+women are 18 percentage points less likely than men to receive a relevant response from elected
+o cials – a meaningful decline given that men receive topical responses 70 percent of the time.
+Importantly, however, the presence of a female president can ameliorate the neglect that female
+
+
+                                                34
+         Table 14: Agenda Se ing Power, by Gender of Speaker and Gender of President
+
+                                                                               Dependent variable:
+                                                  Next Same              % Next 5 Same                        Length Topic
+                                            (1)               (2)        (3)          (4)             (5)                (6)
+      Female                             −0.14∗∗∗       −0.14∗∗∗     −0.05           −0.05      −0.37∗∗∗              −0.40∗∗∗
+                                           (0.03)         (0.03)     (0.04)          (0.04)          (0.11)            (0.12)
+
+      Fem. Pres.                          −0.09∗         −0.09∗      −0.07          −0.08∗           −0.33             −0.33∗
+                                          (0.05)         (0.05)      (0.05)         (0.05)           (0.20)            (0.19)
+
+      Female x Fem. Pres.                 0.20∗∗∗        0.19∗∗∗      0.02            0.02       0.30∗∗∗               0.28∗∗∗
+                                           (0.05)         (0.06)     (0.05)          (0.04)       (0.13)                (0.10)
+
+      District FE
+      Backwardness Score Control
+      Topic FE
+      Observations                          924               924        818          818             895                895
+       Note:   ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01.Sample include only speeches delivered by citizens (all administrator and politician
+       speech is excluded). Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess Score is an measure
+       of village level development, calculated using demographic and infrastructal variables, including the share of population
+       belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or secondary school,
+       hospital or medical clinic, and bank.
+
+
+         Figure 5: Agenda-Se ing Power by Gender of Speaker and Gender of President
+                        (a) Next Same                                                            (b) Length Topic
+
+
+
+
+       Note:    e gures above plot the interaction between speaker’s gender and president’s gender on agenda se ing power
+       within the gram sabha. e x-axis charts the whether the president is a woman, and the y -axis graphs the coe cient for
+       the e ect of being a woman and the 95 percent con dence interval. e model speci cation includes controls for village
+       level demographics and infrastructure, district xed e ects, and topic xed e ects.
+
+
+
+citizens face. Basic results are reported in Models 2 and 4 of Table 13, while Models 3 and 5 also
+include xed e ects for the topic discussion. For clarity, we plot the interaction between an indi-
+
+
+
+                                                                    35
+cator for female speakers and an indicator of a female president in Figure 6, which shows that the
+female incumbents signi cantly reduce the di erential treatment that men and women receive
+from the state. In fact, Figure 6a shows that women are slightly more likely than men to receive
+a topical response from elected o cials when a female president presides over the gram sabha.
+Interestingly, among (largely male) administrators, the gender di erentials under male and fe-
+male presidents follow the same general pa ern. Even though di erences are not statistically
+signi cant (Figure 6b), this still suggests that administrators follow the lead of female presidents.
+
+         Figure 6: State Responsiveness by Gender of Speaker and Gender of President
+      (a) On Topic Response from Politicians                             (b) On Topic Response from Administrators
+
+
+
+
+       Note:    e gures above plot the interaction between speaker’s gender and president’s gender on responsiveness by the
+       state. e x-axis charts the whether the president is a woman, and the y -axis graphs the coe cient for the e ect of being
+       a woman and the 95 percent con dence interval. e model speci cation includes controls for village level demographics
+       and infrastructure, district xed e ects, and topic xed e ects.
+
+
+
+
+6    Discussion
+
+Taken together, these pa erns suggest that we need to pay more a ention to the ways in which
+inequalities among citizens may a ect the ability of deliberative democratic institutions to deliver
+on their promise — to engage citizens in the development process and produce more inclusive
+development outcomes. Of course, scholarship on Indian local government has examined these
+
+                                                                 36
+inequalities in development outcomes, including those along gender lines, but very li le research
+has been able to open the “black box” of the deliberative bodies that are at the core of India’s
+decentralization e ort. In this paper, we do just that. By using text-as-data methods on an original
+corpus of village assembly transcripts from rural Tamil Nadu, we show that these assemblies are
+not merely empty spaces where state o cials bluster and read banal announcements; rather, they
+provide meaningful forums for citizens to challenge their elected o cials, demand transparency,
+and provide information about very real local development needs — from water and sanitation
+issues, to wage payments and government service failures.
+   We also show, however, that among citizens, inequalities in power and status meaningfully
+impact the citizens’ ability to be heard. More speci cally, we show that across multiple measures
+of deliberative in uence, women are at a considerable disadvantage.         ey are less likely to be
+heard, less likely to drive the agenda, and less likely to receive a relevant response from state
+o cials. Indeed, even when we account for the particular issues raised, women still remain at
+a disadvantage — o en ignored while their male peers receive a direct response. In the excerpt
+below, for example, a woman raises a genuine concern about the lack of ration shop facility in the
+village, to which the o cial does not respond; a man then raises the exact same issue a er her, and
+receives an immediate response from the elected o cial, who promises to speak to higher-ups
+about what can be done to address the issue:
+
+
+      Female 1: In Pa upalli village, so far, there is no fair price shop. ey are keeping
+      it in the Women’s Health Building. Women are quarrelling. e village people want
+      it built new. ere is ght in the panchayat. So people are going to the neighboring
+      village. But the pa a [titled] land owners are preventing them from using their land
+      for going to the next village, so resolution should be passed for construction of a
+      ration shop here.
+      Male 1: For so many years, there is no ration shop here. Only rental shops are here.
+      So long, it was in rented place and now it is kept in Women’s Health Association.
+      Now, women ask for the building and want a fair price shop built. So there is a lot of
+      problem. Please establish for us a ration shop.
+      Male (President): Regarding this ration shop, we should talk with MLA [Member
+      of the Legislative Assembly] and BDO [Block Development O cer]. e request will
+      be made…
+
+                                                37
+                                                                            iruvallur District
+                                                                                Minjur Block
+                                                                       Sengayam Panchayat
+
+
+   To be fair, one might think the above excerpt is not problematic insofar as the male politi-
+cian eventually responded to her substantive concern about the ration shop. However, from the
+perspective of deliberative equality, for women to in uence conversation as democratic equals,
+they should not have to wait for a man to elevate their concern before an o cial responds.       ese
+pa erns of gendered discourse are perhaps unsurprising, but they do reiterate a need to be er
+design deliberative institutions to elevate the voices of women. In fact, our evidence suggests that
+women’s voices are more likely to be ampli ed with female presidents — under whom women
+are more likely to be heard and more likely to receive a state response. In the excerpt below,
+for example, we see a female president speci cally calling out women’s needs and using that as
+justi cation for a proposed resolution around liquor shop and ration shop concerns.
+
+
+      Female 1: We need a ration shop for our village. We nd it di cult to go up to
+      Devireddikuppam. We have to walk for 7 days in a month. We can t walk such a long
+      distance keeping the rice bag in hands. You have to nd a solution for this problem
+      and, at least, arrange a part time ration shop in our village. You take action for
+      removing the liquor shop. We can t use the road a er 7 o clock. Drunken people
+      are giving much trouble and using vulgar words.
+      Female (President): Women are talking much about the ration shop and liquor
+      shop. We will include these subjects in the resolution…
+                                                                      Tiruvanamalai District
+                                                                          andarampet Block
+                                                                   Kolamanjanur Panchayat
+
+
+      at the president explicitly elevates the requests of the women who are talking in her village
+underscores the notion that descriptive representation can improve the vertical communication
+between citizen and politician. However, our evidence suggests that this is no panacea for the
+deeper problem of women’s general silence. While women in Tamil Nadu are more likely to a end
+the gram sabhas than their male peers, they are signi cantly less likely to speak — even when
+
+                                                38
+a female president sits in power.    is lack of participation has been documented in a variety of
+se ings, both in the developed and developing world, and is undoubtedly driven by a combination
+of factors, from information and resource constraints to cultural biases against women. But it also
+underscores a deeper challenge in deliberation — namely, that using one’s voice can be a costly
+exercise, and one that di erentially burdens those who are already least-advantaged. Whether
+and how the common woman can be encouraged to overcome that cost is a deeply important
+question facing development practitioners, and one that will undoubtedly impact the ability of
+local government to address women’s needs.
+
+
+
+
+                                                39
+References
+Auerbach, A. M. (2017). Neighborhood Associations and the Urban Poor: India’s Slum Develop-
+  ment Commi ees, World Development .
+  URL: h p://www.sciencedirect.com/science/article/pii/S0305750X15311797
+
+ achtiger, A., Sp¨
+B¨               orndli, M., Steenbergen, M. R. and Steiner, J. (2005).   e deliberative dimensions
+  of legislatures, Acta Politica 40(2): 225–238.
+
+Baiocchi, G., Heller, P., Silva, M. K. and Silva, M. (2011). Bootstrapping democracy: Transforming
+  local governance and civil society in Brazil, Stanford University Press.
+
+Ban, R., Jha, S. and Rao, V. (2012). Who has voice in a deliberative democracy? Evidence from
+  transcripts of village parliaments in south India, Journal of Development Economics 99(2): 428–
+  438.
+
+Ban, R. and Rao, V. (2008a). Is deliberation equitable? Evidence from transcripts of village meet-
+  ings in south India, World Bank Policy Research Working Paper Series (4928).
+
+Ban, R. and Rao, V. (2008b). Tokenism or agency? e impact of women’s reservations on village
+  democracies in south India, Economic Development and Cultural Change 56(3): 501–530.
+
+Besley, T., Pande, R. and Rao, V. (2005). Participatory democracy in action: Survey evidence from
+  South India, Journal of the European Economic Association 3(2-3): 648–657.
+
+Bha acharjee, S. and Cha opadhyay, R. (2011). e Information De cit: Use of Media in Delib-
+  erative Democracy, Economic and Political Weekly pp. 45–52.
+
+Bhavnani, R. R. (2009). Do electoral quotas work a er they are withdrawn? Evidence from a
+  natural experiment in India, American Political Science Review 103(01): 23–35.
+
+Cha opadhyay, R. and Du o, E. (2004). Women as policy makers: Evidence from a randomized
+  policy experiment in India, Econometrica 72(5): 1409–1443.
+
+Clayton, A., Josefsson, C. and Wang, V. (2016). otas and Women’s Substantive Representation:
+  Evidence from a Content Analysis of Ugandan Plenary Debates, Politics & Gender pp. 1–29.
+
+Dryzek, J. S. (1994). Discursive democracy: Politics, policy, and political science, Cambridge Uni-
+  versity Press.
+
+Elster, J. (1998). Deliberative democracy, Vol. 1, Cambridge University Press.
+
+Fearon, J. D. (1998). Deliberation as discussion, in J. Elster (ed.), Deliberative democracy, Cam-
+  bridge University Press, Cambridge, pp. 44–68.
+
+Fishkin, J. S. and Luskin, R. C. (2005). Experimenting with a democratic ideal: Deliberative polling
+   and public opinion, Acta Politica 40(3): 284–298.
+
+Fung, A. (2004). Deliberation’s darker side: six questions for Iris Marion Young and Jane Mans-
+  bridge, National Civic Review 93(4): 47–54.
+
+                                                 40
+Goeree, J. K. and Yariv, L. (2011). An experimental study of collective deliberation, Econometrica
+  79(3): 893–921.
+
+Goodin, R. E. (2005). Sequencing deliberative moments, Acta Politica 40(2): 182–196.
+
+Gu man, A. and      ompson, D. (2004). Why deliberative democracy.
+
+Habermas, J. (1990). Moral consciousness and communicative action, MIT press.
+
+Heller, P., Harilal, K. and Chaudhuri, S. (2007). Building Local Democracy: Evaluating the Impact
+  of Decentralization in Kerala, India, World Development 35(4): 626–648.
+
+Heller, P. and Rao, V. (2015). Deliberation and Development: Rethinking the Role of Voice and
+  Collective Action in Unequal Societies, World Bank Publications.
+
+Karpowitz, C. F. and Mendelberg, T. (2014).      e silent sex: Gender, deliberation, and institutions,
+  Princeton University Press.
+
+Karpowitz, C. F., Mendelberg, T. and Shaker, L. (2012). Gender inequality in deliberative partici-
+  pation, American Political Science Review 106(03): 533–547.
+
+List, C., Luskin, R. C., Fishkin, J. S. and McLean, I. (2013). Deliberation, single-peakedness, and
+  the possibility of meaningful democracy: evidence from deliberative polls, Journal of Politics
+  75(01): 80–95.
+
+Mackie, G. (2015). Traveling to the Village of Knowledge, in V. Rao and P. Heller (eds), Deliberation
+ and Development: Rethinking the Role of Voice and Collective Action in Unequal Societies, World
+ Bank Publications, pp. 85–106.
+
+Mansbridge, J. (1980). Beyond adversarial democracy, Chicago, IL: University of ChicagoPress .
+
+Mansbridge, J. (1999). Should blacks represent blacks and women represent women? A contingent
+  yes , e Journal of politics 61(03): 628–657.
+
+Mansbridge, J. (2015). A Minimalist De nition of Deliberation, in V. Rao and P. Heller (eds),
+ Deliberation and Development: Rethinking the Role of Voice and Collective Action in Unequal
+ Societies, World Bank Publications, pp. 27–50.
+
+Mansuri, G. and Rao, V. (2012). Localizing development: does participation work?, World Bank
+ Publications.
+
+Myers, C. D. and Mendelberg, T. (2013). Political deliberation,      e Oxford handbook of Political
+ Psychology pp. 699–734.
+
+Parthasarathy, R. and Rao, V. (2017). Deliberative democracy in india, World Bank Policy Research
+  Working Paper (7995).
+
+Polle a, F. (2004). Culture is not just in your head, Rethinking social movements: Structure, mean-
+  ing, and emotion, pp. 97–110.
+
+
+                                                 41
+Polle a, F. and Lee, J. (2006). Is telling stories good for democracy? Rhetoric in public deliberation
+  a er 9/11, American Sociological Review 71(5): 699–721.
+
+Rao, V. and Sanyal, P. (2010). Dignity through discourse: poverty and the culture of deliberation in
+  Indian village democracies, e Annals of the American Academy of Political and Social Science
+  629(1): 146–172.
+
+Roberts, M. E., Stewart, B. M. and Airoldi, E. M. (2016). A model of text for experimentation in
+  the social sciences, Journal of the American Statistical Association 111(515): 988–1003.
+
+Sanyal, P., Rao, V. and Prabhakar, U. (2015). Oral Democracy and Women’s Oratory Competency
+  in Indian Village Assemblies: A alitative Analysis, World Bank Policy Research Working Paper
+  (7416).
+
+Sen, A. (2001). Development as freedom, Oxford Paperbacks.
+
+Swidler, A. and Watkins, S. C. (2015). Practices of Deliberation in Rural Malawi, pp. 133–166.
+
+Tamil Nadu Panchayats Act (1994).
+
+
+
+
+                                                 42
+Appendices
+A    Topic Model Validation Using Survey Data
+In addition to the predictive validation exercises, we also validate the output of our topic model
+by comparing the distribution of topics generated against topics coded by survey enumerators
+who recorded the proceedings of each gram sabha. ough this comparison is useful, it is neces-
+sarily imperfect because clear analogues do not always exist across the topic model output and
+the enumerators pre-determined categories. As such, where possible, we aggregate topics for
+comparison. Table A.1 presents the topics from the topic model, along side the survey data topic
+used for comparison. Certain categories across both data sources had no clear comparison, and
+were thus excluded from the validation exercise.
+
+                          Table A.1: Topic Comparisons for Validation
+
+                           Transcript Topics                Survey Data Topics
+                                                            Panchayat Expenses
+                           Allocation of Funds
+                                                                  Taxes
+                       Maintenance of Public Goods
+                                                         Sanitation and Environment
+                        Environmental Protection
+                         Employment & Wages                     Employment
+                                  Water                            Water
+                           Toilet Construction                     Toilets
+                                                                 Education
+                               Education
+                                                                 Childcare
+                              Ration Shop                       Ration Shop
+                         Housing and Land Titles                  Housing
+
+
+                                        Analogues not available
+                       Resolution Announcements
+                          Greetings and anks
+                        Bene ciary and Voter List
+                              Intro to PVP
+                                  SHGs
+                            Service Failures
+                                                                    Health
+                                                                    Roads
+                                                               Women’s Issues
+                                                                 Elderly Care
+                                                                 Animal Care
+                                                                  Electricity
+                                                                Voter ID Cards
+                                                            Village Organizations
+
+
+
+
+                                                    43
+B     Results Under Alternative Topic Model Speci cations
+To ensure that the main results for agenda se ing power and state responsiveness are not sensi-
+tive to a particular topic model speci cation, we re-run our topic model with K = 20 and K = 30
+topics, generate new measures of deliberative in uence, and present results below.
+
+B.1   Agenda Setting Power
+We rst re-examine how agenda-se ing power varies with the gender and status of the speaker.
+Consistent with the main results presented (for K = 15 topics), we see that even under these
+alternative model speci cations, male citizens are more likely to drive the agenda than male
+politicians, and female citizens are less likely to drive the agenda than female politicians. Point
+estimates all follow the pa erns presented in the main results (Table 11), but lose statistical sig-
+ni cance for K = 30.
+
+                    Table B.1: Agenda Se ing Power, by Gender and Position (K = 20)
+
+                                                                           Dependent variable:
+                                              Next Same              % Next 5 Same                         Length Topic
+                                            (1)       (2)          (3)             (4)             (5)               (6)
+      Female                             0.13∗∗∗    0.11∗∗∗      0.09∗∗∗         0.07∗∗∗          0.29∗              0.24
+                                          (0.05)     (0.05)       (0.03)          (0.03)          (0.17)            (0.16)
+
+      Citizen                            0.11∗∗∗     0.10∗∗      0.11∗∗∗         0.09∗∗∗         0.26∗∗∗           0.25∗∗∗
+                                          (0.05)     (0.05)       (0.03)          (0.02)          (0.11)            (0.09)
+
+      Female x Citizen                    −0.13∗    −0.13∗      −0.13∗∗∗        −0.11∗∗∗         −0.29              −0.27
+                                          (0.07)    (0.07)       (0.05)          (0.04)          (0.21)             (0.19)
+
+      District FE
+      Backwardness Score Control
+      Topic FE
+      Female President Control
+      Observations                         1,651     1,651        1,456           1,456           1,607             1,607
+       Note:                                  Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+                ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01.
+
+       Score is an measure of village level development, calculated using demographic and infrastructal variables, including the
+       share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+       secondary school, hospital or medical clinic, and bank.
+
+
+
+
+                                                                 44
+              Table B.2: Agenda Se ing Power, by Gender and Position (K = 30)
+
+                                                                   Dependent variable:
+                                        Next Same          % Next 5 Same                       Length Topic
+                                      (1)       (2)        (3)         (4)          (5)                    (6)
+Female                               0.07∗      0.05     0.05∗         0.02       0.21∗∗∗                 0.13
+                                     (0.03)    (0.04)    (0.03)       (0.03)       (0.09)                (0.09)
+
+Citizen                            0.10∗∗∗     0.07∗    0.07∗∗∗      0.04∗∗∗      0.24∗∗∗               0.18∗∗∗
+                                    (0.04)     (0.04)    (0.02)       (0.02)       (0.08)                (0.08)
+
+Female x Citizen                    −0.04      −0.03     −0.04        −0.03       −0.21                  −0.19
+                                    (0.07)     (0.08)    (0.05)       (0.05)      (0.18)                 (0.19)
+
+District FE
+Backwardness Score Control
+Topic FE
+Female President Control
+Observations                         1,651     1,651     1,456        1,456        1,624                 1,624
+ Note:                                  Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+          ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01.
+
+ Score is an measure of village level development, calculated using demographic and infrastructal variables, including the
+ share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+ secondary school, hospital or medical clinic, and bank.
+
+
+
+
+                                                           45
+B.2   State Responsiveness
+Next, we examine whether women are less likely to receive a relevant response from state o cials,
+as they do in the main results. Once again, point estimates are consistent with two broad pat-
+terns: rst, female citizens are signi cantly less likely to receive a topical response from elected
+male politicians; and second, they are signi cantly more likely to receive a relevant response from
+female incumbents. While evidence of women’s relative neglect is consistent and statistically sig-
+ni cant across both topic model speci cations, the coe cient on female president responsiveness
+to female citizens loses statistical signi cance in the K = 30 speci cation.
+
+                          Table B.3: O cial Responsiveness, by Gender (K = 20)
+
+                                                                          Dependent variable:
+                                           On Topic Politician Response                      On Topic Admin. Response
+                                          (1)            (2)           (3)            (4)          (5)               (6)
+      Female                            −0.09         −0.17∗        −0.20∗∗∗       −0.06∗∗∗       −0.10          −0.16∗∗∗
+                                        (0.09)        (0.10)         (0.08)         (0.03)        (0.06)          (0.07)
+
+      Female President                                  0.01           0.02                       0.13∗             0.13
+                                                       (0.10)         (0.11)                      (0.07)           (0.08)
+
+      New Topic                       −0.19∗∗∗       −0.18∗∗∗       −0.19∗∗∗        −0.09         −0.09            −0.06
+                                       (0.05)         (0.05)         (0.06)         (0.07)        (0.07)           (0.07)
+
+      Female x Female President                         0.23           0.21                        0.12             0.16
+                                                       (0.17)         (0.17)                      (0.14)           (0.15)
+
+      District FE
+      Backwardness Score Control
+      Topic FE
+      Observations                       233            233            233            262          262              262
+       Note: ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01. Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+       Score is an measure of village level development, calculated using demographic and infrastructal variables, including the
+       share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+       secondary school, hospital or medical clinic, and bank.
+
+
+
+
+                                                                 46
+                      Table B.4: O cial Responsiveness, by Gender (K = 30)
+
+                                                                     Dependent variable:
+                                     On Topic Politician Response                   On Topic Admin. Response
+                                    (1)         (2)           (3)          (4)        (5)                 (6)
+Female                              0.03     −0.12∗∗∗      −0.15∗∗        0.06      −0.01               −0.003
+                                   (0.07)     (0.04)        (0.07)       (0.08)     (0.07)              (0.06)
+
+Female President                              −0.16∗       −0.15∗                   0.13∗               0.09∗∗
+                                              (0.08)       (0.09)                   (0.07)              (0.04)
+
+New Topic                         −0.08       −0.09         −0.02        −0.06      −0.06                −0.03
+                                  (0.06)      (0.07)        (0.08)       (0.07)     (0.07)               (0.07)
+
+Female x Female President                     0.35∗∗∗      0.33∗∗∗                   0.18                 0.18
+                                               (0.10)       (0.13)                  (0.14)               (0.12)
+
+District FE
+Backwardness Score Control
+Topic FE
+Observations                        233         233          233          262        262                  262
+ Note:   ∗ p<0.1; ∗∗ p<0.05; ∗∗∗ p<0.01.Robust Standard Errors, clustered at the district, in parenthesis. e Backwarndess
+ Score is an measure of village level development, calculated using demographic and infrastructal variables, including the
+ share of population belonging to the Scheduled Castes and Tribes, as well as indicators for the presence of a primary or
+ secondary school, hospital or medical clinic, and bank.
+
+
+
+
+                                                            47
+

@@ -1,0 +1,2170 @@
+                                                 WPS8151
+
+
+Policy Research Working Paper                   8151
+
+
+
+
+          A Proximity-Based Approach
+     to Labor Mobility in CGE Models with
+      an Application to Sub-Saharan Africa
+                               Hans Lofgren
+                              Martín Cicowiez
+
+
+
+
+Development Economics
+Development Prospects Group
+July 2017
+Policy Research Working Paper 8151
+
+
+  Abstract
+ The ease with which workers can move between sectors has                           quantity reaching a’ is below the physical quantity. In this
+ a strong impact on the effects on labor markets of shocks                          setting, profit-maximizing producers are willing to pay the
+ such as changes in world prices or migration flows. This                           same wage per efficiency unit irrespective of worker origin
+ paper introduces an approach to labor mobility with fric-                          and thus pay less efficient workers a lower wage per physical
+ tions under which worker capabilities (their efficiencies in                       unit. This approach to labor mobility is tested in a static CGE
+ different sectors) depend on their sector affiliation. If work-                    model that is applied to an illustrative sub-Saharan African
+ ers in sector a move to sector a’, their efficiency shortfall due                  dataset with sector proximities defined using the approach
+ to a capability misfit compared to what is needed in a’ (and                       of the product-space literature. Simulations of positive
+ possessed by workers already in a’) is measured by a proxim-                       export price shocks show that, the higher the proximities,
+ ity parameter, 0 ≤ proxa,a’ ≤ 1. If proxa,a’ < 1, the efficient                    the stronger the labor reallocation and the welfare gains.
+
+
+
+
+  This paper is a product of the he Development Prospects Group, Development Economics. It is part of a larger effort by
+  the World Bank to provide open access to its research and make a contribution to development policy discussions around
+  the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors may be
+  contacted at hlofgren@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+    A Proximity-Based Approach to Labor
+       Mobility in CGE Models with an
+      Application to Sub-Saharan Africa
+                     BY HANS LOFGREN AND MARTÍN CICOWIEZa
+
+
+
+
+    JEL codes: C68, J31, O24
+
+    Keywords: Computable General Equilibrium Models; Labor Mobility; Factor
+    Mobility; Wage Differentials; Development Planning and Policy.
+
+
+
+
+a Hans Lofgren: Development Prospects Group, World Bank; Martín Cicowiez: CEDLAS-
+Universidad Nacional de La Plata, La Plata. The paper has also been published in the
+Journal of Global Economic Analysis, the website of which provides model code and data
+(www.jgea.org/resources/jgea/ojs/index.php/jgea/article/view/39) and readers are
+encouraged to cite this version. The authors are grateful for financial support from the
+Knowledge for Change Program (KCP) of the World Bank and thank three anonymous
+journal referees for their very helpful comments. The corresponding author is Hans
+Lofgren (hlofgren@worldbank.org).
+1. Introduction
+   The movement of labor between sectors is a core aspect of structural change in
+economies throughout the world.1 The effects of changes in prices, technology, and
+policies on production, trade and living standards are strongly influenced by the
+extent to which labor is able to relocate. In a literature survey, Hertel and Reimer
+(2005, p. 400) find that “the poverty impacts of trade reform often hinge crucially
+on how well the increased demand for labour in one part of the economy is
+transmitted to the rest of the economy.” Drawing on a global CGE analysis, van
+der Mensbrugghe (2007) indicates that the treatment of labor market segmentation
+and sectoral wage differences has a strong impact on simulated welfare impacts of
+the Doha round of trade reform, especially for developing countries. The findings
+reported in Porto and Hoekman (2010) indicate that labor market frictions in
+developing countries are substantial, giving rise to costly labor market
+adjustments and limiting labor reallocation. Similarly, even though the analysis
+has typically been done from a firm (as opposed to sector) perspective, labor
+adjustments costs are a major focus in the labor economics literature (for example,
+see Hamermesh 1989, Cooper and Willis 2009, and Cooper et al. 2015).
+   The Computable General Equilibrium (CGE) literature includes a variety of
+approaches to mobility, the most common being to assume that mobility between
+any pair of sectors is either impossible or unconstrained. In this paper, we present
+and test an innovative approach that, in contrast with this dichotomy, views inter-
+sectoral labor mobility as falling along a continuum. It offers a means of making
+sure that simulations with CGE models more closely approximate empirical
+patterns for labor movements and/or wage differences between workers of
+different origins (including incumbent workers) that are employed in a sector. The
+approach is inspired by the classic transportation model of the linear
+programming literature (for references, see Gass and Assad 2005, pp. 51-52) and
+the product-space (PS) literature due to Hausmann and coauthors (Hausmann and
+Klinger 2006; Hausmann et al. 2011).
+   The essence of our approach is that workers are viewed as having capabilities
+that to varying degrees permit them to be efficient in different sectors. As a
+consequence, reallocation of workers between sectors comes at a cost in the form
+of lost efficiency: labor that comes from another sector is less efficient than the
+labor that already works in the receiving sector. These efficiency losses are related
+to proximity between pairs of sectors, a key concept in the PS literature. It is valued
+between 0 and 1 and here used to measure the degree to which a worker in the
+
+1 We use the two terms “sector” and “activity” interchangeably with the same definition
+as “industry” in the System of National Accounts, i.e. a grouping of establishments (or
+producers) engaged in the same or similar kinds of activities classified in the same
+International Standard Industrial Classification of All Economic Activities (ISIC) code
+(United Nations 2003, p. 74).
+
+
+
+
+                                          2
+sector of origin possesses the capabilities that are required in the sector of
+destination. In the PS literature, proximity is defined on the basis of revealed
+comparative advantage (RCA). We also draw on RCA-related data in the
+illustrative application in this paper even though we do not consider this approach
+as ideal and, in the conclusions, discuss other options for future research.2
+    The efficiency losses due to reallocation are related to a distinction between
+labor quantities in physical and efficiency units. For labor that stays within its
+sector of origin (or moves to a sector considered to be in the same location as it
+requires the same worker capabilities), physical and efficient labor quantities are
+identical and the proximity is equal to 1. If labor moves to a different location (i.e.,
+its proximity is less than 1), the efficient labor quantity received in the sector of
+destination falls short of the efficient (and physical) quantity of labor that departs
+from the sector of origin – the lower the proximity, the larger this shortfall. Profit-
+maximizing producers consider the gap between efficient and physical labor in
+their hiring decisions. They equalize payments to labor measured in efficiency
+units, as a result being willing to pay a higher wage (per physical unit) for a worker
+who already is in the sector, due to his/her higher degree of efficiency compared
+to a worker from a different location. This treatment of wages echoes the writings
+of Alfred Marshall, who coined and used the efficiency wage term to refer to wages
+that reflect the exertion of ability and efficiency in work. He argued that
+competition tends to equalize efficiency wages as opposed to the wages per time
+unit, which differ across workers with different levels of efficiency (Marshall 1920,
+Book VI, Chapter III); this is the same outcome that prevails at equilibrium in our
+labor mobility model.3
+    Given that proximities between sectors fall along a continuum, labor
+segmentation also appears along a continuum as opposed to the common
+dichotomy of treating labor in different sectors as belonging either to the same
+segment or to different, separate segments. However, the two extremes of this
+common dichotomy can still be captured as the special cases with all sectors
+having proximities of 1 or very low proximities for the cases of belonging to the
+same and fully separate segments, respectively. In the latter case, migration would
+not take place due to the fact that the (efficiency-based) wage offered in the
+destination sector would fall short of the wage in the sector of origin. In other
+respects, our approach is consistent with alternative, common treatments of other
+
+
+2 Strict adherence to the PS approach to the calculation of proximities would have the
+
+drawback of excluding values that differ across labor types (since PS proximities are single-
+dimensional, defined by sector) or are asymmetric (since the PS proximity or distance from
+activity a to activity a’ is the same as the one from a’ to a).
+3 This usage deviates from that of modern efficiency-wage theories with links between
+
+wages and worker productivity, which may give raise to wage setting above market
+equilibrium. For a survey, see Weiss (1991).
+
+
+
+
+                                             3
+(non-mobility) aspects of labor market functioning, including the determination of
+total employment for each labor type (with or without unemployment or
+labor/leisure decisions), and the treatment of substitutability between labor
+categories within sectors.
+   A sector-based labor classification is natural given our focus on developing an
+approach that is applicable to multi-sector CGE models. However, data
+permitting, it would be both easy and often desirable to extend the labor
+classification in the model to additional dimensions, such as educational
+attainment or achievement or what may be labeled as skill or occupation. If so,
+proximities would be defined in terms of the different dimensions taken together.
+To exemplify, if the two dimensions are sector and skill, the proximity between
+two service sectors may be higher for IT staff (if they use and possess very similar
+skills in different sectors) than for engineers (if their skills differ more depending
+on the specific sector of employment).
+   In this paper, we test our capability-based approach in simulations with a
+simple CGE model applied to an illustrative database for a Sub-Saharan African
+(SSA) economy. We selected a database for SSA since, compared to other regions,
+CGE models for this region tend to treat labor markets as competitive; i.e. they do
+not tend to consider non-competitive aspects like unionization and minimum-
+wage legislation.4 Apart from the introduction of the proximity treatment, this is
+also how we treat the labor market. However, we consider the core innovation of
+our model as equally valid for other regions.
+   We proceed as follows: after a brief discussion of alternative approaches to
+labor mobility, Section 2 presents our approach. The approach is tested in Section
+3 in a set of comparative-static CGE simulations of the effects of export price
+shocks for processed food products with alternative parameterizations of the labor
+market. Conclusions and a discussion of future research are presented in Section
+4. A full mathematical statement of the CGE model is provided in an appendix and
+the model code and data are available as supplementary materials.
+
+2. Method and data
+   After a brief review of alternative treatments of labor mobility in CGE models
+and the broader labor economics literature in Section 2.1, Section 2.2 presents and
+analyzes the producer profit maximization problem on which we base the
+proximity-based formulation for labor mobility. It also includes a brief description
+of the simple CGE model into which it is embedded. (A full mathematical
+
+4 To exemplify, Boccanfuso and Savard (2007), Go et al. (2010), and Diao and Thurlow
+
+(2012) all assume competitive (but in some cases segmented) labor markets. CGE
+applications to Sub-Saharan Africa with non-competitive labor markets are very rare. Two
+examples, both related to minimum wages in South Africa, are Pauw and Leibbrandt
+(2012) and Erero (2016).
+
+
+
+
+                                           4
+statement of the CGE model is in the appendix.) The illustrative database for the
+CGE application is presented in Section 2.3.
+
+
+
+
+2.1 Alternative treatments of labor mobility in CGE models
+   The CGE literature includes a large variety of treatments of the labor market,
+including labor mobility, which is the focus of this paper.5 As a reference point, it
+may be helpful to remind the reader of the relatively standard and simple CGE
+treatment of labor that is found in Lofgren et al. (2002). In this model, for each
+labor type (one or more, often categorized on the basis of education or “skill”), (a)
+the demand side is represented by first-order conditions for producer profit-
+maximization in the form of a value-added function and an equation that, for each
+production sector, imposes equality between the wage and the marginal value
+product of labor; (b) the quantity of labor supplied for employment is exogenous;
+and (c) a labor market equilibrium condition imposes equality between quantities
+demanded and supplied, an outcome that is realized via adjustments in an
+economy-wide wage variable. Labor is measured in physical units (e.g., number
+of full-time workers employed during one year). Base-year wages, which vary
+across activities, are computed on the basis of data on labor incomes (from the
+SAM) and employment quantities. For any labor type, this market-clearing
+mechanism does not change base-year relative wages by sector; it merely imposes
+a uniform scaling of the wages across all activities. Each labor type is perfectly
+mobile across the activities in which it is employed; a worker that moves from one
+sector to another earns the same wage and is as productive as those who already
+work in the receiving sector.
+   The CGE literature includes alternative approaches that deviate from this
+simple formulation in various ways, including the treatment of labor supply
+(which alternatively may be endogenous, as a point on a wage curve or driven by
+utility-maximizing household decisions), and sectoral wage differences (which
+vanish if in every employing sector, one unit of each labor type is defined as the
+quantity that earns a wage of one). An additional dimension of variation lies in the
+treatment of value-added, where different functional forms and nestings of labor
+and other factors have been used.
+
+
+5 Boeters and Savard (2013) review the literature on labor markets in CGE models; their
+discussion of labor market coordination and heterogeneity (pp. 1679-1706) covers some of
+the issues addressed here. Annabi (2003) reviews the endogenization of labor supply, and
+the modeling of unions and efficiency wages. CGE analyses that present and apply
+approaches that deviate from the standard competitive market model are found in
+Thierfelder and Shiells (1997), and Maechler and Roland-Holst (1997).
+
+
+
+
+                                           5
+   With regard to labor mobility, the focus of this paper, instead of perfect
+mobility, different types of segmentation are common with each segment
+including one or more activities. Segments may either be watertight compartments
+or allow for imperfect mobility (migration) between segments. According to one
+type of segmentation, labor-demanding activities are classified as rural or urban.
+The treatment of migration between the two areas may be based on the Harris-
+Todaro model with urban unemployment and migration ensuring equality
+between the rural wage and the expected urban wage; in the presence of urban
+unemployment, the wage in urban areas is fixed and therefore not free to clear the
+urban labor market (Dervis et al., 1982, pp. 178-180).6 Apart from the assumption
+of urban unemployment, the rural-urban migration model is in the same spirit as
+the formulation in Lofgren et al. (2002; described above) in the sense that, in both
+cases, in response to shocks, labor would be reallocated to maintain exogenous
+relative wage differences. Under a related approach, proposed by Flaig (2014, pp.
+119-121), labor migrates to pools linked to multiple segments (with perfect
+mobility within each pool) or between pairs of segments, with each segment
+representing labor employed in one or more sectors. In both cases, migration
+depends on relative wage changes in different segments and response elasticities.
+In the GTAP model, the allocation of labor and other factors with imperfect
+mobility (which are “sluggish”) is determined by a constant-elasticity-of-
+transformation (CET) function, with the allocations responding to changes in
+relative wages across activities (Hertel and Tsigas, 1997, pp. 51-52). Like
+formulations with labor units derived from normalization of wages to unity, the
+units of labor employed in different sectors do not correspond to physical units.
+   A review of the econometric labor economics literature indicates that, as
+opposed to the CGE literature, it has paid little attention to sectors. Its canonical
+model for wage (and inequality) analysis disaggregates labor on the basis ‘skills’
+(in practice a small number, sometimes proxied by educational attainment)
+without any explicit reference to the sector dimension (Acemoglu and Autor 2011,
+pp. 1096-1118). As with CGE models, their model is in the neoclassical tradition.
+Wage changes for different skills depend on changes in labor market supplies and
+demands, the latter influenced by technological change. Implicitly (in the absence
+of any reference to sectors), the canonical model views labor in each skill group as
+
+
+6 Empirically, rural-urban segmentation is problematic: available data do not permit
+sectors to be split into rural and urban as, to varying degrees, production in all sectors
+takes place both in rural and urban areas. If this is linked to household disaggregation
+(inside the model or in a microsimulation module), then a further complication is that
+workers residing in rural (urban) areas may work in urban (rural) areas. The assumption
+of the Harris-Todaro model that rural labor is fully employed is also problematic and in
+sharp contrast with what is assumed in the Lewis model with unlimited supplies of labor
+(Lewis 1954).
+
+
+
+
+                                            6
+perfectly mobile across sectors, i.e. in line with the most common assumption in
+CGE modeling.
+2.2 A proximity-based approach to labor segmentation
+    This section first presents the static producer profit maximization problem with
+a proximity-based formulation for labor mobility. Subsequently, we also briefly
+describe the simple CGE model that is used in Section 3 and incorporates this labor
+formulation. (See the appendix for a full mathematical statement of the CGE
+model.) The proposed treatment is inspired by the classical transportation model.7
+In this model, the cost of transporting a set of items from supply to demand depots
+is minimized subject to demand and supply constraints, with a transportation cost
+of zero when the demand and supply depots are in the same location. In our
+approach, the items are physical units of labor and the unit transportation costs
+are replaced by efficient employment losses driven by distance (or proximity)
+measures, inspired by the PS literature. In both settings, the extent to which a
+demand location draws on different supplies depends on the market wage or price
+in the supply location and the loss that is imposed when a good or a unit of labor
+is relocated.
+    In mathematical terms, the optimization problem of the producer in destination
+activity a may be stated as:8
+                      maximize ∙         −∑ ∑           , ∙       , ,
+                                                                                (1)
+                                          subject to 
+
+
+                                      =                     ∙                        (2)
+                                                        ,        ,
+
+
+                                  ,   =         ,   ,       ∙        ,   ,           (3)
+
+                                                ,   ,       ≥0                       (4)
+where     is output price;    output quantity;         ,   market wage per physical
+unit of factor f linked to source activity a’;       , , 		 the physical quantity of f
+from source activity a’ allocated to current activity a; , , , and CES function
+
+7 See Thompson and Thore (1992, pp. 9-21) for a detailed textbook presentation of the
+transportation model and its optimality conditions. A comparison to the conditions of the
+producer problem of this section highlights the parallels between, on one hand,
+transportation costs and goods movement in the transportation model and, on the other
+hand, efficiency losses and labor movements in our model.
+8 To simplify, this mathematical statement suppresses domain controls, and the activity
+
+subscript for the exponent ρ. This discussion also abstracts from two features of the CGE
+model that is applied model in Section 3: intermediate inputs, and exogenous relative wage
+differences between activities.
+
+
+
+
+                                            7
+parameters for efficiency, factor shares, and exponent, respectively;                  ,
+employed quantity of factor f in efficiency units in activity a;          , , proximity
+between any source activity a’ and the current activity a with respect to factor f
+(0 < , , ≤ 1). 9
+In words, the objective function (1) defines profits as the difference between output
+revenue and factor costs, the latter defined as the sum of employed physical factor
+units from different source activities a’ multiplied by related wages. The
+constraints, subject to which profits are maximized, consist of a CES function that
+defines output as a function of efficient factor quantities (2); a linear equation that
+defines efficient factor quantities as the sum of physical quantities multiplied by
+proximities between source activities a’ and the destination activity a (3); and non-
+negativity constraints on factor reallocation (4). Note that, for the proximity
+parameters, a value of 1 is used for the special case where a = a’, i.e., the case where
+labor stays in each original activity or where two activities, a and a’, are considered
+identical in terms of required worker capabilities. For factors without this
+reallocation mechanism (in our case non-labor factors), the proximity parameter is
+1 for all relevant a-a’ mappings, putting them in the same, economy-wide pool.
+   The Lagrangian of the optimization problem, L, may be expressed as:
+
+
+      =     ∙    −                    ,           ∙               ,       ,       +                        ,   ∙   ,       −
+
+
+                     +                        ,               ,       ,       ∙                ,   ,   −       ,
+
+where is the shadow price of output and                , , the efficiency-unit shadow
+wage (or rent) of factor f in (destination) activity a, henceforth referred to as the
+efficiency wage.10 The first-order conditions may be rendered as:
+                                                          =               −           =0                                       (5)
+
+
+                                 −1
+                             =                    ∙                           ,   ∙                        (−          ,
+                         ,
+                                                                                           ,                                   (6)
+
+                                          ∙           ,           −                    ,       =0
+
+
+9 Note that upper-/lower-case Latin letters are used for the variables that are
+endogenous/exogenous to the producer. In the CGE model, two of these exogenous
+variables, 	and	    , ′
+                        , are endogenous.
+10The shadow wage represents the marginal value of the factor, i.e. on the margin, the
+increase in producer profit per additional unit of the factor, using the factor units in the
+production function. In most CGE models, it is simply the market wage.
+
+
+
+
+                                                              8
+                                                 =−                          ,           +                                               ,               ∙               ,   ,       ≤0        (7)
+                             ,       ,
+
+                                                                                 ,       ,           ≥0                                                                                        (8)
+
+                             ,       ,           −               ,               +                                           ,       ∙                           ,       ,       =0            (9)
+
+
+                                     =                                           ∙                                               −                                   =0                       (10)
+                                                                     ,                                   ,
+
+
+                                                     =                   ,           ,       ∙                                   ,               ,               −               ,            (11)
+                                             ,
+
+
+   Using (5) to substitute for Va in (6), noting that (− 1⁄ (− = 1, and
+rearranging the remaining equations permits us to summarize the first-order
+conditions for producer profit maximization as follows:
+
+
+
+                     ∙                           ∙                                                                   ∙                                                   =                    (12)
+                                         ,                   ,                                           ,                               ,                                                ,
+
+
+
+                                                         ,       ≥                                               ,       ∙           ,               ,                                        (13)
+
+                                                                                 ,       ,           ≥ 0                                                                                      (14)
+
+                                 ,       ,                       ,           ∙                   ,           ,       −                                               ,       = 0              (15)
+
+
+                                                     =                                               ∙                                                                                        (16)
+                                                                                             ,                               ,
+
+
+                                                 ,   =                           ,       ,           ∙                                       ,           ,                                    (17)
+
+
+   Equations 12-17 all appear in the CGE model, which is implemented as a mixed-
+complementarity problem.11 Equation 12, a familiar condition for profit
+maximization, states that, at optimum, the marginal value product of labor in
+activity a equals the wage, in this case the efficiency wage (          , ) since the
+production function uses efficiency units. Equation 13 imposes that, at optimum,
+the physical wage in a’ (      , ) has to be larger than or equal to the proximity- 
+adjusted efficiency wage (         , ∙   , , ). The labor quantities allocated from
+
+
+11   The model is implemented in the GAMS software using the PATH solver.
+
+
+
+
+                                                                         9
+any a’ to a have to be non-negative (14). In equation 15, for any allocation that takes
+place (is positive), the parenthesized expression with wage terms must be zero,
+i.e., equation 13 must hold as an equality. The remaining two equations define the
+value-added function (16) and the link between labor hiring in efficiency units (on
+the left) to labor hiring in physical units (on the right) (17)
+    In order to see the economic logic behind and implications of equations 13 and
+15, it may help to restate equation 13 as:
+
+                                                  ,
+                                                       ≥   ,                             (13’)
+                                          ,   ,
+
+
+If labor in a’ is allocated to a (     , , > 0), then the equality between the left-
+and right-hand sides of (13’) imposed by equation 15 means that the physical wage
+in the location of origin a’, adjusted for the proximity parameter (the left side),
+equals the efficiency wage of labor in a (the right side). This shows that activity a
+allocates its hiring of labor from different sources so that the wage per efficiency
+unit of labor is equal across all sources. It means that activities pay less efficient
+workers a lower wage per physical unit. Drawing on equation 13’, if a employs
+workers from two sources, a’ and a’’, and the proximity of a’ is higher ( , , >
+   , , ),      then,      given             , =       , ⁄    , , =        , ⁄    , , ,
+       , ⁄        ,   = , , ⁄ , , > 1.
+
+On the other hand, for the case where workers from a’ are not hired in a
+(        , , = 0), equation 15 permits the right-hand side of equation 13’ to be
+strictly larger than the left-hand side. This means that, after corrected for low
+efficiency (a low proximity), a worker from a’ requires a wage that is too high to
+be competitive in activity a. The implication is that efficiency-based wage setting
+stacks the cards against reallocation of labor from a’ to a if the proximity is low
+(strong misfit between the capabilities of the worker associated with a’ and those
+required in a).12,13
+    The simulations in Section 3 use a simple static CGE model into which the
+proximity-based labor treatment is embedded. Apart from the labor treatment
+
+  With regard to optimal outcomes, they do not include the case where              , ⁄    , , <
+12
+
+        , since, if so, profits could be increased by hiring more labor from a’ in a; i.e. after
+correction for efficiency losses, the wage paid for labor from a’ is below the labor efficiency
+wage for a.
+13 Similarly, willingness to pay a higher wage to workers already in their current
+
+employment is also generated by labor market insider-outsider theories. However, as
+opposed to our model, the focus is here on firms (not sectors) and the reasons are different:
+labor turnover costs among which lower productivity due to absent skills is only one part
+(cf. Lindbeck and Snower, 1988).
+
+
+
+
+                                                      10
+(which is based on equations 12-17), the CGE model is typical of models of small
+open economies with optimizing behavior for households and producers,
+domestic markets for commodities and factors cleared by flexible prices and
+wages, respectively, and a government that consumes, saves, taxes, and both
+receives and pays transfers. With regard to its treatment of factors, in distinction
+from the producer maximization problem, the CGE model also requires
+equilibrium conditions for factor markets, which are defined over f and a’ (one
+condition for each factor stock and activity of origin). These conditions may be
+stated as follows:
+                                            ,   ,    =    ,
+
+   where          ,  is the available physical quantity of factor f that has the
+capabilities required in source activity a’. The condition imposes equality between
+this quantity and the sum of the physical quantities of labor f from a’ that are
+allocated to any activity a. It is cleared by the wage variable,       , , which is
+exogenous in the producer model but endogenous (and in upper case) in the CGE
+model.
+2.3 Data
+   The bulk of the dataset for our model consists of a social accounting matrix
+(SAM) and sectoral employment quantities (both for the simulation base-year),
+complemented by a set of elasticities (for production, consumption, and trade).
+Due to our proximity-based treatment, additional data is needed for the proximity
+parameter. We will here present the model database with special emphasis on the
+construction of the data for the proximity parameter.
+   In this application, the SAM is designed to capture the sectoral structure of an
+SSA country that is not strongly reliant in natural resource exports.14 The SAM is
+used to define base-year values for the bulk of the model parameters, including
+production technologies, sources of commodity supplies (domestic output or
+imports), demand patterns (for household and government consumption,
+investment and exports), transfers between different institutions, and tax rates.
+The disaggregation of our country SAM coincides with that of the rest of the model
+database. As shown in Table 1, it is disaggregated into 23 sectors (activities and
+commodities) – 3 in agriculture, 2 in mining, 13 in manufacturing, and 7 in services
+– with each activity producing a single commodity for which it is the only
+domestic producer. The factors are split into labor, private capital, and natural
+resources (5 types: agricultural land, forestry land, fishing resources, and two
+natural resources used in extractive industries). The institutions are split into
+households, government, and the rest of world. A set of auxiliary accounts cover
+
+
+14   Specifically, our SSA SAM is based on the 2010 supply and use tables for Uganda.
+
+
+
+
+                                                11
+the different tax instruments as well as trade and transport margins on domestic
+sales, imports and exports.
+                    Table 1. Disaggregation of SSA country CGE and SAM.
+Category ‐ #                   Item                               Category ‐ #   Item
+Sectors                        Agriculture
+                 Agriculture (3)                                  Factors (7)    Labor
+(activities and                Forestry                                          Private capital
+commodities)                   Fishing                                           Land
+(25)             Mining (2)    Petroleum and gas                                 Timber
+                               Mining                                            Fish
+                Manufacturing  Food                                              Extractive res in Pet and gas
+                (13)           Beverages                                         Extractive res in Mining
+                                   Tobacco products               Institutions  Households
+                                   Textiles and leather           (3)           Government
+                                   Wood                                         Rest of the world
+                                   Paper                          Auxiliary     Taxes on production
+                                   Refined petroleum products     accounts (7) Taxes on sales
+                                   Chemical products                            Taxes on imports
+                                   Rubber and plastic                           Taxes on income
+                                   Non‐metalic mineral products                 Trade and transp marg, dom
+                                   Metal products                               Trade and transp marg, imp
+                                   Machinery and vehicles                       Trade and transp marg, exp
+                                   Other manufactures             Savings and  Savings
+                Services (7)       Electricity and gas            Investment  Private (non‐government)
+                                   Construction                   (4)           Government
+                                   Trade, hotels and resturants                 Stock change
+                                   Transport
+                                   Communications
+                                   Government
+                                   Other services
+
+Source: Authors’ elaboration.
+
+
+    On the basis of the SAM data, Table 2 summarizes the sectoral structure of the
+illustrative SSA economy: sectoral shares in value-added, production,
+employment, exports and imports, as well as the split of domestic sectoral supplies
+between exports and domestic sales, and domestic sectoral demands between
+imports and domestic output. For instance, while (primary) agriculture represents
+a significant share of employment (around 66 percent), its shares of value added
+(VA), production, and exports are much smaller (in the range of 15-25 percent).
+The share of its output that is exported is around 10 percent while only some 5
+percent of domestic demands are met via imports.
+
+
+
+
+                                                    12
+         Table 2. Sectoral structure of illustrative SSA country economy (percent).
+                                                                              Exports‐ Imports‐
+                               Value                                           Output  Demand 
+Sector                         added    Production Employment Exports Imports    ratio    ratio
+Agriculture                     24.6         15.9         59.7     21.3     4.6      10.2      4.8
+Forestry                         4.6          3.1          5.4      0.0     0.0       0.1      0.1
+Fishing                          1.3          0.8          0.9      3.9     0.0      33.0      0.4
+Petroleum and gas                0.1          0.1          0.0      0.0     0.0       0.1      0.1
+Mining                           1.1          1.1          0.2      0.6     1.4       3.5     16.8
+Food                             7.2         11.3          2.9     12.6     7.0       9.0     10.5
+Beverages                        0.9          1.7          0.1      2.9     1.1      13.3     14.3
+Tobbaco products                 0.1          0.2          0.0      0.3     0.2      15.1     39.3
+Textiles and leather             1.0          1.0          0.2      8.4     4.9      56.4     64.4
+Wood                             0.0          0.5          0.0      0.4     0.2       6.5      5.7
+Paper                            0.1          0.1          0.0      0.5     1.9      30.9     63.7
+Refined petroleum products       0.0          0.1          0.0      1.0    16.2      97.7     84.7
+Chemical products                1.1          1.3          0.1      3.1    11.1      17.2     59.2
+Rubber and plastic               0.2          0.2          0.0      1.0     2.1      33.3     68.8
+Non‐metalic mineral products     0.8          1.2          0.1      3.1     2.6      20.3     29.4
+Metal products                   0.8          1.3          0.1      5.4     8.2      34.7     59.0
+Machinery and vehicles           0.1          0.2          0.0      2.7    27.4      98.5     99.9
+Other manufactures               0.6          1.0          0.1      0.9     1.9       7.3     23.4
+Electricity and gas              0.5          0.4          0.1      0.5     0.1      10.4      3.8
+Construction                     6.6         11.3          2.0      0.0     0.0       0.0      0.0
+Trade, hotels and resturants    14.9         17.2          8.2     15.8     2.1       8.3      1.9
+Transport                        2.5          2.3          1.3      2.8     3.9      10.9     21.4
+Communications                   3.7          3.6          0.8      0.0     0.0       0.0      0.0
+Government                       3.5          3.8          3.5      8.1     0.5      19.3      2.2
+Other services                  23.8         20.3         14.1      4.6     2.4       2.1      1.7
+Total                          100.0        100.0        100.0    100.0   100.0       8.1     15.8
+
+Note: The columns Value added, Production, Employment, Exports, and Imports show the shares
+(in percent) of each sector in the country totals. The columns Exports-output ratio and Imports-
+demand show exports and imports as shares (in percent) of total sector output and total domestic
+demand, respectively.
+
+   Table 3 shows the factor shares in total sectoral value added. For example, the
+table shows that agriculture is relatively intensive in the use of labor; this
+information will be useful to analyze the results from the CGE simulations.
+
+
+
+
+                                                13
+          Table 3. Sectoral factor intensity of illustrative SSA economy (percent)
+    Sector                                   Labor Prv Capital         Nat Res       Total
+    Agriculture                               73.7       15.0             11.3       100.0
+    Forestry                                  36.0        0.3             63.7       100.0
+    Fishing                                   21.1        0.2             78.7       100.0
+    Petroleum and gas                         27.3       38.1             34.6       100.0
+    Mining                                    27.3       51.5             21.2       100.0
+    Food                                      68.9       31.1              0.0       100.0
+    Beverages                                 23.0       77.0              0.0       100.0
+    Tobacco products                          66.1       33.9              0.0       100.0
+    Textiles and leather                      39.6       60.4              0.0       100.0
+    Wood                                      14.6       85.4              0.0       100.0
+    Paper                                     27.3       72.7              0.0       100.0
+    Refined petroleum products                 9.3       90.7              0.0       100.0
+    Chemical products                         19.2       80.8              0.0       100.0
+    Rubber and plastic                        17.6       82.4              0.0       100.0
+    Non‐metalic mineral products              17.4       82.6              0.0       100.0
+    Metal products                            17.9       82.1              0.0       100.0
+    Machinery and vehicles                    15.1       84.9              0.0       100.0
+    Other manufactures                        30.0       70.0              0.0       100.0
+    Electricity and gas                       41.6       58.4              0.0       100.0
+    Construction                              50.7       49.3              0.0       100.0
+    Trade, hotels and resturants              49.6       50.4              0.0       100.0
+    Transport                                 48.8       51.2              0.0       100.0
+    Communications                            19.6       80.4              0.0       100.0
+    Government                               100.0        0.0              0.0       100.0
+    Other services                            52.9       47.1              0.0       100.0
+    Total                                     55.7       37.3              7.0       100.0
+
+Source: Authors’ calculations based on illustrative SSA country SAM.
+
+   Compared to a standard CGE application, additional data is needed for the
+proximity parameter. As indicated in the preceding section, the values for this
+parameter should measure the extent to which a worker that belongs to activity a’
+has the capabilities required from workers in a destination activity a; in other
+words, it should measure the efficiency of workers from a’ in a compared to
+workers that belong to a. Different approaches are possible and in the concluding
+section we highlight this as an important area for future research.
+   For the purposes of this paper, we found it convenient to draw on the PS
+approach, computing proximities on the basis of revealed comparative advantage
+
+
+
+
+                                               14
+(RCA) data computed from international trade data.15 In PS analysis, the proximity
+of one sector to another is the core indicator of how close the two sectors are in
+terms of the capabilities needed for competitive production. In this paper, we
+apply it to labor as an indicator of the closeness of the capabilities required in
+different sectors.
+   RCA measures the degree of comparative advantage by country, commodity,
+and time. A country has an RCA in commodity c if the following indicator has a
+value above unity:
+
+                                          , ,                , ,
+                                    ∑    , ,              ∑     , ,
+                            , , =   ∑
+                                                   =
+                                                          ∑
+                                           , ,                 , ,
+                                  ∑ ∑         , ,      ∑   ∑       , ,
+where E stands for export value (in US$) while the indices r (or r’), c (or c’ or c’’),
+and t stand for countries (“regions”), commodities (often referred to as products,
+typically limited to goods), and years, respectively.16 We name the related binary
+0-1 variable      01 , , 	( 01 , , = 0	if	        , , < 1;	     01 , , = 1	if	 , , ≥ 1).
+The term in the middle defines RCA as the ratio between the shares of commodity
+c in country and world exports while the term on the right equivalently defines it
+as the ratio between the shares of the country in global exports of commodity c
+and in total global exports.
+    The proximity between two commodities, c and c’, in time t, , , 0 ≤ , , ≤
+1 is derived from data on probabilities of simultaneously having                   , , ≥
+1	and	      , , ≥  1 :
+                , , = min         01 ,      01 , ,           01 ,      01 ,
+where P (the conditional probability) is computed using all countries r in year t,
+and where
+                                        1	if	         , , >1
+                                 01 , =
+                                        0	if	         , , ≤1
+
+
+
+
+15 PS analysis, which was pioneered in Hausmann and Klinger (2006) and Hidalgo et al.
+(2007), offers a data-driven evaluation of the feasibility and desirability of alternative
+sectoral transformation options for a country, considering its initial export structure and
+the structure across a near complete set of country-level export data.
+16 In PS analysis, the indices c and i are typically used for country and product; in our CGE
+
+model and those of many others, c is used for commodities (goods or services). In order to
+avoid confusion and to keep notation consistent throughout this study, we switch to r for
+countries (or “regions”; this follows the example of GTAP) and use c for commodities. It
+should also be noted that our CGE makes a distinction between commodities c (outputs)
+and activities a (producing outputs); in this application, there is a one-to-one mapping
+between the two.
+
+
+
+
+                                                15
+   In our application, the proximity indicator is used as a measure of how close
+the capabilities of workers in a sector are from those required for full efficiency in
+other sectors; in the PS literature, it is used as a measure of a country’s capabilities,
+also considering other inputs. The proximity indicator follows the disaggregation
+of the CGE database. For the commodities that it covers, we use the Comtrade
+export database. However, proximity data are also needed for sectors not covered
+by Comtrade. Non-Comtrade commodities are made up of services and a subset
+of goods (the latter including utilities and construction); all tend to be relatively
+non-traded. Given that, export data may not exist or be relevant to RCA
+measurement, we instead use GTAP value-added data. Given that our dataset has
+a one-to-one mapping between activities (production sectors) and commodities
+(outputs), it is straightforward to define RCA and proximity indicators using
+export data for one commodity subset and VA data for another commodity subset.
+   The computed raw proximity data between all pairs of commodities are shown
+in Table 4.17 Further, before the CGE implementation of these raw proximities,
+scaling was needed to generate empirically valid representations of labor market
+segmentation.18 This is part of the broader challenge of testing and improving the
+validity of CGE models in manners that consider the context of different types of
+applications.
+
+
+
+
+17 A model with multiple labor categories would require multiple proximity matrices to
+permit proximity data to differ by labor category (for example, classified by educational
+attainment, skill, or occupation). For example, IT and human resources staff may have very
+small distances between sectors; other skilled tasks may be highly specialized.
+18 In our application in Section 3, the scaled proximity parameter,
+                                                                             , , used in the model
+is derived from the original raw proximity parameter using the following formula:               , =
+
+    , +       ∙ 1−       , , where        is a factor-specific scaling parameter. The higher the
+value of the latter, the higher the scaled proximity. To ensure that 0 ≤          , ≤ 1, the scaling
+parameter should satisfy the following restriction: − ,             1−     ,     ≤        ≤ 1. Note
+that   lim        ,   +     ∙ 1−       ,    = 1. If the non-scaled proximities are too low,
+          →
+simulated factor reallocation falls short of what is observed in practice; to make
+reallocation easier, the value of the scaling parameter should be within the following range:
+0<        ≤ 1. Given current uncertainty about its value, it may be seen as the exogenous
+shift parameter that is used in the non-base simulations to explore the implications of
+different degrees of sensitivity of efficiency for potentially relocated labor to proximity.
+
+
+
+
+                                                16
+                Table 4. Proximity between sectors in the illustrative SSA country SAM.
+                                       1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20     21     22     23     24     25
+ 1   Agriculture                    1.00   0.48   0.49   0.23   0.46   0.80   0.46   0.36   0.44   0.39   0.23   0.25   0.20   0.26   0.31   0.43   0.10   0.16   0.48   0.46   0.64   0.57   0.46   0.26   0.23
+ 2   Forestry                       0.48   1.00   0.48   0.14   0.27   0.52   0.45   0.39   0.50   0.59   0.34   0.30   0.25   0.41   0.43   0.42   0.18   0.25   0.47   0.49   0.48   0.51   0.50   0.16   0.25
+ 3   Fishing                        0.49   0.48   1.00   0.22   0.39   0.51   0.54   0.49   0.46   0.37   0.29   0.22   0.24   0.27   0.34   0.31   0.17   0.27   0.34   0.43   0.46   0.32   0.40   0.32   0.32
+ 4   Petroleum and gas              0.23   0.14   0.22   1.00   0.26   0.16   0.08   0.11   0.15   0.25   0.11   0.41   0.08   0.03   0.14   0.13   0.08   0.04   0.26   0.22   0.27   0.22   0.21   0.15   0.07
+ 5   Mining                         0.46   0.27   0.39   0.26   1.00   0.38   0.35   0.29   0.31   0.35   0.23   0.31   0.20   0.09   0.22   0.49   0.03   0.26   0.32   0.33   0.37   0.36   0.40   0.37   0.20
+ 6   Food                           0.80   0.52   0.51   0.16   0.38   1.00   0.52   0.43   0.49   0.44   0.26   0.30   0.25   0.33   0.39   0.36   0.10   0.26   0.49   0.51   0.56   0.57   0.46   0.28   0.25
+ 7   Beverages                      0.46   0.45   0.54   0.08   0.35   0.52   1.00   0.48   0.45   0.43   0.40   0.25   0.25   0.40   0.50   0.42   0.18   0.30   0.32   0.49   0.38   0.39   0.50   0.33   0.50
+ 8   Tobacco products               0.36   0.39   0.49   0.11   0.29   0.43   0.48   1.00   0.51   0.48   0.26   0.21   0.26   0.42   0.45   0.31   0.18   0.45   0.28   0.39   0.37   0.32   0.44   0.24   0.34
+ 9   Textiles and leather           0.44   0.50   0.46   0.15   0.31   0.49   0.45   0.51   1.00   0.38   0.21   0.28   0.21   0.38   0.49   0.38   0.08   0.36   0.36   0.39   0.40   0.44   0.38   0.13   0.18
+10   Wood                           0.39   0.59   0.37   0.25   0.35   0.44   0.43   0.48   0.38   1.00   0.43   0.28   0.10   0.40   0.45   0.44   0.25   0.30   0.47   0.45   0.37   0.46   0.44   0.23   0.25
+11   Paper                          0.23   0.34   0.29   0.11   0.23   0.26   0.40   0.26   0.21   0.43   1.00   0.18   0.22   0.48   0.43   0.36   0.41   0.26   0.26   0.33   0.23   0.27   0.33   0.37   0.55
+12   Refined petroleum products     0.25   0.30   0.22   0.41   0.31   0.30   0.25   0.21   0.28   0.28   0.18   1.00   0.26   0.15   0.30   0.31   0.12   0.21   0.36   0.39   0.19   0.37   0.38   0.24   0.18
+13   Chemical products              0.20   0.25   0.24   0.08   0.20   0.25   0.25   0.26   0.21   0.10   0.22   0.26   1.00   0.33   0.30   0.16   0.26   0.30   0.11   0.27   0.15   0.19   0.25   0.38   0.45
+14   Rubber and plastic             0.26   0.41   0.27   0.03   0.09   0.33   0.40   0.42   0.38   0.40   0.48   0.15   0.33   1.00   0.62   0.33   0.48   0.45   0.26   0.39   0.21   0.34   0.40   0.30   0.52
+15   Non‐metalic mineral products   0.31   0.43   0.34   0.14   0.22   0.39   0.50   0.45   0.49   0.45   0.43   0.30   0.30   0.62   1.00   0.51   0.30   0.35   0.40   0.49   0.27   0.42   0.44   0.24   0.38
+16   Metal products                 0.43   0.42   0.31   0.13   0.49   0.36   0.42   0.31   0.38   0.44   0.36   0.31   0.16   0.33   0.51   1.00   0.24   0.31   0.53   0.53   0.35   0.49   0.50   0.20   0.29
+17   Machinery and vehicles         0.10   0.18   0.17   0.08   0.03   0.10   0.18   0.18   0.08   0.25   0.41   0.12   0.26   0.48   0.30   0.24   1.00   0.33   0.21   0.22   0.17   0.22   0.23   0.27   0.41
+18   Other manufactures             0.16   0.25   0.27   0.04   0.26   0.26   0.30   0.45   0.36   0.30   0.26   0.21   0.30   0.45   0.35   0.31   0.33   1.00   0.26   0.31   0.17   0.29   0.27   0.22   0.31
+19   Electricity and gas            0.48   0.47   0.34   0.26   0.32   0.49   0.32   0.28   0.36   0.47   0.26   0.36   0.11   0.26   0.40   0.53   0.21   0.26   1.00   0.47   0.45   0.56   0.42   0.19   0.15
+20   Construction                   0.46   0.49   0.43   0.22   0.33   0.51   0.49   0.39   0.39   0.45   0.33   0.39   0.27   0.39   0.49   0.53   0.22   0.31   0.47   1.00   0.29   0.49   0.51   0.29   0.39
+21   Trade, hotels and resturants   0.64   0.48   0.46   0.27   0.37   0.56   0.38   0.37   0.40   0.37   0.23   0.19   0.15   0.21   0.27   0.35   0.17   0.17   0.45   0.29   1.00   0.49   0.38   0.19   0.19
+22   Transport                      0.57   0.51   0.32   0.22   0.36   0.57   0.39   0.32   0.44   0.46   0.27   0.37   0.19   0.34   0.42   0.49   0.22   0.29   0.56   0.49   0.49   1.00   0.47   0.20   0.19
+23   Communications                 0.46   0.50   0.40   0.21   0.40   0.46   0.50   0.44   0.38   0.44   0.33   0.38   0.25   0.40   0.44   0.50   0.23   0.27   0.42   0.51   0.38   0.47   1.00   0.35   0.40
+24   Government                     0.26   0.16   0.32   0.15   0.37   0.28   0.33   0.24   0.13   0.23   0.37   0.24   0.38   0.30   0.24   0.20   0.27   0.22   0.19   0.29   0.19   0.20   0.35   1.00   0.48
+25   Other services                 0.23   0.25   0.32   0.07   0.20   0.25   0.50   0.34   0.18   0.25   0.55   0.18   0.45   0.52   0.38   0.29   0.41   0.31   0.15   0.39   0.19   0.19   0.40   0.48   1.00
+
+
+Source: Authors’ calculations based on Comtrade and GTAP 8 data.
+
+    In addition to the SAM and proximity data, our CGE model also requires (a)
+base-year estimates for sectoral employment levels, and (b) a set of elasticities (for
+production, consumption and trade). In order to estimate sectoral employment,
+we combined population data with estimates for sectoral employment shares in
+broad sectoral categories from World Bank (2016). In turn, elasticities were given
+a value based on the available evidence for comparable countries. For elasticities,
+the following values were used: (a) the elasticity of substitution among factors is
+in the 0.2–1.15 range, relatively low for primary sectors and relatively high for
+manufactures and services (see Narayanan et al. 2012); (b) the expenditure
+elasticities for household consumption were obtained from Seale et al. (2003); and
+(c) trade elasticities are 4 for both Armington and CET elasticities.19 Given the
+uncertainty with respect to our elasticity values, we conducted a systematic
+sensitivity analysis of our simulation results with respect to their values; it
+indicated that the results presented here are robust.20
+
+
+19 These CET and Armington elasticities may seem high. However, the size of responses to
+trade-related shocks depend not only on these trade elasticities but also on other aspects
+of the model, including the size of production responses which, in their turn, depend on
+(a) the mobility of labor and other factors; and (b) elasticities of factor substitution. Thus, a
+given trade-related shock may generate similar trade and production responses with a
+combination of high factor mobility and low trade elasticities or, alternatively, low factor
+mobility and high trade elasticities.
+20 The results from the systematic sensitivity are downloadable as supplementary material
+
+from www.jgea.org/resources/jgea/ojs/index.php/jgea/article/view/39.
+
+
+
+
+                                                                                               17
+3. Simulations
+3.1. Scenarios
+   This section presents the simulations and analyzes their results. The
+simulations consist of a base solution (which replicates the base-year economy)
+and a set of non-base scenarios. All scenarios are run under the assumption of
+fixed total employment. At the macro level, our CGE model – like others – requires
+the specification of the equilibrating mechanisms (“closures”) for three
+macroeconomic balances: government, savings-investment, and the balance of
+payments. Unless specified otherwise, in all simulations the following
+macroeconomic closure rules are applied: (a) in order to ensure that the
+simulations are budget neutral, changes in income tax rates on households clear
+the government budget (i.e., compared to base values, no other changes in taxes
+or other revenue sources, domestic or foreign, are permitted); (b) in order to ensure
+that the simulations are neutral in terms of changes in country net foreign assets,
+foreign savings (the current account deficit) is fixed in foreign currency, an
+outcome that is achieved through changes in the real exchange rate; and (c) in
+order to ensure neutrality across the simulations in terms of investing for the
+future, real investment is fixed; as a result of this and given the fact that real
+government consumption also is fixed, change in real private consumption may
+be used to measure changes in aggregate welfare. With regard to non-labor factors,
+for all simulations we assume that they are sector-specific (no mobility between
+sectors).
+   The different non-base scenarios and their treatment of labor mobility are
+shown in Table 5. The non-base simulations explore how the impact of a terms-of-
+trade shock is influenced by alternative settings for labor proximities. Across all
+scenarios, we impose a 35 percent increase in the food export price.21 Given the
+sectoral structure described in Table 2 (e.g., the food industry has a relatively high
+export-to-output ratio), this shock serves to illustrate the working of the proposed
+approach to modeling labor mobility across sectors.
+
+
+
+
+21 In addition, sensitivity tests indicated that our qualitative findings were robust to
+alternative magnitudes for the shock: specifically, we tested the same five labor proximity
+settings for increases in the food export price in a range from 10 to 50 percent. The results
+from these additional scenarios are downloadable as supplementary material from
+www.jgea.org/resources/jgea/ojs/index.php/jgea/article/view/39.
+
+
+
+
+                                             18
+                           Table 5. Definitions of non-base scenarios.
+     Name / degree of labor 
+     mobility                Description
+     zero                    sector‐specific labor due to very low proximities
+     low                     proximity parameters from Table 4
+     medium                  proximity scaling* by 0.5, reducing gap between 1 and 
+                             values in Table 4 by 50%.
+     high                    proximity scaling* by 0.75, reducing gap between 1 and 
+                             parameters in Table 4 by 75%.
+     perfect                 integrated labor market (all proximities = 1)
+Note: * The scaling factor is defined in footnote 22.
+Source: Authors’ elaboration.
+
+
+3.2. Results
+   Tables 6-9 and Figures 1 and 2 summarize the results for the simulations,
+covering both the macro and sector levels. Overall, the results are regular and as
+expected. At the macro level (Table 6 and Figure 1), the higher the degree of
+mobility, the stronger the gains. For the zero mobility scenario, the gain in the food
+export price raises the value of exports, generating a balance of payments surplus
+and an equilibrating appreciation of the real exchange rate, which reduces the
+export volume, raises the import volume, and increases absorption, in this case
+private consumption since the other parts of absorption (investment and
+government consumption) are fixed in real terms. These changes take place
+without any changes in employment or production, i.e., given the assumption that
+non-labor factors are sector-specific, existing output is merely reallocated from
+exports to domestic sales.
+   Across all scenarios, the higher the degree of labor mobility, the stronger the
+gains in absorption and private consumption, indicating that a more flexible
+economy is better at reallocating resources to gain from (or mitigate losses due to)
+international price changes.22 Since it is able to focus on higher-valued exports, a
+flexible economy is able to maintain external balance with smaller export
+
+22 A higher trade deficit is more favorable in the sense that, for any given level of real GDP,
+it permits higher level of domestic final demands (absorption). In addition to the terms of
+trade gain and labor reallocation, in this set of simulations, the measured welfare gain is
+boosted because the favored sector (food) pays wages that are above the average. This is
+due to the fact that the equilibrium solutions (reflecting real world observations) retain
+observed wage gaps (in our model with fixed relative wage differences, a common
+formulation). Higher than average wages in certain sectors may compensate for a relatively
+high disutility from work in these sectors; however, this is not reflected in the model or in
+the welfare measures (based on private consumption) that are presented.
+
+
+
+
+                                                   19
+quantities and higher import quantities. GDP at factor cost increases slightly for
+the non-zero-mobility scenarios due to the fact that, in the food sector, which
+accounts for almost all output and employment increases, marginal productivity
+of labor (and wages) are above average.23
+    For the real exchange rate, the expected result is that higher mobility would
+reduce the appreciation needed to eliminate the surplus in the current account;
+this is indeed the result across the simulations with non-zero labor mobility.
+However, the lowest real appreciation is registered for the simulation with zero
+mobility; this is due to the fact that, for this simulation, the absence of employment
+changes prevents output and export increases for the food sector that drastically
+increase the current account surplus and, given this, the need for real appreciation.
+    Labor reallocation to the food sector is the reason behind the absorption gains
+beyond what is achieved for the zero mobility scenario – the higher the proximity,
+the stronger the mobility, the reallocation, and the ability of the economy to export
+at more favorable terms with the benefits appearing in higher imports and
+absorption. Table 7 shows the shares of the workers initially employed in different
+sectors that, in response to the shock, move to the food sector. As expected, when
+labor mobility increases (among other things meaning that other sectors are in
+closer proximity to the food industry), we see labor moving into the food industry
+from a larger number of sectors. For example, labor moves from four and ten
+sectors in the medium and high scenarios, respectively.
+    From a different angle, Figure 2 displays the percent changes for output,
+efficient employment, and physical employment in the food sector for the different
+scenarios.24 Except for the case with perfect mobility, the quantity of labor in
+efficiency units that moves to the food sector is smaller than the physical quantity
+due to the loss in efficiency. The fact that certain sectors are more prone to release
+labor to food is in part determined by the proximity data – other manufacturing
+sectors, such as beverages, are relatively close to food. In fact, Table 4 in Section
+2.3 shows that beverages is a sector in close proximity to the food processing
+industry. However, the pattern of labor reallocation is also influenced by other
+factors, including the extent to which the output of the different sectors is tradable
+– as a result of the real appreciation, non-food sectors that are relatively tradable
+lose more than others in terms of relative profitability.
+    Tables 8 and 9 show the changes in sectoral output and employment (both
+physical and efficient), respectively. Not surprisingly, the major backward link of
+
+
+23 Given the current set of assumptions, real GDP at factor cost changes due to (a) losses in
+productivity when labor moves between sectors; and (b) exogenous wage differentials
+across sectors. Labor movements between two sectors with a linking proximity of 1 (no
+productivity loss) and identical wages, do not change GDP.
+24 Under perfect mobility, we can compute employment changes but we cannot single out
+
+the sectors of origin and destination for labor movements.
+
+
+
+
+                                             20
+food is with agriculture. In the base-year dataset the food industry accounts for 27
+percent of total demand for agricultural output.25 As the increase in food
+production increases with increased mobility, the positive impact on intermediate
+food demands for agricultural output comes to dominate the negative impact on
+agricultural exports from appreciation. Interestingly, this input-output relation
+between agriculture and food dominates the labor reallocation from agriculture to
+food that would have been expected given the close proximity between them (see
+Table 4 in Section 2.3).
+   In Table 9, all contracting activities show the same negative changes in physical
+and efficiency units since all of the departing workers were assigned to the
+activities from they depart (their proximities were equal to one, i.e., a=a’). On the
+other hand, given that the proximities for movements from contracting to
+expanding activities here always are less than one, the positive employment
+changes are always smaller in efficiency units than in physical units.
+                   Table 6. Real macro indicators (percent change from base).
+ Item                              base year*          zero        low medium              high     perfect
+ Absorption                             109.7           0.9         1.4     1.7              1.9        2.0
+ Private consumption                     77.1           1.3         2.1     2.5              2.7        2.8
+ Exports                                 16.0           4.3         4.0     3.9              3.4        2.9
+ Imports                                 25.7           6.5         7.1     7.7              7.9        8.3
+ GDP at factor cost                      91.4           0.0         0.5     0.8              1.0        1.0
+ Real exchange rate                         1          ‐4.5        ‐8.1    ‐7.5             ‐7.0       ‐6.9
+Note: * In this column, the unit is % of GDP at market prices except for the real exchange rate, which is
+indexed to 1.
+Source: Authors' calculations.
+
+
+
+
+25Other major demands for agricultural output is for household consumption, exports,
+and for use in the “Trade, hotels and restaurants” sector.
+
+
+
+
+                                                      21
+     Table 7. Share of labor initially employed in activity a (column) allocated to food
+                                     processing (percent).
+              Activity                              low medium            high
+              Agriculture                           0.4         0.4        0.0
+              Forestry                              0.0         0.0        0.0
+              Fishing                               0.0         0.0        0.0
+              Petroleum and gas                     0.0         0.0        0.0
+              Mining                                0.0         0.0        0.7
+              Food                                100.0       100.0      100.0
+              Beverages                             0.0         3.3       10.5
+              Tobacco products                      0.0         7.7       14.4
+              Textiles and leather                  0.0         2.7       15.8
+              Wood                                  0.0         0.0        0.0
+              Paper                                 0.0         0.0        0.0
+              Refined petroleum products            0.0         0.0        8.7
+              Chemical products                     0.0         0.0        0.0
+              Rubber and plastic                    0.0         0.0        0.0
+              Non‐metalic mineral products          0.0         0.0       10.2
+              Metal products                        0.0         0.0        7.3
+              Machinery and vehicles                0.0         0.0        0.0
+              Other manufactures                    0.0         0.0        3.3
+              Electricity and gas                   0.0         0.0        0.7
+              Construction                          0.0         0.0        0.0
+              Trade, hotels and resturants          0.0         0.0        0.0
+              Transport                             0.0         0.0        4.3
+              Communications                        0.0         0.0        0.0
+              Government                            0.0         0.0        0.0
+              Other services                        0.0         0.0        0.0
+Source: Authors' calculations.
+
+
+
+
+                                             22
+                 Table 8. Real output by sector (percent change from base).
+ Activity                                  base          low medium              high    perfect
+ Agriculture                               8,428        ‐0.26       ‐0.30       ‐0.01       0.53
+ Forestry                                  1,568         0.02        0.11        0.22       0.43
+ Fishing                                     439         0.00        0.00        0.00      ‐0.27
+ Petroleum and gas                            37         0.00        0.00       ‐0.18      ‐1.64
+ Mining                                      392         0.00        0.00       ‐0.20      ‐1.13
+ Food                                      2,460         8.39       12.49       15.15      18.23
+ Beverages                                   308         0.00       ‐0.77       ‐2.51      ‐3.92
+ Tobbaco products                             21         0.00       ‐5.17       ‐9.71     ‐13.08
+ Textiles and leather                        333         0.00       ‐1.06       ‐6.55     ‐10.67
+ Wood                                          7        ‐2.97       ‐3.46       ‐3.31      ‐2.79
+ Paper                                        26         0.00       ‐1.03       ‐4.14      ‐6.93
+ Refined petroleum products                   13         0.00        0.00       ‐0.84      ‐2.70
+ Chemical products                           363         0.00        0.00       ‐0.31      ‐3.08
+ Rubber and plastic                           63         0.00        0.00       ‐1.41      ‐3.61
+ Non‐metalic mineral products                267         0.00       ‐0.01       ‐1.84      ‐3.64
+ Metal products                              265         0.00       ‐0.38       ‐1.94      ‐4.36
+ Machinery and vehicles                       49         0.00        0.00       ‐1.72      ‐4.29
+ Other manufactures                          207         0.00        0.00       ‐1.00      ‐4.23
+ Electricity and gas                         181         0.00        0.00       ‐0.31      ‐2.70
+ Construction                              2,256         0.06        0.09        0.10       0.12
+ Trade, hotels and resturants              5,119         0.00        0.00        0.00       0.43
+ Transport                                   847         0.00        0.00       ‐2.11      ‐4.96
+ Communications                            1,284         0.00        0.14        0.00      ‐0.79
+ Government                                1,216         0.00        0.00       ‐1.40      ‐6.07
+ Other services                            8,180         0.00        0.05        0.49       0.72
+Note: * For the zero mobility scenario, real output does no change from the base year.
+Source: Authors' calculations.
+
+
+
+
+                                                   23
+  Table 9. Employment by sector in physical and efficiency units (percent change from
+                                       base).
+                               Physical units                            Efficiency units
+Activity                            low medium          high   perfect         low medium        high   perfect
+Agriculture                       ‐0.36       ‐0.41    ‐0.01      0.72        ‐0.36    ‐0.41    ‐0.01     0.72
+Forestry                           0.10        0.37     0.71      1.22         0.06     0.30     0.62     1.22
+Fishing                            0.00        0.00     0.00     ‐1.27         0.00     0.00     0.00    ‐1.27
+Petroleum and gas                  0.00        0.00    ‐0.64     ‐5.54         0.00     0.00    ‐0.64    ‐5.54
+Mining                             0.00        0.00    ‐0.72     ‐3.89         0.00     0.00    ‐0.72    ‐3.89
+Food                              15.47      21.19     25.86    27.38        12.38     18.56    22.63    27.38
+Beverages                          0.00       ‐3.30   ‐10.52   ‐16.09          0.00    ‐3.30   ‐10.52   ‐16.09
+Tobacco products                   0.00       ‐7.72   ‐14.36   ‐19.19          0.00    ‐7.72   ‐14.36   ‐19.19
+Textiles and leather               0.00       ‐2.67   ‐15.83   ‐25.04          0.00    ‐2.67   ‐15.83   ‐25.04
+Wood                             ‐18.85     ‐21.69    ‐20.81   ‐17.76       ‐18.85    ‐21.69   ‐20.81   ‐17.76
+Paper                              0.00       ‐3.75   ‐14.48   ‐23.41          0.00    ‐3.75   ‐14.48   ‐23.41
+Refined petroleum products         0.00        0.00    ‐8.67   ‐25.82          0.00     0.00    ‐8.67   ‐25.82
+Chemical products                  0.00        0.00    ‐1.59   ‐15.18          0.00     0.00    ‐1.59   ‐15.18
+Rubber and plastic                 0.00        0.00    ‐7.76   ‐19.00          0.00     0.00    ‐7.76   ‐19.00
+Non‐metalic mineral products       0.00       ‐0.04   ‐10.16   ‐19.35          0.00    ‐0.04   ‐10.16   ‐19.35
+Metal products                     0.00       ‐2.12   ‐10.40   ‐22.28          0.00    ‐2.12   ‐10.40   ‐22.28
+Machinery and vehicles             0.00        0.00   ‐10.88   ‐25.53          0.00     0.00   ‐10.88   ‐25.53
+Other manufactures                 0.00        0.00    ‐3.29   ‐13.49          0.00     0.00    ‐3.29   ‐13.49
+Electricity and gas                0.00        0.00    ‐0.74     ‐6.40         0.00     0.00    ‐0.74    ‐6.40
+Construction                       0.27        0.23     0.23      0.24         0.12     0.18     0.20     0.24
+Trade, hotels and resturants       0.00        0.00     0.01      0.86         0.00     0.00     0.01     0.86
+Transport                          0.00        0.00    ‐4.29     ‐9.93         0.00     0.00    ‐4.29    ‐9.93
+Communications                     0.00        0.96     0.00     ‐3.99         0.00     0.72     0.00    ‐3.99
+Government                         0.00        0.00    ‐1.40     ‐6.07         0.00     0.00    ‐1.40    ‐6.07
+Other services                     0.00        0.11     1.07      1.36         0.00     0.09     0.94     1.36
+Source: Authors' calculations.
+
+
+
+
+                                                      24
+      9
+      8
+      7
+      6
+      5
+      4                                                                               zero
+      3
+                                                                                      low
+      2
+      1                                                                               medium
+      0                                                                               high
+                                                                                      perfect
+
+
+
+
+          Figure 1. Real macro indicators by scenario (percent change from base).
+Note: In this figure the definition of the real exchange rate was changed so that an increase means
+an appreciation.
+Source: Authors' calculations.
+
+
+                        30
+
+
+                        25
+
+
+                        20
+
+
+                        15
+
+
+                        10
+
+
+                         5
+
+
+                         0
+                                  low       medium           high       perfect
+
+                                 Effient employment        Physical employment
+
+                                 Output
+
+
+  Figure 2. Employment and real output in food processing (percent change from base).
+Source: Authors' calculations.
+
+
+
+
+                                                      25
+4. Conclusions
+    In this paper, we present an intuitive entry point to the modeling of labor-
+market mobility: labor movements and wage differentiation are driven by the
+extent to which sectors are similar in terms of the capabilities that are required
+from their workers. It fits naturally in economy-wide models where producer
+decisions are driven by profit-maximization and labor may be reallocated across
+sectors. The approach is flexible in that, subject to data constraints, it can replicate
+any observed pattern of pair-wise sector segmentation, including asymmetric
+patterns: for example, unskilled worker reallocation from agriculture to
+construction may be easy whereas reallocation in the opposite direction may be
+difficult due to the fact that construction workers lack many of the capabilities
+required in agricultural work.
+    A research agenda that draws on the proposed approach may address several
+issues. The top priority may be to empirically estimate proximity parameters,
+preferably with disaggregations that are closely aligned with the disaggregation
+of the rest of the application database both with regard to sectors and labor types.
+Given that mobility is likely to vary across labor types, the payoffs may be high
+from further disaggregation (for example on the basis of educational attainment
+or gender). Household and labor market surveys may provide (or be designed to
+provide) needed data on worker movements and how the wages received by
+workers employed in a sector differ depending on their sector of origin.
+    A second direction of research is related to extensions of the approach, each of
+which would come with its own additional data requirements. Here, top empirical
+priorities may be to bring unemployment into the model, presumably with
+sectoral capabilities assigned to the unemployed, and to make the analysis
+dynamic. In a dynamic setting, it would be necessary to model the evolution of the
+size of the labor pools, disaggregated by sector and perhaps according to other
+criteria. In light of learning by doing, it would be natural to expect the labor stocks
+(classified by assigned capabilities) to grow relatively fast for sectors with
+increasing shares of employment. It would also be necessary to consider the
+sectoral capabilities of those who enter to or exit from the labor force.26 When
+addressing these issues, it would be crucial to draw on the labor economics
+literature. The development of dynamic approaches to labor market modeling that
+
+
+
+
+26Those who enter and leave the labor force may be split into different categories. For
+example, entrants may be composed of people leaving school, immigrants, and youth
+reaching labor force age) while those who exit may be made up of those who leave the
+labor force due to emigration, retirement, and death. Movements into or out of the labor
+force may also be due to other causes (such as changing gender roles or changing prospects
+for landing a job).
+
+
+
+
+                                           26
+are policy relevant and both empirically valid and tractable is clearly a major task
+ahead for CGE modeling.27
+
+References
+Acemoglu, Daron, and David Autor. 2011. “Skills, Tasks and Technologies:
+   Implications for Employment and Earnings,” In Handbook of Labor Economics.
+   Volume 4b, edited by Ashenfelter, Orley, and David Card. Amsterdam: North
+   Holland, Elsevier B.V., 1043-1171.
+Annabi, Nabil. 2003. “Modeling Labor Markets in CGE Models: Endogenous
+   Labor Supply, Unions and Efficiency Wages.” Working Paper. Poverty and
+   Economic Policy (PEP), Université Laval, Quebec.
+Armington, Paul. 1969. “A Theory of Demand for Products Distinguished by Place
+   of Production.” IMF Staff Papers 16: 159-176.
+Boccanfuso, Dorothe, and Luc Savard. 2007 “Poverty and Inequality Impact
+   Analysis Regarding Cotton Subsidies: A Mali-based CGE Micro-accounting
+   Approach,” Journal of African Economies, 16 (4): 629-659
+Boeters, Stefan, and Luc Savard. 2013. “The Labor Market in Computable General
+   Equilibrium Models,” In Handbook of Computable General Equilibrium Modeling.
+   Volume 1A, edited by Dixon, Peter B. and Dale W. Jorgenson. Amsterdam:
+   North Holland, Elsevier B.V., 1645-1718.
+Cooper, Russell, and Jonathan L. Willis. 2009. "The cost of labor adjustment:
+   Inferences from the gap," Review of Economic Dynamics, 12 (4): 632–647.
+Cooper, Russell, John Haltiwanger, and Jonathan L. Willis. 2015. "Dynamics of
+   labor demand: Evidence from plant-level observations and aggregate
+   implications," Research in Economics, 69 (1): 37–50.Dervis, Kemal, Jaime de Melo,
+   and Sherman Robinson. 1982. General Equilibrium Models for Development Policy.
+   New York: Cambridge University Press.
+Diao, Xinshen, and James Thurlow. 2012. “A Recursive Dynamic Computable
+   General Equilibrium Model,” In Strategies and Priorities for African Agriculture:
+   Economywide Perspectives from Country Studies, edited by Diao, Xinshen, James
+   Thurlow, Samuel Benin, and Shenggen Fan. International Food Policy Research
+   Institute, Washington, DC.
+Erero, Jean Luc. 2016. “National minimum wage in South Africa: A Computable
+   General Equilibrium Model Analysis,” Economic Research Southern Africa
+   (ERSA) working paper 650, November.
+Flaig, Dorothee. 2014. Factor Mobility and Heterogeneous Labour in Computable
+   General Equilibrium Modelling. Dissertation submitted in fulfilment of the
+
+27 In dynamic settings, it may be possible to draw on entropy econometrics for the
+estimation of selected parameters, considering for example the impact of proximity values
+on the ability of a model to replicate historical changes in labor allocation; cf. Go et al.
+(2016).
+
+
+
+
+                                            27
+   requirements for the degree ‘Doktor der Agrarwissenschaften’. Faculty of
+   Agricultural Sciences. University of Hohenheim.
+Gass, Saul I., and Arjang A. Assad. 2005. An Annotated Timeline of Operations
+   Research: An Informal History. Boston: Kluwer Academic Publishers.
+Go, Delfin S., Hans Lofgren, Fabian Mendez Ramos, and Sherman Robinson. 2016.
+   “Estimating Parameters and Structural Change in CGE Models Using a
+   Bayesian Cross-Entropy Estimation Approach,” Economic Modelling 52 (Part B):
+   790-811.
+Go, Delfin S., Marna Kearney, Vijdan Korman, Sherman Robinson, and Karen
+   Thierfelder. 2010. “Wage Subsidy and Labour Market Flexibility in South
+   Africa,” Journal of Development Studies, 46 (9): 1481-1502.
+Hamermesh, Daniel S. 1989. "Labor demand and the structure of adjustment
+   costs," American Economic Review, 79 (4): 674-689.
+Hausmann, Ricardo, and Bailey Klinger. 2006. “Structural transformation and
+   patterns of comparative advantage in the product space,” CID working paper
+   Vol. no. 128, Center for International Development at Harvard University,
+   Cambridge, MA.
+Hausmann, Ricardo, César A. Hidalgo, Sebastián Bustos, Michele Coscia, Sarah
+   Chung, Juan Jimenez, Alexander Simoes, and Muhammed A. Yıldırım. 2011.
+   The Atlas of Economic Complexity: Mapping Paths to Prosperity. Center for
+   International Development, John F. and Kennedy School of Government.
+   Cambridge, MA: Harvard University; and Macro Connections Media Lab.
+   Cambridge,        MA:       Massachusetts         Institute of     Technology.
+   (http://atlas.media.mit.edu/static/pdf/atlas/AtlasOfEconomicComplexity.p
+   df)
+Hertel, Thomas W., and Marinos E. Tsigas. 1997. “Structure of GTAP.” In Global
+   Trade Analysis: Modeling and Applications, edited by Hertel, Thomas W. New
+   York: Cambridge University Press, 13-63.
+Hertel, Thomas W., and Jeffrey J. Reimer. 2005. “Predicting the Poverty Impacts of
+   Trade Reform,” Journal of International Trade and Economic Development, 14 (4):
+   377-405.
+Hidalgo, César A., Bailey Klinger, Albert-László Barabási, and Ricardo
+   Hausmann. 2007. “The product space conditions the development of nations,”
+   Science 317 (5837): 482-487.
+Lewis, W. Arthur. 1954. “Economic Development with Unlimited Supplies of
+   Labor,” The Manchester School 22, 139–191.
+Lindbeck, Assar, and Dennis J. Snower. 1988. The Insider-Outside Theory of
+   Employment and Unemployment. Cambridge, MA: MIT Press.
+Lofgren, Hans, Rebecca Lee Harris, and Sherman Robinson, with assistance from
+   Moataz El-Said and Marcelle Thomas. 2002. A Standard Computable General
+   Equilibrium (CGE) Model in GAMS. Microcomputers in Policy Research, Vol. 5.
+   Washington, D.C.: IFPRI.
+
+
+
+
+                                       28
+Maechler, Andréa, and David W. Roland-Holst. 1997. “Labor Market Structure
+   and Conduct.” In Applied Methods for Trade Policy Analysis: A Handbook, edited
+   by Francois, Joseph F., and Kenneth A. Reinert New York, NY: Cambridge
+   University Press, 479-516.
+Marshall, Alfred. 1920. Principles of Economics. 8th edition. London: Macmillan and
+   Co.
+Narayanan, G., Badri, Angel Aguiar, and Robert McDougall, eds. 2012. “Global
+   Trade, Assistance, and Production: The GTAP 8 Data Base,” Center for Global
+   Trade Analysis, Purdue University, West Lafayette, IN.
+Pauw, Karl, and Murray Leibbrandt. 2012. “Minimum wages and household
+   poverty: general equilibrium macro–micro simulations for South Africa,”
+   World Development 40 (4): 771–783.
+Porto, Guido, and Bernard Hoekman. 2010. “Trade Adjustment Costs in
+   Developing Countries: Impacts, Determinants and Policy Responses.” In Trade
+   Adjustment Costs in Developing Countries: Impacts, Determinants and Policy
+   Responses, edited by Porto, Guido, and Bernard Hoekman. Washington, DC:
+   World Bank, 1-24.
+Seale, James Jr., Anita Regmi, and Jason Bernstein. 2003. “International Evidence
+   on Food Consumption Patterns,” United States Department of Agriculture
+   Technical Bulletin 1904, Washington, DC.
+Thierfelder, Karen, and Clinton R. Shiells. 1997. “Trade and Labor Market
+   Behavior.” In Applied Methods for Trade Policy Analysis: A Handbook, edited by
+   Francois, Joseph F., and Kenneth A. Reinert. New York, NY: Cambridge
+   University Press, 435-478.
+Thompson, Gerald L., and Sten Thore. 1992. Computational Economics: Economic
+   Modeling with Optimization Software. San Francisco, CA: Scientific Press.
+United Nations. 2003. “National Accounts: A Practical Introduction,” Department
+   of Economic and Social Affairs Statistics Division. Studies in Methods.
+   Handbook of National Accounting. Series F, No.85, New York, NY.
+United Nations. 2015. “UN Comtrade Database,” United Nations, New York, NY.
+van der Mensbrugghe, Dominique. 2007. “Modeling the Impact of Trade
+   Liberalization: A Structuralist Perspective?” Paper presented at the 10th
+   Annual Conference on Global Economic Analysis, held at Purdue University,
+   June 7-9, 2007.
+Weiss, Andrew. 1991. Efficiency Wage: Models of Unemployment, Layoffs, and Wage
+   Dispersion. Princeton University Press.
+World Bank. 2016. World Development Indicators 2016. Washington, DC: World
+   Bank.
+
+Appendix. Mathematical statement of CGE model
+
+
+
+
+                                        29
+   This appendix provides a detailed mathematical statement of the CGE model
+used for this paper. The model equations are divided into four blocks: A.
+Production activities and factor markets; B. Domestic and foreign trade; C.
+Domestic institutions; and D. System constraints and price indices.
+   Tables A.1-A.5 explain notational principles and define model sets, variables,
+and parameters. Drawing on these tables and set of tables with the model
+equations (Tables A.6-A.9), we subsequently provide a detailed presentation of the
+model equations with one section for each block. In the mathematical presentation,
+the settings for closure rules (for government budget, savings-investment
+payments, and factor and commodity markets) and other assumptions match what
+was used in the simulations of this paper.
+
+                                Table A.1. Notational principles.
+ Items             Notation                                                   Example
+ Sets              Lower-case Latin letters as subscripts to variables        exemplified on the
+                   and parameters                                             following rows
+ Endogenous        Upper-case Latin letters (without a bar)*
+ variables 
+ Exogenous         Upper-case Latin letters with a bar*
+ variables 
+ Parameters        Lower-case Latin letters* or lower-case Greek                        ,   ;	
+                   letters (with or without superscripts)
+Note: * The names of Latin letter variables and parameters that refer to prices, quantities, and wages
+(rents) start with P, Q, and WF, respectively.
+
+
+
+                                          Table A.2. Sets.
+ Name                         Description
+             ∈                activities (production sectors or industries)
+             ∈                commodities (i.e., goods and services)
+           ∈  (⊂              commodities with domestic sales of domestic output
+           ∈  (⊂              exported commodities
+           ∈  (⊂              imported commodities
+           ∈ (⊂               transactions commodities (trade and transport services paid for
+                              under distribution margins)
+             ∈                factors
+      ∈           (⊂          factors without proximity-based sectoral allocation
+       ∈         (⊂           factors with proximity-based sectoral allocation
+            ∈                 institutions
+   ∈        (⊂                domestic institutions
+   ∈           (⊂             domestic non-government institutions
+    ℎ∈     (⊂                 households
+
+
+
+
+                                                 30
+                                                       Table A.3. Variables.
+Name                                 Description
+                                     consumer price index
+                                     domestic producer price index (PDS-based)
+                                     total current government expenditure
+                                     household consumption expenditure
+                                     exchange rate (local currency per unit of foreign currency
+                                     marginal propensity to save for domestic non-government institutions i (in INSDNG)
+                                     MPS scaling factor
+                                     output price of activity a
+                                     demand price for commodity c produced and sold domestically
+                                     supply price for commodity c produced and sold domestically
+                                     export price for c (domestic currency)
+                                     import price for c (domestic currency)
+                                     composite commodity price for c
+                                     producer price for commodity c
+                                     level of activity a
+                                     quantity sold domestically of domestic output c
+                                     quantity of exports of commodity c
+        ,                            quantity demanded of factor f by activity a
+            , ,                      quantity of factor f in a allocated to a’ (f in FPROX)
+                ,                    quantity supplied of factor f in activity a
+                                     supply of factor f (in FNPROX)
+                                     quantity of government consumption of commodity c
+                                     government consumption scaling factor
+        ,                            quantity consumed of commodity c by household h
+             ,                       quantity of commodity c as intermediate input to activity a
+                                     quantity of investment demand for commodity c
+                                     investment scaling factor
+                                     quantity of imports of commodity c
+                                     quantity of composite supply and demand of commodity c
+                                     quantity of transactions demand for commodity c
+                                     quantity of domestic output of commodity c
+                                     real government savings (CPI-indexed)
+                                     foreign savings (FCU)
+                                     government savings
+                                     savings of domestic non-government institution i (in INSDNG)
+                ,                    transfers to institution i (in INS) from domestic non-government institution i’ (in
+                                     INSDNG)
+                                     rate of direct tax on domestic non-government institution i (in INSDNG)
+                                     scaling variable for direct tax on domestic non-government institutions
+                                     variable checking satisfaction of Walras’ law
+                                     economy-wide wage of factor f (in FNPROX)
+
+
+
+
+                                                                31
+     ,               wage per efficiency unit of f in destination activity a (before WFDIST adjustment; f in
+                     FPROX)
+     ,               wage per physical and efficiency unit of f in source activity a (before WFDIST
+                     adjustment; f in FPROX)
+         ,           wage distortion factor for factor f in activity a
+                     income of factor f
+                     government current revenue
+                     income of (domestic non-government) institution i (in INSDNG)
+,                    income of institution i (in INS) from factor f
+
+
+
+
+                                                  32
+                            Table A.4. Latin letter parameters.
+Name          Description
+              weight of commodity c in the CPI
+                   weight of commodity c in the DPI
+      ,            quantity of intermediate input c per unit of activity a
+    ,              transactions input of c per unit of commodity c’ produced and sold domestically
+    ,              transactions   input of c per unit of commodity c’ that is exported
+      ,            transactions   input of c per unit of commodity c’ that is imported
+                   base-year marginal propensity to save for domestic non-government institution i (in
+                   INSDNG)
+        , ,        proximity to activity a’ for factor f in activity a
+                   export price for c (foreign currency)
+                   import price for c (foreign currency)
+                   change in stock (inventories) of c
+                   base-year quantity of government consumption of commodity c
+                   base-year quantity of investment (GFCF) demand for c
+  ℎ ,              share for institution i (in INS) in the income of factor f
+  ℎ ,              share of institution i' (in INS) in the disposable income of domestic non-government
+                   institution i (in INSDNG)
+             ,     transfers from institution i (government or rest of world) to institution i (in INS) or factor f
+                   (in F)
+                   rate of tax on gross output value for activity a
+                   rate of export tax on commodity c
+                   rate of direct tax on factor f
+                   rate of import tariff on commodity c
+                   rate of sales tax on commodity c
+                   base rate of direct tax on domestic non-government institution i (in INSDNG)
+
+
+
+
+                                              33
+                                        Table A.5. Greek letter parameters.
+Name                Description
+   ,                share parameter in LES function for household consumption of commodity c
+   ,                subsistence quantity in LES function for household consumption of commodity c
+                    share parameter for domestic purchases in Armington function for commodity c
+                    share parameter for domestic sales in CET function for commodity c
+
+                    share parameter for exports in CET function for commodity c
+
+                    share parameter for imports in Armington function for commodity c
+
+
+       ,            share parameter for factor f in CES VA function of activity a
+       ,            yield of output c per unit of activity a
+                    exponent in Armington function for commodity c
+                    exponent in CES VA function for activity a
+                    exponent in CET function for commodity c
+                    elasticity of substitution between purchases of domestic output and imports in Armington
+                    function for c
+                    elasticity of substitution between factors in CES VA function of activity a
+                    elasticity of transformation between domestic sales and exports in CET function for c
+                    shift parameter in Armington function for commodity c
+                    shift parameter for CES VA function of activity a
+                    shift parameter in CET function for commodity c
+
+
+                Table A.6. Equations for production activities and factor markets.
+
+                                                                                                        Value-
+PRD1                                =                            ∙                                ∈
+                                                         ,                   ,                          added
+
+                                                                                                        Factor
+                                                                                              ∈         demands
+PRD2                =                                                             (       ∙
+                ,
+                                ∙                ,
+                                                                         ,                        ∈     (non-
+                                                                                                        proximity)
+                                                                                                        Factor
+                                                                                              ∈
+PRD3                        =                                                (        ∙                 demands
+                        ,                                ,                                        ∈  
+                                         ,                                                              (proximity)
+                                                                                                        Intermedi-
+                                                                                                  ∈
+PRD4                                         ,       =           ,       ∙                              ate
+                                                                                                  ∈  
+                                                                                                        demands
+
+PRD5                                         =               ,       ∙                            ∈     Output
+                                                     ∈
+
+
+
+
+                                                                             34
+                              =               (1 −                          −                               ∙                                              Value-
+PRD6                                                                                                                      ,                       ∈  
+                                                                                        ∈
+                                                                                                                                                           added price
+                                                    =                               ∙                                                                      Activity
+PRD7                                                                        ,                                                                    	 ∈  
+                                                            ∈
+                                                                                                                                                           price
+                                                                                                                                                           Factor
+                                                            =                                                                                              markets
+PRD8                                                                                        ,                                                ∈             
+                                                                    ∈
+                                                                                                                                                           (non-
+                                                                                                                                                           proximity)
+                                                                                                                                                           Factor
+                                                    =                                                                                       	 ∈
+PRD9                                          ,                                                       , ,                                                  markets
+                                                                                                                                                  ∈  
+                                                                                                                                                           (proximity)
+                                                                                                                                                           Efficient
+                                                        ∙                                           =                                       	 ∈            employmen
+PRD10                                         , ,                                   , ,                           ,
+                      ∈
+                                                                                                                                                  ∈        t
+                                                                                                                                                           (proximity)
+                                                                                                                                                           Source-
+                                                                                                                                            	 ∈            destination
+PRD11                             ,           ≥                         ,           ∙                       , ,                                   ∈        wage
+                                                                                                                                                  ∈        constraint
+                                                                                                                                                           (proximity)
+                                                                                                                                                           Factor
+                                                                                                                                            	 ∈
+                                                                                                                                                           allocation
+PRD12                                                           , ,             ≥0                                                                ∈
+                                                                                                                                                           constraint
+                                                                                                                                                  ∈  
+                                                                                                                                                           (proximity)
+                                                                                                                                                           Mixed-
+                                                                                                                                            	 ∈            comple-
+PRD13                     ,   −                         ,       ∙                               , ,                           , ,                 ∈        mentarity
+                                                                                                                                                  ∈        constraint
+                                                                                                                                                           (proximity)
+                                                                                                                                                           Factor
+             =                ∙                                     ∙                           +                                   ∙                      income
+PRD14                                                       ,                       ,                                 ,                     	 ∈             
+                  ∈
+                                                                                                                                                           (non-
+                                                                                                                                                           proximity)
+              =                                ∙                                        ∙                   +                                              Factor
+                                          ,                                     ,                      ,                                ,
+PRD15             ∈
+                                                                                                                                            	 ∈            income
+                                      ∙                                                                                                                    (proximity)
+
+
+Production activities and factor markets
+   The equations for this block are presented in Table A.6. Equations PRD1-PRD3
+are the first-order conditions for the optimization problem solved by the
+representative firm in each industry or activity (i.e., cost minimization/profit
+
+
+
+
+                                                                                                35
+maximization).28 The value added production technology is CES (Constant
+Elasticity of Substitution; equation PRD1). In the demand functions for factors f
+without the proximity treatment (in FNPROX; PRD2), the (unit) wage in activity a
+is computed as          ∙          , , where             , is a “distortion” factor that
+allows modeling cases in which the factor remuneration differs across activities.29
+As discussed in Lofgren et al.(2002), this formulation facilitates implementing
+alternative closures (i.e., mechanisms to equalize quantities supplied and
+demanded) in the factor markets.30 In this application, the factors in FNPROX are
+all activity-specific and            , is the variable that clears these activity-specific
+markets.  
+    	For factors in FPROX; i.e., factors with proximity-based sectoral movements,
+the treatment is based on the optimization problem that was presented in Section
+2.2. Equation PRD3 provides the demand functions for this factor subset. Given
+that factor supplies are exogenous by activity (as indicated by the bar on the factor
+employment variable            , ), their wage variables,           , , clear the markets.
+Equation PRD4 defines intermediate input demands using Leontief coefficients,
+which represent exogenous quantities of intermediate input by commodity and
+activity (    , ).
+    Equation PRD5 computes the production of each commodity on the basis of the
+  , parameter, which is a fixed output coefficient (the production of c per unit of
+activity a). Thus, like the supply-and-use tables, our model differentiates between
+activities and commodities (or products): an activity can produce more than
+commodity and the same commodity may be produced by more than one activity.
+    Equations PRD6 and PRD7 define prices related to each production activity. In
+equation PRD6, the price of value added (the payment to value added per unit of
+each activity) is defined as the difference between the activity price (the payment
+received for outputs per unit of the activity net of the tax on activity revenue)
+minus the cost of intermediate inputs per unit of the activity. The latter cost is the
+product of the above-mentioned intermediate input coefficient (                , ) and the
+price of each intermediate, summed over all intermediates. Equation PRD7 defines
+the activity price as the product of output yields per unit of the activity, , , and
+related producer output prices, summed over all outputs.
+    The remaining equations of this block are factor-related, imposing equality
+between quantities demanded and supplied. As noted, in the current application,
+all factors in the set FNPROX are activity-specific with the variable clearing their
+
+28  To make it easier to read the equations, multiplication signs are inserted between
+multiplied items unless one or both are parenthesized.
+29
+   In this presentation, its value is exogenous only for labor, the only factor in FPROX
+(see below).
+30
+   Besides, for the factors considered as specific, equation (PRD3) is interpreted as an
+equilibrium condition between factor supply and demand.
+
+
+
+
+                                           36
+markets (cf. equation PRD2). Given this, the economy-wide market equilibrium
+condition, PRD8, becomes superfluous; here it simply defines total factor supply
+(which is endogenous) as the sum of the exogenous demands in the different
+activities. To facilitate a switch to closures where this condition matters, this
+equation is nevertheless retained.31
+    On the other hand, drawing on the optimization analysis in Section 2.2., for a
+factor f in the set FPROX, equation PRD9 constrains total employment from source
+(or supply) activity a to the exogenous supply quantity. The related market-
+clearing variable,            , , is the wage per physical unit of factor f from activity a.
+Equation PRD10 defines the efficient quantity of each factor f employed in a
+destination activity a’ as the sum of the efficiency-adjusted physical quantities of
+factor f from different activities a; the related variable                , represents the
+market-based wage per efficiency unit of factor f in destination activity a. Equation
+PRD11 states that, for each factor f, the wage per physical unit in its source activity
+a is at least as high as the wage per physical unit in destination activity a’, with the
+latter defined as the proximity-scaled efficiency wage. Equation PRD12 imposes
+that the quantity of factor f from source activity a employed in destination activity
+a’ is non-negative. The two equations are linked via equation PRD13, a mixed-
+complementarity relationship, which states that two regimes are possible. In the
+first regime,          , , > 0 (i.e., a positive quantity of factor f moves from a to a’);
+in the current simulations, this is invariably the case for a = a’ (at least part of the
+supply of each factor stays employed in its activity of origin) but typically also for
+some a-a’ mappings with ≠ ′. If                   , , > 0, then the parenthesized part of
+equation PRD13 must equal zero. In effect,                   , =        , when a = a’ (i.e.,
+for the part of the factor that stays in its activity of origin). If part of the supply in
+a moves to another activity a’ for some f-a-a’ mappings with                        , , < 1,
+then	          , >           , , (i.e., in order for a’ to pay the same wage per physical
+unit of f as a while maximizing its profits, the scarcity value per efficiency unit of f
+in a’ must exceed its value per physical and efficiency unit in a). The second regime
+applies to the f-a-a’ mappings for which                 , , = 0; in our application, this is
+the most common case when ≠ 	 ′. If so, the parenthesized part of PRD13 may
+be a strict inequality, i.e. the efficiency wage of f in a’ is too low to make up for the
+efficiency loss (due to that              , , < 1).
+    In equations PRD14 and PRD15, the total income of each factor f,            , is defined
+for factors without and with proximity-based sectoral allocation, respectively. In
+
+
+31 Different treatments are possible. For example, total supply (employment) may be
+
+exogenous while mobility may be free across all activities; for such factors,
+      	and	          , 	would	be	exogenous	while	 , 		and	   would be endogenous,
+leaving the total number of endogenous variables unchanged. In this case, equation PRD2
+is an essential part of the model.
+
+
+
+
+                                             37
+both equations, the first term on the right hand side corresponds to the total factor
+payments from activities while the second term defines transfers to factors from
+the rest of the world.32
+
+                        Table A.7. Equations for domestic and foreign trade.
+
+                    = (1 −                 ∙       −                       ∙                              Export
+TRD1                                                                               ,             ∈
+                                                           ∈
+                                                                                                          price
+                   = (1 +                  ∙           +                       ∙                           Import
+TRD2                                                                                   ,      	 ∈  
+                                                           ∈
+                                                                                                           price
+                                                                                                           Domestic
+TRD3                           =           +                       ∙   ,                       	 ∈         demand-
+                                               ∈                                                           er price
+                                                                                                           Com-
+                                                                                                           posite
+TRD4                     =         ∙               +               ∙                         ∈      ∩     supply
+                                                                                                           (trad-
+                                                                                                           ables)
+                                                                                                           Com-
+                                                                                           ( ∈       ∩     posite
+                                                                                           ∉               supply
+TRD5                                   =           +
+                                                                                           ∪( ∈        ∩ (non-
+                                                                                           ∉               trad-
+                                                                                                           ables)
+                                                                                                           Import-
+                                                                                                           domestic
+TRD6                               =                                                       	 ∈      ∩     
+                                                                                                           demand
+                                                                                                           ratio
+                                                                                                           Composi
+TRD7                ∙        =(    ∙           +               ∙       (1 +                    	 ∈  
+                                                                                                           te price
+                                                                                                           Output
+                                                                                                           transfor-
+TRD8                       =           ∙       +           ∙                                 ∈      ∩     mation
+                                                                                                           (trad-
+                                                                                                           ables)
+                                                                                                           Output
+                                                                                           ( ∈      ∩      transfor-
+                                                                                           ∉               mation
+TRD9                                       =       +
+                                                                                             (
+                                                                                           ∪ ∈         ∩ (non-
+                                                                                           ∉               trad-
+                                                                                                           ables)
+
+
+
+
+32   Note that the trnsfr parameter is in foreign currency units.
+
+
+
+
+                                                           38
+                                                                                      Export-
+                                                                                      domestic
+TRD10                             =                                        	 ∈   ∩   
+                                                                                      demand
+                                                                                      ratio
+                                                                                      Producer
+TRD11                ∙           =(       ∙   +            ∙                  	 ∈     output
+                                                                                      price
+            =                ∙        +               ∙        +                      Trans-
+                         ,                        ,                    ,
+TRD12           ∈                         ∈                        ∈
+                                                                             	 ∈      actions
+                             ∙                                                        demand
+
+
+Domestic and foreign trade
+    Table A.7 shows the equations for the domestic and foreign trade block.
+Equations TRD1-TRD3 are related to prices. In TRD1, the export price received by
+producers,       , is defined as the world export price, transformed into domestic
+currency via the exchange rate and adjusted for export taxes and the transactions
+(trade and transport) cost per unit of exports; the unit transactions cost is defined
+as the product of an input coefficient (      , ) and the input price, summed over all
+inputs. In analogous fashion, equation TRD2 defines the domestic currency import
+price for demanders,         , on the basis of the world import price, the exchange
+rate, and import tariffs, in this case with the unit transactions cost added to the
+price; note that this price does not ,include the sales tax (cf. equation TRD7).In both
+equations, it is assumed that the modeled economy is small; thus, world prices for
+exports and imports (          	and	      ) are exogenous. Equation TRD3 links the
+demander and supplier prices for domestic output sold domestically,
+      	and	      : the demander price is defined as the supplier price plus the
+transactions cost per unit of domestically sold output; as will be discussed below,
+either of these prices can be seen as the market-clearing price for this category of
+outputs (cf. equation SYS2).
+    Equations TRD4-TRD7 explain the allocation of domestic demands between
+imports and domestic purchases and define the related demander price of
+composite commodities, made up of imported and/or domestically produced
+commodities. Following the Armington assumption, we assume that products are
+differentiated on the basis of their origin (domestic or foreign). Consequently, it is
+possible to account for two-way trade (i.e., the same product may be exported and
+imported simultaneously; this is in distinction to merely accounting for net trade).
+The composite commodities that are demanded domestically are a CES
+aggregation of domestic and imported products (equation TRD4). For
+commodities that lack either imports or domestic production, TRD4 is replaced by
+TRD5: their composite quantities are simply identical to the quantity of imports or
+
+
+
+
+                                                      39
+the quantity of domestic sales of domestic output.33 For commodities with both
+imports and domestic purchases of domestic output equation TRD6 is the
+tangency condition that determines the domestic/imported mix; it is part of the
+first-order conditions for demander cost minimization. Equation TRD7 implicitly
+defines the price of the composite product,        , given	the	composite	quantity,  ,
+and the sum of the values of imports and domestic purchases, adjusted upward
+for the sales tax; notice that the tax base excludes the tax.
+    Equations TRD8-TRD11 turn to the supply side, addressing the allocation of
+domestic output between two destinations: exports and domestic markets: output
+is viewed as imperfectly transformable between these two destinations. A CET
+(Constant Elasticity of Transformation) function defines the allocation of output,
+      , between exports and domestic sales (         and      ; equation TRD8).34 For
+products that lack exports or domestic sales, equation TRD8 is replaced by
+equation TRD9: output quantity equals the export quantity or the domestic sales
+quantity. Equation TRD10 defines the ratio between exports and domestic sales
+for commodities that have both; it is part of the first-order conditions for producer
+profit maximization. Equation TRD11 implicitly defines the producer price for
+commodity c,        , given the output quantity and, on the right-hand side, the sum
+of the values of domestic sales and exports at producer prices.
+    The last equation in this block, TRD12, defines the total transactions demand,
+i.e., the demand for commodities (in practice trade and transportation services)
+that are used in the distribution of commodities between (1) producers and the
+border (for exports); (2) producers and domestic demanders (for domestic sales);
+and (3) demanders and the border (for imports). For each category, the
+transactions demand is defined as the quantity that is distributed (exported,
+imported, or sold domestically) multiplied by exogenous unit input coefficients.
+
+                    Table A.8. Equations for domestic institutions.
+                                                                                    Institution
+                                                                             ∈
+INS1                      ,   = ℎ         ,   ∙       1−                            al factor
+                                                                              ∈  
+                                                                                    income
+            =         ,   +           ,           ∙   +        ,   ∙                  Non-gov’t
+INS2                                                                    ∈             institution
+                              +                       ,                               income
+                                  ∈
+                                                                                     Marginal
+INS3                              =               ∙                    	 ∈           propensity
+                                                                                     to save
+
+33  The elasticity of substitution between domestic purchases and imports is       =
+  ⁄
+1 1+        .
+34
+   The elasticity of transformation between domestic sales and exports is = 1⁄( − 1 .
+
+
+
+
+                                                          40
+                                                                                                                                                               Non-gov’t
+INS4                                                =                       (1 −                                                            	 ∈                institution
+                                                                                                                                                               savings
+                                                                                                                                                               Institu-
+                                                    (1 −                                (1 −                                                      ∈
+INS5                    ,       = ℎ         ,                                                                                                                  tional
+                                                                                                                                            ′∈                 
+                                                                                                                                                               transfers
+                                                                                                                                                               Household
+                                                                                                                                                               consump-
+INS6            = 1−                        ℎ           ,           (1 −                                (1 −                                      ℎ∈       
+                                                                                                                                                               tion expen-
+                                 ∈
+                                                                                                                                                               diture
+                                                                                                                                                               Household
+                                                    ,                                                                                            ∈             consump-
+INS7                ,       =       ,   +                                       −                                   ∙           ,
+                                                                                                                                              	ℎ ∈             tion
+                                                                                                                                                               demand
+        =                           ∙       +                               ∙
+            ∈                                           ∈
+
+                                +                       (                   ∙                   +                           ∙
+                                        ∈
+                                +                           ∙                   ∙                       ∙                   +                                 Govern-
+INS8                                    ∈                                                                                           ∈                         ment
+                                                                                                                                                       
+                                ∙               ∙                   ∙                   +                               ∙           ∙                         income
+                                                                                                    ∈
+                                +                   ∙                               ,               +                                   ,
+                                                                                                            ∈
+                                +                               ,        
+                                        ∈
+                                                                                                                                                               Direct tax
+INS9                                            =                   ∙                                                                       	 ∈                
+                                                                                                                                                               rate
+                                                                                                                                                               Govern-
+                                                                                                                                                               ment
+INS10                                       =                           ∙                                                                          ∈           consump-
+                                                                                                                                                               tion
+                                                                                                                                                               demand
+                                                                                                                                                               Govern-
+                =                       ∙               +                                                       ,               ∙                              ment
+INS11                   ∈                                       ∈                                                                                      
+                                                                                                                                                               expend-
+                                            +                                       ,               ∙                
+                                                                                                                                                               iture
+                                                                                                                                                               Govern-
+INS12                                                       =                   −                                                                              ment
+                                                                                                                                                               savings
+                                                                                                                                                               Real
+                                                                                                                                                               govern-
+INS13                                                           =                                                                                      
+                                                                                                                                                               ment
+                                                                                                                                                               savings
+
+
+
+
+                                                                                            41
+Domestic institutions
+   The equations presented in Table A.8 define current incomes and their uses
+(consumption, savings, and transfers) for domestic institutions (government and
+non-government). The first equation, INS1, computes the factor income received
+by each institution i as the total income of the factor (     ) net of direct taxes on
+factor income multiplied the share of the institution in the total endowment of the
+factor ( ℎ , ).
+   Equations INS2-INS7 apply to domestic non-government institutions (in the set
+INSDNG), invariably one or more households but, depending on the database,
+potentially also including enterprises and other institutions like NGOs. This set of
+equations defines their incomes, savings, and spending. As shown by equation
+INS2, the income of institution i is the sum of four elements: (1) factor income; (2)
+transfers from the government, indexed to the consumer price index (             ); (3)
+transfers from rest of the world (i.e., remittances), exogenous in foreign currency
+and transformed into domestic currency; and (4) transfers from other domestic
+non-government institutions. Equation INS3 computes the marginal propensity to
+save as the exogenous base rate,          , multiplied by a scaling factor,           ,
+which here is endogenous; for the base solution, the scaling factor is equal to one
+but otherwise it may take on other values and, under alternative treatments of the
+savings-investment balance, it may be exogenous. Equation INS4 computes the
+value of savings for each institution as its total income net of direct taxes
+multiplied by its savings rate. Equation INS5 defines transfers from domestic non-
+government institutions to any other institution (government, non-government,
+or the rest of the world). These transfer flows are endogenous, defined as
+exogenous shares of the incomes of domestic non-government institutions net of
+direct taxes and savings. Equation INS6 computes the consumption spending by
+domestic non-government institutions as their income net of transfers to other
+institutions, savings, and direct taxes.35 Equation INS7 defines consumption
+expenditure for the subset of consuming units in INSDNG, labeled as households
+– INSDNG may also include institutions that do not consume, like enterprises.
+Household consumption expenditure is distributed across commodities on the
+basis of a Stone-Geary utility function from which linear expenditure system (LES)
+demand functions are derived.
+   A parallel set of equations, INS8-INS13, defines incomes, savings, and current
+spending for the government. Equation INS8 computes government current
+income as the sum of (1) revenues from direct taxes (on institutions and factors);
+
+35Among the potential domestic non-government institutions, enterprises do not consume
+by definition whereas households consume. If the database includes NPISHs (non-profit
+institutions in the service of households, including NGOs), then these may also consume.
+
+
+
+
+                                          42
+(2) revenues from indirect taxes (taxes on sales, imports, exports, imports, and
+producer output value); (3) transfers from the rest of the world and domestic non-
+government institutions; and (4) factor income. Note that transfers from the rest of
+the world to the government, like private transfers, are exogenous in foreign
+currency and transformed into domestic currency. As indicated by Equation INS9,
+initial direct tax rates are scaled by the variable          , the variable that clears
+the current government budget. Equation INS10 computes government
+consumption of c as the product of (a)       , which is exogenous and initially holds
+the base-year quantities; and (b) a scaling factor,              , which here also is
+exogenous; for the base solution, this scaling factor is equal to one but otherwise it
+may take on other values and, under alternative treatments of the government
+budgetary balance, it may be endogenous. Government current spending
+(equation INS11) is defined as the sum of government consumption and
+government transfers (domestic and/or to the rest of the world). Nominal
+government savings is the difference between current income and current
+spending (equation INS12). Real government savings, the ratio between nominal
+government savings and the          (the numéraire), is fixed (equation INS13). 36
+
+              Table A.9. Equations for system constraint and price indices.
+
+                   ∙   +                            ,       +                ,
+          ∈                 ∈                                    ∈
+                           +                                                                   Current account
+                           =                    ∙           +                                  of the balance
+SYS1                                                                     ,
+                                    ∈                                                          of payments
+                                                            ,                    ,
+                           +                                    +                     
+                                ∈                                    ∈
+                                                                                               Composite
+               ,   +            ,       +               +        +       +                     commodity
+SYS2                                                                                     	 ∈  
+                                                                                               demand-supply
+                        =
+                                                                                               balance
+                                                                                               Investment
+SYS3                        =               ∙                                            	 ∈  
+                                                                                               demand
+
+
+
+36The model would not be homogeneous (of degree zero) if               were fixed; hence the
+need to introduce real government savings. Note that, for domestic non-government
+institutions, savings is expressed as a share of income net of direct taxes. By construction,
+their income is equal to the sum of their spending (consumption, savings, direct tax
+payments and transfers to other institutions). For the government, income and current
+spending are specified independently with savings as the difference. Other government
+closures are possible; for example, fixing               and flexing             would turn
+government savings into the clearing variable for the government.
+
+
+
+
+                                                                43
+                      +            +   ∙                           Savings-
+       ∈
+SYS4                                                               investment
+                      =            (       +           +           balance
+                           ∈
+
+                               ∙       =                           Consumer price
+SYS5                                                            
+                       ∈
+                                                                   index
+                               ∙       =                           Producer price
+SYS6                                                            
+                      ∈
+                                                                   index
+
+
+System constraints and price indices
+   The last equation block, presented in Table A.9, defines system constraints (the
+current account of the balance of payments, commodity markets, and the savings-
+investment balance) and two aggregate price indices (the          and the producer
+price index for domestic sales), either of which may be the numéraire of the model.
+The constraints for factor markets were defined in the first equation block.
+   The rest of the world is represented by the current account of the balance of
+payments, expressed in foreign currency (equation SYS1). Except for the exchange
+rate,      , which is used to convert terms in domestic currency into foreign
+currency, the different terms in this balance were covered in the preceding blocks.
+The left-hand side shows the inflows of foreign exchange: it is the sum of exports,
+current transfers, factor payments, and foreign savings; the latter is an item that
+corresponds to the current-account deficit and has as its counterpart a surplus in
+the capital and financial account. On the right-hand side, foreign exchange
+outflows out due to imports, current transfers from the government and non-
+government institutions, and factor payments. It is assumed that foreign savings
+are exogenous and that external balance is achieved via adjustments in the value
+of      . To illustrate, elimination of a balance of payments deficit would be
+achieved via depreciation (a higher value for            ), which adjusts the real
+exchange rate, raising the         ⁄        ratios for suppliers and reducing the
+      ⁄      ratios for demanders, in this way bringing about higher exports and
+lower imports (cf. equations TRD1, TRD2, TRD6 and TRD10); through the same
+mechanisms, appreciation would eliminate a surplus. Alternatively, the exchange
+rate could be fixed (implicitly indexed to the model numéraire; see discussion
+below); if so, adjustment in foreign savings would clear the external balance.
+   Equation SYS2 is the condition for supply-demand equilibrium in commodity
+markets. The composite supply, made up of domestic and imported varieties, is
+used for household consumption, intermediate use, investment, government
+consumption, and changes in inventories. For the domestic component of the
+commodity market (where quantities demanded for and supplied of domestic
+output meet – the variable           in equations TRD6 and TRD10, respectively),
+demanders respond to changes in              and suppliers to changes in      , two
+
+
+
+
+                                               44
+variables that are linked (equation TRD3). To illustrate, if this market has excess
+demand for a commodity c, an increase in               would increase quantities supplied
+(by generating incentives for higher production of c and allocation of a larger share
+of this output to domestic sales as opposed to exports), while the simultaneous
+increase in         would reduce quantities demanded. As stated above, the small-
+country assumption applies to the imported part of the commodity market: the
+quantities supplied are infinitely elastic at exogenous international prices and
+could be viewed as clearing this commodity market constraint.
+   The only term in equation SYS2 that had not yet been covered, investment
+demand (by origin),               , is defined in equation SYS3, which computes
+investment demand for c as the product of (a)                    , which is exogenous and
+initially holds the base-year quantities; and (b) a scaling factor,                     . Like
+          ,             is exogenous and equal to one for the base solution. In other
+simulations it may take on other values and, depending on the treatment of the
+savings-investment balance, the next equation, it may be endogenous.
+   In  the  savings‐investment  balance,  SYS4,  the  left‐hand  side  defines  available 
+savings  as  the  sum  of  savings  from  domestic  non‐government  institutions,  the 
+government,  and  the  rest  of  the  world;  the  right‐hand  side  defines  the  total 
+investment  value.37  The  variable                  must  be  zero  in  equilibrium  (if  not, 
+savings  and  investment  are  not  equal  and  the  model  did  not  solve  correctly).  In 
+our  application,  this  balance  is  cleared  by  adjustments  in  the  variable             , 
+which is endogenous (see equation INS4). In order to switch from savings‐driven 
+investment  to  investment‐driven  savings,  the  analyst  may  exogenize                       
+and endogenize                  (in equation SYS3). Finally, equation SYS5 defines the 
+    ,  which  is  exogenous  and  the  model  numéraire,  as  a  weighted  average  of 
+composite commodity prices (             ); the weights are the shares of each commodity 
+in private (i.e., household) consumption.38 
+
+
+
+
+37 Given that the model is static, there is no need to disaggregate investment into different
+types (for example government and non-government) or to address how different types of
+investment are financed.
+38 Under alternative closures for the balance of payments, the analyst may wish to fix the
+
+real exchange rate, which typically is defined as the ratio between the nominal exchange
+rate and an index of domestic producer prices; if so, it would be necessary to augment the
+model with this variable and an equation in which it is defined.
+
+
+
+
+                                              45
+

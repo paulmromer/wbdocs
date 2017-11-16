@@ -1,0 +1,1482 @@
+                                                              WPS8128
+
+
+Policy Research Working Paper                                8128
+
+
+
+
+      Exchange Rate and Inflation Dynamics
+                   in Zambia
+                                 Lionel Roger
+                                Gregory Smith
+                               Oliver Morrissey
+
+
+
+
+Macroeconomics and Fiscal Management Global Practice Group
+June 2017
+Policy Research Working Paper 8128
+
+
+  Abstract
+ This paper investigates the dynamics between the exchange                          most important driver of the exchange rate, the fluctua-
+ rate and consumer price inflation in Zambia. The analy-                            tions it caused are associated with a low pass-through of
+ sis uses a structural vector autoregression, with quarterly                        only about 7 percent. Exchange rate fluctuations caused
+ data for 1995–2014 and a combination of short-run                                  by monetary shocks come with a pass-through of up to
+ sign- and zero-restrictions to identify relevant global                            25 percent. Food inflation is equally affected by genuine
+ and domestic shocks. The findings suggest that the pass-                           exchange rate shocks, but appears more reactive to changes
+ through of exchange rates to consumer prices depends                               in copper prices or the money supply. Historical vari-
+ greatly on the shock that originally caused the exchange                           ance decomposition shows that, across periods, the main
+ rate to fluctuate. Although the price of copper is the                             drivers of exchange rate fluctuations varied substantially.
+
+
+
+
+  This paper is a product of the Macroeconomics and Fiscal Management Global Practice Group. It is part of a larger effort
+  by the World Bank to provide open access to its research and make a contribution to development policy discussions
+  around the world. Policy Research Working Papers are also posted on the Web at http://econ.worldbank.org. The authors
+  may be contacted at gsmith3@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+  Exchange Rate and Inflation Dynamics
+               in Zambia
+             By LIONEL ROGER, GREGORY SMITH AND OLIVER MORRISSEY *
+
+
+
+
+  JEL classification numbers: E31, E52, O23
+  Keywords: Exchange Rate Pass-Through, Inflation, Time Series Analysis
+
+* Roger (e-mail: lionel.roger@nottingham.ac.uk) and Morrissey (oliver.morrissey@nottingham.ac.uk): School of
+Economics, University of Nottingham, University Park, Nottingham NG7 2RD. Smith: World Bank, Lusaka, Zambia and
+Washington DC, USA (e-mail: gsmith3@worldbank.org).
+We would like to thank the Economics Department of the Bank of Zambia and the participants of the CSAE conference
+2017 in Oxford for their valuable comments. Lionel Roger’s research is supported by the UK Economic and Social
+Research Council [award number 1511835].
+                                        1.   Introduction
+
+   When Zambia introduced a floating exchange rate regime in 1994, it was one of first
+countries in Sub-Saharan Africa to do so. While this has been welcomed as a critical step
+towards economic modernization and sound macroeconomic management, it has also created
+new challenges. Being a small, open, and rather undiversified economy (copper alone accounts
+for more than 70% of exports), the country is highly exposed to global shocks, potentially
+inducing large and unexpected fluctuations in the value of its currency.
+   Recently, this potential issue surfaced with great force: Between January and August 2015,
+the Zambian kwacha gradually lost about 21% of its value against the US dollar. In the ten
+weeks between September and mid-November, its value plummeted by another 60%, before
+partially recovering with an appreciation of 27% until the end of the year. Overall, the currency
+depreciated by more than 40% in 2015. The impact on the economy was severe, especially for
+consumers: the weakness of the currency abruptly fed through to consumer prices, and monthly
+inflation jumped from an average of 0.7% to 6.2% in October and another 5% in November.
+Overall, consumer prices had risen by 21% in 2015.
+   The aim of this study is to gain an understanding of the dynamics and relative importance of
+the multiple factors that affect the value of the kwacha and, in turn, consumer price inflation in
+Zambia. This study relates to three interrelated strands of the growing literature on
+macroeconomic dynamics in Zambia: first, the determinants and dynamics of the exchange
+rate; second, inflation dynamics in Zambia; and third, the interaction between the two, the
+exchange rate pass-through.
+   From the first category of studies, a wide consensus emerges that the value of the kwacha is
+exceptionally susceptible to global commodity prices, especially that of copper. This is
+supported by case studies such as Muhanga, Zyuulu and Adam (2014), who focus on the short
+run in an SVAR, or Bova (2009) and Chipili (2015a), who both focus on long-run cointegrating
+relationships and infer an equilibrium relationship between the price of copper and the
+exchange rate. Similarly, Cashin, Céspedes and Sahay (2002) test for a long-run relationship
+between main export commodities and the exchange rate in a sample of 58 countries, and
+conclude that the Zambian kwacha is a 'commodity currency’. Pamu (2011), however, rejects
+this classification on the basis of being unable to discern a relationship between the price of
+copper and the exchange rate.
+   While the literature on inflation in Zambia is relatively extensive, the focus of most studies
+is on forecasting rather than on the identification of the underlying mechanics and main drivers
+(e.g., Chipili, 2015b; Mbao, 2015). Notable exceptions include Mutoti et al. (2011), who
+establish the importance of the oil price and money supply as determinants of inflation, and
+Chileshe (2015), who shows that fiscal shocks can have a great impact on consumer prices.
+   Lastly, studies that explicitly address the link between the exchange rate and consumer
+prices, and therefore investigate the exchange rate pass through (ERPT), are scarce. To the best
+of our knowledge, the only study explicitly aimed at investigating this question for Zambia is
+Zgambo (2015). In the framework of a structural VAR (SVAR), similar in many respects to the
+one we will present, he estimates the ERPT to be between 41% and 49%. Beyond the country-
+specific literature, in a seminal study concerned with estimating the determinants of ERPT in a
+global sample, Choudhri and Hakura (2006) report a similar value for Zambia (an ERPT of
+41% after 4 quarters).
+   The main novelty of this study concerns this last strand of the literature. While there is a
+general consensus that a depreciation in the exchange rate should translate into increases in
+
+
+
+
+                                                 2
+consumer prices as imported goods become more expensive, the extent of this effect – the
+ERPT – can be difficult to quantify.1 Moreover, as some recent contributions point out, the
+ERPT need not be the same for all the shocks that drive the exchange rate (Shambaugh, 2008;
+Forbes et al., 2015): A depreciation caused by global market conditions may be associated with
+very different price dynamics than the same depreciation caused by, for instance, expansionary
+monetary policy by the domestic central bank. The focus of our paper is then to disentangle the
+dynamics between the exchange rate and consumer price inflation, and to explore the possibility
+of a differential ERPT depending on the shock that originally caused the exchange rate to move.
+   To this end, we identify six shocks to key variables of the Zambian economy (namely shocks
+to the copper price, external interest rate, output, domestic money supply, exchange rate and
+inflation) using sign- and zero-restrictions in the framework of an SVAR. Since its introduction
+by Sims (1980), Blanchard and Watson (1986) and Bernanke (1986), this method has found
+thousands of applications in empirical macroeconomics. The most common identification
+scheme remains a triangular Cholesky decomposition, which reduces the number of free
+parameters exactly to the point where the system is just-identified. This approach, however,
+often implies assumptions that are hard to justify, and the results may be susceptible to the
+ordering of the variables. Uhlig (2005) suggests to address this using economically plausible
+but less restrictive sign restrictions on the impulse response functions, which can be estimated
+in a Bayesian VAR. His ‘agnostic’ approach has since inspired hundreds of papers to adopt
+similar methodologies. However, Baumeister and Hamilton (2015, henceforth BH) show that
+statistical models that appear to be ‘agnostic’ at first can in fact be heavily influenced by the
+priors imposed by the researcher, even if they were originally designed to be uninformative,
+that is, designed to have little impact on the results. Indeed, they show that there can be
+situations where results may be driven solely by the priors unintentionally imposed by the
+researcher. BH suggest to impose informative priors on economically interpretable parameters
+instead, where the prior values can, for instance, be derived from earlier empirical literature or
+from theory. We acknowledge their argument but note that, especially in larger VARs and for
+less studied economies and questions, there may simply not exist conceptually similar estimates
+for the relevant parameters, and that the parameters of theoretical models can rarely be directly
+mapped to the empirical model. In order to obtain sensible priors nonetheless, we therefore first
+estimate short-run elasticites using a conventional Cholesky decomposition, and then feed these
+into our Bayesian VAR as priors.
+   The remainder of this paper proceeds as follows: Section 2 discusses relevant aspects of the
+institutional and historical background in Zambia. Section 3 lays out our methodology and
+discusses the underlying assumptions. Section 4 describes the data, its basic time series
+properties, and any transformations. Section 5 presents the results, and Section 6 discusses the
+turbulence of late 2015 with respect to the results. Section 7 concludes.
+
+                                                 2.   Background
+
+    Zambia is a small, open commodity-dependent economy and regularly faces challenges
+from supply shocks. These include shifts in the global copper price, rain-fed agricultural
+outputs, hydro-electric generation output, and the global price of fuel. It has been a copper
+producer since prior to its independence in 1964, but from the early 1970s production fell
+
+   1
+     For an excellent and comprehensive overview of the theoretical and empirical literature on the exchange rate pass-
+through in developing and emerging markets see Aron et al. (2014).
+
+
+
+
+                                                            3
+considerably. Nationalization in 1973 and low prices hampered investment in the sector until
+the 2000s. Fresh investment followed privatization and higher copper prices in the mid-2000s
+supported a doubling of copper production between 2004 and 2014. The boost to the economy
+from the copper industry was also complemented by better macroeconomic fundamentals in
+the 2000s. For example, Zambia maintained a fairly low level of inflation, judged by its
+historical standards, and substantial debt relief improved investors’ perception of the country
+after it qualified for the Heavily Indebted Poor Countries (HIPC) initiative in 2005. These
+factors supported the expansion of the economy and annual GDP growth, which averaged 7.4%
+between 2004 and 2014. As the production of copper increased and the economy prospered,
+much larger foreign exchange inflows followed from the mining sector. Added to this in the
+late 2000s were inflows from large Chinese infrastructure lending and from 2012 in the form
+of large commercial Eurobonds placements (2012, 2014 and 2015).
+     Since the introduction of a floating exchange rate in 1994, the primary objective of the
+
+
+
+
+                         Figure 1: Key variables from 1995 to 2015 (monthly data)
+
+central bank has been to maintain price stability. In the foreign exchange market, its only role
+has been to intervene in order to reduce volatility and manage exchange rate stability. Key
+characteristics of Zambia’s foreign exchange markets are that they are ‘thin’, in the sense that
+there is not much trading, and that markets are dominated by few players (notably the large
+mining firms, the commercial banks, and the Bank of Zambia). There are often times of low
+trading volume, when large players are not trading and the exchange rate is fairly stable. The
+participants that are large relative to the level of transactions can exert influence over the
+exchange rate, sometimes by the timing of their transactions, even if they do not intend to.
+     In 2014 and 2015 the economy experienced several shocks including a further decline in
+copper prices and after nearly a decade of running a trade surplus, the external account fell into
+deficit in December 2014. The initial consequence was a steady depreciation of the kwacha
+during the first half of 2015. In August of that same year the confidence of the economy was
+
+
+
+
+                                                  4
+eroded further as a power crisis began to impact all sectors of the economy, and the trade deficit
+accelerated. Between August and November, the currency depreciated by 60% in what appears
+to have been an instance of market panic. Some gains were recovered in 2016 following much
+tighter monetary policy, but at the end of 2016 the kwacha remained substantially weaker than
+prior to the shock. The depreciation of the currency abruptly fed through to consumer prices
+between September and November 2015, lifting annual inflation from less than 8% in the
+preceding years to more than 20% in 2015. Section 6 will discuss this episode with what can
+be inferred from our results.
+     Figure 1 traces some key macroeconomic variables relevant to our narrative (the exchange
+rate, the copper price and consumer prices) since 1995, after the introduction of the floating
+exchange rate regime in 1994 and at the start of our sample period (see Section 4). Before
+proceeding to the econometric analysis, it is worth relating some of the key changes in the data
+to the institutional context outlined above. First, notice the changing patterns in the
+development of the exchange rate (expressed throughout this article in USD/ZMW, such that a
+decrease corresponds to a depreciation).2 In the earlier periods (top panel) it seems to be moving
+rather independently of the copper price (expressed in USD per metric ton). It is only after
+2005, when investment and copper production increased, that the two variables began to
+noticeably move together. Second, this coupling coincides with a strong appreciation following
+scaled-up debt relief under the HIPC initiative in 2005. To be sure, this appreciation precedes
+the increase in the copper price around the same time; later it appears the sequence is reversed
+(changes in the copper price precede those in the exchange rate), consistent with the
+interpretation that copper became a stronger determinant of the exchange rate after the sector
+had attracted investment and gained importance. Lastly, while consumer prices (CPI) and the
+exchange rate do generally appear to be trending in the same direction in most periods, prices
+do not react to exchange rate fluctuations in any obvious manner. This does not apply to the
+end of 2015, when a sharp depreciation comes with an equally sharp increase in inflation, an
+observation that will be further discussed in Section 6.
+
+                                                  3.    Methodology
+
+   Subsection 3.1 outlines the general form of the structural VAR employed and discusses the
+central problem of identifying the relevant shocks. Drawing from recent methodological
+advancements, especially Baumeister and Hamilton (2015) and building on Uhlig (2005), we
+avoid enforcing a fully identified structure on our system, and instead rely on a combination of
+sign- and zero-restrictions to achieve set identification in an under-identified system. This
+allows us to relax a common, but in our view overly strong (and as our results will show,
+influential), assumption about the contemporaneous interaction of the exchange rate and
+inflation, which our specification will allow to take place in either direction.
+   As our system is under-identified, estimation will be carried out in a Bayesian framework.
+This raises the critical issue of selecting sensible priors. As Baumeister and Hamilton (2015)
+point out, these can be highly influential even where they are designed for opposite (supposedly
+flat priors). Priors therefore need to be chosen with corresponding care, and reported in a
+transparent manner. Subsection 3.2 will discuss and make explicit our choices in this respect.
+
+
+   2
+     We apply the 2013 redenomination of the kwacha retroactively throughout the series for consistency, that is, we divide
+older values by 10,000 to have a consistent series.
+
+
+
+
+                                                              5
+       3.1. Identification
+
+  We estimate the macroeconomic dynamics of interest in the framework a vector
+autoregression of the following form (using the notation of Ramey (2016) and Stock and
+Watson (2016)):
+
+                                                    ( )       =       ,                                          (1)
+
+   Where      is a vector of reduced form VAR innovations, that is, the observed residuals as
+obtained when forecasting based on its lagged values. We make the usual assumptions that
+these innovations have a zero mean, constant variance, and are uncorrelated with each other.
+Furthermore, ( ) is a lag polynomial of the form ( ) = − ∑                 , where is the lag
+operator, shifting values by lags. It effectively applies weights to each lag and element of
+in order to explain its current values, short of the innovations .
+   However, the idea of a structural VAR is specifically to represent in terms of structural
+shocks that are unexpected, exogenous disturbances to the system, in order to identify the
+effect of unexpected changes in each of the variables, and to subsequently compute parameters
+of interest such as impulse response functions and variance decompositions. The SVAR
+assumes that these structural shocks are related to the VAR innovations in the following
+way:
+
+                                                          =       ,                                             (2)
+
+   Where the matrix       describes the contemporaneous relationships between the structural
+shocks and the reduced form VAR residuals , or how an exogenous shock to any variable
+will affect each of the variables in within the period. 3 We will normalize it such that the
+structural shocks have unit effect, that is, its diagonal elements are unity (an exogenous shock
+to a given variable will translate one to one into a change of that variable). Without any further
+restrictions however, the system is unidentified and there exists an infinite number of parameter
+combinations in that are equally consistent with the observed data. The challenge is then to
+impose some structure that will allow us to uncover the parameters of , and therefore the
+impact of each of the individual shocks onto the system.
+   This leads us to the critical issue of identification, which sets our study apart from most of
+the previous literature (that on Zambia in particular), much of which relies on a Cholesky
+decomposition first suggested by Sims (1980) and still common in the exchange rate and
+monetary literature (with respect to Zambia, recent examples include Muhanga et al. (2014)
+and Zgambo (2015)). For all its benefits (most importantly, pinpointing parameters by just-
+identifying the system), this comes at the cost of substantial rigidity and requires the researcher
+to impose strong assumptions on the economic mechanisms that are being investigated. Our
+approach will therefore build on more recent developments in the literature, which has
+increasingly moved away from strict just-identified systems towards more flexible
+specifications; specifically, we will rely on a combination of sign- and zero-restrictions in a
+fashion similar to Uhlig (2005). The general idea here is to restrict parameter combinations to
+the set of those that are consistent with fundamental macroeconomic principles, instead of
+
+   3
+     In the literature using a Cholesky decomposition, matrix is commonly referred to as . We stick to the Ramey (2016)
+and Stock and Watson (2016) notation to facilitate reference to their excellent discussion of the matter.
+
+
+
+
+                                                              6
+imposing so many (but potentially unwarranted) restrictions that only one combination remains
+possible. We also acknowledge recent improvements on the Uhlig (2005) approach, and in
+particular we use the Baumeister and Hamilton (2015) methodology in order to avoid the undue
+impact of supposedly uninformative priors (see Section 3.2).
+   Consider now the following general set of equations that describe the relationship between
+the variables in our system, which are chosen in line with the literature on exchange rates and
+inflation. The model is limited to six variables: the US Federal Funds rate (to represent the
+external interest rate), the international price of copper, domestic money supply, the domestic
+output gap, the exchange rate and consumer price inflation (the choice and details of the
+variables will be discussed in more detail in section 4, and the assumptions underlying this
+structure below):
+
+                                                =       ,
+                                             = Φ            +       ,
+                                   =            +                       +   ,
+                                                                                                         (3)
+                              =         +                   +                   +    ,
+             =           +              +                   +                   +        +       ,
+              =           +              +                   +                   +       +   ,       .
+
+  More concisely, we can represent the dynamic behavior of this system in matrix notation as:
+
+                                       = Φ( )          + Ω                                               (4)
+
+
+where Φ( ) = Φ + ∑          Φ : The structural coefficients in system (3) are captured in the
+contemporaneous matrix Φ , while the dynamics of additional lags are captured in the matrices
+Φ . The ’s are now the structural shocks we will aim to identify, entering the system as
+determined by matrix Ω. We follow common practice in assuming that each structural shock
+only enters one equation, or Ω = .
+   As outlined above, our identification strategy will rely on imposing structure on in order
+to identify the contemporaneous relationship defined in (2). The combination of sign- and zero-
+restrictions we employ takes the form:
+
+                                   1     0     0        0       0       0
+                                         1     0        0       0       0
+                                               1        0       0       0
+                              =                                                                          (5)
+                                                        1       0       0
+                                                                1
+                                                                        1
+
+   This specification is similar to a Cholesky decomposition, but it relaxes the restrictions on
+the contemporaneous interactions on our main variables of interest, inflation and the exchange
+rate. Instead, we impose a number of sign restrictions on the parameters, indicated by the
+superscripts ‘‒’ and ‘+’. More specifically, this specification reflects three types of
+assumptions:
+
+
+
+
+                                                   7
+  1. Small economy: The domestic macroeconomic variables in Zambia are assumed to have
+       no contemporaneous impact on the two global variables in the system, the US Federal
+       Funds rate and copper prices. Given the importance of copper as an export in Zambia,
+       the latter may seem restrictive; however, Zambia only accounts for about 2% of the
+       global copper production.
+  2. Delayed responses: Monetary policy is assumed to react only with a delay to developments
+       in the economy. This assumption is commonly made and rooted in the observation that
+       information on macroeconomic variables typically becomes available only with a lag.
+       Similarly, output is typically observed to react to changes in other variables only with a
+       lag. The ordering above implies that output may respond to monetary policy
+       contemporaneously, but not vice versa. Note that a few studies have made the opposite
+       assumption in the past and constrained GDP to only react with a lag based on the
+       argument that it is a notoriously slow variable; in a robustness check, we changed the
+       order and the results were robust to this choice.
+  3. Sign restrictions: We impose sign restrictions on contemporaneous parameters where we
+       deem this choice consistent with a broad range of macroeconomic theories. Specifically,
+       the exchange rate is constrained to depreciate (if anything) as the fed funds rate increases,
+       as broad money increases, and as domestic inflation increases. Similarly, we constrain
+       the contemporaneous impact of an exchange rate appreciation on prices to be negative
+       or zero, thus excluding parameter combinations that would imply a negative ERPT at
+       impact. Further, the contemporaneous reaction of output to an increase in copper prices
+       is assumed to be positive or zero, as well as that of inflation to an expansionary monetary
+       shock.
+
+    3.2. Priors
+
+   As our system is not fully identified as in the pure Cholesky case, we follow the literature in
+taking a Bayesian approach in order to estimate the VAR. Crucially, this requires us to select
+priors. As shown by Baumeister and Hamilton (2015), seemingly uninformative priors (e.g.,
+the commonly used Haar prior) can effectively be very influential, in a manner that is neither
+intended, understood, or related in any intuitive way to the underlying economic meaning. This
+can be the case when the outcome of interest (e.g., the impulse response function) is a non-
+linear transformation of the parameters the priors are imposed on. Instead, they suggest to
+formulate informative priors directly on parameters with an intuitive economic interpretation,
+in our case on the contemporaneous coefficients in matrix . We will follow their approach,
+and use their numerical algorithm to obtain our results.
+   This poses the fundamental challenge of finding sensible prior values, that is, expectations
+about the values of the contemporaneous elasticities between the variables included in our
+system. In fact, we found it impossible in the present study to base all our priors on results of
+the earlier literature, which would be the obvious way to proceed. This is the case for a number
+of reasons: First, reporting conventions make it difficult to draw from earlier studies. It is not
+common for the empirical literature to report the contemporaneous coefficients making up the
+matrix . For instance, Muhanga et al. (2014), even though they study the same country with
+a similar research question and a comparable set of variables, only report their results in the
+form of impulse response functions, and thus do not offer a starting point for our priors.
+   Second, the size of our VAR complicates the search for priors. With an increasing number of
+parameters (we estimate 16 contemporaneous parameters), it becomes increasingly difficult to
+
+
+
+
+                                                  8
+find sensible priors for each of them that would be conceptually similar and could reasonably
+be expected to apply to Zambia.
+   Third, there is little guidance by theory in the choice of priors. The theoretical literature is
+generally not parameterized in a way that suggests any particular amplitudes for the coefficients
+in our empirical model. To illustrate this, consider Baldini et al. (2012), who develop a DSGE
+model to analyze monetary policy in Zambia. While conceptually and contextually close to our
+study, and very transparent about the parameters applied and derived, none of the macro-
+parameters of interest here correspond to those employed in their model (which by construction
+roots the dynamics in deep parameters at the micro level).
+   In order to obtain sensible priors, we take the following approach. Instead of collecting or
+deriving coefficients from earlier literature, we generate our own priors from a more traditional
+approach (as if there was previous literature sufficiently consistent with our study). We start by
+estimating the model using a conventional Cholesky decomposition, thereby obtaining results
+based on more restrictive assumptions as typically made in the earlier literature. We then feed
+the resulting estimates as the prior modes into the system described earlier. Thus, we take
+traditional estimates with all their shortcomings as a first guess, and then use algorithms to
+improve on them.
+   Note that – given our structure of choice described above – it is not possible to estimate
+and     simultaneously. In order to obtain prior modes for both, we estimate the system twice,
+once as described above, and then reversing the order of the last two variables (exchange rate
+and inflation). All other parameters are those obtained from the estimation with the order as
+described throughout the article (exchange rate before inflation). Beyond the mode, in order to
+complete the specification of our priors, we need to specify the nature of our prior distribution
+(as the parameters are inherently treated as random variables). In line with Baumeister and
+Hamilton (2015), we formulate the priors on the parameters in as student t distributions with
+three degrees of freedom, and a scale parameter of 0.6 reflecting moderate confidence in our
+prior modes. Appendix A explicitly reports the prior modes.
+
+                                              4. Data
+
+   We use quarterly data from 1995:2 to 2014:4. This corresponds to a period of relative
+stability in the Zambian economy, and a regime of flexible exchange rates since 1994.
+Furthermore, we only have data on the output gap starting from 1995, the first quarter of which
+drops out as we take first differences. We deliberately exclude the tumultuous year 2015 from
+the main analysis as it exhibits extreme developments that are likely to dominate and distort
+our baseline estimations.
+   We obtain the price of copper from the IMF’s Primary Commodity Price database; the
+Federal funds rate, the nominal USD/ZMW exchange rate (expressed such that a decrease
+corresponds to devaluation) and the Zambian CPI from the IMF’s International Financial
+Database; Broad Money (M2) from the Bank of Zambia’s fortnightly statistics; and an internal
+estimate of the output gap kindly provided to us by the Bank of Zambia. All series are originally
+obtained at a monthly frequency and averaged over quarters, except for the output gap which
+was provided to us at quarterly frequency.
+   Figure 2 plots all variables in levels (solid lines) and in log differences (dashed lines). All
+series, except for the output gap (especially in early periods) resemble non-stationary series;
+the differenced series however appear stationary. This is confirmed by Augmented Dickey-
+
+
+
+
+                                                  9
+Fuller tests reported in Appendix A. As our study focusses on relatively short time horizons,
+we will restrict our attention to the differenced series.
+   Specifically, we use the log-difference (multiplied by 100) of the copper price, money, the
+exchange rate and the consumer price index, so as to measure percentage changes between
+quarters. The Federal Funds rate, already expressed in percentages, will be included in first
+differences, therefore reflecting changes in percentage points. The output gap is expressed in
+percentage deviations from potential output and will be included as obtained. Furthermore, we
+de-trend the consumer price and money series.
+
+
+
+
+                                              10
+             10000
+
+
+
+
+                                                                       .4
+
+
+
+
+                                                                                                                                                                                 1
+                                                                                                                6.00
+                                                                       .2
+                    8000
+
+
+
+
+                                                                                                                                                                                 0
+   USD / metric ton
+
+
+
+
+                                                                                               4.00
+                                                                       log difference
+
+
+
+
+                                                                                                                                                                                 log difference
+                                                                                    0
+         6000
+
+
+
+
+                                                                                         Percent
+
+
+
+
+                                                                                                                                                                                      −1
+                                                                          −.2
+ 4000
+
+
+
+
+                                                                                                                2.00
+                                                                       −.4
+
+
+
+
+                                                                                                                                                                                 −2
+             2000
+
+
+
+
+                                                                       −.6
+
+
+
+
+                                                                                                                0.00
+
+
+
+
+                                                                                                                                                                                 −3
+                           1995   2000       2005     2010      2015                                                                   1995   2000       2005      2010   2015
+
+
+                                         (a) Copper price                                                                                            (b) Fed funds rate
+
+
+
+
+                                                                                                                                  10
+                                                                       .2
+
+
+
+
+                                                                                                                                                                                 6
+             40
+
+
+
+
+                                                                                          Percent deviation from potential output
+                                                                       .15
+
+
+
+
+                                                                                                                                                                                 4
+                30
+
+
+
+
+                                                                                                                    5
+ Billions of ZMW
+
+
+
+
+                                                                       log difference
+
+
+
+
+                                                                                                                                                                                 log difference
+                                                                                   .1
+
+
+
+
+                                                                                                                                                                                         2
+       20
+
+
+
+
+                                                                         .05
+
+
+
+
+                                                                                                      0
+
+
+
+
+                                                                                                                                                                                 0
+             10
+
+
+
+
+                                                                       0
+                                                                       −.05
+
+
+
+
+                                                                                         −5
+
+
+
+
+                                                                                                                                                                                 −2
+             0
+
+
+
+
+                           1995   2000       2005     2010      2015                                                                   1995   2000       2005      2010   2015
+
+
+                                          (c) Money (M2)                                                                                              (d) Output gap
+                                                                                                                200
+             1.5
+
+
+
+
+                                                                                                                                                                                 .15
+                                                                       .2
+                                                                       .1
+
+
+
+
+                                                                                                          150
+                                                                                         Index (2009=100)
+
+
+
+
+                                                                                                                                                                                                 .1
+             1
+
+
+
+
+                                                                       log difference
+
+
+
+
+                                                                                                                                                                                   log difference
+ USD/ZMW
+
+
+
+
+                                                                                   0
+
+
+
+
+                                                                                                100
+                                                                        −.1
+
+
+
+
+                                                                                                                                                                                 .05
+             .5
+
+
+
+
+                                                                                                                50
+                                                                       −.2
+                                                                       −.3
+             0
+
+
+
+
+                                                                                                                0
+
+
+
+
+                                                                                                                                                                                 0
+
+
+
+
+                           1995   2000       2005     2010      2015                                                                   1995   2000       2005      2010   2015
+
+                                         (e) Exchange rate                                                                                     (f) Consumer Price Index
+    Notes: The solid lines describe the variables in levels and native units (see left y-axis), the dashed lines indicate are the
+first differences of the logarithm of these series. The dotted vertical line at the beginning of 2015 indicates the end of the
+sample period used for our main specification. See main text for further transformations applied to the series.
+
+                                                    Figure 2: Variables in levels and log differences
+
+
+
+
+                                                                                        11
+                                             5. Results
+
+   We discuss our results in three steps. First, we present the basic impulse response functions
+of our main variables of interest, the exchange rate and inflation. These indicate a strong
+dependence of the exchange rate on copper, as well as a moderate effect of the exchange rate
+on price levels. Second, we report variance decompositions over the sample periods in order to
+isolate the most important contributing factors on each of the variables, and the evolution of
+this pattern over time. Third, we analyze whether there is a differential ERPT depending on the
+shock that drives the exchange rate fluctuation, following Forbes et al. (2015). We further
+investigate whether and to what extent food and non-food inflation are affected differently, and
+also report differential ERPTs obtained using the respective disaggregated CPIs.
+  5.1 Impulse response functions
+
+   Figure 3 depicts the cumulative impulse response functions (IRF) for the exchange rate as a
+reaction to a 1% positive shock in the other variables. The solid line reports the pointwise mean
+IRF, which is the recommended point estimate to be reported given a linear loss function
+(Baumeister and Hamilton, 2015). The dashed lines depict the 68th and 90th percentiles of the
+estimated IRFs (following the Bayesian convention of credible intervals, in lieu of frequentist
+confidence intervals).
+   Panel (a) summarizes one of the key results of this exercise: the exchange rate reacts strongly
+and quickly to an increase in copper prices. The mean response suggests that, at impact (within
+the quarter), an unanticipated 1% rise in copper prices leads to an exchange rate appreciation
+of 0.2%. The exchange rate continues to markedly appreciate for the next two quarters, up until
+0.4%, and then stays at roughly that level. This is slightly lower than the 4.8% appreciation
+following a 10% increase in copper prices in the long run reported by Chipili (2015), although
+this estimate is within the bounds of the 68% interval.
+   An expansionary monetary shock of 1% (panel (c)) is estimated to induce a marked
+depreciation of about 0.7% within the quarter, reaching its peak in the next quarter at 0.9%.
+The point estimates suggest a slight overshooting here, and the persistent effect is of about
+0.8%. Note that after three quarters, the estimates become less confident to the point where a
+zero effect cannot be excluded based on the 90% credible interval.
+
+
+
+
+                                                12
+      0.9                                                                         17.1
+      0.8                                                                         14.3
+      0.7                                                                         11.5
+      0.6                                                                            8.7
+      0.5
+                                                                                     5.9
+      0.4
+                                                                                     3.1
+      0.3
+                                                                                     0.3
+      0.2
+                                                                                     -2.5
+      0.1
+        0                                                                            -5.3
+      -0.1                                                                           -8.1
+      -0.2                                                                        -10.9
+             0   1      2       3   4     5        6       7       8                        0       1       2        3   4    5      6   7   8
+
+
+                            (a) Copper prices                                                                   (b) Fed funds rate
+
+
+
+      0.1                                                                           1.3
+                                                                                    1.1
+     -0.1
+                                                                                    0.9
+     -0.3
+                                                                                    0.7
+     -0.5
+                                                                                    0.5
+     -0.7
+                                                                                    0.3
+     -0.9
+                                                                                    0.1
+     -1.1                                                                          -0.1
+     -1.3                                                                          -0.3
+     -1.5                                                                          -0.5
+     -1.7                                                                          -0.7
+     -1.9                                                                          -0.9
+     -2.1                                                                          -1.1
+            0    1      2      3    4    5         6       7       8                        0       1       2        3   4    5      6   7   8
+
+
+                     (c) Monetary (expansionary)                                                                    (d) Output gap
+
+
+                                        1.3
+                                        0.8
+                                        0.3
+                                        -0.2
+                                        -0.7
+                                        -1.2
+                                        -1.7
+                                        -2.2
+                                        -2.7
+                                        -3.2
+                                        -3.7
+                                               0       1       2       3     4       5          6       7       8
+
+                                                                           (e) CPI
+
+                            Figure 3: Response of the exchange rate to a 1% shock to key variables
+
+   The third most salient driver is domestic prices, reported in panel (e). Although the estimates
+are too imprecise for any stark conclusions, the point estimates suggest a contemporaneous
+depreciation of about 0.8% following a 1% inflationary shock to CPI. The median response
+suggests a peak depreciation at about 1.4% after one quarter, which then levels off at about
+0.9% after five quarters. This is evidence that our decision to leave the contemporaneous impact
+
+
+
+
+                                                                             13
+of inflation on the exchange rate unrestricted was well-warranted; restricting it to zero would
+have forced the intercept of this IRF to be zero, and exerted great but possibly undue effect on
+our estimates of the exchange rate pass-through, discussed below.
+  The effect of the output gap and the fed funds rate, panels (b) and (d), are ambiguous and
+estimated with little precision.
+
+
+
+
+                                               14
+     0.2
+                                                                                    1.9
+    0.16
+                                                                                    1.3
+    0.12
+                                                                                    0.7
+    0.08
+                                                                                    0.1
+    0.04
+                                                                                    -0.5
+       0
+                                                                                    -1.1
+    -0.04
+                                                                                    -1.7
+    -0.08                                                                           -2.3
+    -0.12                                                                           -2.9
+    -0.16                                                                           -3.5
+     -0.2                                                                           -4.1
+            0   1      2      3   4      5        6       7        8                        0       1       2        3   4    5      6   7   8
+
+
+                           (a) Copper prices                                                                    (b) Fed funds rate
+
+
+
+                                                                                    0.3
+     0.4
+                                                                                    0.2
+     0.3
+
+                                                                                    0.1
+     0.2
+
+     0.1                                                                                0
+
+
+       0                                                                            -0.1
+
+    -0.1                                                                            -0.2
+
+    -0.2                                                                            -0.3
+           0    1      2     3    4     5         6       7        8                        0       1       2        3   4    5      6   7   8
+
+
+                    (c) Monetary (expansionary)                                                                     (d) Output gap
+
+                                       0.2
+                                      0.15
+                                       0.1
+                                      0.05
+                                         0
+                                      -0.05
+                                       -0.1
+                                      -0.15
+                                       -0.2
+                                      -0.25
+                                       -0.3
+                                              0       1       2        3   4        5           6       7       8
+
+                                                                  (e) Exchange rate
+
+                            Figure 4: Response of consumer prices to a 1% shock to key variables
+
+
+  Figure 4 is identical in notation and plots the responses of consumer prices to 1% shocks to
+any of the other variables. The general picture here is that consumer prices do not react very
+
+
+
+
+                                                                               15
+strongly to the other macro variables, at least based on the short run dynamics analyzed in our
+framework.
+   The most pronounced effect comes from monetary shocks (panel (c)): While a monetary
+expansion does not have much of an impact contemporaneously, after two quarters, a 1%
+monetary shock is estimated to induce a 0.2% increase in prices.
+   Panel (e), reporting the response of CPI to a shock in the exchange rate – the ERPT to
+consumer prices – reveals a very moderate response of consumer prices to changes in the
+exchange rate based on the short run dynamics. At impact, there is no evidence for an increase
+in consumer prices. While the precision of the estimate is very low given the small amplitude
+of the effect, the median IRF suggests a steady decrease (increase) in prices following an
+unanticipated appreciation (depreciation) of the exchange rate. The dynamics settle down after
+four quarters, after consumer prices have decreased (increased) by about 0.07%.
+   Our estimates therefore imply an ERPT to consumer prices of 7% after four quarters. This is
+very low compared to other estimates in the literature. The corresponding figures obtained by
+Zgambo (2015) range between 41% and 49%, although this is reduced to 20% when focusing
+on a more recent period (2004-2014) characterized by lower inflation. Choudhri and Hakura
+(2006) estimate an ERPT to domestic prices in Zambia of 15% at impact, and 41% after four
+quarters. The average pass-through after four quarters they obtain for developing countries is
+24% (although with some notable exceptions, like 9% in Burundi, and -1% in Colombia).
+   It is worth emphasizing that, besides other important methodological differences in their
+study, Choudhri and Hakura (2006) study the period 1979-2000 which overlaps with our
+sample for only five years. The discrepancy is somewhat consistent with the main point of their
+paper: low inflation is associated with a low pass-through. In our sample period, Zambian
+inflation is much lower than in earlier decades, averaging 18% per annum over 1995-2014
+compared to 71% per annum during 1986-2000 (World Bank, 2016). Our results may therefore
+reflect a genuine increase in the resilience of the Zambian economy until 2014.
+   A second factor is our decision to leave the initial impact of inflationary shocks on the
+exchange rate, , unrestricted. Estimating the same set of equations with full identification
+through a classical Cholesky decomposition ( = 0, no sign restrictions) leads to a higher
+ERPT estimate of 9% at impact and about 15% after four quarters. This is indeed what much
+of the previous ERPT literature has been doing, suggesting that some of the results are inflated
+as causality was constrained to go from exchange rates to prices.
+  5.2 Historical decomposition
+
+   Figure 5 and Figure 7 describe the historical contributions of each of the shocks to the
+changes in the exchange rate and consumer prices. The red line is the observed value of the
+respective (de-trended) series, expressed in quarter to quarter changes. The colored bars
+indicate the contribution of each of the shocks to this value over the eight periods (two years)
+prior to the indicated date, computed from the median IRFs discussed in the previous section.
+These illustrate the decompositions reported in Table 1, which shows that money supply (M2)
+and the copper price account for most of the variation in exchange rates, and M2 is usually the
+more important factor (except for 1996-99 and 2008-11). The lower panel shows that the output
+gap, money supply and the copper price account for most of the variation in exchange rates
+(their relative importance varies, which M2 generally becoming more important over time).
+The role of domestic inflation as a driver of the exchange rate appears to have steadily declined,
+from 19% in 1996-99 to 6% in 2012-14.
+
+
+
+
+                                                16
+                                                   1996q2-           2000q1-       2004q1-                2008q1-       2012q1-
+                                                   1999q4            2003q4        2007q4                 2011q4        2014q4
+          Exchange rate     Fed                            3%               8%                   9%             6%            3%
+                            Copper                        22%              13%                  16%            29%           15%
+                            M2                            15%              24%                  24%            20%           31%
+                            Output Gap                     9%              10%                   9%             4%            6%
+                            Exchange Rate                 30%              32%                  33%            32%           40%
+                            CPI                           19%              13%                   8%             8%            6%
+
+                            Fed                            2%               4%                   5%             6%            1%
+                            Copper                        10%               6%                  13%            23%           14%
+                            M2                             7%              15%                  18%            20%           24%
+          CPI
+
+
+
+
+                            Output Gap                    21%              21%                  15%            10%           21%
+                            Exchange Rate                  5%               3%                   8%             6%            6%
+                            CPI                           55%              51%                  41%            35%           34%
+         Notes: The first panel reports the contribution of each variable to the fluctuations of the
+         exchange rate averaged across quarters within five sub-periods. The second panel reports the
+         same information for fluctuations in CPI.
+                 Table 1: Historical variance decomposition of exchange rate and price fluctuations
+
+   Figure 5 illustrates these results for the exchange rate and depicts the year by year variation.
+It is apparent that the factors contributing to exchange rate fluctuations have varied quite
+substantially over time, but also that the amplitude of the shocks – and therefore that of the
+exchange rate fluctuations – has declined since about 2009. The graph also offers insights about
+the nature of individual fluctuations. For instance, the early 2000s saw a number of stark
+movements in the exchange rate, with money appearing to be the main driver. The strong
+appreciation in 2005, corresponding to the debt relief under the HIPC initiative, enters mainly
+as a genuine exchange rate shock. While the proportional contribution of the price of copper
+appears rather moderate over much of the sample period, the abrupt depreciation in 2009
+illustrates its potential importance, as it accounts for about two-thirds of the variation. The
+variety of the drivers of these shocks further underlines the importance of our research question,
+whether the ERPT will vary with the underlying economic shock that originally caused the
+exchange rate to move.
+20
+
+
+10
+
+
+ 0
+
+
+-10
+
+
+-20
+
+                                              Copper    Fed      Money     Output gap          Exchange rate   CPI
+-30
+  1996                    1998        2000       2002         2004       2006           2008           2010      2012      2014
+
+                                 Figure 5: Historical decomposition of changes in the exchange rate (USD/ZWA)
+
+Figure 6 decomposes changes in consumer prices in the same way. As expected from the low
+amplitude of the IRFs presented in section 5.1, the contribution of the other variables in our
+
+
+
+
+                                                                         17
+system to changes in CPI appears to be relatively limited, and much of the variance is attributed
+to price shocks that are exogenous to our system. However, as fluctuations decline over time,
+it is apparent from Table 1 that the role of our macro-variables is increasing towards the end
+of the period: over the sample period, the role of genuine price shocks steadily decreases from
+55% in 1996-99 to 34% in 2012-14. A few factors have a notable impact in certain periods.
+This is the case for the fluctuations in output, especially in periods before 2002. Contractionary
+monetary shocks contributed to slowdowns in inflation in 2001 and in 2006. While copper
+prices do not play a prominent role in determining inflation in the first half of the sample period,
+it becomes more important in the late 2000s. This is plausible, as both copper production as
+well as prices were significantly higher in later periods (see Section 2).
+5
+
+
+
+
+0
+
+
+
+
+                           Copper    Fed          Money     Output gap          Exchange rate   CPI
+-5
+1996      1998     2000       2002         2004           2006           2008           2010      2012   2014
+
+                 Figure 6: Historical decomposition of changes in Zambian consumer prices
+
+
+    5.3 Differential exchange rate pass-through
+
+   We will now examine the extent to which different shocks that affect the exchange rate entail
+different reactions of consumer prices. Our approach is similar to Forbes et al. (2015), in that
+we use the ratio of the IRF of CPI over the IRF of the exchange rate for a shock to any given
+variable. These estimates therefore indicate the change in consumer prices induced by a shock
+that leads to a 1% appreciation in the exchange rate in any period. The interpretation is then
+slightly different to the IRFs reported in section 5.1. These traced the effect of a shock that
+causes a 1% appreciation at impact. The measures reported here are computed for a shock that
+causes a 1% appreciation in the period itself. For instance, in order for a shock to the copper
+price to lead to an exchange rate appreciation of 1% at impact, it needs to have an amplitude of
+1%/0.2 = 5% (see Figure 3). But the shock takes some time to fully deploy its effect on the
+exchange rate; a copper price shock that leads to an appreciation of 1% after four quarters
+therefore only needs to have an amplitude of 1%/0.4 = 2.5%.
+   Note also that the direction of the original shocks we consider in this section need not be
+identical to that discussed in section 5.1 when describing the IRFs. Specifically, Figure 7 reports
+the result of a contractionary monetary shock (reducing inflation), while our previous
+discussion as well as Figure 4 were based on expansionary shocks (increasing inflation). This
+is because we consider shocks that lead to an exchange rate appreciation, which for money
+needs to be a contractionary one.
+
+
+
+
+                                                           18
+  Since in section 5.1 we established that both the fed funds rate and the output gap had little
+discernible effect on the exchange rate, we focus on shocks to copper prices, money and the
+exchange rate itself.4
+
+                    0.1
+                   0.05
+                      0
+                  -0.05
+                    -0.1
+                  -0.15
+                    -0.2
+                  -0.25
+                    -0.3
+                  -0.35                         Copper        Money          Exchange rate
+
+                           0       1        2          3         4           5        6        7           8
+
+                               Figure 7: Pass through to consumer prices for different shocks
+
+                   Horizon                             0                 1             4               8
+                   Copper                           0.06             -0.02         -0.03           -0.04
+                   Money                           -0.03             -0.14         -0.21           -0.22
+                   Exchange rate                   -0.02             -0.03         -0.05           -0.05
+                               Table 2: Pass through for different shocks and time horizons
+
+   Figure 7 plots the results. First, note that for a shock to the exchange rate, the effect is even
+slightly lower than that reported in section 5.1. This is because a shock that raises the exchange
+rate by 1% at impact still raises it in the subsequent periods; effectively, Figure 7 refers to
+smaller exchange rate shocks in all periods after impact.
+   A 1% increase in the exchange rate caused by a shock to copper prices comes with an increase
+in consumer prices of 0.05%, implying a negative pass-through at impact of about -5%. This
+may reflect aggregate demand effects related to the stimulus to the copper industry (increased
+employment, rents). The effect is reversed in later periods, with a pass through between 5%
+and 8% in the following quarters.
+   Finally, monetary shocks are associated with by far the strongest pass-though: exchange rate
+fluctuations that are caused by a monetary shock are estimated to translate into consumer prices
+with an ERPT of about 25% after three quarters, with a lasting effect of about 23%. This is
+particularly relevant in the view of the results from the historical variance decomposition in
+section 5.2, which indicate that, while the variation of the exchange rate has markedly declined
+overall, it has recently increasingly been driven by monetary shocks. The remaining exchange
+rate fluctuations may therefore be disproportionately associated with consumer prices. Note
+however that this is more than offset by the smaller amplitude of the fluctuations in general.
+
+
+   4
+     The latter may seem redundant, as conceptually it is very similar to the exchange rate pass-through already quantified
+above. Because of calculation in each period, and because an exchange rate shock that raises it by 1% in the first period may
+(and does) have a different effect in the second period, it is not identical.
+
+
+
+
+                                                              19
+  5.4 Food versus non-food inflation
+
+
+              0.1
+             0.05
+               0
+            -0.05
+             -0.1
+            -0.15
+             -0.2
+            -0.25
+             -0.3
+            -0.35                     Copper     Money       Exchange rate
+
+                    0    1        2        3        4        5        6       7        8
+
+
+
+
+              0.1
+             0.05
+               0
+            -0.05
+             -0.1
+            -0.15
+             -0.2
+            -0.25
+             -0.3
+            -0.35                     Copper     Money       Exchange rate
+
+                    0    1        2        3        4        5        6       7        8
+
+
+                Figure 8: Differential ERPTs for non-food (top) and food (bottom) inflation
+
+
+  We further repeat the previous exercise with disaggregated measures of inflation, that is, we
+repeat the entire analysis as outlined previously, replacing only the overall CPI series with the
+food and non-food CPI respectively. Appendix A also reports the priors employed in this
+additional exercise, which we derived for each CPI category separately in the same manner as
+the one employed previously and described in section 3.1. For the sake of conciseness, we
+restrict our discussion to the differential exchange rate pass-through; a document containing all
+the graphs from the results section for the alternative CPI measures can be provided by the
+authors upon request.
+  Figure 8 then summarizes the differential pass-through, with an interpretation identical to
+that of Figure 7. For genuine exchange rate shocks, the difference appears to be only marginal
+with an ERPT of about 5%. As for monetary and copper price shocks, there seems to be a
+marked difference between food and non-food inflation. Non-food inflation (top panel) appears
+almost indifferent to the exchange rate fluctuations induced by copper price shocks, and
+
+
+
+
+                                                    20
+exhibits a pass-through of about 15% for fluctuations driven by monetary shocks, as opposed
+to nearly 25% in the case of overall inflation (previous section). In fact, the exercise suggests
+that the overall pass-through is overwhelmingly driven by food prices (bottom panel).
+Exchange rate fluctuations induced by copper prices come with a pass through of up to 10%,
+those resulting from monetary shocks with up to 33%. This corroborates the finding of a higher
+ERPT for food items in Zgambo (2015).
+   To some extent, this may appear puzzling as food items are typically sourced domestically
+(with most of the labor force working in agriculture), and often produced on small scale farms
+that do not tend to employ large amounts of imported inputs. Possible explanations could be
+lower menu costs in the often informal market for food items, or the fact that processed food
+items are almost exclusively imported. The latter would additionally increase in relevance if
+there existed an urban bias (or a bias towards formal food vendors such as supermarkets) in the
+CPI figures, as this is where imported food items prevail. We leave this as an open question for
+future research.
+
+                              6. Exchange rate and price shocks 2015
+
+   In order to investigate the dynamics of the kwacha exchange rate and its interaction with
+consumer prices, we deliberately excluded the periods after 2015 from our estimations, as the
+amplitude of these events means that they would have exerted undue influence on our parameter
+estimates. Having established the dynamics in arguably normal times, we will conclude our
+analysis by quantifying the extent to which the variables deviated from their econometrically
+expected behavior in late 2015. To this end, we compute the predicted values for each period
+up until 2015, therefore extending beyond our original sample period but using the parameters
+derived from the original sample period.
+   Error! Reference source not found. plots the predicted series against the observed values
+since 2009. In the first six years, the difference between the observed exchange rate fluctuations
+and the predicted series is on average below 4% (top panel). However, the fundamentals
+included in our model fail to predict or explain the massive depreciation in late 2015. For the
+last quarter of 2015, it would have predicted a depreciation of 7%, while the kwacha actually
+depreciated by almost 30%, a discrepancy of 23 percentage points.
+   An even more striking discrepancy arises between the observed and predicted CPI series
+(Figure 9, bottom panel). Mainly due to a general economic downturn, as captured in the Output
+gap, that counteracts the inflationary pressures arising from the depreciation, consumer prices
+(adjusted for the trend) were expected to stay stable (-0.1) according to the model in the last
+quarter of 2015. Instead, monthly inflation shot up by an unexpected 9.6%.
+   These discrepancies point towards dynamics that are substantially out of the ordinary, taking
+the preceding two decades as a benchmark. In view of the abruptness and peculiarity of the
+events, it should be emphasized that a narrative case study is needed in order to understand the
+mechanisms that led up to the sweeping currency depreciation and price inflation. While this is
+not the scope of our paper, our discussions with policy makers and private stakeholders
+suggested the following aspects were key in understanding the abrupt currency depreciation:
+
+
+
+
+                                                21
+          Figure 9: Predicted and observed changes in exchange rate (top) and CPI (bottom)
+
+
+
+-   Thin market: The currency market in Zambia is very thin and dominated by a few
+    large players, most notably mining companies, the central bank, and some private
+    banks. Individual transactions can have a great weight in the determination of the
+    market exchange rate, something that is perpetuated as such transactions work as a
+    signal for other market participants.
+-   Trade deficit: In December 2014, Zambia’s balance of trade turned negative after
+    nearly a decade of surpluses. In the first half of 2015, there was a widespread
+    apprehension among currency traders that the negative trade balance would persist or
+    worsen. This was confirmed by the government in late August, inducing a sharp and
+    sudden depreciation.
+-   Breakdown of price revealing mechanisms: In an attempt to limit speculative and
+    panic behavior, authorities closed the conventional foreign exchange market, where
+    offers could openly be published and observed by participants. Contrary to the original
+    intention, this effectively led to a breakdown of price revealing mechanisms and
+    nurtured suspicions among market participants that authorities were artificially
+
+
+
+
+                                            22
+            keeping the exchange rate from dropping to its ‘true’ value. This turned into a self-
+            fulfilling prophecy, and the actual rate consequently dropped to excessively low
+            levels, reaching a low of 14 ZMW/USD on November 10.
+      -     Delayed policy response: The central bank remained passive in terms of monetary
+            policy at first; at least in part because of the factors described above, the developments
+            only took up more pace instead of settling. When authorities substantially tightened
+            monetary policy in mid-November, the exchange rate rapidly stabilized, as did
+            inflation.
+
+   The fact that consumer price inflation so markedly increased in line with the exchange rate
+depreciation during this episode may seem at odds with the finding of a relatively low overall
+exchange rate pass-through.5 It is also not the case that the exchange rate fluctuations were
+driven by monetary shocks, which, based on our results, would explain part of the higher pass-
+through. We conjecture that this is related to the following factors:
+
+      -     Confounding factors: The currency crisis coincided with poor harvests in the
+            agricultural sector, independently driving food price increases.
+      -     Size non-linearities: It is often conjectured that small changes in the exchange rate
+            may translate into prices differently than large changes in the exchange rate (e.g., Aron
+            et al., 2014), for several reasons. First, menu costs may imply that producers and
+            retailers absorb small changes in the exchange rate through their profit margins, and
+            will only adjust prices once a certain threshold has been surpassed. A large
+            depreciation such as in late 2015 would then surpass these thresholds across sectors
+            and firms, leading to a larger ERPT. Similarly, in times of large exchange rate
+            fluctuations, retailers pay increased attention to the exchange rate and may adjust
+            prices at a higher frequency. Anecdotal evidence suggests that this was the case during
+            2015, with some retailers informally declaring prices in USD, and converting them
+            into kwachas based on the daily exchange rate for every purchase. This practice
+            mechanically leads to a complete ERPT for these transactions.
+
+                                                      7. Conclusions
+
+   We investigated the dynamics of the exchange rate and its interaction with consumer prices
+in Zambia in a structural VAR framework, identifying shocks with a combination of
+theoretically plausible zero-restrictions and sign-restrictions. Crucially, we imposed minimal
+restrictions on the interaction between these two key variables. Furthermore, we explored the
+possibility of differential pass-through depending on which shock originally caused the
+exchange rate to fluctuate, and disaggregated these results into food and non-food items.
+Finally, we used our results and qualitative evidence to put into context the tumultuous period
+of late 2015.
+   Our findings suggest that the pass-through from the exchange rate to consumer prices is
+relatively moderate for genuine exchange rate shocks; we estimate a 10% depreciation to induce
+
+    5
+      To obtain an order of magnitude, a back of the envelope calculation using monthly exchange rates and price data between
+August and November 2015 data would suggest that a 60% depreciation came with an approximate 20% of additional
+inflation (when adjusting for a baseline inflation of about 7%), implying an ERPT of more than 30% in the short run. This is
+in contrast to about 7% suggested by our estimates.
+
+
+
+
+                                                              23
+an increase in consumer prices of ca. 0.7% after one year, corresponding to an ERPT of 7%.
+This is substantially less than what other studies typically find for small, low income countries,
+and far below the 41% estimated for Zambia by Choudhri and Hakura (2006). This is likely
+due to two factors. First, unlike much of the comparable literature, we do not impose any
+directionality on the contemporaneous relationship between the exchange rate and inflation.
+When doing so, our estimates of the ERPT are more than doubled. Second, we study more
+recent periods where Zambia has maintained a fairly low level of inflation judged by historical
+standards. It is a well-established finding that countries with lower inflation typically have a
+smaller ERPT, and Zambia may indeed have successfully reduced its vulnerability to global
+shocks in this respect.
+   Variance decomposition suggests that the main drivers of exchange rate fluctuations are, as
+suggested by much of the earlier literature, copper prices and the money supply. The relative
+importance of these factors has varied over time; while money supply has typically accounted
+for the largest share of the fluctuations, copper was relatively more important in the period
+2008-11. The role of inflation in the determination of the exchange rate declined throughout
+the sample period.
+   We further investigated whether the ERPT varies with the shock that initially caused the
+exchange rate to fluctuate. Our findings suggest that, as opposed to exchange rate fluctuations
+caused by copper shocks or genuine exchange rate shocks, those fluctuations going back to
+monetary shocks are associated with a much larger pass-through of about 25%. When
+considering only food inflation, this figure is even higher with up to 33%. Our findings
+therefore suggest that, if consumer prices – especially food prices – are the outcome of interest,
+monetary policy must be conducted with great care, in the sense that counteracting exchange
+rate fluctuations with monetary interventions may have substantial repercussions on consumer
+prices.
+   Lastly, we show that the extent of the sharp depreciation of the exchange rate, as well as the
+steep increase in consumer prices in late 2015 cannot be explained from the underlying
+fundamentals included in our system. Instead, we suggest a narrative of market panic paired
+with non-linearities in the ERPT, and outline the core aspects: thin markets, a deteriorated
+balance of trade, the breakdown of price revealing mechanisms, and a delayed policy response.
+We suggest that a dedicated case study is required in order to provide a satisfactory narrative
+of this episode, and leave this as a fruitful topic for further research.
+
+
+
+
+                                                24
+                                                    REFERENCES
+
+
+Arias, J., Rubio-Ramirez, J. F., & Waggoner, D. F. (2014). Inference based on SVARs identified with sign and zero
+  restrictions: Theory and applications.
+Aron, J., Macdonald, R., & Muellbauer, J. (2014). Exchange rate pass-through in developing and emerging markets: A survey
+  of conceptual, methodological and policy issues, and selected empirical findings. Journal of Development Studies, 50(1),
+  101-143.
+Barber, D., Cemgil, A. T., & Chiappa, S. (2011). Inference and estimation in probabilistic time series models. Bayesian Time
+  Series Models, 1.
+Baldini, A., Beneš, J., Berg, A., Dao, M., & Portillo, R. (2012). Monetary policy in low income countries in the face of the
+  global crisis: The case of Zambia. IMF Working Paper 12/94.
+Baumeister, C., & Hamilton, J. D. (2015). Sign restrictions, structural vector autoregressions, and useful prior information.
+  Econometrica, 83(5), 1963-1999.
+Bernanke, B. S. (1986). Alternative Explanations of the Money-Income Correlation. NBER Working Paper, (w1842).
+Binning, A. (2013). Underidentified SVAR models: A framework for combining short and long-run restrictions with sign-
+  restrictions. Available at SSRN 2350094.
+Bjørnland, H. C., & Halvorsen, J. I. (2014). How does monetary policy respond to exchange rate movements? New
+  international evidence. Oxford Bulletin of Economics and Statistics, 76(2), 208-232.
+Blanchard, O. J., & Watson, M. W. (1986). Are business cycles all alike?. In The American business cycle: Continuity and
+  change (pp. 123-180). University of Chicago Press.
+Bova, E. (2009). Is the Zambian Kwacha a Commodity Currency? The Co-Movement between Copper Prices and the
+  Exchange Rate. NCCR Trade Regulations SWISS National Centre of Competence in Research Working Paper, (2009/11).
+Cashin, P., Céspedes, L. F., & Sahay, R. (2004). Commodity currencies and the real exchange rate. Journal of Development
+  Economics, 75(1), 239-268.
+Chileshe, P. M. (2015). The Dynamic Effects of Fiscal Policy Shocks on Inflation and Economic Activity. The BoZ Reader,
+  2(1), 10-27.
+Chipili, J. M. (2015a). Copper Price and Exchange Rate Dynamics in Zambia. Journal of International Development. 28(6),
+  876–886.
+Chipili, J.M. (2015b). Inflation Forecasting: A disaggregated Approach. The BoZ Reader, 2(1), 1-9.
+Choudhri, E. U., & Hakura, D. S. (2006). Exchange rate pass-through to domestic prices: does the inflationary environment
+  matter?. Journal of International Money and Finance, 25(4), 614-639.
+Forbes, K., Hjortso, I. M., & Nenova, T. (2015). The shocks matter: improving our estimates of exchange rate pass-through.
+  Available at SSRN 2689737.
+Mbao, F. Z. (2015). Bayesian Vector Auto-Regression Short-Term Inflation Forecasting Model for Zambia. The BoZ Reader,
+  2(1), 91-99.
+Muhanga, I., Zyuulu, I., & Adam, C. S. (2014). Monetary Policy and the Exchange Rate in Zambia. Zambia: Building
+  Prosperity from Resource Wealth, 110.
+Mutoti, N., Zgambo, P., Mbao, F. Z., Kapembwa, C., Chokwe, E., & Kachingwe, N. (2011). Oil Prices and Consumer Price
+  Inflation in Zambia. Issues On The Zambian Economy, 60.
+Pamu, E. M. (2011). Does the copper price explain the deviation of the real exchange rate from the purchasing power parity
+  equilibrium in Zambia. Issues on the Zambian Economy, 1(6), 38-44.
+Ramey, V. A. (2016). Macroeconomic shocks and their propagation (No. w21978). National Bureau of Economic Research.
+Shambaugh, J. (2008). A new look at pass-through. Journal of International Money and Finance, 27(4), 560-591.
+Sims, C. A. (1980). Macroeconomics and reality. Econometrica: Journal of the Econometric Society, 1-48.
+Stock, J. H., & Watson, M. W. (2015). Factor models and structural vector autoregressions in macroeconomics. Forthcoming
+  Handbook of Macroeconomics, eds. John B. Taylor and Harald Uhlig.
+Uhlig, H. (2005). What are the effects of monetary policy on output? Results from an agnostic identification
+  procedure. Journal of Monetary Economics, 52(2), 381-419.
+World Bank Group (Ed.). (2016). World Development Indicators 2016. World Bank Publications.
+Zgambo, P. (2015). Exchange rate Pass-through to Domestic Prices in Zambia. The BoZ Reader, 2(1), 28-55.
+
+
+
+
+                                                              25
+                                                          APPENDIX
+
+
+
+       Appendix A: Prior values of contemporaneous matrix H
+
+                                                                                        Shock
+                                                                                                               Exchange
+                             CPI type                Fed         Copper        Money           Output                          Price
+                                                                                                                 rate
+                             All
+    Fed funds rate           Non-Food                 1               0            0             0                0             0
+                             Food
+                             All                     8.52
+        Copper               Non-Food                9.42             1            0             0                0             0
+                             Food                    8.53
+                             All                    -2.65          -0.04
+          M2                 Non-Food               -2.53          -0.04           1             0                0             0
+                             Food                   -2.47          -0.04
+                             All                    -0.49          0.03         -0.02
+      Output Gap             Non-Food                0.05          0.03         -0.03            1                0             0
+                             Food                   -0.64          0.04          0.00
+                             All                    -1.77          0.21         -0.76           0.28                           -0.85
+    Exchange rate            Non-Food               -2.98          0.22         -0.79           0.16              1            -1.30
+                             Food                   -1.67          0.18         -0.77           0.34                           -0.47
+                             All                    -0.11          0.02         -0.07           0.04            -0.09
+        Inflation            Non-Food                0.25          0.02         -0.04           0.05            -0.11           1
+                             Food                   -0.55          0.03         -0.11           0.08            -0.09
+Notes: Priors reported in bold are subject to a sign restriction. The respective sign can be inferred from the reported value of
+the prior. The priors are obtained from just-identified Cholesky decompositions as described in section 3.1.
+
+
+       Appendix B: Augmented Dickey Fuller tests for a unit root
+
+                                                  Intercept        Trend        t-statistic       5% CV            p-value
+                                   Level             yes              no               -1.11           -2.90            0.71
+           Copper price
+                                   1st Diff          no               no               -3.71           -1.95            0.00
+                                   Level             no               no               -1.50           -1.95            0.13
+           Fed funds rate
+                                   1st Diff          no               no               -2.97           -1.95            0.00
+                                   Level             yes              yes               3.47           -3.47            1.00
+           Money
+                                   1st Diff          yes              no               -3.20           -2.90            0.02
+           Output gap              Level             no               no               -3.98           -1.95            0.00
+
+
+
+
+                                                                 26
+                          1st Diff           no              no              -6.34          -1.95           0.00
+                          Level              yes             yes             -1.77          -3.47           0.71
+   Exchange rate
+                          1st Diff           yes             no              -4.37          -2.90           0.00
+                          Level              yes             yes             -2.53          -3.47           0.31
+   CPI
+                          1st Diff           yes             yes             -5.29          -3.47           0.00
+   Notes: All tests have been carried out with trends and intercept where the graphs in section 4 suggested their
+relevance, and removed when they turned out insignificant in the Dickey Fuller regression. The tests in first
+differences were carried out with the log differenced series as this corresponds to the series eventually included
+in out estimation for most variables. The exception is the output gap, where logs cannot be taken because of
+negative values. All results refer to a test with 4 lags of the variable for consistency with the main analysis.
+
+
+
+
+                                                        27
+
