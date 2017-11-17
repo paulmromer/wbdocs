@@ -1,0 +1,1075 @@
+                                                                                                                                               96200
+﻿                                                                                                                                                     i
+
+
+
+
+                                       The role of transnational
+                                       family distribution
+                                       in shaping remittance flows
+                                       greenback 2.0 Working paper N. 2
+
+
+     	                                                                                  Laura Bartolini1
+
+
+
+
+                                                                                        APRIL 2015
+
+
+
+
+     Suggested citation:
+     Bartolini, Laura (2015), “The role of transnational family distribution in shaping remittance flows,” The World Bank, Greenback Working
+     Paper n. 2.
+     This paper is part of the Greenback 2.0—Remittances champion cities project, funded by the World Bank, and was conceived by the
+     author in strict collaboration with Ferruccio Pastore (FIERI), Eleonora Castagnone (FIERI) and Marco Nicolì (Payment Systems
+     Development Group, Finance and Markets, World Bank). The views expressed in this working paper are those of the author and do
+     not necessarily represent those of the World Bank Group.
+
+
+     1	   Global Governance Programme, European University Institute (Florence, Italy) and FIERI (Turin, Italy)—email laura.bartolini@eui.eu
+                                                                                                iii
+
+
+
+
+    ABSTRACT
+
+
+    M    igration experiences are often associated with some sort of transnational economic
+         activity which connects the past and the present of migrants abroad, and specifi-
+    cally with remittances. Motivations to send money at origin have been deeply inves-
+    tigated at the micro as well as at the macro level, as remittances can affect recipient
+    households’ well-being, investment and consumption levels in the receiving countries
+    and play an insurance role against external shocks.
+
+    This paper contributes to the literature on migrants’ remittances providing evidence
+    for migrants from Morocco, Peru and Romania, three traditional labor-exporting coun-
+    tries with a medium level of economic development, from three different geographical
+    areas and with different migration patterns to Italy. Exploiting a relatively rich, albeit
+    small-scale, dataset we analyze the spatial distribution of migrants’ nuclear families
+    and households and we build three different migratory profiles—Loners, Pioneers and
+    Followers—characterized by the timing and sequence of the migration event with
+    respect to the rest of the nuclear family. Then we test a negative binomial model to
+    describe the variation in the variable “remittances amount”. Beyond cross-country varia-
+    tions and after controlling for the most commonly used individual demographic and
+    economic characteristics, our analysis consistently clusters migrants according to their
+    family and household structure in Italy and abroad to explain the total amount of remit-
+    tances sent to the origin country.
+                                                                                                                                                                                      v
+
+
+
+
+    Contents
+
+    Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	1
+
+    Analyzing determinants to remit.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	3
+
+    The Greenback 2.0 data and some descriptive statistics. . . . . . . . . . . . . . . . 	6
+          Data strengths and limitations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	7
+          Three different migratory profiles. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	8
+
+    The empirical model. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	11
+          The dependent count variable: annual volume per migrant.. . . . . . . . . . . . . . . . . . . . . . . . . . 	 11
+          A model for count, overdispersed data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 11
+          Regression results. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 12
+
+    Conclusions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 17
+
+    References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 19
+List of tables and figures                                                                                                                             vii
+
+
+
+
+       List of Tables and Figures
+             Table 1: The Greenback 2.0 sample. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 7
+             Table 2: Average amount sent per transaction and per year. . . . . . . . . . . . . . . . . . . . . . 	 11
+             Table 3: Negative binomial model (NB2) regression results.. . . . . . . . . . . . . . . . . . . . . . 	 13
+             Table 4: Chi2 test on migration profile (base: Loner).. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 15
+
+
+             Figure 1: Spatial distribution of remittance determinants.. . . . . . . . . . . . . . . . . . . . . . . . . 	 4
+             Figure 2: Three migration profiles by country of origin. . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 8
+             Figure 3: Spatial distribution of all relatives who live in Italy, in the country
+             of origin and in third countries, by migratory profile.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 9
+             Figure 4: Spatial distribution of children only, who live in Italy, in the country
+             of origin and in third countries, by migratory profile.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 	 9
+             Figure 5: Main sample characteristics*, by migratory profiles and total. . . . . . . . . 	 10
+             Figure 6: Annual remittances in euro, total and by country of origin.. . . . . . . . . . . . 	 12
+             Figure 7: Predictive amount of remittances (calculated on model 3). . . . . . . . . . . . 	 15
+                Introduction
+
+
+M    igration experiences are often associated
+     with some sort of transnational economic
+activity which connects the past and the pres-
+                                                      Azam and Gubert 2006; Erdal 2012). Moreover,
+                                                      for migrants’ destination countries the analysis of
+                                                      remittance outflows helps understanding the level
+ent of migrants abroad. Migrants’ long-distance       and depth of migrants’ labor market integration at
+economic relations with their homelands are the       destination and of their connection with the origin
+subject of an extensive, multidisciplinary inquiry    households, which directly influence the amount
+(Guarnizo 2003), often focused on monetary            and regularity of flows.
+remittances as the most visible sign of transna-
+tional engagement and virtually the only one          This paper contributes to the literature on
+which can be traced both at the micro and macro-      migrants’ remittances in many respects. While a
+level. Quantitative information about monetary        consistent part of existing studies concentrates on
+remittances comes in aggregate records from           migrants’ transfers to developing countries (Sin-
+financial institutions and from sample surveys        ning 2007, 3), we provide evidence for migrants
+either on the sending-side, the receiving-side or     from three traditional labor-exporting countries
+both (matched-sample surveys). While official         with a medium level of economic and human
+figures allow for cross-country and historical com-   development (UNDP 2014), from three different
+parisons, sample surveys offer deeper information     geographical areas and with different migration
+and accuracy and are in principle able to grasp       patterns to Italy. Exploiting a relatively rich, albeit
+also informal flows not recorded at the aggregate     small-scale, dataset on migrants from Morocco,
+level (Brown et al. 2014).                            Romania and Peru in the City of Turin—one of the
+                                                      biggest cities in Northern Italy with a long tradi-
+Many important issues are related to the study        tion of internal and international immigration—
+of remittance flows and of migrants’ behavior in      we provide an empirical analysis for the under-
+sending money to their households and countries       standing of the key determinants of migrants’
+of origin. International development institutions,    remittances. Although the data come from a
+academics and policy makers have progressively        sender-side survey which took as observational
+integrated migration and remittances into the         unit first-generation migrants, their geographi-
+development discourses, policies, and programs        cal perspective allows for the analysis of the
+(Ratha 2007; Ratha and Mohapatra 2007; Ratha          spatial distribution of migrants’ nuclear families
+et al. 2014). Also because of their magnitude and     and households, with information on the poten-
+importance at the aggregate level, motivations        tial and actual remittance recipients and their
+behind remittances have been deeply investigated      characteristics.
+at the micro-level, as well as the extent to which
+remittances affect recipient households’ well-        In particular our research question concerns the
+being, investment and consumption levels in           possibility of describing a model for the variable
+the receiving countries and play an insurance         “remittances amount” which takes into account
+role against external shocks. The study of remit-     the migration history of migrants and their nuclear
+tances helps shed some light on intra-household       families. How do the household and family struc-
+resource allocation, disentangling preferences and    ture and its spatial distribution in the country of
+behaviours of migrants and individual household       origin, at destination and eventually in third coun-
+members that receive the money (Posel 2001;           tries, influence the remitting behavior of observed
+
+
+                                                                                                               1
+2                                                                                GREENBACK 2.0 survey 2015
+
+
+
+
+     first generation migrants in Italy? Indeed, beyond      The paper proceeds as follows. The next para-
+     cross-country variations and after controlling for      graph briefly reviews the existing literature on
+     the most commonly used individual demographic           remittance determinants. Section 2 presents the
+     and economic characteristics, our analysis intends      Greenback 2.0 data and provides descriptive
+     to explicitly test the specific role of family struc-   evidence of three different migratory profiles
+     tures and networks across borders in determining        associated with history of migration and family
+     variation of the annual remittances amount sent         structure. Section 3 presents the empirical model
+     to the origin country.                                  and discusses the results. Section 4 concludes.
+    1           Analyzing Determinants
+                TO REMIT
+
+
+T   here is an extensive literature on the motives
+    behind migrants’ remittances and on the
+determinants of such international economic
+                                                        instead rarely focus primarily on remittances as
+                                                        an autonomous study object, but offer deeper
+                                                        insights on the complex relationships between
+transfers. The first and most cited article on the      the migrant and the origin household (Erdal 2012;
+topic is the one by Lucas and Stark (1985) which        Carling 2014).
+set the framework for the development for the so-
+called ‘new economics of labor migration’ (NELM).       As testified by the increasing literature on the
+Starting from the premise that decisions about          topic, there is a great variation in the nature and
+remittances are connected with those on migra-          logic of these economic transnational transac-
+tion and that this decision-making process also         tions. In testing the responsiveness of remitting
+involves the household of origin, they designed         behavior to changes in the migrants’ and/or
+a taxonomy of motives to remit which goes from          recipients’ conditions in terms of income, wealth
+true altruism to a set of pure self-interest motives.   or well-being, variations due to different contexts
+The combination of such motives within each             as well as due to different conditions within a
+single household is also dependent upon its own         single setting should be taken into consideration.
+structure, and is what makes the arrangement            As pointed out by Carling, “neither economics nor
+among household members self-reinforcing                ethnography has engaged fully with the combi-
+(Carling 2008).                                         nation of complexity and variation in remittance
+                                                        transactions” (Carling 2014, 219). Moreover, since
+A huge number of empirical works have ana-              it is always difficult to control for all the different,
+lyzed the determinants of remittances starting          intertwined components of remittances which
+from the framework outlined by Lucas and Stark.         find their actual balance in empirically determined
+Some authors also reviewed the existing literature      conditions and contexts, a general explanation of
+on remittances in order to systematize theories         what causes remittance flows is hardly achievable
+and empirical evidence collected so far by social       (Carling 2008). Hence, from time to time, altruist
+scientists and to get to a general explanation          and self-interest motives are modelled in differ-
+of what causes remittance flows (Rapoport and           ent ways, making sense of the incredible variation
+Docquier 2006; Hagen-Zanker and Siegel 2007;            of micro and macro motivations and behaviors
+Carling 2008). A recent paper from Carling,             which derive from personal attitudes and ability,
+inscribes remittance transfers into more complex        families’ and households’ structures and needs,
+and composite transactions which include at             migration context and historically determined
+the same time material, emotional and relational        factors.
+elements (Carling 2014), also discussing the dif-
+ferent approaches in the existing economic and          In the discussion on the relative importance of dif-
+ethnographic literature. Economists tend to test        ferent motives and determinants of remittances,
+empirical models for disentangling the determi-         two important aspects influencing the variation of
+nants of remittances, which can all be attributed       flows are often disregarded (Carling 2008). Firstly,
+to one of the following main motives: altruism,         migration itself has to be taken into consideration,
+insurance, investment, and repayments (Lucas and        as migration patterns from and to specific regions
+Stark 1985; Rapoport and Docquier 2006; Cox,            and localities define multiple demographic
+Eser, and Jimenez 1998). Ethnographic studies           dynamics which are not often explicitly integrated
+
+
+                                                                                                                  3
+4                                                                                                               GREENBACK 2.0 survey 2015
+
+
+
+
+     in empirical analysis. Secondly, some key variables                            moments in their migration history. Although
+     have to be identified as preconditions for remit-                              migrants are generally primarily senders, these
+     tances, necessary in order to distinguish between                              transfers are often associated with various forms
+     the capacity and the desire to remit (Carling and                              of reciprocity (Åkesson 2011; Mazzucato 2011; Thai
+     Hoelscher 2013).                                                               2014). If we draw a stylized picture with at least
+                                                                                    three individuals—the migrant and two relatives
+     While most of the studies only focus on one of                                 or household members—placed in three differ-
+     the (at least) two ends of the remittance corridor,                            ent locations—migrant’s country of origin and of
+     treating separately what happens in the migrant’s                              destination and a third country—remittance flows
+     context of origin and of destination depending                                 can be observed from and to the three localities,
+     on the availability and depth of the data, explana-                            in multiple, bilateral relationships which change
+     tions of the variation of remittance flows at the                              across time and due to a variety of individual
+     micro level have to be found in many different                                 and household characteristics and of local and
+     locations at the same time. Migrants are often                                 national contexts. Figure 1 presents our adapta-
+     portrayed by default as remittance senders to                                  tion to the scheme proposed by Carling (2008) to
+     their origin households. Indeed, the spatial distri-                           properly locate the determinants of remittances.
+     bution of migrants and their relatives and house-
+     hold members has to be analyzed in the country                                 Beyond the theoretical mechanisms presented
+     of origin, in the country of destination, and even-                            in the picture, a further, non-trivial aspect to
+     tually in third countries where other relatives are                            be considered for a sound empirical analysis of
+     settled. Moreover, the remittance relationship                                 migrant’s remittance capacity is the ‘technical’
+     between a migrant and the origin household and                                 choice of the model to be adopted. The exist-
+     family members—wherever they live—is often                                     ing empirical literature has proposed different
+     presented as mono-directional: migrants send                                   econometric models and methodologies. Earlier
+     money back to their origin country and eventu-                                 papers used more often Ordinary Least Squares
+     ally to other family members elsewhere. The                                    (OLS) regression not only for the size of remit-
+     reality indeed is far more complex and migrants                                tances but also for the decision to remit, lead-
+     can behave as senders or receivers of mon-                                     ing to biased estimations. More recent papers
+     etary resources in correspondence of different                                 instead have adopted a greater variety of models
+
+
+     Figure 1: Spatial distribution of remittance determinants
+
+                                                                  Country-to-country remittance
+                     CoD environment                                    bilateral corridor                           CoO environment
+                 (national and local context)                                                                    (national and local context)
+                                                                                                            Potential RECEIVERS
+                            Potential SENDER
+                                                                                                                and/or Senders:
+                             and/or Receivers:
+                                                                                                           characteristics of the HH
+                            migrant individual and
+                                                                                                             of origin and of single
+                             HH characteristics
+                                                                                                         individual receivers/senders
+                                                             Senders—Receivers bilateral relationship
+                                                              (including migration timing and history)
+
+
+
+
+                                                                          Other family
+                                                                       members abroad
+                                                                      (potential remittance
+                                                                        receivers and/or
+                                                                            senders)
+                                                                                    TC environment
+
+
+     Source: Author’s adaptation from (Carling 2008, 586).
+ANALYZING DETERMINANTS TO REMIT                                                                            5
+
+
+
+and specifications in order to better identify the    our data do not provide information on the fun-
+explanatory factors for remittances. In particular,   damental determinants of the decision to remit,
+some use one-stage decision models where the          as the Greenback 2.0 sample only includes remit-
+decisions on whether to remit and on the amount       ting migrants (i.e. migrants having decided not
+to send are taken together. In other cases, a two-    to remit were not included in the survey sample),
+stage (hurdle) approach portraits the decision        in our empirical section we will still have to take
+to remit and the decision on the amount in two        into consideration the peculiar features of our
+distinct, chronologically consequent models (see      dependent variable (remittance amount) in order
+Hagen-Zanker and Siegel 2007; Carling 2008 for a      to choose the most appropriate model for our
+review of most recent applied methods). Although      empirical test.
+      2
+                      The Greenback 2.0 data
+                      and some descriptive
+                      statistics
+
+
+     O     ur empirical data on migrant remittances are
+           drawn from the Greenback 2.0 Survey (The
+     World Bank 2014). The survey collected in-depth,
+                                                               adopted to capture also irregular migrants and to
+                                                               design a balanced sample.2
+
+     quantitative data on migrants residing in Turin, in       The average profile of the final sample is reported
+     the North of Italy, during the summer of 2013. The        in Table 1 which presents the main general statis-
+     aim was exploring migrants’ financial needs and           tics on sex, arrival in Italy, education level, marital
+     behaviors, with a focus on their remittance prac-         status and type of occupation of the 480 inter-
+     tices. The overall sample is composed by three            viewed individuals. The overall sample is relatively
+     equally large subsamples according to the citizen-        gender-balanced (43 percent of the interviewed
+     ship at birth of the interviewees: short-range EU         are women), but gender differences become more
+     migration (Romania), short-range non-EU migra-            evident within each subsample: women represent
+     tion (Morocco) and long-range migration (Peru).           61 percent of Romanian, 54 percent of Peruvian,
+     These are the first three countries of origin per         and only 14 percent of Moroccan interviewed
+     number of residents in the city (almost 60 per-           migrants, the latter less frequently complying
+     cent of total migrant population) and per total           with the survey criteria because of their low activ-
+     amount of remittances outflows from the Province          ity rate. With regard to formal qualifications and
+     of Turin (Fondazione Moressa 2013; Banca d’Italia         skills, Peruvians show the highest level of educa-
+     2014). At the same time, these three countries            tion attained (24 percent of highly educated),
+     differ for their geographical position, patterns          while three quarters of all Romanians declared
+     of socio-economic integration in Italy (in terms          a medium level of education (high school) and
+     of participation to the labor market by sex and           almost half of the Moroccan subsample only has
+     distribution in different economic sectors) and           a low education level. Almost half of the overall
+     migratory systems (in relation to the organization        interviewed migrants are married. Moroccans have
+     of the migratory chain within families).                  the higher level of single individuals (35 percent),
+                                                               while among Romanians and Peruvians there is
+     The sample is composed by foreign-born individu-          a higher incidence of separated or divorced indi-
+     als residing in the City of Turin during the sum-         viduals (respectively 18 and 16 percent).
+     mer of 2013, including naturalized immigrants,
+     between 18 and 64 years of age. To be included in         Information on the type of job and sector of occu-
+     the sample, the interviewed migrants had to com-          pation3 has been re-codified to present the most
+     ply with four criteria: 1) to have resided in Italy for   significant, frequent occupation among those
+     at least one year (with or without a regular resi-        listed by migrants: around 41% of the interviewees
+     dence status); 2) to live in the metropolitan area        are workers in the construction sector or in manu-
+     of Turin; 3) to have an income (broadly speaking,         facturing, while jobs related to the domestic and
+     from any type of occupation, including informal
+                                                               2	  No weights have been used, but a full coverage of aggregation centres.
+     activities); and 4) to have sent remittances to           For a detailed analysis of the sampling strategy, see A Methodological Note,
+     his/her country of origin at least once since the         in World Bank 2014, 40.
+                                                               3	  The original dataset provides information on the type of occupation and
+     beginning of 2013. A ‘centre sampling technique’          sector of activity in accordance with the European NACE (Nomenclature of
+     (Baio, Blangiardo, and Blangiardo 2011) was               Economic Activities) classification.
+
+
+
+
+6
+THE GREENBACK 2.0 DATA AND SOME DESCRIPTIVE STATISTICS                                                                               7
+
+
+
+Table 1: The Greenback 2.0 sample
+
+                                                  Morocco                  Peru              Romania                  Total
+                                               Freq.   Col %       Freq.          Col %   Freq.   Col %       Freq.           Col %
+Sex                   Male                     136      85.5         74            46.0    62      38.8       272              56.7
+                      Female                    23          14.5     87            54.0    98          61.3   208              43.3
+Education             Low                       76          47.8     26            16.1    23          14.4    125             26.0
+ 
+                      Medium                    58      36.5         96            59.6    121     75.6       275              57.3
+                      High                      25          15.7     39            24.2     16         10.0    80              16.7
+Marital status        Partnership               88      55.3         99            61.5    101     63.1       288              60.0
+                      Separated/Divorced         15         9.4      27            16.8    25          15.6    67              14.0
+                      Single                    56      35.2         35            21.7    34          21.3    125             26.0
+Job type              Worker (industry/         76          47.8     37            23.0    57      35.6       170              41.7
+                      construction)
+                      Domestic worker            15         9.4      86            53.4    49      30.6       150              36.8
+                      Seller (street vendor,    29          18.2      3             1.9     6          3.8     38               9.3
+                      salesperson, cashier)
+                      Nurse/care giver (OSS)     3           1.9     22            13.7     9          5.6     34               8.3
+                      Cook & barman              12          7.6      3             1.9     16         10.0     31              7.6
+                      Shop owner                 3           1.9      2             1.2     8          5.0      13              3.2
+                      Others                     21         13.2      8             5.0     15         9.4     44              10.8
+Italian citizenship                              15         9.4      10             6.2     3           1.9    28               5.8
+Total                                          159          100      161           100    160          100    480              100
+
+
+
+health care sectors employ respectively 37% and                    Also, data provide us with the transnational family
+8% of the total sample.                                            structure and the household structure at destina-
+                                                                   tion of respondents, which tells us who are the
+
+Data strengths and limitations                                     potential senders and recipients of transnational
+                                                                   monetary flows. The Greenback 2.0 survey only
+Measuring remittances through a small scale sur-                   recorded monetary transfers and does not allow
+vey presents many conceptual and methodologi-                      comparing them with in-kind transfer. Neverthe-
+cal issues that we had to take into account for the                less, recording the presence of reverse remit-
+purposes of our analysis (Brown et al. 2014). The                  tances gives a sense of the existing reciprocity
+Greenback 2.0 Survey was designed to provide                       mechanisms between Italy and abroad.
+information about individuals and about transac-
+tions, asking interviewees to describe each flow of                The survey is also extremely rich in terms of
+remittances they were sending to different recipi-                 contextual information about individuals, their
+ents. Each recorded flow is characterized in terms                 households at destination and their nuclear
+of amount, frequency, channels, and cost, while                    families, which helps inscribing the remittance
+recipients were defined as the individuals who                     behavior in a broader picture. Information on
+materially receive the money. As such, recipients                  transnational family formation, on the existence
+do not necessarily coincide with beneficiaries, but                and timing of family reunification processes, on
+they represent those who control the money and                     the composition of the household at destination,
+who may use it to benefit a third person. This is                  helps understanding the number and type of
+often the case, for example, of children of minor                  relationships which might generate money flows
+age left in the country of origin, who are not                     (hence the number of potential senders and
+directly receiving the money, but can benefit from                 recipients).
+remittances sent to other relatives.
+8                                                                                    GREENBACK 2.0 survey 2015
+
+
+
+     Although collected data do not provide informa-        We define as Loners those who do not have any
+     tion on possible return intentions, they do fully      member of the nuclear family living in Italy at the
+     cover the remitter’s migration history with timing     time of the interview. Hence, for the moment at
+     and length of migration, family formation pro-         least, they are the only one migrated in Italy. The
+     cesses before and after migration, etc. Also, with     second group is that of Pioneers: they have been
+     regard to individual and household income and          the first to move to Italy among their first grade
+     wealth, we have full information on the situation      relatives and they have been then followed by at
+     at destination in terms of income, type of job and     least one of them: like the Loners, Pioneers have
+     specialization, presence of second income earners      initiated the migration history of their family in
+     in the household, economic trends over time, bank      Italy, but they have been reached by other family
+     and investment decisions (bank services, loans         members. The last profile is that of Followers, a
+     and investments in mortgages or other activities).     category where we include those who migrated
+                                                            only after at least one of their family members
+     Hence, although our analysis may suffer from data      was already in Italy: they can be the last to be
+     limitations and from the fact that few longitudi-      arrived or there can be others to follow, but they
+     nal information is available, the Greenback 2.0        do not initiate the migratory experience of their
+     dataset provides enough information for drawing        family to Italy. Figure 2 illustrates how these three
+     a precise and in-depth picture over a relatively       different types are present within each coun-
+     numerous sample of people (480 interviews).            try subsample. Consistently with the history of
+                                                            migration in Italy and in Turin in particular and
+     Three different migratory                              with some specificities of these three nationali-
+                                                            ties (Cingolani and Ricucci 2013; Pastore, Salis,
+     profiles                                               and Villosio 2013), in comparison with the rest of
+     To start with describing the collected evidence        the sample, Moroccans are characterized by both
+     beyond the possible cross-country comparison           a wider presence of migrants alone in Italy—who
+     among the three subsamples (Moroccans, Peru-           have not yet formed a family or have decided not
+     vians, and Romanians), we depict three different       to undertake family reunification processes—and
+     profiles of migrants according to their history of     of Pioneers, who had the time to pursue family
+     migration. Our data provide information on the         reunification after settlement thanks to their long
+     composition and demographic characteristics of         presence in Italy.
+     the nuclear family: age, sex, marital status, place
+     of residence and year of migration of parents,         The radar graphs below combine the cross-
+     siblings, partner, and children of the interviewees.   country disaggregation with the distinction of
+     Combining this information, we can establish the       the three migratory profiles in order to illustrate
+     presence of family re-unification processes and        the demographic and family characteristics as
+     we can situate the interviewed migrant in a chron-
+     ological sequence of migratory events. Hence we
+     build three different migratory profiles character-    Figure 2: Three migration profiles by country
+     ized by the timing and sequence of the migration       of origin
+     event for the interviewed migrants with respect
+     to the rest of his/her own nuclear family. The
+                                                            Romania     17.50         42.50             40.00
+     three profiles are by no means necessary steps
+     towards a unique, unavoidable end, nor is there a
+     chronological order among them: although we do
+                                                                Peru    21.12          38.51           40.37
+     not have information on intentions to return, each
+     single migration history varies from the beginning
+     and keeps being different at each phase of the
+                                                             Morocco        28.30        43.40            28.30
+     migrant life for decisions about where to settle
+     and for how long, if and how to form a family, if
+                                                                       0%       20%    40%       60%     80%       100%
+     and how to keep a connection with the household
+     of origin.                                                              Loners     Pioneers       Followers
+THE GREENBACK 2.0 DATA AND SOME DESCRIPTIVE STATISTICS                                                                 9
+
+
+
+well as the income and remittance patterns of the           through migration or not), makes the remittance
+sampled migrants.                                           burden for the migrant progressively weaker. Fol-
+                                                            lowers then show a higher number of relatives in
+The total number of relatives and their spatial dis-        Italy than Pioneers and, of course, Loners (Fig-
+tribution between Italy, the country of origin, and         ure 3). Also, differences among the three national
+eventually other third countries can help us asso-          communities increase if we look more specifi-
+ciating different observed integration patterns             cally at the number of children and their location
+and transnational behaviors in terms of remit-              rather than at nuclear family members in general.
+tances to different stages in migrants’ life and in         Figure 4 shows that pioneers are clearly those
+their migration history. It is reasonable to expect         with more children on average and more chil-
+that migrants with more relatives still in the coun-        dren in Italy, while loners generally have very few
+try of origin, and especially those with children           children at home (or not at all). Hence, with the
+left behind, are those who sent more money,                 exception of Romanians who are more likely to be
+more frequently. As time passes, the distribution           parents even when they are alone in Italy, being
+of family members between the country of origin             a loner seems to be associated with not having
+and of destination may change, determining an               yet started to form a family. From this descrip-
+alleviation of the family burden for the migrant            tive evidence, one can expect that remittances
+abroad. Indeed, family reunification processes, as          are particularly driven by the presence of children
+well as the decreasing number of dependent rela-            and by their place of residence, rather than by the
+tives at origin (because parents might pass away            location of family members in general.
+and siblings might become more independent,
+
+
+
+
+Figure 3: Spatial distribution of all relatives who live in Italy, in the country of origin
+and in third countries, by migratory profile
+
+Morocco       rel_OR                 Peru                                      Romania
+                                                      rel_OR                                   rel_OR
+              6                                       6                                        6
+              5                                       5                                        5
+              4                                       4                                        4
+              3                                       3                                        3
+              2                                       2                                        2
+              1                                       1                                        1
+              0                                       0                                        0
+
+rel_TC                    rel_ITA      rel_TC                      rel_ITA       rel_TC                     rel_ITA
+
+    Loners    Pioneers   Followers          Loners     Pioneers   Followers          Loners    Pioneers    Followers
+
+
+
+
+Figure 4: Spatial distribution of children only, who live in Italy, in the country of origin
+and in third countries, by migratory profile
+
+Morocco                              Peru                                      Romania
+               rel_OR                                  rel_OR                                    rel_OR
+             1.5                                     1.5                                       1.5
+             1.2                                     1.2                                       1.2
+             0.9                                     0.9                                       0.9
+             0.6                                     0.6                                       0.6
+             0.3                                     0.3                                       0.3
+             0.0                                     0.0                                       0.0
+
+
+rel_TC                    rel_ITA      rel_TC                      rel_ITA        rel_TC                     rel_ITA
+
+    Loners    Pioneers   Followers          Loners     Pioneers    Followers          Loners    Pioneers    Followers
+10                                                                                                                    GREENBACK 2.0 survey 2015
+
+
+
+      Figure 5: Main sample characteristics,* by migratory profiles and total
+
+                                Female %                           Morocco                                       Female %                             Peru
+                                0.8                                                                              0.8
+                                0.7                                                                              0.7
+                                0.6                                                                              0.6
+            Rem/Inc             0.5               Age                                         Rem/Inc            0.5               Age
+             ratio              0.4                                                            ratio             0.4
+                                0.3                                                                              0.3
+                                0.2                                                                              0.2
+                                0.1                                                                              0.1
+                                0.0                                                                              0.0
+      Remittances                                    Age at                            Remittances                                     Age at
+                                                    migration                                                                         migration
+                                                                      Loners                                                                             Loners
+                                                                      Pioneers                                                                           Pioneers
+                     Income                 Length of                 Followers                         Income                Length of                  Followers
+                                              stay                                                                              stay
+
+
+                                Female %                            Romania                                      Female %                             Total
+                                0.8                                                                              0.8
+                                0.7                                                                              0.7
+            Rem/Inc             0.6                                                           Rem/Inc            0.6
+                                0.5               Age                                                            0.5               Age
+             ratio              0.4                                                            ratio             0.4
+                                0.3                                                                              0.3
+                                0.2                                                                              0.2
+                                0.1                                                                              0.1
+                                0.0                                                                              0.0
+      Remittances                                    Age at                            Remittances                                     Age at
+                                                    migration                                                                         migration
+                                                                       Loners                                                                            Loners
+                                                                       Pioneers                                                                          Pioneers
+                       Income               Length of                  Followers                        Income                Length of                  Followers
+                                              stay                                                                              stay
+
+      *Continuous variables have been standardized between 0 and 1 in order to appreciate differences across profiles and countries rather than real measures.
+
+
+
+      Beyond family composition and distribution, the                                   has a short migration history in Italy and earns
+      three typologies combined with the three coun-                                    less than pioneers and followers. On the other
+      tries of origin appear to be different also for what                              hand, being alone allows the migrant to remit
+      concerns their demographic characteristics (sex,                                  more both in absolute and relative terms (to the
+      age, age at migration and length of stay) and their                               income) than those migrants who live in Italy with
+      economic profile. Figure 5 illustrates that females                               other relatives.
+      are more frequently followers in Morocco, while
+      representing the 70 percent of Pioneers among                                     To test the statistical strength of these observed
+      Peruvians. Pioneers on average have the longer                                    characteristics and to see to what extent the
+      length of stay, especially within the Romanian                                    family composition and distribution counts in
+      subgroup where they also have higher earnings                                     determining the total amount of remittances sent,
+      and fewer remittances than followers and loners.                                  we proceed with an empirical model in the next
+      In general, the average lone migrant is younger,                                  section.
+    3             The empirical model
+
+
+The dependent count variable:                                (Figure 6). Although in principle there is no upper
+                                                             limit for this variable, in practice values are empiri-
+annual volume per migrant                                    cally linked to the availability of resources (mea-
+Differing from other types of international finan-           sured by income) of remitters.
+cial flows to developing countries, remittances
+are usually sent at relatively high frequencies and          A model for count,
+in small magnitudes (Yang 2011). Data from our
+sample show that the average amount of money
+                                                             overdispersed data
+sent per transaction is of €236. For the purpose             Hence, we need to model a regression which
+of our analysis, we combined the magnitude and               could explain our count variable y through a vec-
+frequency of each flow to estimate the average               tor of explanatory variables x. The most straight-
+annual amount sent to the same recipient and                 forward approach is a linear model estimated by
+then the average amount sent by each migrant                 OLS of the form E( y | x) 5 x. But the  OLS esti-
+overall (see the Greenback 2.0 Survey for the                mators will allow for the predicted values of y to
+original figures: The World Bank 2014). The Peru-            be negative, while we would like to have E( y | x)
+vian subsample, with the highest share of monthly            non-negative for all because y  0 by defini-
+transactions, shows the biggest total amount per             tion. For strictly positive variables, the natural
+year (€2113), followed by Romanians (€1732), and             log transformation is often used in order to test a
+Moroccans (€1594) (see Table 2). Average annual              linear model of the type ln( y) 5 x 1 . Another
+values are in line with the most recent data pro-            possibility is instead to fit a Poisson model of
+vided by the Bank of Italy at the national level             the form y 5 exp(x 1 ). The Poisson regres-
+(Banca d’Italia 2014; Fondazione Moressa 2013).              sion model has some interesting features and its
+                                                             assumptions may fit well with our data:
+The total amount of remittances sent during a
+year is a count variable, with no natural a priori           •	 The distribution is discrete
+upper bound and the possibility that the outcome             •	 The response values are non-negative integers
+is zero for at least some observations. Indeed,
+dependent variable is defined as to take non-                •	Observations are independent from one
+negative, non-zero values and it is characterized              another
+by a distribution strongly skewed to the right               •	As the value of the mean increases, the prob-
+                                                               ability of zero counts is reduced
+
+                                                             •	Conditional variance and mean are identical
+Table 2: Average amount sent per transaction                   or nearly the same: Var( y | x) 5 E( y | x). This
+and per year                                                   means that Poisson distributions with higher
+               Per Transaction           Per Year
+                                                               mean values have correspondently greater
+                                                               variability.
+              Mean      Standard    Mean      Standard
+               (€)      Deviation    (€)      Deviation      •	 The Pearson Chi2 dispersion statistic has a
+    Morocco   212.9      223.03     1594.4          1518.8      value of approximately 1.0, which results when
+    Peru      230.1       166.57    2113.0      1783.8          the observed and predicted variances of the
+    Romania   253.9      278.98     1732.3      2066.2          response are the same.
+
+
+
+
+                                                                                                                      11
+12                                                                                                                      GREENBACK 2.0 survey 2015
+
+
+
+      Figure 6: Annual remittances in euro, total and by country of origin
+
+                                                     Morocco                                                         Peru
+
+
+
+
+                             30
+                             20
+                             10
+                   Percent
+                             0
+
+
+
+
+                                                     Romania                                                         Total
+                             30
+                             20
+                             10
+                             0
+
+
+
+
+                                  0                   5000                     10000 0                              5000                         10000
+                                                                        Remittance per year ( )
+
+      The y axis shows the share (%) of observations per each amount of remittances. The lines plot a normal density distribution on the histograms.
+
+
+
+
+      When a Poisson model is overdispersed, the Pois-
+      son dispersion statistic, Pearson Chi2/(n 2 r), is
+                                                                                        Regression results
+      greater than one and the negative binomial value                                  Table 3 presents the regression results for three
+      of  is greater than zero. A true Poisson model                                   different specifications of the negative binomial
+      has a dispersion statistic of one and a negative                                  model. Model (1) presents a full list of demo-
+      binomial dispersion parameter of zero (Hilbe                                      graphic variables for migrants and their families,
+      2014). Our empirical data seem to be overdis-                                     while Model (2) adds information on the level of
+      persed even after checking for bigger outliers                                    labor market integration and income at destina-
+      at the top of the distribution and using a robust                                 tion. Model (3) substitutes the variables referring
+      variance estimator to get robust standard errors.                                 to family composition across borders (number
+      Moreover, we do not have zero values. Hence we                                    of relatives and their place of residence) with the
+      finally adopt a negative binomial model, which                                    summary variable forged on the three migration
+      is still based on the Poisson one but controls for                                profiles presented above. The estimated signs of
+      some overdispersion and allows reducing the bias                                  the relationship between each independent vari-
+      of our estimated coefficients and standard errors.                                able and our outcome (remittance amount) are
+      The traditional negative binomial model (NB2)                                     those expected. Table 3 presents the regression
+      has the same distributional assumptions as the                                    results in the form of incidence rate ratios, the
+      Poisson distribution, with the exception that it has                              estimated rate ratio for one unit increase in each
+      a second parameter (the dispersion parameter)                                     variable, holding constant the other regressors.4
+      which provides for a wider shape to the distribu-
+      tion of counts than that allowed in the Poisson                                   Interestingly, gender has no significant effect
+      distribution. In NB2 the variance is affected by a                                on the total amount remitted, once controlled
+      dispersion parameter (a) and the square of the                                    for other demographic and economic variables.
+      mean (2):  1 a2. In our case, the NB2 model                                    Hence, females would remit the same amount
+      specification proved to fit data better than a Pois-
+      son model, adjusting for the overdispersion of                                    4 If the IRR is less than 1, the effect on the dependent variable (remittances)
+
+      the data.                                                                         is negative. If the IRR is higher than 1, the effect is positive.
+THE EMPIRICAL MODEL                                                                                   13
+
+
+
+Table 3: Negative binomial model (NB2) regression results
+
+                                                                (1)          (2)          (3)
+                                VARIABLES                       IRR          IRR          IRR
+ Sex (1=female, 0=male)                                         0.987        1.090        1.106
+                                                                (0.0694)     (0.0831)     (0.0886)
+ Age (years)                                                    0.952*       0.943**      0.915***
+                                                                (0.0244)     (0.0227)     (0.0243)
+ Age squared (years2)                                           1.001*       1.001*       1.001**
+                                                                (0.000297)   (0.000279)   (0.000307)
+ Age at arrival in Italy (years)                                1.013**      1.024***     1.046***
+                                                                (0.00642)    (0.00668)    (0.00839)
+ Education level (base: low)
+ – medium                                                       1.042        0.979        0.956
+                                                                (0.0783)     (0.0710)     (0.0763)
+ – high                                                         0.885        0.770**      0.660***
+                                                                (0.0979)     (0.0820)     (0.0792)
+ Mixed couple (1=partner with another citizenship at birth)     0.874*       0.859**      0.843**
+                                                                (0.0626)     (0.0626)     (0.0650)
+ Children in Italy (1=has at least 1 child in Italy)            0.740***     0.716***
+                                                                (0.0787)     (0.0819)
+ Children in the Country of Origin (1=has at least 1 child      1.497***     1.535***
+ in the CoO)                                                    (0.128)      (0.130)
+ N. of relatives living in Italy, same HH                       0.897***     0.888***
+                                                                (0.0336)     (0.0366)
+ N. of relatives for whose expenditure he feels to              1.086***     1.074***
+ contribute to (burden)                                         (0.0178)     (0.0171)
+ Receiving remittances (1=receives money from outside Italy)    1.001        0.978
+                                                                (0.102)      (0.0914)
+ Migratory profile (base: Loners)
+ – Pioneers                                                                               0.710***
+                                                                                          (0.0691)
+ – Followers                                                                              0.644***
+                                                                                          (0.0654)
+ Regular at arrival (0=no visa or tourist visa)                 0.836***     0.796***     0.791***
+                                                                (0.0522)     (0.0504)     (0.0567)
+ Country of Origin (base: Morocco)
+ – Peru                                                         1.242**      1.124        1.140
+                                                                (0.105)      (0.0916)     (0.0993)
+ – Romania                                                      0.943        0.779***     0.767***
+                                                                (0.0906)     (0.0743)     (0.0772)
+ Annual income (€)                                                           1.000***     1.000***
+                                                                             (8.32e-06)   (7.38e-06)
+ Mono income HH (1=individual and HH incomes coincide)                       1.068        1.129
+                                                                             (0.0674)     (0.0863)
+ Type of job (base: Low qualified)
+ – Medium (qualified workers in trade & services)                            1.123*       1.190**
+                                                                             (0.0749)     (0.0897)
+ – High (officers, professionals, technicians and managers)                  1.284*       1.316*
+                                                                             (0.179)      (0.213)
+ Savings in the last year (1=was able to save some money over                1.133*       1.174*
+ the last year)                                                              (0.0843)     (0.103)
+ Constant                                                       3,378***     2,252***     4,692***
+                                                                (1,820)      (1,134)      (2,499)
+ lndelta                                                        1,122***     978.0***     1,212***
+                                                                (97.49)      (80.70)      (87.45)
+ Observations                                                   476          474          474
+
+Robust standard errors in parentheses
+***p , 0.01, **p , 0.05, *p , 0.1
+14                                                                                GREENBACK 2.0 survey 2015
+
+
+
+
+      as males if they earned the same, had the same          regular at arrival’ in determining a lower amount
+      education level and the same age and family             of remittance now. While migrants in an undocu-
+      structure. Age has a convex, decreasing relation-       mented position at the time of the interview were
+      ship with remittances: recalling that interviewed       very few, their legal status at the beginning of
+      migrants were aged between 18 and 64, younger           their presence in Italy was much more diversified
+      migrants remit more but the decrease in remit-          with many entering without the required docu-
+      tance with age reaches a maximum and then               ments or overstaying a tourist visa. These results
+      stops. Consistently, age at arrival which testifies     seem to be in line with other studies which found
+      for the seniority of migrants in Italy, is positively   that undocumented migrants keep stronger con-
+      associated with remittances: migrants arriving at       nections with their origin families because of their
+      minor ages have probably less connections with          greater uncertainty and the need of putting their
+      their origin countries than those who migrated          money safely out of their destination country
+      as adults. As for the education level, the highly-      (Markova and Reilly 2007). Also, this effect could
+      educated remit less in comparison with those with       be partially due to the fact that those regular at
+      a low level of education, maybe because they            the beginning often entered through family reuni-
+      belong to wealthier families at origin. Being part      fication processes, hence are less economically
+      of a mixed couple—the spouse or the partner is          active on average than those migrated for the
+      of a different nationality than the interviewee—is      primary purpose of working in Italy.
+      associated with a significantly lower amount of
+      remittances sent: this might be the effect of a         As for the cross-country comparisons, Peruvians
+      stronger and more permanent integration in Italy        are associated with a bigger amount of annual
+      with an Italian partner or spouse or alternatively      remittances, followed by Moroccans and then
+      the result of a bargaining process within the cou-      Romanians. Since this pattern holds significant
+      ple about who receives the money among rela-            even after controlling for all the demographic and
+      tives in two different countries of origin.             family formation patterns, this might be the sign
+                                                              of some underlying differences between migrants
+      All the variables on the composition and distribu-      of our three origin countries which are not cov-
+      tion of the family members between Italy and the        ered by our data.
+      country of origin are significantly associated with
+      the amount remitted. Having at least one child in       The second model specification also includes
+      Italy has the opposite effect on remittances than       variables accounting for the level of labor mar-
+      having one or more children left behind at origin.      ket integration in Italy and for the individual and
+                                                              household economic condition. Indeed, individual
+      The number of relatives living in the same house-       income can be seen as a proxy of the capacity to
+      hold in Italy is associated with less money sent        remit as an economic possibility and the ability
+      abroad. On the contrary, the higher the number          of control over earned money (Carling and Hoel-
+      of relatives for which the respondent feels to con-     scher 2013), coupled by the degree of job quali-
+      tribute to, the higher the overall amount devoted       fication (often associated with higher incomes).
+      to remittances each year. Interestingly, declaring      Although the Italian labor market does not often
+      of having received money from relatives at origin       offer migrants good chances of matching employ-
+      or in third countries over the past year does not       ment with acquired qualifications and tends to
+      impact on the amount of remittance sent: this           employ migrants in low qualified, service sectors’
+      means that money flows in more than one direc-          occupation (Castagnone et al. 2014), migrants’
+      tion and that, over the same year, migrants can         better labor market trajectories testified by better
+      receive money from some relatives and at the            jobs and higher incomes are associated with more
+      same time send money to others within a com-            remittances sent abroad, other things being equal.
+      plex, multi-directional reciprocal network. As for      This might be in contradiction with the effect
+      the legal immigration status, we tried to test both     found for the education level, but it is plausible
+      the current status and the one held by migrants;        since there is a strong degree of over-qualification
+      interestingly, we found no effect for the variable      (many of the medium and highly-skilled work in
+      ‘being regular at the time of interview’, while there   low qualified occupations) and the two variables
+      is a strong, significant estimated effect of ‘being     are not strongly correlated. In the same direction,
+THE EMPIRICAL MODEL                                                                                                                15
+
+
+
+migrants who declared to have been able to save                            Table 4: Chi2 test on migration profile
+some money since the beginning of the year—                                (base: Loner)
+independently from the use of these savings—are
+                                                                            (1)           [remittances]2.pioneer 5         0
+those who engage in higher monetary transfers to
+their origin households.                                                    (2)           [remittances]3.follower 5        0
+                                                                                          chi2(2) 5                        18.4
+The third and last column of Table 4 tries to test a                                      Prob > chi2 5                    0.0001
+model with a reduced number of variables with-
+out loss of explanatory power and goodness of
+fit. Substituting all family and household related
+variables with a categorical variable which sum-                           Indeed, migrants who are living and working in
+marizes them proves that our three migration pro-                          Italy alone, without any members of the nuclear
+files are a meaningful way of clustering migrants                          family in the country of destination, are remitting
+around their family and household structure in                             significantly more than both Pioneers and Fol-
+Italy and abroad. After running a two degree-of-                           lowers, as they both have family members in Italy
+freedom chi-square test on the migratory profiles’                         who supposedly require migrants to address more
+variable, we know that this variable is a statisti-                        expenses in Italy and to leave remittances for a
+cally significant predictor of the amount annual of                        residual part of their savings. Loners are those
+remittances sent annually.                                                 who have not yet formed a family in Italy and who
+                                                                           engage in more transnational behaviors to keep
+The significant difference in the amount of remit-                         alive their family network abroad: they might be
+tances associated with being either Loner, Pio-                            either repaying their families for the efforts made
+neer or Follower (Figure 7) tells us that it is not                        to start the migration process, or to be preparing
+only each single variable, while everything else is                        a family reunification process or, on the contrary,
+kept constant, to be associated with the amount                            their return at origin after having earned a pre-
+of remittances, but that also complex migration                            fixed amount of money. As we showed, Pioneers
+profiles help us in distinguishing the remittance                          and Followers have a similar family spatial distribu-
+behavior of a sample of selected working and                               tion between Italy and the country of origin and
+remitting migrants.                                                        they also look similar in the amount of remittances
+
+
+Figure 7: Predictive amount of remittances (calculated on model 3)
+
+
+                                      Predicted amount of remittances per migratory profile, by country or origin.
+                      3000   2500
+              Remittances (euro)
+           1500     2000
+                      1000
+
+
+
+
+                            Morocco                                      Peru                                         Romania
+                                                    Loners                  Pioneers                  Followers
+16                                                                              GREENBACK 2.0 survey 2015
+
+
+
+
+      sent as they have few relatives at home and, in      due to unobserved variables which characterize
+      particular, virtually no children left behind.       the three sub-samples. Indeed, we are not able to
+                                                           test the effect of different return intentions, which
+      Moreover, also in the last model specification,      are likely to impact the level of economic engage-
+      differences across the three national communi-       ment at origin, and we do not have measures
+      ties remain significant. As visually summarized by   of physical mobility. Those who can travel more
+      Figure 7, Peruvians remit more on average than       often and easily to the origin countries because
+      Moroccans and Romanians taking other variables       of shorter geographical distance (Romanians and
+      at their means. The difference is big enough that    Moroccans) or thanks to legal provision on free
+      Peruvian Followers not only surpass their Moroc-     mobility within the EU (Romanians) are plausi-
+      can and Romanian counterparts but also have          bly more likely to bring money and consumption
+      level of remittances comparable to Moroccan          goods during their journeys, decreasing the need
+      Pioneers and Romanian Pioneers and Loners. As        for remittance transfer in comparison with trans-
+      said, these cross-country differences might be       oceanic migrants (Peruvians).
+    4           Conclusions
+
+
+T   his paper discussed the role of the household
+    and family structure in determining the
+amount of remittances sent by migrants, taking
+                                                       Italy, the origin country and eventually third coun-
+                                                       tries, and the composition of their household in
+                                                       Italy help explain the variation in the amount of
+into account their migration history and the trans-    remittances, in accordance with other empirical
+national distribution of their nuclear families.       studies (Ulku 2012; Nziramasanga and Yoder 2013;
+                                                       Marchetti and Venturini 2014). Family reunifica-
+Making use of a new and quite rich dataset on          tion processes, especially of children left behind,
+migrants residing in Turin, the analysis tried to      alter the transnational distribution of relatives and
+outline the key determinants of remittances.           the related framework of migrants’ obligations
+In particular, it provided evidence for working        (Ambrosini 2013).
+migrants from three traditional labor-exporting
+countries—Morocco, Peru, and Romania—which             Cross-country differences appear to be non-
+represent three of the main origin countries for       negligible: other things being held constant,
+migrants in Italy both in terms of population and      Peruvians remit more than Moroccans and Roma-
+remittances. Notwithstanding the data limita-          nians on average, and we know from the original
+tions which derive from the cross-sectional struc-     research that they are also more constant, as they
+ture of the sample, its geographical scope and         remit small amounts at high frequencies (The
+the restrictive selection criteria, the depth and      World Bank 2014). The combination of results
+breadth of the original questionnaire allowed a        by country of origin and by migratory profiles
+detailed analysis of migrants’ demographic and         resonates with the type and history of migration
+socio-economic characteristics, their level of labor   in Italy and specifically in Turin, with regards to
+market integration, their savings and remittances      the three observed nationalities (Pastore, Salis,
+behaviors.                                             and Villosio 2013). Indeed, in comparison with
+                                                       the rest of the sample, Moroccans are character-
+Our research question revolved around the role         ized by both a wider presence of male migrants
+of migration history, the family spatial distribu-     alone—who have not yet formed a family—and
+tion in determining the amount of remittances          of Pioneers, who had the time to pursue fam-
+sent each year by working migrants. In order to        ily reunification after settlement thanks for their
+test the specific role of family structures and net-   long presence in Italy. Although this paper does
+works across borders, we identified three distinct     not engage with the impact of the economic cri-
+migratory profiles—the Loners, the Pioneers, and       sis on remittances (see Bartolini and Castagnone
+the Followers—characterized by the timing and          2015 for a detailed analysis on this), we know that
+sequence of the migration event with respect to        Peruvians are more concentrated in occupations
+the rest of the nuclear family. Our profiles proved    (qualified jobs in the domestic and health care
+to behave differently with regards to remittances:     services) which have been less hit by the eco-
+migrants alone at destination, with no members         nomic crisis than the construction and industry
+of the nuclear family in Italy, remit significantly    sectors where more Romanian and Moroccan,
+more than both pioneers and followers, who on          especially male, workers are employed.
+the contrary have to address higher expenses in
+Italy to support their relatives. Hence, the spatial   Reasons for these significant cross-country dif-
+distribution of migrants’ nuclear families between     ferences are also likely to be found in variables
+
+
+
+
+                                                                                                              17
+18                                                                               GREENBACK 2.0 survey 2015
+
+
+
+
+      which we do not observe directly from our sur-         distance and cheaper means of transportation
+      vey data. Remittance decisions, consistently with      (Romanians and Moroccans) or thanks to the free
+      what we describe in our analysis, are connected        mobility provisions within the EU (Romanians) can
+      to the life cycle of migrants and to their plans in    easily bring with them money and durable goods,
+      terms of settlement or return: those with tem-         decreasing the need for money transfers which is
+      porary migration plans, who are not engaging in        higher for transoceanic migrants (Peruvians).
+      family reunification processes and who plan to
+      return home after a definite period of time, are       The empirical evidence on micro motives to remit
+      more likely to invest more in keeping economic         should then be combined with considerations
+      and social relationships with their origin house-      on more long-term, institutional drivers of remit-
+      hold and to send more remittances (Dustmann            tances with regard to the economic and policy
+      and Mestres 2010; Delpierre and Verheyden 2014).       environment in the origin and destination coun-
+      Also, the literature suggests that return plans are    tries which might hinder or foster remittances
+      adjusted when professional prospects change and        at the macroeconomic level (World Bank Group
+      family formation choices are done by migrants.         2015). Our results resonate with the overall Ital-
+      A further element which could help in explaining       ian context of migrant integration and economic
+      the national differences in size of remittances is     transnationalism which is (still) a ‘basic’ one
+      the feasibility of physical mobility for migrants of   (Ambrosini 2013, 632) where remittance flows are
+      different origins. The geographical distance, the      consistent with a relatively new migration history
+      existence and accessibility of various means of        and a strong although decreasing transnational
+      transportation (not only airplanes, but also cars,     family distribution. Further research could con-
+      buses, ferry-boats, and trains) make the difference    nect this type of economic transfers with other
+      in determining how often migrants can visit their      (‘advanced’) levels of transnationalism, which per-
+      origin countries. Hence, those who can more often      tain more to the sphere of entrepreneurship and/
+      travel home because of shorter geographical            or symbolic belonging to the origin country.
+                                                                                                              19
+
+
+
+
+References
+
+Åkesson, Lisa. 2011. “Remittances and Relation-            African-European Migrants. Evidence from the
+   ships: Exchange in Cape Verdean Transnational           MAFE Survey.” International Migration Review
+   Families.” Ethnos 76 (3): 326–47.                       48 (4).
+Ambrosini, Maurizio. 2013. “Migration and Transna-     Cingolani, Pietro, and Roberta Ricucci. 2013.
+   tional Commitment: Some Evidence from the               Le Collettività Di Origine Nordafricana in
+   Italian Case.” Journal of Ethnic and Migration          Piemonte, Tra Continuità E Cambiamento.
+   Studies 40 (4): 619–37.                                 Turin: FIERI. http://www.integrazionemigranti
+Azam, Jean-Paul, and Flore Gubert. 2006.                   .gov.it/ricerche/Documents/IRES%202013/
+   “Migrants’ Remittances and the Household in             Focus%205_integrazione%202013.pdf.
+   Africa: A Review of Evidence.” Journal of Afri-     Cox, Donald, Zekeriya Eser, and Emmanuel
+   can Economies 15 (suppl 2): 426–62.                     Jimenez. 1998. “Motives for Private Transfers
+Baio, Gianluca, Gian Carlo Blangiardo, and Marta           over the Life Cycle: An Analytical Framework
+   Blangiardo. 2011. “Center Sampling Technique            and Evidence for Peru.” Journal of Develop-
+   in Foreign Migration Surveys: A Methodologi-            ment Economics 55 (1): 57–80.
+   cal Note.” Journal of Official Statistics 27 (3):   Delpierre, Matthieu, and Bertrand Verheyden. 2014.
+   451–65.                                                 “Remittances, Savings and Return Migration
+Banca d’Italia. 2014. “Le Rimesse Verso L’estero           under Uncertainty.” IZA Journal of Migration
+   Degli Immigrati in Italia.” July 7. http://www          3 (1): 22.
+   .bancaditalia.it/statistiche/rapp_estero/rimesse.   Dustmann, Christian, and Josep Mestres. 2010.
+Bartolini, Laura, and Eleonora Castagnone. 2015.           “Remittances and Temporary Migration.” Jour-
+   Remittances and the Economic Crisis: Evidence           nal of Development Economics 92 (1): 62–70.
+   from the Greenback 2.0 Survey in Italy. Green-      Erdal, Marta Bivand. 2012. “Who is the money for?
+   back Working Paper 1. Washington, D.C.: The             Remittances within and beyond the household
+   World Bank.                                             in Pakistan.” Asian and Pacific Migration Journal
+Brown, Richard P. C., Jørgen Carling, Sonja Fran-          21 (4): 437–58.
+   sen, and Melissa Siegel. 2014. “Measuring           Fondazione Moressa. 2013. Rapporto Annuale
+   Remittances through Surveys: Methodological             Sull’economia Dell’immigrazione—Edizione
+   and Conceptual Issues for Survey Designers              2013, Tra Percorsi Migratori E Comportamento
+   and Data Analysis.” Demographic Research 31             Economico. Bologna: Il Mulino.
+   (41): 1243–74.                                      Guarnizo, Luis Eduardo. 2003. “The Economics of
+Carling, Jørgen. 2008. “The Determinants of                Transnational Living.” International Migration
+   Migrant Remittances.” Oxford Review of Eco-             Review 37 (3): 666–99.
+   nomic Policy 24 (3): 581–98.                        Hagen-Zanker, Jessica, and Melissa Siegel. 2007.
+———. 2014. “Scripting Remittances: Making Sense            The Determinants of Remittances: A Review of
+   of Money Transfers in Transnational Relation-           the Literature. Working Paper MSGoG/2007/
+   ships.” International Migration Review 48               WP003. Maastricht University.
+   (September): S218–62.                               Hilbe, Joseph M. 2014. Modeling Count Data. Cam-
+Carling, Jørgen, and Kristian Hoelscher. 2013. “The        bridge: Cambridge University Press.
+   Capacity and Desire to Remit: Comparing Local       Lucas, Robert E. B., and Oded Stark. 1985. “Moti-
+   and Transnational Influences.” Journal of Ethnic        vations to Remit: Evidence from Botswana.”
+   and Migration Studies 39 (6): 939–58.                   Journal of Political Economy 93 (5): 901–18.
+Castagnone, Eleonora, Tiziana Nazio, Laura Barto-      Marchetti, Sabrina, and Alessandra Venturini. 2014.
+   lini, and Bruno Schoumaker. 2014. “Understand-          “Mothers and Grandmothers on the Move:
+   ing Transnational Labour Market Trajectories of         Labour Mobility and the Household Strategies
+20                                                                                  GREENBACK 2.0 survey 2015
+
+
+
+
+         of Moldovan and Ukrainian Migrant Women in                Washington, D.C: The World Bank. http://
+         Italy.” International Migration 52 (5): 111–26.           siteresources.worldbank.org/INTPROSPECTS/
+      Markova, Eugenia, and Barry Reilly. 2007. “Bulgar-           Resources/334934-1288990760745/
+         ian Migrant Remittances and Legal Status:                 MigrationandDevelopmentBrief23.pdf.
+         Some Micro-Level Evidence from Madrid.”                Ratha, Dilip, and Sanket Mohapatra. 2007. “Increas-
+         South-Eastern Europe Journal of Economics 5               ing the Macroeconomic Impact of Remittances
+         (1): 55–69.                                               on Development.” Development Prospects
+      Mazzucato, Valentina. 2011. “Reverse Remittances             Group Note, The World Bank, November.
+         in the Migration–development Nexus: Two-Way               http://dilipratha.com/index_files/G8Berlin.pdf.
+         Flows between Ghana and the Netherlands.”              Sinning, Mathias. 2007. Determinants of Savings
+         Population, Space and Place 17 (5): 454–68.               and Remittances: Empirical Evidence from
+      Nziramasanga, Mudziviri, and Jonathan Yoder.                 Immigrants to Germany. Discussion Paper
+         2013. “The Check in the Mail: Household Char-             No. 2966. Bonn: IZA.
+         acteristics and Migrant Remittance from the US         Thai, Hung Cam. 2014. Insufficient Funds: The
+         to Mexico.” Applied Economics 45 (8): 1055–73.            Culture of Money in Low-Wage Transnational
+      Pastore, Ferrucio, Ester Salis, and Claudia Villosio.        Families. Stanford University Press.
+         2013. “L’Italia e l’immigrazione ‘low cost’: fine di   The World Bank. 2014. Migrants’ Remittances from
+         un ciclo?.” Mondi Migranti 1 (19).                        Italy—International Remittances and Access
+      Posel, Dorrit. 2001. “How Do Households Work?                to Financial Services for Migrants in Turin,
+         Migration, the Household and Remittance                   Italy. Greenback 2.0 Report. Washington, D.C.
+         Behaviour in South Africa.” Social Dynamics 27            https://remittanceprices.worldbank.org/sites/
+         (1): 165–89.                                              default/files/migrants_remittances_italy.pdf.
+      Rapoport, Hillel, and Frédéric Docquier. 2006. “The       Ulku, Hulya. 2012. “Remitting Behaviour of Turk-
+         Economics of Migrants’ Remittances.” In Hand-             ish Migrants: Evidence from Household Data in
+         book of the Economics of Giving, Altruism and             Germany.” Urban Studies 49 (14): 3139–58.
+         Reciprocity, edited by Serge-Christophe Kolm           UNDP. 2014. Human Development Report 2014—
+         and Jean Mercier Ythier, 2:1135–98. Applica-              Sustaining Human Progress: Reducing Vulner-
+         tions. Elsevier.                                          abilities and Building Resilience. United Nations
+      Ratha, Dilip. 2007. Leveraging Remittances for               Development Programme.
+         Development. Policy Brief. Migration Policy            World Bank Group. 2015. Global Economic Pros-
+         Institute. http://dilipratha.com/index_files/             pects, January 2015: Having Fiscal Space and
+         Ratha-Remittances-Oslo-February2007.pdf.                  Using It. Washington, D.C.: The World Bank.
+      Ratha, Dilip, Supriyo De, Ervin Dervisevic,                  http://www.worldbank.org/content/dam/
+         Christian Eigen-Zucchi, Sonia Plaza, and                  Worldbank/GEP/GEP2015a/pdfs/GEP15a_
+         Kirsten Schiettler. 2014. Migration and                   web_full.pdf.
+         Remittances: Recent Developments and                   Yang, Dean. 2011. “Migrant Remittances.” The Jour-
+         Outlook—Special Topic: Forced Migration.                  nal of Economic Perspectives 25 (3): 129–51.
+         23. Migration and Development Brief.
+

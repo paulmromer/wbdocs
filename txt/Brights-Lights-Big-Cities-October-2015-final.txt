@@ -1,0 +1,1327 @@
+﻿    Report No: ACS15584
+
+
+
+
+    Republic of Kenya
+    Bright Lights, Big Cities
+    Measuring national & sub-national economic growth from
+    outer space in Africa, with an application to Kenya and
+    Rwanda
+
+
+
+
+    October 2015
+
+
+
+
+    GMF07
+
+    AFRICA
+
+
+
+
+.
+
+
+
+
+                                                              1
+    Standard Disclaimer:
+
+.
+
+    This volume is a product of the staff of the International Bank for Reconstruction and
+    Development/ The World Bank. The findings, interpretations, and conclusions
+    expressed in this paper do not necessarily reflect the views of the Executive Directors of
+    The World Bank or the governments they represent. The World Bank does not
+    guarantee the accuracy of the data included in this work. The boundaries, colors,
+    denominations, and other information shown on any map in this work do not imply any
+    judgment on the part of The World Bank concerning the legal status of any territory or
+    the endorsement or acceptance of such boundaries.
+
+
+
+    Copyright Statement:
+
+.
+
+    The material in this publication is copyrighted. Copying and/or transmitting portions or
+    all of this work without permission may be a violation of applicable law. The
+    International Bank for Reconstruction and Development/ The World Bank encourages
+    dissemination of its work and will normally grant permission to reproduce portions of
+    the work promptly.
+
+
+    For permission to photocopy or reprint any part of this work, please send a request with
+    complete information to the Copyright Clearance Center, Inc., 222 Rosewood Drive,
+    Danvers, MA 01923, USA, telephone 978-750-8400, fax 978-750-4470,
+    http://www.copyright.com/.
+
+
+    All other queries on rights and licenses, including subsidiary rights, should be addressed
+    to the Office of the Publisher, The World Bank, 1818 H Street NW, Washington, DC
+    20433, USA, fax 202-522-2422, e-mail pubrights@worldbank.org.
+
+
+
+
+                                                                                                 2
+BRIGHT LIGHTS, BIG CITIES: Measuring
+national & sub-national economic growth
+from outer space in Africa, with an
+application to Kenya and Rwanda
+By Tom Bundervoet; Laban Maiyo and Apurva Sanghi1
+
+                                                  Abstract
+
+                                              September 2015
+
+We use the night lights (satellite imagery from outer space) approach to estimate subnational
+2013 GDP growth and levels for 47 counties in Kenya and 30 districts in Rwanda. Estimating
+subnational GDP is consequential for three reasons: First, there is strong policy interest in seeing
+how growth can occur in different parts of countries, so that communities can share in national
+prosperity and not get left behind. Second, sub-nationals themselves want to understand how
+they stack up against their neighbors and competitors, and how much they contribute to national
+GDP. Third, such information could help private investors to better assess where to undertake
+investments. Using night lights has the advantage of seeing a new (and more accurate) estimation
+of informal activity, and being independent of official data. However it may underestimate
+economic activity in sectors that are largely unlit (notably agriculture). Indeed, we find that the
+association between nightlights and GDP is stronger where unlit agriculture accounts for a
+smaller part of overall economic activity.
+
+With these caveats in mind, our analysis yield some interesting results. For Kenya, our results
+affirm that Nairobi County is the largest contributor to national GDP. However, at 13%, this
+contribution is lower (of 60%) as commonly thought. For Rwanda, the three Districts of Kigali
+account for 40% of national GDP, underscoring the lower scale of economic activity in the rest
+of the country. To get a composite picture of subnational economic activity -- especially in the
+context of rapidly improving official statistics in Kenya and Rwanda -- we note the importance
+of estimating subnational GDP using standard approaches (production, expenditure, income).
+
+
+
+
+1
+  Bundervoet: Sr. Economist, World Bank in Kigali; Maiyo: GIS Specialist, World Bank in Nairobi; Sanghi: Lead
+Economist and Task Team Leader, World Bank in Nairobi. Please direct comments to asanghi@worldbank.org. We
+are grateful to Andrew Dabalen, Vernon Henderson and Somik Lall for useful peer review comments; participants in
+the World Bank seminar series; members of the Kenya National Bureau of Statistics for their inputs, and Thomas
+O’Brien and Carolyn Turk for insightful comments. All errors are solely the responsibility of the authors [PRWP
+team to insert standard disclaimer that this does not reflect official WB views].
+
+
+                                                                                                              3
+   1. Introduction
+In recent years, the intensity of night lights as measured from space has increasingly been used to
+estimate economic activity. The use of night lights as a proxy for economic activity rests on the
+assumption that as almost all consumption and investment activities in the evening or night
+require lighting, the intensity of night lights (or its growth over time) can be used as a proxy for
+the intensity of economic activity (or economic growth). Data on night lights have been used to
+estimate, among others, sub-national income per capita (Ebener and others, 2005), the size of the
+informal economy in India (Gosh and others, 2010a), the global distribution of economic activity
+(Gosh and others, 2010b), the global incidence of poverty (Elvidge and others, 2009), and
+economic growth (Henderson, Storeygard and Weil, 2012).
+
+One of the appealing features of night lights data is their availability on every level. Night lights
+data are measured on the so-called 30 arc sec level, corresponding to roughly 1 square kilometer
+at the equator. This means that night lights data can be used to estimate economic activity at
+levels that are not usually captured in national accounts, such as sub-national administrative units
+(provinces, districts, counties, cities etc.) or regions not coinciding with national borders (coastal
+vs inland regions, connected vs unconnected regions, etc.). For instance, Henderson, Storeygard
+and Weil (henceforth HSW) estimate, counter to intuition, that coastal areas in Sub-Saharan
+Africa are growing slower than the hinterland.
+
+In this paper, we replicate the analysis by HSW but focus only on countries in Sub-Saharan
+Africa and use a slightly longer time-series (1992-2012 instead of 1992-2008). In line with
+HSW, we find a strong and robust link between growth in night lights and growth in GDP, with
+GDP estimated based on lights closely following GDP as measured from national accounts, for
+most countries in most years. We apply the results to estimate sub-national growth in Kenya and
+Rwanda, two countries who are increasingly devolving powers to decentralized units. To our
+knowledge, this is the first time such an approach has been attempted to estimate GDP growth
+and levels for subnational units for Kenya and Rwanda. We emphasize the fact that estimating
+subnational economic activity is more than solely an inquisitive exercise. This is because in the
+context of decentralized settings, there is a strong policy interest in seeking to see how growth
+can occur in different parts of countries, so that communities can share in national prosperity and
+do not get left behind. Second, subnational entities may themselves may want to know and
+understand how they stack up against their neighbors and competitors, and how much they
+contribute to national GDP. Third, such information would help private investors who shop
+around for viable investment destinations, to assess more accurately where to undertake
+investments. Incidentally, countries which have decentralized may consider including
+subnational GDP as one possible criteria that could determine how funds transferred from the
+national government are shared among subnational governments. If and when that were to
+happen, then subnational entities stand to gain or lose depending on their contribution to national
+GDP. This can have ramifications -- for example, one oft-cited “fact�? in the case of Kenya is that
+Nairobi contributes over 60% of Kenya’s GDP (Kenya Urban Areas Brief 2013). However, our
+indicative results show that Nairobi’s contribution to national 2013 GDP, though still the highest,
+stood at 13%. It bears emphasizing that our results come with caveats, in particular,
+underestimating agriculture’s contribution to county level GDP, as detailed in the paper.
+
+
+
+                                                                                                    4
+In addition to affecting how including county-level GDP in the revenue sharing formula, in the
+case of Kenya, can considerably affect resource allocation among individual counties, estimating
+subnational economic activity also has other uses. For one, counties themselves may want to
+know and understand what drives growth within their borders, and how they stack up against
+others. And another important reason is that, with a better understanding of county-level growth
+dynamics, such information would help private investors assess more accurately where to
+undertake private investments.
+
+This paper proceeds as follows: The next section summarizes the data and sketches the
+relationship between nightlights and GDP using observations from the sample. Section 3
+specifies the empirical model and presents the main results. Section 4 applies the model
+estimates to subnational GDP growth in Kenya and Rwanda, while section 5 focuses on
+subnational GDP-levels. The final section concludes.
+
+
+   2. The Link between Night Lights and GDP
+   2.1     Data
+Data on night lights are provided by the Defense Meteorological Satellite Program (DMSP)
+Operational Linescan System (OLS). The DMSP satellites circle the earth 14 times a day and
+record the intensity of Earth-based lights. The data picked up by the satellites have been digitized
+since 1992. We used stable light imagery of SSA derived from scores of orbits of the DMSP
+OLS in from 1992-2013 since this product inter-calibrated where fires and other ephemeral lights
+have been removed, although there are noteworthy blunders associated with over-glow effects
+where lighting spreads to neighboring pixels (and hence economic activity is wrongfully
+attributed to certain places). The stable lights imagery has annual quantized pixels with values
+(Digital Numbers) with integers ranging from 0 to 63. This product is optimal especially for SSA
+where ephemeral lighting is minimal during the night where gas flares are a rare phenomenon.
+Gas flares are combustion devices used mainly in oil wells and big offshore platforms to burn
+flammable gas (mostly methane) released during the operations of oil extraction.
+
+There are other satellite sensors of the same resolution and scale but not appropriate for
+economic activity studies. Landsat for instance depicts settlement expansion but not available for
+frequent temporal coverage.
+Data on GDP and other indicators used in the analysis (surface of country territory, electricity
+consumption, etc.) are provided by the World Development Indicators (2014). Following HSW,
+we use constant GDP in local currency units.
+
+Night lights data are available for all 47 Sub-Saharan African countries between 1992 and 2012,
+resulting in 987 country-year observations. South Sudan is not included since it only became an
+independent country in 2011. GDP data are not available for Somalia, resulting in a final sample
+of 966 country-year observations.
+
+
+
+
+                                                                                                   5
+       2.2            Night lights and GDP
+HSW provide illustrative examples of the link between night lights and economic or political
+events by focusing on the Asian financial crisis and changes in night lights in Indonesia, the
+difference between the two Koreas, and the Rwandan genocide. Our sample includes many more
+salient examples. The intensity of night lights closely tracks Zimbabwe’s economic decline
+between 2000 and 2008, when real GDP contracted by almost 50 percent (Figure 1). When GDP
+growth finally turned positive again after 2008, the intensity of night lights also reversed its
+declining trend. On the other extreme, Equatorial Guinea’s phenomenal growth following the
+discovery of vast amounts of oil (per capita GDP increased 27-fold between 1992 and 2012) is
+reflected in the strong growth in night lights over the same period (Figure 2)2.
+
+Figure 1: Zimbabwe’s economic decline
+
+                                      ln(GDP)          ln(lights)
+
+               23.6                                                              11.8
+
+
+               23.4                                                              11.6
+
+
+               23.2                                                              11.4
+
+
+
+
+                                                                                        Ln(lights)
+     Ln(GDP)
+
+
+
+
+                23                                                               11.2
+
+
+               22.8                                                              11
+
+
+               22.6                                                              10.8
+
+
+               22.4                                                              10.6
+                      1992
+                      1993
+                      1994
+                      1995
+                      1996
+                      1997
+                      1998
+                      1999
+                      2000
+                      2001
+                      2002
+                      2003
+                      2004
+                      2005
+                      2006
+                      2007
+                      2008
+                      2009
+                      2010
+                      2011
+                      2012
+
+
+
+
+Source: WDI (2014) and NGDC (2014). Authors’ calculations
+
+
+
+    Figure 2: Equatorial Guinea’s growth
+
+
+
+
+2
+ Despite the 27-fold increase in per capita GDP, poverty was estimated at 77 percent in 2006 (based on national
+poverty line).
+
+
+                                                                                                                  6
+                                                                           ln(GDP)                            ln(lights)
+
+              30                                                                                                                                                      10
+                                                                                                                                                                      9
+              29
+                                                                                                                                                                      8
+              28                                                                                                                                                      7
+                                                                                                                                                                      6
+
+
+
+
+                                                                                                                                                                           Ln(lights)
+              27
+    Ln(GDP)
+
+
+
+
+                                                                                                                                                                      5
+              26
+                                                                                                                                                                      4
+
+              25                                                                                                                                                      3
+                                                                                                                                                                      2
+              24
+                                                                                                                                                                      1
+              23                                                                                                                                                      0
+
+
+
+
+                                                                                                                                          2009
+                   1992
+                          1993
+                                 1994
+                                        1995
+                                               1996
+                                                      1997
+                                                             1998
+                                                                    1999
+                                                                           2000
+                                                                                  2001
+                                                                                         2002
+                                                                                                2003
+                                                                                                       2004
+                                                                                                              2005
+                                                                                                                     2006
+                                                                                                                            2007
+                                                                                                                                   2008
+
+
+                                                                                                                                                 2010
+                                                                                                                                                        2011
+                                                                                                                                                               2012
+ Source: WDI (2014) and NGDC (2014). Authors’ calculations
+
+One can argue that the close relationship between GDP and night lights illustrated in Figures 1
+and 2 is due to the sheer magnitude of the events. After all, we would expect the intensity of
+lighting to respond to a halving of the economy (Zimbabwe) or a 27-fold increase of it
+(Equatorial Guinea). Night lights however also seem to respond to events that impact economic
+activity to a far lesser extent. To illustrate, take the Eritrean-Ethiopian border conflict of 1998-
+2000. While for a country the size of Ethiopia the localized border conflict did not have a
+discernible impact on the economy, GDP in Eritrea, a small country with less than four million
+inhabitants at the time, contracted by six percent during the conflict. The intensity of night lights
+reacted to the temporary contraction in GDP between 1998 and 2000, and picked up again after
+2000 with renewed economic growth (Figure 3).
+
+ Figure 3: The Ethiopian-Eritrean border war and night lights in Eritrea
+
+
+
+
+                                                                                                                                                                                        7
+                                                    ln(GDP)           ln(lights)
+
+                  23                                                                                         9
+
+
+                 22.8                                                                                        8.8
+
+
+                                                                                                             8.6
+                 22.6
+
+                                                                                                             8.4
+                 22.4                                         border conflict
+
+
+
+
+                                                                                                                   Ln(lights)
+       Ln(GDP)
+
+
+
+
+                                                                                                             8.2
+                 22.2
+                                                                                                             8
+
+                  22
+                                                                                                             7.8
+
+                 21.8                                                                                        7.6
+
+
+                 21.6                                                                                        7.4
+
+
+
+    Source: WDI (2014) and NGDC (2014). Authors’ calculations. Vertical lines demarcate the border war period.
+
+Overall, the average annual growth in GDP for the 46 countries in our sample amounted to 4.4
+percent, a little lower than the annual growth in lights (4.8 percent). The three countries that
+recorded the slowest GDP growth between 1992 and 2012 (Zimbabwe, Burundi, and DRC) are
+also among the countries with the slowest growth in night lights (Table 1). The countries with
+the fastest-growing economies (Cape Verde, Liberia, and Equatorial Guinea) also experienced
+fast growth in night lights as measured from space. Overall, there is a strong positive relationship
+between changes in lights and changes in GDP in the sample of Sub-Saharan African countries
+(Figure 4)3.
+
+    Table 1: Annual GDP growth and night lights for fast-and
+    slow-growing countries
+                               Annual GDP growth          Annual lights growth
+                                  (1992-2012)                (1992-2012)
+                           Countries with slowest growth
+     Zimbabwe                           -0.5                       -0.3
+     Burundi                            0.7                         2.5
+     DRC                                1.1                         2.2
+                            Countries with fastest growth
+     Cape Verde                         8.2                         5.5
+     Liberia                            9.0                        12.1
+
+3
+    This is net of country and year effects.
+
+
+                                                                                                                                8
+  Equatorial Guinea                21.5                      37.0
+
+
+  Sample average                   4.4                        4.8
+Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+
+
+
+Figure 4: GDP and lights in Sub Sahara Africa
+      1
+      0
+    -1
+    -2
+
+
+
+
+              -3            -2             -1             0            1       2
+                         Ln(lights/km sq.) net of country and year effects
+
+
+Source: WDI (2014) and NGDC (2014). Authors’ calculations. 966 observations.
+
+
+
+
+   3. Methods and Results
+   3.1      Statistical specifications
+
+We use the same specifications as HSW to estimate GDP based on night lights, focusing on
+growth formulations. The first specification is a fixed effects specification using the full sample
+and can be written as:
+
+                           (              )                              (1)
+
+With               being the natural log of GDP of country i in year t (in constant local currency
+units), (           ) the natural log of lights per km² in country i in year t, the country fixed-
+effects, and       the year fixed-effects. The year fixed-effects control for differences in light
+sensitivity across the different satellites and also for changes in economic conditions and lighting
+                                                                                                  9
+technology. Lights per km² is calculated as the sum of lights in a country in a given year divided
+by the country’s total surface. Identification in specification (1) comes from within-country
+variation in lights and GDP over time, relating growth in lights within countries to growth in
+GDP.
+
+The second specification adds a country-specific time trend to specification (1) to examine the
+extent to which fluctuations around a country’s growth path can be explained by lights. This
+specification focuses on annual fluctuations in GDP and can be written as:
+
+                              (             )                                              (2)
+
+Where             is the country-specific time-trend (the interaction between the country and year
+fixed effects. The third specification, still following HSW, estimates (1) in differenced form to
+focus on long-term growth between 1992 and 2012 and can be written as:
+
+                                     (                        )                            (3)
+
+Where                        is GDP growth in country i between 1992 and 2012 and
+  (                  ) growth in night lights in country i between 1992 and 2012. The (time-
+invariant) country fixed effects are swept out by the differenced form. We also estimate
+specification (3) for the shorter 2000-2012 period.
+
+
+    3.2       Results
+Table 2 shows the results for a balanced panel of 46 countries over 21 years. Column (1)
+estimates specification (1) with country and year fixed effects. We find a of 0.57, meaning that
+a 1 percent increase in night lights is associated with a 0.57 percent increase in GDP, controlling
+for the country and the year. The coefficient is highly statistically significant and twice as large
+as the coefficient estimated in HSW (0.28 in a larger sample covering 188 countries and 17
+years). The within-country R squared amounts to about 0.8.
+
+Table 2: Baseline results (specification 1) – 46 SSA countries
+                                          ln(GDP)            ln(GDP)            ln(GDP)            ln(GDP)
+                                                (1)               (2)              (3)                (4)
+  ln(lights/km²)                          0.567***            0.323**                               0.364**
+                                           [0.064]            [0.134]                               [0.156]
+  ln(lights/km²) sq.                                          -0.034*
+                                                              [0.017]
+  ln (electricity consumption)                                                  0.365***            0.231**
+                                                                                 [0.123]            [0.089]
+  Observations                                  966               966              425                425
+  Countries                                     46                46                22                 22
+  R sq. (within)                            0.797              0.804              0.799               0.83
+Notes: Dependent variable is the natural log of GDP in constant LCU. All specifications include country and
+year fixed effects. Robust standard errors clustered by countries in brackets. ***: significant at 1%-level; **:
+
+                                                                                                                   10
+ significant at 5%-level; *: significant at 10%-level. Data source: NGDC (2014) and WDI (2014).
+
+
+In Column (2) we test whether there is a quadratic relation between lights and GDP. In contrast
+to HSW, we find a modest and weakly significant quadratic relation in our sample, with the
+association between lights and GDP being weakly concave. This quadratic specification is
+however not robust to different sample definitions and is in large part driven by Equatorial
+Guinea. Between 2006 and 2012, lights in Equatorial Guinea grew significantly faster than GDP
+(see Figure 2), introducing a mild quadratic relation in the overall sample. The quadratic relation
+disappears when Equatorial Guinea is dropped from the sample (21 observations dropped from
+the total of 966). Given that the quadratic specification is not robust, we proceed with the linear
+specification in further analysis.
+
+In Colum (3) we replace lights observed from space by data on electrical power consumption (in
+kilowatt hours, obtained from the World development indicators). As data on electricity
+consumption is only available for 22 countries in SSA, the number of observations drops from
+966 to 425 (not all 22 countries have data for all 21 years). We find a strong and statistically
+significant association between electricity consumption and GDP in the reduced sample
+(elasticity of 0.37). The coefficient is however considerably smaller than the one estimated
+between nigh lights and GDP (0.58). This may potentially be explained by the relative high use
+of generators in SSA, where power outages on the main grid are frequent. WDI data on
+electricity consumption only encompasses output from power plants and hence may
+underestimate the intensity and volume of night lights in countries with a strong reliance on
+private generators. Indeed, if we estimate a panel regression of log lights on the log of electricity
+consumption (with year fixed effects), we find that the within-country variation in electricity
+consumption explains “only�? 64 percent of the variation of night lights as observed from space,
+hinting at the existence of other sources of lighting as well.
+
+In the fourth column of Table 2 we include both electricity consumption and lighting as observed
+from space (for the 22 countries with data on electricity consumption). Similar to HSW, we find
+that both remain statistically significant, indicating that they may not capture the exact same
+underlying economic activity. The goodness of fit somewhat increases when including both
+electricity consumption and lights (within R-squared of 0.83 compared to 0.80 with lights alone
+– column (1)). The elasticity between lights and GDP (0.36) remains higher than the one
+between electricity consumption and GDP (0.23).
+
+Table 3 explores the relation between night lights and two other types of GDP growth: Annual
+fluctuations about a country’s growth path (specification (2)) and long-term growth between
+1992 and 2012 and 2000 and 2012 (specification (3)). Column (1) in Table 3 adds a country-
+specific time-trend so that lights now only explain fluctuations of GDP about a country’s longer-
+term growth path. The size of the coefficients falls to 0.11 (from 0.57), but is still highly
+statistically significant, indicating that short-term fluctuations in GDP are picked up to some
+extent by changes in lights. The second column of Table 3 examines the within-country
+association between growth in GDP and growth in night lights between 1992 and 2012. In line
+with HSW, we find a strong and statistically significant association between long-term GDP
+growth and long-term lights growth. The long difference estimate of amounts to 0.55, similar
+to the fixed effect value of 0.57. The R-squared remains high at 0.76, indicating that 76 percent
+
+                                                                                                  11
+of the within-country variation in GDP between 1992 and 2012 can be explained by the variation
+in night lights.
+
+    Table 3: Annual fluctuations and long-term growth – 46 SSA
+    countries
+                                              Country-              Long               Long
+                                            specific time-       difference         difference
+                                                trend            2012-1992          2012-2000
+
+     ln(lights/area)                          0.114***            0.553***           0.357***
+                                               [0.019]             [0.032]            [0.059]
+
+
+     Observations                                966                  46                 46
+     Countries                                    46                  46                 46
+     R sq. (within)                             0.911               0.764              0.484
+    Notes: Dependent variable is the natural log of GDP in constant LCU. All specifications
+    include country and year fixed effects. Robust standard errors clustered by countries in
+    brackets. ***: significant at 1%-level; **: significant at 5%-level; *: significant at 10%-
+    level. Data source: NGDC (2014) and WDI (2014).
+
+Finally, the last column in Table 3 estimates growth in GDP between 2000 and 2012 based on
+growth in night lights over the same period. While the association remains strong and
+statistically significant, the coefficient (0.36) is considerably lower than the one for the full
+period (0.55), suggesting that the association between night lights and GDP has become weaker
+over the past decade.
+
+To summarize, we are able to replicate all HSW findings using a sample of 46 Sub-Saharan
+African countries and a 21-year time period (1992-2012). Compared to HSW, we find a stronger
+elasticity between night lights and GDP, which may perhaps be explained by the low level of
+development in SSA relative to the rest of the world. In rich and highly lit places of the world, an
+increase in GDP may not produce much more lighting. In poor and largely unlit places however,
+an increase in economic activity could have a larger impact on lighting4. In the preferred
+specification (specification (1)), a one percent increase in night lights is associated with a 0.57
+percent increase in GDP, an effect strongly statistically significant.
+
+How does the estimation method perform out of sample? Based on the growth of night lights in
+the whole of SSA, specification (3) (the long differenced form) estimates that real GDP in SSA
+increased by 3.2 percent per year between 1992 and 2012 and by 4 percent per year between
+2000 and 2012. This substantially underestimates the national accounts based growth rates of 4.1
+percent and 5 percent, respectively. The importance of agriculture in SSA could potentially be
+the reason for the underestimation. A substantial part of Africa’s population is engaged in small-
+scale subsistence agriculture. Since this activity is largely unlit, one can argue that night lights
+only pick up economic activity in the secondary and tertiary sectors. The next section will
+elaborate on this.
+
+4
+    HSW also find suggestive evidence of a lower elasticity between lights and GDP in high-income countries.
+
+
+                                                                                                               12
+What about the economy of Somalia? National accounts data for Somalia have been non-existing
+since 1991, when the country sunk into chaos following the toppling of the Badre regime.
+Somalia, still according to the long differenced form, grew by 4.8 per year between 1992 and
+2012, with this however largely driven by a rebound effect following the heavy fighting of 1990-
+92 (night lights increased more than six-fold between 1992 and 1993). Focusing on a more recent
+period, growth in Somalia is estimated (based on night lights) at 4 percent per annum between
+2000 and 2012.
+
+
+    3.3        The role of agriculture
+In many countries in SSA, a large part of the population is engaged in small-scale subsistence
+agriculture. Since this activity is largely unlit, it will not show up in night lights. This means that
+estimating GDP levels in SSA based on night lights would likely result in an underestimation of
+“true�? GDP. In Liberia for instance, agriculture accounted on average for 67 percent of GDP
+over the 1992-2012 period. Estimating Liberia’s GDP based on night lights would fail to capture
+two thirds of Liberia’s economic activity. If growth in agriculture accounts for a sizable part of
+aggregate GDP growth, growth in night lights would also tend to underestimate GDP growth. In
+Rwanda for instance, agriculture accounts for about 25 percent of total GDP growth. Estimating
+growth based on nightlights would hence underestimate true growth.
+
+To what extent does the importance of agriculture underestimate GDP growth? Linking the
+residuals of specification (1) to the share of agriculture in GDP, we find a positive but weak
+correlation. Countries where GDP growth is underestimated by nightlights have on average a
+higher share of agriculture in GDP (29.7 percent) than countries where GDP is overestimated
+(26.1 percent), though the difference is relatively small. In Table 4, we divide our sample into
+two based on whether the country has an above or below-average share of agriculture in GDP
+(average for the countries in the sample).
+
+
+ Table 4: Night lights and growth for more and less agrarian countries
+                                                 ln(GDP)                       ln(GDP)
+                                          Above average share           Below average share
+                                             of agriculture                of agriculture
+
+  ln(lights/area)                                0.445***                      0.656***
+                                                  [0.078]                       [0.046]
+
+
+  Observations                                      525                           441
+  Countries                                          25                            21
+  R sq. (within)                                   0.851                         0.781
+ Notes: Dependent variable is the natural log of GDP in constant LCU. All specifications
+ include country and year fixed effects. Robust standard errors clustered by countries in
+ brackets. ***: significant at 1%-level; **: significant at 5%-level; *: significant at 10%-level.
+ Data source: NGDC (2014) and WDI (2014).
+
+
+
+
+                                                                                                     13
+As expected, we find that the association between nightlights and GDP is stronger in countries
+where unlit agriculture accounts for a smaller part of overall economic activity (column (2) in
+table 4). In these countries, manufacturing and services account for the bulk of GDP, and growth
+in these sectors is more likely to turn up in lights. The association between nightlights and GDP
+remains however strongly significant for the agrarian countries as well.
+
+The preceding discussion suggests that estimates of GDP growth based on nightlights could, at
+least for countries in SSA, be improved by controlling for the importance of agriculture in the
+economy. However, specifying a control variable for which national accounts or survey data is
+needed (such as the share of agriculture in GDP or the share of the population engaged in
+agriculture) would run counter to the purpose of this study, which is to see whether proxies such
+as nightlights can be used to estimate growth in areas (sub-national or supra-national) for which
+there are no national accounts or survey data. One option is to use rainfall or vegetation data,
+which share many of the desirable features of nightlights data, to proxy the performance of the
+agricultural sector. This is something to explore in future work.
+
+
+   4. Application to Kenya and Rwanda: GDP Growth
+In this section we use the results from the long-differenced specification to estimate sub-national
+GDP growth in Kenya and Rwanda based on the evolution of night lights.
+
+
+   4.1     Kenya
+Kenya’s 47 county governments came into existence at the March 2013 election. Transfer of
+staff and functions from around 280 de-concentrated district administrations and 175 local
+authorities was largely completed by January 2014 when counties took over management of
+payroll for all their staff. Funding for devolved functions is provided for through an
+unconditional equitable share, allocated among counties on the basis of a formula proposed by
+the Commission on Revenue Allocation and approved by the National Assembly in November
+2012. The formula is due for revision after three years, and thereafter every five years. The
+formula incorporates four proxy measures of expenditure needs: population, equal shares
+(reflecting diseconomies of scale in smaller counties), poverty and land area. At present, the
+formula ignores the very different fiscal capacity between counties, particularly those in rural
+and urban areas. An important question for the future is whether to also include a measure of
+revenue-raising capacity, so as to achieve more effective equalization. To generate the right
+incentives for maximum fiscal effort by the county governments, such a component in the
+formula should be based on an objective measure of each county's potential to raise revenue, not
+how much is actually raised. In the absence of detailed information on the size of the tax base in
+each county, one approach might be to use county GDP as a proxy measure.
+
+Focusing first on Kenya as a whole, how do night lights perform in predicting aggregate GDP
+growth? The short answer is: not too bad. For Kenya, GDP as predicted by night lights closely
+tracks GDP as measured by national accounts, in particular since the start of the 2000s (Figure
+5). Based on the growth of night lights and using the long differenced specification (last column
+
+                                                                                                14
+of Table 3), we estimate an annual GDP growth of 4.0 percent between 2000 and 2012, slightly
+lower than the actual national-accounts based growth rate of 4.2 percent.
+
+
+    Figure 5: Estimated and measured GDP in Kenya
+
+                                                  Estimated GDP        Actual GDP
+
+                 28.2
+
+
+                  28
+
+
+                 27.8
+
+
+                 27.6
+       ln(GDP)
+
+
+
+
+                 27.4
+
+
+                 27.2
+
+
+                  27
+
+
+                 26.8
+                        199219931994199519961997199819992000200120022003200420052006200720082009201020112012
+
+    Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+
+
+Estimating county-level GDP growth based on growth in county night lights since 2000, we find
+that the lakeside county of Siaya has grown fastest (estimated GDP growth of 10 percent per
+annum between 2000 and 2011), followed by Elgeyo Marakwet (8.8 percent per annum) and
+Tharaka Nithi (8.6 percent – see Figure 6). While these counties are still poor compared to the
+national average, the intensity of their night lights as picked up from space grew strongly since
+the turn of the century: The sum of lights seven-folded in Siaya and almost five-folded in
+Tharaka Nithi and Elgeyo Marakwet. At the other end, Bomet grew slowest of all counties (1.2
+percent per annum), followed by Kericho (2.4 percent) and Marsabit (2.9 percent). Nairobi
+county grew at an estimated 4.1 percent and Mombasa at 3.8 percent. Based on night lights,
+Nakuru and Kisumu grew at 5.1 percent and 4.4 percent, respectively5.
+
+    Figure 6: Average annual county-level GDP growth in Kenya, 2000-2012 (%)
+
+
+
+
+5
+    Standards errors of the estimates are small and not shown in Figure 6.
+
+
+                                                                                                               15
+  12
+
+
+
+  10
+
+
+
+   8
+
+
+
+   6
+
+
+
+   4
+
+
+
+   2
+
+
+
+   0
+
+
+
+
+Notes: Based on long-differenced specification between 2000 and 2012
+
+
+
+   4.2      Rwanda
+For Rwanda, nightlights-based GDP also tracks measured GDP, though the level of
+correspondence is lower than for Kenya (Figure 7). Night lights tend to substantially
+overestimate GDP up until the early 2000s, driven in particular by the rapid recovery of lights
+(compared to GDP) in the wake of the genocide. Growth in lights stagnated between 2000 and
+2005, leading to an underestimation of GDP growth during this period. Based on night lights, we
+estimate an annual growth rate of 5.4 percent between 2000 and 2012, substantially lower than
+the national accounts-based true growth rate of 8 percent. This difference may potentially be
+explained by the relatively large importance of agriculture for the Rwandan economy: Between
+2000 and 2012 agriculture accounted for about 2 percentage points of aggregate growth on a
+yearly basis. As agriculture is largely unlit, the part of growth accounted for by agriculture would
+not be picked up by nightlights.
+
+
+Figure 7: Estimated and measured GDP in Rwanda
+
+
+
+
+                                                                                                 16
+                                                      Estimated GDP            Actual GDP
+
+              29.5
+
+
+               29
+
+
+              28.5
+    ln(GDP)
+
+
+
+
+               28
+
+
+              27.5
+
+
+               27
+
+
+              26.5
+                     1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012
+
+Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+
+
+Since 2006, Rwanda is divided into 30 Districts, which are the main service-delivery units. All
+household surveys are representative at the District level, but there is no information on district-
+level economic growth. Estimating district-level growth based on nightlights is however
+complicated by the low intensity of lights: Four districts did not emit any observable lights at all
+during 2000-2011, and ten districts only have nonzero observations towards the end of the 2000-
+2011 period. As a result, we can only estimate nighlights-based GDP growth for 16 districts.
+
+Figure 8 shows estimated average GDP growth for the 16 districts with sufficient lighting.
+According to the estimates, Kamonyi, Nyanza, and Musanze Districts grew fastest between 2000
+and 2012, with annual growth rates of 9.9 percent, 8.3 percent and 7.1 percent, respectively.
+Rubavu, Karongi, Gicumbi, Nyamagabe, and Rwamagana also grew at more than 5 percent per
+year. Within Kigali city, Gasabo district grew at 4.8 percent per year, Kicukiro at 3.8 percent,
+and Nyarugenge at 3.3 percent. The two slowest growing districts (among those with data) were
+Huye (3.1 percent) and Nyarugenge (3.3 percent).
+
+
+
+
+                                                                                                                            17
+    Figure 8: Average annual district-level GDP growth in Rwanda, 2000-
+    2012
+     12.0%
+
+     10.0%
+
+      8.0%
+
+      6.0%
+
+      4.0%
+
+      2.0%
+
+      0.0%
+
+
+
+
+    Notes: Based on long-differenced specification between 2000 and 2012; Only nonzero lights data
+    for 16 districts
+
+
+
+       5. Application to Kenya and Rwanda: GDP Levels
+In this section we estimate sub-national GDP levels for 2013 based on the spatial distribution of
+night lights and the rural population. Following Ghosh and others (2010), we assume that the
+within-country distribution of nightlights (across the subnational units) only proxies the within-
+country distribution of secondary- and tertiary sector economic activity (given that agriculture is
+largely subsistence and unlit). As such, the spatial distribution of nightlights within a country is
+used only to distribute the part of estimated GDP resulting from industrial and service activities.
+The part of estimated GDP accounted for by agriculture is distributed across the subnational
+units in proportion to their share of rural population6.
+
+Our methodology consists of three steps. In the first step, we estimate national GDP based on
+specification (1). The estimated GDP is divided into two parts based on the share of agriculture
+in the economy (based on actual national accounts data): Agricultural GDP and industrial and
+services GDP. In the second step, we distribute industrial and services GDP among the
+subnational units in proportion to their share of national nightlights. In the third step, we
+distribute agricultural GDP among the subnational units in proportion to their share of the rural
+population (we assume that urban populations do not produce agricultural output). Finally, we
+sum estimated industrial and services GDP and estimated agricultural GDP to arrive at an
+estimate of subnational-level GDP.
+
+6
+ This is in contrast to Ghosh and others (2010) who use the Landscan data to distribute agricultural GDP among
+sub-units.
+
+
+                                                                                                                 18
+   5.1     Kenya
+Table 5 and Figure 10 show the county-level GDP estimates for Kenya. Based on specification
+(1), we estimate total 2013 GDP for Kenya at $26.8 billion (2005 USD), close to its actual level
+of $26.9 billion (WDI, 2014). On county-level, we find that Nairobi had the highest overall GDP
+in 2013 ($3.4 billion), followed by Kiambu ($3.0 billion), Nakuru ($2.3 billion), Nyeri ($1
+billion), and Kilifi ($1 billion). Counties with the lowest GDP are the sparsely populated counties
+of Isiolo ($56 million), Lamu ($58 million), Samburu ($67 million), Elgeyo Marakwet ($108
+million), and Tharaka Nithi ($109 million). Nairobi has the highest contribution to national GDP
+(13 percent), followed by Kiambu (11 percent), Nakuru (9 percent) and Nyeri (4 percent – see
+Figure 9).
+
+When we control for population by looking at GDP per capita, there are substantial changes
+(Figure 11). Kiambu is the best-off county, with a per capita GDP of $1,785 (2005 USD),
+followed by Nyeri ($1,503), Kajiado (1,466), Nakuru ($1,413), and Kwale ($1,406). Due to its
+large population, Nairobi does not make it to the top five with an estimated per capita GDP of
+$1,081 (ranked 8th among the 47 counties, one spot in front of Mombasa). Note that Nairobi and
+Mombasa have zero agricultural GDP because the 2009 census classified these counties as 100
+percent urban. This may underestimate their GDP if agricultural activity does take place in these
+counties.
+
+
+
+
+                                                                                                19
+Table 5: Estimates of County-Level GDP in Kenya, 2013 (in constant 2005 USD).
+
+                                                                                  GDP per
+                                 Secondary and     Agricultural
+                                                                    Total GDP      capita
+County          Sum of lights    tertiary-sector   GDP (2005
+                                                                   (2005 USD)      (2005
+                                GDP (2005 USD)       USD)
+                                                                                    USD)
+Baringo              144          $27,427,881      $151,420,763   $178,848,644      $322
+Bomet                99           18,828,734       232,821,568     251,650,302       282
+Bungoma              822          157,006,404      329,921,079     486,927,483       354
+Busia                243          46,377,729       190,576,644     236,954,373       319
+Elgeyo
+Marakwet             58           11,140,672       97,107,173      108,247,845      293
+Embu                970           185,257,500      132,809,566     318,067,066      616
+Garissa             737           140,715,702      146,020,607     286,736,309      460
+Homa Bay            309           59,084,498       253,101,425     312,185,923      324
+Isiolo              168           32,050,749       24,803,077       56,853,826      397
+Kajiado            4,628          884,204,321      123,356,381    1,007,560,702    1,466
+Kakamega           1,606          306,855,344      431,583,350     738,438,694      445
+Kericho             821           156,812,096      111,071,931     267,884,027      454
+Kiambu             14,585        2,786,314,569     201,167,607    2,987,482,176    1,785
+Kilifi             3,960          756,605,989      252,644,720    1,009,250,708     909
+Kirinyaga          1,773          338,751,052      136,291,254     475,042,306      900
+Kisii               950           181,490,633      304,012,407     485,503,041      384
+Kisumu             2,430          464,139,515      141,360,681     605,500,197      625
+Kitui               577           110,200,855      267,525,033     377,725,888      373
+Kwale              3,930          750,694,562      163,143,374     913,837,936     1,406
+Laikipia           2,080          397,313,865      91,987,784      489,301,649     1,226
+Lamu                177           33,868,834       24,919,859       58,788,692      579
+Machakos           4,404          841,387,188      161,602,837    1,002,990,025     913
+Makueni             677           129,333,676      239,151,073     368,484,750      417
+Mandera              86           16,404,162       257,529,013     273,933,175      267
+Marsabit            245           46,890,540       69,626,700      116,517,240      400
+Meru               2,191          418,562,417      429,436,529     847,998,946      533
+Migori              536           102,335,441      185,642,389     287,977,829      314
+Mombasa            4,597          878,171,120           0          878,171,120      935
+Muranga            3,891          743,300,343      228,927,620     972,227,963     1,090
+Nairobi            17,754        3,391,699,448          0         3,391,699,448    1,081
+Nakuru             10,466        1,999,522,927     266,145,722    2,265,668,649    1,413
+Nandi               402           76,783,764       199,443,468     276,227,232      367
+Narok               335           63,916,566       242,889,313     306,805,878      361
+Nyamira             193           36,823,500       128,328,644     165,152,144      339
+Nyandarua           517           98,761,105       148,888,961     247,650,066      415
+
+
+                                                                                       20
+Nyeri              4,617         882,097,448        160,595,020      1,042,692,468    1,503
+Samburu              52           9,945,126          56,791,752        66,736,878      298
+Siaya               294          56,230,908         230,399,192       286,630,100      340
+Taita Taveta        793          151,421,576         67,545,780       218,967,356      769
+Tana River          605          115,633,298         62,531,831       178,165,129      742
+Tharaka Nithi       375          71,734,556          37,260,708       108,995,263      838
+Trans Nzoia         452          86,281,073         199,643,621       285,924,694      349
+Turkana             241          45,955,610         224,882,867       270,838,477      317
+Uasin Gishu        2,129         406,744,065        168,159,468       574,903,533      643
+Vihiga             1,020         194,845,744        116,633,620       311,479,363      562
+Wajir               368          70,353,845         173,206,520       243,560,366      368
+West Pokot           68          13,083,570         144,059,533       157,143,103      307
+Kenya              98,374      $18,793,360,520     $8,006,968,467   $26,800,328,986   $694
+
+
+Figure 9: County-contribution to overall GDP (%)
+
+ 14.0%
+
+
+ 12.0%
+
+
+ 10.0%
+
+
+  8.0%
+
+
+  6.0%
+
+
+  4.0%
+
+
+  2.0%
+
+
+  0.0%
+
+
+
+
+                                                                                          21
+Figure 10: Estimated county GDP, Kenya
+
+
+
+
+Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+
+
+At the other end, Mandera has the lowest GDP per capita ($267), followed by Bomet ($282),
+Elgeyo Marakwet ($293), Samburu ($298), and West Pokot ($307). Turkana, Busia and Wajir
+also have low per capita GDP levels. Lamu, while having one of the lowest GDP levels of all
+counties, ranks higher on GDP per capita (15th spot) thanks to its small population.
+
+
+                                                                                        22
+Figure 11: Estimated county GDP per capita, Kenya
+
+
+
+
+Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+
+
+   5.2      Rwanda
+Table 6 and Figure 12 show the District-level GDP estimates for Rwanda. Based on specification
+(1), we estimate total 2013 GDP for Rwanda at $4.58 billion (2005 USD), only slightly higher
+than the national-accounts estimate of $4.57 billion (WDI, 2014). On the District-level, we find
+that Gasabo District had the highest GDP in 2013 ($925 million), followed by the two other
+districts of Kigali (Kicukiro at $538 million and Nyarugenge at $371 million). Districts in the
+secondary urban centers come next: Rubabu ($219 million), Rusizi ($186 million), Huye ($166
+
+                                                                                             23
+million), and Musanze ($143 million). Districts with the lowest estimated GDP are the largely
+unlit Districts of Nyabihu, Nyaruguru, Burera and Kirehe. Overall, the three Districts in Kigali
+city account for 40 percent of total GDP, despite only accounting for about 10 percent of the
+population. Adding Rubavu and Rusizi, five Districts (out of 30) account for half of overall GDP
+(Figure 9).
+
+Figure 12: District-level contribution to overall GDP
+
+ 25.0%
+
+
+
+ 20.0%
+
+
+
+ 15.0%
+
+
+
+ 10.0%
+
+
+
+  5.0%
+
+
+
+  0.0%
+         Nyarugenge
+
+
+
+
+             Nyabihu
+             Kicukiro
+
+
+
+
+            Muhanga
+            Kamonyi
+
+
+
+            Bugesera
+           Nyagatare
+              Gasabo
+
+
+
+
+               Burera
+         Rwamagana
+
+
+
+
+          Nyamagabe
+
+
+
+
+              Rutsiro
+
+
+
+
+           Nyaruguru
+            Musanze
+
+
+
+
+           Ngororero
+            Gisagara
+
+
+
+
+            Gakenke
+                Huye
+                Rusizi
+
+
+
+             Gicumbi
+
+
+
+
+              Karongi
+
+
+
+
+               Kirehe
+             Gatsibo
+
+              Nyanza
+
+
+
+              Ngoma
+             Kayonza
+
+
+
+
+         Nyamasheke
+            Ruhango
+
+
+
+
+              Rulindo
+              Rubavu
+
+
+
+
+When we control for population by looking at GDP per capita, there are only few changes
+(Figure 8). The Districts in Kigali city remain the wealthiest (in the same order), while Rubavu
+remains the wealthiest district outside Kigali. Huye comes fifth ($507 per capita), followed by
+Rusizi ($463) and Rwamagana (408).
+
+Table 6: Estimates of District-Level GDP in Rwanda, 2013 (in constant 2005 USD).
+
+                                GDP (services         GDP
+                                                                   Total GDP       GDP per
+                Sum of lights   and industry)     (agriculture)
+                                                                     (USD)          capita
+ Districts        (2013)            USD               USD
+ Bugesera           313          67,295,950        57,925,612     125,221,562         346
+ Burera              0                0            57,447,257      57,447,257         171
+ Gakenke             0                0            57,188,170      57,188,170         169
+ Gasabo            4,173        896,487,039        28,550,005     925,037,044        1,747
+ Gatsibo            195          41,863,156        71,136,966     113,000,122         261
+ Gicumbi            368          79,139,205        62,782,886     141,922,091         359
+
+                                                                                             24
+ Gisagara               67              14,441,452            55,207,284       69,648,736     216
+ Huye                  551             118,432,522            47,927,632      166,360,154     507
+ Kamonyi               369              79,304,916            52,420,098      131,725,014     387
+ Karongi               230              49,324,244            53,739,182      103,063,425     311
+ Kayonza               145              31,236,863            53,929,932       85,166,795     247
+ Kicukiro             2,471            530,886,041             6,715,920      537,601,961    1,688
+ Kirehe                  0                  0                 57,431,259       57,431,259     169
+ Muhanga               380              81,740,210            46,693,578      128,433,788     402
+ Musanze               448              96,329,234            46,285,298      142,614,533     387
+ Ngoma                 130              27,941,618            55,937,075       83,878,693     249
+ Ngororero              31              6,748,616             55,898,125       62,646,741     188
+ Nyabihu                 0                  0                 44,178,173       44,178,173     150
+ Nyagatare             230              49,521,538            72,748,696      122,270,235     262
+ Nyamagabe             246              52,749,857            55,042,094      107,791,951     316
+ Nyamasheke              0                  0                 65,322,461       65,322,461     171
+ Nyanza                251              53,943,836            51,869,929      105,813,766     327
+ Nyarugenge           1,671            359,038,297            12,265,948      371,304,245    1,305
+ Nyaruguru              39              8,307,465             50,150,217       58,457,682     199
+ Rubavu                814             174,951,644            44,245,292      219,196,936     543
+ Ruhango                61              13,198,341            51,091,625       64,289,966     201
+ Rulindo                20              4,224,944             48,522,489       52,747,433     183
+ Rusizi                590             126,816,350            58,703,221      185,519,570     463
+ Rutsiro                55              11,875,809            55,229,019       67,104,829     207
+ Rwamagana             363              77,958,370            49,818,099      127,776,468     408
+ Rwanda               14,214          3,053,757,518          1,526,403,540   4,580,161,058    436
+Source: WDI (2014) and NGDC (2014). Authors’ calculations.
+
+As evident from the title of this paper, we also tried to estimate poverty levels and changes based
+on nightlights data. The estimated associations were however not robust, and more time and
+effort would need to be invested in examining this relationship in a more detailed fashion. This
+will be pursued in further work.
+
+
+    6. Conclusions
+In this paper, we have adapted the methodology of Henderson, Storeygard and Weill (2012) to
+examine the association between night lights and GDP for a sample of 46 countries in Sub
+Saharan Africa. Overall, we find a fairly strong correlation between the intensity of night lights
+as measured by satellites and country-level GDP, with even small and temporary economic
+downturns being reflected in the intensity of lighting. As expected, we find that the association
+between lights and economic activity is stronger in countries where agriculture is a smaller part
+of GDP (where more economic activity is lit). We apply the regression results to estimate
+subnational GDP levels and growth in Kenya and Rwanda. To our knowledge, this is the first
+
+                                                                                                     25
+time such an exercise to estimate county-level GDP levels and growth for Kenya and Rwanda
+has been attempted.
+
+Our first-approximation results yield some interesting findings. In the case of Kenya, our results
+affirm that Nairobi county contributes the maximum to national GDP. However, at only 13%,
+this contribution is significantly lower (of 60%) as commonly thought. Controlling for
+population, Kiambu is the best-off county, with a per capita GDP of $1,785 (2005 USD),
+followed by Nyeri ($1,503), Kajiado (1,466), Nakuru ($1,413), and Kwale ($1,406). Due to its
+large population, Nairobi does not make it to the top five with an estimated per capita GDP of
+$1,081 (ranked 8th among the 47 counties, one spot in front of Mombasa). In the case of Rwanda,
+the three districts of Kigali account for 40 percent of overall GDP, and, adding the secondary
+cities of Rubavu and Rusizi, only five districts account for half of national GDP.
+
+While the results from the analysis in this paper show promise, there is ample room to improve
+on the methodology. Several issues in particular stand out: first, the accuracy of the sub-national
+estimates is likely to be affected by over-glow, meaning that lights (and economic activity) could
+be attributed to the wrong sub-national unit. This is particularly a worry in heavily lit areas in
+urban agglomerations. Second, given the importance of agriculture in the economy of many
+countries in our sample, the estimates could be improved by including proxies for agricultural
+performance, such as rainfall or vegetation cover. Also, subnational variation in rainfall or
+vegetation cover could be used to allocate agricultural GDP across subnational units, rather than
+the units’ share of total rural population. Future work will address this (for an application, see
+Rogers, Emwanu and Robinson, 2006). To get a more composite picture of subnational
+economic activity, it is also important to estimate subnational GDP through the standard
+approaches (production, expenditure, income) that have their strengths and limitations. This is
+however outside the scope of this paper that we propose for future investigation.
+
+
+
+
+                                                                                                26
+References
+
+
+Rogers, D., Emwanu, T. and Robinson, T. “Poverty Mapping in Uganda, Using Socio-Economic
+        Data, Environmental and Satellite Data.�? Pro-Poor Livestock Policy Initiative. FAO.
+
+Ghosh, T., Powell, R., Elvidge, C., Baugh, K., Sutton, P. and Anderson, S. (2010). “Shedding
+        Light on the Global Distribution of Economic Activity�?. The Open Geography Journal
+        (3): 148-161.
+
+Henderson, V., Storeygard, A. and Weil. D. (2012). Measuring Economic Growth from Outer
+        Space. American Economic Review 102(2): 994-1028.
+
+Sutton, P., Elvidge, C. and Ghosh, T. (2007). “Estimation of Gross Domestic Product at Sub-
+         National Scales using Nighttime Satellite Imagery.�? International Journal of
+         Ecological Economics and Statistics 8(7): 5-21.
+
+Ebener, S., Murray, C., Tandon, A. and. Elvidge, C. (2005). “From Wealth to Health: Modeling
+         the Distribution of Income per Capita at the Sub-National Level Using Night-Time
+         Light Imagery.�? International Journal of Health Geographics 4(5): 1–17.
+
+Elvidge, C., Sutton, P., Ghosh, T., Tuttle, B., Baugh, K., Bhaduri, B. and Bright, E. (2009). “A
+         Global Poverty Map Derived from Satellite Data.�? Computers and Geosciences
+         35:1652-1660.
+
+Ghosh, T., Powell, R.L., Anderson, S. Sutton, P.C. Elvdige, C.D., (2010), "Informal Economy
+        and Remittance Estimates of India Using Nighttime Imagery", International Journal of
+        Ecological Economics & Statistics, 17
+
+
+
+
+                                                                                                   27
+

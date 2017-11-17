@@ -1,0 +1,1438 @@
+                Measuring poverty in Lebanon using 2011 HBS
+
+
+
+
+                                          Technical report
+
+
+
+
+                       CENTRAL ADMINISTATION OF STATISTICS (CAS)
+
+                                                   AND
+
+                                          THE WORLD BANK
+
+                                            December 8, 2015
+
+
+
+
+This technical report is a joint effort of the Central Administration of Statistics of Lebanon and the World
+Bank. The report is a product of the World Bank‚Äôs programmatic work in Lebanon and technical assistance.
+The CAS team includes Najwa Yaacoub and Mayssaa Daher. The World Bank team consists of Tara
+Vishwanath, Dean Jolliffe and Aziz Atamanov. The team received guidance and comments from Benu
+Bidani (Practice Manager, GPVDR) and overall support from CAS Director General Dr. Maral Tutelian.
+The team is also thankful for useful comments from Ken Simler (peer reviewer), Sailesh Tiwari (peer
+reviewer), Nobuo Yoshida (peer reviewer), Tara Vishwanath, Zurab Sajaia, Sergio Olivieri, Nandini
+Krishnan and Gabriel Lara Ibarra. We are also grateful to Jacob Goldston for a careful cross review of all
+the Stata code.
+Contents
+
+1.     Introduction and country context ...................................................................................................... 4
+2.     Methodological issues in poverty measurement ............................................................................... 5
+3.     Welfare aggregate and its components ............................................................................................. 7
+     3.1       Data issues .................................................................................................................................... 7
+     3.2       Food items ..................................................................................................................................... 9
+     3.3       Non-food items ........................................................................................................................... 10
+       3.3.1          Rents ................................................................................................................................... 11
+       3.3.2          Durables .............................................................................................................................. 13
+       3.3.3          Education and health ........................................................................................................... 14
+     3.4       Adjustments to welfare aggregate ............................................................................................... 14
+       3.4.1          Spatial adjustment ............................................................................................................... 14
+       3.4.2          Inter-temporal adjustment ................................................................................................... 18
+       3.4.3          Adjustment to household size ............................................................................................. 18
+4.     Construction of poverty line............................................................................................................. 19
+     4.1       Food poverty line ........................................................................................................................ 19
+     4.2       Non-food component of poverty line .......................................................................................... 21
+5.     Supplemental information ................................................................................................................ 23
+     5.1       Robustness tests of poverty rates based on consumption per capita ........................................... 23
+     5.2       Supplementary poverty rates based on consumption per adult equivalent ................................. 27
+6.     Concluding remarks and further steps ........................................................................................... 30
+References .................................................................................................................................................. 31
+Annex ......................................................................................................................................................... 32
+
+
+
+Tables
+
+Table 1. OLS regression for different rent values in logarithms ................................................................. 12
+Table 2. Annualized consumption flow from transportation by quintiles .................................................. 14
+Table 3. Example of calculation of food deflator ....................................................................................... 16
+Table 4. Predicted rent, nonfood and food deflators ................................................................................... 17
+Table 5. Daily per capita calorie intake and costs in 2004 and 2011 .......................................................... 20
+
+                                                                                                                                                                2
+Table 6. Daily per capita consumption of selected products, in grams or milliliters .................................. 21
+Table 7. Poverty in Lebanon, 2011/2012 .................................................................................................... 22
+Table 8. Source of income across quintiles, % ........................................................................................... 25
+Table A1. COICOP items taken from individual diary.............................................................................. 32
+Table A2. COICOP durable items excluded from welfare aggregate ........................................................ 33
+Table A3. Inequality measures by regions ................................................................................................. 33
+Table A4. Regional poverty in Lebanon, 2011/2012 .................................................................................. 33
+Table A5. Consumption per capita and shares by COICOP groups and quintiles ..................................... 34
+Figures
+
+Figure 1. Consumption per capita using rescaled and raw weights .............................................................. 8
+Figure 2. Timing of survey in different regions ............................................................................................ 8
+Figure 3. Daily purchases of selected products in three regions ................................................................... 8
+Figure 4. Cumulative distribution function of imputed and actual purchases for responders and non-
+responders ................................................................................................................................................... 10
+Figure 5. Nominal annual consumption per capita using different imputation techniques, thou. LBP ...... 10
+Figure 6. Regional distribution of households reporting actual rent ........................................................... 11
+Figure 7. Impact of excluding rent on welfare aggregate ........................................................................... 13
+Figure 8. Shares of products by number of unit measures, %..................................................................... 15
+Figure 9. Unit measures for selected products ............................................................................................ 16
+Figure 10. Spatial food deflator by regions, index ...................................................................................... 17
+Figure 11. Nominal and spatially adjusted welfare aggregate .................................................................... 18
+Figure 12. Poverty rates by regions ............................................................................................................ 22
+Figure 13. Welfare aggregate, poverty line and self-assessed income per capita across quintiles ............. 24
+Figure 14. Self-assessment of households across welfare status, % ........................................................... 24
+Figure 15. Number of months without income across quintiles, % ............................................................ 24
+Figure 16. Ownership of cars across quintiles, % ....................................................................................... 25
+Figure 17. Ownership of computers across quintiles, % ............................................................................. 25
+Figure 18. Poverty rates for different reference groups .............................................................................. 26
+Figure 19. Poverty rates, including and excluding health expenditures...................................................... 26
+Figure 20. Poverty rates, including and excluding durables ....................................................................... 26
+Figure 21. Poverty rates using different poverty lines ................................................................................ 27
+Figure 22. Cumulative distribution consumption per capita and poverty lines .......................................... 27
+Figure 23. Consumption in per capita and adult equivalent terms .............................................................. 29
+
+                                                                                                                                                               3
+Figure 24. Poverty rates based on consumption per capita and adult equivalent ........................................ 30
+
+    1. Introduction and country context
+
+According to World Bank Development Indicators, Lebanon is an upper middle income country with an
+estimated population of 4.5 million people and GDP per capita of 17,462 USD in 2014 (based on 2011
+PPPs). The country is well known for its high level of human development and open economy. Yet, social
+and economic performance of the country has been moderate during the last 40 years because of numerous
+domestic and international political and religious shocks including wars with Israel, major political
+assassinations, waves of terrorism activities, and spillovers from regional conflicts‚Äîthe latest being the
+Syrian conflict. Understanding how changes in the country ‚Äì both positive and adverse factors -- have
+affected the population requires a timely and accurate statistical foundation.
+
+Lebanon is a sectarian-based consensual democracy, where population demographics are a particularly
+sensitive and political issue. The timely collection of social, economic and demographic statistics is a
+difficult task in any environment, but it is all the more challenging in Lebanon where demography is directly
+linked to governance. In part due to these challenges, the last official census in Lebanon was conducted in
+1932, and the latest update of the population estimate was made in 1964, drawing on civil status registers
+within the Ministry of the Interior (European Union, 2009). The Ministry of Social Affairs, supported by
+the United Nations Development Program (UNDP), and in partnership with the Central Administration of
+Statistics (CAS), undertook the first multipurpose household survey (living conditions and household
+budget survey). This socio-economic survey was conducted during February 2004 to April 2005 on about
+13,000 households distributed nationwide. The sample covered the whole de facto population, except the
+Palestinian population living in the refugee camps. This data was used to construct a lower, extreme poverty
+line as well as an upper poverty line, both of which were used to produce measures of absolute poverty.
+CAS received technical support from World Bank staff on the construction of welfare aggregate, and
+technical support from UNDP on the estimation of household-specific poverty lines.
+
+UNDP (2008) provides a full description of the methodology and the profile of poverty in Lebanon as
+portrayed by the 2004-05 data. Eight percent of the Lebanese population were estimated to be in extreme
+poverty (i.e. living below the extreme poverty line), essentially not able to meet their most basic food and
+nonfood needs in 2004/2005. An estimated 28.5 percent of the population were poor as defined by the upper
+poverty line. Striking differences in consumption per capita and headcount poverty rates were identified
+across regions with the North Lebanon, South and Bekka being the poorest.
+
+The second household budget survey (HBS) was implemented by CAS in 2011 with technical assistance
+from the World Bank. In addition to meeting the core statistical needs of the government to understand the
+overall wellbeing of the population, the data was also needed to create a baseline for evaluating the impact
+of the National Poverty Targeting program, to update the proxy means test used for this program, and more
+generally to develop a social protection and human development strategy. The survey was conducted during
+the period of September 2011 to November 2012. The sample design for the 2011 HBS was different from
+the 2004 HBS in that it was stratified across nine regions (compared to 15 strata in 2004) and was originally
+planned to include 4805 households. Due to differences in the sample design, different methodologies to
+construct welfare aggregate and poverty line, as well as specific data issues, poverty estimates presented in
+this report are not comparable to estimates obtained based on 2004-05 data.
+
+
+                                                                                                                       4
+Several issues were encountered during data collection that negatively affected the quality of obtained data.
+The survey was originally planned to be completed in 12 weeks, but lasted over a year, thereby introducing
+concerns about seasonality into the regional profiles of wellbeing. Further, while the intended sample size
+was 4805 households, the effective sample size was 2746 households due to a non-response rate of 43
+percent. This rate is high by international standards (Mistiaen and Ravallion 2003, United Nations 2005)
+and has the potential to introduce significant bias in point estimates if the households that did not respond
+to the survey were systematically different from those who did participate.
+
+The response rate varied significantly across administrative regions (mohafaza) from very low in Beirut
+and Mount Lebanon (38 and 36 percent respectively) to high in South Lebanon and Nabatieh (76 percent).
+Conventional wisdom, and findings from analysis carried out by CAS and the World Bank, suggest that the
+likelihood that a household would not participate in the survey was increasing in income. The result of this
+systematic tendency is that poorer households were more likely to participate and were essentially ‚Äúover
+represented‚Äù in the data. CAS and World Bank staff worked together to produce adjustment factors to the
+sampling weights to mitigate the potential non-response bias.
+
+The purpose of this technical note is to describe how the welfare aggregate and poverty line were
+constructed in Lebanon using HBS 2011.1 It is a part of broader collaboration between CAS and the World
+Bank to improve data quality and poverty monitoring capabilities in the country. Different approaches have
+been tested to correct non-response and to measure poverty. The note consists of eight sections. Section 2
+briefly discusses main methodological issues in poverty measurement. Section 3 explains construction of
+different components of welfare aggregate. Section 4 documents construction of poverty lines.
+Triangulation of obtained poverty estimates, sensitivity analysis are conducted in section 5. This section
+also contains supplementary poverty numbers based on consumption per adult equivalent. Finally, section
+6 concludes and discusses areas for further consideration in poverty measurement.
+
+    2. Methodological issues in poverty measurement
+
+Measuring poverty requires two broad steps. The first step is to define an indicator to measure welfare or
+living standards. The second step requires setting a poverty line - the minimum welfare level below which
+person is considered to be poor.
+
+The most common welfare indicators for poverty measurement are consumption or income per capita
+derived from survey data. The choice between them is often made based on socio-economic conditions of
+a country chosen for the analysis. Income is usually used to measure welfare in rich countries, while
+consumption is often the preferred measure of welfare in low and middle-income countries. Consumption
+includes both goods and services, whether purchased, home-produced or received as gifts. It thereby
+provides a direct measure of realized welfare (ie. it measures what was actually consumed), while income
+is sometimes viewed as providing a measure of potential welfare (ie. it provides a measure of what someone
+could potentially consume). Often times though, the choice of whether to consider income or consumption
+as the preferred indicator of welfare is linked more to how reliably each can be measured. Income tends to
+be very hard to measure in countries where agriculture and self-employment are important employment
+
+1
+ A separate technical note has been prepared to discuss a strategy for unit non-response correction (CAS and World
+Bank, 2015). The current note is a technical report with a sole purpose to explain the poverty methodology and should
+not be viewed as a poverty assessment paper.
+
+                                                                                                                   5
+options. Moreover, in rural areas, income is subject to substantial seasonal volatility and consumption is
+more likely to be representative of general level of welfare (Haughton and Khandker 2014).
+
+The main guiding principle for welfare aggregate is to make it comprehensive enough to capture important
+dimensions of wellbeing, while being attentive to concerns about measurement error. The key question to
+ask is whether included component improves ability to correctly sort individuals in terms of their wellbeing,
+or if the additional information simply adds noise to the measure. Food consumption, for example, includes
+own production, transfers and eating outside home. Nonfood consumption usually excludes lumpy
+infrequent expenditures (e.g. funerals, weddings), investment and items which are hard to estimate
+accurately (public goods). Durables require a particular treatment because they are bought at a particular
+point in time, but consumed during a period of several years. Consumption should include only the annual
+use value of a durable rather than purchase value. The same principle should apply in measuring the value
+of housing services (Deaton and Zaidi 2002, Haughton and Khandker 2014).
+
+There is no consensus in literature on whether health expenditures should be included. One argument to
+exclude health expenditure is because they often imply a regrettable necessity and do not contribute to
+welfare. An even more fundamental issue is the inability to distinguish between health expenditures aimed
+at improving welfare and health expenditure as regrettable necessity. The decision is sometimes made based
+on elasticity of health expenditure with respect to total expenditure. Essentially if one observes individuals
+with high values of consumption (not including health expenditures) also having high expenditures on
+health, then it is assumed that on average health expenditures are reflecting preventative health
+expenditures. So, a higher elasticity implies stronger case for inclusion.
+
+After construction of the welfare aggregate, there is a need to make additional adjustments to allow for
+poverty comparisons across individuals. One of the most important adjustments is spatial and inter-temporal
+deflation to account for temporal and spatial difference in prices faced by households. The second important
+adjustment is related to the adjustment of welfare aggregate for household composition. This can be done
+by simply dividing household consumption by total household size or by taking into account household-
+economies of scale and adult-equivalence scale adjustments.
+
+Having constructed and adjusted welfare aggregate, the next step is construction of poverty line.
+Households whose consumption expenditure or income fall below this line are considered poor. The
+standard approach in setting a poverty line, followed in Lebanon, is the ‚Äúcost-of-basic-needs approach
+(CBN). This approach consists of several steps. The first step is to identify a minimal nutrition requirement
+for healthy living, usually defined in terms of minimal caloric requirements. This nutritional threshold is
+typically estimated to ensure that it is consistent with local tastes and consumption patterns. For obvious
+reasons, selecting one requirement for all individuals is an approximation given that food needs are
+heterogeneous across the population, but the advantage of having a single requirement is transparency,
+simplicity and ease of communication. The second step is to estimate costs of meeting this food energy
+requirement, using a diet that reflects the habits of households near the poverty line. This will give a food
+
+
+
+
+                                                                                                            6
+component of poverty line. The third step is to add a non-food component to food poverty line which can
+be done in various ways (Ravallion 1998).2
+
+    3. Welfare aggregate and its components
+
+This section describes the construction and adjustment of welfare aggregate in Lebanon based on 2011
+HBS.
+       3.1 Data issues
+
+The survey was conducted during the period of September 2011 to November 2012. The sample design
+differed from the previous HBS and was stratified across nine areas (Beirut Governorate, Beirut suburbs,
+remaining Mount Lebanon, Akkar and Minieh-Danniyeh districts, remaining North Lebanon districts,
+Baalbeck and Hermel, remaining Bekaa, South Governorate, Nabatiyeh Governorate) and was originally
+planned to include 4805 households.3 Three survey forms have been used to collect the data: an individual,
+seven-day diary of purchases filled in by adults older than 15 for themselves and children, an other-
+expenditure form, based on three month or yearly recall period and a form to capture household
+characteristics and living conditions.
+
+Several important data issues should be kept in mind while interpreting results shown in this note. The most
+important problem is associated with substantial and systematic unit non-response (ie. targeted households
+that did not participate in the survey). As a result of the unit non-response, only 57 percent of the intended
+sample was collected. No information was collected on non-respondents, complicating any ex-post
+correction. In order to correct for non-response, rescaling of sample weights was done at PSU level
+assuming non-response uniform at this level. Impact of rescaling and empirical verification are discussed
+in a separate technical note (CAS and World Bank, 2015). Overall, impact of using rescaled weights over
+raw weights is substantial (figure 1). Using rescaled weights increase consumption per capita by 10 percent.
+
+
+
+
+2
+  Obtained poverty line is often called upper poverty line, while in many countries lower poverty line constructed as
+well. For lower poverty line, the reference population for nonfood share is from subsample of households whose
+total expenditures per capita are close to food poverty line.
+3
+  Nine strata are aggregated into six administrative regions called mohafaza. All regionally disaggregated results in
+this paper are shown for these six administrative regions.
+
+                                                                                                                    7
+ Figure 1. Consumption per capita using rescaled and raw weights
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note: Due to small sample size, regionally disaggregated statistics presented in this note should be treated with
+ caution.
+
+Due to security reasons, the survey lasted over a year instead of being completed during the intended 12
+weeks. Lack of temporal stratification of the fieldwork led to data collection occurring in several regions
+primarily in the fall when households have substantial food purchases preparing for winter. This essentially
+introduces concerns about seasonality bias in any sub-national estimates. In particular in Mount Lebanon
+and North Lebanon, more than 50 percent of survey was conducted in autumn (figure 2). This led to
+distortions in food purchases as shown in figure 3. For example, purchases of olive oil were much higher
+than what was observed, for example, in Beirut. Having high food consumption in poor North Lebanon
+created a problem for construction of nonfood poverty as will be discussed and seen further in the text.
+
+ Figure 2. Timing of survey in different regions            Figure 3. Daily purchases of selected products in
+                                                            three regions
+ 100%                                                                300
+  80%                                                                250
+
+  60%                                                                200
+                                                             gr. or ml.
+
+
+
+
+  40%                                                                150
+                                                                     100
+  20%
+                                                                          50
+   0%
+                                                                          0
+
+
+
+     January       February       March         April
+     May           June           July          August                         Beirut   Mount Lebanon   North Lebanon
+     September     October        November      December
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+
+                                                                                                                        8
+The last important issue is related to item non-response in the individual diary. About 27 percent of
+individuals older than 15 did not fill the diary completely (CAS distinguishes between individuals with zero
+purchases and those who did not fill the diary). In 8 percent of households nobody filled the individual
+diary. To address the item-level non-response, some missing purchases have been filled in with imputed
+values.
+
+       3.2 Food items
+
+Household food consumption is constructed from information provided by the individual diary which was
+designed to be filled in by all adults older than 15 years of age. Each adult is supposed to report daily
+purchases he or she made during seven days. One household member filled the diary for children below 15
+years age. The diaries and forms include food and nonfood expenditures for personal use. The food diary
+includes measures of all food items consumed from purchases in cash, transfers and home produced
+products as estimated by the respondent. An important data quality issue is that slightly less than one third
+of adults did not completely fill in the diaries. To address this issue, when sub-aggregates of food and
+nonfood items are missing, imputed values have been assigned to them. As a first step, individual-level
+purchasing information has been aggregated to six COICOP groups: food, non-alcoholic beverages and
+tobacco, furnishings and household equipment, transport, restaurants and hotels, and miscellaneous goods
+and services. Exact COICOP groups taken from the diary are shown in the annex.4
+
+Several imputation methods were considered to impute missing purchases for six COICOP groups at
+individual level, but two estimators were the most methodologically appropriate for the data. The first
+method is based on the Tobit regression model for censored data. The second approach considered is based
+on predictive mean matching from multiple imputation technique where the imputed value is the average
+of five predictions (StataCorp 2013). Predictors used in the models include: nonfood expenditure per capita,
+education, marital status, gender, age group, region, employment status, type of employment, type of
+residence, dummy if diary is related to respondent and all family members aged less than 15.
+
+Before imputation, respondents and non-respondents have been compared to check if there are systematic
+differences between them. This was done by estimating the probability of responding (with a probit
+estimator) based on a set of observable characteristics. The estimates reveal that the probability of filling in
+the diary drops with age and household size. In addition, the model indicates that those who filled the diary
+are from households with higher nonfood consumption per capita. (This is observed both in the
+unconditional bi-variate model and in models controlling for other factors.) If one assumes nonfood
+consumption per capita is positively correlated with food consumption per capita, imputed purchases should
+be lower than reported values.
+
+Average consumption per capita (nominal, not spatially deflated) by regions, as estimated by both
+imputation methods are presented in figure 5, and compared to the value from no imputation (which treats
+missing at the level of the six aggregates as zero). As expected, the lowest consumption per capita is
+observed if no imputation is done, this is because missing values at the higher level of aggregation are
+treated as zeros. Figure 4 compares the cumulative density function for imputed values for non-responders
+with responders, for each imputation approach. Figure 4 indicates that the predictive mean approach results
+
+4
+  COICOP stands for Classification of Individual Consumption According to Purpose. It is a reference classification
+to categorize expenditures.
+
+                                                                                                                  9
+                         in higher values for non-responders relative to responders at lower overall consumption levels. This finding
+                         is in tension with the inference from the nonfood comparisons that non-responders have lower nonfood
+                         consumption levels. In contrast, the Tobit model predicts lower purchases as expected. In part due to this
+                         finding, and also due to the result in figure 5 that the Tobit-based imputations are more modest that then
+                         predictive mean method, the Tobit-based imputations have been used in the welfare aggregate.
+
+                          Figure 4. Cumulative distribution function of imputed and actual purchases for responders and
+                          non-responders
+                             a) Tobit                                        b) Predictive mean matching
+                                              Individual purchases, Tobit                                                                Individual purshases, MI PMM
+                              1                                                                                              1
+
+
+                              .8                                                                                             .8
+Cumulative Probability
+
+
+
+
+                                                                      Cumulative Probability
+
+
+
+
+                              .6                                                                                             .6
+
+
+                              .4                                                                                             .4
+
+
+                              .2                                                                                             .2
+
+
+                              0                                                                                              0
+                                   0       10000              20000                              30000               40000        0     10000              20000     30000               40000
+                                                               test                                                                                         test
+
+                                         c.d.f. of not responded                               c.d.f. of responded                    c.d.f. of not responded      c.d.f. of responded
+
+
+                          Source: Authors‚Äô calculation using HBS 2011.
+
+
+                          Figure 5. Nominal annual consumption per capita using different imputation techniques, thou.
+                          LBP
+
+
+
+
+                          Source: Authors‚Äô calculation using HBS 2011.
+
+
+                                   3.3 Non-food items
+
+                         The nonfood component of the measure of total household consumption is derived from the individual
+                         diaries, the recall, and household characteristics and living conditions forms. In particular, travel
+
+
+                                                                                                                                                                                          10
+expenditures, utilities for primary and secondary dwelling, housing services and information about rent are
+estimated from the household characteristics and living condition form. In a few cases there are duplicated
+COICOP groups across forms, and these have been removed from the welfare aggregate.
+
+            3.3.1    Rents
+
+Information on actual and reported rents is collected in the household characteristics and living condition
+form. From 2,746 sampled households, 430 rented apartments. Most of the remaining households (n=2259
+households) owned dwellings and reported estimated rent answering the question ‚Äúhow much do you
+estimate the monthly rent of the house/apartment you occupy‚Äù. Of these households, 57 had missing values
+to this question.
+
+Figure 6 presents the number of households that reported actual rent paid by regions and this reveals that
+sample sizes are very small in some regions. For example, in Nabatieh there are only six observations on
+reported rent. An implication of this is that trying to impute rental values of homeowners based on hedonic
+rent models will likely fail to reflect important regional variation in the cost of shelter. A second issue with
+reported actual rent is that rent control exists for some of the older dwellings, and this attribute is not
+observable (ie. the data do not allow for distinguishing rents with rent control from those without). The
+inclusion of rent-controlled dwellings in the hedonic rent model will contaminate the imputation for the
+‚Äúuse-value‚Äù of the dwelling.
+
+Table 1 reports a series of hedonic regression models where actual rent and estimated rent are regressed on
+a series of housing characteristics. Each of these models could potentially be used to predict the use-value
+of shelter, and all have potential concerns. For example, some important explanatory variables such as
+dwelling area are not significant in the regression explaining actual rent. While there are measurement
+concerns with all approaches, the concerns about sample size and rent control were the basis for deciding
+to use estimated rents for the models used to predict rent based on a series of housing attributes (Table 1,
+column 2). To ensure that all households are treated similarly, the predicted rental value from the model is
+used for all households. Figure 7 shows, as one expects, that inclusion of predicted rent in the consumption
+aggregate increases the regional dispersion of nominal consumption.
+
+ Figure 6. Regional distribution of households reporting actual rent
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+                                                                                                             11
+Table 1. OLS regression for different rent values in logarithms
+                                                                                Log of pooled total rent
+                                               Log of estimated     Log of
+                                                                                 with dummy, actual
+                                                rent of owners    actual rent
+variables                                                                          versus reported
+Beirut                                                            omitted
+Mount Lebanon                                     -0.268***        -0.312**            -0.223***
+North Lebanon                                     -0.810***          -0.104            -0.610***
+Bekaa                                             -0.847***          -0.182            -0.686***
+ South                                            -0.751***          -0.346            -0.602***
+ Nabatieh                                         -0.761***         -1.271*            -0.680***
+Number of rooms                                    0.123***         0.0926*             0.110***
+An independent house                                              omitted
+Villa (more than one floor)                         0.0517          0.00976               0.107
+An apartment in an independent building            0.135***         -0.0189             0.109***
+An apartment in a residential complex               0.0459            0.264             0.168***
+An improvised dwelling                            -1.030***          -1.747            -1.201***
+Room concierge                                    -0.476***          -0.266            -0.415***
+Others                                               0.14            -1.303              0.0614
+Size of dwelling area                            0.000814***       -0.00233             0.000452
+Less than 5                                                       omitted
+5 to 9                                              0.0141           -0.123              -0.127
+10 to 14                                          -0.00784             -0.5             -0.0921
+15 to 24                                           0.00989           -0.655              -0.127
+25 to 49                                           -0.0506           -0.971             -0.183*
+More than 49                                       -0.0419         -1.510**            -0.364***
+Marble                                                            omitted
+Parquet                                             0.0882            0.233              0.169
+Tiles                                             -0.103***         -0.655*            -0.191***
+Concrete                                          -0.506***          -0.598            -0.521***
+Soil                                                -0.159                               -0.373
+Other                                               -0.301                               -0.292
+public sewage                                                     omitted
+open sewage                                         0.178          -0.455**             0.104
+septic tank                                         -0.153           0.435              -0.166
+other                                              -0.0717                              -0.071
+no answer                                          -0.404*                               -0.47
+protected water source                                            omitted
+unprotected dug well                                -0.0416                               -0.07
+unprotected spring                                  -0.0686                              -0.181
+rainwater collection                                -0.134*         -0.0913              -0.157
+tanker                                               0.0362          -0.63                -0.13
+cart with small tank                              -0.235***          0.276                0.107
+surface water                                        0.0389           1.6                0.0594
+Dummy, 1 is actual renter                              na              na              -0.893***
+Constant                                           5.721***        7.410***             6.038***
+Observations                                          2259            430                 2689
+R-squared                                            0.586           0.206                0.428
+Source: Authors‚Äô calculation using HBS 2011.
+
+
+
+
+                                                                                                       12
+ Figure 7. Impact of excluding rent on welfare aggregate
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+            3.3.2    Durables
+
+Durable goods are typically important investments households make and often are useful indicators of the
+wealth of the households. When it is possible to estimate a use-value of these goods, it can be a potentially
+useful element of total consumption for distinguishing between the rich and poor. But, this estimation
+requires a significant amount of data and the HBS survey collects very limited information on stocks of
+durables. In particular, information on current value, age or condition of the goods is not available, and the
+exclusion of this data prevents the estimation of an annualized flow of consumption from durables. One
+exception to this is the case of transportation. For cars, motorcycles, buses and pick-ups owned by the
+household, the survey collects information on the current value, age and brand of the vehicle. Given the
+importance of cars and other private transportation in Lebanon, the decision was made to estimate annual
+use-value of these vehicles as the annual rate of depreciation. Using this information, the regression below
+was run with the current value of transport as a function of age of the vehicle, controlling for the brand for
+each type of vehicle. From this regression, we derive the annual rate of depreciation and use this as the
+estimated rental value of the vehicle.
+
+  Log (current value of transport) = F (brand, age, brand*age)                                          (1)
+
+Many households use cars for business purposes by providing taxi services and report percent of gasoline
+spent on these activities. This percent is deducted from annual consumption flow obtained from the
+regression (1). Final average annual depreciation (consumption flow) is shown in table 2. On average
+households are estimated to consume about USD551 from their transport annually, based on an estimated
+depreciation rate of nine percent.
+
+
+
+
+                                                                                                           13
+ Table 2. Annualized consumption flow from transportation by quintiles
+                                                   transport, annualized flow,      transport, annualized flow,
+ Quintile                                                thousand LBP                           USD
+ 1                                                              212                             141
+ 2                                                              412                             274
+ 3                                                              790                             524
+ 4                                                              935                             621
+ 5                                                             1808                             1200
+ Total                                                          830                             551
+ average value of transport                                    9010                             5979
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+             3.3.3   Education and health
+
+As noted in section two, health expenditures can either reflect preventative care, in which case the person‚Äôs
+wellbeing is improving, or can reflect a bad health outcome, in which case the person‚Äôs wellbeing is
+deteriorating. To a lesser extent, education expenditures can also be viewed as either being consumption or
+investment (where increased economic wellbeing is realized later in life). There are no clear rules on
+whether education and health expenditures should be included or excluded from welfare aggregate and the
+decision is mostly based on country context. Following Deaton and Zaidi (2012), the elasticity of education
+and health expenditures to total expenditure per capita have been estimated. As often observed in other
+countries, elasticity of education expenditures is higher than elasticity of health expenditures: 1.22 versus
+0.8 accordingly. Taking this into account and the fact that health insurance will be included in the welfare
+aggregate, the decision was to drop other health expenditures, but to include education expenditures. The
+results of the sensitivity test of dropping health expenditures will be shown further in the text in figure 19.
+
+       3.4 Adjustments to welfare aggregate
+
+             3.4.1   Spatial adjustment
+
+Prices typically vary across regions of a country, and between cities, towns and rural areas. To account for
+this, spatial price deflators are often used to adjust the welfare aggregate. In many surveys, including the
+Lebanon HBS, estimates of prices are only available for food items. For this reason, the welfare aggregate
+(ie. per capita consumption) is adjusted for spatial price differences with an index based on food prices.
+The food spatial deflator is constructed from unit values of food products (excluding alcohol and tobacco)
+and is based on Paasche price index. Paasche index is calculated using the formula below
+                                                     Ì†µÌ∞æ
+                                                                Ì†µÌ±É‚ÑéÌ†µÌ±ò
+                                             Ì†µÌ±ÉÌ†µÌ±É = ‚àë Ì†µÌ±§‚ÑéÌ†µÌ±ò ‚àó
+                                                                Ì†µÌ±É0Ì†µÌ±ò
+                                                    Ì†µÌ±ò=1
+
+where, Ì†µÌ±§‚ÑéÌ†µÌ±ò is the share of household h's budget devoted to good k. P0 is reference price vector. Ph is a vector
+of prices household face. For the spatial deflator, median regional and country level prices are used for each
+household.
+
+Unit food prices are calculated by dividing expenditures by purchased quantities. Several important steps
+have to be made before the construction of spatial deflator. The most important step is to ensure that prices
+
+
+                                                                                                                  14
+for each product are reported in the same unit. Only 28 percent of all products from food diary have one
+unit measure (figure 8). For an absolute majority of products two, three or even four units are reported. For
+example, prices for eggs can be reported in pieces, kilograms and boxes. Assuming that food items reported
+in one unit are on average the same quality as when reported in a different unit, it is straightforward to
+convert all prices to a common unit for each item. In addition to converting all prices to consistent units for
+each item, there is a need to clean the data for some products which are very rare and not observed
+throughout the country. Steps below explain the whole process in detail.
+
+For each product a ‚Äúmain‚Äù unit is created. Observations in other units are dropped. Unit is considered as a
+‚Äúmain‚Äù if it accounts for 70 or more percent of observations for this particular product. For example, bread
+is measured in kilograms or grams in most of the cases, water in liters and so forth. Given that prices in
+liters and kilograms can be used interchangeably, the ‚Äúmain‚Äù unit is also created if sum of observations in
+kilograms and liters is higher or equal to 70 percent.
+
+Prior to estimating the price index, observations are dropped for the following reasons: 1.) if reported units
+is different from the designated ‚Äúmain‚Äù unit; 2.) there are fewer than three observations of the product in a
+region; 3.) the product is observed in less than three regions from six available. After cleaning the data, the
+number of products declined from 258 to 136. However, the impact on the number of observations and
+overall expenditures was not substantial. Only 20 percent of all observations and 13 percent of total
+expenditures were lost.
+
+ Figure 8. Shares of products by number of unit measures, %
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+Having cleaned the price data, mean prices at household level are created. Outliers are replaced by boundary
+values equal to mean plus/minus two standard deviations. Weighted median prices at regional and country
+level are calculated for each household and product. Household level deflators are constructed for each
+product by dividing regional prices over country averages. Within each household, the weighted average
+deflator is constructed using the expenditure share of different product as the weight. Afterwards, average
+deflators for each of six region are calculated. A simple illustration of this procedure is shown in table 3.
+
+
+
+
+                                                                                                            15
+    Figure 9. Unit measures for selected products
+
+
+
+
+    Source: Authors‚Äô calculation using HBS 2011.
+
+
+    Table 3. Example of calculation of food deflator
+                                            1         2                3=1/2                     4            5=3*4
+                                         median    country            Deflator,                             deflator at
+               Household                regional   median       for each product and       Expenditure      household
+     Region         id        product     price     price            household               shares            level
+     Beirut         1          bread       6.1        6                 1.02                  0.8
+     Beirut         1          milk        4.2        4                 1.05                  0.2              1.02
+     Beirut         2          Bread       6.2        6                 1.03                  0.7
+     Beirut         2          Sugar       5.5        5                 1.10                  0.3              1.05
+     Beirut         3          Bread       6.1        6                 1.02                  0.6
+     Beirut         3          Milk        4.1        4                 1.03                  0.4              1.02
+    average deflator Beirut                                                                                    1.03
+
+
+The resulting food spatial deflator is shown in figure 10. The highest food prices are observed in Mount
+Lebanon and Beirut. Lower than country average prices are observed in North Lebanon, Bekaa and South.
+
+Ideally, the nonfood part of welfare aggregate should be adjusted by nonfood deflator. However, unit prices
+for nonfood products are not available in the survey, while ancillary data on non-food prices does not
+generate plausible numbers.5 One of the ways to overcome this challenge is to use rent prices as a proxy of
+nonfood prices for spatial deflation. Given that actual rent values seem to be affected by rent control, we
+have used reported rents of owners to estimate a hedonic model regression and to predict average rent for
+six regions for a typical apartment. The most common apartment has five rooms with dwelling area of
+apartment of 140 square meters in building of 25-49 years old with public sewage, tile floor and protected
+
+
+
+5
+ Another way of calculating spatial deflator is to use external source of information on prices. The authors tried using
+a database with prices for 257 food and nonfood products collected by CAS, but ultimately decided that this approach
+would not solve the issue given that only few nonfood products in housing section were available.
+
+                                                                                                                      16
+source of drinking water. Predicted rents were used along with population weights to calculate nonfood
+deflator. The results from this analysis are shown in table 4.
+
+ Figure 10. Spatial food deflator by regions, index
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+ Notes: country average price is the base.
+
+
+Rents in Beirut are the highest being 51 percent above the country average. Mount Lebanon is on the second
+place with rents being 24 percent higher than the country average. In other regions, rent prices are lower
+than the average for Lebanon. Given large share of nonfood consumption in Lebanon, the impact of nonfood
+deflator is substantial. For example, if we apply food deflator to food consumption and rent deflator to
+nonfood consumption, the estimated poverty rate in Beirut would be higher than in Nabatieh, which is
+considered to be a non-credible finding. Largely for this reason, the decision was made to apply food
+deflator to all components of welfare aggregate. After applying food deflator to welfare aggregate,
+consumption is adjusted for intra-regional variation in prices (figure 11). Expectedly, nominal welfare
+aggregates for Beirut and Mount Lebanon are higher than spatially deflated ones because of high prices in
+these regions.
+
+ Table 4. Predicted rent, nonfood and food deflators
+                                    predicted rent in log   nonfood deflator (rent)   food deflator
+ Beirut                                     6.66                    1.51                  1.03
+ Mount Lebanon                              6.40                    1.24                  1.04
+ North                                      5.86                    0.70                  0.97
+ Bekaa                                      5.82                    0.66                  1.00
+ South                                      5.91                    0.76                  0.99
+ Nabatieh                                   5.90                    0.74                  1.01
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note:
+
+
+
+
+                                                                                                       17
+    Figure 11. Nominal and spatially adjusted welfare aggregate
+
+
+
+
+    Source: Authors‚Äô calculation using HBS 2011.
+    Notes: Imputation is based on negative binomial regression.
+
+               3.4.2    Inter-temporal adjustment
+
+Welfare aggregate should be adjusted for inter-temporal price variation because data collection period was
+spread over one year. There is monthly information on prices for 12 COICOP groups in 6 regions. May
+2012 was selected as a base and a new price indexes were constructed for 12 COICOP groups to deflate
+nominal aggregate over the entire sample.
+
+               3.4.3    Adjustment to household size
+
+Consumption is measured at the level of the household, while poverty is most typically considered to be an
+individual-level attribute. This means that the value of total household consumption needs to be allocated
+to the members of each household in order to measure poverty. One common way of allocating household
+consumption to the individual is to simply divide by household size; which is to say, to evenly allocate
+household consumption to each member. This measure of consumption per capita is used in Tunisia and
+Jordan. An alternative approach is to transform the household into adult equivalents, in terms of
+consumption needs. This approach is used in several countries as well, including many countries in the
+European Union.6 The choice between the two options depends on the demography of the country and
+perceptions about the equivalence scales to convert household expenditures into money metric of individual
+welfare.
+
+In terms of adult equivalents, a household with two adults and two children is typically assumed to have
+consumption needs that are less than four adult equivalents. A household with four working-age adults is
+typically assumed to be equal to four adult equivalents. In practice, even when households consist of adults
+and children, household size is often used in part because it is simple and easy to communicate.
+Nevertheless, it is a strong assumption. It does not take into account the fact that kids may consume less
+
+6
+ The United States implicitly uses a mix of adult-equivalence and economies-of-scale adjustment factors by
+defining different basic needs for different family types.
+
+                                                                                                             18
+food than adults as well as any economies of scale in consumption within a household. Economy of scale
+is related to existence of goods and services with a ‚Äúpublic good‚Äù aspect to them such as television, housing
+and durable goods (Deaton and Zaidi, 2002). Because people can share these goods, simply dividing by
+household size will understate welfare of large households compared to small households.
+
+In case of Lebanon, the previous practice was to adjust for adult equivalents and economies of scale through
+using household specific poverty lines. Using this approach, the food poverty line is constructed using the
+caloric requirements of individuals and is specific to each household depending on its demographics. In
+contrast, the current methodology described in this report uses a single poverty line for everyone. Given the
+lack of agreed upon equivalence scales for Lebanon and for the sake of transparency, simplicity and ease
+of communication, the official poverty estimates are based on per capita consumption.7 In addition to the
+official poverty estimates based on consumption per capita, this report presents supplementary poverty
+estimates based on using two different options to equivalence scale. Results of this analysis are provided in
+section 5.2 on supplemental poverty analysis.
+
+      4. Construction of poverty line
+
+This section is devoted to construction of poverty line as a threshold for assessing whether an individual
+can attain a minimum required level of wellbeing.
+
+          4.1           Food poverty line
+
+The first step in construction of food poverty line is to calculate average costs per one calorie. This cost per
+calorie is then multiplied by an estimated minimum number of calories to give the food poverty line. In
+order to estimate cost per calorie, food consumption (purchases) from the individual diary need to be
+converted into calories. Given that kilocalories information for each product is provided for 100
+grams/milliliters, all products in the diary should be in the same measurement units, namely grams or
+milliliters. Average rescaling factors were calculated for transformation using the following formula
+
+Ì†µÌ±ÖÌ†µÌ∞πÌ†µÌ±ñÌ†µÌ±ó = Ì†µÌ±ùÌ†µÌ±üÌ†µÌ±ñÌ†µÌ±êÌ†µÌ±íÌ†µÌ±ñ /Ì†µÌ±ùÌ†µÌ±üÌ†µÌ±ñÌ†µÌ±êÌ†µÌ±íÌ†µÌ±ó , where
+
+RF is rescaling factor, i indicates either grams or milliliters and j indicates such units as boxes, bunches,
+pieces. For illustrative purposes assume that the average price per one gram of egg is 6.67 LBP, while one
+egg costs 250 LBP. Rescaling factor is equal to 0.027=6.7/250. Knowing this rescaling factor we can
+transform pieces intro grams. For instance, eight eggs are estimated to weigh 300 grams = 8/ 0.027.
+
+After rescaling weights of each product into grams/milliliters, we assign calories and calculate total amount
+of calories consumed per day per capita for each household. For each household we also know the
+expenditure. This allows us to estimate the cost per calorie. Calorie intake and costs of one calorie are
+shown in table 5. For comparison, the same indicators are shown for 2004 as well. As expected, price per
+calorie is higher for wealthier households and they also consume more calories on average. For quality
+control purpose, average per capita quantities purchased for main products have been calculated. All
+numbers look plausible except oil and vegetable oils which can be associated with issues of seasonality and
+
+
+7
+ Per capita is based on a measure of household size that excludes guests and those living outside the country for
+work.
+
+                                                                                                                    19
+the lack of temporal stratification in the field design (and potentially also affected by respondents reporting
+purchases instead of consumption).
+
+ Table 5. Daily per capita calorie intake and costs in 2004 and 2011
+                                         2011                                                             2004
+                    cost by LBP per one     daily per capita calorie                    cost by LBP per          daily per capita
+ Quintile                   calorie                 intake                                one calorie             calorie intake
+ 1                           1.44                    2094                                     0.73                    1661
+ 2                           1.69                    2515                                     0.79                    2215
+ 3                           1.78                    3114                                     0.86                    2544
+ 4                           2.02                    3095                                     0.95                    2923
+ 5                           2.34                    4174                                     1.18                    3536
+ Total                       1.85                    2997                                     0.94                    2576
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note: UNDP (2008) is a source of 2004 data.
+
+
+Given the observable variation in the cost per calorie by income group, the final step is to select a reference
+group upon which the cost per calorie is based. Given the desire to have this price reflect an average price
+for the relatively less well off, the second to fifth deciles are used to support the estimated cost per calorie.
+More formally, food poverty line is defined as followed
+                                                                 ‚àëÌ†µÌ±ñ Ì†µÌ±ùÌ†µÌ±ñ ‚àóÌ†µÌ±ûÌ†µÌ±ñ
+                                         Ì†µÌ±ÉÌ†µÌ∞øÌ†µÌ±ìÌ†µÌ±úÌ†µÌ±úÌ†µÌ±ë = Ì†µÌ∞∂Ì†µÌ±Ö ‚àó    ‚àëÌ†µÌ±ñ Ì†µÌ∞∂Ì†µÌ±ñ
+                                                                                ,   where
+
+ CR is a calories requirement to meet basic need, pi prices, qi quantities, Ci calories of individual i in
+reference group. CR is set to 2400 calories which is around CR chosen for poverty estimation in 2004
+(UNDP 2008). After plugging all necessary information into the formula, annual food poverty line for 2011
+HBS is 1480.5 thousand LBP. It is 75 percent higher than the average food poverty line constructed using
+2004 data.
+
+
+
+
+                                                                                                                                    20
+ Table 6. Daily per capita consumption of selected products, in grams or milliliters
+                                                                                 per capita quantity
+                                                                                consumed in grams or
+ Products                                                                             milliliters
+ White Arabic bread                                                                      190
+ Arabic sweets                                                                            66
+ Rice                                                                                     77
+ Beef                                                                                     54
+ Lamb                                                                                     41
+ Chicken                                                                                  93
+ Fish                                                                                     81
+ Powdered milk                                                                            44
+ Labneh                                                                                   30
+ Yoghurt                                                                                  88
+ Eggs                                                                                     30
+ Olive oils                                                                              204
+ Vegetable oils                                                                          141
+ Apples                                                                                   92
+ Tomato                                                                                  100
+ Cucumber                                                                                 63
+ Potato                                                                                  222
+ Sugar                                                                                   122
+ Chocolate bars                                                                            8
+ Coffee                                                                                   19
+ Local water                                                                            1196
+ Soft drinks                                                                             125
+ Canned fruit juice                                                                       65
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+       4.2      Non-food component of poverty line
+
+One of the common ways to estimate the non-food allowance is to increase food poverty line by the average
+nonfood share of households whose total expenditures are close to food poverty line. But, because of a
+relatively high average nonfood share, nobody in Lebanon had consumption per capita lower than food
+poverty line in 2011. Another common ways to estimate the non-food allowance is to increase food poverty
+line by the average nonfood share of households whose food expenditures are close to food poverty line.
+But, now in this case, the nonfood share for the subsample of household around food poverty line was
+around 74 percent, which is higher than the overall average of 71 percent. Almost by definition, if the
+nonfood allowance is greater than the average nonfood expenditure, then the resulting poverty rate will be
+very high. The motivation for both approaches in selecting a nonfood allowance is to find an amount that
+allows one to buy basic nonfood needs. In the two initial approaches considered, one resulted in a nonfood
+allowance that was so small, essentially no one was poor and the other sub-sample produced a nonfood
+allowance that is sizeable more than what most people spend on nonfood goods. Neither outcome is
+satisfactory.
+
+To resolve this issue, the nonfood allowance is estimated from the same reference population as used for
+construction of food poverty line ‚Äì 20-50th percentile. Using this subsample of households (N=786)
+generates average nonfood share of 69 percent which makes much more sense being lower than the average
+
+
+                                                                                                       21
+for the whole population. Now, with the food poverty line estimated and the nonfood allowance
+estimated, the cost-of-basic-needs poverty line is defined simply as:
+
+                                                                   Ì†µÌ±ìÌ†µÌ±úÌ†µÌ±úÌ†µÌ±ë Ì†µÌ±ùÌ†µÌ±úÌ†µÌ±£Ì†µÌ±íÌ†µÌ±üÌ†µÌ±°Ì†µÌ±¶ Ì†µÌ±ôÌ†µÌ±ñÌ†µÌ±õÌ†µÌ±í
+                                       Ì†µÌ±ùÌ†µÌ±úÌ†µÌ±£Ì†µÌ±íÌ†µÌ±üÌ†µÌ±°Ì†µÌ±¶ Ì†µÌ±ôÌ†µÌ±ñÌ†µÌ±õÌ†µÌ±í =
+                                                                   1 ‚àí Ì†µÌ±õÌ†µÌ±úÌ†µÌ±õÌ†µÌ±ìÌ†µÌ±úÌ†µÌ±úÌ†µÌ±ë Ì†µÌ±†‚ÑéÌ†µÌ±éÌ†µÌ±üÌ†µÌ±í
+
+Plugging in the estimated values for each results in the estimated poverty line of 4729 ‚âà 1480.5/ (1-
+0.687). In other words, a person who is consuming less than LBP 4,729 annually is identified as poor, and
+anyone above this amount is not poor.
+
+Poverty rates
+
+Overall, poverty in Lebanon is estimated at 27 percent. Table 7 shows the estimates for country level
+poverty rate, poverty gap and squared poverty gap.8
+
+The regional poverty rates resulting from this poverty line are shown below (figure 12). Due to very small
+sample size, regional numbers should be treated with caution. Poverty is the lowest in Beirut, followed by
+Mount Lebanon and Nabatieh. The poorest regions are North Lebanon and Bekaa.9
+
+    Figure 12. Poverty rates by regions
+
+
+
+
+    Source: Authors‚Äô calculation using HBS 2011.
+    Notes: Imputation is based on negative binomial regression.
+
+
+    Table 7. Poverty in Lebanon, 2011/2012
+                         Estimate                                  Std. Err.                             [95 percent C.I.]
+    p0                      0.27                                     0.02                             0.24              0.31
+    p1                      0.07                                     0.01                             0.06              0.09
+    p2                      0.03                                     0.00                             0.02              0.04
+    Source: Authors‚Äô calculation using HBS 2011.
+
+
+8
+    Inequality measures are shown in the annex.
+9
+    Confidence intervals are shown in the annex
+
+                                                                                                                               22
+    5. Supplemental information
+
+       5.1       Robustness tests of poverty rates based on consumption per capita
+
+Prior to these estimates based on the 2011 HBS data, poverty had only been available at one other point in
+time since 2000. In an environment with major political and economic shocks, it is particularly important
+to have timely and accurate poverty estimates. The primary constraint to providing timely updates of the
+poverty profile and estimates is the limited supply of household survey data. Lebanon lags behind in the
+collection of micro data compared to other upper middle income countries (Serajuddin, et al. 2015). A key
+constraint to providing accurate poverty estimates for Lebanon is the issue of non-response. The 2011-12
+poverty headcount of 27 percent provided in this report is derived from a nationally representative sample
+of households, but 43 percent of this representative sample ultimately did not participate in the survey.
+Analysis of the data indicates that the non-responders disproportionately came from enumeration areas that
+were on average better off, indicating that non-responders were less likely to be poor than responders. The
+sampling weights have been adjusted to account for this effect, but the effectiveness of this adjustment is
+largely unknown.
+
+Given the data limitations and caveats, it is important to triangulate obtained poverty results using other
+information available in the 2011 HBS. In the same way, a poverty line is both a statistical and social
+concept. Even in the hypothetical case of data without any flaws or weaknesses, there is no guarantee that
+the poverty line estimated from these data will result in a definition of poverty that resonates with the social
+and economic norms of the society. The 2011 HBS data provides a unique opportunity to assess whether
+the estimated poverty line reflects values of the Lebanese population. There is a question in the survey
+asking households how much income they think is needed to have a decent life. This information has been
+used to calculate income per capita values across the distribution using consumption per capita quintiles.
+One would not necessarily want to base a poverty line for a country on what the wealthiest in the country
+deemed to be need to have a decent life, but certainly how some of the poorest in society answer this
+question is relevant. The estimated CBN poverty line is compared to the average income households believe
+is necessary by consumption quintile. Results are shown in figure 13, which shows that the CBN poverty
+line (red dotted line) is actually greater than the average response given by the bottom 20 percent as to the
+amount of income needed to live a decent life. For all other quintiles, the reported average income needed
+is above the CBN line. In a middle-income country, this figure provides some supporting evidence that the
+poverty line does indeed resonate with how the people of Lebanon might define minimum needs for the
+poorest people in the society.
+
+
+
+
+                                                                                                             23
+ Figure 13. Welfare aggregate, poverty line and self-assessed income per capita across quintiles
+                          16,000
+                                                                                                     14078
+                          14,000
+
+                          12,000
+                                                                                    10226
+  per capita, yearly, LB P, thou
+
+
+
+
+                          10,000
+                                                                                                                   8671
+                                                                      7530                                             7788
+                                   8,000              6946
+
+                                   6,000
+                                           4620
+                                   4,000
+
+                                   2,000
+
+                                      0
+                                            bottom         2              3              4              top          total
+                                                                 quintiles, consumption per capita
+                                                     yearly self-assesed income per capita to have a decent life
+ Source: Authors‚Äô calculation using HBS 2011.
+
+Households were also asked to classify themselves into six groups: wealthier, financially well-off, average,
+average to poor, poor and very poor. This self-evaluation was used for poor and nonpoor households using
+based on objective poverty line and welfare aggregate constructed (figure 14). 38 percent of poor population
+rank themselves as poor or very poor compared to 13 percent among non-poor. Another interesting question
+was how long households can survive if they lost all sources of income. Here we also see clear correlation
+between objective poverty measure based on monetary poverty line and this subjective question (figure 15).
+Thus, the poorest population from the bottom quintile would survive for half of the month, while the richest
+could survive about two months. This is a piece of supporting evidence that the consumption aggregate has
+sorted the poor from the nonpoor in a credible way.
+
+ Figure 14. Self-assessment of households across Figure 15. Number of months without income
+ welfare status, %                               across quintiles, %
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note: Reference group is population.
+
+
+                                                                                                                              24
+Possession of certain durables is often used as an important indicator of wealth. Availability of cars and
+computers across consumption per capita quintiles is shown in figures 16 and 17. Clearly, the poorest
+population are less likely to possess computers and cars compared to wealthier ones. For example, only 24
+percent of population in the bottom quintile have computer compared to 70 percent among the top quintile.
+The fairly steep gradient in ownership of car and computers across quintiles corresponds well with
+expectations ‚Äì as households become better-off they are more likely to own cars and computers. This is
+simply supporting evidence then that the construction of the consumption aggregate appears to be sorting
+households in the way one expects.
+
+ Figure 16. Ownership of cars across quintiles, Figure 17. Ownership of computers across
+ %                                              quintiles, %
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note: Reference group is population. Cars include buses and pick-ups.
+
+Finally, sources of income across the distribution using consumption per capita were checked (table 8).
+Remittances from abroad play a more important role for the richest, which is consistent with the theory and
+empirical findings from other studies showing that the costs of international migration preclude the poorest
+from migration. In contrast, transfers from NGO and government aid play a more important role for the
+most vulnerable from the poorest quintile. Finally, also aligning with expectations, only rich households
+have income from financial assets.
+
+ Table 8. Source of income across quintiles, %
+                                                                       quintiles, consumption per capita
+ income source                                                    bottom            2      3       4       top
+ remittances from abroad                                             6             13      9      17       18
+ transfer from NGOs                                                 10              5      4       3        3
+ governmental aid                                                    3              3      2       2        3
+ income from financial assets                                        0              1      2       4        3
+ Source: Authors‚Äô calculation using HBS 2011.
+ Note: Reference group is households.
+
+
+In order to test sensitivity of poverty to different choices made, the impact of including health expenditures
+and use-value of durables on welfare aggregate has been explored. Sensitivity of poverty rates to changes
+
+
+                                                                                                             25
+in poverty line and reference group were tested as well. Results are shown below. The choice between
+different reference groups for defining food and total poverty line affects poverty rates, but qualitatively
+regional results stay the same and the impact is not substantial. Figure 18 shows poverty rates for default
+reference group from the 20-50th percentile and alternative group from 20-35th percentile. Choosing poorer
+reference group lowers poverty line and as a result poverty drops, but only slightly.
+
+ Figure 18. Poverty rates for different reference groups
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+ Including health increases welfare aggregate substantially and lowers poverty from 27 to 17 percent (figure
+19). In contrast, including durables has only a tiny impact (figure 20). Welfare aggregate increases, but
+without significant impact on poverty. Finally, sensitivity of poverty to changes in poverty lines was tested
+(five percent change in poverty line). Poverty rates are sensitive to the choice of poverty line given that
+many households are located around it. In particular, changing the poverty line by five percent changes
+poverty by around 12 percent (figures 21 and 22).
+
+ Figure 19. Poverty rates, including and Figure 20. Poverty rates, including and excluding
+ excluding health expenditures           durables
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+                                                                                                          26
+ Figure 21. Poverty rates using different poverty Figure 22. Cumulative distribution
+ lines                                            consumption per capita and poverty lines
+
+                                                                1
+
+
+                                                               .8
+
+
+
+
+                                  Cumulative Probability
+                                                               .6
+
+
+                                                               .4
+
+
+                                                               .2
+
+
+                                                                0
+                                                                    0       2000        4000        6000      8000      10000
+                                                                        spatially adjusted welfare aggregate per capita
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+
+
+       5.2 Supplementary poverty rates based on consumption per adult equivalent10
+
+For transparency and simplicity reasons, official poverty estimates presented in this report are based on
+consumption per capita. While many countries use per capita consumption, this is by no means true for all
+countries. In some cases, basic needs are assumed to vary depending on whether the individual is an adult,
+a child, or an elderly person. These adjustments typically convert all individuals into their adult equivalent
+size. So, a child might be assumed to have needs that are half that of an adult. In other cases, poverty
+estimates may embed assumptions about household units being able to reap the benefits of economies of
+scale. The basic idea here is that two people may be able to live more cheaply if they live together rather
+than if they live separately. If most consumption in the household is private or not shareable (if one person
+consumes it, the other person cannot), then the scope for economies of scale is limited. If on the other hand,
+there is significant level of consumption of items that are nearly public goods at the household-level (if one
+person consumes it, the other person can also consume it), then there is likely to be scope for economies of
+scale. One implication of both adjustments is that poverty may potentially be overestimated for large
+households (and understated for small households) using consumption per capita welfare aggregate because
+they tend to have higher family size and proportionately more children.
+
+As a very rough approximation, most food consumption is private, while consumption of nonfood items
+such as shelter, light, access to clean water, has some important within-household public good dimensions.
+In the case of Lebanon, the age structure of the population is relatively old, and so the adjustment for adult
+equivalence may have relatively small effects. In contrast, the nonfood share in Lebanon is relatively high,
+and the measurement of poverty might be quite sensitive to adjusting for economies of scale.
+
+Household specific poverty lines, used to measure poverty for 2004-05 data, adjust for adult equivalents
+and economies of scale. For 2011 data, the decision was made to use a simpler and more transparent
+
+
+10
+  The team has conducted similar triangulation tests as was done for poverty based on consumption per capita.
+Results are qualitatively similar and are available upon request.
+
+                                                                                                                           27
+approach by constructing a single poverty line and adjusting the welfare aggregate. Also because there is
+no established equivalence scale for Lebanon, the adjustment of the household-level welfare aggregate was
+done in per capita terms. Nevertheless, for illustrative purposes, supplementary poverty estimates have been
+produced using two different equivalence scales. The general formula to adjust for adult equivalents and
+economies of scale is shown below.
+
+Ì†µÌ∞¥Ì†µÌ∞∏ = (Ì†µÌ∞¥ + Ì†µÌªºÌ†µÌ∞æ)Ì†µÌºÉ , where
+
+A is the number of adults in the household, and K is the number of children. The parameter Ì†µÌªº is the cost of
+a child relative to that of an adult, and lies somewhere between 0 and 1. The other parameter Ì†µÌºÉ also lies
+between 0 and 1 and controls the extent of economies of scale. If both Ì†µÌªº and Ì†µÌºÉ are equal to one, the number
+of adult equivalents is simply household size (Deaton and Zaidi, 2002).
+
+In this report, the first equivalence scale assumes that consumption needs of children (0-15 age) is one half
+that of the consumption needs of adults (above 15 age) or in other words Ì†µÌªº is equal to 0.5. The first
+specification also assumes that there is no economy of scale, so Ì†µÌºÉ is equal to one. The second specification
+considered for illustrative purposes, maintains Œ± equal to 0.5, while introducing economy of scale measured
+by Œ∏ equal to 0.92.11
+
+Using adult-equivalent scales defined above requires introducing changes in the construction of food
+poverty line. The food poverty line is anchored to 2400 calories as the estimated nutritional requirement an
+average person in Lebanon needs for good health including kids and elderly. The caloric anchor corresponds
+to the caloric requirements used in the previous poverty report based on the 2004 HBS data. But, this
+estimated caloric requirement is based on taking the population-weighted average of estimated caloric needs
+for adults and children. When the welfare aggregate is converted into adult equivalents, the caloric
+requirement similarly must be based on the average caloric requirements of adults only. This report uses
+daily calories requirement by age and sex used to calculate poverty lines for 2004 HBS published in UNDP
+(2008). The simple average calories intake for adult population between 16-60 ages is 2800 calories which
+is higher compared to 2400 calories needed for an average person. This new anchor for caloric requirement
+was used to recalculate food poverty line.
+
+Average values of consumption per adult equivalent using two proposed scales along with supplementary
+poverty estimates are shown in figures 23 and 24. As can be seen in figure 23, shifting welfare aggregate
+from per capita to adult equivalent scale makes substantial difference in terms of the level of welfare
+aggregate. Consumption per capita is always lower than consumption per adult equivalent regardless of the
+scale used. This is an expected result given that the size of household is much smaller when expressed in
+adult equivalents, and this leads to higher welfare aggregate. The impact of using the adult-equivalent scale
+is more pronounced in regions with larger household size, namely North Lebanon and Bekaa.
+
+
+
+
+11
+   There are no established equivalence scales for Middle East and North Africa countries and many use per capita
+welfare aggregates to measure poverty, while other embed equivalence scale by using household specific poverty
+lines. West Bank and Gaza is among the few to explicitly adjust to economy of scale and household composition.
+The following formula is used AE = (A + 0.46 C)^0.89.
+
+
+                                                                                                                28
+ Figure 23. Consumption in per capita and adult equivalent terms
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+The impact of using different adult-equivalence scales on poverty is less straightforward to interpret. When
+considering the adjustment for only adult equivalents, there is almost no change in the overall national
+poverty rate. This happens because food poverty line is scaled up if adult equivalent scale is used and this
+effect is strong enough to counterbalance impact of the higher welfare aggregate. However, the regional
+profile does change reflecting demographic differences in terms of the number of children per household
+in each of the regions. While there is not much change when adjusting for adult equivalence (at least in the
+example considered in this analysis), there are significant changes when examining the sensitivity of the
+poverty estimates for the assumption of economies of scale. This is in large part due to the issue that when
+accounting for economies of scale, there is no matching adjustment done to the poverty line (as was done
+with the adult-equivalence example). For the purposes of illustration, when the economies of scale factor
+shifts from 1 to 0.92 (maintaining Ì†µÌªº equal to 0.5), poverty in Lebanon drops from 27 percent to 20 percent.
+It is important to note that if the economies of scale factor were set at an even lower value (indicating
+greater economies of scale), the estimated poverty rate would drop further. While the current poverty
+estimate is based on per capita consumption and assumes no economies of scale in household consumption,
+the estimates presented in this section provide useful supplementary detail. As the economy continues to
+grow, and the food share shrinks, future poverty estimates for Lebanon may place greater emphasis on the
+value in adjusting for economies of scale.
+
+
+
+
+                                                                                                         29
+ Figure 24. Poverty rates based on consumption per capita and adult equivalent
+
+
+
+
+ Source: Authors‚Äô calculation using HBS 2011.
+
+    6. Concluding remarks and further steps
+
+Collecting data in Lebanon is a particularly challenging under-taking, and these challenges force one to be
+cautious in presenting and interpreting the poverty estimates. The purpose of this report is to provide a
+transparent description of how poverty has been estimated based on the 2011 HBS, including the
+assumptions made and the relative sensitivity of the estimate to these assumptions. Several important
+caveats should be kept in mind while using and interpreting information shown in this report. Firstly,
+poverty numbers presented in this report cannot be compared with poverty estimates for other years because
+of differences in data, instruments, methodology for constructing the aggregate, methodology for estimating
+the poverty line, fieldwork implementation, and to some extent, sample design. Secondly, all regional
+estimates in this report should be viewed with caution given concerns about significant levels of
+nonresponse and relatively small sample sizes within regions.
+
+Poverty measurement is an evolving concept and needs to ensure that it captures the changing realities of
+life of the poor. This is particularly relevant for the context of Lebanon with its exposure to external and
+internal shocks. There are three potential areas to consider for potential re-examination in future estimates
+of poverty based on the next round of HBS data collection in Lebanon. The first important issue is to
+establish improved methods for reducing the high rate of unit and item non-response in future household
+budget surveys. As indicated in the report, unit non-response was very high both in 2004 and 2011 rounds
+of the data, and there is ample evidence that the nonresponse was not random. There is some preliminary
+evidence that this may be partially related to the survey burden due to using time-intensive survey
+instruments such as individual diaries. Piloting different instruments to collect consumption data as well as
+information about non-respondents is an important step to consider. The second area for improvement can
+be related to changing survey design to mitigate effects of seasonality revealed in 2011 data. One potential
+solution to this issue is to either reduce the time frame for field work, or ensure that fieldwork is temporally
+stratified. Finally, further exploration of economies of scale and adult equivalence in the measurement of
+individual wellbeing is a third area for consideration.
+
+                                                                                                             30
+    References
+
+European Union (2009). ‚ÄúLebanon Country Statistical Situation Report. Version 2.0,‚Äù Brussels.
+Deaton, A. and Zaidi, S. (2002). Guidelines for Constructing Consumption Aggregates for Welfare Analysis.
+   World Bank. Washington, DC.
+Haughton, J. Khandker, S. (2009). Handbook on Poverty and Inequality. Washington, DC: World Bank. ¬©
+   World Bank. Available from: https://openknowledge.worldbank.org/handle/10986/11985 License: CC
+   BY 3.0 IGO.
+
+Lebanese Information Center (2013). The Lebanese Demographic Reality, Beirut.
+Mistiaen, J. and Ravallion, M. (2003). Survey Compliance and the Distribution of Income. World Bank
+   Policy Research Working Paper 2956.
+Ravallion, M. (1998). Poverty lines in theory and practice. LSMS working paper ‚Ññ 133. Washington, DC.
+Serajuddin, U., Hiroki U., Wieser, C., Yoshida, N. and Dabalen, A. (2015) ‚ÄúData Deprivation: Another
+    Deprivation to End.‚Äù World Bank Policy Research Working Paper Series No. 7252. Available from:
+    www-wds.worldbank.org/external/default/WDSContentServer/WDSP/IB/2015/04/28/
+    090224b082e17c6c/1_0/Rendered/PDF/Data0deprivati0r0deprivation0to0end.pdf.
+StataCorp. (2013). Stata: Release 13. Statistical Software. College Station, TX: StataCorp LP.
+UNDP (2008). ‚ÄúPoverty, Growth and Income Distribution in Lebanon,‚Äù August.
+United Nations (2005). Designing Household Survey Samples: Practical Guidelines. New York: United
+   Nations.
+
+
+
+
+                                                                                                        31
+      Annex
+
+
+Table A1. COICOP items taken from individual diary
+COICOP groups       Name
+3111                food products
+5611                cleaning products
+5612                maintenance and cleaning products
+5613                articles for cleaning
+5614                paper products (including nylon and aluminum papers)
+5615                other non-durable house goods
+7221                fuel and lubricants for personal transport equipment
+7241                other expenses related to personal transportation
+7311                costs related to land transportation
+9521                Newspapers
+11111               Restaurants
+11112               caf√©s and snack bars and the like (consumption at the mentioned places)
+11113               ready-made foods(outdoor consumption)
+11114               meals from snack bars (outdoor consumption)
+11115               food and drinks from street vendor or vending machines
+11121               Canteens
+12131               personal care goods
+12132               personal non-electrical devices
+12133               cosmetic items
+12135               other miscellaneous items for personal care
+56212               house services supplied by enterprises or self-employed persons
+111162              meals provided by societies
+111163              meals provided by employers
+111171              food and drink expenses at workplaces
+Source: HBS 2011.
+
+
+
+
+                                                                                              32
+Table A2. COICOP durable items excluded from welfare aggregate
+code        name
+0511        Furniture
+0512        Carpets and other floor coverings
+0531        Major house appliances whether electric or not
+0551        Major tools and equipment
+071         Purchase of vehicles
+08211       Telephone and telefax equipment purchasing cost
+083111      Official telephone line installation cost
+083112      Cellular phone line installation cost
+0911        Equipment for the reception, recording and reproduction of sound and pictures
+0913        Information processing equipment
+0921        Major durables for outdoor recreation
+0922       Musical instruments and major durables for indoor recreation
+091211     Camera with accessories - new
+091212     Camera with accessories - used
+091213      Video camera - new
+091214      Video camera - used
+1231       Jewelry and watches
+Source: HBS 2011.
+
+
+
+Table A3. Inequality measures by regions
+                                                                            Gini                  Theil
+Beirut                                                                      0.28                  0.14
+Mount Lebanon                                                               0.33                  0.19
+North Lebanon                                                               0.30                  0.16
+Bekaa                                                                       0.29                  0.15
+South                                                                       0.30                  0.15
+Nabatieh                                                                    0.27                  0.13
+Lebanon                                                                     0.32                  0.17
+Source: Authors‚Äô calculation using HBS 2011.
+
+
+
+Table A4. Regional poverty in Lebanon, 2011/2012
+                                                    estimate              Std. Err.         [95 percent C.I.]
+Beirut                                                0.16                  0.03            0.10        0.23
+Mount Lebanon                                         0.22                  0.03            0.16        0.28
+North Lebanon                                         0.36                  0.03            0.29        0.42
+Bekaa                                                 0.38                  0.03            0.32        0.43
+South                                                 0.31                  0.03            0.25        0.38
+Nabatieh                                              0.25                  0.03            0.18        0.31
+Lebanon                                               0.27                  0.02            0.24        0.31
+Source: Authors‚Äô calculation using HBS 2011.
+
+
+
+
+                                                                                                            33
+Table A5. Consumption per capita and shares by COICOP groups and quintiles
+                                                           % in total expenditure by quintiles
+                                                           Furnishing
+                       Alcohol   Clothing      Housing                                                              Restaurant
+            Food and                                           s,                  Communic                                    Miscellane
+                      beverages,   and           and                    Transport              Recreation Education   s and                 total
+            beverages                                      household                  ation                                       ous
+                       tobacco   footwear      utilities                                                              hotels
+                                                           equipment
+bottom        35%         2%          5%         35%          2%           7%          4%         2%         4%        1%         3%        100%
+2             31%         2%          6%         34%          3%          10%          4%         2%         4%        2%         3%        100%
+3             30%         2%          5%         30%          2%          13%          4%         2%         5%        2%         3%        100%
+4             25%         2%          5%         32%          3%          14%          5%         2%         6%        2%         4%        100%
+top           22%         1%          6%         28%          3%          17%          4%         2%         8%        4%         4%        100%
+Total         29%         2%          5%         32%          2%          12%          4%         2%         5%        2%         3%        100%
+                                                              LBP per capita by quintiles
+                                                           Furnishing
+                       Alcohol   Clothing      Housing                                                              Restaurant
+            Food and                                           s,                  Communic                                    Miscellane
+                      beverages,   and           and                    Transport              Recreation Education   s and                 total
+            beverages                                      household                  ation                                       ous
+                       tobacco   footwear      utilities                                                              hotels
+                                                           equipment
+bottom          1071            71    164       1047           62          241         114        53         111        47         79        3059
+2               1531           114    276       1702          126          500         181        99         191        80        142        4941
+3               2010           108    347       1990          158          891         274        114        363       132        227        6615
+4               2192           153    477       2819          266         1217         431        179        491       186        373        8784
+top             3256           179    907       4268          403         2693         631        401       1417       734        717       15607
+Total           2010           125    433       2362          203         1106         326        169        513       235        307        7788
+Source: Authors‚Äô calculation using HBS 2011.
+Note: after spatial deflation.
+

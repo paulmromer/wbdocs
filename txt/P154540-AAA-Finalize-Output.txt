@@ -1,0 +1,1351 @@
+﻿Report No: AUS12087
+
+
+
+
+Republic of the Philippines
+NWRB Permit Management Process
+A Context-Aware Groundwater Permitting System –
+Proof of Concept
+
+
+
+
+April 22, 2016
+
+
+
+
+GWA02
+
+EAST ASIA AND PACIFIC
+Standard Disclaimer:
+
+This volume is a product of the staff of the International Bank for Reconstruction and Development/ The World
+Bank. The findings, interpretations, and conclusions expressed in this paper do not necessarily reflect the
+views of the Executive Directors of The World Bank or the governments they represent. The World Bank does
+not guarantee the accuracy of the data included in this work. The boundaries, colors, denominations, and other
+information shown on any map in this work do not imply any judgment on the part of The World Bank
+concerning the legal status of any territory or the endorsement or acceptance of such boundaries.
+
+Copyright Statement:
+
+
+The material in this publication is copyrighted. Copying and/or transmitting portions or all of this work without
+permission may be a violation of applicable law. The International Bank for Reconstruction and Development/
+The World Bank encourages dissemination of its work and will normally grant permission to reproduce portions
+of the work promptly.
+
+For permission to photocopy or reprint any part of this work, please send a request with complete information
+to the Copyright Clearance Center, Inc., 222 Rosewood Drive, Danvers, MA 01923, USA, telephone 978-750-
+8400, fax 978-750-4470, http://www.copyright.com/.
+
+All other queries on rights and licenses, including subsidiary rights, should be addressed to the Office of the
+Publisher, The World Bank, 1818 H Street NW, Washington, DC 20433, USA, fax 202-522-2422, e-mail
+pubrights@worldbank.org.
+A Context-Aware Groundwater Permitting System –
+               Proof of Concept
+
+
+
+
+                 Final Report
+
+
+
+
+                   March 2016
+                               ACKNOWLEDGMENTS
+
+This is the final report for the National Water Resources Board (NWRB) Permit Management
+System, the technical assistance of the World Bank Water and Sanitation Program to NWRB.
+The objective of this technical assistance was to develop a prototype for the water permit
+management system and complete a pilot implementation for this system applied to a group of
+approximately 100 applicants defined by NWRB. The pilot was intended to improve the permit
+management process by making it easier for applicants to file and complete their water permit
+application process, making data from permittees easily accessible and useful for decision-
+making purposes, and to make billing and collection of fees and charges more efficient.
+
+This report was prepared by Dr. Kala Fleming, Dr. Seshu Tirupathi, Dr. Sean McKenna, Peninah
+Waweru, Elizabeth Ondula, and Muuo Wambua of IBM Research Africa, with Jemima Sy,
+Aileen Castro, Leila Elvas, Howard Wong (World Bank). The following World Bank staff also
+provided valuable contributions to the report: Marcus Wijnen, Christopher Ancheta, Alastair
+Morrison and William Young (peer reviewers) and Almud Weitz (chairperson of the quality
+enhancement review).
+
+Acknowledgment is also given to the cooperation of the NWRB management and staff who
+provided information needed in developing the system, led by Executive Director Dr. Sevillo
+David, Jr.
+
+
+
+
+                                              i
+                   ACRONYMNS
+
+AEM     analytic element method
+CWP     conditional water permit
+DPWH    Department of Public Works and Highways
+DW      deep well
+IBM     IBM Research Africa
+IT      information technology
+IWRM    integrated water resources management
+KPI     key performance indicators
+MCM     million cubic meters
+NWRB    National Water Resources Board
+PPP     public-private partnership
+SP      spring
+USAID   United States Agency for International Development
+WP      water permit
+WPA     water permit application
+
+
+
+
+                            ii
+                              A Context-Aware Groundwater Permitting System –
+                                             Proof of Concept
+
+                                                                             CONTENTS
+EXECUTIVE SUMMARY .........................................................................................................................................1
+I.         INTRODUCTION ..............................................................................................................................................5
+      A.      PROBLEM CONTEXT/ORIGINS ............................................................................................................................5
+      B.      GROUNDWATER MANAGEMENT AND ISSUES .....................................................................................................7
+      C.      PAST INITIATIVES ON DATA SHARING AND UPDATING...................................................................................... 11
+      D.      REQUEST OF GOVERNMENT OF THE PHILIPPINES ............................................................................................. 11
+II.        TECHNICAL ASSISTANCE OBJECTIVES ................................................................................................ 12
+III. IMPLEMENTATION ...................................................................................................................................... 13
+      A.      SCOPING .......................................................................................................................................................... 14
+      B.      RESEARCH AGREEMENT AND PARTNERSHIP.................................................................................................... 14
+      C.      INTELLECTUAL PROPERTY .............................................................................................................................. 14
+      D.      FINANCIAL MODEL.......................................................................................................................................... 14
+      E.      STUDY METHODOLOGY AND PROOF OF CONCEPT DEVELOPMENT .................................................................. 15
+      F.      SYSTEM CONFIGURATION ............................................................................................................................... 25
+      G.      SUPPORT FOR MIGRATION AND ACTION BY NWRB ........................................................................................ 26
+IV. CONCLUSION ................................................................................................................................................. 27
+V.         KEY RECOMMENDATIONS ........................................................................................................................ 28
+VI. LIST OF ANNEXES ......................................................................................................................................... 30
+      ANNEX 1 – REQUEST OF THE GOVERNMENT OF THE PHILIPPINES............................................................................. 30
+      ANNEX 2 – REVIEW OF THE PHILIPPINE WATER RIGHTS SYSTEM ............................................................................ 30
+      ANNEX 3 – DETAILED WATER PERMIT APPLICATION PROCESS ............................................................................... 30
+      ANNEX 4 – WATER PERMITS REVENUES AND EXPENDITURES ................................................................................. 30
+      ANNEX 5 – FEES AND CHARGES ............................................................................................................................... 30
+      ANNEX 6 – PERMITTING SYSTEM USER GUIDE ........................................................................................................ 30
+      ANNEX 7 – APPLICATION OF THE AEM MODEL TO THE SANTA ROSA WATERSHED ................................................ 31
+      ANNEX 8 – PERMITTING JOURNEY MAP ................................................................................................................... 31
+
+
+List of Maps
+Map 1. Philippines Water Resources Management Areas ............................................................................ 8
+
+
+List of Figures
+Figure 1. NWRB Permits Summary ........................................................................................................... 11
+Figure 2. Overview of the Digital Aquifer Connected Ecosystem Solution for Groundwater ................... 13
+Figure 3. NWRB Revenue Projections – 2015 to 2020 .............................................................................. 15
+Figure 4. Flowchart of NWRB’s “As-Is�? Permitting Process..................................................................... 17
+Figure 5. Simplified View of NWRB’s “To-Be�? Permitting Process ......................................................... 19
+Figure 6. Overview of Requirements for NWRB’s New Permitting System ............................................. 19
+                                                                                        iii
+Figure 7. Forward Planning Flowchart ....................................................................................................... 24
+Figure 8. Connected Water Ecosystem Illustration..................................................................................... 25
+
+
+List of Tables
+Table 1. Overview of Critical Water Resources Regions ............................................................................. 9
+Table 2. Subject Matter Expert (SME) Goals and Tools for Permitting ..................................................... 18
+Table 3. Data Requirements ........................................................................................................................ 20
+
+
+
+
+                                                                         iv
+EXECUTIVE SUMMARY
+
+1.      In the Philippines, it is estimated that available water is three times the annual use but
+there are serious seasonal and geographic shortages, not ameliorated by the high cost of
+developing storage1. Based on comprehensive planning studies2, nine cities were flagged as
+having a high likelihood of future water shortages. As of 2014, a total of 21,460 permits were
+issued, more than 50 percent of which are for groundwater allocations.
+
+2.     The National Water Resources Board (NWRB) serves as a water resource regulatory
+body with functions in policy and water resources regulation. However, given its small staff,
+limited financial resources and limited regional presence, NWRB has not been able to
+completely fulfill its mandate, and has concentrated mainly on the approval (but little
+enforcement) of water rights.
+
+3.     This report documents the development of a cloud-hosted, context-aware decision-
+making system for water management. The purpose of the system is to automate tasks (both
+routine and complex) and to improve the quality of the information and interpretations available
+to decision makers and permitting staff, ultimately enhancing the capacity for stewardship of
+water resources in the Philippines. The new context-aware system, a so-called “connected water
+management system�?, signals a first step toward changing this status quo.
+
+Output
+
+4.     From June to December 2015, the NWRB Permit Management System proof of concept
+was developed as an integrated permitting framework that automates and links administrative
+processes with an aquifer model that is able to update the effects on the aquifer of potential
+additional wells using data from existing permittees and sensors.
+
+5.      The proof of concept consists of two parts:
+
+        a. A cloud-hosted permit management system that automates the receipt, processing,
+           evaluation and monitoring of water extraction permits; and
+        b. A prototype of a context driven decision-making model. Different from traditional
+           physical models of an aquifer, the project aspires to develop the initial proof of a
+
+1
+ World Bank 2003. Philippines Country Water Resources Assistance Strategy. Retrieved from
+http://siteresources.worldbank.org/INTRANETENVIRONMENT/1705736-
+1127758054592/20680779/PhilippinesWaterResourcesAssistanceStrategy.pdf
+2
+ JICA (1993). Master Plan Study on Water Resources Management in the Republic of the Philippines. Draft Final
+Report. Volume I.
+
+
+
+                                                      1
+           ‘context-aware’ system that uses machine learning algorithms to help understand
+           aquifer characteristics based on the existing behavior and responses of the physical
+           system (aquifer) to new events (such as the addition of new wells or continuous
+           drawdowns from existing wells). This Proof of Concept successfully tested the
+           algorithm in Santa Rosa, Laguna.
+
+6.     The proof of concept does not include a permit management system for surface water and
+NWRB’s permitting system does not cover water quality evaluations, which are dealt with by
+other government institutions.
+
+7.      The new system allows NWRB to upload actual data from permit applications, drill test
+reports and monitoring that were previously not integrated, and which functionality, in turn,
+provides basis for “automating�? the analysis required to determine if a new well should be
+approved. The analytic element method (AEM) is the underlying modelling methodology used
+by the system. Using this system, distance to nearest well neighbors and the maximum decrease
+in water levels of nearby wells are continually assessed and presented as evidence for the NWRB
+staff to make the final judgment on approving a permit. The same system automates permit
+screening and tracking processes, increasing the accuracy of water allocation accounting and
+reducing the time required to execute administrative processes. The system has been built to
+allow modular development so that in the future, it is possible for the system to support
+streamlined monitoring and enforcement, incorporate other data sources in the analysis such as
+weather data to provide updated insights on the ground water levels, advise on how water fees
+should be structured to balance conservation and economic development goals.
+
+Key Findings
+
+8.     Automating the different stages of evaluation and hosting it in the cloud allows different
+regulator’s staff to engage in the process in a more efficient and streamlined way and makes the
+system portable (i.e. not anchored in a server that is physically sited in one place). These simple
+enhancements increase the productivity of a very limited number of regulator’s staff.
+
+9.      Data that exists in NWRB (through reports submitted by permit holders) can more readily
+be analyzed and used for water governance. For example, the proof of concept assessed permit
+allocation versus usage over 10 years in the Laguna basin region (pilot area). The study found
+that nearly 50% of roughly 40 audited accounts show consumption above allocations. Those
+using more water than their allocation were industrial users such as those engaged in
+manufacturing or commercial services and who voluntarily report their usage on a timely basis.
+A beverage company, in particular, was found to be extracting 10x over its permit allocation. It
+is likely that such users are not aware of their excess or consider that the consequence for such
+behavior is low compared to the benefit and therefore, can pay the penalties if charged.
+
+                                                2
+10.    The system can pay for itself. A financial model was developed to capture NWRB’s
+revenue sources and expenditures related to water permits. Annual water charges comprise 83%
+of revenues, while application or filing fees and penalties comprise 8% each. This is based on
+the actual 60% collection efficiency. Meanwhile expenditures related to the proposed water
+permit system comprise 6% to 7% of revenues. The potential financial return from
+implementing the system could be significant. With a more efficient water permit management
+system, revenues can be expected to further improve as a result of the following benefits:
+
+      a. More water permits granted or refused due to more efficient and faster processing period
+      b. Potential to incorporate automatic billing of annual water charges on the anniversary date
+      c. Ability to more effectively monitor over extraction and potential to incorporate automatic
+         billing of penalties for water abstraction above the allocated volume.
+
+11.    The results from the Analytical Element Method (AEM) used as the basis of the
+modelling algorithm is robust compared to traditional, data- and computation-intensive grid-
+based modelling.
+
+12.     Enabling modularity in the design of a software system (using Application Protocol
+Interface) provides flexibility and future enhancements such as allowing other users to interface
+with and derive value from the system. Examples include: a. Provision of electronic notification
+to other government agencies involved in the regulatory process in lieu of notification by postal
+service, b. Submission of application online directly by applicants, and c. Integration with the
+billing and accounting system.
+
+Conclusion
+
+13.     The proof of concept offers the following functionality: (i) continuous monitoring and
+forecasting of resource levels, (ii) process automation and workflow management, (iii) data
+aggregation and visualization, and (iv) decision support. The system developed presents a
+framework that demonstrates how intelligence can be embedded into the water management
+process. Inputs accessed more regularly from the environment such as continuously sensed water
+levels, water abstractions and user complaints about water supply abnormalities will be required
+to fully realize this intelligence.
+
+Key Recommendations
+
+14.      The following are recommended:
+
+15.     NWRB to focus on key actions that have a high efficiency pay-off. Specific actions
+identified by the Project were: a. Current public notification policies do not allow e-notification
+to other government institutions and the public. Integrating e-notifications in the process could
+
+                                                  3
+shave at least 30 days off the application time. b. Acceptance of application package online is
+constrained by the requirement to submit legally notarized original documents. A policy
+allowing preliminary acceptance of scanned documents with original documents to be sent would
+save time and costs for permit applicants and encourage registration of use. c. Providing
+information to the public on areas where permits are no longer being issued.
+
+16.     AEM model will need further verification and calibration and the NWRB
+hydrogeologists will need to have sufficient training to use and update the model. The proof
+of concept tested the AEM in one pilot area. However, a number of assumptions had to be made
+and data on river flows were not available. The model requires a set of parameters to be entered
+and so to apply the model in other regions these parameters will be needed: aquifer depth,
+transmissivity and lake elevation. NWRB staff occasionally come across these information from
+different sources such as permit applicants and other donor-support projects. A trained user of
+the AEM model will be able to update the system and continue to test and verify its results.
+Selection of AEM has been based on the current situation at NWRB to provide an aquifer model
+that would work on relatively small data sets, uncomplicated hydrolgeological features but
+provide reasonable result reliability. For the medium and long term projections, AEM may be
+coupled with the grid based models to provide better definition of boundary conditions and water
+budgets in addition to projections due to changes in climate, land use and population growth.
+
+17.      Further develop the system to automate the collection of monitoring data,
+identifying and assessing fines for chronic over use. This would reduce the manpower
+required to execute the monitoring and enforcement function. One of the options discussed with
+NWRB, for which they are open, is the outsourcing of the permit application and investigation
+process through a public-private partnership (PPP) similar to the Land Transport Office
+outsourcing of vehicle inspection functions. Permit management has revenue potential,
+especially considering the growing concern over scarcity of ground water. Permit administration
+could be coupled with resources management using more reflective pricing and use policies. This
+option will need due diligence and preparation support that is outside the scope of the current
+initiative.
+
+18.     Increase engagement of a broader range of stakeholders. For example, well drillers
+and existing permittees have expressed enthusiasm for a public portal where they can view
+existing permits to get an idea of the water allocations availability before they even go to
+NWRB. This potential to engage more users opens up new ideas such as using human sensors to
+improve water stewardship and governance.
+
+19.      Link the water permit allocation policies to strategic planning based on
+determination of sustainable yields for aquifers. Presently, water rights are allocated based on
+a ‘first come, first served’ basis without reference to any strategic policy or planning such as a
+River Basin Master Plan. The Digital Aquifer’s ability to predict sustainable yields is an
+                                                4
+important input to such strategic planning exercises. Tools and guidelines are available from the
+Department of Public Works and Highways on Integrated Water Resource Management (IWRM)
+to prepare River Basin Master Plans.
+
+I.      INTRODUCTION
+
+20.     The work described in this report lays a foundation and points the way forward for a
+rethinking of how water management expertise can be facilitated and supported within
+developing and emerging contexts. Much of the expertise regularly required for sound decision
+making is perpetually in short supply. Beyond the establishment of a prototype system, the
+research begins to explore the following questions: What exactly is the nature of the expertise
+distilled by a professional hydrogeologist located anywhere in the world? What are the key tasks
+of such an expert? How could a machine or a system, capture some (or all of) this knowledge
+and execute the critical tasks that underlie good-decision making for groundwater management?
+This kind of thinking must shape the future of the water industry if we hope to make any
+progress in addressing the many technically under-resourced agencies around the world that are
+responsible for water management and stewardship.
+
+        A.       Problem Context/Origins
+
+21.    The Philippines has surpassed the Millennium Development Goals for safe water supply,
+with 92% of households now having access to improved water services. However the challenge
+for reaching the “last mile�? – poor households in usually remote areas – remains formidable.
+Thus the next goal of achieving universal coverage (by 2025 per Government Water Supply
+Sector Roadmap and (by 2030 per Sustainable Development Goals) sustainable, safe water
+services will require concerted effort in enabling policy reforms, capacity building and improved
+governance of utilities, and bigger and accelerated investments.
+
+22.    Water resources are viewed as a key enabler for national development in the Philippines3.
+The NWRB was created to drive this enablement, serving as the water resources regulatory body
+with functions including policy formulation and coordination, water resource regulation, and
+economic regulation.
+
+23.   The Dublin Principles4,5,6,7 adopted by the Philippines and the wider international
+community served as a basis for the thinking about how to ensure that future water policy was
+more holistic. In particular,
+
+
+3 Presidential Decree No. 1067, s. 1976. Retrieved from http://www.gov.ph/1976/12/31/presidential-decree-no-
+1067-s-1976/.
+4
+ ICWE. 1992. The Dublin Statement and Report of the Conference International Conference on Water and the
+Environment: Development Issues for the 21st century. 26–31 January. Dublin
+
+                                                       5
+       a. The ecological principle – water should be managed comprehensively (and not by
+          independent actions of water using sectors) within the context of the river basin as the
+          management and development unit. The river basin must be the basic unit of analysis
+          with special attention being paid to the environment;
+       b. The institutional principle – water resources management (WRM) is best done when all
+          stakeholders participate and actions should be devolved to the lowest level possible (the
+          subsidiary principle); and
+       c. The instrument principle – water should be managed as an economic good or scarce
+          resource—incentives and economic principles are to be used in improving allocation and
+          enhancing water quality.
+
+24.      A range of political, institutional, financial and socioeconomic factors influence how
+these principles are actually implemented from country to country. The reality that presents
+itself in developing and emerging economies is that setting a comprehensive management plan
+and then expecting that a logical sequence of actions and events will unfold according to that
+plan is unrealistic8,9. The messy water management landscape introduces complexity to
+decision-making, even at the lowest levels.
+
+25.    Because freshwater resources across the Philippines are unevenly distributed over space
+and time, NWRB must continually ask and reassess questions and decisions related to “how
+much water do we have now?�? and “how much will we have in the future?�? To address these
+questions, decision makers must have continuously updated knowledge of the interactions
+between surface water, groundwater, and the environmental system10. Additionally, any
+decisions made with regard to water transfer and allocation must take into consideration the
+diverse objectives that include water supply, cost efficiency, and ecosystem protection.
+
+
+
+
+5
+    Lane, J., & Jarman, J. (1998). Six years on—what happened to the Dublin principles? Waterlines, 16(3), 10-12.
+6
+ Savenije, H. H., & Van Der Zaag, P. (2002). Water as an economic good and demand management paradigms with
+pitfalls. Water international, 27(1), 98-104.
+7
+ World Bank 2003. Philippines Country Water Resources Assistance Strategy. Retrieved from
+http://siteresources.worldbank.org/INTRANETENVIRONMENT/1705736-
+1127758054592/20680779/PhilippinesWaterResourcesAssistanceStrategy.pdf
+8
+    Ibid.
+9
+ Pitman, G. K. (2002). Bridging troubled waters: Assessing the World Bank water resources strategy. World Bank
+Publications.
+10
+  McPhee, J., & Yeh, W. W. G. (2004). Multiobjective optimization for sustainable groundwater management in
+semiarid regions. Journal of Water Resources Planning and Management , 130(6), 490-497.
+
+
+
+                                                           6
+26.      It is anticipated, then, that the water resources management tools of the future should
+have capability to continuously sense and acquire current insight about the environment to
+support decision makers who need to take the best actions, just-in-time, to match the current
+reality.
+
+           B.      Groundwater Management and Issues
+
+27.      Water resources management in the Philippines is organized around 12 major river
+basins, designated as water resources management and planning units (Map 1). Overall, water
+supply is three times annual use but there are serious seasonal and geographic shortages, not
+ameliorated by the high cost of developing storage11.          Based on comprehensive planning
+        12
+studies , nine cities were flagged as having a high likelihood of future water shortages. Given
+their growing municipal and industrial water requirements, they have been prioritized for further
+study and investment (Table 1). While the development of new surface water sources has been
+proposed as the best option to head off shortages for several cities, public opposition to new
+dams13,14,15,16 and the high cost of surface sources in some instances has increased the interest to
+explore the groundwater resource potential.
+
+
+
+
+11
+  World Bank 2003. Philippines Country Water Resources Assistance Strategy. Retrieved from
+http://siteresources.worldbank.org/INTRANETENVIRONMENT/1705736-
+1127758054592/20680779/PhilippinesWaterResourcesAssistanceStrategy.pdf
+12
+  JICA (1993). Master Plan Study on Water Resources Management in the Republic of the Philippines. Draft Final
+Report. Volume I.
+13
+  Bello, J. (2015) Local governments, residents reject construction of dam for power generation, Metro Manila
+water supply. Retrieved from http://www.businessmirror.com.ph/local-govts-residents-reject-construction-of-dam-
+for-power-generation-metro-manila-water-supply/
+14
+  Silva. V. Mananga 2 dam needed to avert shortage – JICA. Retrieved from
+http://cebudailynews.inquirer.net/50785/mananga-2-dam-needed-to-avert-shortage-jica#sthash.15yUeSbc.dpuf
+15
+     World Bank (2007). Terms of Reference for a Groundwater Modeler and Permit Management Systems Specialist.
+16
+     Water Code of the Philippines. Retrieved from http://www.nwrb.gov.ph/images/laws/pd1067_amended.pdf
+
+
+
+                                                        7
+Map 1. Philippines Water Resources Management Areas
+
+
+
+
+                        8
+                            Table 1. Overview of Critical Water Resources Regions
+
+                            Concern for
+        City                                                 Water Resources Development Plan
+                          Future Shortages
+Metro Manila                   HIGH              An estimated 98% of the Metro Manila’s water supply is
+(Region III)                                     sourced from the Angat Dam. With the potential for looming
+                                                 shortages, development of the Agos River was seen as the
+                                                 most promising new water resource, but so far, proposals to
+                                                 construct a dam have been rejected17. The Kaliwa Dam
+                                                 Project, a 25-year build-operate-transfer contract to build a
+                                                 dam in General Nakar, Quezon appears to be the most
+                                                 promising option18. Metro Manila is a restricted groundwater
+                                                 area so no new permits for groundwater withdrawals are
+                                                 being approved.
+
+Metro Cebu                      HIGH             Mananga dam proposed, but cost and dislocation of at least
+(Region VII)                                     500 households in Cebu city remains a major obstacle19.
+                                                 Additional groundwater resource development not seen as
+                                                 viable for Metro Cebu.
+
+Baguio City                     HIGH             Development of the surface water resource is cost prohibitive.
+(Region I)                                       Groundwater being explored as the more cost effective
+                                                 alternative
+
+Davao City                    MEDIUM             Projects for both surface water and groundwater resource
+(Region XI)                                      development are planned. Surface water development projects
+                                                 such as the Saug River Multi-purpose project have been met
+                                                 with opposition from local leaders20.
+
+Angeles City                  MEDIUM             Focused on groundwater resource development.
+(Region III)
+
+Bacolod City                  MEDIUM             Focused on groundwater resource development.
+(Region VI)
+
+Iloilo City                   MEDIUM             Focused on groundwater resource development.
+(Region VI)
+
+
+17
+  Bello, J. (2015) Local governments, residents reject construction of dam for power generation, Metro Manila
+water supply. Retrieved from http://www.businessmirror.com.ph/local-govts-residents-reject-construction-of-dam-
+for-power-generation-metro-manila-water-supply/
+18
+  http://www.bworldonline.com/content.php?section=Opinion&title=improving-metro-manila&8217s-water-
+supply&id=105748
+19
+  Silva. V. Mananga 2 dam needed to avert shortage – JICA. Retrieved from
+http://cebudailynews.inquirer.net/50785/mananga-2-dam-needed-to-avert-shortage-jica#sthash.15yUeSbc.dpuf
+20
+  Bello, J. (2015) Local governments, residents reject construction of dam for power generation, Metro Manila
+water supply. Retrieved from http://www.businessmirror.com.ph/local-govts-residents-reject-construction-of-dam-
+for-power-generation-metro-manila-water-supply/
+
+
+
+                                                       9
+                              Concern for
+          City                                                Water Resources Development Plan
+                            Future Shortages
+Cagayan do Oro City            MEDIUM             The Bulanog-Batang dam was proposed but has been delayed
+(Region X)                                        for 15 years21. Groundwater resource development was not
+                                                  considered viable for this region.
+
+Zamboanga City                  MEDIUM            Zamboanga currently faces water rationing during the
+(Region IX)                                       summer22. Plans to build a new dam are still in the discussion
+                                                  phase. Groundwater resourced development is not considered
+                                                  a viable option for this region.
+
+
+28.     The total freshwater resource availability in the Philippines was estimated to be 145,990 MCM in
+200323. While groundwater accounts for roughly 14 percent of this total, there is significant
+reliance on the resource in urban areas. As of 2014, a total of 21,460 permits were issued
+(Figure 1) allocating nearly 200,000 MCM of surface and groundwater resources combined. Of
+this total, there were 11, 423 ground water permits accounting for a total allocated volume of
+3,822 MCM. Overall, more than 50 percent of the water permits managed by NWRB are for
+groundwater allocations.
+
+29.      NWRB’s system for issuing and enforcing these permits is paper based and manual. To
+apply for a permit, individuals submit a paper form by mail or deliver completed applications by
+hand to the NWRB office in Quezon City. Some applicants have even reported making a special
+flight from the surrounding islands to deliver the permit in person. The average processing time
+for a water permit is currently more than one year.
+
+30.     The current approach for approving permits poses challenges. For example, a 30-year old
+model that likely does not reflect the current reality of aquifer basins, serves as the basis for
+making groundwater allocation decisions. Compared to the number of water permit applicants,
+there are also relatively limited NWRB staff doing field investigation for the water source. The
+district engineers of the Department of Public Works and Highways (DPWH) are tapped by
+NWRB to help in the field investigation. All communications among NWRB, DPWH and
+permit applicants are done through post mail which further delays the approval process.
+
+
+
+
+21
+  P7-B Davao Mega Project Threatens Lumads, Promises 'Wrong Solution'. Retrieved from
+http://www.bulatlat.com/news/2-28/2-28-caloydaisy.html
+22
+  Banos. M. Delayed Dam Project could have saved city from Sendong. Retrieved from
+http://www.mindanaodailynews.com/delayed-dam-project-could-have-saved-city-from-sendong/
+23
+     World Bank (2007). Terms of Reference for a Groundwater Modeler and Permit Management Systems Specialist.
+
+
+
+                                                       10
+                                                         Figure 1. NWRB Permits Summary
+
+                                                             Groundwater       Surface Water
+
+                      12,000
+
+
+                      10,000
+
+
+                       8,000
+     No. of Permits
+
+
+
+
+                       6,000
+
+
+                       4,000
+
+
+                       2,000
+
+
+                            -
+                                Municipal   Irrigation     Industrial   Recreation   Livestock   Fisheries   Power   Others
+
+
+
+
+                       C.       Past initiatives on data sharing and updating
+
+31.     The Government’s past attempts at developing information systems, supported by various
+development partners, for the water sector were piece-meal and were not sustained. As it relied
+on a public ‘nodal’ agency model, limited public resources always frustrated the continued
+renewal and usefulness of the system24. This time around, the World Bank and NWRB wanted
+to explore a different approach that over the medium-term would lead to the development of a
+system where information drives value for different stakeholders who provide and use data rather
+than a ‘nodal’ agency model. It is premised on the use of existing (currently p aper based) data
+for continuous updating of what is understood about aquifer systems and on the development of
+a system that can be modularly updated in the future to integrate different data sources and
+provide functionality for different stakeholders, for example, a public view of existing wells in a
+locality and current drawdowns of water.
+
+                       D.       Request of Government of the Philippines
+
+32.    NWRB is mandated by the Water Code of 197625 to coordinate water resources
+management activities at the central and regional levels. This effort involves more than 20
+departments, government corporations and bureaus, as well as numerous regional and local
+
+24
+     World Bank (2007). Terms of Reference for a Groundwater Modeller and Permit Management Systems Specialist.
+25
+     Water Code of the Philippines. Retrieved from http://www.nwrb.gov.ph/images/laws/pd1067_amended.pdf
+
+                                                                          11
+entities. However, with its small staff, limited financial resources and regional presence, the
+agency has been unable to completely fulfill its mandate, concentrating mainly on the approval
+(but little enforcement) of water rights26.
+
+33.    These issues are not new and have plagued the agency throughout much of its existence.
+The “connected water management system�? would signal a first step toward changing the status
+quo. To begin this new line inquiry, the Government of the Philippines submitted a formal
+request to the World Bank for technical assistance on the effort (See Annex 1).
+
+34.     The functioning of the water rights regime in the Philippines and its administration by
+NWRB have been reviewed extensively elsewhere. A dual-report produced by the Water and
+Sanitation Program in 2003 (Annex 2) is included as an accompanying document to provide
+interested readers with such background.27
+
+II.        TECHNICAL ASSISTANCE OBJECTIVES
+
+35.     The key deliverable for this TA is a proof of concept, cloud-hosted, context-aware water
+rights management system. The purpose of the system is to automate routine and complex tasks
+and to improve the quality of the information and interpretations available to decision makers,
+ultimately enhancing NWRB’s capacity for stewardship of the Philippines’ groundwater
+resource.
+
+36.     Specifically, the TA was intended to improve the permit management process (see Annex
+3 for the Detailed Water Permit Application Process) by (i) making it easier for applicants to file
+and complete the water permit application process; and (ii) making data from applicants easily
+accessible and useful for permit decision-making, billing and more efficient collection of fees
+and charges. See Annex 5 for the schedule of fees and charges.
+
+37.        Key questions underlying the fulfilment of these objectives included:
+
+             a. What is the nature of the expertise required for processing, issuing and enforcing
+                water permits?
+             b. To aid the issuing of permits, how do we develop robust, predictive models of
+                aquifer drawdown that reliably indicate how addition of a new well will influence
+                existing wells and the state of water storage in the aquifer?
+             c. How would a continuously updated permitting system that supports the processing,
+                issuing and enforcement of water permits be designed and implemented?
+
+26
+  World Bank 2003. Philippines Country Water Resources Assistance Strategy. Retrieved from
+http://siteresources.worldbank.org/INTRANETENVIRONMENT/1705736-
+1127758054592/20680779/PhilippinesWaterResourcesAssistanceStrategy.pdf
+27
+     Water and Sanitation Program (2003). Review of the Philippine Water Rights System.
+
+                                                         12
+III.    IMPLEMENTATION
+
+38.    IBM, through its cognitive and smarter planet initiatives in Africa28, developed a
+connected water framework and product portfolio to address the silos and fragmentation in the
+sector. The Digital Aquifer is an example of one such product that coordinates access to and
+management of water resources (Figure 2). The idea underlying the building of connected
+ecosystems is to enhance the value of water and the sustainability of water management
+solutions. This idea that works for Africa also addresses the challenges facing the water sector in
+the Philippines. The connection gave rise to a co-creation process with the World Bank to
+explore how a “connected water ecosystem�? could be built around groundwater. The sections
+that follow describe project scoping, the research partnership and resulting system for the
+Philippines that grew from the co-creation process.
+
+         Figure 2. Overview of the Digital Aquifer Connected Ecosystem Solution for Groundwater
+
+
+
+
+28
+  IBM smarter Planet: Water. Retrieved from
+http://www.ibm.com/smarterplanet/us/en/water_management/ideas/?re=spf
+
+
+
+                                                    13
+       A.     Scoping
+
+39.      A World Bank Mission was conducted in October 2014 to identify the data inputs, value
+drivers and stakeholders that shape the “connected water ecosystem�?. It was determined that the
+most useful implementation of the “connected water ecosystem�? would manifest as a water
+permit management system. Consequently, the two core pieces of work that were identified as
+critical for NWRB included:
+
+   a. A decision support system for groundwater management which would leverage
+      existing groundwater data using non-linear data modeling techniques; and
+   b. A permit management system that will be in charge of the receipt, processing, decision-
+      making and monitoring of applications for water extraction.
+
+       B.     Research Agreement and Partnership
+
+40.    The World Bank and IBM Research Africa (IBM) entered into a partnership to develop a
+water permit management system that would improve NWRB’s water information database, with
+emphasis on first demonstrating a new permit management system. To this end, the World
+Bank and IBM agreed to complete a pilot implementation for permit management system
+and to link it to a prototype decision support system on groundwater management.
+
+       C.     Intellectual Property
+
+41.     IBM has exclusive ownership of the context-aware permit management system and grants
+World Bank a perpetual, royalty free, non-transferrable license to use the system. This license
+also includes the right for the World Bank to grant a sub-license of the same scope to NWRB.
+
+       D.     Financial Model
+
+42.    Prior to initiating the TA, the team and NWRB worked on understanding the financial
+implications of operating and maintaining the system and whether this would be affordable and
+make financial sense for NWRB.
+
+43.     A financial model was developed to capture NWRB’s revenue sources and expenditures
+related to water permits (see Annex 4). The table of fees and charges approved in July 2015 (see
+Annex 5) was assumed to be implemented from 2016 revenues onwards. Annual water charges
+comprise 83% of revenues, while application or filing fees and penalties comprise 8% each.
+This is based on the actual 60% collection efficiency.
+
+44.    Meanwhile expenditures related to the water permit system comprise 6% to 7% of
+revenues. These are composed of the cloud hosting and other maintenance expenses, supplies,
+
+
+                                              14
+and depreciation of computer equipment and software for the development of the water permit
+management system. See Figure 3 for the revenue projections from 2015 to 2020.
+
+                           Figure 3. NWRB Revenue Projections – 2015 to 2020
+
+
+
+
+45.     The improvement of the collection efficiency should be addressed with the enhancement
+of the current billing and accounts receivable system that will be inter-connected with the water
+permit management system through an Application Program Interface allowing automatic billing
+of water charges and imposition of penalties for over-extraction.
+
+46.     The potential financial return from implementing the system could be significant. With a
+more efficient water permit management system, revenues can be expected to further improve as
+a result of the following benefits:
+
+      a. More water permits granted or refused due to more efficient and faster processing period
+      b. Potential to incorporate automatic billing of annual water charges on the anniversary date
+      c. Ability to more effectively monitor over extraction and potential to incorporate automatic
+         billing of penalties for water abstraction above the allocated volume.
+
+47. However, even with the efficiency benefits from the system, there are other constraints to
+NWRB fully realizing these benefits. The most important are:
+
+      a. Rolling out a fully automated, online application process, which is not part of the current
+         proof of concept
+      b. Time lags related to the discretionary aspects of the evaluation given the limited number
+         of evaluation team staff
+
+         E.      Study Methodology and Proof of Concept Development
+
+48.      The methods used to address the research questions are outlined as follows:
+
+                                                  15
+ 1. What is the nature of the expertise required for processing, issuing and enforcing
+    water permits?
+
+49.    Requirements drive system design, development and implementation. To generate system
+requirements that specify how the system should function and the tasks it should enable, a
+cognitive task analysis approach29,30, 31, 32 guided our process of gathering requirements. The
+study team employed elements of this approach to better identify the cognitive elements that
+underlie goal generation, decision-making and judgments. In general, there were three key steps:
+i) knowledge elicitation, ii) analysis and iii) knowledge representation.
+
+50.     The study team reviewed the state of the existing system and actual workflows (not just
+the flowcharts documented on paper), identified gaps and proposed key areas where automation
+could make a difference. Interviews and focus group sessions were used to drive the data
+collection activities.
+
+51.    Key documents reviewed included the NWRB’s permitting flowchart (Figure 4), the most
+recent permit application form33, the Water Code34 and reports and forms related to the
+evaluation process. Key outputs from this step included a high-level process overview (Table 2
+& Figure 5) and a summary of the key requirements for the new system (Figure 6).
+
+
+
+
+29
+  Militello, L. G., & Hutton, R. J. (1998). Applied Cognitive Task Analysis (ACTA): A practitioner's toolkit for
+understanding cognitive task demands. Ergonomics, 41(11), 1618-1641.
+30
+  Clark, R. E., Feldon, D., van Merriënboer, J. J., Yates, K., & Early, S. (2008). Cognitive task analysis. Handbook
+of research on educational communications and technology, 3, 577-593.
+31
+     Clark, R. E. and Estes, F. (1996) Cognitive task analysis. Int. J. Educ. Res., 25, 403–417
+32
+  van Merriënboer, J. J. G., Clark, R. E., and de Croock, M. B. M. (2002). Blueprints for complex learning: the
+4C/ID- model. Educ. Technol. Res. Dev., 50(2), 39–64.*
+33
+  NWRB Permit application form.
+http://www.nwrb.gov.ph/images/Downloads/Water_Permit_Application_Form.pdf
+34
+     Water Code of the Philippines. Retrieved from http://www.nwrb.gov.ph/images/laws/pd1067_amended.pdf
+
+
+
+                                                            16
+Figure 4. Flowchart of NWRB’s “As-Is�? Permitting Process
+
+
+
+
+                          17
+                   Table 2. Subject Matter Expert (SME) Goals and Tools for Permitting
+
+Permitting Steps         SME Goals                      Tools                Concepts            Procedures
+Screening           Help an applicant         Screener uses stand-       Water rights,       Receive permit,
+                    determine if his          alone Google Earth         restricted areas,   check for restricted
+                    application is viable     installation to check                          location, accept
+                                              for restricted locations                       payment, send for
+                    Collect payment for                                                      endorsement, issue
+                    viable permits                                                           permit to drill
+Endorsement         Allow the public to       Mail used to send          Protest,            Send letter to 10
+                    protest a new             endorsements and           community,          agencies plus local
+                    application               receive feedback from      local               engineer to post
+                                              endorsing agencies         consultation        notice of
+                    Obtain technical                                                         application for 30
+                    feedback from                                                            days; letters of
+                    relevant local agencies                                                  endorsement sent
+                                                                                             back if no one
+                                                                                             protests
+Evaluation          Ensure new water          20-year old model and      Well evaluation,    Review drilling
+                    allocations will not      manual calculations        aquifer tests       report, calculate
+                    negatively impact         used to evaluate and                           specific
+                    neighbors or overall      approve new wells.                             conductivity based
+                    basin sustainability                                                     on report, approve
+                                                                                             well if number is in
+                                                                                             an acceptable range
+Monitoring          Ensure permittees         Quarterly monitoring       Economic            Permittee submits
+                    adhere to water use       reports submitted by       growth,             quarterly report.
+                    limits                    permittees.                enforcement,        Reports should be
+                                                                         balance             reviewed against
+                                                                                             allocation to
+                                                                                             determine over-
+                                                                                             extraction
+Administration      Ensure equitable          Request excel reports      KPIs,               TBD
+                    distribution of water     as needed from             stewardship,
+                    rights                    permitting staff.          governance,
+
+                    Set and manage
+                    permitting KPIs
+
+
+
+
+                                                       18
+       Figure 5. Simplified View of NWRB’s “To-Be�? Permitting Process
+
+
+
+
+s
+
+
+    Figure 6. Overview of Requirements for NWRB’s New Permitting System
+
+
+
+
+                                    19
+ 2. To aid the issuing of permits, how do we develop robust, predictive models of aquifer
+    drawdown that reliably indicate how addition of a new well will influence existing
+    wells and the state of water storage in the aquifer?
+
+52.    The decision making process for new well approval is not trivial. This is especially the
+case in the Philippines where a water permit grants a lifetime of access to water. As new wells
+are added, the total water available for other purposes is decreased and the operation of that well
+could reduce the quality of access at neighboring wells if the volume requested is too large. For
+example, if a new industrial well is placed too close to existing wells, a lowering of water levels
+in the area is possible. If this occurs, there could be interference with the operation of nearby
+well pumps and others might run out of water.
+
+53.    This means decision support for new wells, at a minimum, requires a current view of the
+water withdrawals in the area and a representation of aquifer dynamics that link water
+withdrawals to water levels.
+
+54.     To represent aquifer dynamics, a lightweight and flexible model based on the analytic
+element method (AEM) was selected. AEM is a mesh free approach that increases the
+robustness and in many cases the accuracy of the groundwater modeling effort. The flexible
+input requirements also make it well suited to the data-poor environments typical of developing
+and emerging economies. More details on the model and its implementation are included in
+Annex 6 – User Guide for the new permitting system.
+
+55.     To demonstrate the implementation of the permit evaluation module, the Laguna area was
+selected as the focus of study. The map of this area can be seen in Figure 2.1 of Annex 7,
+Application of the AEM Model to the Santa Rosa Watershed. Data requirements for
+implementing the AEM in this location are mainly list of permits granted including backlogs;
+monthly monitoring reports; aquifer location, type and properties; Historical drawdown
+predictions; Well yields; and Locations, discharges, elevations of the wells at the surface and the
+depths of the wells. Table 3 provides the details of these data requirements.
+
+                                         Table 3. Data Requirements
+
+             Data Requested                  Received?                        Comments
+
+
+Permitting Efficiency Evaluation
+
+       Laguna Existing Permits List           YES        Excel file with 811 records total, 794 active
+                                                          permits
+       Laguna Backlogged Permits List         NO         Need to receive this list as an Excel file
+       NWRB All permits summary               YES
+       ALL Permits List                       NO         This information will assist in refining the
+                                                          assumptions for the future processing capability
+
+                                                     20
+                Data Requested                     Received?                         Comments
+                                                                 and sustainability of the new permitting system.
+          ALL Backlogged Permits List                NO
+          Laguna Monthly Monitoring               PARTIAL       Ms. Nerizza Berdin provided 3-4 years of
+           Reports                                               monitoring data for several wells in Laguna. But
+                                                                 these only cover the 2004 to 2008 timeframe. We
+                                                                 have requested additional and more recent data
+                                                                 for these wells.
+Aquifer Model Development35
+
+          Aquifer Location & Type                 PARTIAL       Copy of 30 year old modelling study for Laguna
+                                                                 has been identified.
+                                                   PARTIAL
+          Aquifer Properties: Hydraulic
+                                                                 To date, 307 scanned permits have been received
+           conductivity, transmissivity,
+                                                                 (from the NWRB IT team) and reviewed for
+           anisotropy, strativity, specific                      Laguna. Out of the total, 232 were groundwater
+           yield, porosity, aquifer thickness                    permits while the remaining 75 were surface
+           (usually characterized through                        water permits. Unfortunately, not all of the 232
+           aquifer tests) for all the                            groundwater permits had a well evaluation sheet
+           inhomogeneities that are part of the                  to indicate the static water level and other aquifer
+           domain.                                               parameters. In total, there were 156 files with
+                                                                 static water level data and 90 files with the
+                                                                 drilling date. Additionally, 10 files had missing
+                                                                 geographical coordinates for the water sources.
+                                                                 We need more scanned permits/well logs.
+
+
+          Historical drawdown predictions         PARTIAL       Need more well data for these evaluations
+
+          Well yields - measured or               PARTIAL
+           estimated
+
+          Locations, discharges, elevations       PARTIAL
+           of the wells at the surface and the
+           depths of the wells
+
+
+Model Development and Validation
+
+56.    There are various methods to model a groundwater flow system. Many in the modeling
+community use finite difference methods (MODFLOW) or finite element methods. A relatively
+newer approach to groundwater flow is the analytic element method (AEM) developed in the late
+1970's by O.D.L Strack and his colleagues. In contrast to finite difference and finite element
+methods, AEM is a mesh free method – that is, a method that does not rely on having a fixed
+computational grid.
+
+57.    Numerical methods such as the finite difference method and finite element method were
+originally defined on meshes of data points. In such a mesh, each point has a fixed number of
+35
+     This data will also aid the demand projections and estimations of water user behaviors.
+
+                                                           21
+predefined neighbors, and this connectivity between neighbors can be used to define
+mathematical operators like the derivative. These operators are then used to construct the
+equations to simulate flow—such as the Euler equations or the Navier–Stokes equations. But in
+simulations where the material being simulated can move around or where large deformations of
+the material can occur (as in simulations of plastic materials), the connectivity of the mesh can
+be difficult to maintain without introducing error into the simulation. If the mesh becomes
+tangled or degenerate during simulation, the operators defined on it may no longer give correct
+values. The mesh may be recreated during simulation (a process called remeshing), but this can
+also introduce error, since all the existing data points must be mapped onto a new and different
+set of data points. Mesh free methods are intended to remedy these problems.
+
+58.    Grid based models such as MODFLOW calculate the flow at each node of the grid. All
+key hydraulic parameters such as layer depth, permeability and water level must be allocated to
+each node before the model will run.
+
+59.    AEM does not require a grid which is important for model areas with scarce data sets.
+Other ground water modelling such as MODFLOW use conventional grid and require a great
+deal of data as input to the model. AEM can provide an analytical solution at any point of the
+model area without grid discretization which is not possible with MODFLOW.
+
+60.    As AEM modeling does not require a grid within the model domain the solution is
+calculated simultaneously over this essentially infinite domain. The key points to understand are
+then:
+
+       a. Each source/sink is represented by an analytic solution such as wells, river reaches,
+          water bodies, areal recharge.
+       b. The solutions are not ambiguous and applies linear equations.
+       c. If source/sinks are of unknown value, the values to match observed head are
+          calculated by AEM.
+       d. All the analytic functions are then solved simultaneously according to a matrix
+          equation.
+
+61.    Annex 7 describes preliminary evaluation of the aquifer model developed using the
+AEM. In general, the model shows good agreement with field data based on the ability to
+reproduce static water levels in 13 wells in the Santa Rosa area of Laguna. The aquifer model
+requires more data for calibration before it can be used to reliably assist the well approval
+process. In particular, the following steps should be prioritized:
+
+       a. Develop a complete inventory of major wells: Well logs provide an exact estimate
+          of the groundwater extraction and this data combined with the recharge rate can be
+          used to provide a range of insights that will improve groundwater management.
+
+                                               22
+       b. Improve information collection for flow rates / heads of rivers: The other
+          important contributing factor for groundwater flow is the contribution of rivers. Flow
+          rates or heads of rivers at periodic locations can be used to integrate the contribution
+          of rivers into the aquifer model.  
+       c. Establish key aquifer parameters such as transmissivity, the storage coefficient and
+          whether the aquifer at a particular site is confined or unconfined. This will assist in
+          the validation of the AEM groundwater model as well as other important indicators in
+          understanding the available water budget.
+
+62.    The forward planning flowchart (Figure 7) provides the main steps in a groundwater
+permit management system by implementation of groundwater modelling to assist in the decision
+making process for the groundwater permit application. The blue highlighted area shows how
+the current pilot study fits in the overall management system and the other components are still
+needed to complete this process.
+
+3. How would a continuously updated permitting system that supports the processing,
+   issuing and enforcement of water permits be designed and implemented?
+
+63.    Based on the requirements gathering process, the following key functionalities were
+determined for the water management system:
+
+       a. Data Collection and Aggregation Hub (static and dynamic data handling)
+             1) Sensor collection component
+             2) Form data collection component
+             3) Weather data integration component
+             4) Satellite data integration component
+       b. Aquifer (or other water model) integration module that accepts model inputs and
+          generates outputs
+       c. Map Based Data Visualization & Summarization (timelines that show when a type of
+          water data was added and provision of dynamic summaries of these types)
+       d. Print Reports (tailored lists generated from initial or derived entities in the database)
+       e. User Management (login, logout, role-based access, user tracking (what happened
+          when and by whom?)
+
+
+
+
+                                               23
+                                    Figure 7. Forward Planning Flowchart
+
+The flowchart presented in the figure below provides the main steps in a groundwater permit management system by
+implementation of groundwater modelling to assist in the decision making process for the groundwater permit
+application. The blue highlighted area shows how the current pilot study fits in the overall management system and
+the other components are still needed to complete this process.
+
+
+
+
+                                                       24
+64.    A high level view of the architecture developed to deliver these functionalities is shown
+in Figure 8.
+
+                                Figure 8. Connected Water Ecosystem Illustration
+
+With the Digital Aquifer architecture and a range of possible inputs, the physical layer senses the environment via
+intermittent inputs from forms/mobile phones or via real-time sensor inputs.
+
+
+
+
+         F.      System Configuration
+
+                  1.      Features of the new permitting system
+
+65.    NWRB’s new context-aware permitting system includes the following functionality: (i)
+continuous monitoring and forecasting of resource levels, (ii) process automation and workflow
+management, (iii) data aggregation and visualization, and (iv) decision support.
+
+66.     These features enable the following benefits:
+
+        a. Issue fines more quickly to those who are using water above their allocations as self-
+           reported. By translating paper reports submitted by permit holders, the proof of
+           concept was able to plot permit allocation versus usage charts over the lifetime of the
+           permit (some over 10 years). In the Laguna basin region (pilot area), it was found
+                                                         25
+            that nearly 50% of roughly 40 audited accounts show consumption above allocations.
+            Those using more water than their allocation were industrial users such as those
+            engaged in manufacturing or commercial services and who voluntarily report their
+            usage on a timely basis. A beverage company, in particular, was found to be
+            extracting 10x over its permit allocation. It is likely that such users are not aware of
+            their excess or consider that the consequence for such behavior is low compared to
+            the benefit and therefore, can pay the penalties if charged.
+       b.   Dynamically assess water availability – when permits are issued, cancelled or
+            revoked, system updates to reflect understanding of the water balance.
+       c.   Automate permit processing, screen restricted/sensitive areas more quickly and
+            maintain visibility on overall operational efficiency.
+       d.   Proactively maintain continuously updated aquifer models for water scarce areas.
+            Reduce the need to invest in ad hoc, one-off consultants to build water models.
+       e.   In the future, scenario modeling to address questions such as “What is the result if
+            users in an area are pulling out more water than we want to allow?�? and “How will
+            climate change impact water availability?�?
+
+               2.      Permit Management and Administration
+
+67.    Annex 8 - Permitting Journey Map illustrates how permit management works in the new
+system. Permit management and administration were implemented around the following ideas:
+
+       a. Permits have three stages: i) pre-approval, ii) conditional water permit, and iii) final
+          permit stage.
+       b. Pre-approval has the following steps: screening, endorsement, protest (may/may not
+          happen), permit to drill issuance, evaluation.
+       c. The permit to drill also has four status types that need to be tracked – full compliance,
+          partial compliance, extended, revoked (then it becomes inactive).
+       d. A different type of number is used to track each stage.
+       e. Permits in each of the three stages have one of two status types – i) active or ii)
+          inactive. Those that are inactive have a range of reasons – cancelled by an agency,
+          revoked by agency, withdrawn by applicant/permittee.
+
+68.     Active permits in the conditional and final permit stages subtract from the available
+water. If a permit becomes inactive for any reason, then the water that was originally allocated
+to that user is added back to the grand total of water available for that water basin.
+
+       G.      Support for Migration and Action by NWRB
+
+69.    A User Guide (Annex 6) has been developed for the system and familiarization sessions
+have been held. Overall, the system has been well received by NWRB staff who look forward to
+having a smart and user-friendly system that can streamline the permitting process. The system
+                                              26
+will continue to be available to NWRB until April 2016 to ensure continuity as discussions about
+long-term funding of the system are being finalized.
+
+70.    NWRB’s Executive Director is supportive of migrating to the cloud-hosted permitting
+system and bullish about being able to allocate sufficient budget to continue using the system.
+Based on the presentation, he briefed his Board on 16 December, 2015 and the World Bank task
+team received reports that the Board endorsed the migration and request for budget. The task
+team will seek written confirmation through a Board Resolution.
+
+71.     The USAID BeSecure Project36, working on water resources and climate change,
+indicated their openness to providing bridge financing for the maintenance of the Digital Aquifer
+permitting system in the 8 month period in 2016 when the assistance from the World Bank ends
+and before the NWRB budget is expected to be allocated (2017). BeSecure will provide the
+team with data from its pilot areas, with priority for Iloilo Province (region with the most
+advanced progress), but also including its 6 other focus areas, for incorporation into the Digital
+Aquifer. To formalize and commence this process, NWRB will need to write a letter of request
+to USAID.
+
+IV.     CONCLUSION
+
+72.     The proof of concept system discussed in this report validated the technical feasibility of
+implementing a connected, context-aware system for water management to enhance the capacity
+for water resources stewardship in the Philippines. The study team documented the development
+of a system that can automate water management tasks (both routine and complex) and that will
+improve the quality of the information and interpretations available to decision makers and
+permitting staff.
+
+73.     As discussed in the System Configuration Section, the new context-aware permitting
+system offers the following functionality: (i) continuous monitoring and forecasting of resource
+levels, (ii) process automation and workflow management, (iii) data aggregation and
+visualization, and (iv) decision support. The system developed presents a framework that
+demonstrates how intelligence can be embedded into the water management process. Inputs
+accessed more regularly from the environment such as continuously sensed water levels, water
+abstractions and user complaints about water supply abnormalities will be required to fully
+realize this intelligence.
+
+
+
+
+36 USAID BeSecure Project. https://www.usaid.gov/philippines/energy-and-environment/BeSecure
+
+
+
+                                                    27
+V.     RECOMMENDATIONS
+
+74.    The following are recommended:
+
+75.     NWRB to focus on key actions that have a high efficiency pay-off. Specific actions
+identified by the Project were: a. Current public notification policies do not allow e-notification
+to other government institutions and the public. b. Acceptance of application package online is
+constrained by the requirement to submit legally notarized original documents. A policy
+allowing preliminary acceptance of scanned documents with original documents to be sent would
+save time and costs for permit applicants and encourage registration of use. c. Providing
+information to the public on areas where permits are no longer being issued.
+
+76.    To streamline the permit processing time, consultations were made with NWRB
+management and focus group discussion participants. Email notifications are now integrated in
+the proposed system to shave at least 30 days off of the permit application time. This can be
+applicable for:
+
+       a.   Sending application package to NWRB by applicants
+       b.   Sending of posting notice to endorsers (concerned agencies) by NWRB
+       c.   Receiving letters of endorsement by NWRB from concerned agencies
+       d.   Sending of permit to drill by NWRB to applicants
+       e.   Sending of conditional water permit
+       f.   Sending of final water permit
+
+77.     AEM model will need further verification and calibration and the NWRB
+hydrogeologists will need to have sufficient training to use and update the model. The proof
+of concept tested the AEM in one pilot area. However, a number of assumptions had to be made
+and data on river flows were not available. The model requires a set of parameters to be entered
+and so to apply the model in other regions these parameters will be needed: aquifer depth,
+transmissivity and lake elevation. NWRB staff occasionally come across these information from
+different sources such as permit applicants and other donor-support projects. A trained user of
+the AEM model will be able to update the system and continue to test and verify its results.
+Selection of AEM has been based on the current situation at NWRB to provide an aquifer model
+that would work on relatively small data sets, uncomplicated hydrolgeological features but
+provide reasonable result reliability. For the medium and long term projections, AEM may be
+coupled with the grid based models to provide better definition of boundary conditions and water
+budgets in addition to projections due to changes in climate, land use and population growth.
+
+78.    Further develop the system to automate the collection of monitoring data,
+identifying and assessing fines for chronic over use. This would reduce the manpower
+required to execute the monitoring and enforcement function. One of the options discussed with
+NWRB, for which they are open, is the outsourcing of the permit application and investigation
+                                              28
+process through a public-private partnership (PPP) similar to the Land Transport Office
+outsourcing of vehicle inspection functions. Permit management has revenue potential,
+especially considering the growing concern over scarcity of ground water. Permit administration
+could be coupled with resources management using more reflective pricing and use policies. This
+option will need due diligence and preparation support that is outside the scope of the current
+initiative.
+
+79.     Increase the engagement of a broader range of stakeholders. For example, well
+drillers and existing permittees have expressed enthusiasm for a public portal where they can
+view existing permits to get an idea of the water allocations availability before they even go the
+permitting office. Others are simply interested to know who might be the largest water users in
+the area. This potential to engage more users opens up new ideas such as using human sensors to
+improve water stewardship and governance. As discussed in the previous paragraph, there is a
+potential for business model sustainability given the range of stakeholders who seek to derive
+value from the connected water system and the possible implications of the system for future
+water policy in the Philippines.
+
+80.      Link the water permit allocation policies to strategic planning based on
+determination of sustainable yields for aquifers. Presently, water rights are allocated based on
+a ‘first come, first served’ basis without reference to any strategic policy or planning such as a
+River Basin Master Plan. The Digital Aquifer’s ability to predict sustainable yields is an
+important input to such strategic planning exercises. Tools and guidelines are available from the
+Department of Public Works and Highways on Integrated Water Resource Management (IWRM)
+to prepare River Basin Master Plans.
+
+81.     Improve the administration of permits and extraction reports to have up to date
+information on the status of the aquifer and improve enforcement of water rights’ conditions.
+While the current system will yield efficiency dividends by increasing NWRB’s capacity to cope
+with some tasks by automating them and building in future modules that will let applicants carry
+some of the process (such as online application), NWRB will continue to be constrained by its
+limited staffing complement and footprint (in Manila). For example, it has limited people to
+conduct field verification and to evaluate applications. One of the most important revenue drivers
+for the new permitting system will be monitoring and enforcement. A review of the available
+monitoring data for a small random sampling of water users showed that some were using up to
+ten times their water allocations. These users have never been assessed fines for over use. There
+are likely also many cases of illegal abstractions in the location where no new permits are being
+issued.
+
+82.   Develop on additional modules that enhance interface with different users, including
+the public; increase NWRB administratsion efficiency and/or strengthen the governance of
+groundwater. The current proof of concept was mainly able to develop the permit processing
+                                               29
+and well evaluation modules and currently is only available for use by NWRB staff. However,
+the system, through application protocol interface, has been built so that modules can be added
+or so that the system can interface with other data and IT systems. A future version of the
+platform can consider the following additional modules:
+
+      a. An applicant-interface/dashboards so that applicants can apply and transact online and
+         can get information about the status of their applications;
+
+      b. A public-interface so that interested entities can understand the ground water status and
+           drawdowns, particularly in critical areas;
+      c.   Accounting system that will integrate the permitting system with the billing and
+           accounting system, including the Government accounting system;
+      d.   Automated water use monitoring. Real-time flow meters could be installed on the
+           premises of the largest water users. This information would feed the system, reducing the
+           need to physical inspections;
+      e.   Automated water level monitoring, if more water level sensors are installed;
+      f.   Weather data integration to provide additional inputs to aquifer recharge and
+           characteristics; and
+      g.   Integration of surface water allocation system.
+
+VI.        LIST OF ANNEXES
+
+      Annex 1 – Request of the Government of the Philippines
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc0ac
+
+      Annex 2 – Review of the Philippine Water Rights System
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc28c
+
+      Annex 3 – Detailed Water Permit Application Process
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc28d
+
+      Annex 4 – Water Permits Revenues and Expenditures
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc28e
+
+      Annex 5 – Fees and Charges
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc290
+
+      Annex 6 – Permitting System User Guide
+
+      http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc295
+
+                                                  30
+Annex 7 – Application of the AEM Model to the Santa Rosa Watershed
+
+http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc30b
+
+Annex 8 – Permitting Journey Map
+
+http://wbdocs.worldbank.org/wbdocs/drl/objectId/090224b0842cc30d
+
+
+
+
+                                          31
+

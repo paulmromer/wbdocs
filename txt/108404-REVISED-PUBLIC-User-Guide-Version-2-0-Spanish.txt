@@ -1,0 +1,1865 @@
+  Versión 2.0
+Guía del Usuario
+  Septiembre de 2016
+                                                              Contenido
+
+Introducción ............................................................................................................................... 3
+
+
+1.      SETUP (CONFIGURACIÓN) .............................................................................................. 5
+     A) City Context (Contexto de la Ciudad) ................................................................................. 5
+     B) Cost Data (Datos de Costos) ............................................................................................. 7
+     C) Emission Factors (Factores de Emisión) ............................................................................ 7
+     D) Advanced User Options (Opciones de Usuario Avanzado) ................................................ 8
+
+
+2.      INVENTORY (INVENTARIO) .............................................................................................. 9
+     A) Base Year Inventory (Inventario Año Base) ....................................................................... 9
+        I. Base Year Charts (Gráficos del Año Base) ...................................................................... 9
+        II. Base Year Tables (Tablas del Año Base).......................................................................10
+     B) Growth Factors (Factores de Crecimiento)........................................................................10
+     C) Projections (Proyecciones) ...............................................................................................12
+        I. Sector Projections (Proyecciones del Sector)..................................................................12
+        II. Inventory Projections (Proyecciones del Inventario) .......................................................13
+     D) Targets (Objetivos) ...........................................................................................................14
+        I. Target Type Selection (Selección del Tipo de Objetivo) ..................................................14
+        II. Target Level (Nivel Objetivo) ..........................................................................................15
+        III. Target Setting Resources (Recursos para Fijar Objetivos) ............................................15
+
+
+3.       CONTEXT (CONTEXTO) ..................................................................................................17
+     A) Emissions Context (Contexto de Emisiones) .....................................................................17
+     B) Benchmarking (Módulo de Evaluación Comparativa) ........................................................17
+        I. City Comparison (Comparación con otras Ciudades) ......................................................18
+        II. Indicator Summary (Resumen de Indicadores) ..............................................................19
+
+
+4.       ACTIONS (ACCIONES) ....................................................................................................21
+     A) Action Selection (Selección de la Acción) .........................................................................21
+        I. Panorama General ..........................................................................................................21
+        II. City Powers Survey (Autoridad de la Ciudad).................................................................21
+        V. Identify Actions (Identificación de Acciónes) ..................................................................22
+     B) Action Development (Desarrollo de la Acción) ..................................................................23
+
+                                                                      1
+        Private Building Energy (Energía de los Edificios Privados) ...............................................27
+        Municipal Buildings and Public Lighting (Edificios Municipales y Alumbrado Público) ........32
+        Electricity Generation (Generación Eléctrica) .....................................................................36
+        Solid Waste (Residuos Sólidos) .........................................................................................38
+        Water and Wastewater (Agua y Aguas Residuales) ...........................................................43
+        Transportation (Transporte) ...............................................................................................48
+     C) Financial Metrics (Parámetros Financieros) ......................................................................53
+        I. Financial Performance Table (Tabla del Desempeño Financiero) ...................................53
+        II. Abatement Cost Curve (Curva de Costos de Abatimiento) .............................................53
+     D) Co-benefits (Co-beneficios) ..............................................................................................54
+        I. Co-benefits Matrix (Matriz de Co-beneficios) ..................................................................54
+        II. I. Co-benefits Description (Descripción de los Co-beneficios) ........................................55
+
+
+5.      RESULTS (RESULTADOS) ..............................................................................................56
+     A) Aggregate Results (Resultados Consolidados) .................................................................56
+        I. Emissions Performance (Desempeño de las Emisiones) ................................................56
+        II. Energy Performance (Desempeño de la Energía) ..........................................................57
+     B) Aggregate Results (Resultados Consolidados) .................................................................58
+        I. Emissions Performance (Desempeño de las Emisiones) ................................................58
+        II. Energy Performance (Desempeño de la Energía) ..........................................................59
+     C) Action Summary (Resumen de Acciones) .........................................................................59
+     D) Scenario Comparison (Comparación de Escenarios) ........................................................60
+        I. Scenario Selection (Selección de Escenario) ..................................................................60
+        II. Scenario Results (Resultados de los Escenarios) ..........................................................61
+        III. Scenario Charts (Gráficos de los Escenarios) ...............................................................62
+        IV. Scenario Tables (Tablas de Escenarios) ......................................................................63
+
+
+6.      DATABASE (BASE DE DATOS) .......................................................................................64
+
+
+Anexo 1: Planilla de Datos de la Herramienta CURB ................................................................65
+
+
+
+
+                                                                  2
+            INTRODUCCIÓN
+           Bienvenido a CURB: Acción Climática para la Sustentabilidad Urbana. Este conjunto de
+         herramientas está diseñado para guiar y ayudar a las ciudades a través del proceso de
+planificación e implementación de una serie de actividades destinadas a reducir el uso de energía, ahorrar
+dinero/recursos y disminuir las emisiones de gases de efecto invernadero (GEI). Las intervenciones
+tecnológicas y de políticas que CURB ofrece pueden brindar co-beneficios relacionados con un importante
+incremento en la calidad de vida local, incluyendo una mejoría en la calidad del aire, el desarrollo de la
+economía local y la creación de empleo.
+
+La herramienta CURB se elaboró mediante una colaboración conjunta entre el Grupo del Banco Mundial,
+la red C40 – que reúne a las principales ciudades preocupadas por el medio ambiente, Bloomberg
+Philanthropies y AECOM Consulting. Cada una de estas instituciones apoya activamente los esfuerzos de
+planificación en materia de sustentabilidad, cambio climático y energía a nivel local en ciudades de todo el
+mundo. El programa permite evaluar las implicaciones de aplicar diferentes políticas e intervenciones
+tecnológicas.
+
+El diseño flexible y modular de la herramienta CURB se adapta a la realidad local reconociendo que los
+impactos relevantes para una ciudad (como el uso de energía, emisiones, o los ahorros en costos, etc.)
+pueden tener un valor diferente en otras. Es así que CURB presenta la información de diferentes formas,
+de manera tal que permite a cada usuario elegir la información que resulte más relevante para su trabajo.
+
+Los cálculos que realiza esta herramienta se basan en enfoques o supuestos de modelos desarrollados
+por ingenieros, economistas y planificadores a nivel mundial. Es preciso reconocer, sin embargo, que la
+precisión de dichas operaciones está directamente relacionada con la calidad de los datos proporcionados,
+por lo que CURB solicita al usuario constantemente suministrar información local relevante. Como la
+mayoría de las ciudades no cuenta con la totalidad de los datos o los mismos pueden ser algunas veces
+poco confiables, CURB ofrece información aproximada, tanto a nivel regional, nacional o de la ciudad.
+
+Esta Guía del Usuario explica la finalidad y el enfoque empleado en cada uno de los seis módulos del
+Conjunto de Herramientas. Indica además qué tipo de información se requiere para hacer funcionar cada
+módulo y el tipo de resultado que se genera en apoyo a la planificación y la toma de decisiones locales.
+
+Le rogamos que, en el caso de que encuentre alguna sección poco clara en esta guía del usuario, se sienta
+con la libertad de ponerse en contacto con el equipo que la ha elaborado para brindar sus sugerencias
+sobre la manera de introducir mejoras.
+
+CURB incluye un total de seis módulos, con las siguientes características:
+
+       Setup (Configuración) es donde el usuario puede ingresar los datos básicos sobre la situación
+        general de la ciudad y los perfiles de los sectores. Esta información es luego utilizada
+        repetidamente en toda la Herramienta para realizar distintos cálculos;
+       Inventory (Inventario) convierte la información suministrada en el módulo Setup en estimaciones
+        sobre cuáles son los sectores que generaron la mayor demanda de energía y emisiones de GEI y
+        estima cómo la situación puede evolucionar con el tiempo. En este módulo el usuario tiene también
+        la opción de fijar objetivos futuros de reducción de uso de energía, costos o emisiones contra las
+        cuales se puede medir su progreso;
+       Context (Contexto) suministra detalles sobre las sub-actividades, los usos finales y las actividades
+        específicas que actualmente son responsables de las emisiones de la ciudad. El módulo permite
+        también comparar una ciudad con otra a través de un rango de indicadores de desempeño clave
+        en cada sector;
+       Actions (Acciones) es el corazón de la herramienta. Este módulo selecciona aquellos sectores en
+        los que el usuario desea concentrarse para luego determinar el grado de autoridad de la ciudad
+        para adoptar medidas en cada sector. La información es velozmente traducida a una rápida
+        evaluación del potencial de impacto máximo y sobre la posibilidad de implementar cada
+
+                                                     3
+    intervención que se incluye en la herramienta CURB. Este módulo tiene como fin ayudar a los
+    usuarios a decidir cuáles son las intervenciones que vale la pena seguir explorando, y así
+    seleccionar aquellas que serán incluidas o excluidas del plan final. Los cálculos detallados de los
+    costos y el impacto se realizan con base en la información suministrada sobre el índice de
+    aplicación que se anticipa para cada intervención En todo momento los usuarios pueden volver
+    sobre sus pasos y cambiar las opciones seleccionadas, ya sea para eliminar o agregar
+    intervenciones o para cambiar el índice de aplicación que se anticipa lograr al final;
+   Results (Resultados) muestra el impacto agregado de las intervenciones seleccionadas en
+    términos de emisiones urbanas de GEI, demanda de energía local y niveles de gasto. Este módulo
+    demuestra también el nivel de éxito de un escenario para alcanzar los objetivos de reducción de
+    emisiones o de reducción en la demanda de energía de la ciudad.
+   Database (Base de Datos) provee los datos aproximados que se utilizan dentro de CURB como
+    base
+
+En las pestañas del sub-módulo de Introduction (Introducción) es posible informarse sobre la finalidad
+de la herramienta, aprender acerca de los socios de CURB y asegurarse que el sistema se encuentra
+desplegado en condiciones óptimas en sus computadoras.
+
+CURB es una herramienta basada en Microsoft Excel diseñada para Excel 2010 y versiones
+posteriores.
+
+
+
+
+                                                4
+            1. SETUP (CONFIGURACIÓN)
+
+Setup es donde el usuario puede ingresar los datos básicos sobre la ciudad que serán empleados en otros
+módulos.
+
+Todos los campos para el ingreso de datos figuran en azul.
+
+1.A) City Context (Contexto de la Ciudad)
+City Context solicita primero que se ingrese la información básica sobre el entorno urbano de la ciudad,
+incluyendo el clima y la población. Luego permite fijar tanto los años de la línea base de emisiones como
+de los objetivos de reducción de emisiones.
+
+
+
+
+Por último, City Context pide incorporar datos sobre la actividad actual de cada sector, lo cual representa
+la mayor parte de los datos solicitados e incluye:
+
+           Edificios residenciales y comerciales;
+           Edificios municipales y alumbrado público;
+           Perfil de la energía suministrada por la red eléctrica;
+           Niveles de generación de residuos sólidos, su composición y prácticas para el manejo de los
+            mismos;
+           Generación y manejo de aguas residuales;
+           Diseño del sistema de suministro de agua;
+           Esquemas de transporte.
+
+Para una visión detallada de los datos requeridos consulte el Anexo 1 o la Planilla de Datos de CURB.
+
+En el caso de las ciudades que ya realizaron un estudio integral de uso de energía o un inventario de las
+emisiones GEI, muchos de los datos solicitados en esta sección ya estarán fácilmente disponibles. Si la
+ciudad realizó un inventario de emisiones de acuerdo con el Protocolo Global para los Inventarios de
+Emisiones de Gas de Efecto Invernadero a Nivel Comunitario (PGC) y envió esta información en la plantilla
+oficial elaborada por C40 y el World Resources Institute, la información puede fácilmente incorporarse a
+CURB. Nótese que en versiones posteriores de CURB la plantilla oficial de PGC se podrá cargar
+directamente. Cuando se ingresen datos en forma manual los usuarios deberán asegurarse que toda la
+información suministrada como parte del inventario GEI es consistente con los datos ingresados respecto
+a la ciudad en el resto del City Context.
+
+
+
+
+                                                    5
+Cuando la columna titulada “Source” (Fuente) se encuentra disponible en el extremo derecho , se pueden
+agregar en la misma, comentarios tales como si cierto dato particular pertenece a algún año que no sea el
+de la Línea Base, por ejemplo. En esta columna también deberá indicar si las unidades en que se introduce
+la información no son las sugeridas en la columna “Units” (Unidades). En las versiones posteriores de
+CURB se adaptarán los cálculos. Algunas de las celdas azules contienen menús desplegables con distintas
+opciones. Para elegir una opción, seleccione la celda y le aparecerá el menú desplegable.
+
+
+
+
+Siempre que sea posible, y con el fin de garantizar la precisión de los datos, el usuario deberá tratar de
+ingresar datos específicos locales. Al mismo tiempo CURB reconoce que la información puede no estar
+siempre disponible. Por ello, la herramienta incluye una opción que permite seleccionar valores por defecto,
+que son datos que ya se encuentran precargados en CURB. Estas estimaciones provienen de información
+de una ciudad, país o región geográfica similar a la del usuario.
+
+La posibilidad de emplear datos aproximados aparece como la Opción 1 del menú de cada sección. Para
+acceder estos datos sólo hace falta seleccionar dicha opción, que idealmente solo se utilizará cuando se
+carezca, ya sea total o parcialmente, de datos específicos de la ciudad objetivo.
+
+
+
+
+Si el usuario decide emplear algunos datos aproximados, puede proseguir a la pregunta siguiente. Tras
+seleccionar la opción para suministrar datos locales, aparecerán las secciones para completar esta
+información.
+
+
+
+
+Si sólo se cuenta con datos parciales, se deben ingresar los mismos en las secciones correspondientes y
+en el resto de las secciones se introducirá la información aproximada provista por el sistema.
+
+Las suposiciones de los datos se pueden cambiar en la sección Advanced User – Usuario Avanzado –
+(1.D), que aparece en el menú Advanced User Options –Opciones de Usuario Avanzado- (1.D.).
+
+                                                     6
+En toda la herramienta aparece un botón de color gris para fijar “Actions to Match Base Case” (Acciones
+para Adecuarse al Caso de Base). Al presionar este botón, las condiciones de intervención del módulo
+Actions (Acciones) – que se describe más adelante en esta guía – se fijan de forma tal que reflejen el
+contexto de la línea base. La situación por defecto se establece en cero, es decir, supone la ausencia de
+actividades en la ciudad. Si se usa esta función luego de ingresar datos en el módulo Setup, las condiciones
+de intervención se actualizarán al escenario de la línea base, con lo que se podrá fácilmente diseñar las
+acciones de la ciudad. Nótese que todas las intervenciones diseñadas con anterioridad quedarán anuladas.
+
+
+
+
+1.B) Cost Data (Datos de Costos)
+En esta sección el usuario debe ingresar diferentes datos relacionados con el costo de energía en la ciudad
+objetivo. Se ofrecen también datos aproximados regionales en caso que no se cuente con los mismos. En
+la medida en que el usuario suministre datos específicos locales, CURB ofrecerá un mejor modelo de
+costos y ahorros de diferentes intervenciones, a medida que se van realizando cambios en el uso de
+energía a lo largo del tiempo.
+
+Cada uno de los puntos de datos se clasifica por sector (residencial, comercial) y tipo de combustible
+(electricidad, gas natural). El usuario debe también ingresar una tasa de descuento que refleje el aumento
+esperado en los costos.
+
+
+
+
+1.C) Emission Factors (Factores de Emisión)
+La página de emisiones permite especificar diferentes factores de emisión para la ciudad objetivo. Para el
+caso de la red eléctrica, CURB ofrece tres opciones: seleccionar los factores de emisión nacionales que
+se obtienen de la base de datos de la Agencia Internacional de Energía (AIE), ingresar factores de emisión
+específicos de la ciudad que se aplicarán a todos los sectores o ingresar factores de emisión específicos
+para la ciudad y por sectores.
+
+Para la energía de combustibles fósiles se pueden emplear los factores de emisión por defecto o ingresar
+aquellos preferidos por el usuario.
+
+Cuando se selecciona cualquiera de estas opciones aparece celdas similares a las de secciones anteriores
+y que permiten ver o ingresar la información para esa opción específica. Al ingresar los factores de emisión
+particulares, es necesario asegurarse de completar la información para cada gas de efecto invernadero y
+verificar que las unidades sean las correctas.
+
+                                                     7
+1.D) Advanced User Options (Opciones de Usuario Avanzado)
+Las opciones de usuario avanzado permiten cambiar las suposiciones técnicas en las que se basan los
+modelos Building Energy (Energía del Edificio), Electricity Generation (Generación de Electricidad), Solid
+Waste (Residuos Sólidos), Wastewater (Agua Residual) y Transport (Transporte). Esto incluiría información
+como estimaciones del volumen de energía que consumen diferentes tecnologías (en diferentes
+contextos), “factores” de emisión que se emplean para estimar emisiones GEI con base en el consumo
+energético, etc. Dado el carácter avanzado de esta opción se recomienda no cambiar las estimaciones por
+defecto. Aunque si se desea hacerlo, le sugerimos contactar al equipo de CURB para informarse sobre la
+forma de acceder a estos datos.
+
+
+
+
+                                                    8
+            2. INVENTORY (INVENTARIO)
+
+Inventory toma la información suministrada por el usuario en el módulo Setup y permite visualizar las
+fuentes de emisiones y la forma en que las mismas evolucionarán a lo largo del tiempo. En este módulo el
+usuario tiene la opción de fijar un objetivo de reducción de emisiones o de uso de la energía y medir el
+progreso con respecto al mismo.
+
+2.A) Base Year Inventory (Inventario Año Base)
+        I. Base Year Charts (Gráficos del Año Base)
+La pestaña Base Year Chart constituye una representación gráfica de las emisiones de cada sector en el
+año de la línea base que se eligió en City Context (1.A).
+
+
+
+
+Los botones en la parte inferior derecha del cuadro permite intercambiar entre ver esta información en
+términos de emisiones (toneladas de dióxido de carbono equivalente: tCO2e) o energía (MWh).
+
+
+
+
+Nótese que si se elige ver la información en términos de energía – en lugar de emisiones – no aparecerán
+todos los sectores y los resultados se limitarán a: Building and Facility Energy (Energía del Edificio y las
+Instalaciones), Manufacturing and Construction Energy (Energía del sector Manufacturas y de la
+Construcción), Energy Industries (Industrias Energéticas), Agriculture and Other Energy (Agricultura y
+Otras Energías) y Transport (Transporte). Se omitirán sectores tales como: Solid Waste (Residuos Sólidos),
+Wastewater (Agua Residual), Industrial Processes and Product Use (Procesos Industriales y Uso del
+Producto) y Land, Forestry and Land Use (Tierra, Bosques y Uso de la Tierra) en tanto que no involucran
+el uso de energía o este ya ha sido considerado bajo otro sector. Por ejemplo, el uso de energía de los
+
+                                                     9
+camiones para recolección de residuos sólidos estaría incluido bajo Transport, mientras que en el caso de
+la industria quedaría cubierto bajo Manufacturing and Construction Energy.
+
+La categorización de los sectores en esta sección es consistente con la metodología de PGC. Si se
+selecciona el logo de cada sector aparecerán el número de referencia de PGC y una descripción del sector.
+Para mayor información ver el Global Protocol for Community-Scale Greenhouse Gas Emission Inventories
+(http://ghgprotocol.org/files/ghgp/GHGP_GPC.pdf).
+
+        II. Base Year Tables (Tablas del Año Base)
+Esta pestaña muestra la misma información que los Base Year Charts, pero en forma tabulada y con
+detalles adicionales. Va más allá de las emisiones agregadas de cada sector para proporcionar detalles
+sobre el uso de energía y de las emisiones de cada tipo de combustible y uso final. En otras palabras, esta
+pestaña contiene un inventario completo de emisiones.
+
+Si el usuario ingresó información del inventario en City Context (1.A) dicha información aparecerá aquí. Si
+no ingresó datos de inventario, estos valores serán estimados con base en la información suministrada en
+el módulo Setup. El usuario tiene la opción de reemplazar aquellos valores que le parezcan incorrectos.
+
+
+
+
+El inventario de PGC se divide en tres niveles:
+
+       Scope 1: (Alcance 1) Emisiones directas de fuentes dentro de los límites definidos;
+       Scope 2: (Alcance 2) Emisiones indirectas relacionadas con la energía proveniente de la red
+        eléctrica, calefacción y/o refrigeración;
+       Scope 3: (Alcance 3) Todas las otras emisiones indirectas.
+
+En GPC guidance (http://ghgprotocol.org/files/ghgp/GHGP_GPC.pdf) se puede encontrar información más
+detallada sobre los alcances.
+
+2.B) Growth Factors (Factores de Crecimiento)
+Esta sección permite fijar factores de crecimiento para actividades que generan emisiones en la ciudad
+objetivo. La información que se ingrese aquí permitirá a CURB tomar el Baseline Inventory (Inventario de
+Línea Base) y proyectar el uso de energía y las emisiones hasta el final del Año Objetivo en la forma de
+un escenario Business as Usual (siguiendo las tendencias actuales). Los resultados de estas proyecciones
+se encuentran en la sección siguiente, Projections (2.C) -Proyecciones (2.C).
+
+
+
+                                                    10
+Hay algunos cuantos factores de crecimiento que pueden considerarse representativos de un crecimiento
+de la actividad, incluyendo:
+
+       Crecimiento de la población (proyectado o histórico): Asume que el incremento en el uso de
+        energía y las emisiones a través de todos los sectores será proporcional al crecimiento de la
+        población en la ciudad o el país. Los datos en materia de población son extraídos del
+        Departamento de Asuntos Económicos y Sociales, División de Población de la Organización de
+        las Naciones Unidas, y el informe World Urbanization Prospects: The 2014 Revision
+        (http://esa.un.org/unpd/wup/Highlights/WUP2014-Highlights.pdf);
+       Crecimiento del PIB (proyectado o histórico): Si se usan los datos aproximados para el
+        crecimiento del PIB se asume que el crecimiento de las actividades estará directamente
+        relacionado con el crecimiento económico;
+       Crecimiento de emisiones (histórico solamente): El crecimiento histórico de las emisiones se
+        deriva              del            estudio            ‘CO2              Highlights           2015’
+        (https://www.iea.org/publications/freepublications/publication/co2-emissions-from-fuel-
+        combustion-highlights-2015.html) de la IEA. Si bien este informe se centra en combustibles fósiles,
+        al seleccionar este factor de crecimiento se aplicarán los índices de crecimiento de las emisiones
+        a todos los sectores;
+       Índice de crecimiento del cliente: Es probable que los índices de crecimiento específicos de la
+        ciudad brinden la estimación más precisa sobre los cambios que se producirán en el uso de
+        energía y emisiones a lo largo del tiempo (aunque son también los más demandantes para el
+        usuario en tanto que se le solicita que ingrese factores de crecimiento para cada tipo de
+        combustible por uso final a lo largo de múltiples períodos de tiempo). Esta información no se
+        encuentra fácilmente disponible en la mayoría de las ciudades.
+
+Las opciones que aparecen le permiten al usuario seleccionar el tipo de factores de crecimiento a ser
+aplicados de manera independiente o combinada.
+
+
+
+
+Una vez seleccionado el tipo de factor de crecimiento, el usuario puede ver y ajustar dichos factores y la
+forma en que se aplicarán a cada sector o actividad.
+
+Si se selecciona la Option 1 (índice de crecimiento de la población) el usuario debe elegir entre usar un
+índice estándar nacional, ingresar índices de crecimiento de la población específicos de la ciudad o
+precisar índices individuales para la población residente, al igual que para la población interurbana en
+tránsito. Este último índice asume que esta población contribuye a la emisión de gases de efecto
+invernadero, por lo que la tendrá en cuenta para los cálculos de emisiones. En este caso, es decir, si se
+les considera, los usuarios deberán completar una tabla que calcula la actividad de la población en tránsito
+como una proporción de la actividad del residente (la población en tránsito consume un 50% de la energía
+de los edificios comerciales con comparación con la población residente). Si los datos de la población en
+tránsito no se incluyen, para anticipar el crecimiento de la actividad sólo se empleará el índice de
+crecimiento de la población residente.
+
+
+
+
+                                                    11
+Si en la sección Define Population Growth Rates (Defina índices de Crecimiento de la Población) se
+selecciona una combinación de factores de crecimiento, los usuarios tendrán la opción de aplicar en cada
+sector solamente uno de los factores de crecimiento seleccionados o de aplicar en cada sector índices de
+crecimiento a través de menús desplegables.
+
+
+
+
+Si un usuario desea aplicar un índice de crecimiento histórico deberá seleccionar el período del que se
+tomará un promedio histórico.
+
+
+
+
+2.C) Projections (Proyecciones)
+        I. Sector Projections (Proyecciones del Sector)
+
+
+
+                                                  12
+Aquí aparecen los resultados de las secciones 2.A y 2.B. En esta pantalla el usuario puede ver el total de
+emisiones o el uso de energía de cada sector y los cambios que se pueden producir a lo largo del tiempo,
+con base en los factores de crecimiento ingresados en 2.B. Al igual que en la sección 2.A, el usuario puede
+emplear el botón en la parte inferior derecha del gráfico para moverse hacia adelante o hacia atrás y así
+ver energía y emisiones.
+
+
+
+
+        II. Inventory Projections (Proyecciones del Inventario)
+Aquí el usuario puede ver una versión más detallada de proyecciones a futuro en forma tabulada, con el
+detalle de emisiones y del uso de energía por tipo de combustible y uso final.
+
+
+
+
+                                                    13
+2.D) Targets (Objetivos)
+Esta sección ayuda al usuario a fijar objetivos para toda la ciudad de reducción de emisiones de GEI o del
+uso de la energía.
+
+Una vez fijado el objetivo, los módulos subsiguientes guiarán al usuario a través del proceso de selección
+y personalización de diferentes intervenciones para reducir el uso de energía y las emisiones en la ciudad
+objetivo.
+
+En el módulo Results – Resultados–(5) los usuarios pueden ver hasta qué grado las intervenciones
+elegidas conducirían hacia el logro de los objetivos de la ciudad. Nótese que la herramienta permite
+efectuar cambios en el objetivo en cualquier momento.
+
+        I. Target Type Selection (Selección del Tipo de Objetivo)
+En esta sección hay tres pasos principales, que son guiados mediante la sección Target Setting Resources
+(III)–Recursos para Fijar Objetivos
+
+
+
+
+El primer paso le pide al usuario que seleccione el objetivo a determinar, es decir, reducción de emisiones
+o de uso de energía. Los méritos relativos de cada uno se describen con mayor detalle en Target Setting
+Resources (III). Es necesario hacer notar que cuando se fija un objetivo de reducción de emisiones, el
+usuario podrá también ver el impacto de diferentes intervenciones en términos de uso de energía y
+viceversa.
+
+El segundo paso pide que se seleccione el tipo específico de objetivo para las emisiones o uso de energía
+– dependiendo de lo que haya sido seleccionado antes. En CURB hay tres opciones principales: meta del
+año base, meta de intensidad del año base y meta del escenario de línea base. Algunos tipos de objetivos
+pueden ser más apropiados que otros para la ciudad objetivo. En Target Setting Resources (III) se brinda
+mayor información sobre cada uno de ellos.
+
+El último paso pregunta si el usuario desea fijar objetivos interinos además de la meta de reducción de
+energía o emisiones a más largo plazo. En Target Setting Resources (III) se puede encontrar mayor
+información y orientación al respecto.
+
+
+
+                                                    14
+        II. Target Level (Nivel Objetivo)
+Una vez seleccionado el tipo de objetivo a fijar, la página siguiente le permite al usuario elegir el tamaño
+en la reducción del uso de energía y emisiones y el momento en que se busca alcanzarlo.. Como regla
+general, los objetivos deben ser ambiciosos, aunque alcanzables.
+
+La                      iniciativa                    research                      (http://c40-production-
+images.s3.amazonaws.com/researches/images/24_Working_Together_Global_Aggregation.original.pdf?
+1411483385) de mega ciudades del C40 y Arup identificó a 228 ciudades en todo el mundo que fijaron
+objetivos de reducción de emisiones, la mayoría de ellos para 2020 o 2050. Estos objetivos varían respecto
+al nivel de ambición desde menos del 20% hasta un total del 100% de reducción de emisiones de GEI.
+
+
+
+
+        III. Target Setting Resources (Recursos para Fijar Objetivos)
+Esta sección brinda información y guías detalladas sobre la forma de seleccionar el tipo de objetivo
+(Sección I) y el nivel del objetivo (Sección II). A continuación se ofrece un breve panorama general. Para
+mayores detalles consulte la herramienta CURB.
+
+Para fijar los objetivos el usuario deberá elegir entre opciones en 3 áreas:
+
+    1. Emissions vs. energy target (Objetivos de emisiones o energía): El usuario puede elegir fijar sus
+       objetivos en términos de emisiones o del uso de energía.
+           a. Emisiones es el punto de referencia que se usa habitualmente. Más de 200 ciudades de
+               todo el mundo han fijado objetivos de reducción de emisiones de GEI a modo de guía para
+               la acción local contra el cambio climático. En mediano y largo plazo los objetivos de
+               emisiones logran cubrir intervenciones en todos los sectores.
+           b. Reducción de Energía puede resultar apropiado para aquellas ciudades que se concentran
+               en metas relacionadas con el uso de energía, si bien no todas las intervenciones resultarán
+               en la reducción del consumo energético (como podría ser el caso de intervenciones en
+               sectores tales como Residuos Sólidos y Agua y Agua Residual).
+
+
+                                                     15
+2. Target type (Tipo de objetivo): Este paso define el punto de referencia con el cual se calibran los
+   objetivos.
+       a. El base year goal (objetivo del año base) calcula el objetivo final e intermedio como una
+           cantidad relativa al año base. Como la información sobre el año base se conoce de
+           antemano, este tipo de objetivo otorga un cierto grado de certeza con pocos requisitos
+           de datos adicionales.
+       b. El base year intensity goal (objetivo de intensidad del año base) se refiere a los objetivos
+           relativos a un porcentaje del año base, como pueden ser emisiones per cápita. Este
+           método puede llegar a resultar ventajoso para aquellas ciudades que experimenten
+           grandes crecimientos económicos o de población, aunque garantiza una menor certeza
+           al introducir una variable adicional proyectada.
+       c. Un baseline scenario goal (objetivo de escenario de la línea base) fija objetivos relativos
+           a las emisiones proyectadas en un escenario con actividad normal (BAU). Este tipo de
+           objetivo resulta conveniente para ciudades en las que se espera un importante
+           crecimiento de las emisiones a lo largo del tiempo si no se toman medidas.
+3. Interim targets (Objetivos interinos): Los usuarios pueden elegir fijar objetivos interinos para los
+   años intermedios (entre el año base y el objetivo a largo plazo). Este tipo de objetivos permite un
+   seguimiento del progreso a lo largo del tiempo, pero requiere que se aporten datos para esos
+   años intermedios.
+
+
+
+
+                                                16
+            3. CONTEXT (CONTEXTO)
+
+Context suministra detalles sobre las sub-actividades, los usos finales y los materiales que actualmente
+generan las emisiones de la ciudad. El módulo permite también comparar una ciudad con otra a través de
+un rango de indicadores de desempeño clave en cada sector.
+
+3.A) Emissions Context (Contexto de Emisiones)
+La sección Emissions Context ofrece un contexto para los factores determinantes de las emisiones y el
+uso de energía en los sectores de la ciudad. Comprende el detalle completo de las emisiones y fuentes de
+uso de energía. En los gráficos se puede visualizar información general sobre los componentes de las
+emisiones o vistas específicas de los sectores. Al comprender cuáles son los factores determinantes de
+cada sector el usuario puede comenzar a identificar las áreas de intervención en las que deberá enfocarse.
+
+
+
+
+3.B) Benchmarking (Módulo de Evaluación Comparativa)
+
+
+                                                   17
+        I. City Comparison (Comparación con otras Ciudades)
+Este módulo de CURB permite comparar el desempeño de la ciudad objetivo con otras ciudades del mundo.
+CURB incluye en la actualidad 23 Indicadores Clave de Desempeño (KPI) que cubren seis sectores. La
+información de otras ciudades fue obtenida de una variedad de compilaciones de datos; el equipo de CURB
+eligió aquellos que se actualizaban regularmente a fin de asegurar que la herramienta se mantuviera lo
+más vigente posible.
+
+
+
+
+Para evaluar el desempeño de una ciudad objetivo seleccione el Sector haciendo clic en el logotipo del
+mismo del lado izquierdo. Aparecerán entonces en el medio de la pantalla los indicadores de rendimiento
+clave disponibles para ese sector. Seleccione uno de estos indicadores y el gráfico de barras cambiará
+para mostrar una comparación de ciudad por ciudad del indicador seleccionado. También se destacará en
+amarillo la ciudad objetivo, mientras que las otras ciudades aparecerán en color celeste. Por lo general –
+y dependiendo del indicador seleccionado – las ciudades con los mejores desempeños aparecerán hacia
+el lado derecho del gráfico.
+
+Por defecto la ciudad objetivo se compara con todas las demás ciudades para las cuales hay datos
+disponibles. Para reducir la lista de ciudades con las cuales se compara la ciudad objetivo seleccione uno
+de los “Benchmark Comparison Filters” (Filtros de Evaluación Comparativa), que incluye:
+
+
+
+
+       “Region” (Región) – mediante este filtro se compara la ciudad objetivo con otras ciudades de la
+        misma región geográfica.
+
+
+
+                                                   18
+       “Development” (Desarrollo) -- este filtro ayuda a comparar la ciudad objetivo con otras ciudades
+        de un nivel similar de desarrollo económico, de acuerdo con la clasificación del Human
+        Development Index (HDI) –Índice de Desarrollo Humano.
+       “Climate” (Clima) – este filtro sirve para comparar la ciudad objetivo con otras ciudades de una
+        zona climática similar.
+
+Si bien los filtros Region y Development pueden resultar de interés general para la ciudad objetivo, el filtro
+Climate está diseñado fundamentalmente para ser usado en dos indicadores de desempeño específicos:
+“Building GHG emissions per capita” (Emisiones GEI de edificios per cápita), en Private Building Energy
+(Energía de Edificios Privados) y “Public building energy consumption” (Consumo de energía en edificios
+públicos), y en “Municipal Building Energy” (Energía de los Edificios Municipales). Esto se debe a que el
+tipo de clima es un factor determinante en la demanda de energía y emisiones asociadas de las
+edificaciones, ya que la utilización de calefacción y climatización varía ampliamente entre las regiones con
+temperaturas promedio diferentes. Por ejemplo, ceteris paribus (si todas las demás cosas permanecieran
+iguales), una ciudad con veranos calurosos e inviernos fríos es probable que tenga un consumo mucho
+más elevado de energía en el sector edificaciones que una ciudad con un clima más templado.
+
+Para seleccionar un filtro pulse en el mismo y luego presione dos veces en el Indicador Clave de
+Desempeño para actualizar el gráfico.
+
+En la parte inferior de la pantalla el usuario puede ver la información del gráfico de barras en forma tabulada,
+con valores precisos, el año de los datos y la fuente de los mismos.
+
+        II. Indicator Summary (Resumen de Indicadores)
+A continuación se presenta la lista de los 23 indicadores clave de desempeño utilizados en CURB. Para
+mayor información sobre cada uno, incluyendo definiciones y fuentes de datos, consulte la herramienta
+CURB.
+
+                     Sector                                                     KPI
+ Energía en Edificios Privados                         Emisiones de GEI por edificio per cápita
+                                                       % de la población con servicio eléctrico
+ Energía y Alumbrado Público en Edificios              Consumo de energía en edificios públicos
+ Municipales                                           Uso promedio de energía en el sistema de alumbrado
+                                                       público
+ Generación de electricidad                            Factor de emisiones de la red
+                                                       % de energía derivado de fuentes renovables
+ Residuos sólidos                                      Emisiones de GEI de los residuos sólidos per cápita
+                                                       Residuos sólidos generados per cápita
+                                                       % de la población con recolección de residuos sólidos
+                                                       % de residuos sólidos reciclados
+                                                       % de residuos sólidos biológicamente tratados
+ Agua y aguas residuales                               Emisiones de GEI de las aguas residuales per cápita
+                                                       Emisiones de GEI del agua per cápita
+                                                       % de las aguas residuales de la ciudad que no son
+                                                       sometidas a tratamiento
+                                                       % de la población con recolección de aguas residuales
+                                                       % de la población con acceso al servicio de agua
+                                                       mejorada
+ Transporte                                            Transporte de emisiones de GEI per cápita
+                                                       Automóviles privados per cápita
+                                                       % de viajes en automóviles privados
+                                                       % de viajes en transporte público
+                                                       % de viajes en medios no motorizados
+
+
+                                                      19
+General   Emisiones totales de GEI per cápita
+          Uso de electricidad per cápíta
+
+
+
+
+          20
+            4. ACTIONS (ACCIONES)
+
+Actions es el corazón de la herramienta CURB. Este módulo selecciona aquellos sectores en los que el
+usuario desea concentrarse para luego determinar el grado de autoridad de la ciudad para adoptar medidas
+en cada sector. Los cálculos de viabilidad, costos y potencial para la reducción de emisiones permiten
+realizar una rápida comparación de las acciones potenciales y realizar una selección preliminar de aquellas
+acciones que parezcan más convenientes para la ciudad. Los usuarios pueden luego personalizar cada
+una de las acciones elegidas y ver la forma en que cada una de ellas contribuiría al objetivo general de
+reducción de emisiones. Los usuarios podrán ver información más detallada de costos y co-beneficios en
+las intervenciones personalizadas. En todo momento el usuario puede regresar sobre sus pasos y cambiar
+las opciones seleccionadas, ya sea para eliminarlas o agregar otras.
+
+4.A) Action Selection (Selección de la Acción)
+        I. Panorama General
+
+
+
+
+Como Action Selection (4.A) es uno de los sub-módulos más largos de CURB, en esta sección incluimos
+una breve descripción de los diferentes pasos que abarca. En primer lugar, se les solicita que clasifiquen
+el nivel de autoridad de la ciudad objetivo para adoptar medidas en cada sector en City Powers Survey
+(4.A.II). Tambien se les pide a los usuarios que identificar las acciones que desearían desarrollar más
+extensivamente en la sección siguiente, con base en los datos más detallados sobre viabilidad e impacto
+potencial en Identify Actions–Identificación de Acciónes (4.A.III).
+
+        II. City Powers Survey (Autoridad de la Ciudad)
+Esta sección le pide al usuario que evalúe la autoridad que tiene el gobierno local para adoptar acciones
+en cada sector y subsector. Esto es importante, ya que el nivel de autoridad de una ciudad necesariamente
+se reflejará en la viabilidad de implementar cualquier acción. Sólo se pide que se evalúe el grado de
+autoridad de la ciudad en los sectores que fueron seleccionados en la sección anterior.
+
+
+
+
+                                                    21
+La autoridad de la ciudad se mide a través de tres parámetros diferentes:
+
+(i)     Own/Operate (Posee/Opera): el grado de propiedad, goce y/o usufructo que la ciudad ejerza sobre
+        el bien/función/servicio particular en cuestión. Por ejemplo, cuando la ciudad posee/opera el
+        sistema de transporte local es probable que tenga una mayor posibilidad de adoptar medidas en
+        esa área que una ciudad cuya influencia sobre las operaciones del sector sea limitada o nula.
+(ii)    Policies, Regulations, and Enforcement (Políticas, Reglamentación y Fiscalización): el grado en
+        el cual una ciudad es capaz de fijar y hacer cumplir las políticas en cada sector. Por ejemplo, un
+        gobierno local que puede fijar y hacer cumplir una política que se refiera a los edificios privados
+        tendrá mayor capacidad para actuar que aquel que carece de autoridad para fijar políticas o que
+        puede fijar las políticas pero no cuenta con el poder para ejecutarlas o fiscalizarlas.
+(iii)   Control Budget (Controlar el Presupuesto): el grado en el que una ciudad controla el presupuesto
+        para el bien/función/servicio en cuestión. Por ejemplo, un gobierno local que controla el
+        presupuesto de iluminación pública está en una mejor posición para adoptar medidas en ese sector
+        que el que no tiene esa capacidad.
+
+Es importante que el usuario seleccione el grado adecuado de autoridad que la ciudad objetivo tiene en
+cada sector, ya que ello ayudará a determinar la viabilidad de cada intervención, como se muestra en el
+sección siguiente, Identify Actions (Identificación de Acciónes) (4.A.III).
+
+Nótese que en el caso de los edificios privados solo se puede evaluar a la autoridad de ciudad en términos
+de políticas, regulaciones y fiscalización, ya que se asume que, por definición, el presupuesto de los bienes
+privados está fuera de su alcance, con la excepción de la energía del distrito.
+
+
+        V. Identify Actions (Identificación de Acciónes)
+Esta sección resume en una sola tabla la información de este módulo, lo que permite comparar diferentes
+acciones para decidir cuáles son las que el usuario desea desarrollar con mayor profundidad en Action
+(4.B.) Development. La última columna a la derecha permite a los usuarios navegar a la página de diseño
+para cada acción Nótese que el usuario puede regresar a esta página en cualquier momento durante el
+proceso de diseño de la acción a implementar.
+
+
+
+
+                                                     22
+En este módulo, cada columna utilizan los términos "alto ", "medio " y "bajo" para evaluar cada acción.
+
+Level of City Authority resume los resultados de los deslizadores que se utilizaron en City Powers Survey
+(4.A.II).
+
+La columna de Level of Technical Difficulty proporciona, en general, una idea la dificultad de implementar
+cada intervención desde el punto de vista técnico, sin considerar la capacidad de la ciudad objetivo.
+
+Los siguientes dos columnas, costo de implementación y tiempo de recuperación de la inversión
+proporcionan información sobre el costo promedio de la implementación de la aplicación y la duración de
+amortización, o la cantidad de tiempo que se necesita para recuperar los costos.
+
+La última columna provee la un estimado de la reducción de emisiones potenciales.
+
+El usuario debe revisar la información provista y seleccionar las intervenciones presentadas que la ciudad
+desee implementar.
+
+4.B) Action Development (Desarrollo de la Acción)
+Esta sección permite personalizar cada una de las acciones seleccionadas para la ciudad objetivo ya que
+el usuario ha analizado cuáles son las que desea desarrollar más profundamente. Para comenzar, el
+usuario selecciona un sector, como lo muestra la pantalla siguiente. El usuario puede volver a esta pantalla
+en cualquier momento (seleccionando Action (4.B) en la parte superior de la página) o moverse a una zona
+de una acción distinta sin perder el progreso hecho en el desarrollo de distintas acciones.
+
+
+
+
+                                                    23
+En la parte inferior de esta pantalla, hay una página llamada Action Implementation Details. En esta
+sección, los usuarios pueden ver una tabla que resume los años de aplicación que han elegido para cada
+acción. El año de aplicación se puede cambiar modificando los campos azules. Esta información ayuda
+al usuario a trazar un plan más realista para la ciudad al programar acciones que sean más apropiadas
+para las circunstancias locales. Esta información proporciona además una visión sobre los flujos de caja
+de cada acción.
+
+
+
+
+Los usuarios también pueden ver un resumen de bajo quien está la autoridad de implementación de
+cada acción, sea gobierno local o el gobierno nacional. Los usuarios pueden indicar el porcentaje de
+cada acción que se implementa por la ciudad o la autoridad nacional o regional. Esta información se
+utiliza para visualizar el impacto de las acciones locales frente a las nacionales/regionales en Results.
+
+
+
+
+                                                     24
+Más adelante se describe con mayor detalle cada sección de la acción, aunque desde este momento
+conviene destacar algunas características comunes a todas. Cuando el usuario selecciona una sección
+sobre la implementación de la acción, como por ejemplo edificios privados, el sistema lo lleva a una pantalla
+de inicio de dicho sector. Esta pantalla de inicio contiene información importante, como se puede apreciar
+en la pantalla siguiente.
+
+
+
+
+En el lado izquierdo hay una lista de diferentes acciones agrupadas por categoría. En este ejemplo, las
+acciones que tienen que ver con iluminación, electrodomésticos, etc., están agrupadas dentro de la
+categoría Existing Residential Buildings (Edificios Residenciales Existentes).
+
+
+
+                                                     25
+Cada una de las acciones cuenta con un botón del lado derecho llamado “Go to Action” (Ir a la Acción),
+que se puede presionar para comenzar a personalizar la acción individual.
+
+Una vez que el usuario comienza la personalización de las acciones, su impacto aparece en las columnas
+del lado derecho. El impacto se expresa en términos de reducción de emisiones (toneladas CO2e/año),
+energía reducida (kWh/año), costo de implementación ($US) y ahorros anuales ($US/año). Los usuarios
+pueden también ver qué porcentaje de la reducción total de emisiones en esa sección de implementación
+es aportada por una acción particular. Por ejemplo, en esta pantalla el 22% del total de la reducción de
+emisiones en edificios privados provino de mejoras en la iluminación en edificios residenciales existentes.
+
+La barra en la parte superior de la pantalla resume el impacto agregado de acciones en esa sección de
+implementación. En el ejemplo anterior, por ejemplo, el impacto agregado de todas las acciones aplicadas
+a edificios privados dio como resultado una reducción de emisión de 1.457.701 toneladas de CO2e por año
+(13.9% del total de las emisiones reducidas por las acciones desarrolladas en la herramienta), con ahorros
+de energía por 3.205.948.356 kWh/año.
+
+
+
+
+Las pestañas del lado derecho de la barra de resumen presentan el año objetivo y los objetivos interinos
+que se fijaron en 2.D Targets –en este caso 2020, 2035 y 2050. Estos objetivos son importantes ya que
+controlan los tiempos de diferentes intervenciones. Si se selecciona 2020, se fija la duración de cualquier
+acción personalizada entre el año base y 2020. Si se selecciona 2035, se fija el período de tiempo para
+cualquier acción personalizada entre el año base y 2035. Y si se selecciona 2050, se fija el período de
+tiempo para cualquier acción personalizada entre el año base y 2050. Esto permite escalonar y programar
+diferentes intervenciones a lo largo del tiempo. Por ejemplo, si el usuario desea centrarse en mejoras en
+materia de eficiencia energética en los edificios existentes entre el momento actual y 2020, para enfocarse
+en nuevos edificios a partir de 2020. Los usuarios pueden seguir algunas acciones en todos los años hasta
+el año final objetivo, mientras que otras pueden ser de corto plazo y comenzar o terminar en uno de los
+objetivos interinos.
+
+Es importante notar que el impacto en la reducción de emisiones de cualquier acción seleccionada por un
+período de tiempo (como puede ser hacia 2020) se puede representar dentro de ese mismo período. Para
+obtener beneficios a través de períodos múltiples se debe seleccionar la acción para cada año objetivo
+interino. Para mayor conveniencia, muchas acciones en los años objetivo posteriores contienen el botón
+“Set Page to Prior Year” (Fijar la Página en el Año Anterior). Esto les permite a los usuarios diseñar
+acciones rápidamente a partir del punto que dejaron en los años objetivo anteriores.
+
+
+
+
+Los diales en el rincón superior derecho muestran el progreso hacia el objetivo de reducción de emisiones
+fijado anteriormente en la herramienta (si así se hizo). El dial de la izquierda muestra el progreso total hacia
+el objetivo a través de la implementación de todas las acciones en todos los sectores que hasta el momento
+hayan sido personalizados. El dial de la derecha muestra las reducciones de emisiones logradas para una
+zona de implementación de acción determinada – en este caso edificios privados.
+
+
+
+
+                                                      26
+          Private Building Energy (Energía de los Edificios Privados)
+             Las acciones que se refieren a los edificios privados pueden, en líneas generales, dividirse en
+intervenciones por el lado de la demanda y por el lado de la oferta. Las intervenciones por el lado de la
+demanda incluyen la eficiencia energética (además de algunos cambios en combustibles utilizados),
+mientras que las intervenciones por el lado de la oferta incluyen la energía renovable distribuida y redes
+distritales.
+
+Todas las acciones se pueden aplicar a los edificios residenciales, edificios comerciales o edificios no
+categorizados. Los edificios residenciales se dividen en edificios de ingreso bajo, medio-bajo, medio-alto
+y alto. Los edificios comerciales se dividen en espacios para comercios, oficinas, hospitales y hoteles. Los
+edificios no categorizados no están divididos en sub-categorías.
+
+Para las medidas de eficiencia energética y de sustitución del combustible el usuario puede elegir aplicar
+acciones tanto a los edificios existentes (reacondicionamiento) como a los nuevos (nueva construcción).
+
+Al igual que con los otros sectores, el usuario puede especificar el período de tiempo en el cual se
+implementará la acción utilizando los botones localizados en el ángulo superior derecho. Es necesario
+diseñar acciones para todos los años objetivo.
+
+La siguiente es una lista que resume las acciones en el sector de los edificios privados:
+
+Eficiencia energética en edificios residenciales, comerciales o no categorizados existentes
+
+Incluye acciones por separado en materia de iluminación, electrodomésticos y aparatos electrónicos,
+calefacción y refrigeración del lugar, calentamiento de agua y aparatos y envoltura del edificio. La cocina
+es evaluada en los edificios no categorizados. Las acciones relacionadas con calefacción permiten la
+sustitución del combustible además de actualizaciones con equipos más eficientes.
+
+Eficiencia energética en edificios residenciales, comerciales o no categorizados nuevos
+
+En forma similar a los edificios existentes, en los nuevos edificios se evalúan las acciones para iluminación,
+electrodomésticos y aparatos electrónicos, calefacción y refrigeración del lugar, calentamiento de agua y
+aparatos y envoltura del edificio. La cocina es también evaluada en los edificios no categorizados.
+
+Sistemas fotovoltaicos distribuidos en edificios existentes
+
+Estas acciones permiten al usuario seleccionar el tamaño promedio del sistema (kWh/m 2) y el porcentaje
+de edificios a los cuales la intervención estará dirigida, con aportes separados para diferentes grupos de
+ingresos o tipos de edificios.
+
+Redes Distritales de Energía en los edificios existentes
+
+La acción District Energy (Energía Distrital) permite determinar la eficiencia de las calderas, si se va a usar
+cogeneración y el tipo de combustible. Para la refrigeración distrital, el usuario puede seleccionar la
+eficiencia del enfriador. Luego puede decidir el porcentaje de distintos tipos de edificios a los cuales se
+deben aplicar los sistemas de calefacción/refrigeración.
+
+En todos los casos, si se pulsa el botón “Go to Action” el sistema se dirigirá a una página de diseño de la
+acción.
+
+
+
+
+                                                      27
+Esta página muestra la acción de eficiencia en materia de iluminación para los edificios residenciales. Aquí
+los usuarios pueden especificar los cambios que se introducirán en los aparatos eléctricos y controles de
+su ciudad. Los aparatos se refieren a las bombillas eléctricas (como pueden ser, incandescentes,
+fluorescentes, LFC, etc.). Los controles se refieren a la manera en que se encenderá y apagará la
+iluminación (como controles de ocupación, luz del día o una combinación). A través de los menús
+desplegables es posible modificar la situación de la línea base, que ya debe reflejar los datos ingresados
+en el módulo Setup. Luego el usuario puede diseñar la situación objetivo.
+
+Por debajo de las selecciones de aparatos y controles, cada elemento del diseño contiene un deslizador
+que controla el grado de “saturación” de cada acción, es decir, a qué porcentaje del parque inmobiliario
+estarían dirigidas las acciones.
+
+Los usuarios pueden diseñar dos estrategias para cuatro grupos de ingresos: vivienda residencial de bajo
+ingreso, de ingreso bajo-medio, alto-medio y alto ingreso. Esto permite flexibilidad en las acciones
+personalizadas. Por ejemplo, un usuario puede desear hacer un seguimiento de las bombillas LFC, dirigido
+a los hogares de bajo ingreso solamente (u 80% de los hogares, a ser determinado por el deslizador del
+nivel de saturación) en lugar de todos los grupos de ingreso o viceversa.
+
+En cuanto se empiezan a mover los deslizadores, aparecen cambios en la barra de resumen de la parte
+superior. Esta muestra la reducción de emisiones, en uso de energía, costos y ahorros para esta
+intervención en particular (en este caso, eficiencia de la iluminación residencial para los edificios
+existentes).
+
+Los gráficos de barras a la derecha muestran el impacto de cada acción en la demanda de energía. Hay
+un gráfico distinto para cada grupo de ingreso. El eje vertical muestra la demanda de energía en kWh por
+metro cuadrado. El eje horizontal tiene dos barras diferentes que muestran la demanda de energía
+
+                                                    28
+antes/después de ejecutarse una acción. Las barras que muestran el caso base representan la demanda
+de energía para ese tipo de edificio y nivel de ingreso (en este caso vivienda residencial de bajo ingreso)
+antes de aplicarse las acciones. Las barras que muestran el caso mejorado muestran una disminución en
+la demanda energética, que da cuenta de todas las acciones emprendidas (incluyendo las diseñadas en
+otras páginas). Los gráficos son dinámicos, de forma tal que reflejan de inmediato los cambios en el uso
+de energía que resultan de mover los deslizadores del índice de saturación. Cada color representa el uso
+de una fuente de energía distinta: violeta para la calefacción, azul para la refrigeración, gris claro para la
+energía de los ventiladores, verde para electrodomésticos y aparatos electrónicos, amarillo para la
+iluminación, naranja para el agua caliente, rojo para la cocina y gris oscuro para otras.
+
+Una vez que el usuario ha terminado de cambiar los niveles del deslizador para esta acción, puede volver
+a la pantalla de resumen de los edificios privados seleccionando “ Private Building Energy” en el ángulo
+superior izquierdo. Todos los datos se guardan automáticamente y en cualquier momento el usuario puede
+volver a la página de la acción para editar las selecciones.
+
+La página de acción de Commercial Lighting Efficiency (Eficiencia de la Iluminación en Edificios
+Comerciales) en edificios existentes es muy similar.
+
+
+
+
+En lugar de los distintos grupos por ingreso, las acciones se pueden personalizar para diferentes tipos de
+edificios comerciales: comercios, oficinas, hospitales y hoteles. Tal como sucede con los edificios
+residenciales, los deslizadores permiten seleccionar el porcentaje de edificios que impactaría cada acción.
+Los gráficos de barras a la derecha muestran un caso base y un caso mejorado para cada tipo de edificio.
+
+La página de acción para Informal Lighting Efficiency (Eficiencia de la Iluminación en Sistemas Informales)
+en edificios existentes es ligeramente distinta.
+
+
+
+                                                     29
+Los ajustes de eficiencia se realizan por tipo de combustible (keroseno, propano, carbón vegetal), como
+se detalla en el módulo Setup. Por ejemplo, se pueden cambiar las lámparas de keroseno por las lámparas
+solares o bombillas LFC. Los usuarios pueden seleccionar el tipo de aparato a sustituir por medio del menú
+desplegable y también puede seleccionarse el tipo de aparato y combustible propuestos.
+
+Las páginas de diseño de acciones de la siguiente categoría que se refiere a edificios, Generación
+Renovable Distribuida, son ligeramente distintas.
+
+
+
+
+Además de seleccionar el nivel de saturación que determine el porcentaje de edificios al que se aplicará
+la acción, el usuario puede elegir el tamaño de sistema fotovoltaico promedio en términos de kW/unidad.
+En este caso “unidad” se refiere a un edificio en particular. Los usuarios pueden cambiar el área total que
+
+
+                                                    30
+se requiere para la instalación y el volumen de energía generado por unidad. La página de acción para
+los edificios comerciales es muy similar.
+
+La última página de acción del sector de edificios privados es para District Energy (Energía Distrital):
+
+
+
+
+Aquí los usuarios pueden seleccionar el porcentaje de edificios que cuentan con calefacción y refrigeración,
+por cada tipo de edificio. Es posible también especificar los detalles del sistema de calefacción del distrito,
+como el tipo de caldera y el combustible.
+
+
+
+
+                                                      31
+          Municipal Buildings and Public Lighting (Edificios Municipales y
+          Alumbrado Público)
+En Municipal Buildings and Public Lighting hay tres tipos de acciones: 1) Energy Efficiency and Fuel
+Switching (Eficiencia energética y sustitución del combustible), 2) Public Lighting Energy (Energía del
+alumbrado público) y 3) Municipal Distributed Renewable Energy (Energía renovable distribuida municipal).
+
+
+
+
+Energy Efficiency and Fuel Switching (Eficiencia Energética y Sustitución del Combustible)
+
+Las acciones de los edificios municipales en eficiencia energética y sustitución de combustibles son muy
+similares a las acciones en Private Building Energy, siendo esencialmente un sub-conjunto de las mismas.
+Por ejemplo, para Municipal Office Building Envelope (Edificios Municipales), el usuario puede proponer
+estrategias múltiples en que la situación futura se diferenciará de la línea base.
+
+Las múltiples estrategias que el usuario puede adoptar son presentadas en distintas secciones. A través
+de los menús desplegables es posible modificar la situación de la línea base, que refleja lo insertado en el
+módulo Setup. Posteriormente, se puede diseñar el escenario de la situación futura por medio de los menús
+desplegables. Las opciones que aparecen indican los tipos de aislamiento en las paredes, techos y
+ventanas y que se pueden instalar.
+
+Para cada estrategia el usuario puede especificar el área en que deben aplicarse estas acciones
+valiéndose de los deslizadores.
+
+En cuanto empiezan a moverse los deslizadores comienzan a aparecer los cambios reflejados en la barra
+de resumen en la parte superior, que muestra la reducción de emisiones, en energía, costos y ahorros
+para esta intervención en particular (en este caso, normas para la envoltura de edificios municipales
+existentes).
+
+Los gráficos de barras a la derecha muestran el impacto de cada acción en la demanda de energía. Hay
+un gráfico aparte para cada grupo por ingreso. El eje vertical muestra la demanda de energía en kWh por
+
+
+                                                    32
+metro cuadrado. El eje horizontal tiene dos barras diferentes que muestran la demanda de energía
+antes/después de adoptarse una acción. Las barras de caso base representan la demanda de energía
+antes de aplicar cualquier acción. Las barras que muestran los casos mejorados presentan una
+disminución en la demanda energética, dando cuenta de todas las acciones emprendidas (incluyendo las
+diseñadas en otras páginas). Los gráficos son dinámicos, de forma tal que reflejan de inmediato los
+cambios en el uso de energía que resultan de mover los deslizadores del índice de saturación. Cada color
+representa el uso de una fuente de energía distinta: violeta para la calefacción, azul para la refrigeración,
+gris claro para la energía de los ventiladores, verde para electrodomésticos y aparatos electrónicos,
+amarillo para la iluminación, naranja para el agua caliente, rojo para la cocina y gris oscuro para otros.
+
+Una vez que el usuario ha terminado de cambiar los niveles del deslizador para esta acción, puede volver
+a la pantalla de resumen de los edificios municipales seleccionando “ Municipal Building and Public Lighting”
+en el ángulo superior izquierdo. Todos los datos se guardan automáticamente y en cualquier momento se
+puede volver a la página de acciones para editar las selecciones.
+
+
+
+
+Las intervenciones en Municipal Heating System Efficiency (Eficiencia del Sistema de Calefacción
+Municipal) y Fuel Switching (Sustitución del Combustible) se agrupan por tipo de combustible. Para cada
+tipo de combustible los usuarios pueden registrar dos estrategias para cambiar a combustibles más
+eficientes o sistemas de calefacción mejorados. Al igual que con las otras acciones, por medio de los
+menús desplegables se puede seleccionar un sistema de calefacción nuevo y elegir modificar el
+combustible asociado al sistema.
+
+
+
+
+                                                     33
+Las acciones bajo Municipal Cooling System Efficiency (Eficiencia del Sistema de Refrigeración Municipal)
+y Municipal Lighting Efficiency and Controls (Eficiencia y Controles de la Iluminación Municipal) se diseñan
+de forma similar. Por medio de los menús desplegables y del deslizador de saturación los usuarios pueden
+especificar las diferencias en infraestructura entre la línea base y los escenarios propuestos.
+
+Public Lighting Energy (Energía para Alumbrado Público)
+
+La acción Public Lighting Energy permite cambiar los porcentajes de alumbrado público y de semáforos
+con distintas tecnologías. Por medio del deslizador se puede especificar el número y el porcentaje de
+lámparas de la línea base cuya tecnología debe mejorarse.
+
+
+
+
+                                                    34
+Municipal Distributed Renewable Energy (Energía Renovable Distribuida Municipal)
+
+En Municipal Distributed Renewable Energy el usuario puede determinar la cantidad de energía eléctrica
+que la ciudad desea generar mediante sistemas fotovoltaicos. Este sistema es extremadamente flexible,
+se adapta a las preferencias de la ciudad (ya que considera que los equipos pueden colocarse en sitios
+distintos a los techos de los edificios, como en el campo, terrenos vacíos o los estacionamientos). El
+usuario ingresa en la celda azul el tamaño anticipado del sistema fotovoltaico.
+
+
+
+
+                                                 35
+          Electricity Generation (Generación Eléctrica)
+           Electricity Generation solo permite emprender una acción, Grid Decarbonization (Des-
+carbonización de la Red Eléctrica). El usuario puede cambiar la intensidad de carbono de la electricidad
+suministrada a través de la red eléctrica modificando el volumen de electricidad que genera cada fuente
+de energía. Para ello, el usuario debe diseñar tres componentes diferentes: los factores de emisión de la
+red eléctrica, las fuentes de generación de electricidad, y la cantidad de electricidad generada por cada
+fuente.
+
+
+
+
+El usuario tiene la opción de personalizar el factor de emisión (Emission Factor) para la red, o simplemente
+utilizar el factor de emisión base.
+
+
+
+
+Al seleccionar Generation Mix, se muestra al usuario la cartera de fuentes de energía. El mix energético
+propuesto a continuación, se puede cambiar mediante el ajuste de los menús desplegables para "2020
+Improved Technology" y ajustar los porcentajes asociados a cada fuente de energía. El total de electricidad
+que se está generando debe ser igual al 100% de la generada en el caso de la línea base. Si así se cumple,
+aparecerá una marca de verificación verde, junto con el texto 100% en la parte inferior de la tabla. De lo
+contrario, se verá un número en rojo para indicar si la cifra alcanzada es inferior o excesiva. Los factores
+de emisión del caso base y los ajustados figurarán por debajo de la tabla de fuente de energía. A la derecha
+de la acción hay gráficos que permiten visualizar los cambios que se están efectuando.
+
+
+
+
+                                                    36
+Por último, al seleccionar Generation Capacity, el usuario verá una página similar a la anterior. En este
+caso, el usuario deberá indicar la capacidad máxima de generación de cada fuente de energía.
+
+
+
+
+Es posible que la mayoría de las ciudades ejerza poco control en la matriz de generación de electricidad.
+Al mismo tiempo la intensidad del carbono de la electricidad suministrada a través de la red es un factor
+determinante de las emisiones urbanas. La inclusión de este sector permite a las ciudades comprender de
+qué manera los cambios en matriz de electricidad local/regional/nacional podrían llegar a influenciar sus
+emisiones a lo largo del tiempo – especialmente en los casos en que estos cambios sean sustanciales.
+También les ayudará a pensar en cuáles son las acciones adicionales fuera de su control que tal vez sean
+necesarias para alcanzar su objetivo. Es posible que a algunas ciudades les resulte muy difícil lograr su
+meta de mitigación de emisiones sin que se efectúen cambios en la electricidad suministrada a través de
+la red, lo que puede ayudarlas a articular mejor las modificaciones que necesitan por parte de otros actores
+relevantes a fin que sus esfuerzos hacia la sustentabilidad lleguen a buen fin.
+
+
+
+
+                                                    37
+          Solid Waste (Residuos SÓlidos)
+          La página Solid Waste Action (Acción en Residuos Sólidos) tiene cuatro categorías de acción
+          principales: 1) Waste Management (Manejo de Residuos), 2) Waste-to-Energy (Generación de
+Energía a partir de Residuos), 3) Fugitive Emissions Capture (Captura de Emisiones Fugitivas) y 4) Waste
+Collection and Transfer (Recolección y Transporte/Transferencia de Residuos), como se puede ver a
+continuación:
+
+
+
+
+El usuario debe primero decidir la forma de manejar los distintos tipos de residuos en la lista de acciones
+debajo de Waste Management. Cada tipo de residuo ofrece varias opciones. Por ejemplo, los plásticos no
+se usan para abono ni pueden ser manejados mediante un digestor anaeróbico, sino más bien son
+depositados en un relleno sanitario, reciclados o incinerados. La herramienta está diseñada para permitir
+al usuario seleccionar la forma de tratar cada tipo de residuo que tenga implicaciones climáticas. Nótese
+que, tras finalizar con las acciones para el manejo de residuos, es posible que las acciones de Waste-to-
+Energy y Fugitive Emissions Capture carezcan de relevancia, pues las mismas solo están consideradas
+para métodos específicos: digestión anaeróbica, incineración y relleno sanitario. Más adelante se puede
+encontrar mayor información al respecto.
+
+Una vez elegida la manera de manejar cada tipo de residuo, si se llegara a emplear el digestor anaeróbico
+o el incinerador, el usuario debe seleccionar la acción debajo de Waste-to-Energy. La misma permite
+determinar la forma en que se usará el biogás del digestor anaeróbico y la energía calórica del incinerador.
+Las elecciones para el tratamiento del producto final van a determinar las implicaciones climáticas,
+energéticas y en los costos de cada tecnología.
+
+
+
+                                                    38
+Si hay residuos de la ciudad que se depositan en un relleno sanitario, se puede entonces seleccionar la
+acción debajo de Fugitive Emissions Capture, lo que le permitirá al usuario decidir si se captura el metano
+generado en el relleno sanitario y la cantidad generada.
+
+Por último, el usuario puede seleccionar la forma de recolectar los residuos y el medio que se utilizará para
+transportarlos antes de su tratamiento o su desecho.
+
+Waste Management (Manejo de Residuos)
+
+En la acción Waste Management el usuario encontrará la situación del manejo de residuos de la línea base
+y la situación propuesta de dos maneras: 1) el porcentaje del tipo de residuo (papel, orgánico, plástico)
+que se asigna a cada método y 2) la cantidad total del tipo de residuo que va a cada método. Los
+porcentajes se cambian en los recuadros azules. También se puede en cualquier momento regresar a las
+acciones propuestas en la línea base seleccionando el botón Reset to Baseline (Restaurar a la Línea Base).
+Debajo de este botón aparece la situación de la línea base y la propuesta en términos de cantidad de
+residuos (miles de toneladas). Estas cantidades se ajustarán automáticamente a medida que el usuario
+modifique los porcentajes.
+
+
+
+
+Una vez que el usuario haya revisado todos los tipos de residuos cuyo manejo la ciudad desea mejorar,
+debe seleccionar el botón Solid Waste, en el ángulo superior izquierdo de la pantalla, para regresar a la
+página principal Solid Waste Action. En este momento, si se ha elegido utilizar en parte digestión
+anaeróbica o incineración, se debe seleccionar la acción Waste-to-Energy. En caso que en parte se haya
+elegido el método del relleno sanitario, se debe seleccionar la acción Enhanced Landfill Methane Recovery
+(Recuperación Mejorada de Metano del Relleno Sanitario). Si no se ha elegido ninguno de estos métodos
+se puede entonces seguir a otro sector.
+
+Waste to Energy (Acciones que convierten residuos en energía)
+
+Las acciones Waste-to-Energy permiten determinar la forma en se utilizará el producto final (biogás,
+energía calórica) de la tecnología que convierte residuos en energía. Si la ciudad ya cuenta con un digestor
+anaeróbico e incinerador, el usuario puede ingresar en la columna de la izquierda de la celda azul, debajo
+de Baseline Split (División de la Línea Base), lo que la ciudad hace actualmente con el biogás y la energía
+calórica. Por ejemplo, si la ciudad trata actualmente parte de los residuos por medio de la digestión
+
+                                                     39
+anaeróbica, se puede ingresar la cantidad de biogás que es quemada, empleada para generar electricidad,
+usada para energía térmica y/o utilizada para cogeneración (tanto térmica como eléctrica).
+
+De lo contrario, se puede ingresar directamente en la división propuesta la forma en que se emplearán el
+biogás y/o la energía calórica en la columna de la derecha de las celdas azules. Esta forma de emplear el
+biogás y/o la energía calórica determinará el impacto de las emisiones del digestor anaeróbico y/o el
+incinerador.
+
+
+
+
+Fugitive Emissions Capture (Captación de Emisiones Fugitivas)
+
+Si la ciudad envía parte de los residuos a un relleno sanitario, se debe seleccionar la acción Enhanced
+Landfill Methane Recovery. En la misma el usuario puede decidir cuánto metano generado en el relleno
+sanitario podrá captar la ciudad. El dato de la recuperación anticipada se ingresa en la celda azul e
+inmediatamente aparece la reducción de emisiones que va a resultar de cada tipo de residuo.
+
+
+
+
+                                                   40
+Waste Collection and Transfer Energy (Recolección de Residuos y Energía de Transferencia)
+
+En Waste Collection and Transfer Energy el usuario puede ingresar cambios en la flota de vehículos que
+recolecta los residuos, así como en la energía que actualmente se consume en cada estación de
+transferencia. Las modificaciones en las emisiones relacionadas con el transporte de residuos se producen
+por la sustitución del combustible hacia un combustible más limpio o más eficiente. Las diferencias en el
+consumo de energía en la estación de transferencia pueden ocurrir por el cambio hacia un combustible
+más limpio, cambios en el uso del combustible y cambios en el uso de la electricidad. Posteriormente, el
+usuario puede determinar las emisiones, la energía y las implicaciones financieras por los cambios
+anticipados en combustible y cantidad consumida, tanto por parte de la flota como de la estación de
+transferencia.
+
+
+
+
+                                                   41
+Para ver el resumen de emisiones, energía e implicaciones financieras de las acciones en residuos sólidos,
+regrese a la página principal Solid Waste Actions.
+
+
+
+
+                                                   42
+          Water and Wastewater (Agua y Aguas Residuales)
+          La página Wastewater and Water Action tiene tres categorías de acción principales: 1)
+Wastewater Treatment Switching and Optimization (Cambio y Optimización del Tratamiento de Aguas
+Residuales), 2) Wastewater Biogas-to-Energy (Utilización de Biogás de las Aguas Residuales para
+Generación de Energía) y 3) Water Conveyance Energy Improvements (Mejoras en el uso de Energía para
+el Suministro de Agua), como se ve a continuación:
+
+
+
+
+En Wastewater Treatment Switching and Optimization el usuario puede cambiar los métodos actuales para
+el tratamiento de aguas residuales y/o mejorarlos. En Wastewater Biogas-to-Energy el usuario puede
+decidir la forma de usar el biogás generado a través de la digestión anaeróbica. Las selecciones en el
+tratamiento del producto final van a determinar las implicaciones climáticas y energéticas y los costos de
+cada tecnología.
+
+Water Conveyance Energy Improvements le permite al usuario cambiar la eficiencia de las bombas y
+motores para el suministro de agua, aumentar el número de bombas de suministro de agua y disminuir las
+pérdidas durante la distribución.
+
+Wastewater Treatment Switching and Optimization (Cambio y Optimización del Tratamiento de Aguas
+Residuales)
+
+En la primera acción, Wastewater Treatment Type Switching (Cambio del Tipo de Tratamiento de las Aguas
+Residuales), el usuario encontrará los tipos de tratamiento de línea base y los métodos propuestos y puede
+cambiar el porcentaje de aguas residuales que son tratadas por tipo. Para ello se emplea el deslizador a
+la derecha de cada tipo de tratamiento, con lo que se modificará el porcentaje de agua residual que se
+
+
+                                                   43
+trata bajo cada caso. Los dos gráficos a la derecha de la pantalla muestran en un formato visual cómo se
+compara la distribución propuesta con la de la línea base.
+
+El usuario debe asegurarse que el monto total de aguas residuales que se maneja no exceda el 100% de
+la cantidad original. Para ello puede fijarse en la zona debajo de la tabla si hay una marca de verificación
+verde con el correspondiente texto del 100%, indicando que se está considerando el total de las aguas
+residuales. Si el número aparece en rojo significa que es inferior o mayor a 100%. También puede en
+cualquier momento regresar a las acciones propuestas en la línea base seleccionando el botón Reset to
+Baseline (Restaurar a la línea base).
+
+
+
+
+El usuario puede también elegir mejorar las tecnologías de tratamiento más allá de la línea base a través
+del resto de las acciones en Wastewater Treatment Switching and Optimization. En Latrine Improvements
+(Mejoras en las letrinas) se puede cambiar el nivel de sedimento que se extrae de las mismas ajustando
+el deslizador al nivel propuesto.
+
+
+
+
+En Anaerobic Treatment Lagoon Improvements (Mejoras en las Lagunas de Tratamiento Anaeróbico) y
+Facultative Treatment Lagoon Improvements (Mejoras en las Lagunas de Tratamiento Facultativo) el
+usuario puede cambiar el porcentaje de lagunas con aireadores de superficie ajustando el deslizador.
+Nótese que los aireadores solo se aplican a las lagunas sin sistemas de captación de biogás.
+
+
+                                                    44
+En Activated Sludge Treatment Plant Improvements (Mejoras Activadas en la Planta de Tratamiento de
+Lodos) el usuario puede especificar el nivel de mantenimiento de las plantas de lodos con o sin eliminación
+de nitrógeno. Las plantas de lodos pueden estar 1) manejadas en forma deficiente o sobrecargadas o 2)
+correctamente manejadas.
+
+
+
+
+Hay tres opciones para los niveles de eliminación de nitrógeno en las plantas de lodos: 1) Básico (50% de
+eliminación), 2) Avanzado (80% de eliminación) o 3) Límite de la tecnología (3 mg/L).
+
+
+
+
+Para Direct Discharge Improvements (Mejoras en la Descarga Directa) el usuario puede seleccionar una
+nueva tecnología de pre-tratamiento para incrementar la eficiencia en la eliminación de DBO y en qué parte
+del flujo se debe aplicar esa nueva tecnología. Las opciones para la tecnología de pre-tratamiento son 1)
+filtros gruesos ó 0% de eliminación, 2) filtros finos o 5% de eliminación o 3) asentamiento primario o 30%
+de eliminación.
+
+
+                                                    45
+Wastewater Biogas-to-Energy (Utilización de Biogás de las Aguas Residuales para la Generación de
+Energía)
+
+La acción Wastewater Biogas-to-Energy Optimization permite determinar la forma en que se utilizará el
+biogás generado. El usuario debe elegir esta acción si el biogás se genera a través de la laguna anaeróbica
+o digestor anaeróbico. En la columna “Baseline Split” se pueden ver las suposiciones de la línea base para
+cada acción. Luego el usuario puede decidir la forma en que se utilizará el biogás ingresando los usos
+finales (ventilado, quemado solamente, generación de electricidad, energía térmica y/o cogeneración) en
+la columna azul de la derecha. La forma en que se use el biogás determinará el impacto de las emisiones
+de una laguna o un digestor anaeróbico.
+
+
+
+
+Water Conveyance Energy Improvements (Mejoras en la Energía para el Suministro de Agua)
+
+Hay dos acciones relacionadas con el suministro de agua, una para mejorar la eficiencia de las bombas y
+motores y la otra para reducir las pérdidas de agua durante su distribución. Water Conveyance Pump
+Efficiency (Eficiencia de la bomba de suministro de agua) permite mejorar la eficiencia del suministro de
+agua y aumentar la proporción de las bombas mejoradas de suministro de agua. Ambas se pueden
+modificar ajustando el deslizador.
+
+
+
+
+                                                    46
+Si el usuario anticipa alguna reducción en las pérdidas de agua durante su distribución, se puede
+cambiar el índice por medio del deslizador en Water Delivery Loss Reduction (Reducción de pérdidas por
+suministro de agua).
+
+
+
+
+Para ver el resumen de reducción de emisiones, gastos de energía e implicaciones financieras de las
+acciones en aguas residuales, regrese a la página principal Wastewater and Water.
+
+
+
+
+                                                 47
+          Transportation (Transporte)
+          La planificación del escenario de transporte se construye sobre el marco de la estrategia Avoid-
+          Shift-Improve1 (Evitar-Cambiar-Mejorar), que se usa comúnmente en las ciudades para calcular
+los efectos en la reducción de emisiones y el uso de la energía de diferentes tipos de acciones en materia
+de transporte. El marco categoriza a las acciones en alguna de las siguientes áreas:
+
+    • Avoid/Reduce (Evitar/Reducir): se refiere a la necesidad de mejorar el sistema de transporte
+      reduciendo la extensión de los viajes o el número de viajes por día.
+    • Shift/Maintain (Cambiar/Mantener): intenta mejorar la eficiencia promoviendo el cambio de los
+      modos de transporte de alto consumo de energía (como los automóviles privados) al transporte
+      público u opciones no motorizadas.
+    • Improve (Mejorar): se concentra en la eficiencia del combustible para vehículos, los combustibles
+      bajos en carbono y los portadores de energía.
+La siguiente es una lista que resume las acciones en el sector transporte.
+
+Low Carbon Urban Design (Diseño Urbano de Bajas Emisiones de Carbono)
+
+Este módulo permite al usuario especificar la reducción en viajes totales futuros o de larga distancia que
+resultará del diseño urbano eficiente y compacto y el desarrollo orientado al tránsito.
+
+Passenger Mode Shift (Cambio del Modo de Transporte del Pasajero)
+
+Este módulo le permite al usuario especificar las expectativas de cambio hacia el futuro de los siguientes
+modos de transporte: automóviles privados, motocicletas, taxis, moto-taxis, micro/minibuses, buses
+comunes y BRTs (buses de tránsito rápido), sistemas subterráneos, sistemas de tren ligero, trenes
+suburbanos y transbordadores.
+
+Vehicle Fuel Switch (Cambio del Combustible de los Vehículos)
+
+Esta acción permite al usuario cambiar el combustible utilizado (gasolina automotriz, diesel/gasoil,
+biodiesel, biogasolina, etanol, gas natural comprimido, gas licuado de petróleo, hidrógeno y electricidad)
+por distintos tipos de vehículos (automóviles de pasajeros, camiones de peso liviano y mediano,
+motocicletas, taxis, moto-taxis, micro/minibuses, buses comunes y BRTs, sistemas subterráneos, sistemas
+de tren ligero, trenes suburbanos y transbordadores).
+
+External Transportation Model (Modelo de Transporte Externo)
+
+Este módulo permite al usuario incorporar información de otros modelos de planificación de escenarios o
+de planificación del sistema de transporte.
+Al entrar en el sector transporte, el usuario encontrará un resumen de todas las acciones consideradas
+bajo el sector:
+
+
+
+
+1 Dalkman, H. Branningan, C. Leferve, B. and Enriquez, A. Urban Transport and Climate Change (Transporte Urbano
+y Cambio Climático). Deutsche Gesellschaft für Internationale (GIZ)
+
+                                                      48
+Si selecciona la acción Passenger Trip Reduction (Reducción de los Viajes de Pasajeros) aparece la
+siguiente página:
+
+
+
+
+En esta acción el usuario puede ajustar el primer deslizador relativo al año del horizonte seleccionado para
+cambiar el porcentaje de hogares que se encontrarán en las áreas de desarrollo orientado al tránsito. El
+segundo deslizador permite seleccionar el porcentaje de viajes que disminuirán en estos hogares como
+resultado de un desarrollo orientado al tránsito. Este deslizador se encuentra bloqueado a un valor máximo
+del 25%, ya que este es el nivel máximo de disminución que se observó en los últimos proyectos sobre el
+tema.
+
+Si se selecciona la acción Passenger Mode Shift (Cambio del Modo de Transporte del Pasajero) aparece
+la siguiente página:
+
+
+
+
+                                                    49
+La acción de cambio del modo de transporte del pasajero permite al usuario especificar el cambio buscado
+hacia el futuro. La sección Action Implementation Assumptions (Supuestos para la Implementación de
+Acciones) permite ver la manera en los que los pasajeros podrían abandonar un modo de transporte
+particular. Un conjunto de diapositivas presentadas debajo del mismo permite al usuario especificar la
+nueva distribución del total de viajes por modo.
+
+Por medio de los deslizadores, el usuario puede redistribuir los viajes desde el modo seleccionado a uno
+nuevo. Por ejemplo, la imagen anterior muestra que el usuario ha elegido reducir viajes de automóviles
+privados. Los deslizadores le permiten redistribuir los viajes, en este caso el 40% de los mismos se harían
+ahora por sistemas subterráneos. La herramienta muestra el porcentaje actual y el nuevo porcentaje de
+los viajes que se realizarán en cada modo.
+
+El gráfico en el margen superior derecho muestra la distribución presente de los viajes, mientras que el del
+margen inferior muestra la participación futura propuesta.
+
+Al mover los deslizadores comenzarán a aparecer los cambios en la barra de resumen de la parte superior,
+que muestra la reducción de emisiones y de uso de energía para esta intervención en particular (en este
+caso cambio del modo del pasajero).
+
+El usuario puede luego regresar al resumen del sector transporte seleccionando el botón Transporte en el
+ángulo superior izquierdo. Desde allí puede seleccionar la acción Vehicle Fuel Switch (Sustitución del
+Combustible del Vehículo), que conduce a la siguiente página:
+
+
+
+
+                                                    50
+Al igual que la acción anterior, la acción Passenger Vehicle Fuel Switch permite cambiar el combustible
+usado por los vehículos siguiendo la misma lógica. La sección superior izquierda permite ver los tipos de
+vehículos en los cuales se puede realizar la sustitución del combustible. Debajo aparece un juego de
+diapositivas para cada tipo de vehículo. El usuario puede proponer un nuevo combustible para cada tipo
+de vehículo empleando los deslizadores.
+
+Por medio de los deslizadores el usuario también puede redistribuir el uso de combustible a una nueva
+mezcla desde el tipo de vehículo seleccionado. Por ejemplo, la imagen anterior muestra que el usuario ha
+elegido cambiar el uso de combustible de los automóviles privados. Los deslizadores le permiten
+seleccionar una nueva mezcla de combustibles para estos vehículos. La mezcla debe totalizar el 100% (la
+suma total en el margen inferior de la página se destaca en verde cuando es correcta).
+
+El gráfico en el margen superior derecho muestra la distribución actual de combustibles de los vehículos,
+mientras que el del margen inferior muestra la distribución propuesta.
+
+La acción final del sector transporte, External Transportation Model Inputs (Ingresos de Modelos de
+Transporte Externos), permite al usuario ingresar en CURB resultados de modelos de comportamiento
+más complejos previamente desarrollados. La información que se introduzca en esta acción reemplazará
+cualquier otra acción del módulo Transporte.
+
+
+
+
+                                                   51
+Esta acción le permite al usuario ingresar lo siguiente:
+
+       Reducción de Emisiones a 2020 (CO2/año)
+       Reducción de Emisiones a 2020 (kWh/Año)
+       Reducción de Viajes a 2020 (Viajes/Año)
+       Reducción de Kilómetros Recorridos por los Vehículos a 2020 (VKT/Año)
+       El Valor Presente Neto (VPN) de los Costos de Implementación de 2010 a 2020 ($US1000)
+       El VPN de los Ahorros en los Costos de 2010 a 2020 ($US1000/Año)
+
+Estos resultados luego se emplearán para comparar los resultados del sector con la reducción de
+emisiones de otros sectores, el impacto en términos del uso de la energía y los costos.
+
+
+
+
+                                                     52
+4.C) Financial Metrics (Parámetros Financieros)
+        I. Financial Performance Table (Tabla del Desempeño Financiero)
+Este sub-módulo brinda las implicaciones financieras acumuladas de manera detallada para cada una de
+las acciones elegidas. La información incluye el valor presente neto del costo de inversión, el valor presente
+neto de las ganancias de la inversión, el valor presente neto de la implementación, los ahorros (o ingresos)
+anuales y el período de recuperación de la inversión.
+
+
+
+
+        II. Abatement Cost Curve (Curva de Costos de Abatimiento)
+Esta sección presenta gráficamente la curva de abatimiento de las emisiones para cada una de las
+acciones seleccionadas. Cada acción estará representada por medio de un rectángulo:
+
+       El ancho del rectángulo (en el eje horizontal) muestra la reducción potencial de la acción;
+       La altura del rectángulo indica el costo de la acción;
+       Las acciones con costos se encuentran por encima de la línea del nivel cero;
+       Las acciones por debajo de la línea cero se espera que resulten en ahorros (o costos negativos).
+
+La leyenda por debajo de la curva de costos permite al usuario seleccionar y deseleccionar las acciones
+que están incluidas en la curva de abatimiento y suministra información más detallada.
+
+
+
+
+                                                     53
+4.D) Co-benefits (Co-beneficios)
+        I. Co-benefits Matrix (Matriz de Co-beneficios)
+La matriz de co-beneficios muestra la selección final de acciones, la reducción de las emisiones (toneladas
+de Co2e/año) y la reducción en el uso de energía (kWh/año) para cada acción, así como los co-beneficios
+asociados a cada acción. Los co-beneficios se muestran actualmente de manera cualitativa, con la
+intención de incorporar información cuantitativa en versiones subsiguientes de la herramienta CURB.
+
+
+
+
+                                                    54
+        II. I. Co-benefits Description (Descripción de los Co-beneficios)
+Los co-beneficios asociados a cada acción seleccionada figuran en una lista que incluye información sobre
+el motivo por el que se considera cada co-beneficio. Esta información se puede usar como material
+suplementario para apoyar las acciones seleccionadas.
+
+
+
+
+                                                   55
+            5. RESULTS (RESULTADOS)
+
+Results muestra el impacto agregado e individual de las acciones elegidas en términos de las emisiones
+urbanas, el uso de la energía y los costos. Aquí el usuario puede ver la forma en que las acciones se
+suman para alcanzar el objetivo de reducción de emisiones de la ciudad, comprender las implicaciones
+financieras y ver las emisiones y los impactos en materia energética. Si así se desea, se pueden volver a
+ajustar o seleccionar acciones adicionales.
+
+5.A) Aggregate Results (Resultados Consolidados)
+        I. Emissions Performance (Desempeño de las Emisiones)
+Esta sección muestra los resultados en términos de emisiones de GEI. La línea negra del gráfico
+representa el Reference Case Forecast (Pronóstico del Caso de Referencia), que es el escenario BAU y
+que muestra la forma en que probablemente cambiarían las emisiones a través del tiempo en ausencia de
+acciones tendientes a reducirlas. El Reference Case Scenario (Escenario del Caso de Referencia) está
+basado en los factores de crecimiento ingresados en la Sección 2.B.
+
+
+
+
+La línea azul punteada representa el objetivo de emisiones fijado en la Sección 2.D. Las porciones de color
+representan la reducción de emisiones del Reference Case Scenario con base en las diferentes acciones
+seleccionadas y desarrolladas en la Sección 4.B, identificando cada sector con un color diferente.
+
+
+
+
+                                                    56
+El gráfico ayuda a demostrar si las acciones desarrolladas serán suficientes para cumplir con los objetivos
+de reducción de emisiones de la ciudad, así como las contribuciones de cada sector hacia dicha meta. Si
+las acciones actuales no cumplen con los objetivos, hay por lo menos dos formas para lograrlos.
+
+En primer lugar, tal vez el usuario desee ajustar la ambición del objetivo, ya sea cambiando el nivel o el
+tipo de objetivo. Para cambiar el nivel del objetivo simplemente se usan las teclas de dirección en la parte
+superior del gráfico. Para cambiar el tipo de objetivo se pueden usar los botones en el extremo superior
+derecho de la página para elegir una meta diferente, más o menos ambiciosa (por ejemplo, un objetivo del
+escenario de línea base en lugar de un objetivo del año base).
+
+
+
+
+La segunda opción consiste en regresar al módulo Action y seleccionar más acciones o acciones diferentes
+o también incrementar la ambición de las acciones ya seleccionadas(por ejemplo, aumentando el índice
+de penetración). Nótese que en general es mejor elegir acciones que puedan aplicarse si se busca que el
+objetivo y los resultados sean realistas.
+
+La tabla del lado derecho contiene un desglose más detallado de la información que se presenta en el
+gráfico. Para cada año objetivo el usuario puede ver las emisiones para el Caso de Referencia, el objetivo
+fijado, las reducciones alcanzadas con las intervenciones y cualquier diferencia potencial entre las
+reducciones objetivo y las alcanzadas.
+
+        II. Energy Performance (Desempeño de la Energía)
+Para entender los resultados en términos del uso de la energía se selecciona el botón Energy Performance
+(5.A.II) en el extremo superior derecho de la página. Esta vista del gráfico muestra los resultados en
+términos del desempeño energético. La información se presenta en el mismo formato que la sección
+anterior (Emissions Performance (5.A.I)), mostrando el progreso hacia la meta de reducción en el uso de
+energía en lugar de la meta de reducción de emisiones.
+
+
+
+
+                                                    57
+5.B) Aggregate Results (Resultados Consolidados)
+        I. Emissions Performance (Desempeño de las Emisiones)
+El gráfico de esta sección muestra los mismos resultados que 5.A.I, pero con mayor énfasis en las
+contribuciones relativas de cada sector a la reducción de emisiones, incluyendo las de las acciones a nivel
+nacional. La vista de modo de cascada permite a los usuarios ver rápidamente los sectores que más
+contribuyen a la reducción de emisiones.
+
+
+
+
+                                                    58
+A través del menú desplegable se puede seleccionar si se desea ver el gráfico en términos de sectores
+(como lo muestra la pantalla anterior) o en términos de acciones nacionales comparadas con las acciones
+locales por sector. Este último gráfico permite a la ciudad entender rápidamente los sectores en los que
+tiene un mayor control y la forma en que los mismos pueden contribuir a la reducción de emisiones y en el
+uso de energía.
+
+        II. Energy Performance (Desempeño de la Energía)
+Esta sección muestra los resultados en términos del desempeño energético. La información se presenta
+en el mismo formato que la sección anterior (Emissions Peformance (5.B.I)), pero sólo mostrando el
+progreso hacia la meta de reducción en el uso de la energía en lugar de la meta de reducción de emisiones.
+
+5.C) Action Summary (Resumen de Acciones)
+La tabla de este sub-módulo muestra las emisiones reducidas/año, el % del total de reducción de emisiones,
+la energía reducida/año, los costos de implementación y ahorros anuales para cada acción para comparar
+los resultados simultáneamente (en lugar de verlos de manera individual o sectorial como en el módulo
+Action). Los usuarios pueden en cualquier momento regresar al sub-módulo Action 4.B. para modificar las
+acciones.
+
+
+
+
+                                                   59
+5.D) Scenario Comparison (Comparación de Escenarios)
+En el sub-módulo Scenario Comparison los usuarios pueden guardar hasta tres escenarios (que
+constituyen un juego integral de acciones) y luego ver cómo se comparan cuando se decidan las acciones
+finales para la ciudad. El sub-módulo contiene información sobre la manera en que los escenarios se
+comparan con los objetivos, cómo se comparan entre sí en términos de emisiones sectoriales y totales, y
+cómo se comparan en términos de emisiones, energía y costos. Los escenarios que se guardan son
+estáticos y no es posible cambiarlos. El escenario actual siempre puede ajustarse con base en las
+lecciones aprendidas de los escenarios anteriores.
+
+        I. Scenario Selection (Selección de Escenario)
+Esta acción permite al usuario dar un nombre al escenario actual y guardarlo para regresar y construir un
+nuevo escenario. En Add a Scenario (Agregar un Escenario) los usuarios pueden seleccionar si desean
+guardar el escenario actual como Escenario 1, 2 o 3, ponerle un nombre y guardarlo. A medida que se van
+elaborando escenarios, el usuario puede eliminar algunos preparados anteriormente y agregar otros
+nuevos. Para ello puede desplazarse hacia abajo a Remove a Scenario (Eliminar un Escenario) y
+seleccionar el escenario que desea eliminar antes de pulsar el botón asociado. El usuario también puede
+eliminar todos los escenarios.
+
+
+
+
+                                                   60
+        II. Scenario Results (Resultados de los Escenarios)
+Los usuarios pueden ver en el gráfico la trayectoria de las emisiones para los 3 escenarios guardados, el
+escenario actual y las proyecciones de la línea base. Estos resultados se pueden comparar con cualquiera
+de los objetivos fijados seleccionando el escenario que contenga los objetivos deseados. El escenario se
+selecciona en un menú desplegable a la derecha del gráfico.
+
+
+
+
+                                                   61
+        III. Scenario Charts (Gráficos de los Escenarios)
+Los usuarios pueden elegir los parámetros para comparar un año de un horizonte dado a través de los
+escenarios, ya sea que lo deseen hacer por sector o en conjunto y si el impacto local o nacional debe ser
+visto de manera separada. Las comparaciones posibles son: la reducción de emisiones, los ahorros de
+energía y el desempeño de los costos.
+
+
+
+
+                                                   62
+        IV. Scenario Tables (Tablas de Escenarios)
+Esta tabla contiene la información proveniente de los Scenario Charts y más información detallada. Permite
+a los usuarios comparar entre todos los escenarios y las acciones emprendidas. El usuario puede elegir la
+variable (reducción de emisiones, ahorros de energía o desempeño de costos), el año del horizonte y el
+nivel de detalle deseado. En cualquier momento es posible regresar al escenario actual para realizar los
+ajustes que sean necesarios con base en las comparaciones.
+
+
+
+
+                                                   63
+            6. DATABASE (BASE DE DATOS)
+
+La sección final, Database, provee los datos aproximados que se utilizan dentro de CURB como base. En
+el primer módulo, Setup, los usuarios tenían la opción de proporcionar datos específicos para su ciudad o
+utilizar estos datos aproximados de CURB.
+
+En esta sección los usuarios pueden ver las bases de datos utilizadas para cada sector. Para ello, haga
+clic en uno de los grupos de datos y aparecerá una hoja de cálculo con los datos. Los usuarios pueden
+volver a la página principal haciendo clic en el botón Back to Database Main Page.
+
+
+
+
+                                                   64
+ANEXO 1: PLANILLA DE DATOS DE LA HERRAMIENTA CURB
+
+Panorama General
+Aquí se presentan, con un alto nivel de detalle, los requerimientos de datos clave que se necesitan para
+utilizar la herramienta CURB, definidos por cada uno de los sectores. En general, cuanto más específica
+sea la información que se provea de la ciudad, más exactos serán los resultados del ejercicio de
+modelización. En el caso que la estimación aproximada sea incompleta, CURB proveerá los datos
+indicadores.
+
+Para tener una visión total de los requerimientos de datos, se deberá revisar la Planilla de Datos de
+CURB o la herramienta CURB completa.
+
+Datos Básicos de la Ciudad
+Para utilizar la herramienta CURB, en primer lugar usted deberá proveer los datos básicos de fondo
+respecto del tipo de clima, cantidad de habitantes y empleo de su ciudad. En esta sección usted también
+deberá elegir un año base mediante el cual la herramienta CURB le permitirá comparar el uso de
+energía/emisiones de GEI en el año(s).
+
+       Nombre de la Ciudad y País
+
+       Área de la Ciudad, Precipitación Anual, y Tipo de Clima
+
+       Población y Cantidad de Habitantes en Tránsito
+
+       Elección del Año Base, 2 Años Interinos, y Año Meta Final
+
+       Tasas de Crecimiento Proyectadas, Población en Tránsito, y PIB
+
+Edificios en el Sector Privado
+En esta sección se deberá ingresar la información sobre la cantidad y tipos de edificios en los sectores
+residencial y comercial.
+
+       Cantidad Total de Unidades Residenciales
+
+       Porcentaje de Unidades por Cohorte de Ingreso (Alto, Medio-Alto, Medio-Bajo, Bajo, e Informal)
+
+       Tipo de Vivienda para cada Cohorte de Ingreso (Casas o Departamentos)
+
+       Área de Edificios Comerciales (Comercios Minoristas, Oficinas, Hospitales, Hoteles, y Depósitos)
+
+       Porcentaje de Residentes con Servicio de Electricidad
+
+Datos de Edificios Municipales y Alumbrado Público
+En esta sección se deberá ingresar la información sobre consumo de energía para cada edificio
+municipal, sistemas de alumbrado público, semáforos y todo otro tipo de alumbrado público.
+
+
+                                                    65
+      Superficie Cubierta Total de Oficinas
+
+      Cantidad de Energía Consumida por cada tipo de energía en los Edificios Municipales
+       (Electricidad, Gas Natural, etc.)
+
+      Consumo de Electricidad de las Farolas del Alumbrado Público, Horas de Funcionamiento por
+       Día del Sistema de Alumbrado Público, y Cantidad de Farolas de Cada Tipo (Lámparas de Sodio
+       de Alta Presión, Lámparas de Halogenuros Metálicos, etc.)
+
+      Consumo de Electricidad de los Semáforos y Cantidad de Lámparas de Cada Tipo
+
+Electricidad Suministrada por la Red
+En esta sección se deberá ingresar información sobre la energía suministrada por la red que se consume
+en su ciudad. Si esta información no estuviese disponible, CURB utilizará los datos indicadores a nivel
+nacional.
+
+      Matriz de Generación de Electricidad para la Energía Suministrada por la Red (Porcentaje de
+       Energía Solar, Eólica, Hidroeléctrica, Geotérmica, Biomasa, Gas Natural, Gas Líquido, etc.)
+
+      Factores de Emisiones para la Electricidad y Energía de los Combustibles (por Tipo de
+       Combustible)
+
+Datos de Generación y Manejo de los Residuos Sólidos
+En esta sección se deberá ingresar la información sobre la generación y manejo de los residuos sólidos
+en su ciudad.
+
+      Toneladas AnualesTotales de Residuos Sólidos
+
+      Composición de los Residuos Sólidos por Tipo (Papel, Plásticos, Madera, etc.)
+
+      Proporción de Residuos Orgánicos como Deshechos de Alimentos o de Jardín
+
+      Porcentaje de Residuos como Deshechos Residenciales o Comerciales
+
+      Método de Manejo de Residuos por Tipo de Residuo (Reciclado, Basurero a Cielo Abierto,
+       Relleno Sanitario, etc.)
+
+      Tasa de Captura del Gas Metano del Relleno Sanitario
+
+      Tipo de Instalación para los Residuos (Tipo de Relleno Sanitario, Basurero a Cielo Abierto, e
+       Incinerador)
+
+      Biogas del Digestor Anaeróbico y Uso Final de la Energía Calórica
+
+      Recolección y Transporte de los Residuos Sólidos (Cantidad de Camiones, Distancia Recorrida,
+       y Consumo de Combustible)
+
+      Consumo de Energía de la Estación de Transferencia
+
+      Porcentaje de Residentes y Servicios de Recolección de Residuos
+
+                                                  66
+Datos de Energía de la Generación y Manejo de Aguas Residuales y
+Suministro de Agua
+En esta sección se deberá ingresar información sobre el volumen de aguas residuales generado en su
+ciudad y su manejo así como cuánta energía se utiliza para suministrar el agua.
+
+      Tipo de Manejo de las Aguas Residuales (Porcentaje del Manejo Descentralizado, Centralizado,
+       Sin Tratamiento)
+
+      Porcentaje de Residentes con Servicio de Recolección de Aguas Residuales
+
+      Volumen Anual Total de Consumo de Agua
+
+      Factor de Pérdida de Agua (Porcentaje del Suministro)
+
+      Tipos de Combustibles y Volúmenes Utilizados
+
+      Porcentaje de Residentes con Acceso al Servicio de Agua Mejorada
+
+Datos de Transporte
+En esta sección se deberá ingresar información sobre el volumen de energía que consume el transporte
+vehicular privado.
+
+      Viajes Anuales de Pasajeros per Cápita
+
+      Porcentaje de Pasajeros versus Transporte de Carga
+
+      Total Anual de Kilómetros-Vehículo Recorridos (KVR)
+
+      Participación en el Medio de Transporte (Porcentaje en Automóvil, Motocicleta, Taxi, Moto-Taxi,
+       etc.)
+
+Costo de la Energía y Otros Costos
+En esta sección se deberá ingresar información sobre los costos de energía para facilitar un análisis
+financiero exacto. Dado que tal vez sea más difícil obtener los costos de los combustibles, CURB provee
+valores indicadores que usted podrá utilizar si no hay otra fuente mejor para los datos de costo.
+
+      Tarifas de Electricidad (Residencial, Comercial, Municipal, Industrial, y Transporte)
+
+      Precios de los Combustibles por Tipo (Gas Natural, Gas Líquido, Aceite de Motor, Kerosene,
+       etc.)
+
+      Costo Mayorista Promedio del Agua
+
+      Tasa de Descuento
+
+
+
+
+                                                   67
+

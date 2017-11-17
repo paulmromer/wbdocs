@@ -1,0 +1,2438 @@
+Public Transport Automatic
+Fare Collection Interoperability:
+Assessing Options for Poland
+©2016 The International Bank for Reconstruction and Development / The World Bank
+1818 H Street NW
+Washington DC 20433
+Telephone: 202-473-1000
+Internet: www.worldbank.org
+
+Cover photo: Artur Malinowski/Flickr/2016 under a Creative Commons Attribution License.
+
+This report was prepared by the staff of the International Bank for Reconstruction and Development / The
+World Bank. The findings, interpretations, and conclusions expressed in it do not necessarily reflect the views of
+the Executive Directors of The World Bank or the governments they represent.
+
+The World Bank does not guarantee the accuracy of the data included in this work. The boundaries, colors,
+denominations, and other information shown on any map in this work do not imply any judgment on the part of
+The World Bank concerning the legal status of any territory or the endorsement or acceptance of such
+boundaries.
+Acronyms and Abbreviations
+
+ABT       Account Based Ticketing
+AFC       Automatic Fare Collection
+CCST      Credit Card Size Ticket
+CPC       Contactless Payment Card
+DfT       Department for Transport
+DLR       Docklands Light Rail
+EMV       Europay, MasterCard and Visa
+EPC       European Payments Council
+ENCTS     English National Concession Travel Scheme
+ETSI      European Telecommunication Standards Institute
+EU        European Union
+FSP       Financial Service Provider
+FTP       Future Ticketing Programme
+GBP       Great British Pound
+GVB       Gemeentelijk Vervoerbedrijf, Amsterdam Municipal Public Transport Operator
+HCE       Host Card Emulation
+HTM       Haagsche Tramweg Maatschappij, Hague Tram Public Transport Operator
+ICC       Integrated Circuit Card
+ICT       Information and Communication Technology
+IFM       Interoperable Fare Management
+ITSO      Integrated Transport Smartcard Organization
+ISO       International Standards Organisation
+MCP       Mobile Contactless Payment
+NESTI     North East Smart Ticketing Initiative
+NFC       Near Field Communications
+NS-R      Nederlandse Spoorwegen, Dutch Railway Company
+PAYG      Pay-As-You-Go
+PCI DSS   Payment Card Identity Data Security Standards
+PIN       Personal Identification Number
+PIV       Personal Identity Verification
+PTA       Public Transport Authority
+PTO       Public Transport Operator
+QR        Quick Responses
+RET       Rotterdamse Elektrische Tram, Main Public Transport Operator in Rotterdam
+RFID      Radio Frequency Identification
+RSP       Rail Settlement Plan
+SEFT      South East Flexible Ticketing
+SEPA      Single Euro Payment Area
+SMILE     Smart Mobility Info and Ticketing System Leading the Way to Effective E-Mobility Services
+STN       Smart in the North
+SWOT      Strengths, Weaknesses, Opportunities, and Threats
+SWSAL     South West Smart Applications Limited
+TDA       Transit Data Area
+TLS       Trans Link System
+TfGM      Transport for Greater Manchester
+TfL       Transport for London
+TRB       Transport Research Board
+TOC       Train Operating Company
+VDV       Verband Deutscher Verkehrsunternehm, Association of German Transport Companies
+UK        United Kingdom
+Acknowledgments
+The preparation of this Report was led by Carolina Monsalve (Senior Transport Economist) based on a study
+prepared by Mike Burden (Senior Smartcard Consultant). Other team members included Michal Wolanski
+(Urban Transport Consultant), Piotr Jan Krukowski (Urban Transport Consultant), Winnie Wang (Urban
+Transport Specialist), Radoslaw Czapski (Senior Infrastructure Specialist), Malgorzata Michnowska (Program
+Assistant), and Giang Thanh Huong Le (Program Assistant). The team would like to thank Juan Gaviria
+(Practice Manager), Arup Banerjee (Country Director), Marina Wes (Country Manager), and peer reviewers
+O.P. Agarwal (Senior Urban Transport Specialist), Shomik Mehndiratta (Lead Urban Transport Specialist),
+and Georges Darido (Senior Urban Transport Specialist).
+
+The team would also like to acknowledge the many formal and informal contributions of officials from the
+Ministry of Infrastructure and Construction, and the Ministry of Development. The team would also like to
+acknowledge the informal contributions of the Polish Chamber of Public Transport. We are grateful to all
+other stakeholders for their frank and open engagement in the project.
+
+Finally, we would like to thank Eun Joo Allison Yu (Senior Operations Officer) from the Korea Green Growth
+Partnership for her support, guidance, and continuous assistance during this assignment and the staff of the
+World Bank Warsaw Office for their support.
+Table of Contents
+
+
+EXECUTIVE SUMMARY ........................................................................................................................................................................ I
+
+
+INTRODUCTION.................................................................................................................................................................................. 1
+   Background .................................................................................................................................................................................................. 1
+   Common Technical Platform for Tickets ......................................................................................................................................... 2
+   Scope of this Report .................................................................................................................................................................................. 4
+
+
+CURRENT SITUATION IN POLAND ....................................................................................................................................................... 5
+  Background .................................................................................................................................................................................................. 5
+  Types of Tickets .......................................................................................................................................................................................... 5
+  Technology ................................................................................................................................................................................................... 6
+  Summing Up ................................................................................................................................................................................................. 8
+
+
+INTERNATIONAL APPROACHES TO AUTOMATIC FARE COLLECTION..................................................................................................... 9
+   Introduction ................................................................................................................................................................................................. 9
+   Ticketing Technologies ........................................................................................................................................................................... 9
+   Future Developments ............................................................................................................................................................................12
+   Summing Up ...............................................................................................................................................................................................14
+
+
+EUROPEAN AFC STANDARDS DEVELOPMENT ................................................................................................................................... 16
+  Introduction ...............................................................................................................................................................................................16
+  Standards .....................................................................................................................................................................................................16
+  Transport Standards Development .................................................................................................................................................17
+  Summing Up ...............................................................................................................................................................................................19
+
+
+INTEROPERABILITY ACROSS REGIONS............................................................................................................................................. 20
+   Introduction ...............................................................................................................................................................................................20
+   Elements of Fare Payment Interoperability .................................................................................................................................20
+   Evolution of Interoperability with Open Payment Systems   ..............................................................................................21
+   Multiple Payment-Enabled Devices .................................................................................................................................................23
+   Implications for Poland .........................................................................................................................................................................23
+
+
+INTERNATIONAL CASE STUDIES ....................................................................................................................................................... 24
+   Introduction ...............................................................................................................................................................................................24
+    Netherlands – OV Chipkaart................................................................................................................................................................24
+    The Evolution of Ticketing in the UK – Inside and Outside London..................................................................................26
+    Korean Approach .....................................................................................................................................................................................31
+    Vienna Project SMILE- Smartphone Integrated Mobility Platform ...................................................................................33
+    Key Lessons for Poland .........................................................................................................................................................................36
+
+
+CONCLUSION................................................................................................................................................................................... 38
+
+
+ANNEX 1: INTRODUCING PUBLIC TRANSPORT AFC STANDARDS ...................................................................................................... 42
+Executive Summary
+
+Introduction                                              Objective of the Report
+Polish cities have followed international practice in     This Report focuses on options for introducing
+introducing public transport smartcard ticketing          public transport automatic fare collection
+that offers convenience to the passenger and              interoperability in Poland, building on the
+savings to the operator through reduced fraud,            experience of other countries and taking into
+shorter dwell times at stops, and less cash               account recent changes in technology. It presents
+handling. Smartcards also offer more flexibility in       an overview of the current situation in Poland,
+setting and varying fares.                                international approaches to AFC, AFC standards
+                                                          development in Europe, interoperability across
+However, one of the main benefits of smartcard            regions, before presenting examples of AFC
+ticketing internationally is in relation to integrating   interoperability in the Netherlands, UK, and Korea,
+fares and ticketing across operators and modes. In        as well as an example of a smartphone integrated
+Poland, as in many other EU countries, there are          mobility platform in Vienna, before concluding
+several proprietary automatic fare collection             with recommendations.
+solutions for public transport in operation in cities
+and regions, in the absence of national                   International Experience
+interoperability standards.
+                                                          A number of European national standards for AFC
+With few exceptions, a passenger cannot take a            have been developed—that is to say a technical
+public transport smartcard from one city and use it       platform on which interoperable smart ticketing
+to ride on the commuter rail system. There is no          systems can be built—including ITSO in the UK,
+overall direction as to what these automated fare         Calypso in France, VDV in Germany, and Ov-
+collection (AFC) systems will provide, and there is       chipkaart in the Netherlands. These standards
+limited levels of interoperability across the public      were developed at a time when smartcards were
+transport networks and the rail network, which            emerging as a new technology and not at a time
+makes travelling across the country difficult.            when bank cards, mobile apps, and Apple Pay were
+Going forward, Poland needs to consider the               creating new opportunities for interoperability.
+benefits that an integrated approach to public            In the case of the UK, the ITSO specification is not
+transport ticketing could deliver and agree a vision      used in London, which is dominated by the Oyster
+for delivering these benefits. This potential benefit     smartcard and bank cards. Outside of London
+has not been realized in Poland and little effort has     there is limited interoperability of tickets due to
+been made to establish a common platform for              the fragmented approach adopted by major
+ticketing, even within metropolitan areas.                operators and a lack of leadership across a
+                                                          deregulated environment. This means that there is
+Integrated ticketing would encourage more multi-          no unique interoperable standard in use in the UK.
+modal trips through integration of fares and              In the Netherlands, the OV-chipkaart was
+greater convenience to passengers. In many                introduced in Rotterdam in 2005 and then rolled
+countries, it has been an important step in               out across the country and now has country-wide
+facilitating better integration of information            coverage across all public transport modes. It is
+provision and scheduling.                                 important to note that the OV-chipkaart system
+                                                          developed in a public transport system dominated
+                                                                                                             i
+by a few large public transport operators, which         the transport smartcard (Oyster card) to a bank
+made reaching consensus on a standard much               card and by moving intelligence from cards and
+easier than in a fragmented public transport             readers to a more responsive back office.
+market, such as the one in Poland.
+                                                         Recommendations
+Vienna has recently piloted a mobility platform,
+Smile Vienna, which integrates various means of          Based on its review of the current situation in
+transport (public transport, rail, taxis, car and bike   Poland and European experience with the
+sharing, among others) and combines them with            introduction of AFC standards, the World Bank
+routing information and user data to provide             makes the following six recommendations:
+individual mobility offers, through a smartphone
+based platform. A standard interface enables all             (a) Establish a technical working group to develop a
+mobility partners to link their technical systems,               vision for AFC in Poland. Such a working
+and allows booking, payment, usage, and billing                  group should work with public transport
+functionality. Smile Vienna provides a roadmap for               organizers, operators, and industry to
+multi-modal, urban smartphone based systems,                     agree on a national vision or roadmap for
+which leapfrogs the need to develop a smartcard                  the future with regard to interoperability
+standard.                                                        and the associated business case and
+                                                                 model in support of such a vision.
+Role of New Technologies
+                                                             (b) Support bank card, smartphone apps, and new
+                                                                 technology developments and determine
+New technologies offer a unique opportunity to
+leapfrog by encouraging passengers to use bank                   what is achievable over the medium-term
+cards and smartphone apps. Operational costs and                 in terms of interoperability.
+risks are significantly lower than migrating to a
+                                                             (c) Develop bank card specifications. Work with
+new Polish smartcard standard.
+                                                                 major payment card issuers to develop
+Mobile apps offer a number of advantages,                        specifications for the use of payment cards
+including the redundancy of sales network and                    using EMV based standards on the Polish
+loading, ease and speed of creating new common                   rail network.
+tickets and promotional tickets. Conditions for
+success require (a) assuring identification of               (d) Do not develop a Polish AFC standard. Instead,
+mobile tickets by controlling devices of all                     look to existing standards for AFC back
+entities—this requires equipping each controller                 office functions, rather than smartcard
+device with a QR code scanner and near field                     standards.
+communication (NFC) reader; (b) processing data
+in all systems in order to interoperable; and (c)            (e) Undertake a public transport fare review. This
+check-in or heck-in and check-out required for all               will maximize the benefits from the new
+trips, particularly when changing modes.                         system, both from the perspective of the
+                                                                 passengers, and from public transport
+As with mobile app, bank cards can decrease                      operators, as it could create enhanced
+system and operational costs and risks                           opportunities for revenue generation.
+significantly. This has been recently initiated in
+London by Transport for London (TfL). The                Summing Up
+introduction of a contactless payment card (CPC or
+                                                         Establishing a national smartcard standard and
+EMV) reduces ticketing costs while improving
+                                                         adopting it nationwide can be an expensive,
+passenger experience because information is help
+                                                         complex, and lengthy process—as evidenced by the
+in an intelligent back office system rather than on
+                                                         experience in the UK—and is not a ‘quick win’.
+the card itself. This represents a move away from
+ii
+EMV and smartphone apps are important tools to      incentivizing the use of smartphone apps, and
+allow interoperability across city boundaries and   other new technologies.
+across modes and do not require developing a
+national smartcard standard. The key is moving      Poland should consider innovative solutions
+intelligence from cards and readers to a more       enabled by new technologies and not aim to
+flexible and responsive back office, while          replicate approaches used in the UK or the
+incentivizing the use of EMV and developing and     Netherlands which were developed at a time when
+                                                    the technological options were different.
+
+
+
+
+                                                                                                 iii
+Introduction
+Background
+
+1.       In the second half of 2013, the World Bank secured grant funding from the Korea Green Growth
+Partnership for analytical support and technical assistance related to sustainable urban transport systems in
+select cities in Eastern Poland. Established in 2011, the Korea Green Growth Partnership strengthens
+cooperation between the Government of Korea and the World Bank Group to help countries achieve sustainable
+and inclusive development by developing and sharing practical knowledge around innovative green growth
+solutions. The objective of the first phase of this technical assistance involved assessing the urban transport
+sector in the selected cities—Białystok, Lublin, Olsztyn, and Rzeszów—with a primary focus on public
+transportation and the aim of identifying areas for improvement. One of the outputs of the first phase of work,
+the report, Urban Mobility in Eastern Poland, The Way Forward, provided a set of recommendations related to
+the legal and institutional framework for urban transport in Poland; summarizes the assessment of urban
+mobility for Białystok, Lublin, Olsztyn, and Rzeszów; and assesses the framework for inter-municipal
+coordination in Poland.
+
+2.       Polish cities have followed international practice in introducing smartcard ticketing that offers
+convenience to the passenger and savings to the operator through reduced fraud, shorter dwell times at stops,
+and less cash handling. Smartcards also offer more flexibility in setting and varying fares. However, one of the
+main benefits of smartcard ticketing internationally is in relation to integrating fares and ticketing across
+operators and modes. This potential benefit has not been realized in Poland and little effort has been made to
+establish a common platform for ticketing, even within metropolitan areas. Integrated ticketing would
+encourage more multi-modal trips through integration of fares and greater convenience to passengers. In many
+countries it has been an important step in facilitating better integration of information provision and
+scheduling.
+
+3.       For a cross-network or multi-modal journey or one crossing multiple scheme borders, there are
+options open to transport operators— to offer the customer the simplicity of holding just one single ticket for
+the entire journey or to offer separate tickets within a single secure Smart Ticketing Wallet. A Single Through
+Ticket offer obliges transport operators to develop a common ticketing scheme or interface between different
+ticketing schemes enabling both to work interchangeably. Issuing multiple tickets avoids much of the
+complexity, data handling, settlement, and clearing for the transport operator but brings inconveniences for
+the customer. Smartcard ticketing allows the inconvenience of this issue of multiple tickets to be mitigated by
+loading them all into a single smartcard or smart ticketing wallet.
+
+4.       Interoperability of tickets needed for cross-scheme journeys can either be a single shared ticket where
+the data elements, ticket specifications and smartcard keys are shared between all parties and settlement is
+made through a common third party, or a Smart Ticketing Waller is used to hold all the individual tickets
+needed for the journey in a manner that appears seamless to the end user. Each of these approaches requires
+the definition of specifications. A key issue in all of this is that urban and national transport decision makers
+support the development of specifications to ensure mutual compatibility of all schemes. The use of
+international and open standards can facilitate interoperability and compatibility between devices produced
+by different ticketing suppliers.
+
+5.     Introducing integrated public transport ticketing can have both demand and revenue implications. An
+important concern regarding the introduction of integrated ticketing is the potentially negative impact on
+
+                                                                                                               1
+revenue. The literature suggests that the final impact depends on the combination of fare levels for different
+ticket types and on user distribution according to rates of use. For example, in a study reviewing the
+introduction of an integrated ticket offer in the Madrid metropolitan region, the analysis suggested that the
+new ticketing succeeded in reversing the declining patronage trend, in line with similar results in German and
+Swiss cities and in London.1 However, in the case of Madrid the high market penetration rate of low-cost travel
+cards had a negative effect on company revenues. This Report focuses on the alternative AFC options for
+introducing an integrating public transport offer in Poland, but does not delve into issues concerning revenue,
+whilst recognizing that there could be trade-offs between increased public transport patronage and revenues
+arising from low cost integrating ticketing.
+
+
+Common Technical Platform for Tickets
+
+6.       A commitment to integrated ticketing in Poland would require the Government of Poland to set a
+common technical platform that transport providers would be obliged to subscribe to for all new ticketing
+schemes. Such a national standard would not restrict transport providers to purchase from a single supplier,
+but would require all suppliers to the Polish market to meet the same standard. International suppliers of
+ticketing equipment and systems might oppose such restrictions and would argue that modifications to their
+proprietary technology would increase the cost to the operators, but they have accepted such policies in other
+countries and the net cost to transport in these countries has not increased as a result of common standards.
+
+7.       Integration of new ticketing systems with legacy schemes adds complexity to integrated ticketing and
+it may be argued that such integration in Poland may not be practical considering that ticketing schemes on
+municipal transport in Polish cities were introduced only recently and in some cases are still under
+implementation. It is true that the cost of integrating new schemes with the range of proprietary technologies
+now in place could be very high, but this should not discourage the Government of Poland from implementing
+a national standard. Rail services and most commuter and regional bus services in the four cities studied do
+not have smartcard ticketing, but are likely to upgrade their ticketing systems at some point in the near future.
+A national policy that would require all new PSO services for buses and any new rail-ticketing system to adopt
+the national standard would give critical mass to such a standard. Moreover, the expected life of all ITS systems
+is shortening as new systems offer better functionality at lower prices. Some European transport authorities
+are adopting Account-Based Ticketing (ABT) in partnership with financial institutions and mobile phone
+operators. ABT systems require less technical sophistication on readers and smartcards with fare processing
+taking place remotely or cloud-based. It would be appropriate for the Government of Poland to adopt a common
+ticketing standard now before cities embrace a next generation of technology in an uncoordinated way.
+
+8.       In traditional smartcard-based fare payment systems, the transit value resides in a contactless chip
+inside the transit card, and transactions are managed and tracked on the card. With account-based payment
+or ticketing, the transit value resides in a transit account and is accessed via a digital signature read from a
+transit card by the fare payment system. Adoption of an account-based system also enables open payment and
+lets consumers directly use their bank-issued contactless cards to pay for trips. In this way consumers will pay
+for transit services just like they pay for any other retail purchase, using their contactless credit or debit cards
+as they board buses or pass through metro turnstiles, eliminating the extra step of buying a transit fare card or
+token. For transit agencies who do not want to issue their own fare cards, moving to open payment reduces the
+need to procure, encode, distribute, and support literally millions of magnetic tickets or contactless smartcards.
+
+
+
+
+1Anna Matas (2004), “Demand Revenue Implications of an Integrated Public Transport Policy: The Case of Madrid”,
+Transport Reviews, Vol.24, No.2, 195-217, March 2004.
+2
+9.       One of the significant outcomes of implementing a smart ticketing system is that there are
+opportunities to introduce new fare products that never previously were possible, for example Pay-As-You-Go
+(PAYG), which is impossible with paper tickets, or fare capping which is impossible with magnetic strip tickets.
+If an organization is just looking to transfer existing ticketing products to a new media it will be a very costly
+exercise that will provide limited benefits. There are different types of solutions that best meet the
+requirements of different types of journey, for example, smartcards in urban heavily used transport networks
+where throughput and speed of transaction is important, bar codes on inter urban railways where ease in
+purchasing a ticket is important. Any developed standard will need to incorporate all of these requirements
+and be looking towards changes in technology, particularly in the field of mobile technologies and tokenization.
+
+10.      There are two ways to approach the development of a standard: spend significant time any money
+developing one from scratch, or as was the case in the Netherlands, and as is currently being done in Colombia,
+take a working system specification and convert that into a national standard, with suitable accreditation and
+certification processes in place. An alternative approach is to re-consider the need to sell tickets altogether and
+look to develop an account based system that utilizes the payments technology that is currently being
+developed by other parties and building a fare structure around those. One assumption with the development
+of a standard is that the requirements for the system are fully understood—this would require looking at what
+the requirements for an interoperable system should be, before attempting standardization.
+
+11.      The Ministry of Infrastructure and Development has expressed interest in the World Bank support on
+developing integrated ticketing schemes and developing standards that would facilitate fare integration, within
+and across such schemes, including unification of technical standards. There are many ways to do this.
+Countries in the EU have devised alternative approaches to avoid the uncoordinated and non-interoperable
+ticket schemes to develop. In the case of the UK, the Integrated Transport Smartcard Organisation (ITSO) was
+formed in 1999 to address integration and interoperability issues between operators, and at the EU level, the
+Smart Ticketing Alliance is working with national transport smartcard organizations and standard making
+bodies in order to develop specifications to support transport smartcard interoperability.
+
+12.      These European Countries have realized that there is no one standard that will address all of the needs
+of public transport operators everywhere due to the differing approaches to public transport, and the
+expectations from any fare collection system. For this reason, there is a recognition that multiple standards will
+exist, and each country is free to adapt or implement such a standard as it sees fit for its transport system.
+
+13.      New technologies for public transport smart ticketing systems are gaining importance. When abroad
+the user travel experience should be as easy as for local travelers. The vision is one of seamless travel and
+seamless ticketing. Today ticketing applications can be routinely loaded on smartcards or mobile telephones.
+Similar issues of technical and contractual interoperability arise. Current electronic ticketing schemes rely on
+media and ticket contracts designed for geographically limited fare systems. Future developments will not
+replace integrated ticketing systems, but will open up their boundaries and make them interoperable with each
+other and with other customer applications.
+
+14.     Across Europe there has been a significant amount of activity in the development of national standards,
+and a focus on interoperability of ticketing systems. The developments in Europe (especially in Germany,
+France, United Kingdom and the Netherlands) have pushed European standardization. Three standards have
+been published so far: on data elements (EN 1545), on a framework for interoperable ticketing (EN 15320),
+and on the fare management system architecture (ISO 24014-1)2.
+
+
+
+2   http://ec.europa.eu/transport/themes/its/road/application_areas/electronic_pricing_and_payment_en.htm
+                                                                                                                 3
+Scope of this Report
+
+15.      The need for more sustainable and integrative processes as a way of dealing with the complexity of
+urban mobility has been widely recognized. Within the EU there has been an enhanced focus on urban mobility
+solutions where local authorities move away from past ‘silo approaches’ and develop approaches that ca n
+stimulate a shift towards cleaner and more sustainable transport modes, in line with the EU’s 2013 Urban
+Mobility Package.3 As populations move to the periphery or to neighboring municipalities, it becomes critical
+that the organization of urban transport services is coordinated within functional areas based on travel-to-
+work patterns and not be limited to a city’s administrative area. 4 Interoperability of automated fare collection
+systems becomes an important means to support efforts of integration of the public transport offer across local
+administrations and public transport modes.
+
+16.     This Report focuses on options for introducing public transport automatic fare collection
+interoperability in Poland, building on the experience of other countries and taking into account recent changes
+in technology. It presents an overview of the current situation in Poland, international approaches to AFC, AFC
+standards development in Europe, interoperability across regions, before presenting examples of AFC
+interoperability in the Netherlands, UK, and Korea, as well as an example of a smartphone integrated mobility
+platform in Vienna, before presenting a roadmap of how to introduce public transport AFC standards. It
+concludes with recommendations.
+
+
+
+
+3http://ec.europa.eu/transport/themes/urban/urban_mobility/ump_en.htm
+4This is the approach adopted by the Sustainable Urban Mobility Plans. See:
+http://www.eltis.org/sites/eltis/files/guidelines-developing-and-implementing-a-sump_final_web_jan2014b.pdf
+
+
+4
+Current Situation in Poland
+
+Background
+
+17.     In the second half of 2015 the World Bank conducted a detailed survey of public transport authorities
+in Poland in order to understand the existing ticketing off and usage of Automatic Fare Collection (AFC). 5 The
+survey covered the 28 largest urban transport systems in Poland – all transport systems around core cities
+with over 100,000 inhabitants. All authorities answered the survey, although not all questions to the survey
+were answered in all cased. This chapter summarizes the key finds of the survey.
+
+
+Types of Tickets
+
+18.       The majority of ticket sales in Poland are 30-day and single tickets. Usually 30-day tickets cover the
+entire city—rarely only selected lines—and are non-transferable; surcharges for suburban zones are typical.
+Single tickets can allow transfer within a given period of time (20-, 30- or 60-minutes), or do not allow transfer
+– although the latter situation becomes rarer. Long-term tickets (mostly 30- and 90-days) constitute usually
+between 35 to 40 percent of sales, but are used by the majority of travelers. Their share of total sales depends
+mostly on the city size – in bigger cities, the share is higher. Most cities care about attractive prices of long-term
+tickets, in order to increase customer loyalty. Long-term tickets are mostly sold in a selected network of
+newsagents, own customer care centers, and ticketing machines. Medium term tickets (mostly 24-hours)
+constitute usually about 5 percent of sales, but the share varies strongly, depending on pricing and distributions
+strategies. They are usually sold in a wide network of news agents, ticketing machines and in smaller cities,
+also by bus drivers.
+
+19.      Single tickets constitute over 50-60 percent of sales volume and are distributed in a wide network of
+newsagents. Popularity of ticketing machines varies, between cities, although increasing number of cities aim
+to introduce ticketing machines on board of every vehicle and on main stops. Most cities aim to reduce ticket
+sales by drivers and use it as emergency-solution only, in order to speed-up boarding. In some cases, surcharges
+apply or limited range is offered. Polish customers are used to re-purchasing long-term tickets every month;
+long-term contracts with automatic charging are not used. Ticket validation at entry of a public transport
+vehicle during each trip is generally not accepted by passengers, as evidenced by the fact that transport
+authorities have usually tried to introduce it, unsuccessfully.
+
+20.      In all cases ticket sales over internet and mobile apps is insignificant, below 1 percent. Internet sales
+is rarely available and has poor user experience. For example, in Warsaw only long-term internet tickets are
+available and they require having a smartcard and ‘activation’ in a narrow network of activation terminals after
+every charging. Mobile apps are usually available, often more than one in a city, offered by partner companies,
+but they also have not achieved popularity among customers, mostly because of high availability of other
+distribution channels and no customer benefits—for example, no capping or best pricing.
+
+
+
+
+5AFC in the public transport context includes tickets, but also the whole area of journey logging, revenue allocation and
+subsidy claim, on the basis of accounting for every leg of a journey by making and storing transaction records
+                                                                                                                            5
+21.      A relatively high share of passengers—including elderly people, children under 4 years old, blood
+donors, among others—are allowed to travel for free. Detailed regulation varies between cities, but usually
+only a personal ID is required. All tickets, as well as eligibility to free travel, are checked in random by plain-
+clothes inspectors, only in smaller cities ticket inspection during boarding may be used. Some cities with
+unemployment problems tried to re-introduce conductors on major routes, but without success. Passengers
+are allowed to board with every door, in order to speed-up buses.
+
+
+Technology
+
+22.     The survey confirmed the high popularity of smartcard ticketing in Poland. Out of 28 authorities
+surveyed, at least 23 had smartcard solutions. Those authorities cover 94 percent of the population of
+researched cities (Figure 1). Mifare standards are widespread in most of the cities—they cover over 70 percent
+of population and a little below 70 percent of the total number of public transport authorities; Mifare classic
+covers 41 percent of population and 36 percent of authorities (Box 1). In two authorities, covering 24 percent
+of the surveyed inhabitants, Java Open is used. Those are Poznań and Silesia, the latter is an industrial
+conurbation in Southern Poland, grouping a number of cities. Both systems were rolled-out in 2015 and had
+poor publicity, because of delayed implementation and/or low reliability in the initial phase. In Poznań Java
+Open system replaced and older Mifare system and in Silesia – is a first smartcard solution.
+
+
+
+                                      Figure 1. Smartcard Structure of Surveyed Cities
+
+
+    Number of inhabitants                  41%                      21%           6%           24%          2% 6%
+
+
+
+    Number of authorities                36%                      29%              7%        7% 4%        18%
+
+
+                            0%   10%      20%     30%    40%      50%     60%          70%     80%        90%   100%
+
+                Mifare Classic only               Newer Mifare Standards only          Mix of Mifare
+                Java Card                         Smartcard - standard not know        Paper or no data
+
+Source: World Bank.
+
+
+23.      Different parts of a smartcard system may be owned by different entities, often based on long-term
+contracts with public transport authorities, which initially made the systems affordable, but now makes
+upgrade and exchange difficult, especially when contracts expire at different moments. For example, in
+Warsaw, Mifare Classic system (introduced in 2001) validators and on-board ticketing machines are owned or
+leased by vehicle operators—three municipal companies and a number of private firms. Ticketing machines on
+stops, as well as vendor terminals at newsagents’, and post offices are usually provided by external companies,
+specialized in ticket distribution, based on long-term contracts and commission from sales. In newer system,
+the share of publicly owned hardware is higher, through EU co-financed purchases. The hardware and services
+may be provided by multinational firms, but also a strong domestic market of domestic providers has
+developed.
+
+
+
+
+6
+ Box 1: Smartcard Technologies in Poland
+
+
+ MIFARE® Initially a proprietary contactless card security protocol (Crypto-1) based on ISO14443 type
+ A, developed by Mikron AG in Graz, Austria in the 1990’s. The brand and IP is now owned by NXP and is
+ incorporated into various smartcard chips and reader ICs. Several card and chip suppliers have licenses
+ from NXP to include Mifare® in other chips. The initial chip product line is now known as Mifare® Classic
+ and is becoming obsolete because of the weakness of the security protocol. The current chip ranges offer
+ a variety of chip capabilities and security protocols.
+
+ Java is a programming language loosely based on C++ and designed primarily for dynamic and
+ changeable hardware. In reduced form, applications written in Java may be run in smartcards. The
+ specification is owned by Sun Microsystems, but others participate in its development.
+
+ Java Card: A derivative of original Java, for use in the restricted environment of the smartcard
+
+ 2D Barcode: A digital data string represented as shown below:
+
+
+
+
+ Otherwise known as a QR code.
+
+ Contactless Card: A smartcard with no visible module contact area, but which transfers data using RF
+ technology. Such cards are generally used for transport and ID applications. Data is transferred by
+ modulation of the RF field. See Proximity card (ISO/IEC 14443) and Vicinity card (ISO/IEC 15693); there
+ is also a Close-coupled card standard (ISO/IEC 10536), but no evidence of its use.
+
+ Proximity card is a contactless smartcard that can be read without inserting it into a reader device.
+ Proximity cards are part of the contactless card technologies. Held near an electronic reader for a
+ moment they enable the identification of an encoded number. Proximity cards typically have a read range
+ up to 50 cm, in comparison with contactless smartcard which have a range of 2 to 10 cm.
+
+ Source: World Bank.
+
+
+24.      Smartcards are mostly used for long-term tickets. Depending on the city, single and medium-term
+tickets may be available on smartcards, but are mostly sold on paper, as casual users do not want to acquire a
+smartcard. In Warsaw, they are sold on single-use magnetic cards and in Wrocław – 2D barcodes are used.
+Nevertheless, in most cases public transport vehicles are equipped with a high number of smartcard validators;
+often there is one validator for every door. In urban transport, single and medium term paper tickets are usually
+printed by the authority and sold to the vendors (not produced by the vendor during purchase), which reduces
+hardware costs and increases the distribution network.
+
+25.     Railway operators mostly use on paper ticketing, with an increasing share of internet and smartphone
+app sales (2D barcodes of different standards), especially in case of intercity services. Long-term tickets are
+also usually paper ones—only in case of Koleje Mazowieckie, the rail company operating around Warsaw—they
+may be coded on a smartcard. This system is interoperable with Warsaw Public Transport; Warsaw Public
+Transport and Koleje Mazowieckie tickets may be coded on one card. Railway tickets are checked during the
+                                                                                                               7
+trip, and in some cases, train staff is equipped in smartcard validating terminals (this refers to Koleje
+Mazowieckie as well as some integrated offers – for example in the region of Gdańsk). Future plans of railway
+operators are usually based on standards, determined by the existing validating terminals. Passengers on
+regional bus operators mostly use paper single tickets purchased from drivers, using electronic cash registers,
+required by law for fiscal reasons. Season tickets may be paper or smartcard.
+
+26.      The newest development is a ticketing system in Świebodzice, where at the beginning of 2016 a group
+of Polish firms, introduced a system allowing to purchase a ticket, by a proximity bank card – a passenger does
+not need a paper ticket nor a transport specific smartcard. This system co-exists with classic paper systems.
+This means that the operator does not need to issue transport specific cards, the passenger is free to pay for
+the journey with his bank card
+
+
+Summing Up
+
+27.       As is the case in several European countries, multiple proprietary AFC solutions have been
+implemented in Polish cities in recent years. There is no overall direction as to what these systems will provide,
+and there is limited levels of interoperability across the rail network, which makes travelling across the country
+difficult. There appear to be limited distribution channels for ticket sales, which mainly focus on stations.
+Except for long distance trains, there is very limited internet sales capability, or uptake evident. Given large
+recent investments in smartcard technology, existing public transport operators may be wary of adapting to a
+new interoperable smartcard standard.
+
+28.      There is the potential to build on the new systems, such as those implemented in Świebodzice, and
+develop an interoperable standardized system for Poland that builds on the benefits of smart media for
+passengers and operators alike. With the development of new technologies, as will be discussed later in this
+Report, there is the potential for Poland to be at the forefront of developing standards for the next generation
+of smart ticketing systems that will be implemented.
+
+
+
+
+8
+International Approaches to Automatic Fare Collection
+Introduction
+
+29.     Public transport ticketing has come a long way over the last 30 years. The major technology back then
+was paper based but there has been a gradual change as new technologies, ranging from magnetic stripe tickets
+to smartcards, have been developed and successfully implemented in many major cities worldwide.
+Historically, transport operators have only considered smartcard systems to pay for transport, so called closed
+schemes. The resulting system was built, in the majority of cases, to a proprietary specification by a single
+supplier. These schemes required a considerable capital investment for the infrastructure, as well as on-going
+operational costs.
+
+30.     Customer expectations have changed significantly in recent years, especially with the advent of the
+internet and online retail. There is a general expectation that all transactions can be undertaken in a fast
+customer friendly way. Standing in a queue for a ticket machine does not fit this model. The introduction of
+smartcards has meant that customers no longer need to queue at the ticket office window to renew their
+monthly or annual season ticket. This can be done online and the new ticket delivered the next time the card is
+passed over a reader. Auto-top-up is also available in many schemes to registered users who can get their pre-
+paid balance automatically topped up when it falls to a pre-defined threshold. All the payment is dealt with in
+the back office. This chapter looks at worldwide approaches to AFC in public transport.
+
+
+Ticketing Technologies
+
+31.     Based on a review of international experience, it can be concluded that no unified, standardized
+solutions have emerged with regard to existing AFC systems in major cities covering the totality of the
+operation of the system. Instead, there is competition between alternative models that include national
+standards, (e.g. ITSO, Calypso, OV-chipkaart in the Netherlands) and proprietary systems. (e.g. Oyster in
+London, Octopus in Hong Kong). The travel media that passengers use in public transport can vary significantly,
+and also some locations accept multiple technologies —in the case of London Transport for London (TfL)
+magnetic stripe, smartcard (Oyster), EMV bank cards and mobile EMV (for example Apple Pay). 6 Travel media
+are always devised and developed in accordance with the business and security demands and IT capabilities of
+the time. The different fare media do not need to be considered in isolation, as there is no one technology that
+can address all the needs of users of urban and inter-urban transport. The technologies complement each other,
+and several examples exist of cities or regions successfully implementing multiple technologies across multiple
+modes of transport.
+
+
+
+
+6EMV chip technology is becoming the global standard for credit card and debit card payments. Named after its original
+developers (Europay, MasterCard® and Visa®), this technology features payment instruments (cards, mobile phones, etc.)
+with embedded microprocessor chips that store and protect cardholder data. This standard may also be referred to as chip
+and PIN or chip and signature. Payment data is more secure on a chip-enabled payment card than on a magnetic stripe card,
+as the former supports dynamic authentication, while the latter does not.
+
+
+
+                                                                                                                       9
+                                   Figure 2: Evolution of Ticketing Technology
+
+
+
+
+      Source World Bank.
+
+
+
+                           Table 1: Strengths and Weaknesses of Ticketing Technologies
+.
+
+
+
+
+    Source: World Bank.
+
+
+
+
+10
+ Box 2: ITSO, ENV, Apple Pay
+
+ ITSO Ltd (ITSO) is a UK non-profit distribution technical, standardization and interoperability membership
+ organisation with objectives to: (a) maintain and develop the ITSO specification for transport smartcards; (b)
+ operate and manage an interoperable smart media environment; and (c) facilitate and support development of
+ interoperable smart ticketing schemes that comply with the ITSO specification.
+ ITSO was established as a result of discussions between various UK passenger transport authorities concerning
+ the lack of standards for interoperable smartcard ticketing. These discussions grew to include other authorities,
+ transport operators and government. ITSO membership covers the breadth of the transport sector including
+ transport operators (bus, tram and train operating companies), suppliers to the industry, local authorities and
+ public transport executives. Supported by the Department for Transport, ITSO has links with major transport
+ industry organizations and established smartcard schemes in the UK and overseas.
+ ITSO started out as the Integrated Transport Smartcard Organisation but this has been dropped and is now just
+ 'ITSO'. That is because the specification covers other forms of ticketing besides smartcards and transport. The
+ Department for Transport introduced in 2008 the English National Concessionary Travel Scheme for all people
+ of retirement age and eligible disabled persons (according to the Transport Acts 1985 and 2000) using buses,
+ which uses ITSO smartcards. Transport Scotland and the Welsh Government have implemented ITSO in their
+ concessionary travel schemes. Transport authorities and operators are now rolling out commercial uses for ITSO-
+ based smartcards throughout the country.
+ The ITSO specification is a technical platform on which interoperable smart ticketing schemes can be built. It
+ defines the key technical items and interfaces that are required to deliver interoperability between both,
+ components of a ticketing system – smart media (smartcards), points of service and back offices – and separate
+ ticketing systems. ITSO smartcard specifications covers card, point of service and back office systems.
+ EMV. Originally a joint working group set up in December 1993 by Europay International, MasterCard
+ International and Visa International, to develop a common set of technical specifications for the use of IC
+ cards by the payment industry. Responsibility for the specification has now passed to a management
+ company, EMVCo LLC (www.emvco.com ), so that EMV is now used to refer to the group of specifications
+ produced by that company.
+ EMVCo members worked jointly over the last few years to develop specifications that define a set of
+ requirements to ensure worldwide interoperability and acceptance of secure payment transactions using
+ integrated circuit cards. It accomplishes this by managing and evolving the EMV® Specifications and related
+ testing processes. Today there are EMV Specifications based on contact chip, contactless chip, common
+ payment application (CPA), card personalization, and tokenization. There are also EMV documents and
+ materials regarding mobile payments.
+ Apple Pay is a mobile payment and digital wallet service by Apple that lets users make payments using
+ the iPhone 6, 6 Plus, and Apple Watch-compatible devices (iPhone 5 and later models), iPad Air 2, iPad
+ Pro and iPad Mini 3 and later. Apple Pay does not require Apple Pay-specific contactless payment terminals,
+ and can work with existing contactless terminals. Transport for London accepts Apple Pay.
+ Sources: EMVCo and Wikipedia.
+
+
+
+
+32.
+33.      Table 1 indicates the strengths and weaknesses of the available technologies. The criteria identified in
+the table are generic and can be applied to any ticketing scheme across the globe. What this shows is that
+technologies such as smartcards, mobile phones and identity tokens provide the best potential for
+interoperable smart ticketing systems. Indeed, these technologies have been successfully implemented in cities
+such as London, Amsterdam, Washington DC, and Boston. As can also be seen from the table, there are a large
+number of technologies that are being used for automatic fare collection, which means that Public Transport
+Operators (PTOs) have difficult decisions to make as to which technologies to support in the medium to long
+term.
+
+
+                                                                                                                     11
+Future Developments
+
+34.      Many major cities have invested significant sums in bespoke smartcard based ticketing systems that
+have delivered major benefits to both operators and the travelling public. Some of these schemes, such as
+Oyster for Transport for London (TfL) in London, are beginning to look at the next generation of open payment
+systems to build on current successes and look at how new technologies can be used to support them in this
+transition. A significant trend is the move away from issuing tickets to the use of more advanced forms of
+payment, including contactless bank cards and Apple Pay, in London amongst others, and the use of identity
+tokens, such as government issued PIV cards in Washington DC, to show that a passenger has a right to travel. 7
+This has meant that we are seeing a movement away from bespoke ticketing systems to the adoption of retail
+solutions to meet transport requirements (Figure 3).
+
+                                    Figure 3: Trends in Automatic Fare Collection
+
+
+
+
+       Source: World Bank.
+
+
+35.      AFC should not be seen as a simple replacement for traditional paper or magnetic ticketing. The
+introduction of AFC systems is also an opportunity to rethink the current fare policy and to offer additional or
+alternative fare possibilities to customers. This is because there is a clear link between fare collection
+technology and fare policy. The technology that has been in place for several years has been developed to
+implement the existing fare policies and products. As technology has developed it has allowed different fare
+policies to be implemented that were not previously possible due to the limitations of the technology, for
+example daily fare capping in London on Oyster cards. Public transport is notoriously slow to instigate change.
+
+7 A PIV card is a United States federal smartcard that contains the necessary data for the cardholder to be granted access to
+federal facilities and information systems and assure appropriate levels of security for all applicable federal applications.
+12
+As a consequence, there is a tendency to continue with existing fare policies and implement new technology,
+the result being a far more expensive way of providing fare collection than previously.
+
+36.      Business models. Smart ticketing is a global business and is, for the first time, being driven by standards.
+This allows off-the-shelf technology to be adopted with only limited local tailoring to reflect specific fare
+structures and cross-modal opportunities. By using open national standards for smart ticketing, payment
+systems, and communications infrastructure, public transport operators can access supply chains that are
+responsive, cheaper and address industry best practice. However, the use of new technology now allows for
+post-payment of travel, if passengers have a valid token, such as a contactless bank issued credit or debit card,
+and the journey is recreated from the taps in and out of the network. Payment is then calculated according to
+several variables including, time of day, zones crossed, applicable discounts, e.g. capping, and mode of
+transport.
+
+37.      Distribution channels. New fare collection systems must allow passengers to plan and book their travel
+through a wide range of sales and distribution channels and move away from a station centric approach. This
+goal requires a new system that can accommodate the speed, power and flexibility necessary to handle multiple
+distribution channels for ticket sales. There is a significant move away from traditional retailing at stations to
+more user centric approaches as shown in Figure 4.
+
+38.     Organizational and legal issues. There is a need for leadership in this area, which could come from national
+governments or operator supported groups, to provide confidence that when new AFC systems are introduced
+there will be a degree of interoperability to enable passengers to travel across several modes across a wide
+area. Legislation would be necessary to give any such proposals a strong foundation and ensure a level of
+compatibility between AFC systems.
+
+39.     Integration with travel information and traffic management. By creating a linkage between Travel
+Information, Journey Planning, Payment and Smart Ticketing, including a liaison with compatible mobile phone
+and contactless bankcard schemes, new AFC systems can ensure the passenger experience consistently meets
+the highest expectations. It can also break down barriers to usage of public transport systems and assist in
+obtaining a modal shift by making access to public transport easier.
+
+                                    Figure 4: Trends in Sales and Distribution
+
+
+
+
+                           Source: World Bank.
+
+
+
+
+                                                                                                                  13
+40.     Development of smart ticketing standards. A common feature that has enabled the uptake of new
+technologies is the development of standards that can be directly applied to the transport sector, or require
+adaption for solutions to be implemented. The latter is particularly true for payment systems that have been
+adapted to meet the requirements of transport, which requires a high throughput of passengers at peak times,
+and cannot perform on-line authorization at the point of entry. Also, the underpinning mobile and
+communications technologies are all based on internationally standardized solutions.
+
+41.      Data privacy. Protection of customers’ privacy is enshrined in the EU Data Protection Act, which AFC
+systems need to comply with. Additionally, where payment cards are used there are requirements to tokenize
+the card details, in compliance with Payment Card Industry Data Security Standards (PCI DSS) requirements to
+minimize the potential for fraud. 8 All of these issues are key to the successful implementation of a smart
+ticketing scheme, as any loss of trust in the system by users would damage passenger acceptance.
+
+
+Summing Up
+
+42.     As more and more cities adopt the use of these disruptive technologies, there will be a need to
+standardize the approach used, so that passengers have the same user experience across the country. There
+are two avenues, which are not mutually exclusive, for Poland —take part in the development of smartcard
+standards, either building on existing specifications, or through developing new standards and to focus on
+interoperability across modes and local administrations through development of new technologies, such as
+EMV cards or Apply Pay.
+
+43.       As technology evolves in this sector there will be a need to have a standard approach, or passengers
+will be less likely to use it if the experience is different in different locations. For example, cell phones work in
+the same way all over the world, so the user experience is the same. Apple Pay is the same in the UK and the US
+and China. As a consequence, users know what they have to do each time they want to use the service
+
+44.       The current trend is towards making payment of transport fares simpler, and allow the passenger to
+choose which payment product or device he wishes to use to identify himself to the network, to indicate that
+he is eligible to travel on that network. This simplifies the front-end systems significantly and moves a lot of
+the decision making as to which fare is best, from the passenger and into the back office.
+
+45.     New technologies have a cost (production and distribution) and a robust strategy for managing the
+cost and deployment is a critical issue within some existing systems. It is also important to bear in mind that
+there will be a substantial customer base for the smart-ticketing end product, and their needs must be
+considered during the process otherwise take up rates and acceptance of the scheme may be low. After sales
+issues and data security are also important attributes to consider, as this ensures the customer will feel
+confident when using the smart ticketing.
+
+46.      In many cases it is true to say that schemes continue to remain beholden to past decisions, where fare
+collection technology imposed significant limitations. This drove the need for zonal-based structures to support
+fares integration with multi-ride and periodical fare products, to operate in ‘open’ fare collection environments.
+These fare structure and fare product concepts are often subject to widespread public and political acceptance
+and support. New paradigms offered by Near Field Communication (NFC) and bank-issued smartcards opens
+
+
+
+
+8PCI DSS are mandatory information security standards for organizations handling cardholder information in the payment
+card environment. Those organizations are required to demonstrate compliance on a periodic basis.
+14
+up new horizons.9 Through the integration of fare collection systems and mobile. This means that there is a link
+between location, payment and information which can be combined to improve the travelers experience and
+provide the operator with more information about what type of service passengers want.
+
+47.      This poses challenges public transport authorities and policymakers to rethink how to best deliver
+customer service and offer different value propositions off the back of these new technologies. Based on the
+past, this would tend to suggest that an ongoing evolution rather than a revolution will occur from a policy
+perspective. A further implication may well be an extremely pragmatic approach to business case development
+associated with next generation fare collection systems.
+
+
+
+
+9 Near Field Communication (NFC): An extension of the Proximity Card (ISO/IEC 14443) contactless technology, allowing
+both ends of the communication channel to be self-powered and providing enhanced functionality, primarily in mobile
+telephones. Colloquially also used to describe the incorporation of unpowered 14443 compliant chips into other devices
+(e.g. stickers applied to mobile phones that do not have inbuilt 14443 compliant functions, touch areas on posters that can
+be interrogated by NFC enabled mobile phones). Relevant standards are ISO/IEC 18092, 21481, ETSI TS 102190 as well as
+ISO/IEC 14443.
+                                                                                                                        15
+European AFC Standards Development
+Introduction
+
+48.       There are many reasons why standardization of systems is beneficial. The reasons outlined by the
+European Telecommunication Standards Institute (ETSI) 10 are: (a) safety and reliability; users perceive
+standardized products and services as more dependable, this in turn raises user confidence, increasing the
+take-up of new technologies; (b) support of government policies and legislation; frequently referenced by
+regulators and legislators for protecting user and business interests, and to support government policies.
+Standards play a central role in the European Union’s policy for a single market; (c) interoperability or the
+ability of devices to work together relies on products and services complying with standards; and (d) business
+benefits – provide a solid foundation upon which to develop new technologies and to enhance existing
+practices. Standards open up market access, provide economies of scale, encourage innovation, and increase
+awareness of technical developments and initiatives. This chapter provides an overview of AFC standards
+development in Europe.
+
+
+Standards
+
+49.     When considering AFC systems, it is necessary first to consider what the system comprises, in order
+to understand what can be standardized. Figure 5 illustrates the scope of a generic AFC system. As can be seen,
+there are a wide range of technologies that comprise an AFC. Much of the back office systems are generic IT
+systems that comply with industry wide standards. The front office and fare media equipment can comprise
+equipment such as mobile phones, contactless payment cards, and smartcards that comply with international
+standards. Standards for card devices fall in to two camps, proprietary or open.
+
+50.     Proprietary standards. Proprietary products such as Oyster in London and Octopus in Hong Kong have
+been developed for the urban transit environment out of a requirement to provide fast throughput at peak
+times and an all in one media, meeting the needs of multi-mode transport operators. These proprietary
+standards can be simple and cheap to develop as they only work within the remit of a single transit operator
+and do not have to conform to any other interoperable standards.
+
+51.      Open Standards. Open standards such as ITSO, VDV and Calypso and the EMVCo payments specifications
+are designed for interoperability across national or global acceptance. They are each primarily designed for a
+target environment, so ITSO is a transit specification and EMV is a payments specification, but both can be used
+to cross the boundary between transit and payments. These standards, while not as flexible as the bespoke
+closed standard, do offer the transit operator to leverage some benefits that come with these standards such
+as interoperability with other schemes, low or no issuance costs, and improved security.
+
+
+
+
+                           Figure 5: Generic Automatic Fare Collection Architecture
+
+
+
+10 http://www.etsi.org/standards/why-we-need-standards
+
+16
+Source: Nextendis, France, 2015.
+
+
+
+                                   Table 2: Applicable Standards for AFC Systems
+               Smart Card Standards                        Additional System Standards for:
+               Contactless Cards – ISO/IEC 14443           Communications Networks
+
+               File Structure - ISO/IEC 7816-4             Ticket Vending Machines User Interfaces
+
+               Architecture - EN ISO 24014-1 (IFM)         Data Protection
+
+               Applications - EN 15320 (IOPTA)             Payments (EMV, PCI DSS)
+
+               Data Elements - EN 1545                     Banking
+
+               Security - ISO 15408 (Common Criteria)      Near Field Communication
+
+             Source: World Bank.
+
+
+
+
+Transport Standards Development
+
+52.     The UK, Germany, France and the Netherlands have led the way in Europe in the development of
+national standards for smart ticketing. Figure 6 below summarizes the scope and usage of these systems. At
+the European level, the Interoperable Fare Management (IFM) project has been looking to bring all of these
+national standards together. The aim of the project is to ensure cross-border interoperability of transport
+Smartcards across Europe. One of the key objectives is to develop a road map towards a EU-wide concept
+where: (a) customers use their local transport smartcards outside their home network; (b) transport
+authorities have the tool-set to build new systems using standardized specifications; (c) deliver the associated
+Security Environment; and (d) charter a way through privacy issues.
+
+
+
+
+                                                                                                             17
+                             Figure 6: Summary of European National Standards for AFC
+
+
+
+
+      Source: World Bank.
+
+
+53.      Financial Service Providers (FSPs) have increased their role in the smart-ticketing market in recent
+years and have established positive working relationships with many scheme providers this period. The
+realization of contactless EMV payments in smart-ticketing pilot schemes shows that these working
+relationships are successful and have demonstrated that EMV technologies are now feasible for public
+transport ticketing.
+
+54.      Europe has adopted the International Standard ISO EN 24014-1:2015 as the global model to define the
+systems and processes required to manage the distribution and use of fare products in an interoperable public
+transport environment.11 The standard provides the basis for the development of multi-operator/multi-service
+interoperable public surface (including subways) transport fare management (IFM) systems on a national and
+international level. ISO 24014-1:2015 is applicable to bodies in public transport and related services which
+agree that their systems need to interoperate. While ISO 24014-1:2015 does not imply that existing
+interoperable fare management systems need to be changed, it applies so far as it is practically possible to
+extensions of these. At the system level, it is the aim of the EU-IFM to build on this standard developing a model
+that defines the generic components and interfaces as well as generic low level processes. The approach
+adopted and the proposed strategy appear to be the most cohesive available, considering media interoperation,
+organizational roles, privacy, trust and security, together with the back office systems that will allow schemes
+to network and interoperate.
+
+55.     ISO is helping to bring the worlds of transit and payments together with a Technical Report paper on
+the use of transit data area or TDA. 12 TDA is an innovation by the payments industry to introduce a space on
+payment cards that can be written to by transit operators. Bank issued cards may also have an extended
+payment application that permits the public transport industry to store data within the payment application in
+what are called TDAs. By definition, the available data storage space will be quite limited. It thus allows the
+
+
+11 http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=61545
+12 ISO/TR   14806:2013 Intelligent transport systems -- Public transport requirements for the use of payment applications
+for fare media. Available at: http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=55067
+ ISO TR14806 is a technical report that defines the state of the art in respect of using bank-issue payment applications/cards for
+transport ticketing. The report provides a set of use cases and requirements for payment applications, most of which can be met by
+the current offerings from MasterCard and Visa.
+
+
+18
+storage of limited information only and will not be able to host national, interoperable fare management
+application standards. The TDA will only be approx. 140 bytes, so will hold just enough information to indicate
+that the user has performed a transaction to enable an inspector to see, but not to carry a ticket product, which
+was never its intended use. The ISO Technical Report describes the ways that bank issued payment cards can
+be used by the public transport industry to serve customer needs, independent of specific payment card scheme
+specifications.
+
+56.      As AFC systems have opened up with the introduction of new payment technologies and mobile
+phones, there are significant opportunities to develop new approaches to fare collection. Some of this can be
+seen in London where TfL is accepting contactless payment cards and in Washington DC where the new system
+will accept PIV identity cards on the Metro. These approaches signal a shift from the 1990s technology. Some
+trends that are becoming apparent in the industry that will influence the way in which AFC is delivered in the
+coming years are:
+
+       Development of national standards, particularly in Germany, UK, and France;
+       Introduction of new form factors, particularly mobile, which is opening up a wide range of
+        opportunities;
+       A realization that multiple standards will exist, due to the complex nature of public transport in
+        different countries across the EU;
+       The development of further standards will not add any further value, or identify any further
+        functionality and will cost a great deal; and
+       It cannot be said that one standard is better than another, as each system has been developed
+        according to a particular vision, and the best solution developed to implement that vision.
+
+
+Summing Up
+
+57.       Existing AFC schemes have already installed some components that conform to international norms,
+and have adopted operating models that comply with best practice. However, these are generally insufficient
+to support interoperability between schemes or across national or international boundaries. This conformity
+across schemes could form a general basis for the development of a European organization model that is
+capable of incorporating the existing national organizations that can fit, for example, the ISO EN 24014-1
+standard. Leading IFM organizations have built a shared vision to (a) create an EU-IFM network to provide
+direction, coordination, networking of best practices and implementation planning of pan- European IFM
+initiatives; (b) promote further European standards for transport smartcards including security and
+certification equipment; and (c) develop a multi-application solution to interoperable ticketing that can be
+implemented in stages.
+
+58.      Ultimately, the leading IFM organizations expect a common smart media application to be the best way
+of ensuring interoperability. However, the use of multi-application media provides a first step toward this goal,
+allowing customers to hold their transport applications and means of payment on one single convenient media.
+Local schemes may then implement the common application at their own pace with reasonable modification
+costs and minimum disruption to their operation.
+
+
+
+
+                                                                                                              19
+Interoperability across Regions
+Introduction
+
+59.      Standardization of AFC systems and components does not guarantee that a system will be able to
+operate across a region or country. In order for that to happen there must be interoperability of systems. The
+Transport Research Board (TRB) in the US has defined interoperability as the ability of different agencies to
+coordinate and share information so that passengers can travel in a seamless fashion. The Transport Card
+Forum in the UK defines interoperability as the “ The ability of systems to provide services to, and accept
+services from, other systems, and to use the services so exchanged to enable them to operate effectively
+together. When used in relation to ticketing systems in public transport, interoperability means the provision
+for the passenger of a seamless journey using the same smartcard and/or terminals, on all contractually
+participating operators’ routes. Fare payment interoperability is only one factor that affects seamless travel.
+
+Elements of Fare Payment Interoperability
+
+60.      Fare payment interoperability does not necessarily require the use of a smartcard. Figure 7 illustrates
+the high-level components to achieving interoperability. This can occur with a manual or automated system. A
+manual system relies on human interaction such as visual inspection, and business rules are agreed between
+participants so passengers can travel across different operators and/or modes. An automated system relies on
+technology—usually using fare media such as a contactless smartcard to validate interoperability. The
+information and data flows required to achieve smartcard interoperability also applies to other media such as
+magnetic stripe tickets or radio frequency identification (RFID) tags.
+
+61.      A clear set of business rules are necessary to outline how each of the participants needs to work
+together. At a minimum, the rules must provide the technology requirements that include systems and fare
+media and transaction processing that defines the data to be transferred for processing and when (how often)
+that occurs. These rules may also define other business-related aspects such as branding (how the product is
+to be identified in the market), customer service processes and procedures, sharing of expenses and payment
+for services; items controlled by participants; dispute resolution; and legal framework.
+
+62.      The next step is to define the technical information required to achieve interoperability. The business
+rules define the information to be exchanged by the interoperable smartcard system. At a minimum, the card-
+to-reader data format and the data format for transferring the transaction records to a central clearinghouse
+need to be defined. The minimum requirements for implementing an interoperable smartcard system can be
+accomplished by using one of the following approaches:
+
+        Procuring the technology from a single supplier, similar to TfL in London, with the Oyster scheme from
+         Cubic  
+
+
+20
+        Developing an interface specification that defines the requirements with which each participant’s
+         supplier has to comply, similar to what is done in the financial services or telecommunications
+         industries and with ITSO (UK), VdV (Germany), Calypso (France) and the OV-chipkaart (Netherlands)
+
+
+
+                                        Figure 7: Interoperability Model
+
+
+
+
+Source: World Bank.
+
+
+Evolution of Interoperability with Open Payment Systems  
+
+63.      Now that financial institutions are implementing contactless payment products throughout Europe, a
+baseline architecture may be used to begin developing an interoperability strategy for public transport with
+open payment systems. There is a strong take up of such products in Poland with over 80 percent of the
+population users making contactless payments. As a consequence, the following scenarios for interoperability
+begin to emerge:
+ 
+     Acceptance of contactless bank cards on buses and at fare gates;
+     Two or more public transport operators arrange to accept each other’s closed stored -value payment
+         products,; and
+     Acceptance of multiple-payment-enabled devices.
+
+To determine the interoperability requirements with an open payment system, the characteristics of the
+existing transit payment architecture need to be identified.
+
+
+Acceptance of Contactless Bank Cards  
+
+64.     As contactless credit cards proliferate, public transport operators become increasingly attractive
+customers for financial institutions. The most likely relationship that will emerge between financial institutions
+and public transport operators is similar to a merchant in the retail space. Under this type of relationship, PTOs
+
+                                                                                                               21
+accept a bankcard for transit fare payment and pay a transaction processing fee to the financial institutions.
+The key issue is that the bankcard data structure is not designed for conducting fare calculations. Therefore,
+two baseline system architecture configurations emerge for using a bankcard to pay a fare: (a) transit and
+credit card applications both reside on the same chip or (b) the credit card application only resides on a
+contactless chip.
+
+65.       Though technically feasible to combine transport and payment applications on a single card, the
+institutional barriers still make this configuration economically infeasible. However, using a contactless credit
+card product for fare payment is technically feasible in a cost-effective manner if some of the institutional
+constraints can be modified. This has been proven to work in Salt Lake City, Utah and across the TfL network
+in London. In conjunction with the major card schemes, Visa, MasterCard and American Express, TfL developed
+a set of rules for the use of contactless payment cards in public transport fare collection. These are summarized
+in Table 3.
+
+                          Table 3: Transport Requirements for Contactless Payment Cards
+
+
+
+
+         Source: World Bank.
+
+
+Multiple Closed Stored-Value Payment Products
+
+66.      Closed stored-value products are becoming an increasingly attractive means to create loyal customer
+relationships. In the retail environment, coffee shops, such as Starbucks issue closed-account-based stored-
+value cards. Sports venues are also beginning to recognize the benefits of a contactless stored-value payment
+media. Two parts are required to create interoperability between disparate closed stored-value systems:
+
+        The need to read participants’ cards or payment media and
+        Agreement on how settlement will occur.  
+
+67.       This type of arrangement is referred to as a trust model, as it requires participants to trust the integrity
+of the transaction data. An example of where this has been implemented is between TfL and the train operating
+companies (TOCs) who feed the London terminals. The TOCs have agreed to accept TfL’s Oyster card in several
+stations close to London. These TOCs need to purchase Cubic’s Tri -Reader and integrate them with their own
+gates. This is not dissimilar to the regional interoperability approach where it is necessary to purchase
+equipment from one supplier. However, the TOCs do not issue the Oyster Card, they just collect transactions
+and feed them to TfL. They then receive an invoice at the end of the month for a lump sum, there is no detailed
+breakdown of transactions, the TOC has to trust that TfL has collected the correct journey information.
+
+
+
+
+22
+Multiple Payment-Enabled Devices
+
+68.      There are two configurations of payment-enabled devices: (a) transit-enabled contactless chips
+embedded into devices; and (b) devices with transit application (software) that communicates with the reader
+in a non-ISO-14443-compliant mode (e.g., Bluetooth, 802.11, or infra-red). 13 The most common payment-
+enabled device is a key fob with the same contactless chip as a smartcard (e.g., the ExxonMobil Speedpass
+device). Contactless smartcard chips have also been embedded in mobile phone covers or even into a
+designated slot in the mobile phone. The primary difference between a contactless smartcard and a key fob or
+mobile phone cover is the form. Therefore, when a transit-enabled contactless chip is embedded in, for
+example, a mobile phone cover, interoperability is the same as for transit-issued contactless smartcards, as
+long as the same contactless chips are used.
+
+69.      In recent years, there has been development of Near Field Communications (NFC) with mobile phones
+able to emulate payment cards. A prime example of this is Apple Pay, which uses a tokenized form of a payment
+card stored on an iPhone, which can make contactless payments through the NFC interface. This migration
+towards a mobile platform is a long-term trend that will become more prevalent in coming years. At the
+moment, Apple Pay is the first with major traction. The idea is that people will be able to leave their wallets at
+home and just take their phones, so it becomes more convenient and secure for users.
+
+
+Implications for Poland
+
+70.      In Poland some areas have expanded their systems to include neighboring cities, and this is a good
+example of interoperability based on a single supplier as described above. However, there is no coordinated
+plan for a nation wide interoperable smart ticketing system. It could be argued that this lack of a plan is limiting
+usage of public transport, as buying a ticket to travel becomes a barrier to usage. With the high penetration of
+contactless payment cards in Poland, over 80 percent, there must be a strong case for bank issued payment
+cards to be part of any national interoperable AFC scheme. There is still work to be done in this area,
+particularly in relation to long distance rail journeys, but the problems are not insurmountable. There is the
+potential for Poland to take a lead in this area, with the support of the leading card schemes, Visa, MasterCard
+and Amex, to demonstrate how this can be implemented, and create the basis of a standard for the use of bank
+cards in this scenario, similar to what TfL achieved with regards to urban transport and bank issued payment
+cards.
+
+
+
+
+13   802.11is the standard for WiFi and infra-red refers to the communication channel used.
+                                                                                                                 23
+International Case Studies
+
+Introduction
+
+71.     This chapter focuses on examples of standardization and interoperability of AFC systems for public
+transport. The first two case studies are from the European Union--the first is the OV-chipkaart of the
+Netherlands, the second is the evolution of public transport ticketing in London, while the third surveys Korea’s
+experience. It also presents an innovative pilot multi-modal booking and payment system mobile app
+developed in Vienna, which provides an individual mobility payment system that integrates across all modes,
+without the need for smartcard interoperability. There are interesting lessons to learn from all approaches
+taken by both countries.
+
+
+Netherlands – OV Chipkaart
+
+72.     The OV-chipkaart (Openbaar Vervoer Chipkaart) is a contactless smartcard system used for all public
+transport in the Netherlands. First introduced in the Rotterdam metro in April 2005, it has subsequently been
+rolled out to other areas and travel modes. It fully replaced the national paper based ticket system
+strippenkaart for buses, trams and metros in 2011 and the paper ticket system for rail travel in July 2014. The
+OV-chipkaart works in two ways: either as a stored-value card which is used to travel on pre-loaded credit or
+as a means of storing so-called travel products such as single or return rail tickets, day passes, seasonal tickets
+and discount plans.
+
+73.      This product was developed by Trans Link Systems (TLS), which was an entity established in 2002 by
+Connexxion, GVB (Amsterdam), HTM (Den Haag), NS-R (Dutch Railway Company) and RET (Rotterdam).
+Together these five companies provide 80 percent of public transport services in the Netherlands and
+cooperate with all other public transport organizations. Trans Link Systems (TLS) works in partnership with
+the carriers involved to ensure the OV-chipkaart is made available to the people using public transport in
+the Netherlands. The OV-chipkaart can be used on the bus, metro, tram and train. A tender process was started
+in 2002 to select a supplier that can build the central system and this was awarded to the East-West e-Ticketing
+B.V. consortium in 2003. 14 The solution that East-West has designed is based on the existing “Octopus”
+smartcard system for public transport used in Hong Kong. Connexxion is the largest public transport bus
+company in the Netherlands, operating in the west, middle, east and far northern part of the country since 1999.
+TLS is now owned by the four largest operators: GVB, RET, HTM, and NS-R. Connexxion withdrew for reasons
+related to its French parent, Transdev, which is a subsidiary of France’s state - owned Caisse des Dépôts, and
+which acquired Connexxion in 2007.
+
+74.    TLS has developed a nationwide smartcard system for transport, covering various products – t-purse
+and passes, and allowing different price mechanisms and concession areas—this is the Dutch term for bus
+
+14This consortium consists of: Accenture, Thales and Vialis with the following Thales subcontractors: MTR Corporation
+and Octopus Cards Ltd (both companies established in Hong Kong).
+24
+franchise—and all modes. Cards are either personalized or anonymous; there are also limited use tickets for
+incidental users, with a typical life of two days, in Amsterdam (using a lower cost Mifare Ultralight ticket).
+Several million cards have been issued to date, and 60,000 “front end devices” (validators, rail, metro gate
+readers, and vending machines) have been deployed. Across the country, few cities are not now using the
+scheme; Rotterdam and Amsterdam have gone fully smart, and Rotterdam has phased out legacy means of
+payment. 15The cards only have a public transport journey functionality – they do not currently handle taxis,
+parking, or parking, but cover bike rentals in railway stations.
+
+
+75.      TLS has the role of card issuer and central processor. Cards are procured by individual operators and
+issued to customers, but transactions are processed by TLS’s central processing facility. Operators benefit from
+having their own brands on the card. The scheme is known as OV-chipkaart, and the interoperability is achieved
+through a three part set of definitions: 1) technical specification; 2) rules and regulations; and 3) registrar
+documentation containing the global parameters.
+
+76.       Implementation delays were due to stakeholder management, especially related to NS-R changing its
+mind on how it wanted to see smartcards used. Originally, the rest of the network wanted to have a touch
+in/touch out system, but NS-R did not, and wanted to allow travel as long as there is a valid product on the card.
+However, in 2007 NS-R decided to accept Touch In/Touch Out and changed the operating model. Another
+reason for delay was that system integration capability was insufficient within the operators, and TLS had to
+source this from the East-West consortium. Also, TLS decided on a procurement model where the selected
+implementer also wrote the specification (unlike ITSO which has been defined by Government). This has made
+it difficult for other suppliers to enter the market quickly as they have not had the skills and facilities to deliver
+the integrator defined solution.  
+
+77.      For non-rail journeys, typically 89 eurocents are deducted at the start and a kilometer-based price
+calculated on exit (like Oyster on underground). The concern in the UK about rail fares being of a potentially
+high transaction value is not as applicable; the maximum Dutch rail fare is currently Euro 26.30 (single trip,
+2nd class). As a result, the collection risk is lower and NS-R is willing to take a risk by deducting only Euro 20
+at the start of a journey, because 50 percent of travel either starts or ends in a closed station.
+
+78.      TLS prefers to see all tickets operate with Touch In/Touch Out be either t-purse with auto reload linked
+to a payment account or season tickets. It would also like to see a “National Action List” – an internet site where
+tickets can be purchased on-line then “picked up” electronically at a device located at a place of the passenger ’s
+choice (similar to Oyster)16. This is expected to speed up journey times. Buying on the internet is considered to
+be more secure than in public where payment card PINs can be observed. Internet kiosks are located in
+convenient places. These payment channels related efficiencies are expected to reduce staff costs. The
+Netherlands has already moved away from manned ticket offices to electronic ticket vending machines.
+
+79.     National regulations require that there be one national ticketing system in the country. Public
+transport authorities require operators to accept the use of OV-chipkaart and the scheme has been developed
+with much seeking of input from interested parties. Its strength is derived from the power of the participating
+operators and their collective dominance of transport ticketing. Within cities such as Amsterdam and
+Rotterdam, operators are subsidiaries of the transport authorities, such as RET and GVB. They are not
+independent commercial entities and have no discretion on whether to accept OV- chipkaart or not.
+
+
+
+15 All areas have nowadays, but some paper tickets (created by local bus operators) continue to exist on top of OV-chipkaart
+acceptance.
+16 This works for top-up, though not yet for specific seasonal passes from the operators themselves.
+
+
+                                                                                                                         25
+80.     Connexxion, one of the major bus operators, is fully committed to OV-chipkaart, despite there being
+many challenges and considerable effort for it. It likes the performance level of smart ticketing, reduced
+transaction times, and there have been numerous design considerations over type and placement of validators
+on board bus. There are no financial incentives to take part; to date Connexxion has been a net contributor. The
+notion of providing an incentive to operators to adopt OV-chipkaart was not considered during the project, but
+there are still discussions about who should pay for what element of the service.
+
+81.      From an operator perspective the key benefits are time savings when compared to paper tickets, and
+fraud reduction, in conjunction with a closed network. Fraud reduction is the next most important expected
+benefit, especially for smartcards in conjunction with a closed network. A third benefit is related to getting
+better data on transport usage is a key driver, which supports optimizing lines, routes and frequencies.
+
+82.      National interoperability is key; this is multi-layer, the front end is offline and transactions are sent to
+a central processor for each operator, then data is forwarded to the single TLS clearing and settlement system.
+TLS has been established to secure this national interoperability; it is a private company, funded by its
+shareholders. It is still losing money, but this is getting better and breakeven is being approached.17
+
+83.     The Dutch specification is open; there is no lack of vendors given the country size; there are currently
+20 vendors. The specification is owned and edited by TLS, and is freely available upon registration. It, or
+something with a very similar technology specification, is currently implemented in Toronto, Oslo, and
+Denmark. TLS likes the idea of a common European specification, but does not see it as a high priority since not
+many travelers use public transport internationally.
+
+
+The Evolution of Ticketing in the UK – Inside and Outside London
+
+84.     Launched in 2003, the Oyster card scheme is a form of electronic ticketing used on public transport in
+Greater London. It is promoted by Transport for London (TfL) and is valid on travel modes across London
+including London     Underground,      London    Buses,    the Docklands      Light   Railway (DLR), London
+Overground, trams, some river boat services, and most National Rail services within the London fare zones.
+Usage of Oyster cards in the train system took several years to negotiate (2006-2009) but was introduced in
+January 2010 on all nine London train operating companies (TOCs). This has resulted in increased TOC
+revenues of 6 percent in London (GBP 100 million per annum).
+
+85.      An Oyster card is a stored-value contactless smartcard that can hold single tickets, period tickets and
+travel permits, which must be added to the card before travel. Passengers touch it on an electronic reader when
+entering and leaving the transport system in order to validate it or deduct funds. Cards may be topped-up
+by recurring payment authority, by online purchase, at credit card terminals or by cash, the last two methods
+at stations or ticket offices. The card is designed to reduce the number of transactions at ticket offices and the
+number of paper tickets. Usage is encouraged by offering substantially cheaper fares than with cash though the
+acceptance of cash is being phased out. On London buses, cash is no longer accepted.
+
+
+
+
+17TLS likes the fact that ITSO supports multiple media types – this is helpful given the security concerns over Mifare Classic
+cards. However, they feel that the ITSO requirements for all readers to read all media is costly. The ITSO clearing and
+settlement process (not being provided centrally) is also perceived to be onerous, with ‘on us/not on us ’17 transactions
+being a big task. TfL’s Oyster on the other hand is regarded as quite similar to the Dutch system—multi tickets (changing
+products during a journey, e.g. part on t-purse, part on a fixed product) is not supported by ITSO, but required in the
+Netherlands.
+
+
+26
+86.      The Oyster card increased capacity at gates by allowing 40 customers to pass per minute compared to
+15-20 for mag-stripe credit card sized tickets (CCST). PAYG and capping were subsequently introduced and a
+price differential with cash fares was used to drive the adoption of Oyster. Now 87 percent of TfL’s services use
+Oyster (12.7 m taps per day). Since 1998 it has reduced the cost of revenue collection by one third. Key benefits
+of Oyster benefits include the following:
+
+       •    Interoperable ticketing across all public transport in London;
+       •    Removing the need for ticket purchase before journeys resulting in significant reductions in ticket
+            office use;
+       •    Easier for customers to self-serve, purchasing choices simplified;
+       •    Increased throughput at gate-lines;
+       •    Reduction of ticket fraud.
+
+Future Ticketing Programme
+
+87.       As part of TfL's Future Ticketing Programme (FTP) the Oyster card platform is due to be replaced by a
+contactless payment card system, the first stage of which was completed by June 2015. A study in 2006
+identified the alternatives that might become available to TfL, of which Contactless Payment Cards (CPCs or
+cEMV) and mobile phones enabled with near field communication technology were the most promising. The
+cost of revenue collection shone a light on the cost of ticket selling, a process that can be radically changed with
+the acceptance of a payment product issued by the wider payments industry. The introduction of CPCs was
+seen as a significant opportunity to find new ways for customers to pay for their travel without the need to get
+a ticket from TfL first. This enables TfL to reduce ticketing costs while also improving the customer experience
+(compared to Oyster) because information is held in an intelligent back office system rather than on the card
+itself. The development of FTP was driven by the desire to reduce the cost of ticket sales which could not be
+reduced further using Oyster. This has been achieved by using CPC which are issued by banks and not by TfL
+and by moving intelligence from cards and readers to a more flexible and responsive back office. The program
+is in five phases:
+
+           CPC on buses launched in December 2012 using a retail payment model for the flat fare charge;
+           Extending CPC acceptance to the rest of the Oyster reader estate (as well as new places such as
+            riverboats) and also introducing weekly capping. This required the design of a transit payment model
+            in conjunction with payment schemes to allow CPC transactions to take place where the cost was not
+            known until the end of the journey;
+           A new card platform for Oyster which uses the FTP back office for all ticketing products; and
+           The decommissioning of the legacy Oyster system.
+
+88.      The UK Department for Transportation (DfT) has paid GBP 66 million to have the Oyster readers also
+accept ITSO customer media 18 . The program currently has delivered the capability to allow National Rail
+singles, returns and season tickets—as well as English National Concessionary Travel Scheme (ENCTS)
+concessions on buses—but has struggled due to the immaturity of ITSO. The first phase is live:
+
+       •    TOCs can accept their own products at their own gated stations.
+       •    Tube and Overground readers have been upgraded to accept Travelcard seasons if a TOC issues them
+            on ITSO.
+       •    ITSO cards can be accepted at un-gated stations and on buses.
+
+18   Customer media refers to the media which holds the ITSO product, i.e. the smartcard.
+                                                                                                                 27
+TfL is working with several TOCs, including Southern, to enable ITSO compliant smartcards to be used by their
+customers when travelling into London from outlying areas.
+
+89.       The technology split which has evolved between London and the rest of the UK needs to be fixed. TfL
+currently has TravelCard and Through-London agreements with the TOCs, based on CCST. These might need
+to be renegotiated to work with smart tickets. Once FTP Phase 4 is completed, TfL would like to be able to offer
+their back office to all UK operators who are interested in making use of it. TfL is also considering integrating
+their back office with cycle hire in London and even accepting Tesco Clubcard points in exchange for travel
+value. If ITSO and South East Flexible Ticketing (SEFT) are a success, then TfL will continue to accept ITSO
+product entities for cross and through-London travel. The TOCs are not motivated to agree SLAs between each
+other and the franchises are not motivating them to work together. We would likely have to wait until 2021
+before the last of the TOC franchises are renewed and mandate ITSO.
+
+90.      If ITSO and SEFT are not a success, there seem to be complimentary solutions that could co-exist side
+by side:
+
+     •   PAYG: Whatever the TfL solution is that replaces the current Oyster system for TfL-issued tokens and
+         pre-paid accounts in the back office. This could apply to London rail like Oyster currently does.
+     •   Tap & Go: CPC solution based on FTP Phase 2, but for rail outside of London. This will aim to offer a
+         price match guarantee (pay the lowest price that was available that day for the journey made). How
+         this works will depend upon the results of the Chiltern trial.
+     •   Ticket in the Cloud: A token is associated with an advance purchase rail ticket. There is no fulfilment of
+         the ticket to the customer. The reader authenticates the token and uses the token ID to access the ticket
+         stored in the cloud. The token could be the CPC card used to purchase the ticket or it could be a barcode
+         on a mobile device (though London gates do not accept barcodes and have no plans to).
+
+
+
+Transit Model 2
+
+91.       TfL is considering with Visa and Barclaycard whether a new transit mode is possible that is more
+appropriate to rail. It is based on the ‘hotel model’ where a card is pre-authorised for a certain amount in order
+to limit the risk of not being paid at the end of the spend. It is thought that a CPC card could be held for two
+seconds at a rail reader which would cause the reader to perform an online authentication of the card and to
+pre-authorize an amount (e.g. GBP 50) and the payment schemes might be prepared to accept the risk of not
+receiving payment for the full costs of the actual rail travel after the journey has taken place.
+
+
+
+Ticketing Technology Outside of London
+
+92.      Outside of London there is less interoperability of ticketing across all modes of operation due to the
+fragmented approach adopted by the major operators and lack of leadership in the deregulated environment.
+It should be noted that outside of London there is little interoperability of e-ticket and m-ticket schemes making
+journeys between operating regions problematic and ensuring that CCST magnetic stripe tickets remain
+dominant.
+
+
+
+
+28
+93.      ITSO-compliant smart ticketing has been adopted by all five main bus operating companies in Britain
+(Arriva, First, Go-Ahead, National Express and Stagecoach) and is used for concessionary smart ticketing on
+around 14,000 buses outside London. ITSO has already been adopted by six train companies – East Midlands,
+Abellio ScotRail, London Midland, Merseyrail, Southern Railway, and South West Trains and will be adopted in
+all new rail franchises. Large parts of the UK are moving towards commercial ITSO-compliant schemes. In many
+cases local authorities and passenger transport executives are taking the lead and working with transport
+operators in their regions. For instance:
+
+
+
+    •   NESTI (North East Smart Ticketing Initiative) in the North East covering 12 local authority areas
+        including Nexus Tyne & Wear (so far partly covered by the Pop card).
+    •   The NoWcard in Cumbria and Lancashire.
+    •   Yorcard is looking to cover the region of Yorkshire and Humber, including Sheffield, York and Leeds.
+    •   South West Smart Applications Limited (SWSAL), a smart ticketing project involving 15 local
+        authorities and 17 transport operators in the South West of England.
+    •   Merseyside, Greater Manchester and the West Midlands all have existing or planned ITSO-compliant
+        smart ticketing systems.
+    •   The whole of Cheshire is covered by the first ITSO-compliant commercial travelcard on its buses.
+    •   In Scotland, buses have been equipped nationally to take ITSO smartcards for its concessionary travel
+        scheme. An ITSO scheme is also being operated by Abellio ScotRail. (seasons only) Strathclyde
+        Partnership for Transport (centred in Glasgow) has introduced ITSO-smart ticketing on the Subway.
+
+South East Flexible Ticketing (SEFT)
+
+94.      The South East Flexible Ticketing (SEFT) program’s objective is to deliver ‘smart’ ticketing
+infrastructure and products to the rail network surrounding London. The program will complement the
+existing Oyster infrastructure deployed in London by TfL. The DfT and TfL are currently implementing the ITSO
+on Prestige (IoP) program which will upgrade all existing London Oyster readers to support ITSO media and
+products. Four years since inception, SEFT seems to have stalled. Rail Settlement Plan (RSP) provides and
+manages, on behalf of TOCs, a number of shared services, ranging from the provision of ticket stock to the
+allocation of industry revenue. RSP and the TOCs are working together to provide the infrastructure (both at
+station equipment and back office based systems) required to operate an ITSO compliant smart ticketing
+solution at various stations operated by TOCs, all initially based in the South East of England with the potential
+to be expanded beyond this region.
+
+CPC Outside of London
+
+95.      Outside of London several transport operators are investigating the use of CPC. Notable trials have
+been undertaken by Stagecoach who used CPC as a cash replacement on buses in the North West. Transport for
+Greater Manchester (TfGM) have appointed ATOS to provide a system (similar to TfL’s FTP but different since
+there are no back office standards) for the Manchester Tram network that will accept ITSO and CPC. This is
+currently being rolled out and ATOS is licensing to TfGM so that they retain the intellectual property rights and
+can sell to other operators. The other major transport operating groups are looking at what is happening in
+London before deciding if they will follow suit and roll out CPC across their bus networks. Some are in
+negotiation with TfL about using the FTP back office. In the rail sector there is a well documented pilot being
+proposed by Chiltern with TfL which will demonstrate if the model being used by TfL will be extendable to the
+rail network beyond the London area and the GBP 6 fare risk limit. Currently there appear to be no other
+operators who are looking at implementing CPC in the rail network.
+
+                                                                                                               29
+Smart in the North
+
+96.      In October 2013, DfT announced plans for a UK-wide future fares and ticketing strategy, central to
+which is the implementation of a nation-wide smart ticketing standard, with ITSO technology as the basis.19 As
+part of this, the Smart in the North (STN) program will support DfT's commitment to ticketing transformation
+in the rail industry, and maintaining interoperability of rail tickets and products on smart media. STN offers
+the opportunity to create a new interoperable ticketing solution across the North of England that builds on the
+existing ITSO infrastructure, with new products and simplified fares structures, which will make ticket pricing
+more transparent, and allow transport passengers to make better-informed decisions about the most cost
+effective way to travel.
+
+97.      Currently, there are complex fare structures in place across the North that are confusing for passengers
+and make it difficult to make an informed decision as to the most cost effective means to travel. There is no
+single ticketing scheme in the North that compares with the Oyster card in London, which is accepted across
+multiple modes in all geographic areas of the region. There is no single source of information on fares,
+timetables or methods for purchasing journeys in the North; this is an additional barrier to passengers wishing
+to make simple and informed decisions about journeys. Without a single authority responsible for all transport
+modes, as in London, the need for local authorities, operators and regional authorities to work together in
+partnership is critical to the success of STN.
+
+98.     In a document outlining the Northern Powerhouse (HM Gov., Transport for the North, March 2015)
+the DfT outline their proposed approach to address the identified problems. This approach includes:
+
+
+
+     •   Simplify rail fares across the North, reducing the number of regulated fares baskets;
+     •   Draw up proposals for a fares structure for an integrated Northern Travel Area;
+     •   Identify existing smart schemes across the North that need to be modified to meet the common
+         objective;
+     •   Align the different tickets and approaches in the different cities across the region;
+     •   Trial contactless cards on transport schemes;
+     •   Engage with public and private operators to agree ways of introducing new technology; and
+     •   Develop proposals for simple and unified approach to journey planning, provision of customer
+         information and retail strategies to make it easier for customers to make their journeys
+
+Barcode Technology
+
+99.       Barcodes have been successfully implemented on the public transport network, both in rail and buses.
+Numerous bus operators, both large and small are providing mobile apps that can sell bus tickets and deliver
+them to a mobile device in the form of a bar code and visual ticket that can be used for visual and machine
+inspection. Several of these mobile apps have integrated new payment methods such as PayPal and Pingit to
+make the buying process more convenient for users. In the rail sector, TrainLine Ltd, a UK online rail ticket
+retailer, has been involved in providing bar code tickets for several of the TOCs, in addition Chiltern Rail has
+been an innovator in this field and has integrated bar code readers into its gate lines. There are problems that
+have been encountered with bar codes that are being addressed by the industry which include:
+
+
+
+19Department for Transport (2015), The northern powerhouse: one agenda, one economy, one north – a report on the
+northern transport strategy. Available at:
+https://www.gov.uk/government/publications/northern-transport-strategy
+
+30
+       •   No central database of bar code tickets to check against to determine if ticket has been used or not.
+           This is important from a revenue-control point of view as refunds can be claimed if there is no record
+           of the ticket being used. However, this is currently being rectified;
+       •   Speed of transaction can be slow as the bar code needs to be presented to the reader at the correct
+           angle to be read.
+
+100.     Within the last 12 months the rail industry finalized the development of a set of requirements to allow
+interoperable bar code tickets to be sold and used across multiple operators, and in so doing addresses the
+major issue above, of the need for a central database of tickets. Plans were announced earlier in 2016 for the
+rollout of this system on the UK rail network.
+
+Overall British Landscape
+
+101.     As can be seen from the description above, the landscape in the UK is complex, with the ITSO standard
+mainly focusing outside London, in a deregulated multi-operator competitive environment, and Oyster and CPC
+the dominant approach in London, which is a regulated single operator environment. As a consequence, there
+is no overall national strategy for interoperable ticketing in the UK. Various cities have implemented ITSO based
+solutions, but not all of these are interoperable. Plans are underway to integrate these systems. There are plans
+to extend Oyster further outside London on the rail network, and as such this means that ITSO usage will
+decline. However, this would guarantee interoperability with the TfL network as the equipment has to be
+provided by the same supplier.
+
+
+Korean Approach
+
+102.     Korea’s first smartcard ticketing system was introduced in Seoul in 1996 with the initial objective of
+ensuring transparent management of transport operators, allowing passengers to pay fares electronically, and
+address the problem of delays caused by manual fare payment. However, the system had a number of problems
+such as increasing costs due to technology monopoly by operators, lack of interoperability with other systems,
+and operators’ refusal to disclose relevant technological information. Due to these problems, the city
+government faced difficulties in operating and maintaining the system as well as utilizing smartcard
+transaction data needed for developing transport policies.
+
+103.     In 2004, a new smartcard, named T-money, was introduced as part of public transport reform initiated
+in Seoul. The Ministry of Knowledge Economy supported the development of AFC (AFC) standard software
+solution (see Figure 1 for the illustration of standardization). Over time the transport related functionalities
+were also integrated into practically all credit cards issued in Korea. By 2009, smartcard usage has reached 96
+percent in Seoul, while average usage in other cities of about 80 percent. A policy to ensure the compatible use
+of smartcard tickets among all public transport modes throughout the country was adopted. Smartcard
+ticketing services began to gradually cover taxi services in 2007, and by 2011, the rate of taxi passengers using
+smartcards rose to 40 percent.
+
+104.    T-money is managed by Korea Smart Card Co., Ltd, a joint venture between Seoul Metropolitan
+Government and LG Group. It is one of the world’s largest settlement company, wi th more than 230 bus
+operators, 17,000 buses, 110,000 taxies, and 35 million data transition per day for US$14 million plus fare
+settlement per day.20
+
+
+
+
+20   http://www.asiaiccardforum.net/news/02-01-2012-01/data/AFC-KSCC-Korea.pdf
+                                                                                                              31
+                                         Figure 8: AFC Standardization21
+
+
+
+
+       Source: Asia Card Forum.
+
+
+
+105.     To make T-money work, the Korean government has put a significant effort to develop a national
+standard for automatic fare collection. This approach is based on existing international standards, while
+adapting them for the Korean national market and creating a national capability in AFC to develop an
+international market. It took them 1 year to develop technical specifications and 1 year to develop solution
+including smartcard, terminal, center systems and etc., and 6 months to build and operate the testing model.
+The standards referred to during their standardization listed in Table 4. This approach is not uncommon, and
+in fact has been adopted I the Netherlands, where the Hong Kong system was adapted to meet the Dutch
+banking requirements, and in Colombia, where the LG solution for Bogota has been adapted to meet the
+requirements for Colombia so it can become a national standard. This experience of creating an organization
+to oversee the development of a national vision for AFC in Korea and producing a standard has offered lessons
+that Poland can learn from.
+
+106.     With strong government backing there are plans to sell the specification and skills overseas, and a
+recent success has been achieved in Malaysia. In Europe this might be more difficult to achieve as there are
+several standards in existence from Germany, France, the UK and The Netherlands, which make the selection
+process more difficult, while there are no competing standards in South East Asia.
+
+107.     Meanwhile, the Korean standard is card based, as the vast majority of installed systems are based on
+smartcards. In the coming years there will be a significant shift to mobile based solutions, and so the standards
+will need to be adapted for mobile platforms. Korea has a strong track record in implementing mobile solutions
+and so this evolution should not pose too many problems to future upgrading.
+
+21   http://www.asiaiccardforum.net/news/02-01-2012-01/data/AFC-KSCC-Korea.pdf
+32
+                            Table 4: Reference Standards related to Korea AFC System22
+
+                  Specification                   Contents
+                    ISO/IEC 7816                  IC Card with Contacts
+                    ISO/IEC 14443                 Contactless proximity Card
+     International ISO/IEC 18092                  Near Field Communication – Interface and protocol
+       Standard     ISO/IEC 24014                 Interoperable fare management system - Architecture
+                                                  Surface transport applications. Elementary data types, general code
+                     EN-1545                      lists and general data elements
+                                                  Surface transport applications. Interoperable public transport
+     EU Standard     EN-15320                     applications framework
+                     KS X 6923                    Payment SAM specification
+                     KS X 6924                    Transit Card specification
+                     KS X 6925                    Payment terminal requirements
+        Korea        KS X 6926                    Reload terminal requirements
+      Standard       KS X 6927                    Reload SAM specification
+                                                  The Integrated Transport Smartcard Organization’s standard(In
+                     ITSO Standard                United Kingdom)
+                     CFMS (APTA)                  Contactless Fare Media Standard(In The United States of America)
+       De Facto      Calypso                      Calypso Card and SAM specification
+ Source: Asia Card Forum.
+
+
+Vienna Project SMILE- Smartphone Integrated Mobility Platform
+
+108.     SMILE—Smart Mobility Info and Ticketing System Leading the Way for Effective E-Mobility Services—
+was a pilot multi-modal booking and payment system linking individual e-mobility services with public
+transport that ran from March 1st 2012 and ended on May 31st, 2015.23 This smartphone-based platform was
+developed with public transport as a backbone.24 It integrates diverse mobility offerings into multiple unified
+travel options taking into account unique customer needs. SMILE provides intelligent customer information,
+and enables electronic booking and payment. It is open to third-parties and is expected to develop into a nation-
+wide platform for Austria in the medium term, given the success of the pilot.
+
+109.     The SMILE concept was to offer a wide range of transportation information, booking, payment, usage,
+and billing functionality. A standardized interface (SMILE Connector) enables all mobility partners to link their
+technical systems via specific adaptors to provide all their data, including the ticketing. The mobility platform
+integrates various means of transport and combines them with routing information and user data to provide
+individual mobility offers. Within the application server of the mobility platform all data was consolidated.
+According to the specific user request the data will be selected and combined to provide the most suitable
+options for the requested trip (including the actual price). Additionally the users then had the chance to choose
+an option to book the entire trip – even with several mobility providers – without changing between different
+apps. The clearing with the payment provider was processed in the background. 25
+
+
+
+
+22 http://www.asiaiccardforum.net/news/02-01-2012-01/data/AFC-KSCC-Korea.pdf
+23 SMILE was a research project funded by the Climate and Energy Fund of the Austrian Federal Government and is carried
+out as a part of the third call of the “Austrian Electric Mobility Flagship Projects” program. The Project costs Euro 6.7 million
+with another Euro 2.9 million on promotion.
+24 It integrates multiple mobility providers throughout Austria such as ÖBB (Austrian Railways), Wiener Linien (Public
+
+Transport Vienna), Taxi 31300 (Taxi Service), Car2Go (free-floating carsharing), Emil and Emorail (e-carsharing), Citybike
+(bikesharing), Tanke (Charging network for eCars).
+25 http://smile-einfachmobil.at/index_en.html
+
+
+                                                                                                                             33
+                                          Figure 9: Illustration of SMILE Platform26
+
+
+
+
+                     Source: New Urban Mobility Vienna Ltd.
+
+
+
+110.      From a transport user perspective, after opening the Smile App, users are informed about available
+means of transport around the current location or at any other chosen point in the map. Via tapping the icons
+further information can be accessed, such as departure times of public transport at a stop, available rental bikes,
+condition of a car-sharing vehicle or the available charging points in park houses. The mobility platform offers
+different individual options and combinations for trips. These can be sorted by mean of transport, time, price
+and CO2 emissions. With a filter certain means of transport can be filtered individually. Figure 11 shows prices
+for different travel options.
+
+                                              Figure 10: Interface of Smile App27
+
+
+
+
+            Source: New Urban Mobility Vienna Ltd.
+
+
+
+26   http://smile-einfachmobil.at/index_en.html
+27   http://smile-einfachmobil.at/index_en.html
+34
+                                               Figure 11: Screenshots of Smile
+
+
+
+
+                                          Source: New Urban Mobility Vienna Ltd.
+
+
+
+
+                                      Figure 12: Transaction process of Smile App28
+
+
+
+
+ Source: New Urban Mobility Vienna Ltd.
+
+
+
+111.     SMILE App also considers season tickets, discounts and memberships e.g. from sharing providers as
+well as private vehicles which can be saved in the Mobility Profile. The SMILE App shows the total price for the
+
+28   Adopted from a powerpoint by Dr. Ilse Stockinger and Mag. Reinhard Birke.
+                                                                                                             35
+entire trip as well as for each segment. With the “book now” button the whole tri p was booked, reserved and
+necessary tickets bought from the providers. The secure, cash-free payment process runs completely in the
+background. After the payment is authorized the tickets will be directly shown within the Smile App. The app
+was developed and tested for Android 4.1 or higher29. Smile separates the use of mobility offers from prompt
+payment which reduces experienced barriers of using intermodal or multimodal mobility offers. Central
+accounting does not only help the customer to get an overview of mobility activities but also helps companies
+gathering tickets for business trips. Furthermore it enables the usage of the entire range of public
+transportation. The transaction structure is further illustrated below.
+
+
+Key Lessons for Poland
+
+112.      The Dutch example is relevant for Poland in a scenario where (a) multiple operators exist with their own
+desire to differentiate their services; (b) an existing set of paper tickets and non-interoperable smartcard
+tickets issued by operators; and (c) a desire to make smart ticketing interoperable on a national basis. Whether
+a national interoperable smart ticketing system for all forms of public transport is the approach that Poland
+wants to take is something that needs to be discussed and agreed with the various stakeholders. The
+Netherlands differs from Poland in the following key respects:   the ticket supplier market is more mature and
+there are fewer operators involved. The latter is particularly important, as the more operators there are, the
+more complex the negotiations to agree on a common interoperable specification. Were such an approach to
+be considered the right way forward, there are many lessons to be learned from the Netherland’s experience,
+but the key lessons include the following:
+
+          Central body. There needs to be a central body willing to own and drive the specification and oversee
+           the implementation of the ticketing solution including leveraging economies of scale, for example in
+           back office; to achieve interoperability in Poland a central body is needed to take the lead in the
+           specification;  
+
+          Interoperable specification. The specification needs to focus on the desired ticketing products and the
+           enablement of efficient customer payments and fare collection not just re-producing the existing paper
+           system. Delivering  efficiencies in ticketing for both operators and the central body is important —
+           there needs to be a clear specification for the ticketing products that would be paid for by an
+           interoperable payment account. An open specification that is freely available is preferable. It is not
+           advisable to allow the supplier of the system to overly influence the specification of the system;  
+
+          Operators. It is necessary to have strong operator support and adoption for the system, particularly on
+           operational issues to ensure a common user experience across all modes;  Placing integration risks on
+           the operators should be minimized;  
+
+          Procurement. Procurement and implementation can take a long time, over 5 years. It is necessary to
+           keep all stakeholders on board over this period. Where there is strong regulation and technical control,
+           the project can proceed at a quicker pace.
+
+113.     The British approach holds a number of lessons for Poland and may be closer to the situation in Poland,
+where there is a fragmented public transport operator market for non-rail transport. The lessons that Poland can
+learn from the UK are: (a) identifying a clear vision for interoperable ticketing. ITSO has a remit to deliver this;
+(b) create an environment that is collaborative and encourages all operators to work together; currently in the
+
+
+29   http://smile-einfachmobil.at/index_en.html
+36
+UK deregulation does not encourage co-operation and makes the possibility of an interoperable smartcard
+solution unlikely; (c) incorporate technology changes into the specification to enable systems to evolve. The
+ITSO specification is reliant on technology developed in the 1990s. Work has been ongoing to extend the
+specification to incorporate HCE/NFC, but ITSO is still wedded to ticket sales, so a common PAYG solution is a
+long way off, 30 and set up a central certification process. ITSO acts as a central authority to approve all
+equipment connected to the ITSO system. This ensures interoperability.
+
+114.      The Korean smartcard standard was a result of central government involvement, the creation of an
+organization to oversee a national vision for AFC, and the key role of the metropolitan government of Seoul.
+This is a much more centralized approach than that of the Netherlands or London, and may be less relevant for
+Poland.
+
+115.     In contrast, Vienna’s pilot of integrated mobility platforms using a smartphone app may be an
+important option for Poland to consider, given the high penetration rate of mobile telephony, and the fact that
+it does away with the need for an interoperable smartcard standard, as required by the London or Dutch
+approach. This is much quicker to implement than introducing a national smartcard standard, and would make
+multi-modal transport crossing local municipalities possible, an important objective to make public transport
+more attractive vis-à-vis passenger cars. The World Bank believes that though this is a less well-known
+example, it one worth studying and considering by Polish stakeholders, and could position Poland at the
+vanguard of urban mobility solutions.
+
+
+
+
+on an Near Field Communication (NFC)-enabled device without relying on access to a secure element. NFC is a set
+of communication protocols that enable two electronic devices, one of which is usually a portable device such as a
+smartphone, to establish communication by bringing them within 4 cm (2 in) of each other.
+
+
+
+                                                                                                               37
+Conclusion
+
+116.       Examples from other EU member states have been included in this Report to illustrate past experience
+that Poland can learn from. The introduction of an interoperable AFC system is more than a simple IT project,
+it is a large scale change project that will impact significantly across all aspects of a PTOs operations. Once this
+is understood, it is possible to develop a clear a vision as to what the system must deliver and with the
+agreement of all stakeholders, an implementation plan can be put in place.
+
+117.     Positive experiences of implementing smart-ticketing included:
+    •    Higher than expected uptake rates, and a more modern, efficient public transport system, leading to
+         improved business cases;
+     •   Reduction in the level of fraud through direct fare evasion or misuse of the wrong ticket, leading to
+         improved business cases and efficiencies;
+     •   A chance to reassess existing fare structures, and more efficient management of concessionary fare
+         schemes;
+     •   Faster ticketing processes for the passenger, who favor the new technologies and find smart-ticketing
+         easy to comprehend and use, particularly for those schemes which adopted auto-reload functionality
+         (where the user’s balance automatically tops-up when the credit level drops below a pre- specified
+         limit);
+     •   Seamless travel across modes (urban public transport and rail) and across regions and within or
+         between functional urban areas; and
+     •   Reduced cost of AFC system through economies of scale.
+
+118.     There are a number of challenges of implementing smart-ticketing interoperability including:
+
+        Dealing with a vast network of PT operators, stakeholders, technology suppliers, funding bodies,
+         legislative procedures etc., just to get the smart-ticketing scheme off the ground
+        The timeframes required to deliver complex, technological products, particularly when third- party
+         suppliers were involved and technological delays pushed back full implementation 
+        The financial investment and human resources required from the outset, plus identifying suitable
+         funding sources to provide enough capital and ongoing revenue to make the scheme a success 
+        Dealing with expectations of the traveler when schemes became part of their everyday life, or when
+         other schemes in a region offered different services not available to them
+        Integration of a scheme across different modes or multiple PT operators, particularly where transport
+         services are not under direct government control
+        Initial marketing of smart-ticketing to establish its identity with the passengers, including those who
+         would not be regular or familiar users of the system (especially tourists) 
+        The publicized security breach of the Mifare encryption meant that schemes using cards of this type
+         had to mitigate against any possible security concerns in their own systems
+
+
+
+38
+119.     To overcome potential barriers, a smart-ticketing scheme requires a strong network of stakeholders,
+all with common goals or aspirations to deliver an integrated product from the outset of the project. Good
+management is essential in keeping all partners round the discussion table, but quite often a large amount of
+time and resource is needed in order to resolve significant disagreements or other issues between partners .
+
+120.     Technology advances in recent years mean that there is a move from delivering automatic fare
+collection via card based form factors through bespoke transport solutions towards a more retail based focus
+on payments. This is particularly evident in urban environments, whereas in longer distance rail travel there is
+a move to use mobile devices with 2D barcode technology, similar to the airline industry.
+
+121.     These new technologies are moving the focus away from buying tickets, to paying for a service. Instead
+of a passenger carrying a ticket on a standardized smartcard, as with ITSO or the OV-chipkaart, it is now
+possible just to pay for the journey using a bank issued payment card which is used to identify the passenger
+to the system, so called Account Based Ticketing (ABT).
+
+122.     The standards as currently developed in places like the UK and the Netherlands need to evolve to cover
+this approach, and indeed there are projects underway in both the UK and the Netherlands to investigate the
+use of ABT. However, there is still a lot Poland can learn from countries such as the UK and the Netherlands in
+their approach to implementing national schemes and the setting up of organizations to create a vision for
+national interoperable ticketing, which is currently lacking in Poland. This does not mean that Poland needs to
+copy the approach taken by either of these countries, as their solutions were developed at a different point in
+time in terms of the existing technologies available.
+
+123.     The scope of these existing standards covered a wide spectrum. There was a need to define the data
+formats for the tickets and also the communications between each layer of the system amongst other things.
+Migration to mobile platforms has been evident in the finance sector, and through pilots on public transport
+over the last 10 years has changed this approach. Now an AFC system can be built up from existing standards
+from new technologies such as mobile devices and bank issued payment cards, the data requirements for the
+ticketing products can be extracted from current AFC specifications.
+
+124.    Development of interoperable solutions based on the existing systems may be difficult. The most
+frequent obstacles in this case include:
+         binding contracts with suppliers of systems that make taking actions impossible until the end of
+            validity period of the “old” contract,
+         high new software development costs,
+            limitations of the electronic card as the carrier of tickets,
+            lack of knowledge on modern solutions applied in other cities and countries; difficult access to
+             consultants and professional papers,
+            obstacles of organizational or political nature.
+`
+Migration Paths to Ticketing Interoperability
+
+125.     Mobile ticket applications. Mobile ticket applications seems to be the simplest path of migration to
+ticketing interoperability in Poland, in particular in the situation when public transport organizers issue their
+own electronic cards based on different electronic systems. Mobile ticket advantages: (a) redundancy of the
+sales network (like in case of the p-tickets) and loading (like in case of the e tickets); ease and speed of creating
+new common tickets as well as promotional tickets. Transmission of the m-ticket to mobile devices does not
+
+
+                                                                                                                  39
+require reconciliation of the electronic card map; and (c) ticket in the paper format – possibility of printing the
+ticket by the passenger.
+
+
+126.     The conditions for implementation of such a solution include the following: (a) assuring identification
+of the mobile ticket by controlling devices of all the entities participating in the integration. This means the
+necessity of equipping each controller device with the QR code scanner and NFC reader; 31 (b) processing data
+concerning the identified tickets in all the systems that are to be interoperable, e.g. the urban system and the
+railway system; (c) check-in or check-in & check-out required in case of all trips, in particular in case of
+changing the mode of transport, e.g. change from the regional railway to the urban bus. Control devices should
+be equipped with QR code scanners and NCF readers. If the control devices are positioned outside the public
+transport vehicle (e.g. on railway platforms) then it will be necessary to assure data transmission from those
+controllers to the control devices in vehicles (the conductors’ team or ticket controllers in urban public
+transport).
+
+
+127.    The market in Poland in which local companies with established position and relatively high turnovers
+allowing development as well as new companies entering the market are present is supportive to building such
+solutions.
+128.      Fare collection based on bank issued proximity pay cards. Building the central transit transaction
+system represents a more difficult path. Such a system has recently been initiated in London by Transport for
+London. Works are in progress on the system in Budapest and many cities worldwide would like to follow the
+same path. The proliferation of proximity pay cards issued by banks as the method of payment for tickets and
+at the same time the carrier of the periodic ticket will decrease system operational costs and risks significantly.
+At least two companies operate in Poland that have suggested they are ready to develop such systems.
+
+
+129.        The following recommendations are proposed:
+
+           Establish a technical working group to develop a vision for AFC in Poland. Such an organization should work
+            with public transport organizers, operators, and industry to agree on a national vision or roadmap
+            for the future with regard to interoperability.
+
+           Support EMV and Smartphone Apps developments for public transport and determine what is achievable over the
+            medium-term years. With the development of mobile and financial services technologies happening so
+            rapidly, there is a need to ensure that the basic infrastructure is in place to benefit from this evolution.
+            By WiFi enabling all stations, or ensuring 4G services are available across the country, the
+            opportunities from mobile technologies can be more easily realized, and operational costs could be
+            reduced. This is likely to be implementable much more quickly than a national interoperable AFC
+            standard.
+
+           Work with major payment card issuers to develop specifications for the use of payment cards using EMV
+            based standards on the Polish rail network. Look at developing specifications for mobile devices, as
+            well as card based form factors, and potentially incentivize the use of EMV cards in public transport.
+
+           Work with PTAs and PTOs to agree the vision nationally . The organization identified in 1 above, will have to
+            work with all stakeholders in Poland to clearly articulate the vision for interoperable Automatic Fare
+            Collection and outline what interoperability is required from systems in Poland
+
+
+31   QR is the square, black and white matrix symbols which are 2 D barcodes that a mobile device can read.
+40
+       Do not develop own standard, look to existing standards. Current standards cover AFC technologies that have
+        been developed since 1997. New systems make use of mobile and finance sector technologies. Poland
+        should look to build on existing standards, but incorporate new technologies to capitalize on the
+        benefits the new technologies will bring.
+
+There is the potential to build on the new systems, such as those implemented in Świebodzice, and develop an
+interoperable standardized system for Poland that builds on the benefits of smart media for passengers and
+operators alike. With the development of new technologies there is the potential for Poland to be at the
+forefront of developing standards for the next generation of smart ticketing systems that will be implemented.
+
+
+
+       Develop migration plan to get to desired final system. There are numerous legacy systems in existence that
+        will be fast approaching their end-of-life. A plan would need to be in place to enable these systems to
+        be included in any future specification development and migration to a new system.
+
+       Undertake a public transport fare review to maximize benefits from the new system, taking into account benefits for
+        passengers. It is often said in this industry that there is little value in taking the existing fare products
+        and placing them on a new fare media. If this happens then it becomes very expensive, as the operator
+        is not gaining the full benefit of the new technology. For example, in London PAYG has replaced all
+        single tickets on the bus, and a significant number of travel cards, because the new technology enabled
+        the service to be offered. The fare review would maximize the benefits from introducing a new system,
+        both from the perspective of the passengers, and from public transport operators, as it could create
+        enhanced opportunities for revenue generation.
+
+
+
+
+                                                                                                                        41
+Annex 1: Introducing Public Transport AFC Standards
+Introduction
+
+In order to implement a standardized, interoperable AFC system in Poland there needs to be a clear vision as
+to what the system will achieve. A vision defines an organization’s business and purpose, and communica tes
+the desired future state of the organization. The vision provides focus for all the stakeholders on why we are
+doing what we are doing and keeps everyone on track toward the future state. The stakeholders could include
+all levels of government, public transport authorities (PTAs), public transport operators (urban and rail),
+equipment vendors, passengers, payment providers, communications providers, as well as bodies such as the
+Chamber of Urban Transport. The vision emerges from three sources: experience, knowledge, and inspiration,
+as detailed below:
+
+    1.   Experience
+          Organizational – areas where the organization wants to improve, or can see opportunities to
+              reduce costs, or increase customer service
+          Staff – staff understand the operations of fare collection systems best and are in a position to
+              provide input to areas where improvements are necessary
+          Global – experience from other schemes where new technologies or processes have been
+              introduced that can be replicated
+    2.   Knowledge
+          Market, business, and trends – as AFC moves away from being transport specific as technologies
+              in other sectors are becoming applicable there is a need to keep abreast of technology trends and
+              assess their application to the AFC market. The transport business is also changing significantly
+              and there is a challenge to deliver with fewer resources, so managing their use efficiently is
+              paramount. There are trends appearing in the mobile and payments markets that are transitioning
+              into transport, with NFC and contactless payments being most obvious. However, there is
+              increasing use of apps for journey planning and delivery of 2-D barcode tickets in public transport,
+              similar to the airline sector. These trends will have significant impact on public transport in the
+              longer term. PTOs need to embrace some of these changes as it can reduce barriers to using public
+              transport if payment for services is easier.
+          Resources and skills – AFC projects are major change projects for any organization. They can
+              bring together several industries, mobile, payments, transport, IT, finance in order to deliver
+              systems. Having access to resources to help co-ordinate these organizations to enable each party
+              to understand what is required, and the needs and limitations of other sectors.
+    3.   Inspiration—pulling current facts into the future. AFC systems are not cheap, so there is a need to
+         understand the long term, 5-10 year, changes to technology that may impact on the AFC system. The
+         vision should take these into account.
+
+There are six key attributes that can contribute to the long term success of a vision:
+
+        Realistic—can all stakeholders see the “end zone”?
+        Simple—can the vision be easily understood and remembered?
+        Sustainable—does it have a shelf life?
+        Straightforward / doable—does it have credibility?
+        Organisationally linked—does it fit with the organisation’s mission and vision umbrellas?
+         Compelling—does it cause all stakeholders to feel good about the future?
+
+Using the above process, it should be possible to develop a clear vision for AFC in Poland. The figure below
+shows the output when the process was applied to TfL as they developed their vision for Oyster over 14 years
+ago.
+
+                                Figure 13: Development of TfL Vision for Oyster
+
+
+
+
+Sources: TfL, World Bank.
+
+
+Specification Development
+
+Several countries and cities have gone about this in different ways. Some have developed a specification and
+then implemented it, as in the UK, German, and Korea. Alternatively, a system can be implemented which then
+becomes the standard, as was the case in the Netherlands, and is being implemented in Colombia. Each
+approach has its strengths and weaknesses. However, there is no approach that suits all situations, so each
+country should determine what suits its vision and approach the best.
+
+Regardless of the approach adopted there needs to be a level of interoperability incorporated in the
+specification to allow the benefits of cross region or countrywide coverage to be implemented as determined
+by the relevant authority. For example, in Germany and the UK there are stringent testing and certification
+processes necessary for each vendor who wants to sell equipment into the national AFC markets. These tests
+are undertaken with respect to a published specification produced by Verband Deutscher Verkehrsunternehmen
+(VDV; Association of German Transport Companies) and ITSO respectively.
+
+In the Netherlands the approach is the same in that equipment is certified against a specification that was
+developed by the initial contractor, Thales. However, in the early stages it was noticed that when third party
+vendors attempted to build equipment based on the published specification it was found that they would not
+work in the field. This was because the published specification did not reflect the system in situ. This has since
+been resolved and the specification reflects exactly what has been implemented and so PTOs can be confident
+that equipment built against the specification will work as required.
+
+An important question to ask is what specification should Poland use or should it develop its own specification.
+The answer to this is it depends. At first reading that might not seem a very helpful answer, so further
+explanation is necessary. Looking at the results from a SWOT analysis below will clarify this.
+                            Figure 14: New National Standard versus Existing Standard
+
+
+
+
+Source: World Bank.
+
+
+The way public transport is provided in each country, region or city varies across Europe and the world. There
+are some countries where transport is controlled by central, regional and city governments. There are also
+different approaches to the regulation of PTOs, with private, public and franchising models all existing, in some
+cases, within the same country leading to regulated and deregulated environments.
+
+Alongside this political environment there will be, as in Poland, multiple schemes that already exist which are
+incompatible. This rainbow of political and technical environments means that picking any one standard that
+can address all of the local issues or fully meet the defined vision will be, arguably impossible. However, each
+of the major standards has identified a range of functionality that is necessary for interoperability of AFC
+systems which can be said to be generic to all schemes. It would seem sensible to incorporate this functionality,
+but look to add additional, local functionality as necessary to meet national requirements and political
+environment.
+
+The idea that Poland can develop its own specification should not be considered on grounds of cost, as it will
+be expensive, estimates are that the ITSO standard in the UK has cost several tens of millions pounds sterling
+over the last 15 years and there is no national interoperable system in place yet. There is also the need for a
+test and certification process that needs to be administered and delivered. Individual vendors will have to
+design completely new devices to meet the new standard, with only a limited market, unless other countries
+can be encouraged to adopt the Polish standard. Given that VDV has only recently managed to provide a system
+to Luxemburg, and ITSO has not managed to encourage any external countries to adopt its specification, means
+Poland is also likely to struggle. Calypso has been the most successful, as it was initiated via a European funded
+project comprising multiple cities from several EU countries, who adopted the system. 32 But the Calypso
+specification only relates to the card reader interface and not the complete system as the ITSO and VdV
+specifications do. For this reason, it is important that the vision is developed and is accepted by all stakeholders,
+then the appropriate specification can be developed.
+
+With the trend towards account based ticketing there is a significant simplification of the requirements for
+contactless readers, as a token is presented that identifies the user as having travel rights. The details are
+worked out in the back office. In this case there is only a need for the system to recognize different ID tokens,
+which can range from proprietary cards such as Oyster, CPC or bank payment cards, or PIV cards as used in
+Washington DC. In this case standardization of data for AFC systems becomes unnecessary as only the token
+data is transferred.
+
+32Calypso is an international electronic ticketing standard for microprocessor contactless smartcards, originally designed
+by a group of European transit operators from Belgium, Germany, France, Italy and Portugal. It ensures multi-sources of
+compatible products, and allows for interoperability between several transport operators in the same area.
+Additionally, with improvements in the 3G/4G mobile network it is possible to locate passengers better and so
+mobile devices can be used to locate passengers, making passengers need to physically check in and out
+through a gate unnecessary. With the rollout of 5G in the next 5-10 years this becomes more of a reality. What
+this means is as technology advances the need for specific AFC standardization decreases to some extent.
+However, a debate rages within the industry over the difference between ticketing and payment systems. This
+Report is not the place to discuss the details of this, but as identification technologies start to take hold there
+becomes less need for physical ticketing with everything being held in the back office, and the future
+standardization landscape changes significantly.
+
+
+
+Gap Analysis of Current and Existing Systems
+
+As stated earlier in the Report, there are numerous systems in existence in Poland which are proprietary and
+have no interoperability. In order to unify these systems, it will be necessary to review their functionality.
+Where there is a decision, as in the Dutch and Colombian situations, to build upon an existing specification, it
+will be necessary to analyze the specification to remove any proprietary aspects so third parties can build
+equipment that meets the specification. More importantly, for reasons stated earlier, it is necessary to
+determine that the specification reflects the reality of the installed equipment. For the approach where a new
+specification is being developed there will be a need to analyze how the current installed system deviates from
+this specification. The output from either of these streams should be the same in that there will be a key list of
+issues that need to be addressed and system changes necessary to meet the new requirements.
+
+
+Migration Plan
+
+Based on the output of the gap analysis a migration plan can be drawn that highlights the key issues that need
+to be overcome in order to migrate the existing schemes to the new vision for AFC in Poland. As part of the
+migration plan there will be a rollout plan. Experience has shown that there are multiple ways to roll out AFC
+systems, but what is common with all of them is the clear need for leadership. In particular resolution of issues
+that cause delay will tax the leadership of AFC rollouts. There are four different models that can be considered
+when rolling out an AFC system, based on different institutions taking the lead. These are:
+
+        Public Transport Authorities led. In Sweden the PTAs are working to implement an e-ticketing system,
+         however, each PTA has its own system currently in operation and is claiming that the standard should
+         be based on their system. This has led to deadlock for the last 8 years and will need legislation at a
+         national level to break the deadlock.
+
+        Public Transport Operator led. In the Netherland e-ticketing was started by the PTOs, but with the Dutch
+         Passenger Transport Act of 2000 introducing PTAs the latter have had a significant influence in the
+         development of e-ticketing.33 This approach is to the advantage of the PTOs who developed the system
+         to meet their needs. In situations like this it is usually the largest PTO who determines the
+         requirements for the system. If there is no buy in from all parties then progress will be slow, as was
+         the experience in Austria.
+
+
+
+
+33The act introduced PTAs for the first time which altered the organization of public transport in the Netherlands and
+influenced the development of the e-ticketing solution.
+       Regional government led. German approach, with all large transport related decisions made by the Länder
+        (regional states) who adopted a regional implementation strategy of a specification agreed by the
+        association of PTOs, the VdV. Public funding was not made available to cities that wanted to adopt non-
+        standard e-ticketing systems. Economies of scale also enabled the cost of implementation to be
+        reduced as procurement was centralized, so smaller cities benefited from the larger volumes
+        purchased.
+
+       National government. In the UK the Department for Transport (DfT) has been taking the lead for the last
+        15 years in the development of the ITSO specification. Outside of London the deregulated PTOs were
+        encouraged to implement ITSO, but they could not make a positive business case and so to date
+        progress has been slow. However, the major bus operators have implemented ITSO, thanks to financial
+        support from the DfT, and the rail network is currently mandated to implement ITSO through the new
+        Franchise Agreements that are currently out for tender. The expectation is that by 2025 the entire UK
+        rail network will be ITSO enabled, 25 years after the specification was developed.
+
+It is clear from the models and examples described above that regardless of who leads there is a need for the
+national government to break the deadlock in some cases to make sure that implementation occurs. In Poland
+it is not clear who could lead the implementation of an AFC system. For it to succeed this needs to be clear from
+the outset.
+
+
+
+Organizational Issues
+
+As the interoperability model shows, the first step toward creating an interoperable smartcard payment system
+is to identify the institutional requirements of the participants. Fare payment interoperability, regardless of
+technology used (e.g., smartcard, paper-based, or magnetic stripe) requires significant planning and
+cooperation among the participating agencies. In the public transport sector, PTAs have traditionally operated
+autonomously. Each agency’s organizational cultures, policies, procedures, and fare -collection equipment are
+different. Transit agencies considering implementing an interoperable smartcard fare payment system must
+address numerous institutional and technological issues that may create barriers to implementation. The
+institutional issues can be categorized as follows:
+
+       Management and Organizational Issues—Organizational cultures of the participating agencies and their
+        effects on management decision-making processes; 
+       Financial Management Issues—The need to ensure that each participant does not lose revenue through
+        participation; 
+       Equipment Design Issues—Ensuring equipment interoperability as an aspect of system design; and 
+       Public Transport Industry Issues—Dealing with the behavior of traditional system suppliers. 
+
+Management and Organizational Issues
+
+One of the most significant challenges to interoperable smartcard fare payment systems implementation is how
+the existing organizational cultures affect the participating organizations. Creating an interoperable fare
+payment system requires participating organizations to work together. Organizations that may have had limited
+or no previous interaction must work closely with one another for program direction and control. Key management
+and organizational issues that need to be addressed on the road to interoperability include:  
+
+       Establishing a governing body or project sponsor;
+        Identifying and mitigating operational differences; 
+        Establishing a framework for program funding; 
+        Creating a rollout schedule; and 
+        Developing a contracting strategy. 
+         
+Establishing a governing body or project sponsor. One of the primary challenges of implementing an interoperable
+fare payment system in a multi-operator environment is encouraging organizations to work together for the
+overall good of the region and passengers. One of the first steps in implementing any regional fare payment
+system is to establish a governance structure, which will identify the institutional oversight structure and
+define the following:  
+
+        Items under regional control;
+        Documentation of the governing structure; and 
+        Participant representation. 
+
+The governing body oversees the common elements of the interoperable fare payment system, which may
+include third-party services. Table 4 lists the different types of governing bodies. Participation in a governing
+body may require an organization to cede complete control over the common elements of the interoperable
+system. Even agencies that have an excellent working relationship may find adapting to a common governing
+body challenging.
+
+                          Table 5: Overview of Different Types of Governance Bodies
+
+ Approach             How it Works                                                         Where used
+ Corporation with     Private Corporation                                                  Hong Kong
+ Privately held               Shareholders include private and public PTOs                The Netherlands
+ Shares                       Shareholdings vary by organization
+                              Not all members are shareholders
+ Single Operator      Owner makes decisions                                                TfL, London
+ Owner                        Contract outlines specifications and obligations
+                              Others free to join, but have no say in how scheme is run
+ Joint Powers         Independent legal entity                                             Singapore
+ Authority (JPA)              Created under powers of existing public entities
+                              Composed of public entities
+ Memorandum of        No new organization                                                  Los Angeles
+ Understanding                Specifies decision making and participation                 Seattle
+ (MoU)                        Contractually created governance structure                  San Francisco
+                                                                                           Washington DC
+Source: World Bank.
+
+
+The planning and implementation of a smartcard-based interoperable fare payment project is a long and often
+difficult process. Once the governing body is established, a project sponsor needs to emerge to direct the effort
+and provide leadership for the participants. It is critical that the full commitment and support of the member
+agencies are obtained and that a clear management structure is in place before starting planning and design.
+
+Identifying and mitigating operational differences. Another challenge PTOs face during the implementation of an
+interoperable fare payment system is the differences in the way the participating PTOs conduct business. For
+example, many of the largest organizations have extensive internal capabilities, including technical and
+operational resources to support most, if not all of their design, operational, and maintenance needs. The trend
+to consider outsourcing to fulfill these same needs is increasing. Organizations that have extensive in-house
+resources tend to prioritize more control over their operations; thus, those organizations tend to avoid
+outsourcing. The different organizational operations philosophies of the agencies must be examined, and
+compromises must be reached. There are two primary dimensions for implementing the system-related service
+functions of an interoperable system: (a) centralized, where one entity performs all the functions; and (b)
+decentralized, where each participating entity is responsible for performing its own functions according to
+established business rules. The project sponsor must decide between a centralized or decentralized approach
+and must also decide whether the services are delivered using in-house or outsourced resources. The
+operational philosophies of the participating organizations will determine the approach used for performing
+card-system-related functions.  
+
+Establishing a framework for program funding. Interoperable fare payment systems require a substantial capital
+investment for equipment and systems. Funding for a project of this magnitude will likely come from multiple
+sources because of multiple organizations’ participation. The challenge with multi-jurisdictional funding is to
+arrive at an equitable formula that each of the participating agencies can endorse. Project funding requirements
+need to be determined early in the project life cycle to provide adequate time to meet the requirements for
+securing the funding. Member agencies also need to evaluate the benefits derived from the capital investment.
+The cost-benefit analysis helps to identify expensive features that do not create value. However, regional
+systems need to be sufficiently flexible to scale as the participating agencies needs change and grow more
+sophisticated.
+
+Development of the business case is critical in defining the funding strategy. The business case identifies the
+estimated capital and operating costs for the project and possible future expansion of the system. At a
+minimum, the business case consists of the following parts:
+
+       Estimated capital cost of the system;  
+       Existing operating costs;  
+       Operating and maintenance costs after system implementation;  
+       Schedule for implementation;  
+       Risk factors;  
+       Initial operational cost (start of revenue service); and  
+       Regional/management/lead agency oversight, administration, and management.  
+
+Identifying specific funding sources for the interoperable fare payment project starts when the preparation of
+a business case is completed. The completion of the business case provides the basis for determining the
+relationship of capital investment balanced against long-term operating costs. Once the specific sources of
+funding have been identified, funding agreements between the participating organizations need to be created.
+The inter-agency funding agreement establishes the level of capital investment and operating funding for which
+each participating organization is responsible. A commonly used strategy for allocating costs is to have each
+PTO responsible for the deployment of its respective interoperable system components and to share operating
+costs based on use of the shared system components.  
+
+Creating a rollout schedule. An overall project rollout schedule must be developed that details milestones for
+design, equipment production, testing, and implementation of the interoperable fare payment system across
+the participants. The rollout schedule is a critical component of operating cost. Because transaction processing
+and shared service, such as operating a call center, is a transaction-based business, the higher the volume, the
+lower the cost per transaction or call, respectively. The guiding principles to consider when developing the
+rollout schedule include:
+       Realistic milestones reflective of actual experience,  
+       Ability to fit within contractors’ capabilities,  
+       Ability to be supported by the participating agencies,  
+       Customer reaction and acceptance to change, and  
+       Schedule changes in response to changing customer needs.  
+
+
+System rollout can follow one of two approaches:
+
+       Phased. Different PTOs and functionalities are brought online at different times. This approach is the
+        most common because the disruption caused by passengers having to learn a new behavior is isolated
+        to a specific area and thus is less resource-intensive to manage. This approach was adopted in the
+        Netherlands where a single rail line near Rotterdam was implemented first and then other modes and
+        areas brought online  
+
+       Full rollout. All PTOs and equipment are brought online at the same time. This approach requires
+        extensive testing and careful preparation to successfully launch. In addition, significant resources are
+        required to manage the first days of operation. There are limited examples of this approach, due to its
+        high risk.
+
+The phased approach is typically adopted when procurement is split among multiple supplier contracts. Risks
+associated with a phased approach include the possibility for passenger confusion when the system works for
+limited PTOs or has limited capabilities. Additionally, a phased approach needs to consider PTOs that share
+existing fare products such as a period pass. The rollout of these PTOs will need to occur simultaneously to
+avoid affecting passengers who use the common fare product. Although it is more passenger friendly, a full
+system rollout is more likely to disrupt operation for the PTOs. Project resources must be spread over a wider
+range and are less able to focus on those areas that may experience issues such as high degrees of confusion
+and lack of patron education. Additionally, unlike a phased approach, a full rollout does not afford the benefit
+of lessons learned from the earlier implementations.
+
+Other issues that will affect the scheduling of the interoperable project include the (a) availability of staffing
+resources; (b) availability of financial resources; (c) PTO operations; and (d) passenger education and
+orientation.  
+
+Developing a contracting strategy. Participating PTOs need to determine and agree on how the equipment and
+services will be procured. The main contracting challenge is deciding whether to procure the equipment and
+services under a single contract or through multiple contracts. Each approach has challenges that must be
+overcome, and the selection of the approach will depend on factors such as an organizations appetite for
+integration risk, the availability of technical and project management resources, and the level of equipment and
+services to be procured. The most common contracting strategies are single procurement and contract,
+multiple procurements and contracts, and contract type selection.
+
+Financial management issues. Financial integrity is the highest priority for any agency participating in an
+interoperable fare payment system. This section discusses the key financial management decisions and issues
+that must be addressed, including (a) transaction clearing and settlement; (b) funds pool management; and (c)
+financial exposure risk associated with advanced features. In a fare payment program where multiple
+operators are selling fare value accepted by more than one operator, transaction clearing and settlement allows
+each organization to be reimbursed for the services provided, regardless of where the fare product is
+purchased. Again, the challenge is obtaining agreement from all participating organizations on an approach to
+transaction clearing and settlement.
+
+130.    The funds pool is created as a result of revenue collected (card loads) but not yet used in the system.
+The funds pool may be in a central account managed on behalf of the participants or it may be a “virtual” funds
+pool where each organization holds its own share of the total amount. Examples of how the money within the
+funds pool can be used are:
+     Periodic movement of funds between member organizations to compensate for fare payments,
+        purchases, or loads by one participant’s cardholders on another participant’s system; 
+     Periodic payment of transit services used by cardholders; and 
+     Coverage of charge-backs for transactions that should not have been posted. 
+
+Revenue is generated by investing the funds pool float —interest earned on unallocated funds—contained
+within the funds pool.
+
+Industry impact. One of the primary challenges posed by existing equipment designs is to find a way to procure
+interoperable equipment from multiple vendors in a competitive manner. The goal is to build a fare payment
+system that conforms to open standards or specifications, uses existing infrastructure, offers flexibility to scale,
+and adds functionality as needs develop. Thus, open standards and specifications will enable the participating
+agencies to add equipment and functionality competitively and use the open platform to establish new
+opportunities for partnerships with non- transit applications. A secondary challenge for the member agencies
+is to determine the degree to which legacy systems are either upgraded and integrated into the new
+interoperable fare payment system or replaced with new equipment. The cost to replace may be less than the
+cost of upgrading and integrating legacy systems. The age of legacy systems and their incumbent technology
+are key factors in the cost of upgrades. Each organizations’ legacy equipment will need to be reviewed to
+determine whether it can be upgraded to the new technology and industry standards of the interoperable
+system.
+

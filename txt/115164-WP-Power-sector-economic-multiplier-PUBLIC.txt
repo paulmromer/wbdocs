@@ -1,0 +1,647 @@
+POWER SECTOR ECONOMIC MULTIPLIER TOOL:
+ESTIMATING THE BROAD IMPACTS OF POWER
+           SECTOR PROJECTS
+
+
+
+
+              Methodology
+
+
+
+
+               June, 2015
+This white paper was prepared by IFC CGEDR (Evgenia Shumilkina, Results Measurement
+Specialist) and IFC CNGSF (Brian Casabianca, Senior Economist) with contributions from
+Alexis Diamond (Results Measurement Specialist, IFC CGEDR).
+
+
+The note is based on the technical note prepared by Prof. Michael Lahr “Estimating
+Economic Impacts of New Electricity Power Generation and Transmission Facilities in
+Developing Nations” that proposes the use of the social accounting matrix (SAM) multiplier
+methodology for ex-ante assessment of the effects of power projects in the situation of limited
+data availability and on the work conduced by ECOMOD on application of this methodology
+in practice for specific countries.
+
+
+The results of the work were subject to the peer review that was conducted by Robert Bacon,
+senior consultant of the World Bank Group Energy and Extractives Global Practice.
+                                                      CONTENTS
+
+CONTENTS ................................................................................................................... 3
+I.    INTRODUCTION AND OBJECTIVES ............................................................... 4
+II. CHOICE OF THE METHODOLOGY ................................................................. 4
+III. MULTIPLIER MODELLING: OVERVIEW ...................................................... 5
+IV. IMPACTS OF POWER SECTOR ACTIVITIES ON THE ECONOMY .......... 8
+V.     ESTIMATING DIRECT, INDIRECT, AND INDUCED EFFECTS .................. 9
+VI. ESTIMATING SECOND-ORDER GROWTH EFFECTS ............................... 11
+VII. ASSUMPTIONS AND LIMITATIONS............................................................. 13
+VIII. DATA .................................................................................................................. 16
+REFERENCES............................................................................................................. 18
+APPENDIX I: LIST OF COUNTRIES ....................................................................... 19
+APPENDIX II: EXCEL-BASED TOOL ..................................................................... 20
+APPENDIX III: OVERVIEW OF FMO AND IFC TOOLS...................................... 21
+                       I.      INTRODUCTION AND OBJECTIVES
+
+The objective of this note is to describe the methodology behind the Excel-based tool
+developed by the IFC to estimate ex ante economic impact of its power sector projects. The
+tool was designed to allow operational teams to estimate impacts of specific power sector
+projects in different countries with minimum data and programming requirements. Currently,
+the tool covers 20 developing countries in different regions of the world (complete list of the
+countries is provided in Appendix I).
+
+
+The analysis underlying the tool is based on the social accounting matrix (SAM) multiplier
+methodology, an extension of the input-output multiplier methodology.
+
+
+                       II.      CHOICE OF THE METHODOLOGY
+
+Assessing the impacts of investments in the power sector is tricky as these impacts arise
+through fairly complex and dynamic channels. Different methodologies were reviewed in
+terms of their strength and limitations practicality of use. In general, the following approaches
+can be used to estimate the impact of power sector projects:
+           Econometric modeling
+                -   Regression analysis
+                -   Structural macroeconometric modelling
+           Input-output (or social accounting matrix (SAM)) multiplier analysis
+           Computable general equilibrium (CGE)- models
+
+
+Traditional econometric studies that relate electricity use to GDP levels do not provide
+estimates for specific projects. These studies are also typically associated with serious issues
+(such as omitted variables) that are summarized in the recent literature review of the existing
+studies on the link from energy to growth (World Bank (2015)). The in-depth review
+identified that only three studies tested for the direction of causality, allowed for non-
+stationarity, and included possible major explanatory variables for both the production and
+demand function relationship. Two of these three studies were found to have other potential
+data measurement problems.
+While CGE approaches might be preferable from the theoretical point of view than input-
+output multiplier analysis, they have much larger data and programming requirements. CGE
+models might be more applicable for detailed analysis when more data and resources are
+available (for instance, for detailed ex-post evaluation of a specific project).
+
+
+The input-output (or social accounting matrix) multiplier analysis (discussed in detail below)
+was found to be the most appropriate for the present task. As such, it has been designed as a
+practical tool that IFC operational teams can apply with minimum data and programming
+requirements for a large set of projects in different countries. The approach is associated with
+a number of limitations and assumptions that are discussed in Section VII. 1
+
+
+A similar approach based on input-output methodology is employed by the Netherlands
+Development Finance Company (FMO) in the estimation of the impact of its portfolio
+projects (including energy) and by CDC, the UK’s development finance institution2 . The
+summary comparison of the IFC and FMO tools is provided in Appendix III.3
+
+
+                       III.     MULTIPLIER MODELLING: OVERVIEW
+
+Input-output analysis involves constructing a table in which each horizontal row describes
+how one industry’s total product is divided among various production processes and final
+consumption. Each vertical column denotes the combination of productive resources used
+within one industry. A table of this type (Figure 1) illustrates the dependence of each industry
+on the products of other industries: for example, an increase in manufacturing output is also
+seen to require an increase in the production of power.
+
+
+Figure 1: Simple industry/commodity use (input-output) table
+
+
+
+
+1 Additional discussion of the limitations and application of the IO models can be found in World Bank (2011)
+and World Bank (2015).
+3 The CDC methodology is not publicly available at the present moment, but captures ex-ante project estimates.
+Note: PCE is Personal Consumption Expenditures, PFI is Private Fixed Investment, and Govt - Government
+final consumption expenditures.
+
+A social accounting matrix (SAM) (Figure 2) is an extension of the input-output matrix that
+adds other parts of the economy. SAM is a square matrix which captures all the main circular
+flows (Figure 3) within an economy in a given period.
+
+
+Figure 2: Basic structure of a SAM
+
+
+
+
+         Source: Breisinger C., M. Thomas, and J. Thurlow (2010), Social Accounting Matrices and
+         Multiplier Analysis, IFPRI, Washington DC.
+Figure 3: Circular flow in an economy
+
+
+
+
+        Source: Breisinger C., M. Thomas, and J. Thurlow (2010), Social Accounting Matrices and
+        Multiplier Analysis, IFPRI, Washington DC.
+
+The input-output part of SAM captures production linkages between sectors that are
+determined by sectors’ production technologies. These linkages can be differentiated into
+backward and forward linkages. Stronger forward and backward production linkages lead to
+larger multipliers.
+
+
+Backward production linkages are the demand for additional inputs used by producers to
+supply additional goods or services. For example, when electricity production expands, it
+demands intermediate goods like fuel, machinery, and construction services. This demand
+then stimulates production in other sectors to supply these intermediate goods. The more
+input intensive a sector’s production technology is, the stronger its backward linkages are.
+
+
+Forward production linkages account for the increased supply of inputs to upstream
+industries. For example, when electricity production expands, it can supply more power to
+the economy, which stimulates production in all the sectors which use power. So the more
+important a sector is for upstream industries, the stronger its forward linkages will be.
+Forward linkages are particularly important for the energy sector as it provides key input into
+the majority of other sectors in the economy.
+
+
+Input-output tables and social accounting matrices can be used for building multiplier models
+to estimate the multiplier effects of exogenous shocks. When we talk about “exogenous
+demand- side shocks” to an economy, we are referring to changes in export demand,
+government spending, or investment demand. The impacts of these shocks can have direct,
+indirect, induced, and second order growth effects on the economy.
+
+
+     IV.     IMPACTS OF POWER SECTOR ACTIVITIES ON THE
+                                             ECONOMY
+
+The changes in the electricity sector are expected to have an impact on the economy through
+different channels as outlined below. As such, the SAM analysis captures some of these
+effects.
+
+a) Direct effects . Expansion of the output of the electricity sector and employment that
+was created by employing additional labor and professional staff (permanent and
+temporary) to build (usually, over 3-5 years) and later operate (longer period of time)
+power plants and transmission and distribution lines.
+
+
+b) Indirect effects. Engineering, procurement, and construction (EPC) activities and
+operation and maintenance (O&M) of the power plants or transmission and distribution lines
+requires supplies from other sectors like cement, cables, and other construction -oriented
+goods and services. The additional output and employment created in the supply chain
+(through backward linkages) are the indirect effects.
+
+
+c) Induced effects. The additional workers brought by the expansion of the power sector
+itself and the sectors supplying to it (through indirect effects) now spend more - which creates
+additional production and employment in various other sectors throughout the economy,
+creating a multiplier of further demand. This spillover effect is called an induced effect.
+
+d) Second-order growth effects . The effects come from removal or reduction of an
+existing constraint on production of various sectors that are linked to the power sector
+through forward linkages. These effects, termed “second-order growth effects” are the
+most crucial channel through which infrastructure projects impact economies that
+experience shortages in the power supply. Since power is an important factor of
+production, an increase in its supply induces an increase in power consumption which
+stimulates industrial production, growth, and employment. Secondly, an increase in
+power supply helps improve overall reliability, which is a very critical constraint on
+industrial output and growth.
+
+
+The SAM methodology presented in this paper helps to estimate direct, indirect, and induced
+effects from engineering, procurement, and construction (EPC) activities and O&M activities
+as well as the second-order growth effects from an increase in the supply of electricity.
+
+
+        V.     ESTIMATING DIRECT, INDIRECT, AND INDUCED EFFECTS
+
+The section below describes how the shock to the economy in the form of power sector
+related expenditures (EPC and O&M) affects the economy and how the associated direct,
+indirect, and induced effects are estimated.
+
+
+The starting point in computing the multiplier effects is the input-output (IO) table or the
+social accounting matrix (SAM).
+
+
+The first step is to choose the exogenous accounts. The rest of the world, the government,
+and the investment accounts will be included in the exogenous bloc of the multiplier model.
+If we want to compute only direct and indirect effects, the household account will also be
+included in the exogenous bloc.
+
+
+The next step in producing input-output or SAM multipliers is to calculate the direct
+requirements matrix (A). The values of the cells in the direct requirements matrix are derived
+by dividing each cell in a column by its column total. Each cell in a column of the direct
+requirements matrix A shows how many cents of each producing industry’s goods or ser vices
+are required to produce one dollar of the consuming industry’s production.
+
+
+Next in the process of producing the multipliers, the Leontief Inverse is calculated. An IO or
+SAM model can be written as:
+
+
+X - AX = Y,
+where
+X is the column vector of industrial gross output, Y is the column vector of exogenous final
+demand accounts, and A is the direct requirement matrix.
+We can express this equation as:
+
+
+(I - A)X = Y
+or
+X = (I – A)-1 Y
+X = BY,
+where
+I is the identity matrix (with "1" in the diagonal, "0" in all other fields), (I-A)-1 is the "Leontief
+Inverse (Matrix)" = B (or B' if induced effects are included), B (or B') is the matrix of direct
+and indirect (and induced) coefficients bij (or b'ij), and bij (or b'ij) = "Leontief Coefficient"
+representing the direct and indirect (and "induced") requirements per unit of final demand for
+the output of sector j.
+
+
+Using the B (or B’) matrix, we can compute the effects of an exogenous shock on the output,
+valued-added, and employment in the different industries and on the household income. The
+output multiplier for an industry is the ratio of the direct and indirect (and induced when
+included) output changes to the direct output change due to a unit increase in final demand.
+Multiplying a change in final demand (direct impact) for an individual industry's output by
+that industry's output multiplier will generate an estimate of direct and indirect impacts (and
+induced when included) upon output throughout the economy.
+
+
+We can also compute the value-added, income, and employment effects. The gross value-
+added (or GDP) effect is the direct and indirect (and induced when included) gross value-
+added changes to the direct output change, due to a unit increase in final demand. The income
+effects show the direct plus indirect (and induced when included) income change to the direct
+output change due to a unit increase in final demand. The employment effects show the direct
+plus indirect (and induced when included) employment change to the direct output change
+due to a unit increase in final demand. The employment effect in each industry is computed
+by multiplying the employment coefficient (number of employees per dollar of output) in
+that industry by the change in the output of the industry as a consequence of a shock to the
+final demand in an industry.
+
+
+Specifically, the employment effects can be estimated in the following steps.
+1. Compute the employment coefficient for each industry. For example for industry i:
+    Employment coefficient i = number of employees in industry i / output of industry I
+    (measured in monetary units).
+
+
+2. Compute the change (using the output multiplier) in the output of the industry i due
+    to a shock to the final demand of an industry j.
+
+
+3. Multiply the change in the output of industry i by the employment coefficient of
+    industry i. This will give the change in the number of jobs in industry i as a result of
+    a shock in the final demand of industry j.
+
+
+4. Total number of new jobs in the economy as a results of a shock to the final demand
+    of industry j =                                           .
+
+
+            VI.       ESTIMATING SECOND-ORDER GROWTH EFFECTS
+
+The supply effects of additional power availability (second-order growth effects) take into
+account the forward linkages of the power sector with the industries. In order to compute
+these effects, the industry expansion is assumed to continue along the lines of the current
+economy’s structure.
+
+
+First, the share of each industry in the total power consumption is computed in the SAM of
+each country. These shares are multiplied by the additional power supply to the domestic
+economy emanating from each industry. The result provides an estimate of the dollar value
+of the additional power use in each industry. This additional power consumption is divided
+by the direct electricity requirement coefficient of each industry to calculate the change in
+the output of the industry under consideration.
+The following example shows how the methodology is applied by estimating the impact
+from the increase in power supply (second-order growth effects) from a power plant in
+Bangladesh on the manufacturing sector. The estimates of the impact of the increase in
+power supply for other economic sectors are carried out in a similar fashion.
+
+Example: Bangladesh.
+
+    Bangladesh gas-powered plant with a capacity of 341 MW. Once fully operational,
+    the plant will produce 2946 GWh per annum at a tariff of US$ .031/ KWh. T&D
+    losses in Bangladesh are likely to be in the 14 percent range. After taking into account
+    losses, the amount of the additional annual power supply available for the use in the
+    economy is US$ 78.4 mln. (in 2007 prices).4
+
+
+    Step 1: Estimate the dollar value of the additional power use in the manufactur ing
+    industry. In order to do this, calculate the share of manufacturing in total electric ity
+    consumption in Bangladesh and multiply this share by the additional power supply
+    to the domestic economy. From Bangladesh SAM 2007 the share of manufactur ing
+    in total electricity consumption corresponds to US$ 1785 mln. / US$ 4125 mln. or
+    43.2 percent. Therefore, the share of the new power supply that would go to
+    manufacturing is US$ 33.9 mln. (US$ 78.4 mln. * 0.43).
+
+
+    Step 2: Calculate the percentage of electricity used in the input mix for
+    manufacturing in Bangladesh. From the Bangladesh SAM 2007, this corresponds to
+    US$ 1785 mln. / $46,344 mln. or 3.85%.
+
+
+    Step 3: Calculate the technical coefficient for value added for Banglades h
+    manufacturing. Total value-added is the earnings received by the factors of
+    production, such as the wages and salaries paid to labor and the profits paid to
+    capital5 . The share of land, labor and capital in manufacturing expenditures in
+    Bangladesh is about 20 percent.
+
+
+
+
+4   As explained in the section VIII below, 2007 is the base year of the GTAP database used for this exercise.
+5   Total value-added (across an entire economy) is also known as “GDP at factor cost”.
+        Step 4: Calculate the change in the output of the manufacturing sector due to
+        increased power supply by dividing the additional power consumption by the direct
+        electricity requirement coefficient of manufacturing. This gives US$ 33.9 mln./
+        .0385=US$ 880.8 mln. worth of additional manufacturing sector output.
+
+
+        Step 5: Estimate the effect of the change in manufacturing on value added (GDP)
+        using the coefficient of value added for the industry. Therefore, US$ 880.8 mln. *
+        .20=US$ 176 mln. US$ 176 mln. is the increment in value-added (GDP) by
+        manufacturing due to the increase in power supplied.
+
+
+        The same process is carried out for every economic sector of the Banglades h
+        economy that uses electricity as an input to estimate the total impact on the
+        economy’s GDP.
+
+
+        The employment impact is estimated by multiplying the increase in specific sector’s
+        output due to increase in power supply (from Step 4) by the sector’s employme nt
+        coefficient.
+
+
+
+                             VII. ASSUMPTIONS AND LIMITATIONS
+
+    Input-output and SAM multiplier models, when applied correctly, can be practical tools for
+    estimating the economy-wide effects of an initial change in economic activity or in the final
+    demand. However, these models have a number of strong assumptions and limitations, such
+    as: 6
+
+
+   Fixed prices: Prices are assumed to remain constant. This is a very strong assumption for
+    economy-wide analysis if the shocks shift supply and demand. Yet, in the majority of
+    countries that the World Bank Group is working with, the end-user tariff levels are set by the
+    regulator for a certain period of time, and, thus, electricity prices can be considered fixed, at
+    least, in a short run. The tariff levels are also not necessarily cost-reflective being often
+    influenced by political considerations.
+
+
+    6For more discussion on limitations and application of IO models please see World Bank (2011) and World
+    Bank (2015).
+   Constant returns to scale: This means that the same quantity of inputs is needed per unit of
+    output, regardless of the level of production. In other words, if output increases by 10%, input
+    requirements will also increase by 10%.
+
+
+   No supply constraints: Most input-output models assume that there are no restrictions to
+    inputs and factors of production and that there is enough to produce an unlimited product.
+
+
+   Fixed commodity input structure: This structure assumes that changes in the economy will
+    affect the industry's output but not the mix of commodities and services it requires to make
+    its products. In other words, there is no input substitution in response to a change in output.
+    While this assumption might hold in the short run, in the longer run it becomes less viable.
+
+
+   Fixed industry technology: An industry will always produce the same mix of commodities
+    regardless of the level of production. In other words, an industry will not increase the output
+    of one product without proportionately increasing the output of all its other products.
+
+
+   Static nature of the model: Most IO and SAM models are static and cannot capture the
+    dynamic impacts of investments in the power sector.
+
+
+   Coefficients are often out-of-date: IO tables in the most developing countries are collected at
+    infrequent intervals and can be several year or even a decade old and thus often do not provide
+    an accurate representation of the current structure of the economy and the state of technology.
+
+
+    The estimates of the effects from an increase in power supply need to be treated with a
+    particular care as they are based on the following assumptions:
+
+
+    1. An electricity shortage is a bottleneck and new supply of electricity will be fully used.
+    2. The distribution of electricity use continues as it was prior to the installation of new
+        facilities.
+    3. There are enough available factors of productions (labor, capital, natural resources);
+        intermediate inputs do not impose a constraint.
+Regarding the first assumption, the lack of adequate electricity supply represents a serious
+bottleneck, given that the percent of firms identifying electricity as a major constraint is 76
+in Nigeria, 52 percent in Bangladesh, and 31 percent in Georgia 7 .
+
+
+The second assumption might hold in the short run, but with the time, as companies adjust
+their production to higher availability of electricity supply and the new technologies develop,
+this assumption will be less likely to hold.
+
+
+Regarding the third assumption, the significant increase in production in almost every activity
+in the country would require more factors of production and intermediate inputs and would
+inevitably create significant price movements and some other bottlenecks in the economy. In
+order to properly capture these complex effects of increased power supply, interactions and
+constraints, CGE models might be more appropriate.
+
+
+Regarding the third assumption, the data from the Enterprise Surveys provides some
+indication of how much more the economies are capable of producing with the existing
+resources if there is a reliable supply of electricity. According to the surveys, the losses of
+annual sales due to electrical outages are 3.7 percent for Bangladesh, 2.4 percent for Georgia,
+and 8.5 percent for Nigeria.
+
+
+A good modelling approach needs to take into account not only the multiplier effects of the
+investments, but also the effects of the numerous effects generated by power shortages.
+Unlike CGE models, multiplier analysis cannot handle these kinds of complex effects and
+linkages. The results obtained with the help of input-output or SAM analysis should therefore
+be interpreted as being approximate and should be considered with care.
+
+
+The results of the SAM multiplier analysis captures the output effects of new / more available
+power rather than the price effects. Such analysis might be more applicable in the situation
+of regulated prices and when lack of available electricity represents a bottleneck to the ability
+of the firms to enhance their productive capacities.
+
+
+
+
+7   According to the World Bank Group’s Enterprise Surveys.
+
+                                                                                               15
+It should be also noted that the multiplier models tend to overestimate the economic effects
+of shocks. For instance, since the models assume linear relationships, a 5% increase in output
+by a given industry is matched by a 5% increase in employment in that same industry. In
+reality this is not necessarily the case as there might be total factor productivity gains and the
+marginal effect on employment will be less than proportional.
+
+
+                                               VIII. DATA
+
+The methodology is applied using the GTAP database - the most consistent international
+dataset that harmonizes data for more than 150 countries. The SAMs for the countries
+included in the present analysis are extracted from this database. One of the advantages of
+this database is that it has a separate electricity sector account for all the included countries.
+The most recent version of the GTAP database uses a base year of 2007.8
+
+
+The employment data comes from the ILOSTAT9 database of the International Labor
+Organization (ILO). The data on GDP deflators comes from the World Bank Development
+Indicators database. The data on the engineering, procurement, and construction (EPC) costs
+and on the operations & maintenance (O&M) costs for specific projects are from IFC project
+documents.
+
+
+In order to estimate the multiplier effects of an increase in the final demand, various
+components of the domestic EPC and O&M expenditures were allocated among the
+following eleven productive activities of the multiplier model that was built for this
+project10 :
+
+
+1. Agriculture
+2. Mining and fuel
+3. Manufacturing
+4. Electricity
+5. Water
+6. Construction
+
+
+8 The newest dataset GTAP 9 (base year 2011) was released in May 2015.
+9 Or from the ILO database LABORSTA which is not being updated anymore.
+10 This follows closely the standard classification in the national accounts for the main industries.
+
+
+
+                                                                                                        16
+7. Trade
+8. Transport and communication
+9. Finance and insurance
+10. Other services
+11. Public services
+
+
+
+
+                                 17
+                                  REFERENCES
+
+
+Breisinger C., M. Thomas, and J. Thurlow (2010). Social Accounting Matrices and
+Multiplier Analysis. IFPRI, Washington DC.
+
+
+FMO Impact Model Methodology. FMO, available at http://www.fmo.nl/development-
+impact
+
+
+Lahr, M., Estimating Economic Impacts of New Electricity Power Generation and
+Transmission Facilities in Developing Nations (2013). Approach paper. IFC CGEDR,
+Washington, DC.
+
+
+Background Paper for the Guidance Note on Energy Project Appraisal Documents:
+Literature Review (2015). Draft. World Bank GEEDR, Washington, DC.
+
+Bacon R. and Kojima M. Issues in estimating the employment generated by energy sector
+activities (2011). World Bank, Washington, DC.
+
+
+
+
+                                                                                   18
+                         APPENDIX I: LIST OF COUNTRIES
+
+The methodology was applied to 20 developing countries in different regions of the world
+that historically and based on the pipeline have the largest number of IFC investments. The
+templates were built for all 20 countries.
+South Asia
+India
+Nepal
+Bangladesh
+
+
+EAP
+Philippines
+Indonesia
+
+
+Africa
+Kenya
+Cameroon
+Senegal
+Cote D'Ivoire
+Nigeria
+Uganda
+Ghana
+Mozambique
+South Africa
+
+
+LAC
+Mexico
+Brazil
+
+
+E/MENA
+Pakistan
+Georgia
+Turkey
+Egypt
+
+                                                                                           19
+APPENDIX II: EXCEL-BASED TOOL
+
+
+
+
+                                20
+                     APPENDIX III: OVERVIEW OF FMO AND IFC TOOLS
+
+     The table below summarizes FMO and IFC tools used to quantify economic impacts of
+     projects and their underlying methodologies.11
+
+
+
+
+                                                  IFC                                    FMO
+
+Development indicators              Value-added (GDP)                      GHG Emissions and Avoidance (for
+                                                                           renewable energy projects)
+
+
+                                    Jobs                                                 Jobs
+Type of analysis                    Ex-ante project level                  Ex-ante portfolio level
+
+
+Country coverage                    20 individual countries (Appendix I)   All countries of FMO investments. Some
+                                                                           countries are aggregated by region/level
+                                                                           of development). In total: 23 country and
+                                                                           regional IO tables.
+Sector coverage                     Electricity                            All sectors of FMO investments
+
+
+Methodology                         Input-Output/SAM                       Input-Output/SAM
+
+
+Effects captured                    - Direct                               - Direct
+                                    - Indirect (backward linkages)         - Backward
+                                    - Induced                              - Induced
+                                    - Second-order growth effects          - Forward (only for energy and
+                                    (forward linkages)                     infrastructure)
+
+
+
+Source of IO/SAM data               GTAP 7 (base year 2007)                GTAP 7 (base year 2007)
+
+
+Methodology for increase in         Use individual country SAM to track    Use the same specific factor .1 to national
+electricity supply                  the impact of the increase in power    GDP for all countries. The number is
+                                    supply on the affected sectors.        based on the range of the estimates from
+                                                                           the review of the literature.
+
+
+
+
+     11
+      FMO methodology is available at http://www.fmo.nl/development-impact. CDC (UK) also applies an input-
+     output based methodology for its project analysis, however, the methodology is not published yet.
+
+                                                                                                              21
+
