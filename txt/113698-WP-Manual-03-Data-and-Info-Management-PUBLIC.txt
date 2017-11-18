@@ -1,0 +1,1721 @@
+DATA AND INFORMATION
+MANAGEMENT
+Manual 3
+The material in this work is copyrighted. Copying and/or transmitting portions or all of this work
+without permission may be a violation of applicable law. IFC encourages dissemination of its work
+and will normally grant permission to reproduce portions of the work promptly, and when the
+reproduction is for educational and non-commercial purposes, without a fee, subject to such
+attributions and notices as we may reasonably require. IFC does not guarantee the accuracy,
+reliability or completeness of the content included in this work, or for the conclusions or judgments
+described herein, and accepts no responsibility or liability for any omissions or errors (including,
+without limitation, typographical errors and technical errors) in the content whatsoever or for
+reliance thereon. The boundaries, colors, denominations, and other information shown on any map
+in this work do not imply any judgment on the part of The World Bank concerning the legal status
+of any territory or the endorsement or acceptance of such boundaries. The ﬁndings, interpretations,
+and conclusions expressed in this volume do not necessarily reﬂect the views of the Executive
+Directors of The World Bank or the governments they represent.
+
+The contents of this work are intended for general informational purposes only and are not intended
+to constitute legal, securities, or investment advice, an opinion regarding the appropriateness of
+any investment, or a solicitation of any type. IFC or its affiliates may have an investment in, provide
+other advice or services to, or otherwise have a ﬁnancial interest in, certain of the companies and
+parties (including named herein).
+
+All other queries on rights and licenses, including subsidiary rights, should be addressed to IFC’s
+Corporate Relations Department, 2121 Pennsylvania Avenue, N.W., Washington, D.C. 20433.
+
+International Finance Corporation is an international organization established by Articles of
+Agreement among its member countries, and a member of the World Bank Group. All names, logos
+and trademarks are the property of IFC and you may not use any of such materials for any purpose
+without the express written consent of IFC. Additionally, “International Finance Corporation” and
+“IFC” are registered trademarks of IFC and are protected under international law.
+
+© International Finance Corporation 2014. All rights reserved.
+2121 Pennsylvania Avenue, N.W.
+Washington, D.C. 20433
+www.ifc.org
+
+
+
+
+Watts and Associates, Inc. (“Watts”) and the International Institute for Agricultural Risk
+Management ( «IIARM») are co-authors of and jointly have full proprietary interest in the content
+that they have created in the material contained in this document or presentation. The proprietary
+interest extends to all content which includes, but is not limited to, technology, theories, concepts,
+ideas, organizational structure, or any other content in any form that may arise from the written
+documents or presentation in which the proprietary material is contained. The proprietary material
+contained in this document or presentation is subject to conﬁdentiality agreements which prohibit
+the publication, exhibition or other disclosure of the proprietary content, in whole or in part, in any
+form or media, to any person or entity not authorized by Watts or IIARM to view, review or engage
+in any discussion relating thereto. This material is protected by U.S. and international laws, may not
+be copied in whole or in part, and shall not be conveyed by anyone authorized to receive it by any
+means to any third party that has not been previously authorized to receive this material’s content.
+The information contained in this publication is presented in good faith for general information
+purposes, and neither Watts nor IIARM shall be held liable for any of the information contained
+herein. This material does not claim to serve as an exhaustive presentation of the issues discussed
+herein and should not be used as a basis for making commercial decisions.
+
+© 2014 Watts and Associates, Inc. and International Institute for Agricultural Risk
+  Management. All Rights Reserved.”
+Table of Contents
+1.0. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+2.0. Data Uses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+      2.1 Program Development. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+            2.1.1. Strategic Planning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+            2.1.2. System Governance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+            2.1.3. Coordination of Business Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+            2.1.4. Financial Reporting and Accountability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+      2.2. Product Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+            2.2.1. Data Requirements for Empirical Rating . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+                    2.2.1.1. Combining Data Using Bootstrapping Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+            2.2.2. Data Requirements for Parametric Rating . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+      2.3. Program Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+      2.4. Program Evaluation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+      2.5. Documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+      2.6. Public Policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+3.0. Data Needs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+      3.1. Initial Data Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+             3.1.1. Individual Insurance Data Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+                     3.1.1.1. Individual Yield Insurance Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+                     3.1.1.2. Individual Revenue Insurance Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+             3.1.2. Proxy Insurance Data Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+                     3.1.2.1. Area Yield Insurance Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+                     3.1.2.2. Area Revenue Insurance Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+                     3.1.2.3. Price Insurance Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+                     3.1.2.4. Weather Index Product Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+                     3.1.2.5. Satellite Imagery Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+             3.1.3. Margin Insurance Data Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+      3.2. Operational Data Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+             3.2.1. Functional Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+             3.2.2. Informational Needs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+      3.3. Reinsurance Data Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+             3.3.1. Reinsurance Submission . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+                     3.3.1.1. Actuarial Documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+                     3.3.1.2. Product Administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+                     3.3.1.3. Underwriting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+                     3.3.1.4. Loss Adjustment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+             3.3.2. Data Reporting and Auditing Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+4.0. Data Sources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+     4.1. Farm Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .20
+           4.1.1. Producer Descriptions and Insurance Choices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .20
+           4.1.2. Liability Determination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+           4.1.3. Best Management Practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+           4.1.4. Claim Initiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+     4.2. Agricultural Insurance System Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+     4.3. Third-Party Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+           4.3.1. Commodity Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+           4.3.2. Input Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+           4.3.3. Proxy Index Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+                                                                                                                                                                      MANUAL 3                         3
+5.0. Data and Information Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .24
+      5.1. An Example from the United States . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+6.0. Quality Control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .29
+     6.1. Data Management Concerns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+     6.2. Data Transfer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .30
+     6.3. Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .30
+     6.4. Outliers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+     6.5. Trending Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+     6.6. Updating and Data Revisions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+7.0. Data Access and Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+      7.1. Information Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+             7.1.1. Conﬁdentiality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+             7.1.2. Integrity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+             7.1.3. Availability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+             7.1.4. Authenticity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+             7.1.5. Non-Repudiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+      7.2. Access, Control, and Transparency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+             7.2.1. Identiﬁcation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+             7.2.2. Authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+             7.2.3. Authorization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+
+8.0. Computer Hardware, Software, and Backup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .34
+      8.1. Hardware and Software Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+            8.1.1. Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+            8.1.2. Cost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+            8.1.3. Storage Capacity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+            8.1.4. Dependability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+            8.1.5. Backup and Disaster Recovery. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+9.0. Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .36
+
+
+
+
+4             DATA AND INFORMATION MANAGEMENT
+Preface and Acknowledgements
+Five manuals were prepared by IFC for the development of agri-insurance markets where the public and
+private sectors work together in a partnership (PPP). The manuals are designed to strengthen the capacity
+of the government and market players to effectively design agri-insurance products, both traditional
+indemnity and index, introduce them to the market, and build sales. The manuals are designed to be
+succinct yet at the same time sufficient to create the technical and administrative foundation for a modern
+agri-insurance system, and to allow programs in early stages of development to properly plan the required
+system. Finally the manuals are designed to train practitioners, to build local capacity for skills that are
+required to start the program, and to enable the program to grow over time.
+
+The principle author of the manuals is Professor Myles Watts, University Professor, Lead Actuary at Watts
+& Associates, Member of the Board at the Federal Agricultural Mortgage Corporation, and 5th Generation
+Montana Farmer. Watts and Associates designed and launched numerable agri-insurance products in
+North America, frequently consults for the major reinsurers, and supports insurance programs around the
+world. They have established their own index insurance company, eWeatherRisk. The manuals incorporate
+practical lessons learned over the past 40 years.
+
+The development of the manuals was a joint activity of the Ukraine Agri-Insurance Project (2007-2015),
+IFC’s Global Agri-Finance Team, and the Global Index Insurance Facility (GIIF) (2009 to present). Dr. Gary
+Reusche led the Ukrainian project, served as a technical specialist on the global agri-ﬁnance team, and as
+a member of the GIIF technical committee and core management team. Agri-insurance development is
+closely linked to agricultural ﬁnance and value chains and they are effectively developed in unison.
+
+The manuals result from training workshops developed by the agri-insurance project in Ukraine and globally
+by GIIF technical experts. The entire agri-insurance team in Ukraine made practical contributions to the
+manuals, with special recognition due to Victoria Yakubovich for collecting, organizing and preparing the
+initial drafts and Andrey Zaripov a member of the GIIF team for helping to develop the reinsurance and cash
+ﬂow models. The project team included experts from the Alberta (Canada) provincial agri-insurance program,
+in particular Richard McConnell, who contributed his experience and expertise to the training activities.
+
+Peer review and Spanish language translations of the manual resulted from IBRD consultants in Central and
+South America, especially Pablo R. Valdivia Zelaya and Roberto Dario Bacchini.
+
+The team is grateful to Professor Gary Brester for his practical contributions and editing of the manuals
+and Olesya Zhuchenko for coordinating the publication of the manuals, working with designers to plan the
+layout, and printing.
+
+Finally support for the manuals was provided by the Canadian government, and the Global Index Insurance
+Facility (GIIF) lead by Gilles Jacques Galludec (Program Manager) funded by the European Union, Japan and
+the Netherlands.
+
+
+
+
+                                                                                           MANUAL 3            5
+    Acronyms
+    IFC – International Finance Corporation
+
+    GIIF – Global Index Insurance Facility
+
+    IIARM – International Institute for Agricultural Risk Management
+
+    DFATD – Foreign Affairs, Trade and Development Canada
+
+    APX – Amsterdam Power Exchange
+
+    GHCND - Global History Climate Network – Daily
+
+    GSOD – Global Summary of Day
+
+    IT – Information Technology
+
+    NYSE – New York Stock Exchange
+
+    SAFEX – South African Futures Exchange
+
+    WMO – World Meteorological Organization
+
+
+
+
+6        DATA AND INFORMATION MANAGEMENT
+1.0.       Introduction
+Data and information management refers to the development, collection,
+use, and preservation of data and the methods needed to acquire, control,
+protect, deliver, and enhance its value to achieve the goals of agricultural
+insurance programs. Issues related to the collection, development,
+updating, and quality of data are often overlooked when developing
+agricultural insurance programs. However, such programs will likely
+fail without a concise, well-developed plan for data and information
+management.
+
+Data are needed by those who develop, operate, and manage agricultural
+insurance programs. In addition, agricultural producers need access to
+high-quality data for making individual purchase decisions. Better data
+quality and larger data quantities improve decision-making, management,
+and product development. Successful agricultural insurance programs
+require accurate and comprehensive data collection, management, and
+security.
+
+This manual presents a wide range of management issues related to
+agricultural insurance data. Speciﬁcally, issues related to data uses, needs,
+documentation, quality control, security, accessibility, storage, and public
+policy are discussed. In addition, data needs related to underwriting,
+loss adjustments, premium rating, and reinsurance are also presented.
+Because speciﬁc agricultural insurance products often have differing
+data requirements, similarities and differences among such products
+are delineated. Finally, this manual also considers computer hardware
+and software design issues and requirements and provides examples of
+necessary data ﬁles.
+
+
+
+
+                                                                                MANUAL 3   7
+2.0.       Data Uses
+Accurate and comprehensive data are needed by those who develop,
+operate, manage, and regulate agricultural crop insurance programs. In
+general, the preferred approach to rating is the use of historical data for
+the perils of concern. If historical data are not available, other approaches
+are used to rate various crop insurance products. However, the results
+of such rating are usually inferior to those derived using comprehensive
+data. Agricultural producers and producer organizations need data to
+decide whether or not to purchase products and to develop crop insurance
+products. In addition, producers use data for making decisions regarding
+coverage levels and product purchases. In most cases, the performance
+of insurance products and their efficacy regarding risk management
+for agricultural producers is largely a function of data availability and
+maintenance.
+
+Primary insurance providers need data to establish premium rates, service
+products, evaluate product performance, monitor individual producer
+activity, research and develop new products, and modify existing
+products. Furthermore, insurance providers require data to develop
+ﬁnancial reviews and other information needed for internal and external
+auditing, reports to external organizations, and for evaluating reinsurance
+premiums. In many cases, primary insurance providers also receive
+premium subsidies from government agencies. Thus, data are needed to
+complete those transactions and also for dispute resolution proceedings.
+
+Reinsurance companies also require comprehensive data to evaluate
+the riskiness of agricultural insurance portfolios, establish reinsurance
+premium rates, and service reinsurance contracts. In addition,
+government agencies require data to help manage, operate, and evaluate
+crop insurance programs. This is true regardless whether products
+are offered through the private sector or directly from government
+agencies. In all cases, government agencies are likely to be involved in
+the regulation and monitoring of crop insurance programs—especially
+when they provide premium or administrative subsidies and/or stop-loss
+coverages. Government agencies are also often involved in regulatory
+actions, audits, and dispute resolution procedures.
+
+2.1        Program Development
+The development of agricultural insurance programs often hinges upon
+the availability of high-quality data. For example, individual yield or
+revenue products cannot be designed without a sufficient amount of
+producer-level yield data. In the absence of such data, programs are often
+developed around area or group yield principles. In addition, revenue
+products require that an unbiased source of price discovery be available so
+that product rating can maintain its actuarial soundness.
+
+Substantial quantities of data must also be available for developing
+programs affected by correlations among individual agricultural producers
+and regions. Consequently, program development is often the result of
+data availability.
+
+
+
+
+8       DATA AND INFORMATION MANAGEMENT
+2.1.1. Strategic Planning: Data development, accessibility, and management are critical to the success of
+agricultural insurance programs. Hence, it is essential that a strategic management plan regarding data issues
+be developed along with the other aspects of agricultural insurance programs. The tendency is to assume that
+data issues will resolve themselves if a solid program is ﬁrst developed. However, solid programs cannot be
+developed in the absence of strategic data planning.
+
+Strategic data plans must consider the interaction of data management and acquisition with respect to
+national agricultural risk management policies and agricultural programs. Agriculture insurance programs
+need to coincide with the goals of other government actions. If properly developed, such systems can generate
+substantial synergies with national policy in terms of data acquisition, evaluation, and growth.
+
+Finally, strategic data plans should be constructed around stated objectives and should meet various performance
+measures. In this way, proper evaluations of such programs can be quantiﬁed with respect to stated goals.
+
+2.1.2. System Governance: Equitable and transparent governance structures are essential for all aspects
+of an agricultural insurance program, but they are especially important for data management issues because
+of the personal and conﬁdential nature of required data and document information. Governance issues are
+directly related to data availability and collection. For example, data governance must consider requirements for
+reporting contract details (e.g., legal entities, acreages, etc.), provide details for dispute resolution, and develop
+best management practices for information, business, agronomic, and insurance actions.
+
+Governance structures must clearly describe rules and enforcement of contract details such as product eligibility,
+crops, perils, design, losses, deadlines, and repercussion for the misrepresentation of each. In each case,
+governance structures must clearly offer reasons for the need of such information. Data governance is also
+important for underwriting and developing loss adjusting standards.
+
+Governance decisions must also include processes for providing all stakeholders with sufficient information
+for optimal decision-making. For example, the data needs of regulatory agencies include information on
+crop insurance companies. These data and information needs may be quite different from those of internal
+stakeholders and system personnel. External stakeholders and policy makers have different data needs, as do
+reinsurance companies.
+
+
+
+
+                                                                                                 MANUAL 3           9
+2.1.3. Coordination of Business Functions: Current and accurate data are needed to manage and effectively
+coordinate agricultural insurance functions. These functions are a product of the need to communicate with
+participants and develop transparent business process reviews.
+
+Strategic directions and rationale, team members, and performance assessments are examples of internal
+communications which require the use of business process and governance data and information. External
+communication efforts include rapid responses to information requests and educational materials that are
+readily available for distribution. Such materials must be kept current and systems need to be established to
+monitor version control of all external documents.
+
+Effective communications with customers (producers), media representatives, and government officials require
+that tracking systems be developed to respond to requests. Efficient tracking systems ensure that all requests
+are answered within a reasonable timeframe. In addition, such systems should monitor return responses to
+improve quality.
+
+Other business processes that require data and documentation include monitoring the performance of each
+aspect of the agricultural insurance system. For example, loss adjustment activities should be monitored in
+terms of claims responses, actions by loss adjusters, and indemnity delivery. Business process review systems
+also require substantial data for monitoring standard business activity such as accounts receivable and payable.
+In addition, discounts for early payment of receivables may be offered; these details must be carefully monitored.
+
+2.1.4. Financial Reporting and Accountability: Agricultural insurance systems require substantial amounts
+of business management data for ﬁnancial reporting and accountability purposes. Such reports are routinely
+submitted to government agencies, regulators, managers, and investors.
+
+Regulatory agencies often require the reporting of performance measures relative to goals, portfolio risk,
+loss ratios, and information related to ﬁnancial sustainability. Regulatory frameworks should be developed in
+conjunction with data management systems to reduce the costs of reporting.
+
+Internal ﬁnancial reports are often needed to assess portfolio risk, cash ﬂow needs to meet indemnity claims,
+administrative costs, and overhead. In addition, government agencies frequently request speciﬁc reports
+on various insurance activities. Much of the data needed to respond to these requests are contained in ﬁles
+generated by insurance providers with respect to the sale of insurance products. It is essential that business
+management systems are able to seamlessly access these data to reduce costs and increase response times.
+
+Data are also necessary for effective interactions between private companies that provide insurance,
+government agencies that monitor and may also provide insurance, and agribusinesses. Agricultural producers
+must be provided with meaningful, understandable data regarding product performance.
+
+Accurate and reliable data often help to obviate competing objectives among agricultural insurance participants.
+Producers prefer low premium rates, high coverage levels, and ﬂexible terms for loss adjusting. Insurers and
+reinsurers want to be compensated for the risk incurred by offering such programs. Program administrators
+often want management ﬂexibility, oversight, and sufficient budgets to perform their roles. Many of the
+competing objectives can be met if data are used to illustrate stakeholder issues.
+
+2.2.       Product Design
+The primary areas of product design for which data requirements are of the most concern involve underwriting,
+rating, and indemniﬁcation. Large quantities of high-quality data are needed when using empirical methods to
+develop actuarially sound premium rates and for determining indemniﬁcation policies.
+
+Product design must occur in conjunction with the development of data collection and management systems.
+Products cannot be properly serviced if issues related to data quality, quantity, accuracy, and timeliness needed
+to meet operational requirements of the program are ignored.
+2.2.1. Data Requirements for Empirical Rating: The need for large quantities of high-quality historical
+data are most acute for establishing premium rates. Empirical rating processes provide the most actuarially
+sound approach to rating and result in lower premium rates compared to other methods. However, empirical
+rating processes are highly data intensive. For example, an ideal data set for rating an individual yield insurance
+product would consist of more than 100 years of observations for each producer in any given region. Such data
+are seldom available, so other procedures are frequently used. For example, shorter periods of data are usually
+
+10      DATA AND INFORMATION MANAGEMENT
+used for empirical rating processes. Premium rates are then increased by
+various load factors to reﬂect unknown risks that cannot be determined
+because of insufficient data volumes.
+2.2.1.1. Combining Data Using Bootstrapping Procedures: In some
+cases, regional yield data may be available for a relatively long period
+of time while individual farm level data are often not. In these cases,
+bootstrapping procedures can be used to combine the shorter term farm-
+level data with longer term regional data. Bootstrapping procedures
+combine longer term regional variations in yield with variations in
+multiple farm yield observations to increase the accuracy of individual
+farm yield variance estimates. These adjusted variances are then used for
+establishing premium rates.
+2.2.2. Data Requirements for Parametric Rating: Parametric rating
+procedures are often used when historical data are insufficient to provide
+reasonable empirically rated premiums. Historical data may simply not exist
+in the quantities needed, or the data may be of poor quality. Poorer quality
+data occur when observations include inaccuracies or missing values, are
+collected using inconsistent methods, or are affected by policy changes. In
+these cases, a variety of statistical distributions may be used to represent
+the underlying variation in yields that occur in actual observations. In some
+cases, limited historical data may help identify the appropriate statistical
+distribution for rating purposes. In other cases, a normal or uniform
+distribution may simply be assumed. These two distributions often provide
+conservative and liberal endpoints for premium rate ranges. Statistical
+distributions are used to establish expected indemnities which are then
+combined with liabilities to establish pure risk premium rates. These
+procedures, however, often require the addition of substantial premium rate
+loading factors to reﬂect uncertainty associated with actual yield outcomes.
+
+2.3.       Program Management
+Reliable data that are easily accessible by program managers are
+essential for the success of agricultural insurance programs. Program
+administrators and managers use data to:
+   • Develop strategic plans;
+   • Interface with government agencies and private insurance
+       companies;
+   • Evaluate rating outcomes;
+   • Develop and adjust products;
+   • Conduct internal audits;
+   • Prepare ﬁnancial reports;
+   • Evaluate business processes in terms of efficacy and efficiency.
+Effective communication among private insurance companies, reinsurers,
+government agencies, regulators, and agricultural producers are essential
+for the control of such programs. In addition, data are used in day-to-day
+operations:
+   • To support and record sales;
+   • In the application process for products;
+   • For underwriting process;
+   • For loss adjusting purposes;
+   • To support claims processing procedures;
+   • For dispute resolution processes.
+
+                                                                                MANUAL 3   11
+2.4.      Program Evaluation
+Agricultural insurance programs generally have a public-sector component attached to them. Hence, program
+evaluation is necessary for deciding whether public goals are being met. In addition, internal evaluation of
+programs is an essential part of general business procedures. In both cases, data are needed for research
+and to evaluate the efficiency of agricultural insurance programs. In addition, policy makers often need
+information regarding the consequences of crop insurance programs on agricultural production, environmental
+issues, agribusiness industrial organization, food supplies, and public policy goals. Insurance companies use
+performance data to identify areas for product improvements, develop new products, and adjust program goals.
+
+2.5.      Documentation
+Data must be accurately recorded and maintained. A good data management system will not only record data,
+but also document sources of all observations. Documentation of data and their sources allow for seamless
+continuity of programs as they develop, grow, and change. In addition, a variety of documents and their sources
+need to be maintained by agricultural insurance data management programs.
+
+2.6.      Public Policy
+Public resources are frequently used to support agricultural insurance programs. The rationale for public sector
+involvement often centers on maintaining rural communities, reducing the need for disaster relief, stabilizing
+food supplies, and supporting farm incomes through risk mitigation. Thus, substantial data resources are
+needed to develop and evaluate public policy issues related to agricultural insurance programs.
+
+Data are needed to evaluate whether or not public policy goals are being accomplished. Public accountability
+of such programs requires that companies submit themselves to independent third-party audits of products
+and business management performance. Producers, taxpayers, regulators, and government officials need to be
+assured that public resources are being used effectively.
+
+Public policy accountability may extend beyond a single country. For example, agricultural insurance programs
+must be evaluated for compliance with international trade agreements—especially for programs that receive
+substantial government subsidies.
+
+Insurance companies must also maintain sufficient data to demonstrate regulatory compliance various public
+agencies. Furthermore, these companies must comply with legal rules that govern contractual compliance
+issues. That is, data ownership, access, conﬁdentiality, and use must follow legal guidelines.
+
+
+
+
+12      DATA AND INFORMATION MANAGEMENT
+3.0.       Data Needs
+The development, execution, and supervision of methods to acquire,
+control, protect, deliver, and enhance the value of data and information
+assets are important elements of a data management program. Data
+management in agricultural insurance programs extends beyond
+numbers and includes maintaining producers’ personal information, policy
+documents, and business management practices.
+
+A variety of initial data needs are required for the development of
+agricultural insurance programs. Although most products require at least
+some common data, each product also requires speciﬁc information.
+
+Data are also required for operational needs. For example, data must be
+updated annually to improve rating processes and evaluate products and
+programs.
+
+3.1.       Initial Data Needs
+Agricultural insurance products can be categorized into to two general
+types: (1) individual products and (2) proxy products. This taxonomy
+is an important element of data requirements. Indemnity payments
+for individual products are triggered by individual yields or revenues
+related to speciﬁc land parcels. Individual product liabilities are generally
+determined by a producer’s actual yield or revenue outcome.
+
+In contrast, proxy products are triggered by variables that are correlated
+with individual actual outcomes. Examples of proxy variables include per
+acre area yield/revenue, national prices, climate outcomes, and satellite
+imagery. Proxy product liabilities are usually determined by regional
+historical outcomes. Alternatively, proxy product liability may be based
+on individual producer outcomes. Consequently, data requirements are
+substantially different depending upon product type and design.
+
+Individual products require farm-level historical data for rating and loss
+adjusting. Thus, individual products are data intensive because of the
+large number of farm producers, their length of time in agriculture, and
+changes in farm structures and size. When acquiring data for individual
+products, requests should be kept to a minimum and not be duplicative.
+Data series continuity needs to be maintained even if a producer changes
+primary insurance providers across years. Data requests need to be
+automated and consistent across years. Data accuracy and completeness
+are essential elements of individual insurance products.
+
+Proxy products do not generally rely on information about an individual
+farm’s speciﬁc performance. Rather, rating and indemnities are based on
+outcomes that occur within a region. This greatly reduces the amount
+of data that needs to be collected from producers and the amount of
+monitoring, data collection, and loss adjusting that needs to be done on
+an annual basis. However, the data that are collected need to be well-
+documented and transparent in the case of area yield and revenue insurance
+products. Because these products are based on regional yields or revenues
+rather than farm-level outcomes, producers are likely to question the data
+when outcomes on their operations differ from regional outcomes. In
+addition, while area-based weather or satellite imagery products do not
+require data from individual producers for indemnity calculations, they both
+produce voluminous amounts of data that need to be carefully managed
+and monitored for aberrations and pipeline interruptions.
+
+
+                                                                                MANUAL 3   13
+Margin insurance products combine some elements of individual and proxy products. Hence, the data needs of
+this product are a hybrid of the other two.
+
+Every insurance product, however, will require some common data and documentation. For example, the
+complete legal names of producers, mailing addresses, individual identiﬁers, telephone numbers, and e-mail
+addresses should be collected when a producer initially purchases an insurance contract. Thereafter, providers
+should be notiﬁed by producers if changes in those identiﬁers occur.
+
+All products also require a physical description of farms and areas that are to be insured within those farms.
+Sizes and legal descriptions of property are needed as well.
+
+For each insurance policy on each insured area, documentation should include the insurance provider name,
+product purchased, policy number, expected outcomes (e.g., yields, revenue, precipitation, etc.), coverage levels
+and deductibles, and indemnity triggers. In addition, prices used to calculate indemnities, total liability, premium
+rates, total premiums, total premiums paid by a producer, total premium subsidies (if any), and timing of
+indemnity payments should be documented.
+
+3.1.1. Individual Insurance Data Needs: The two primary individual insurance products are yield and revenue
+based. In terms of yield insurance products, indemnities are paid when per acre actual yields do not meet a
+certain value. For revenue products, indemnities are paid when per acre revenues (i.e., yield/acre multiplied by
+price/unit) do not meet certain values.
+
+3.1.1.1. Individual Yield Insurance Data: For individual yield insurance products, crop yield histories for
+each insured acre by growing season are required. At least four years of data should be included, but ten or
+more years are preferred. Consideration must be made for rotational crops or fallow years. If such data are
+not available, alternative values need to be established. For some crops, variety and quality outcomes are also
+needed. In addition, the per unit price at which yield losses will be indemniﬁed must be clearly known.
+
+Requirements for best management practices need to be documented including planting dates, potential
+required fertilizer herbicide and pesticide applications, irrigation activities (if applicable), and other required
+practices as needed.
+
+Claims and loss-adjusting actions need to be documented at appropriate times. Descriptions of both covered
+and uncovered losses need to be developed as well as amounts and dates of indemnity payments. In addition,
+yields for each crop year need to be collected once a producer enters into an insurance contract whether or not a
+claim is initiated.
+
+3.1.1.2. Individual Revenue Insurance Data: All of the data required for individual yield insurance products
+are also relevant for individual revenue insurance products. In addition, documentation of the prices that will be
+used to calculate revenues should be speciﬁed. These prices may differ from those used to calculate indemnities
+for yield products. Additional data requirements include expected harvest prices, expected revenue per unit,
+revenue coverage levels, and revenue deductibles. In addition, documentation should clearly indicate trigger
+revenues and total liabilities.
+
+3.1.2. Proxy Insurance Data Needs: Proxy insurance products are designed to compensate producers for
+losses that are not directly measured. A variety of reasons exist for developing such products. In some cases, it
+is simply too expensive to measure certain outcomes. For example, forage is consumed by livestock and is not
+directly measurable. In addition, the moral hazard associated with some agricultural commodities and regional
+situations renders the use of individual insurance products infeasible or the operations costs are prohibitive.
+
+In such cases, proxy insurance products rely on more easily measured outcomes to calculate indemnities. These
+proxies are generally related to regional rather than individual measurements. Because losses are not directly
+measured, however, the proxy measure used to trigger insurance indemnities may not be perfectly correlated
+with individual loss experiences in a given time period.
+
+Several proxy metrics have been developed, including area yield, area revenue, price insurance, weather, and
+satellite imagery of vegetative growth. In some cases, yields of crops that are more easily measured and where
+yields are highly correlated with a different crop are sometimes used as a proxy. The costs of such products
+primarily depend upon existing infrastructure as it relates to gathering proxy measures.
+
+
+
+14      DATA AND INFORMATION MANAGEMENT
+Proxy insurance alternatives usually require that much less data be obtained from individual farms. However,
+total data requirements and management may be quite large as a result of voluminous measurements over time.
+In addition, proxy-based products do not require individual farm histories or in-person loss adjustments to settle
+claims. However, some monitoring must occur to ensure that crops being insured are actually being produced.
+This is especially important if government subsidies are being used to off set premium payments.
+
+3.1.2.1. Area Yield Insurance Data: In addition to data needed for all insurance products, area yield products
+also require data regarding the area or regional yield history of the crop being insured. This history should be
+as extensive as possible for rating purposes. In addition, actual area or regional yields need to be calculated in
+a timely manner following harvests. This can be a difficult task as most regional yield estimates depend upon
+producer surveys. Delays in obtaining these data can marginalize the initial reason for purchasing insurance (i.e.,
+the timely indemniﬁcation of a loss).
+
+After the growing season or harvest, region yield data that are used to calculate indemnity triggers must be
+published. Trigger yields for each level of coverage must be announced. As is the case for all claims, indemnity
+payments and dates must be documented.
+
+Area yield products usually rely on third-party data collections. Hence, the methods used to collect these data must
+be well-understood. In addition, it is critical that such data are gathered using consistent methods over time.
+
+3.1.2.2. Area Revenue Insurance Data: In addition to data required for area yield insurance, area revenue
+insurance requires data on area or regional revenue per unit insured. That is, average commodity prices for a
+region must be established in order to calculate expected area revenues and to provide indemnity triggers. The
+same third-party data issues that affect the collection of yield data are also relevant for the establishment of
+price data used in revenue insurance products.
+
+3.1.2.3. Price Insurance Data: Price insurance is generally a livestock-related (e.g., cattle, sheep, and hogs)
+product. Such products are usually based on the number of animals marketed by an individual. However,
+expected prices and indemnity triggers are based on national or regional market price outcomes. Consequently,
+these products have both individual and group or area components attached to them.
+
+
+
+
+                                                                                                MANUAL 3           15
+In addition to data required for all insurance products, additional data needed include:
+     • Numbers of livestock to be insured;
+     • Physical description of livestock (e.g., quality, expected weight at time of sale);
+     • Livestock price when insurance is purchased;
+     • Expected livestock price at date of sale;
+     • Actual livestock price at date of sale;
+     • Price coverage level/deductible selection farmer;
+     • Premium rate;
+     • Premium subsidy (if any);
+     • Indemnity amounts (if relevant).
+3.1.2.4. Weather Index Product Data: Weather index products may address single or multiple metrics. Single-
+weather products may have “all or nothing” indemnity payments and may be based on rainfall indices, temperature
+(heat or cold), or transpiration (a combination of rainfall and heat). That is, if a measured value is below a trigger
+value, then indemnities are paid in their entirety. Data required for such products are typically temperature
+measurements at speciﬁc times within a region or close proximity to the insured property. Weather stations often
+provide these data.
+
+Dual-trigger single-weather index products may provide prorated indemnities depending upon outcomes that
+occur between two different triggers. For example, a dual trigger of high and low rainfall could be used to
+calculate an indemnity that could be prorated depending upon the closeness of the observation to the high or
+low trigger levels.
+
+Multiple-weather index products can be developed to insure against both temperature and precipitation
+outcomes with single or dual triggers. These could be “all or nothing” products or they may provide prorated
+indemnities. Once again, data are usually obtained from weather stations.
+
+These products require particular attention to timing issues related to weather measurements. That is,
+temperature and precipitation triggers may be established based upon available reporting measurements within
+the context of a single point in time, over a single day, throughout growing seasons, or on an annual basis.
+
+3.1.2.5. Satellite Imagery Data: Satellite imagery is generally used for measuring vegetative growth. This
+proxy insurance product is based on correlations between vegetative measurements and yield outcomes. The
+use of satellite imagery involves substantial costs and generates huge amounts of data that must be carefully
+managed. In addition, satellite imagery can be interrupted for extended periods of time and inﬂuenced by cloud
+cover and other atmospheric phenomena. Furthermore satellite imagery data must be calibrated to accurately
+reﬂect crop yield losses.
+
+3.1.3. Margin Insurance Data Needs: Similar to price insurance, margin insurance can have individual and
+group elements included in terms of data requirements. However, because margin insurance is designed to
+mitigate the risk that differences between livestock revenues and livestock production costs may narrow, a
+variety of additional data are needed, including:
+     • Historical average input requirements;
+     • Expected input prices;
+     • Estimated input expenditures during the current growing season;
+     • Selected margin coverage level/deductible.
+
+
+
+
+16       DATA AND INFORMATION MANAGEMENT
+3.2.      Operational Data Needs
+The operational aspects of agricultural insurance programs require accurate and timely data to perform business
+functions and provide information for the evaluation of business effectiveness. Program management and
+transparency are greatly enhanced by appropriate business management information systems.
+
+3.2.1. Functional Needs: The operational functions of agricultural insurance programs include sales and
+application processes, underwriting, ﬁeld audits and loss adjustments, claims processing, and dispute resolution.
+
+Sales and application processes require a structure for recording sales, contract responsibilities, producer
+information, insured crops, and product details. Operational management requires that such information be
+readily accessible by managers.
+
+Underwriting activities are highly data dependent. Data and information regarding agronomic practices,
+contractual obligations, and production histories are critical for appropriate underwriting. In addition,
+underwriting activities meet speciﬁc data processing premium rates, coverage levels, and indemnity triggers.
+Many aspects of underwriting are regionally speciﬁc. Hence, information and data are often needed throughout
+a region where coverage is being offered.
+
+Field audits and loss adjusting represent substantial functions of business operations in agricultural insurance
+systems. Loss claims need to be quickly recorded and addressed by loss adjusters. Field audits are needed to
+ensure that crops are planted and best management agronomic practices are followed need to be carefully
+organized and monitored. In addition, loss adjusters must verify losses and their causes. This operational
+process requires access to data and information related to speciﬁc insurance contracts and accurate land
+descriptions.
+
+After losses and their causes have been veriﬁed, claims processing becomes the most visible aspect of
+agricultural insurance systems from the perspective of a producer. Indemnity payments must be consistent and
+transparent with respect to contracts that have been sold. Producers need to understand the reasons for and
+size of indemnity payments, as well as the timing of those payments. This operational aspect is likely to be the
+most important element for establishing trust in agricultural insurance programs.
+
+
+
+
+                                                                                               MANUAL 3            17
+Finally, the business operations of agricultural insurance programs must
+provide a clear and transparent process for dispute resolution. Disputes
+often occur over ambiguous underwriting rules and inconsistent or
+inaccurate data and information management. Data systems must be
+developed to minimize discrepancies and errors created during sales and
+loss adjustment processes. Random secondary ﬁeld audits should be
+included as a standard management practice. Producers should have
+clear and concise instructions for appealing decisions, and underwriting
+rules should clearly identify a formal review process. Resolution
+outcomes should be communicated quickly and completely between both
+parties in a dispute.
+
+3.2.2. Informational Needs: A variety of information needs to be
+collected and managed for the effective operational control of agricultural
+insurance programs. Informational needs include the identiﬁcation of
+best management practices regarding various agronomic activities,
+legal contractual obligations, and underwriting procedures. Personal
+information regarding the identiﬁcation of agricultural producers and land
+parcels are critical informational needs. The ability to link or combine
+data sets seamlessly is an important aspect of data management.
+
+In addition, the storage, backup, and movement of information must
+be part of operational planning processes. Forms and applications may
+be stored in paper or electronic formats (or both). The identiﬁcation of
+producers must be clearly established and the legality of signatures and
+ownership claims must be veriﬁed.
+
+3.3.       Reinsurance Data Requirements
+Reinsurance is the process of transferring risk to another entity. Most
+agricultural insurance programs need to have at least part of their book of
+business reinsured by other companies because most private agricultural
+insurance issuers lack the ﬁnancial resources to accept the risk of crop
+insurance liabilities. In addition, agricultural insurance products do not
+represent sufficient diversiﬁcation opportunities to reduce risk exposure.
+Weather-related events often affect broad regions and are not usually
+speciﬁc to certain crops. Hence, indemnities are often highly correlated
+across regions.
+
+Other types of insurance (e.g., casualty, life, health) have risks that are
+not highly correlated with agricultural insurance. Reinsurance companies
+build risk portfolios that have low correlations among adverse outcomes
+across products, regions, and time. Thus, companies with such portfolios
+can often add agricultural insurance risks without greatly increasing their
+overall risk exposure.
+
+Agricultural insurance providers will likely need to develop reinsurance
+submissions to cede risk to more diversiﬁed and larger companies. Data are
+needed to quantify the amount of risk and the quality of the program so that
+reinsurers are willing to accept this risk. The quality of data and program
+control can result in faster acceptance and lower costs for ceding risk.
+
+3.3.1.   Reinsurance Submission
+
+Reinsurance submission processes are highly conﬁdential and speciﬁc to
+each reinsurer. The goal of a reinsurer is to keep the costs of acquiring
+risk low while charging rates that compensate them for these costs and
+added risk acceptance.
+
+
+
+18       DATA AND INFORMATION MANAGEMENT
+In general, reinsurance submissions contain descriptions of each product along with competitive issues,
+usefulness, and viability. The market size, needs, uses, and design of each product are usually detailed as well.
+
+In terms of data needs, the bulk of reinsurance submissions will present actuarial documentation, product
+administration, underwriting, and loss adjustment information. Each of these factors is critically related to
+accurate and comprehensive data collection and security.
+
+3.3.1.1 Actuarial Documentation: This component of a reinsurance submission consists of descriptions and
+documentation of data, rating methods, assumptions, and often a rating example. A major component of
+this section involves a discussion of data used for rating, including a description of methods used to establish
+premium rates.
+
+Actuarial documentation often involves a discussion of risks associated with both rates and premiums. Once
+again, this is a product of historical data. Historical data are generally used to simulate a book of business based
+upon actual or simulated loss histories. The efficacy of this particular section is greatly enhanced by accurate
+data descriptions and documentation.
+
+3.3.1.2. Product Administration: Product administration is also highly data intensive. Not only would this
+section of a reinsurance submission include issues related to data management, but also to record keeping,
+conﬁdentiality, and accounting systems. The timing of sales, processing, and indemnity payments would also be
+included in this section. Performance reviews of personnel who monitor and manage this product also involve
+proper documentation and data management.
+
+Financial documents—including income statements, balance sheets, and cash ﬂow statements of the primary
+insurer—would be included in this section and also require accurate data management. To a great extent, the
+competency of ﬁrms involved in agriculture insurance sales is reﬂected in the accuracy and completeness of
+product administration.
+
+3.3.1.3. Underwriting: A reinsurance submission would include a section that describes underwriting
+processes. Speciﬁcally, the policy provisions of each product would be outlined in this section. Such provisions
+include issues related to required best management practices by those purchasing insurance products, a
+schedule of deadlines including sign-up and premium dates, and other important events such as rules for early
+and late planting dates and harvest windows. Any legal or policy issues that currently exist with respect to
+products should also be documented in this section.
+
+3.3.1.4. Loss Adjustment: The purpose of loss adjusting is to assess claims (i.e., monitoring, ﬁeld management,
+gathering and verifying data, involvement in the underwriting process, and producer education). Procedures
+and personnel used for loss adjusting are important components to a reinsurance submission. For example,
+loss adjusters may be provided by government entities or by insurance companies. Alternatively, loss adjusters
+may be certiﬁed independent contractors. Loss adjustment procedures and documentation need to be clearly
+identiﬁed. Continued education of loss adjusters needs to be speciﬁed. In addition, compliance issues with other
+government programs may be a component of loss adjustment processes and procedures for validating loss
+adjustment decisions and must be clearly identiﬁed.
+
+3.3.2.   Data Reporting and Auditing Requirements
+
+Reinsurance agreements specify various data reporting and auditing requirements. These requirements ensure
+accurate payment of reinsurance premiums and reinsurance indemnity obligations. In many cases, a reinsurer’s
+gross liability may be limited by reinsurance agreements.
+
+Reinsurance agreements also stipulate liability and indemnity reporting schedules. For example, the expected
+total liability prior to the reinsurance attachment is usually speciﬁed. In addition, total liabilities incurred as
+a result of product sales need to be reported immediately after sales closing dates. If preliminary indemnity
+payments are due, forecasts for ending indemnity payments should also be made. Regular crop and growing
+condition reports and indemnity forecasts need to be made throughout growing seasons. The ﬁ nal report
+should be received shortly after harvest and prior to the reinsurance payment notiﬁcation.
+
+Data and business systems need to be developed that allow for reinsurers to audit transactions, verify liabilities,
+and provide indemnity payments. In most cases, reinsurers prefer the opportunity to monitor these accounts
+online and in real-time. However, these requirements vary by reinsurer and by government regulators.
+
+
+                                                                                                 MANUAL 3             19
+4.0.       Data Sources
+Data used in designing, operating, and maintaining agricultural insurance
+programs are obtained from three sources: (1) individual farms, (2)
+agricultural insurance systems, and (3) third parties. Each of these
+sources provides unique value and complications.
+
+Accuracy, conﬁdentiality, and consistency are critical components for
+data collection. Data must be carefully evaluated and cross-checked
+with related observations to ensure accuracy. Conﬁdentiality of farm-
+level data must be assured. In addition, the data collection methods
+and activities of third-party sources must be understood by those who
+depend on that data for rating and underwriting.
+
+Another critical element involves transparency. Although conﬁdentiality
+must be maintained for individual producers, summary data must be
+reported so that participants and other stakeholders are conﬁdent
+that insurance decisions are based on data outcomes. Furthermore,
+data management systems must be able to document changes in farm
+ownership, production practices, new producers, and land use.
+
+Program integrity is also important. The accuracy and consistency of
+data collection is paramount for the integrity and viability of agricultural
+insurance programs. Both factors affect the amount of trust that
+stakeholders have in such programs. Data must be gathered and reported
+in a timely manner. The accuracy of data must be carefully evaluated,
+and data adjustments or procedural changes must be transparent and
+credible. Data revisions must always be considered within the context
+of their inﬂuence on indemnity payments and rating. This is especially
+relevant for area yield and revenue insurance products for which data
+revisions frequently occur. The purpose for those revisions must be clear
+and their impacts on proposed or actual indemnities must be evaluated.
+
+Finally, the storage format (i.e., paper or electronic) along with the length
+of time that information should be stored need to be carefully considered
+when establishing agricultural insurance programs.
+
+4.1.       Farm Data
+Farm-level data provide important information for crop insurance
+programs but are also hampered by accuracy, continuity, and short time
+periods. Farm-level data are needed to develop individual insurance
+products and for rating purposes. These data are equally necessary for
+updating and evaluating actuarial soundness over time. Necessary farm-
+level data include producer identiﬁcation and product choices, liability
+determination, management practices, annual production, and claim
+initiation.
+
+4.1.1. Producer Descriptions and Insurance Choices: Information
+must be obtained regarding a producer’s or entity’s name, identiﬁcation
+number, correspondence address, and age. Other documentation may
+be needed to establish compliance with environmental regulations and
+participation in other government agricultural programs. Total acreages
+of each crop are also needed if a producer is required to insure all acreages
+within a speciﬁc program.
+
+In addition, descriptions of insurance products selected for each covered
+crop, coverage and deductible selections, co-payment selection, and other
+special provisions must be recorded.
+
+
+20      DATA AND INFORMATION MANAGEMENT
+4.1.2. Liability Determination: It is necessary to obtain information regarding the total liability associated
+with each contract that a producer has purchased. Total liability can only be determined if the following factors
+are identiﬁed:
+   • A description of each area planted to each crop;
+   • Historical yield data for each speciﬁc area and for each crop for all growing seasons.   Such data should
+      include yields for consecutive years for annually planted crops. For rotational crops, yields are needed for
+      consecutive growing seasons. And, in cases that involve more than one crop within a growing season,
+      yield data for consecutive growing seasons are also needed;
+   • Whole farm historical income and input expenditure data if whole farm income of margin products are
+      being offered;
+   • Management practices implemented on the farm including timing of ﬁeld activities.
+4.1.3. Best Management Practices: A variety of management practices must be documented as part of data
+collection activities. For example, documentation is needed for:
+   • Irrigation practices, including evidence that appropriate irrigation timing and application occurred;
+   • Planting dates, which may include documentation that a crop was not planted too early during a growing
+      season (which could cause frost damage) nor too late (which could result in too few days for crop maturity);
+   • Completion data for required practices such as fertilizer and herbicide applications, when this is a required
+      production practice;
+   • Crop harvest date.
+4.1.4. Claim Initiation: For an agricultural insurance program to remain viable, producers must report yields for
+each growing season regardless of whether they initiate a claim for loss. This practice is necessary so that a
+producer’s yield history can be updated. If an indemnity claim is initiated, then producers must report yields at that
+time; these need to be veriﬁed during the loss adjustment process. If an indemnity claim is not initiated, yields can
+either be reported after harvest by a producer or when the next insurance contract is signed. However, producers
+must be able to document yields, and processes need to be developed to verify that documentation.
+
+It is also important to have a system that cross-checks reported yields with other unbiased information. For
+example, some agricultural insurance programs spot check yields from a sample of farms whether or not
+indemnity claims have been initiated. Loss adjusters then visit those farms during harvest seasons to assess
+actual yields. Reported yields are then compared to those assessed by the loss adjuster. These approaches help
+provide incentives for accurate reporting.
+
+
+
+
+                                                                                                  MANUAL 3           21
+4.2.         Agricultural Insurance System Data
+A variety of data need to be recorded and developed within agricultural insurance systems, including:
+     • Eligibility requirements to determine whether or not a farmer is eligible to purchase a product. These
+         eligibility requirements are deﬁned by the insurance provider and/or the regulatory agency that oversees
+         the provision of insurance;
+     • Premiums and coverage options established by the insurance company and/or the government agency
+         that develops the product;
+     • Field monitoring and annual production data veriﬁcation provided by the crop insurance system through
+         the use of loss adjusters and crop inspectors;
+     • Indemniﬁcation amounts and premium co-charges or discounts, which need to be clearly described by
+         insurance providers;
+     • Uninsured causes of loss.      Such information can be provided by loss adjusters and crop inspectors and
+         are critical for accurately updating yield histories or determining whether changes in program or product
+         design are needed.
+
+4.3.         Third-Party Data
+Third-party data are particularly necessary for evaluating crop values and, in cases of margin or proxy insurance
+products, identifying input costs or quantities. That is, the costs of compensating a yield loss by replacing
+the physical commodity are prohibitive. Rather, yield losses are more effi ciently “replaced” using monetary
+equivalents. However, moral hazard issues related to individual crop pricing are too severe for the development
+of affordable crop insurance products. Hence, yield losses need to be valued through the use of price data
+that cannot be altered by any individual, but which reﬂect reasonable values across each product and region.
+Therefore, third-party data are frequently used to establish commodity and input prices.
+
+In many cases, third-party data are not always available for a given region or country. In these cases, data are
+often obtained from other countries. However, this practice introduces exchange rate variability into indemnity
+calculations. Furthermore, substantial basis risk exists between countries, and such risk can be quite variable
+throughout any given year.
+
+Third-party data are often obtained from satellites and weather stations. Observations regarding rainfall,
+temperature, and vegetative growth are often used as proxies for yields. However, the value of these
+observations not only depends on their correlations with actual yields, but also on an uninterrupted pipeline
+of data. Satellites and weather stations may experience mechanical or electronic failures. This can inhibit
+data updating and completeness. In addition, these interruptions can result in delayed indemnity calculations
+and payments. Finally, relying on single-source third parties for critical data is risky, as catastrophic failures of
+programs can occur if public policy changes or corruption within the management of those sources restricts
+data access.
+
+4.3.1.    Commodity Prices: A variety of third-party sources exist for determining commodity prices, including:
+     • National Government Sources (e.g., Ministry of Agriculture, National Statistical Service, Census Bureau,
+         Bureau of Economic Analysis, Customs and Excise Office, Internal Revenue Service, etc.);
+     • Commodity Market Exchanges (e.g., Winnipeg Commodity Exchange, Chicago Mercantile Exchange,
+         Minneapolis Grain Exchange, Kansas City Board of Trade, SAFEX, Africa Mercantile Exchange, Brazilian
+         Mercantile and Futures Exchange, NYSE Liffe, Australian Securities Exchange, Tokyo Grain Exchange);
+     • Local market surveys;
+     • Farm organizations.
+However, prices must be relevant or highly correlated with insured product prices. For example, the Minneapolis
+Grain Exchange provides futures market data for 13.5% protein spring wheat. However, many other wheat
+classes are produced, and prices for those need to be assessed. In addition, futures market prices for any given
+month change minute-to-minute, and monthly contracts expire throughout a year. Additionally, futures
+markets prices for the delivery of a commodity at harvest can vary greatly between the time in which an
+agricultural insurance contract is signed and harvest actually occurs. Consequently, it is important to establish
+the precise methods that are to be followed when using third-party data.
+
+22        DATA AND INFORMATION MANAGEMENT
+4.3.2. Input Prices: Margin products require information about the price of inputs such as energy, fertilizer,
+machinery and equipment, feed, hired labor, contract services, etc. Not only are these prices highly variable
+across years, regions, and input quality, but a consistent source of these prices are often difficult to obtain.
+Depending upon the input price of interest, sources include:
+   • National governments (e.g., Ministry of Agriculture, National Statistical Service, Census Bureau of
+      Economic Analysis, Customs and Excise Office, Department of Labor, etc.);
+   • Commodity Market Exchanges (e.g., New York Mercantile Exchange, Africa Mercantile Exchange, APX-
+      ENDEX, European Energy Exchange, Australian Securities Exchange);
+   • Local market surveys.
+4.3.3. Proxy Index Data: Proxy index products do not measure yield losses directly. Rather, indemnities are
+triggered when certain proxies for yield do not meet speciﬁc targets. For example, proxy index products may
+insure against precipitation, temperature, and remote-sensed vegetative growth outcomes that either exceed or
+do not meet certain levels.
+
+Such measurements are often obtained from weather stations or satellite imagery. Nonetheless, problems
+exist when using such data. That is, weather station data may not be consistently reported or may be subject
+to interruption. In addition, the correlation of these data with actual micro-climate outcomes can vary over
+time. Finally, a number of problems can occur with the use of satellite imagery, including cloud cover and other
+atmospheric conditions that can inﬂuence the accuracy of measurements.
+
+Satellite hardware and digital signals are subject to depreciation and degradation. In addition, satellites have
+ﬁnite lengths of service and plans may not exist for physical replacement or software updating. Furthermore,
+satellite readings must be initially mapped with actual yields. These mappings may need change over time
+because of variances in mechanical functions and satellite orbits. Calibration and orbital variations can inﬂuence
+the consistency and usefulness of satellite-sourced data. Hence, data systems based on these third-party
+providers need to accommodate these variations. Finally, the pipeline must also be dependable so that transfer
+is not interrupted by mechanical, political or corruption transfer issues.
+
+Weather data may be obtained from the Global Summary of Day (GSOD) system or the Global History Climate
+Network – Daily (GHCND) program. GSOD data are free of charge to non-commercial users and are derived
+from global integrated surface data. Information from over 9,000 weather stations is currently available. Some
+of these stations have been reporting data since 1929. These stations include many airport and city locations
+worldwide. Various daily summary observations such as temperature, dew point, wind speed, air pressure,
+visibility, and precipitation are gathered by the GDOD system. The data are updated daily within one to two
+days after the date of observation.
+
+The GHCND database provides historical daily weather data over global land areas. It reports a composite of
+climate records from numerous sources that are merged before being subjected to quality assurance reviews.
+Data archives include daily maximum temperatures, daily minimum temperatures, temperature at time of
+observation, precipitation (rainfall and snow water equivalents), snowfall, and snow depth. Some GHCND
+data are exchanged under the World Meteorological Organization (WMO) World Weather Watch Program as
+stipulated by WMO Resolution 40. WMO member countries can restrict the use of that data for commercial
+purposes outside of the receiving country.
+
+Historical weather data often contain unrealistic observations, missing observations, and other errors. This
+requires that weather data be carefully screened before being used for rating and underwriting purposes. Missing
+observations must be appropriately adjusted and unrealistic outliers must be altered to avoid rating errors.
+
+Weather datasets contain huge numbers of observations. For example, if ﬁfty years of daily data are available,
+then 18,000 observations for each measured variable are available for an individual weather site. Consequently,
+automated computer processes must manage, update, and process these large numbers of observations.
+
+
+
+
+                                                                                               MANUAL 3            23
+5.0.            Data and Information Files
+In addition to accessing large quantities of high-quality data for rating
+and indemniﬁcation purposes, successful agricultural insurance programs
+must manage information on individual producers. Management
+information systems must not only be developed to record yield
+information efficiently, but a plethora of documentation is also necessary
+for veriﬁcation and administrative purposes. Although a variety of
+methods can be used, it is instructive to consider the details of a speciﬁc
+example to illustrate the scope and scale of documentation needs.
+Management information systems must be designed to account for
+operational realities, provide for the needs of the crop insurance system
+and be consistent with product design and underwriting.
+
+5.1.           An Example from the United States
+The U.S. agricultural insurance program uses multiple data collection
+processes. Insurance issuing agencies construct a data ﬁle and transmit
+it to government agencies at speciﬁed time periods. Depending upon
+participation, multiple ﬁles may be constructed for an individual producer.
+These ﬁles are conﬁdential and submitted for each year that insurance
+is purchased. Given the scale of the endeavor, it is important that
+management information systems are thoroughly evaluated so that data
+are organized efficiently from the beginning of the program.
+
+There are nine primary and several other minor data ﬁles used by the U.S.
+system. In total, each contract contains 435 potential primary data ﬁeld
+although some ﬁelds are duplicative. Table 5.1 presents the nine ﬁle types
+used in the United States and the accompanying number of data ﬁelds for
+each. The table also indexes the ﬁle name attached to each type and a
+brief description of the ﬁle type contents.
+
+                                                             Table 5.1. U.S. File Types
+
+                                                                      Number of
+        File                                                           Producer
+                    File Name               Description
+       Type                                                            Obtained
+                                                                      Data Fields
+        10         Policy Record            Producer Details                46
+         11       Acreage Record             Policy Details                 93
+                                       Policy Premium Payment
+        12        Payment Record                                            12
+                                                 Details
+        15          Yield Record        Insured Historical Data             93
+                                      Loss or Indemnity Payment
+        20       Loss Total Record                                          35
+                                                History
+        21            Loss Line         Loss Details and Cause              82
+                    Settlement/
+        25                                  Appeals Record                  17
+                     Arbitration
+        55          Agent Data             Agent Description                40
+        56       Loss Adjustor Data   Loss Adjustment Description           25
+
+
+
+Most of these ﬁle types are used for administrative, rating, or actuarial
+purposes, and do not change within a given year for speciﬁc products.
+However, a recording of this documentation is essential for avoiding and
+resolving disputes. The most relevant ﬁle type for this manual is ﬁle
+type 10. An example of ﬁle type 10 is presented in Table 5.2. File type 10
+contains forty-six ﬁelds, some of which are simply blanks to maintain ﬁle
+integrity. A total of thirty-eight ﬁelds contain usable data.
+
+24            DATA AND INFORMATION MANAGEMENT
+The following provides a description of each ﬁeld:
+   • Field 1: Record Type. This ﬁeld must be completed with a “10” for this File Type.
+   • Field 2: Approved Insurance Provider. A two-digit code number that represents the name of the insurance
+      provider.
+   • Field 3: Location State. A two-digit code for each of the ﬁfty U.S. states.
+   • Field 4: Policy Issuing Company. In some cases, an approved insurance provider will subcontract with
+      another company for the purposes of issuing policies. This ﬁeld allows that information to be recorded.
+   • Field 5: Policy Number.
+                           A 7-digit policy number must be assigned for each separate policy. Hence, a single
+      producer may have several policy numbers and, therefore, several Type 10 ﬁles for any given year.
+   • Field 6: Crop Year. Crop years usually coincide with the year that an insurance contract is issued.
+                                                                                                       The
+      exception occurs with winter crops in which a crop is planted in one year, but not harvested until the
+      following year.
+   • Field 7: Type 10 Key Reserve. Field 7 is currently reserved for future use.
+   • Field 8: Record Number. A value of “001” is entered when an individual has a “substantial business interest”
+      in the crop, deﬁne as at least 10% business interest in the crop. If a 1/3-2/3 landlord/tenant crop share
+      lease were involved, then the producer would have 66% business interest in the crop. In these cases,
+      landlords and tenants would have separate File Type 10s.
+   • Field 9: Branch Office.
+                           Many agricultural insurance companies have branch offices. This ﬁeld indicates the
+      branch location where the policy was sold.
+   • Field 10: ID Type.This ﬁeld indicates the type of personal identiﬁcation number being used the purchaser.
+      In the United States, this number is usually a social security number, but other identiﬁcation numbers may
+      also be used.
+   • Field 11: ID Number.   This ﬁeld is populated with an identiﬁcation number for the person purchasing the
+      contract.
+   • Field 12: Entity Type. Indicates the type of ownership that exists on the property for which the contract is
+      being purchased. Examples in include “corporation,” C, and “individual,” I.
+   • Field 13: Producer Last Name. The purchaser’s last name.
+   • Field 14: Producer’s First Name. The purchaser’s ﬁrst name.
+   • Field 15: Producer’s Middle Name. The purchaser’s middle name.
+   • Field 16: Producer Name Suffix. The purchaser’s suffix (if any).
+   • Field 17: Producer Title. The purchaser’s title (if any).
+   • Field 18: Business Name. The purchaser’s business name (if different from the purchaser’s name).
+   • Field 19: Address Line 1. The purchaser’s primary address.
+
+
+
+
+                                                                                                MANUAL 3            25
+     • Field 20: Address Line 2. Additional address information (if any).
+     • Field 21: City. The purchaser’s city address.
+     • Field 22: State. The purchaser’s State address.
+     • Field 23: Zip Code. The purchaser’s ZIP code.
+     • Field 24: Zip Extension. The purchaser’s ZIP code extension.
+     • Field 25: Phone Number. The purchaser’s phone number.
+     • Field 27: Ineligible SBI Flag. If a “Y” is entered in this ﬁeld, then the applicant is not eligible to purchase a
+       policy. A person may be ineligible because of previous insurance fraud convictions.
+     • Field 28: Filler. Must be blank .
+     • Field 29: Ineligible SBI Share. Percentage ineligible if “Y” is entered in Field 27.
+     • Field 30: USDA Common Customer ID. Reserved for internal uses related to eligibility.
+     • Field 31: Uninsurable SBI Flag. Used in cases where a valid ID number has not been provided.
+     • Field 32: Filler. Must be blank.
+     • Field 33: Successor-In-Interest. Indicates the successor of interest to whom the check for indemnity
+       payment will be sent if a purchaser dies during the year.
+     • Field 34.   Previous Policy Number. Used for cases in which a Sucessor-In-Interest was relevant in previous
+       years.
+     • Field 35. Filler. Must be blank.
+     • Field 36. SSN Validation Flag. Used for internal social security number editing.
+     • Field 37. Measurement Service Flag. An indicator of whether or not the acreage was actually measured or
+       whether a producer’s estimate of acreage is being used.
+     • Field 38. Filler. Must be blank.
+     • Field 39. FCIC Control Time. Internal use.
+     • Field 40. FCIC Control Date. Internal use.
+     • Field 41. Reinsurance Year. Internal use.
+     • Field 42. Batch Number. Internal use.
+     • Field 43. Transaction Sequence. Internal use.
+     • Field 44. Transaction Rejected Flag. Internal use.
+     • Field 45. Transaction Source Flag. Internal use.
+     • Field 46. Filler. Must be blank.
+Type 10 ﬁles document and identify the purchaser of a speciﬁc contract. The Type 11 ﬁle records acreage
+information, including identifying land parcels. The Type 12 ﬁle documents premium payments, while Type 15
+ﬁles record yield histories. Type 20 ﬁles document losses and indemnity payments and Type 21 ﬁles document
+losses and their causes. Type 25 ﬁles are used for settling disputes, and type 55 and 56 ﬁles provide data on the
+issuing insurance agent and loss adjuster, respectively. The documentation regarding these ﬁles can be found at:
+http://www.rma.usda.gov/data/m13/.
+
+The above discussion and examples illustrate several points. First, all crop insurance programs must manage
+a plethora of data and documentation. Second, a great deal of planning is needed to operationalize such
+programs. Third, successful crop insurance programs grow and change. Data management systems must
+adapt to change. Fourth, the U.S. system is relatively clumsy as a result of growth and technological change
+since program initiation. When the system was ﬁrst launched, computer usage was in its infancy and most
+recordkeeping involved paper copies. As data needs grew and technology changed, the system had to adapt to
+the use of electronic databases. Better systems can be developed using current technology, but ﬂexibility must
+be built into such systems.
+
+
+
+
+26       DATA AND INFORMATION MANAGEMENT
+                                                                       Table 5.2. FCIC Policy Record – Type 10 File
+ Field                            Beginning
+                                                                                      Field Edits
+Number       Field Name            Position   Size   Picture
+   1         Record Type              1        2      9(02)                      Required. Must be 10.
+          Approved Insurance
+  2*                                  3        2      X(02)            Required. Edit with AIP/Company table.
+               Provide
+  3*        Location State            5        2      9(02)               Required. Edit with FIPS State table.
+                                                               Required. Edit with company table. Must be valid PIC
+  4      Policy Issuing Company       7        3      9(03)
+                                                                                   code for reinsurance year.
+  5*         Policy Number           10        7      9(07)                       Required. Must be > zeros.
+                                                               Required. Must be the crop year of the crops reported
+  6*           Crop Year             17        4      9(04)     under the policy. This will equal the Reinsurance Year
+                                                               or Reinsurance Year +/- 1 for the applicable crop code.
+                                                                Space reserved for additional key data required in the
+  7       Type 10 Key Reserve        21        55     X(55)
+                                                                              future or for other record types.
+                                                                  Required. Must be > zero. Only one record number
+  8         Record Number            76        3      9(03)    “001” is permitted. Record numbers 002-999 are used
+                                                                                       to report SBI entities.
+                                                                  Required. Reinsured organization branch office for
+  9          Branch Office           79        2      X(02)
+                                                                  record 001. Record 002 or greater must be spaces.
+                                                                         Required. Must be one of the following:
+                                                                                                 1 = SSN,
+                                                                                                 2 = EIN,
+  10*           ID Type              81        1      9(01)
+                                                                                         3 = RMA Assigned,
+                                                                                          5 = BIA Number.
+                                                                        (See Exhibit 10-1 for valid combinations)
+                                                                         Required. Must be one of the following:
+                                                                                         1 = SSN (numeric),
+                                                                                   2 = EIN (Numeric, > zero),
+  11*         ID Number              82        9      X(09)                 3 = RMA Assigned (MGR-05-008),
+                                                                       5 = BIA Number (may be alpha-numeric).
+                                                                        (See Exhibit 10-1 for valid combinations)
+                                                               See note at end regarding Non-Citizen SSN Reporting.
+                                                                        Required. Must be one of the following:
+                                                                                        A = Public Schools,
+                                                                                  B = Bureau of Indian Affairs
+                                                                                          C = Corporation,
+                                                                                              D = Estates
+                                                                  E = Associations, Clubs, Private Schools, and/or Tax
+                                                                             Exempt Organizations (religious)
+                                                                      F = Transfer of Right to Indemnity (SBI only)
+                                                                                  G = Receiver or Liquidator,
+                                                                                   H = Public Agency – State
+                                                                                             I = Individual
+  12          Entity Type            91        1      X(01)          J= Joint Operators/Co-Owners/Joint Venture
+                                                                               L = Landlord/Tenant (SBI only),
+                                                                                           P = Partnership
+                                                                                       R = Revocable Trusts,
+                                                                                      S = Spousal – Married
+                                                                                      T = Irrevocable Trusts
+                                                                 U = Undivided Interests Valid for Cat Coverage Only
+                                                                                 V = Public Agency – County,
+                                                                                        W = Public Agency
+                                                                         X = Individual Operating as a Company
+                                                                           Y = Limited Liability Company (LLC)
+                                                                        (See Exhibit 10-1 for valid combinations)
+                                                                   Required if ﬁeld 18 (Business Name) is blank. Left
+                                                                 justify. Use for personal names only. Entries require
+  13      Producer Last Name         92       20      X(20)
+                                                                a minimum of 2 characters. Only one name per ﬁeld.
+                                                                               Alpha including (-), (.), ( ), (‘), (,).
+                                                                  Required if ﬁeld 13 is not blank. Left justify. Use for
+                                                                  personal names only. Only one name per ﬁeld. For
+  14      Producer First Name        112       10     X(10)        entity type ‘J’ there can be two ﬁrst names. Alpha
+                                                                                           including (-), (.),
+                                                                                                ( ), (‘), (,).
+                                                               Optional. Left justify if reported. Alpha including (-), (.),
+  15     Producer Middle Name        122       10     X(10)
+                                                                          ( ), (‘), (,). Leave blank if not reported.
+
+                                                                                                  MANUAL 3                27
+                                                              Optional. Left justify if reported. The name suffix of
+     16        Producer Name Suffix     132   5     X(05)     the producer (e.g., SR, JR, II, etc.). Alpha including (-),
+                                                                            (.), ( ), (‘), (,). Otherwise, spaces.
+                                                                Optional. Left justify if reported. The title of the
+     17           Producer Title        137   4     X(04)    producer (e.g., MR, MRS, DR, etc.). Alpha including (-),
+                                                                            (.), ( ), (‘), (,). Otherwise, spaces.
+                                                               Required if ﬁeld 13 is blank. Left hustify. Use for all
+     18           Business Name         141   35    X(35)    Entity Types except individual persons. Alphanumeric
+                                                                  including (-), (,), (.), ( ), (‘), (&), (%), (*), (+), (#).
+                                                              Required. Left justify. Alphanumeric including (-), (,),
+     19           Address Line 1        176   35    X(35)
+                                                                                    (.), ( ), (&), (%), (#), (/).
+                                                              Optional. Left justify. Alphanumeric including (-), (,),
+     20           Address Line 2        211   35    X(35)
+                                                                    (.), ( ), (&), (%), (#), (/). Otherwise. spaces.
+                                                                Required. If state code = ZZ enter foreign city and
+     21                 City            246   35    X(35)
+                                                                                     country. Left justify.
+                                                              Required. Enter alpha state abbreviation. If a foreign
+     22            Address State        281    2    X(02)
+                                                                                       country, enter ZZ.
+     23              Zip Code           283    5    9(05)     Required if State NE ZZ. Must be a valid U.S. ZIP code.
+     24            Zip Extension        288    4    9(04)                    Optional. Otherwise, zero ﬁll.
+     25           Phone Number          292   10    9(10)         Required. If no phone number, enter all ﬁves.
+                                                             For SBI records only. Record number must be equal to
+     27          Ineligible SBI Flag    303    1    X(01)     or greater than 002. Enter Y if SBI Entity is ineligible
+                                                                 and share has been reduced. Otherwise, blank.
+     28                Filler           304    2    X(02)                                Must be spaces.
+                                                              Required: For SBI records only with an Ineligible SBI
+                                                     9(01)
+     29         Ineligible SBI Share    306   4              Flag of Y. Must be > 0% and ≤ 1.000. Record number
+                                                    v9(03)
+                                                                 must be ≥ 002. Must be zeros if not applicable.
+                 USDA Common
+     30                                 310   6     X(06)                              Reserved.
+                  Customer ID
+                                                               Enter ‘Y’ on Primary Entity Record, record 001, if an
+                                                              SBI Entity does not have, or does not provide, a valid
+     31        Uninsurable SBI Flag     316    1    X(01)
+                                                              ID Number and share has been reduced. Otherwise,
+                                                                                      spaces.
+     32                 Filler          317    1    X(01)                       Must be a space.
+               Successor-In-Interest                         Application date of successor-in-interest MMDDCCYY
+     33                                 318   8     9(08)
+               (SII) Application Data                               format, else zeros. For current year only.
+                                                               Previous policy number (unchanged or new) before
+                SII Previous Policy
+     34                                 326    7    9(07)    successor-in-interest. Must be > zero if applicable, else
+                      Number
+                                                                                       zeros.
+     35               Filler            333   14    X(14)                        Must be spaces.
+     36         SSN Validation Flag     347    2    X(02)        Internal use. Will be populated during SSN edit.
+               Measurement Service
+     37                                 349    1    X(01)     N = Acreage measurement not provided, else space.
+                       Flag
+     38               Filler            350   201   X(201)                         Must be spaces.
+                                                                  Internal use. Time the transaction batch ﬁle was
+     39         FCIC Control Time       551   4     9(04)      received. (From when transmission started) HHMM
+                                                                                       Format.
+                                                                  Internal use. Date the transaction batch ﬁle was
+     40         FCIC Control Date       555   8     9(08)            received. (From when transmission started)
+                                                                                 MMDDCCYY Format.
+     41          Reinsurance Year       563   4     9(04)           Internal use. Reinsurance year. CCYY format.
+                                                                Internal use. Sequential number identifying the ﬁle
+     42           Batch Number          567   4     9(04)
+                                                                     that was submitted by the AIP to FCIC/RMA.
+                                                                 Internal Use. Sequential number assigned to each
+               Transaction Sequence
+     43                                 571   8     9(08)    transaction number processed by DAS after it has been
+                     Number
+                                                                                       sorted.
+               Transaction Rejected
+     44                                 579    1    X(01)                        Internal. Reserved.
+                        Flag
+     45       Transaction Source Flag   580    1    X(01)                        Internal. Reserved.
+     46                Filler           581   20    X(20)                             Internal.
+
+
+
+
+28        DATA AND INFORMATION MANAGEMENT
+6.0.       Quality Control
+Agricultural insurance programs are heavily dependent upon large
+quantities of accurate data and information. However, much of the
+required data is likely to contain a variety of errors. Therefore, quality
+control processes in terms of data input and security must be developed
+to minimize data errors. The goal of quality control procedures is to
+ensure that products, services, or processes meet speciﬁed requirements
+and are dependable, satisfactory, transparent, and ﬁscally sound.
+
+A variety of data management concerns are associated with quality
+control issues in agricultural insurance programs. Automated error
+notiﬁcations during data entry provide one example. In addition, issues
+related to data transfer, missing data, outliers or aberrations, and
+procedures for updating and revising data must be considered when
+establishing management information systems.
+
+Finally, it should be noted that incorrect observations often have worse
+impacts on the success of a product than having no observations. Thus,
+quality control processes must be able to identify errors. All data should
+be scrutinized and aberrant or missing data should be identiﬁed. In many
+cases, data quality issues can be addressed in appropriate ways that
+maintain the usefulness of information for insurance programs. However,
+the failure to recognize these problems can result in poor underwriting and
+premium rates as well as inconsistent communication with stakeholders.
+
+6.1.      Data Management Concerns
+Management information systems must be developed to automatically
+incorporate quality controls and also allow for human checks on data
+issues. Automated processes can, for example, alert data personnel to
+entries that are outside of reasonable ranges. Frequent presentation
+of data in graphical or tabular form can also identify outliers and
+aberrations. Graphical and statistical processes can also be used to
+identify data that are trending over time and/or whether variations in
+observations are increasing or decreasing over time.
+
+Processes must be developed for the secure, safe, and accurate
+transmission of data among authorized stakeholders. In addition,
+appropriate and clear version controls must be instituted so that incorrect
+additions to data ﬁles can be removed easily. Software and hardware
+updates must be scheduled so that operations are not interrupted and
+that data integrity is maintained. Furthermore, systems need to be
+developed so that they are not dependent on a speciﬁc person as all
+businesses must be prepared for human resource turnover.
+
+Procedures must be developed for the automated updating of a variety
+of data and to accommodate periodic revisions of third-party data.
+Furthermore, methodological changes in third-party data collection
+procedures must be monitored and their potential impacts on product
+design and performance must be evaluated.
+
+The effects of technological change on yields must be continually
+considered. Technological change occurs through the development
+of new genetic varieties, new machinery, and advanced production
+practices. The impacts of climate change, government regulations, trade
+agreements, and land use has important implications for agricultural
+insurance programs as well. Additionally, changing relative input prices
+can affect yields and yield variability.
+
+                                                                              MANUAL 3   29
+6.2.       Data Transfer
+Data sharing is fundamental to agricultural insurance programs because of the wide variety of stakeholders
+involved in these programs. However, not every stakeholder needs access to all data and information. Hence,
+security and conﬁdentiality are important features of data transfer operations.
+
+Data and information transfers occur between:
+     • Farmers and insurance providers;
+     • Insurance providers and regulatory or government agencies;
+     • Organizational units within insurance companies;
+     • Insurance companies and reinsurers.
+The mechanisms for such transfers are varied and include:
+     • Physical transfers through mail or courier;
+     • Protected or unprotected transfers of digital data through physical devices;
+     • Electronic transfers of digital data through encrypted or unencrypted processes;
+     • Telephone and fax technologies;
+     • Local intranets.
+In addition, consideration must be given to which stakeholders have “read only” rights to data versus the ability
+to change data ﬁles.
+
+6.3.       Missing Data
+The nature of crop insurance data often results in missing observations. Missing observations occur because
+producers may have lost or not documented yields in a given year, weather stations may have failed to record
+information for several days, or third-party price reporting may not have occurred consistently.
+
+Within modern electronic databases, such missing data generally should not be coded with an entry of “0”.
+For example, a yield observation may be missing, but yields were not actually zero. Conversely, it is certainly
+possible that a zero is legitimate entry for a yield observation. In addition, the systematic occurrence of missing
+data may be a signal that stakeholders are attempting to hide important information. Consequently, procedures
+must be developed to account for missing observations. In some cases, missing observations are simply ignored.
+In others, a value is entered for the missing entry. This value could be obtained through interpolation of
+surrounding data, or it may an average of other observations which were in a similar region at a similar time.
+
+
+
+
+30       DATA AND INFORMATION MANAGEMENT
+6.4.       Outliers
+Data outliers (aberrations) occur for a number of reasons in crop insurance data, including entry errors, mistakes,
+miscommunication, and poor measurement procedures. Depending upon the volume of data, graphs can often
+reveal outliers. When data volume is large, descriptive statistics can be used to identify outliers. In addition,
+consideration of intertemporal variability and comparisons to related data series can be used to identify aberrations.
+
+Procedures must be developed to account for outliers. In some cases, coding outliers as “missing” may be a
+reasonable approach. In other cases, nearby observations, correlations with related variables, alternative data
+sources, or interpolation can be used to replace outliers with reasonable values.
+
+6.5.       Trending Data
+Technological or other structural changes are often embedded in agricultural data. Such changes are often
+manifested as linear or non-linear trends. In addition, short term changes in government agricultural or trade
+policy can cause short term changes in the levels of agricultural prices or, occasionally, yields. Trends can be
+identiﬁed either through graphing or statistical procedures.
+
+Trends should be accounted for when setting premium rates. If trends are ignored, then premium rates are
+likely to be set too high and/or coverage levels will be less than expected. In addition, trend recognition can help
+identify changing variability of yields or prices.
+
+6.6.       Updating and Data Revisions
+Data and information required by agricultural insurance programs need to be continually updated as new
+information becomes available. Updating information is not only necessary for operational efficiencies, but also
+for evaluating the efficacy of programs and for underwriting revisions. Hence, systems must be developed to
+allow for data to be updated seamlessly and accurately.
+
+Agricultural insurance programs often use substantial amounts of third-party data. Third-party data may be
+in the form of regional yield or price information, weather observations, or satellite imagery. In addition to
+updating data as it becomes available, third-party data are frequently subject to revisions. Methodologies must
+be established to incorporate data revisions obtained from third-party interests. The impacts of data revisions
+on rating, underwriting, and product servicing need to be carefully considered.
+
+
+
+
+                                                                                                 MANUAL 3           31
+7.0.        Data Access and Security
+A critical element of successful agricultural insurance programs relates
+to data access, security, and conﬁdentiality. Initially, these issues are
+related to public policy decisions regarding access. That is, in addition
+to insurance providers, reinsurance companies, product designers, and
+program evaluators need access to some, but perhaps not all, system
+data. However, each of these groups has different needs and, in many
+cases, should be blocked from certain conﬁdential information that is not
+necessary for their purposes.
+
+In terms of implementation, computer hardware and software decisions
+must facilitate appropriate access by different groups. In addition, the
+selection of hardware and software systems must consider costs, ease of
+use, quality control, expansion, and updating actions. Finally, information
+backup and security must be assured in such programs.
+
+7.1.       Information Security
+Information security refers to the protection of information and
+information systems from unauthorized use, access, disclosure,
+disruption, modiﬁcation, or destruction. These issues cross the areas of
+conﬁdentiality, integrity, availability, authenticity, and non-repudiation.
+
+7.1.1. Conﬁdentiality: Protecting information conﬁdentiality is
+a standard business practice. The lack of such protection causes
+businesses and strategies to fail if customers lose trust and conﬁdence
+in business accountability. In addition, conﬁdentiality is an ethical and
+legal requirement in many regions of the world. The privacy of such
+information is a fundamental right and requirement in many societies.
+
+Information security must, therefore, protect the privacy of individuals.
+Maintaining conﬁdentiality necessarily requires preventing disclosure
+of information to unauthorized individuals or systems. In addition, the
+privacy of personal information must be maintained.
+
+7.1.2. Integrity: Another aspect of such systems is that they must
+ensure that data cannot be corrupted by others. Information systems
+need to be designed to ensure that data integrity is maintained. Data
+integrity can be breeched in two ways: (1) the theft of data and (2) the
+corruption of data.
+
+Data integrity requires that systems be developed to keep data from
+being modiﬁed without authorization. Data integrity can be violated in a
+number of ways:
+     • An employee may accidentally delete important data ﬁles;
+     • Computer viruses can infect computer programs;
+     • An unauthorized user can vandalize a web site by corrupting or
+       deleting important ﬁles.
+
+7.1.3. Availability: Management information systems must make
+information available to those who need it in a timely manner. In some
+cases, individuals need access to only a limited amount of the complete
+data set. In addition, it is sometimes sufficient for users to simply view
+data rather than modify it. In other cases, individuals should be allowed
+to view only limited amounts of data.
+
+
+
+
+32       DATA AND INFORMATION MANAGEMENT
+Finally, data must be available on demand. That is, computing systems must be maintained and security
+systems established so that appropriate access is available at all times. Systems must not only function correctly
+but also be protected from disruptions due to power outages, hardware failures, and system upgrades.
+7.1.4. Authenticity: As the electronic sale of agricultural insurance products becomes more common, it is
+essential that purchases, requests, and access are deemed to be genuine rather than forged or the result of
+unauthorized impersonations. Hence, systems must be designed to ensure the authenticity of participants.
+7.1.5. Non-Repudiation: Non-repudiation refers to ensuring that policy purchasers and insurance companies
+fulﬁll their contractual obligations. This requires that each party be unable to deny receiving or ordering a
+transaction. Hence, most electronic commerce uses digital signatures and encryption processes to establish
+authenticity and minimize non-repudiation.
+
+7.2.      Access, Control, and Transparency
+Access to protected information must be restricted only to those who are authorized to view or download
+selected data. Mechanisms must be established to control the access to protected information. The
+sophistication of control mechanisms should be matched to the value of information being protected. More
+sensitive or valuable information requires stronger control mechanisms. Access and control mechanisms must
+also recognize transparency issues. A lack of transparency in the interest of restricting access and improving
+control also reduces credibility and conﬁdence in agricultural insurance programs. Tradeoff s between controlling
+access and transparency are important considerations in designing data systems.
+The foundations on which access control mechanisms are built include issues related to identiﬁcation,
+authentication, and authorization.
+7.2.1. Identiﬁcation: Data procedures that positively assure the identity of those who try to access data
+systems must be developed. Data access should only be granted upon the veriﬁ cation of a person’s identity and
+rights to view, download, or alter data.
+7.2.2. Authentication: A variety of information can be used to authenticate a person’s identity including:
+(1) information a person knows, (2) something a person has, or (3) unique physical characteristics (often called
+biometric data).
+For example, information that a person knows would include such things as a Personal Identiﬁcation Number
+(PIN), a password, or a pre-established answer to a speciﬁ c question. Things that a person has include driver’s
+licenses or magnetic swipe card. Unique physical characteristics include biometric items such as ﬁ ngerprints,
+voice prints, and retinal (eye) scans.
+7.2.3. Authorization: Agricultural insurance programs must develop consistent process for determining
+a person’s authority to access information. Clear requirements for access and the actions that can be taken
+by individuals (e.g., download, view, create, delete, or change data) should be carefully developed and widely
+advertised.
+
+Authorization to access information and other computing services necessarily involves decisions regarding
+administrative policies and procedures. To be effective, policies and other security controls must be enforceable
+and consistently applied.
+
+
+
+
+                                                                                               MANUAL 3            33
+8.0.       Computer Hardware, Software,
+           and Backup
+The quantity and use of data in agricultural insurance programs
+necessitates the use of high-speed, reliable computer management
+information systems. Three elements must be considered when designing
+such systems: (1) computer hardware, (2) computer software, and (3)
+backup storage and operations systems. Hardware systems must be
+reliable and easy to maintain and redundant backups of data are essential.
+In addition, data must be available during times when systems are not
+functional because of interruptions in electrical power or during system
+upgrades.
+
+8.1.      Hardware and Software Requirements
+Decisions regarding hardware and software systems are important
+elements of any agricultural insurance program. The selection of such
+systems should be carefully considered before launching such programs,
+as systems are costly to alter once programs have begun. A variety of
+criteria must be considered in making these decisions, including system
+performance, cost, storage capacity, dependability, and back-up and
+disaster recovery.
+
+8.1.1. Performance: Hardware and software must be jointly considered
+in terms of their ability to perform tasks necessary throughout the life
+of the project. Systems must be designed so that data can be easily and
+quickly entered, updated, sorted, and retrieved. Software systems need
+to meet the requirements of the insurance program, including data and
+documentation entry, evaluation, sorting, management, and quality
+control. In addition, security measures need to be a central component
+of management information systems. Hardware and software systems
+should anticipate of future growth and alterations. Hardware and
+software elements of the program will need to allow for such changes as
+new products and procedures develop.
+
+8.1.2. Cost: Most of the costs of hardware and software systems
+are ﬁxed in nature. Hence, decisions regarding performance need to
+be compared to initial capital expenditures. However, it is important
+to choose systems that can be expanded with minimal expenditures
+in anticipation of program growth. In addition, the costs of modifying
+software for new products are often underestimated. Consequently, it
+is critical that selected software programs be ﬂexible in anticipation of
+future changes.
+
+8.1.3. Storage Capacity: Storage capacity needs are ultimately a
+function of the amount of data to be processed and stored. It is critical to
+select systems that not only meet current needs but are also seamlessly
+expandable to meet future needs. It may be difficult to upgrade storage
+capacities if systems are not properly conﬁgured initially.
+
+The selection of storage capacity features, including storage space and
+internal memory, is also inﬂuenced by the complexity of required features
+and the amount of activity associated with data input and access.
+
+
+
+
+34      DATA AND INFORMATION MANAGEMENT
+8.1.4. Dependability: Hardware and software systems must be dependable and have adequate manufacturer
+support. Systems should have a strong history of performance without the need for frequent interruptions
+caused by updates and modiﬁcations. Mistakes that are made during data entry or access should be identiﬁ ed
+by the software and should not cause a system to stop functioning. The capacities and capabilities of hardware
+and software should be thoroughly investigated before purchase. The ability to obtain continued manufacturer
+support and extended warranties can reduce future operational costs.
+
+8.1.5. Backup and Disaster Recovery: Hardware and software systems should be seamlessly and continually
+backed up at both on-site and off-site locations. Backup systems should have consistent and obvious version
+control identiﬁers. On-site backups are important for correcting or restoring minor data entry problems and are
+critical for version control. Off-site backup mechanisms are especially important for disaster recovery that could
+be caused by damage to local hardware or security breaches.
+
+Data access should not be disrupted during hardware and software maintenance or while data are being updated.
+
+
+
+
+                                                                                              MANUAL 3         35
+9.0        Summary
+Agricultural insurance programs are complex business systems that
+require coordination among many entities. Much of this coordination
+involves the management of information and data. Although program
+design, management, and product development are highly data intensive,
+strategic evaluation of data management often receives low priority.
+However, the viability and success of agricultural insurance programs
+is critically dependent upon the collection and management of data
+for rating, underwriting, sales, indemnities, subsidies, and reinsurance.
+Because data requirements for product development and program
+operations are not only voluminous but also frequently shared among
+stakeholders, it is critical that computer-based hardware, software,
+and backup systems be developed to keep data management costs low,
+remain expandable, provide for ﬂexibility, be redundantly backed up, and
+secure. Agricultural insurance programs should not be developed without
+a thorough strategic plan that addresses data needs, availability, and
+management.
+
+
+
+
+36      DATA AND INFORMATION MANAGEMENT
+Сontact information:
+International Finance Corporation
+2121 Рennsylvania avenue, NY
+Washington, DC 20433, USA
+www.ifc.org
+

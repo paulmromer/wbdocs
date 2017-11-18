@@ -1,0 +1,1370 @@
+Cuenta Única del Tesorero
+Kit de Herramientas para Evaluación
+              Rápida
+
+
+
+
+                    Cem Dener
+
+            Versión 2.0 Febrero 2014
+
+
+
+
+          https://eteam.worldbank.org/fmis
+
+     http://www.worldbank.org/publicfinance/fmis
+Reconocimientos
+Este kit de herramientas se desarrolló inicialmente para dar respuesta a una solicitud del Cluster del
+Sector Público y Reforma Institucional (ECSP4) de la Región de Europa y Asia Central (ECA, por sus siglas
+en inglés) para el diagnóstico de las operaciones de la Cuenta Única de Tesorería (CUT) o del Tesoro
+como también se denomina en algunos países, en la República Kirguisa en octubre 2012. Su
+transformación en un kit o caja de herramientas genéricas para evaluación rápida de la CUT fue apoyado
+por el Grupo de Prácticas de Gobernabilidad y de Gestión del Sector Público (PRMPS, por sus siglas en
+inglés) de la Red de Reducción de la Pobreza y de Gestión Económica (PREM, por sus siglas en inglés) del
+Banco Mundial. El kit fue compartido desde entonces con funcionarios de gobierno, y equipos de
+proyectos para realizar pruebas de campo, y para beneficiarse de retroalimentación adicional orientada
+a la introducción de posibles mejoras.
+
+El autor de esta nota técnica, Cem Dener (PRMPS, Banco Mundial), desea agradecer a innumerables
+miembros del personal del Banco Mundial y a funcionarios gubernamentales que realizaron comentarios
+a este kit desde que se presentó en el año 2012. Este documento también se nutre de retroalimentación
+recibida de miembros de la Comunidad de Práctica (CdP) de Sistemas de Información de Gestión
+Financiera (SIGEF). Los comentarios y aclaraciones de la señora Megan Gray contribuyeron de forma
+sustancial a la segunda versión de este kit. Esta versión será colgada en el sitio web de la CdP de SIGEF
+(https://eteam.worldbank.org/FMIS) con el propósito de recibir comentarios y sugerencias adicionales,
+y de mantenerlo actualizado periódicamente para que refleje los cambios en prácticas de la CUT o las
+necesidades de los países que se presenten a futuro. Los hallazgos, interpretaciones y conclusiones
+expresados en este volumen no reflejan necesariamente la opinión del Banco Mundial.
+
+
+
+
+Derechos y Autorizaciones
+
+
+
+
+Este trabajo está disponible bajo la licencia Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+http://creativecommons.org/licenses/by/3.0. De conformidad con la licencia Creative Commons
+Attribution, usted está en libertad de copier, distribuir, transmitir, y adaptar este trabajo, incluyendo
+para fines comerciales, con las siguientes condiciones:
+Atribución: Sírvase citar este trabajo como se indica a continuación:
+    Dener, Cem, 2013. Kit de Herramientas para Evaluación Rápida para Operaciones y Sistemas de
+    Pago de Cuenta Única del Tesoro. Washington, DC. Banco Mundial. Licencia: Creative Commons
+    Attribution CC BY 3.0
+                                                                       Contenido
+
+Introducción ....................................................................................................................................................... 5
+Principios de la Cuenta Única del Tesoro (CUT) ............................................................................................... 6
+Prerrequisitos de la CUT.................................................................................................................................... 8
+Roles y Responsabilidades de la CUT..............................................................................................................10
+Confiabilidad e Integridad de los Registros de la CUT ...................................................................................10
+Metodología ....................................................................................................................................................11
+¿Cómo Organizar una Evaluación Rápida de la CUT? ....................................................................................13
+Cuestionario para la Evaluación Rápida de la CUT y el Sistema Electrónico de Pagos .................................15
+Anexo 1.          Referencias...................................................................................................................................26
+Anexo 2.          Plantilla (template) para el Informe de Evaluación Rápida de la CUT .........................................27
+Anexo 3.          Visión General de una CUT Centralizada y de Sistemas Electrónicos de Pagos...........................28
+Anexo 4.          Preguntas sobre Prerrequisitos y Riesgos de la CUT....................................................................30
+Anexo 5.          Muestra de Documentos e Imágenes Relacionados con las Operaciones y el Sistema de pago de
+                  la CUT….………………………………………………………………………………………………………………………………….33
+
+
+
+
+                                                                                  3
+Lista de Tablas
+
+Tabla 1: Prerrequisitos de la CUT………………………………………………………………………………………………………………8
+Tabla 2: Roles/responsabilidades para las funciones claves de la CUT……………………………………………………….10
+Tabla 3: Cuestionario para la Evaluación Rápida de la CUT………………………………………………………………………..15
+
+
+
+
+Lista de Gráficas
+
+Gráfica A3.1: Operaciones del Sistema Centralizado de Pagos Electrónicos..………………………………………….29
+Gráfica A5.1: Orden de Pago (OP) Estándar utilizada para transacciones de gastos e ingresos (República de
+Kyrgyz) ………………………………………………………………………………………………………………………………………………. 33
+Gráfica A5.2: Orden de Pago (OP) creada por la Tesorería Central (TC) a través de la estación de trabajo
+RTGS del Banco Central (modo de acceso directo)………………………………………………………………..………………. 34
+Gráfica A5.3: Tipos de reporte disponible desde la estación de trabajo RTGS del Banco Central (modo de
+acceso directo)…………………………………………………………………………………………………………………………………….. 35
+Gráfica A5.4: Informe modelo de las transacciones RTGS (posteadas manualmente por la oficina del pago
+de la TC)…………………………………………………………………………………………………………………………………………..                                    36
+Gráfica A5.5: Formato de mensaje (MT103, como una versión ampliada del formato SWIFT original) para
+transferir las instrucciones de pago de la TC al sistema RTGS ……………………………………………………………… 37
+Gráfica A5.6: Detalles de una instrucción de pago de la terminal de monitoreo ACH del Banco Central…38
+Gráfica A5.7: El sistema de monitoreo del Banco Central para manejar las liquidaciones diarias ACH .... 39
+Gráfica A5.8: Los detalles de las transacciones ACH diarias ………………………………………………………………... 40
+
+
+
+
+                                                     4
+                                      Evaluación Rápida de
+                      Operaciones de la Cuenta Única del Tesoro
+                                       y Sistemas de Pago
+                                               Octubre 2013
+
+
+
+
+Introducción
+La Cuenta Única de Tesorería o del Tesoro (CUT) constituye una de las prácticas probadas para mejorar los
+sistemas de pago y recaudación de ingresos, y para controlar de forma consistente los gastos públicos
+centralizando los saldos disponibles de las cuentas bancarias gubernamentales. La infraestructura de la CUT
+se implementa usualmente como parte de las soluciones del Sistema de Información de Gestión Financiera
+(SIGEF).
+Este kit de herramientas para una evaluación rápida se diseña para asistir a funcionarios gubernamentales
+a reseñar la situación actual de operaciones de la CUT, e identificar posibles mejoras en las
+prácticas/procesos, regulaciones, seguridad de la información, y sistemas de pago. El propósito principal de
+este ejercicio es asegurar que las reformas de Gestión de las Finanzas Públicas (GFP) que se apoyan en
+actividades del SIGEF en curso estén suficientemente enfocadas en el diseño de procesos básicos de la CUT
+que mejoren la gestión de caja o efectivo.
+Aunque pueden existir variaciones específicas en cada país, las operaciones de la CUT son usualmente
+manejadas por la Tesorería General o Central (TG/TC) o del Contador General (CG) del Ministerio de
+Finanzas o de Hacienda (MdF/MdH). Se utiliza un interface seguro entre los sistemas del SIGEF y el Banco
+Central (BC) para automatizar las operaciones de la CUT, basado en un marco legal y regulatorio específico.
+Las cuentas de la CUT y los sistemas de pago interbancarios son usualmente manejados por el Banco
+Central/Nacional. Los bancos comerciales y otras entidades de gobierno pueden estar también
+involucrados en operaciones de la CUT. Aunque este kit se enfoca en un modelo de CUT centralizado, la
+metodología propuesta puede ser aplicada también en modelos de CUT descentralizados. Igualmente,
+puede ocurrir que las estructuras institucionales del MdF no incluyan una unidad designada (como la
+Tesorería Central) responsable de todas las funciones centrales (recibos, desembolsos, conciliación y
+manejo de efectivo). En esos casos, este diagnóstico los pueden llevar a cabo todas las unidades relevantes
+para tener claridad sobre la situación vigente, y la gerencia del MdF puede considerar posibles mejoras en
+dichas estructuras fragmentadas (para una efectiva segregación de funciones) como parte de las reformas
+de la GFP.
+El kit de herramientas incluye 65 preguntas en cinco categorías como indicadores claves sobre la
+confiabilidad e integridad de las operaciones de la CUT, y de los sistemas de pago gubernamentales
+subyacentes. Una revisión de los riesgos y controles está integrada en ese diagnóstico para analizar los
+sistemas de información, procedimientos, y marco operativo. Se utilizaron varios estándares/directrices de
+auditoría financiera y de seguridad de la información como referencias durante el desarrollo de este kit
+(Anexo 1), además del conocimiento y experiencias de profesionales en el diseño y la implementación de
+operaciones de CUT en proyectos de SIGEF financiados por el Banco Mundial. La puntuación de las
+                                                    5
+características se incluye para medir la situación actual de operaciones de la CUT y para identificar las
+brechas de forma consistente. Se espera que este cuestionario de diagnóstico (lista de cotejo) provea una
+retroalimentación rápida a todos los participantes interesados e involucrados en operaciones de la CUT
+sobre varios aspectos claves. Las deliberaciones sobre cada una de estas características para determinar el
+impacto del SIGEF y la CUT en la gestión de recibos y pagos para apoyar mejoras en la gestión de efectivo
+(caja o tesorería) son mucho más importantes que las mismas puntuaciones.
+En los capítulos siguientes se presentan los principios y prerrequisitos de la CUT, la metodología de la
+evaluación rápida, y posibles opciones para realizar esta evaluación. También se explican las
+consideraciones utilizadas para evaluar la situación actual de operaciones de la CUT, y la plantilla o el
+modelo que puede ser utilizado para la preparación del informe de evaluación rápida. Finalmente, se
+presentan como anexos varios formularios de muestra para aclarar los tipos de documentos y sistemas que
+se revisaron en una evaluación.
+
+
+
+Principios de la Cuenta Única del Tesoro (CUT)
+El propósito principal de la implementación de la CUT consiste en maximizar el uso de recursos de tesorería
+mediante la concentración y reducción de costos flotantes. Las soluciones de CUT se diseñan para capturar
+diariamente información detallada sobre los ingresos y egresos de efectivo del gobierno. Sin embargo, no
+es suficiente capturar simplemente información oportuna sobre saldos y flujos de efectivo si la Tesorería
+no tiene los fondos disponibles de manera inmediata (debido a la falta de una autoridad formal, o debido a
+procesos prolongados de contabilidad y transferencias/pagos). También, la capacidad de pronosticar o
+prever los ingresos y egresos de efectivo, y los balances resultantes en la CUT son fundamentales para
+mejorar la gestión de caja. Debe indicarse que las plataformas SIGEF puedan ofrecer información confiable
+de la mayor parte de estos aspectos claves mediante el diseño adecuado de los interfaces con la CUT.
+Existen múltiples formas para implementar la Cuenta Única de Tesorería (CUT) dependiendo de las
+condiciones específicas de cada país (regulaciones, sistema bancario, esquemas del sistema electrónico de
+pagos (EPS, por sus siglas en inglés), etc.) En muchos países, se prefieren “las operaciones centralizadas de
+la CUT” para monitorear recaudaciones y gastos diarios con prontitud y con una relación costo/efectividad
+positiva (Anexo 3). Para lograrlo, se precisa establecer una infraestructura de CUT confiable1 antes de la
+implementación de las soluciones del SIGEF (usualmente es más difícil y costoso introducir la CUT luego del
+desarrollo del SIGEF), basada en un Protocolo CUT2 mutuamente convenido entre la TC y el BC). El
+intercambio diario de datos a través de enlaces seguros con el sistema bancario y las operaciones EPS es
+crucial para garantizar que se emitan los reportes de manera oportuna y con información confiable y
+
+1
+    El término “infraestructura de la CUT” se refiere a la estructura de cuentas bancarias en el modelo CUT y los flujos
+    de ingresos y desembolsos a través de estas cuentas, junto con los interfaces necesarios del sistema y los
+    componentes TIC relevantes. Es altamente recomendable que este modelo se decida antes de la configuración del
+    SIGEF, y que los procedimientos que sustentan la CUT sean implementados junto con la implementación del SIGEF.
+2
+    Inicialmente, este protocolo puede incluir el diseño de procesos de ingresos y egresos basándose en una
+    evaluación de los servicios bancarios requeridos por el gobierno, e identificar cuáles de estos servicios el Banco
+    Central puede proveer al gobierno. El protocolo puede expandirse mediante un procedimiento iterativo – los
+    procesos propuestos de ingresos y egresos determinarán los servicios bancarios que requiere el gobierno, lo que a
+    su vez servirá de guía para el modelo adecuado de CUT y la estructura de cuentas bancarias. Tampoco debería
+    subestimarse el tiempo requerido para negociar completamente el acuerdo entre el BC y el Gobierno que
+    incorpore todos los temas.
+                                                           6
+comprensiva de todos los ingresos y egresos gubernamentales. La cobertura de la red de sucursales del
+Banco Central es también una consideración clave.
+En el modelo CUT centralizado, se espera que el Banco Central provea un número de servicios de pago
+(desembolsos a beneficiarios a través del RTGS y/o ACH; acceso en tiempo real a los estados de cuenta),
+servicios que van más allá de la simple custodia de cuentas CUT y transferencias de fondos en lote. En
+algunos casos, puede ser que el Banco Central esté dispuesto a realizar pagos de alto valor y baja
+frecuencia a través del RTGS, pero puede que no lo esté para procesar archivos ACH (i.e. para nómina) o
+imprimir cheques. Por lo tanto, el modelo CUT muy probablemente involucrará cuentas de distribución de
+bancos comerciales para pagos de menor valor3. Otros servicios bancarios que deberán considerarse
+incluyen: la emisión de estados o extractos bancarios/acceso en línea a datos sobre transacciones y saldos
+de cuentas; pagos en divisas – la fuente de la divisa requerida y la entrega al beneficiario (generalmente en
+el extranjero); cartas de crédito; cobros electrónicos (i.e. puntos de venta, portales (gateways) de pago
+para pagos en línea); esquemas de tarjetas de compra o pago para pagos de poco valor (caja chica, tarjetas
+de combustible, etc.). En algunos países, puede ser que el Banco Central realice también un rol de “quasi”
+gestor de tesorería del gobierno, y provea facilidades crediticias de corto plazo o facilidades de sobregiro
+para el Gobierno, y esto podría complicar las negociaciones con respecto a los esquemas para la CUT.
+En general, la Tesorería Central (TC) opera la CUT para manejar todos los gastos públicos en el modo
+“cuenta cliente”, según el cual el Banco Central (BC) ejecuta todos los pagos para la TC (participación
+indirecta). De forma alternativa, la TC puede convertirse en un participante directo de los sistemas
+interbancarios (RTGS4 y ACH5) operados por el BC (modo “cuenta corresponsal”), si se pueden satisfacer
+condiciones específicas relativas a seguridad de la información, procedimientos, personal autorizado, y
+mecanismos de supervisión. Para monitorear la recaudación de ingresos, la TC usualmente recibe
+información diaria de los bancos agentes (comerciales) (a veces a través del BC), o de la(s)
+administración(es) de ingresos sobre los detalles de las transacciones a través de interfaces entre la
+plataforma SIGEF y estos sistemas externos.
+
+
+
+
+3
+   Si el Banco Central no está dispuesto a proveer algunos o todos estos servicios, entonces puede determinarse que
+   un banco nacional o comercial está en mejor posición para tomar la custodia de la CUT (con la correcta gestión de
+   riesgo y colateralización para mitigar contra el riesgo de pérdida de fondos públicos).
+4
+   RTGS – Sistema de Liquidación Bruta en Tiempo Real (Anexo 3)
+5
+   BCS – Sistema de Liquidación en Lote (solución del Banco Central de Cámara de Compensación Automatizada
+(ACH, por sus siglas en inglés)) (Anexo 3).
+                                                         7
+Prerrequisitos de la CUT
+Los prerrequisitos de la Cuenta Única del Tesoro se resumen a continuación (Tabla 1). Esta tabla puede
+utilizarse para presentar una visión general sobre la situación de la CUT como parte del informe de
+evaluación rápida. Los desafíos técnicos y de adaptación (no técnicos) específicos de cada país se pueden
+enumerar bajo ocho categorías para destacar las prioridades en el desarrollo o la mejora de la
+infraestructura de la CUT.
+                                               Tabla 1: Prerrequisitos de la CUT
+    #          Prerrequisitos de la CUT                                    Situación Actual
+    1     Requerimientos legales y                 +   Enumerar la legislación existente. ¿Algún protocolo CUT
+          regulatorios para operaciones de             entre TC y BC?
+          la CUT                                   -   Destacar áreas que precisan de mejoras.
+    2     Requerimientos                           +   Enumerar los centros de datos de BC y TC, y la
+          técnicos/Infraestructura TIC                 infraestructura TIC para apoyar las operaciones diarias de
+          confiable                                    manera segura.
+                                                   -   Enumerar todas las posibles mejoras
+    3     Sistemas de liquidación                  +   ¿Desde cuándo está operando el ACH? ¿Desde cuándo
+          interbancaria completamente                  está operando el RTGS?
+          operativos                               +   ¿Qué entidad es la operadora de estos sistemas?
+                                                   -   Mejoras en las operaciones del sistema interbancario.
+    4     Interface entre los sistemas de          +   Estatus de la conexión de red y del interface CUT.
+          información de TC/SIGEF y BC             -   Posibles mejoras en el centro de pagos de TC.
+          (RTGS/ACH)
+    5     Un catálogo de cuentas (CdC)             + Estatus de un CdC unificado para apoyar la CUT
+          integral para capturar detalles             centralizada.
+          relevantes de manera consistente         - Posibles mejoras del CdC para las operaciones de la CUT.
+    6     Un inventario de cuentas de              + Existencia de una base de datos compartida de las cuentas
+          banco existentes a ser utilizado en         de bancos participantes gestionadas por la TC (y el BC).
+          las operaciones de SIGEF y CUT           - Cualquier brecha en el desarrollo de la base de datos.
+    7     Desarrollo de capacidades de los         + Adecuada capacidad en MdF/TC.
+          usuarios de la CUT                       - Necesidades adicionales de desarrollo de capacidades y de
+                                                      entrenamiento.
+    8     Apoyo político                           + Gestión de la participación de banco(s) agente(s) en la CUT.
+                                                   - Riesgos para garantizar un compromiso de alto nivel con la
+                                                      CUT.
+Fuente: Datos del Banco Mundial
+Nota: los prerrequisitos CUT se basan en el modelo sugerido por Pattanavak, 2010.
+
+
+Debe destacarse que una consideración clave es la autoridad legal para abrir cuentas bancarias oficiales6, lo
+cual también es crítico para determinar la capacidad de preparar y mantener un inventario confiable de
+cuentas bancarias. Una consideración adicional consiste en saber si el marco legal (que puede incluir leyes
+y regulaciones sobre compras y contrataciones) establece una contratación centralizada de los servicios
+bancarios por parte de la Tesorería.
+
+
+
+6
+        El documento del FMI indica que estos prerrequisitos no se refieren a las Leyes Bancarias y del Sistema de Pago,
+        sino más bien al marco de GFP (i.e. la autoridad legal para abrir cuentas de banco oficiales se le confiere al MdH).
+                                                               8
+Con respecto a la infraestructura TIC, este diagnóstico preliminar puede utilizarse también para identificar
+constreñimientos o limitaciones asociados a su sostenibilidad (i.e. la capacidad de los equipos de TI para
+mantenerse al tanto de los desarrollos y amenazas que pudiesen surgir; la existencia de un plan de
+mantenimiento para la infraestructura TIC y la disponibilidad de fondos en el presupuesto).
+El sistema de información primario del BC es su propio Sistema Bancario Central. Aunque los sistemas de
+pago (RTGS y ACH) proveen informes de transacciones, su propósito principal es la transferencia de fondos.
+Una pregunta clave en el diseño del interface entre el SIGEF y el Banco Central es si existe interface solo
+entre el SIGEF y el Sistema Bancario Central del BC (haciendo interface entre el sistema bancario central del
+BC con RTGS/ACH) o si habrá un interface directo entre el SIGEF al RTGS y/o ACH (reflejándose de nuevo
+información de transacciones de estos sistemas en el Sistema Bancario Clave del BC para el mantenimiento
+de los estados o balances de cuentas y la emisión de estados bancarios de las cuentas del gobierno).
+También es importante señalar que en algunos países se ha logrado implementar la CUT sin tener un
+interface completamente automatizado entre el SIGEF y los sistemas del BC. 7
+En relación con la CUT, la característica clave del Catálogo de Cuentas (CdC) consiste en que cualquier
+información que se provee en la actualidad a través de estados bancarios por separado se reportará a
+través de la estructura de clasificación del CdC. Esto debe reconocerse desde el inicio en el diseño del CdC
+para el SIGEF. El CdC deberá apoyarse en una estructura jerárquica para ejercer controles presupuestarios
+a un nivel superior, y gestionar todos los gastos que deben ser contabilizados en los niveles inferiores.
+El inventario de cuentas bancarias deberá comprender todas las cuentas, aun aquellas que se cerrarán
+durante la implementación de la CUT. La capacidad del MdF de preparar un inventario exhaustivo
+descansará en el marco legal, y en si la autoridad para abrir cuentas bancarias es conferida únicamente al
+MdF. Si no se puede compilar un inventario confiable de cuentas bancarias, se puede considerar en sí
+mismo como una justificación para avanzar con una reforma de la CUT. El hecho de que existan cuentas
+bancarias gubernamentales ocultas o que sean desconocidas para el MdF es un desafío clave para la
+transparencia y sugiere una debilidad en los datos fiscales. Los nuevos procesos deberán asegurar que no
+se transfieran fondos a cuentas bancarias gubernamentales ocultas o desconocidas, y únicamente a
+aquellas cuentas que son reconocidas como parte de la estructura CUT.
+El desarrollo de capacidades de los usuarios de la CUT debería comenzar durante las fases iniciales de
+reforma, y continuar durante y de manera posterior a su implementación.
+El apoyo político es un tema constante durante la reforma CUT y deberá existir una estrategia de
+comunicación que mantenga dicho apoyo político a lo largo de la implementación, para superar la
+resistencia debido a la percepción de poder que se deriva del control de las cuentas bancarias propias.
+Tal y como sucede con el protocolo con el Banco Central, muchas de estos prerrequisitos pueden sugerir
+reformas relacionadas que se podrían adoptar para mejorar los esquemas de implementación de la CUT.
+Sin embargo, esto no debería impedir que se avance en la implementación de la centralización del efectivo
+mediante soluciones CUT.
+
+7
+    Un ejemplo de este modelo es Afganistán – las instrucciones por escrito impresas del SIGEF son firmadas por el
+    Tesorero y sometidas al BC. Una lista de cotejo de los pagos también se somete por separado al BC, y todas las
+    instrucciones recibidas se verifican con la lista de cotejo previo a su procesamiento. Aunque resulta óptimo un
+    interface automatizado para prevenir el riesgo de errores, una CUT centralizada puede ser implementada sin dicho
+    interface – la conciliación bancaria de forma regular y oportuna, y el seguimiento a las discrepancias son
+    fundamentales (como en cualquier otro modelo).
+                                                         9
+Roles y Responsabilidades de la CUT
+Independientemente de la forma en que opere la CUT (participación directa/indirecta), debe existir una
+clara separación o segregación de funciones y responsabilidades para los roles de tesorería, banco y
+contabilidad, así como la supervisión de los pagos y liquidaciones. Se puede utilizar la plantilla a
+continuación para reseñar dichas funciones y responsabilidades específicos en cada país (Tabla 2) para el
+modelo de CUT centralizado, como parte del informe de evaluación rápida. Para modelos de CUT
+descentralizados, se deberán considerar otros participantes (como los recaudadores de ingresos y las
+agencias o entidades que incurren en gastos, así como la función de gestión de la deuda si está localizada
+fuera de la TC).
+                        Tabla 2: Roles/responsabilidades para las funciones claves de la CUT
+
+                                                                                                Banco
+    Funciones vs. responsabilidades de la CUT                      Tesorería Central
+                                                                                           Central/Nacional
+    Operaciones de Tesorería (gestión de pagos)                        TC (SIGEF)                  -
+                                                                       TC (SIGEF)       Sistemas interbancarios
+    Funciones Bancarias (controles de pago y liquidaciones)
+                                                                     Interface CUT          BC (RTGS / ACH)
+    Contabilidad (conciliación y reportes)                           TC (SIGEF GL)             BC (GL)
+   Supervisión de sistemas de pago, liquidación y conciliación
+                                                                  - Auditoría Externa             BC
+   (controles financieros + seguridad de la información)
+Fuente: Datos del Banco Mundial
+
+
+
+Confiabilidad e Integridad de los Registros de la CUT
+La confiabilidad e integridad de las operaciones de la CUT dependen de varios requerimientos claves
+relacionados con el registro/reporte diario de todos los ingresos o recaudos (recibos o cobros) y egresos
+(pagos):
+
+  Se debe generar un estado bancario que contenga todos los detalles acerca del flujo de fondos en
+   la CUT directamente desde los sistemas de información del Banco Central, independientemente de
+   la Tesorería Central (como organización que gestiona los pagos). Dichos estados bancarios deberían
+   estar a disposición de la TC para que pueda realizar una conciliación automática a través del módulo
+   de Mayor General (GL, por sus siglas en inglés) del SIGEF diariamente. Si la Tesorería General es un
+   participante directo del sistema de pagos interbancario, deben existir garantías absolutas de que
+   dichos estados bancarios son generados directamente a partir de sistemas de pago interbancario, y
+   respaldados o apoyados mediante información consistente con el Mayor General del Banco Central.
+  El módulo del GL en la contabilidad del SIGEF debe mantener registros completos del libro de caja
+   para las cuentas bancarias CUT. Se debe rendir cuentas mediante el registro de todas las
+   transacciones CUT en el SIGEF desde la fuente correspondiente (por ej.: pueden ser los recaudadores
+   de ingresos, en lugar de la TC, quienes registren o posteen las transacciones de los ingresos
+   depositados en las cuentas de tránsito de ingresos en bancos comerciales, pero luego la TC registra
+   la transferencia o el barrido (sweeping) de los saldos desde estas cuentas de tránsito a las cuentas
+   en el BC.
+  Cada transacción de la CUT debe contener un identificador único que puede ser utilizado para
+   vincular el pago o la recaudación de fondos con registros contables en el mayor general de la TC en
+                                                 10
+   el SIGEF. La TC deberá contar con la capacidad de conciliar los estados bancarios del Banco Central
+   con los balances de la cuenta bancaria de la TC y los datos del GL del SIGEF, periódicamente
+   (diariamente) y con prontitud, beneficiándose de los sistemas subyacentes.
+  Cero intervenciones manuales. Todos los procesos (desde su inicio al pago final y la conciliación)
+   deben estar automatizados y correr en plataformas seguras.
+Estos requerimientos deben ser auditados de forma periódica.
+Algunos de los aspectos claves de los prerrequisitos de la CUT, así como los riegos y controles se enumeran
+en el Anexo 4.
+
+
+
+Metodología
+Este kit de herramientas para una evaluación de la CUT incluye 65 preguntas agrupadas en cinco
+categorías:
+
+ 1.   Marco legal y regulatorio de operaciones de la CUT (11 preguntas)
+ 2.   Procedimientos de la CUT y sistemas interbancarios (25 preguntas)
+ 3.   Capacidades y competencias (7 preguntas)
+ 4.   Controles para la seguridad de la información (14 preguntas)
+ 5.   Mecanismos de fiscalización (8 preguntas)
+
+Se utiliza una escala de calificación simple (0 a 4) para todas las preguntas/enunciados, y la calificación total
+se convierte en un grado (0 a 100) como una indicación del desempeño del país en las operaciones de la
+CUT/sistemas de pago.
+
+Calificación:   0 = No-existente (Ausencia de algún proceso identificable. La actividad aún no está
+                planificada/establecida).
+                1 = Inicial / ad-hoc (Se ha identificado una instancia. Actividad planificada y aprobada para
+                su implementación)
+                2 = Proceso definido (Actividad implementada parcialmente)
+                3 = Gestionada y medible (Actividad efectivamente operativa)
+                4 = Optimizada (Actividad a nivel de buena práctica internacional)
+
+Orientación sobre las Calificaciones
+ •    Calificación “4” significa que la actividad objeto relacionada con los sistemas de pago interbancario y
+      los procesos CUT se ajusta al nivel de buena práctica internacional con monitoreo y mejoras de
+      manera contínua. Sistemas de información: existe una solución SIGEF integrada para automatizar
+      todos los aspectos críticos de la ejecución presupuestaria, incluyendo la CUT, el monitoreo de su
+      desempeño, y la provisión de herramientas para mejorar la calidad y efectividad en la GFP.
+
+ •    Calificación “3” indica que existen áreas donde un país está operando bien en sus sistemas de pago
+      interbancario y la CUT. Es posible monitorear y medir el cumplimiento con los procedimientos y
+      tomar acciones donde se pudiese apreciar que los procesos no están operando de manera efectiva.
+
+                                                       11
+       Los procesos están en mejora constante. Desde la perspectiva de sistemas de información, el SIGEF
+       apoya de manera comprensiva todas las operaciones de la CUT.
+
+ •     Calificación “2” indica que existen áreas donde mejorar. El gobierno debería considerar la asignación
+       recursos suficientes para garantizar que las mejoras se realizarán rápidamente y se desarrollan
+       estrategias para una efectiva implementación de las mejoras que se requieren. Existen
+       procedimientos estandarizados (automatización de prácticas existentes) comunicados mediante la
+       capacitación. Sin embargo, se deja a la discrecionalidad del individuo el seguir estos procesos, y no es
+       probable que se detecten desviaciones. El SIGEF apoya parcialmente las operaciones de la CUT (por
+       ejemplo monitoreando los saldos de cuentas, sin dar apoyo a los pagos automatizados).
+
+ •     Calificación “1” significa que la entidad ha reconocido que existen desafíos que requieren ser
+       abordados. No existen procesos estandarizados; en su lugar existen enfoques ad hoc que tienden a
+       ser aplicados de forma individual o caso por caso. El gobierno debe considerar la asignación de
+       recursos suficientes para garantizar que se puedan llevar a cabo las mejoras rápidamente y se
+       diseñen estrategias para su efectiva implementación. Desde la perspectiva de los sistemas de
+       información, existe capacidad limitada para la automatización de procesos.
+
+ •     Calificación “0” indica ausencia de cualquiera de los procesos identificables. Esta actividad requiere
+       de atención inmediata y de una estrategia clara con un compromiso político de alto nivel. Aunque
+       una baja calificación no necesariamente indica que un gobierno posee débiles sistemas de gestión
+       financiera pública (GFP), usualmente indica que existe un aspecto importante de preocupación que
+       requiere de atención inmediata.
+
+ •     Calificación “n/a” indica que la actividad no puede ser medida y que la calificación no aplica. En esos
+       casos, deberían hacerse las aclaraciones y dichas actividades no se incluyen en el cálculo de las
+       calificaciones.
+
+
+
+Evaluación del desempeño
+Se espera que las calificaciones sugeridas como parte de este diagnóstico ayuden a los países a determinar
+las fortalezas y debilidades en las cinco categorías indicadas arriba.
+La calificación porcentual (0 a 100) para cada categoría (exceptuando las calificaciones “n/a”) se calculan a
+partir de:
+                                                                           ∑ ������������������������������������ ������������������������������������������������������ ������������ ������������ ������������������������������������������í������
+ ������������������������������������������������������������ó������ ������������ ������������������ ������������������������������������������í������ =                                                                                              ∗ 100
+                                                           (# ������������ ������������������������������������������������������������������ ������������ ������������ ������������������������������������������í������ − # ������������������������������ ������������ "������/������) ∗ 4
+
+
+La calificación total se calcula sumando todas las calificaciones (exceptuando las calificaciones “n/a”) en
+todas las cinco categorías (0 a 100):
+                                                           ∑ ������������������������������������ ������������������������������������������������������ ������������ ������������������������������ ������������������ ������������������������������������������í������������
+                    ������������������������������������������������������������ó������ ������������������������������ =                                                                                ∗ 100
+                                                                   (65 − ������ú������������������������ ������������������������������ ������������ "n/a") ∗ 4
+
+
+
+
+                                                                                12
+Se utilizan las siguientes calificaciones para indicar el desempeño global basado en la calificación total:
+
+        Muy débil        inferior a 30%
+        Débil            30% - 49.9 %
+        Promedio         50% - 69.9 %
+        Bueno            70% - 89.9%
+        Excelente        superior a 90%
+
+La calificación mínima para un desempeño aceptable es “Promedio”, de conformidad con la escala de
+grados que se indica arriba.
+Finalmente, para facilitar una mejor comprensión, se puede proveer información adicional en la columna
+“Comentarios” del cuestionario:
+    •      Desafíos que el país enfrenta en un área en particular:
+    •      Fuente de información provista (URL) para un tema en específico:
+    •      Reformas relevantes o mejoras esperadas;
+    •      Participantes interesados claves; y
+    •      Otra información relevante.
+Las secciones restantes de este informe incluyen la descripción del enfoque del Evaluación Rápida de la
+CUT y la lista de enunciados/preguntas para verificar los procesos y controles8.
+
+
+
+¿Cómo organizar el Evaluación Rápida de la CUT?
+Esta evaluación rápida puede realizarse de dos maneras:
+
+ Auto-evaluación (usualmente en dos días),
+ Evaluación conjunta (una semana) de las operaciones de la CUT mediante visitas de campo,
+        interacciones con las unidades relacionadas de la TC y el BC, y un taller para deliberar sobre los
+        resultados, con el apoyo del equipo del Banco Mundial.
+En ambos casos, se espera que se unan dos equipos dedicados de la Tesorería Nacional/MdF y del Banco
+Central/Nacional (en ocasiones también se invita a los bancos comerciales y las empresas proveedoras de
+soluciones informáticas que participan en la CUT). Estos equipos deberán revisar las preguntas de manera
+conjunta, recopilar evidencia sobre aspectos específicos (marco legal, prácticas, competencias, seguridad
+de la información, y fiscalización), y, de manera conjunta, evaluarán la situación, para producir un informe
+de evaluación de común acuerdo entre los miembros. El equipo del Banco Mundial puede sumarse para
+asistir en este proceso, y proveer guías metodológicas cuando sea necesario.
+
+
+
+
+8
+        Control se define como las políticas, procedimientos, prácticas y estructuras organizativas diseñadas para brindar
+        garantías razonables de que los objetivos de los gestores de negocios serán alcanzados y los eventos no deseados
+        serán prevenidos o detectados y corregidos (según se define en CoBIT - Objetivos de Control para Información y
+        Tecnologías Relacionadas).
+                                                             13
+Enfoque sugerido
+
+   1. Identificar los miembros del equipo que participarán en la evaluación rápida de operaciones de la
+      CUT (gerentes, personal de operaciones, especialistas técnicos, etc.), y designar a los líderes de
+      equipo del MdF/Tesorería y del Banco Central/Nacional (incluir la lista de todos los participantes
+      como parte del informe del Evaluación Rápida).
+   2. Si existe un contrato SIGEF que esté vigente (CUT en vías de implementación), se espera que los
+      equipos examinen los requerimientos funcionales y técnicos del interface y operaciones de la CUT,
+      según se definen en el contrato SIGEF (anexar también estos requerimientos al informe de
+      evaluación rápida). Los representantes del suplidor del SIGEF pueden ser invitados a las discusiones
+      relevantes durante este proceso.
+   3. Dependiendo del tipo de evaluación (auto-evaluación o evaluación conjunta) organizar una reunión
+      inicial (kick-off meeting) con los equipos para explicar el proceso, presentar el cuestionario, y los
+      resultados esperados. Preparar un plan de trabajo para realizar el diagnóstico, y organizar las
+      reuniones requeridas, conforme sea necesario.
+   4. Recopilar información y evidencia necesarias mediante interacciones con funcionarios/unidades
+      relacionados. Completar el cuestionario, responder todas las preguntas y asignar calificaciones
+      basadas en la evidencia. Hacer anotaciones de todos los hallazgos claves y la evidencia relevante en
+      la sección de comentarios de cada pregunta.
+   5. Organizar un taller con la participación de todos los interesados involucrados en la evaluación
+      rápida para deliberar sobre los hallazgos y recomendaciones.
+   6. Luego de haber completado este proceso de revisión abordando las 65 preguntas del cuestionario,
+      se puede preparar un Informe de evaluación rápida de la CUT, haciendo uso de la plantilla que se
+      adjunta como Anexo 2 en esta nota directriz.
+
+
+Se espera que esta evaluación rápida de la CUT sea una revisión conjunta de varias condiciones
+importantes, que permitan que dichas condiciones se satisfagan sustancialmente y garanticen un interface
+CUT completamente operativo y confiable. La mayor parte de las capacidades técnicas se pueden
+desarrollar en un plazo relativamente corto, como parte de la implementación del SIGEF. Sin embargo, en
+muchas economías se requiere de un compromiso político de alto nivel para la resolución de los desafíos
+de adaptación (no técnicos) relacionados con la CUT.
+
+
+
+
+                                                   14
+                               Cuestionario para la Evaluación Rápida de la CUT y el Sistema Electrónico de Pagos
+Los resultados de la evaluación rápida se presentan a continuación en cinco categorías. La columna de “Comentarios” incluye enlaces a los sitios web
+relevantes, así como el resumen de los principales hallazgos y las deficiencias observadas.
+
+                                                                Tabla 3: Cuestionario para la Evaluación Rápida de la CUT
+
+                Componentes de la
+ Ref.                                      P. Ref.            Preguntas/Enunciados                 Calificación                               Comentarios
+               Evaluación de la CUT
+ 1          Marco legal y regulatorio de las operaciones de la CUT                                    X1%
+                                              A
+ 1.1    Legislación de la Tesorería Central                                                                       Sírvase indicar aquí el URL de la Tesorería Central
+        Se ha establecido un marco          P.1      Se cuenta con un marco legal y                   0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+        legal y regulatorio claro para               regulatorio para las operaciones del                         - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+        las operaciones de la Cuenta                 SIGEF.                                                       disponible aún)
+        Única de Tesorería (o del           P.2      Hay un protocolo CUT firmado entre TC y          0….4        + Protocolo CUT existente (no. de ref., fecha, y URL si publicado)
+        Tesoro) con sanciones                        Banco Central (legalmente vinculante).                       - ¿Algún borrador de protocolo o planes de prepararlo? (si no está
+        pertinentes y efectivas por                                                                               disponible aún)
+        incumplimiento.
+                                            P.3      Existen instrucciones/circulares CUT que         0….4        + Instrucciones CUT existentes (no. de ref., fecha, y URL si
+                                                     describen los detalles del procesamiento                     publicado)
+                                                     de ingresos/gastos.                                          - ¿Algún borrador de instrucciones o planes de prepararlo? (si no
+                                                                                                                  está disponible aún)
+                                            P.4      Se dispone de la base legal para las             0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+                                                     operaciones del centro de pagos                              - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+                                                     electrónicos.                                                disponible aún)
+                                            P.5      Existe acuerdo con el Banco Central para         0….4        + Acuerdos CUT existentes (no. de ref., fecha, y URL si publicado)
+                                                     mantener las cuentas de banco CUT de                         - ¿Algún borrador de acuerdo o planes de prepararlo? (si no está
+                                                     TC.                                                          disponible aún)
+                                            P.6      Existe un acuerdo entre la TC y el Banco(s)      0….4        + Acuerdos CUT existentes (no. de ref., fecha, y URL si publicado)
+                                                     Agente para las operaciones CUT.                             - ¿Algún borrador de acuerdo o planes de prepararlo? (si no está
+                                                                                                                  disponible aún)
+        Legislación del Banco Central                                                                             Sírvase indicar aquí el URL del Banco Central
+ 1.1    B
+
+        Se ha establecido un marco          P.7      Se cuenta con el marco legal/regulatorio         0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+        legal y regulatorio claro para               bancario.                                                    - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+        los sistemas interbancarios                                                                               disponible aún)
+        con sanciones pertinentes y         P.8      Existe el marco legal/regulatorio sobre          0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+        efectivas en caso de                         Firma Electrónica.                                           - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+        incumplimiento.                                                                                           disponible aún)
+
+                                                                                           15
+            Componentes de la
+Ref.                                    P. Ref.            Preguntas/Enunciados                 Calificación                               Comentarios
+           Evaluación de la CUT
+                                         P.9      Se cuenta con marco legal/regulatorio            0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+                                                  sobre RTGS.                                                  - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+                                                                                                               disponible aún)
+                                        P.10      Existe el marco legal/regulatorio de ACH         0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+                                                  (BCS).                                                       - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+                                                                                                               disponible aún)
+                                        P.11    Se dispone del marco legal/regulatorio             0….4        + Ley(es) existente(s) (no. de ref., fecha, y URL si publicada)
+                                                para la fiscalización de los sistemas de                       - ¿Algún proyecto de ley o planes de prepararlo? (si no está
+                                                pagos y liquidación.                                           disponible aún)
+2      Procesos y sistemas interbancarios de la CUT                                                 X2%
+2.1    Segregación de funciones claves de la CUT C
+       La Segregación de funciones      P.12 Tesorería Central ejecuta las funciones de            0….4         + Resumir los procesos de gestión de pagos existentes
+       claves de la CUT (gestión y              gestión de pagos mediante procesos                             - Identificar deficiencias
+       control de pagos, liquidación,           automatizados apoyados por SIGEF.
+       y contabilidad/conciliación)     P.13 TC realiza las funciones de control de                0….4         + Resumir los procesos de control de pagos existentes
+       se cumple mediante                       pagos mediante procesos automatizados                          - Identificar deficiencias
+       estructuras organizacionales,            apoyados por SIGEF.
+       acceso de usuario en los         P.14 Banco Central realiza las funciones de                0….4        + Resumir los procesos existentes
+       sistemas de tesorería/pago y             control de pagos para verificar el                             - Identificar deficiencias
+       documentos de                            cumplimiento con la legislación bancaria
+       procedimiento.                           mediante procesos automatizados
+                                                apoyados por los sistemas de información
+                                                del Banco Central.
+                                        P.15 TC realiza funciones de registro contable             0….4         + Resumir los procesos de existentes
+                                                para operaciones de la CUT (conciliación y                     - Identificar deficiencias
+                                                reportes) mediante procesos
+                                                automatizados apoyados por SIGEF.
+                                        P.16      Banco Central lleva la contabilidad de las       0….4         + Resumir los procesos existentes
+                                                  operaciones de la CUT (registrando los                       - Identificar deficiencias.
+                                                  flujos diarios y proporcionando los estados
+                                                  bancarios diarios) a través de procesos
+                                                  automatizados apoyados por los sistemas
+                                                  de información del Banco Central.
+                                        P.17      Banco Central realiza funciones de               0….4         + Resumir los procesos existentes
+                                                  fiscalización de sistemas de pago y                          - Identificar deficiencias
+                                                  liquidación (controles financieros y de
+                                                  seguridad de la información) mediante
+                                                  procesos automatizados del Banco Central.
+
+                                                                                          16
+            Componentes de la
+Ref.                                     P. Ref.          Preguntas/Enunciados                Calificación                            Comentarios
+           Evaluación de la CUT
+2.2    Registro y reporte diario de transacciones de la CUT D
+       Todas las transacciones de la    P.18   El sistema RTGS tiene la capacidad de             0….4         + Resumir los procesos existentes
+       CUT relacionadas con                    registrar/reportar el detalle de todos los                    - Identificar deficiencias
+       ingresos presupuestarios                pagos de la CUT diariamente.
+       (recaudaciones o                 P.19   El sistema ACH (BCS) tiene capacidad de           0….4         + Resumir los procesos existentes
+       recepciones) y los gastos               registrar/reportar los detalles de todos los                  - Identificar deficiencias
+       (pagos) se registran y                  pagos de la CUT diariamente.
+       reportan mediante los            P.20   El Mayor General del Banco Central                0….4        + Resumir los procesos existentes
+       sistemas de pago y                      captura todos los flujos en las cuentas de                    - Identificar deficiencias
+       liquidación del Banco Central,          banco de la CUT a través de su sistema de
+       así como la solución SIGEF de           contabilidad /Mayor General diariamente.
+       la TC diariamente.
+                                        P.21   Los Bancos Agentes transfieren todos los          0….4        + Resumir los procesos existentes
+                                               ingresos a la cuenta de banco que la TC ha                    - Identificar deficiencias
+                                               designado como la CUT en el Banco
+                                               Central diariamente a través de
+                                               conexiones en línea al RTGS/ACH.
+                                        P.22   La Tesorería Central somete todas las             0….4        + Resumir los procesos existentes
+                                               requisiciones de pago en los formatos                         - Identificar deficiencias
+                                               requeridos a través del interface CUT TC-
+                                               Banco Central desde un centro seguro de
+                                               pagos electrónicos a través de procesos
+                                               automatizados sustentados por el SIGEF
+                                               diariamente.
+                                        P.23   El Banco Central envía estados bancarios          0….4        + Resumir los procesos existentes
+                                               del RTGS y ACH con detalles de todas las                      - Identificar deficiencias
+                                               transacciones CUT a través de procesos
+                                               automatizados diariamente.
+                                        P.24   El Banco Central envía estados o extractos        0….4        + Resumir los procesos existentes
+                                               bancarios del Mayor General de Banco                          - Identificar deficiencias
+                                               Central con los flujos de las cuentas
+                                               bancarias CUT a través de procesos
+                                               automatizados diariamente.
+                                        P.25   La conciliación de estados bancarios del          0….4        + Resumir los procesos existentes
+                                               Banco Central (y el Banco Agente) es                          - Identificar deficiencias
+                                               realizada por la TC mediante el módulo de
+                                               Mayor General (GL) del SIGEF
+                                               diariamente.
+
+
+                                                                                      17
+            Componentes de la
+Ref.                                    P. Ref.             Preguntas/Enunciados                Calificación                                Comentarios
+           Evaluación de la CUT
+                                        P.26      Cada transacción CUT debe contener un            0….4        + Resumir los procesos existentes
+                                                  identificador único que puede ser                            - Identificar deficiencias
+                                                  utilizado para vincular el pago o el recibo
+                                                  a los asientos de contabilidad en el Mayor
+                                                  General SIGEF de la TC.
+2.3    Traza de Auditoría E
+       Están activadas Trazas de        P.27      Una “pista o traza de auditoría” está            0….4        + Resumir situación actual
+       auditoría y se utilizan de                 activada en las bases de datos SIGEF de TC                   - Identificar deficiencias
+       manera efectiva en los                     y se utiliza de manera efectiva
+       sistemas de información de la    P.28      Una “pista de auditoría” está activada en        0….4        + Resumir situación actual
+       TC y el Banco Central.                     las bases de datos del Centro de Pagos                       - Identificar deficiencias
+                                                  Electrónicos (en caso de participación
+                                                  indirecta) y se utiliza de manera efectiva.
+                                        P.29      Una “pista de auditoría” está activada en        0….4        + Resumir situación actual
+                                                  la plataforma RTGS del BC y se utiliza de                    - Identificar deficiencias
+                                                  manera efectiva.
+                                        P.30      Una “pista de auditoría” está activada en        0….4        + Resumir situación actual
+                                                  la plataforma ACH (BCS) del BC y se utiliza                  - Identificar deficiencias
+                                                  de manera efectiva.
+                                        P.31      Una “pista de auditoría” está activada en         n/a        + Resumir situación actual
+                                                  las operaciones de contabilidad/Mayor                        - Identificar deficiencias
+                                                  del BC y se utiliza de manera efectiva.
+2.4    Inventario de las cuentas bancarias
+       Se cuenta con un inventario      P.32      El SIGEF de la TC tiene un inventario de         0….4        + Resumir estatus actual
+       de cuentas bancarias                       todas las cuentas bancarias a ser                            - Identificar deficiencias
+       existentes a ser utilizadas en             utilizadas en operaciones CUT y se
+       las operaciones SIGEF y CUT y              sincroniza con el inventario del Banco
+       se actualiza periódicamente.               Central.
+                                        P.33      El Banco Central tiene un inventario de          0….4        + Resumir estatus actual
+                                                  todas las cuentas bancarias a ser utilizas                   - Identificar deficiencias
+                                                  en las operaciones CUT.
+2.5    Controles a nivel de transacción
+       Todos los controles a nivel de   P.34      El Banco Central tiene listas de cotejo del      0….4        + Resumir estatus actual
+       transacción se realizan como               sistema de pagos RTGS/ACH manejadas                          - Identificar deficiencias
+       parte del rol de fiscalización             mediante procesos automatizados y
+       de pagos y liquidaciones                   reporta los resultados de todas las
+                                                  transacciones en formatos bien definidos
+                                                  (SWIFT).
+                                                                                          18
+            Componentes de la
+Ref.                                  P. Ref.            Preguntas/Enunciados               Calificación                                Comentarios
+           Evaluación de la CUT
+                                      P.35      Los controles de pago de RTGS y ACH            0….4        + Resumir estatus actual
+                                                incluyen la verificación de las cuentas                    - Identificar deficiencias
+                                                bancarias cotejando con la “lista negra”
+                                                que mantiene el Banco Central.
+                                      P.36      La Tesorería Central somete todas las          0….4        + Resumir estatus actual
+                                                órdenes de pago electrónicamente desde                     - Identificar deficiencias
+                                                el SIGEF al RTGS/ACH, sin intervención
+                                                manual. El Banco Central desactiva el
+                                                modo de registro o posteo manual de la
+                                                TC.
+3      Capacidad y competencias                                                                X3 %
+3.1    Capacidad de la TC
+       Las unidades de la TC          P.37      Para cada posición o cargo relacionado      0….4           + Resumir situación actual
+       (sistema de pago electrónico             con la CUT existe una descripción de                       - Identificar deficiencias
+       y TI) tienen el número                   puesto que especifica los deberes y
+       adecuado de personal                     responsabilidades del cargo, líneas de
+       entrenado para manejar las               autoridad, delegaciones de autoridad y
+       operaciones de la CUT.                   requerimientos de calificación.
+                                      P.38      El número total de personal autorizado a    0….4           + Resumir situación actual
+                                                manejar operaciones de la CUT es                           - Identificar deficiencias
+                                                adecuado comparado con el volumen de
+                                                transacciones e intensidad del trabajo.
+                                      P.39      El personal de la TC tiene experiencia en   0….4           + Resumir situación actual
+                                                la operación de EPS y puede realizar                       - Identificar deficiencias
+                                                transacciones CUT en los sistemas de
+                                                pago interbancario de manera segura.
+3.2    Capacidad del Banco Central
+       Las unidades del Banco         P.40      Para cada cargo relacionado con el          0….4           + Resumir situación actual
+       Central (sistemas de pago y              sistema de pagos interbancarios existe                     - Identificar deficiencias
+       TI) tienen el número                     una descripción de puesto que especifica
+       adecuado de personal                     deberes y responsabilidades del cargo,
+       entrenado para manejar los               líneas de autoridad, delegaciones de
+       sistemas de pagos                        autoridad y requerimientos de
+       interbancarios.                          calificación.
+
+
+
+
+                                                                                      19
+            Componentes de la
+Ref.                                     P. Ref.             Preguntas/Enunciados                Calificación                              Comentarios
+           Evaluación de la CUT
+                                         P.41      El número total de personal autorizado a         0….4        + Resumir situación actual
+                                                   manejar los sistemas de pago es adecuado                     - Identificar deficiencias
+                                                   comparado con el volumen de
+                                                   transacciones e intensidad del trabajo.
+3.3    Infraestructura TIC
+       La infraestructura TIC tiene la   P.42      El centro de datos de la TC está bien            0….4        + Resumir situación actual
+       capacidad de manejar el                     preparado para manejar todas las                             - Identificar deficiencias
+       volumen de trabajo para                     operaciones de la CUT y almacenar los
+       apoyar operaciones                          detalles de todas las transacciones.
+       centralizadas de la CUT en        P.43  El centro de datos del Banco Central está            0….4        + Resumir situación actual
+       gran escala.                            bien preparado para manejar todas las                            - Identificar deficiencias
+                                               transacciones de la CUT y almacenar los
+                                               detalles relevantes.
+4      Controles de seguridad de la información F                                                   X4 %
+4.1    Controles de seguridad de la Información de la TC
+       Se usan activamente los          P.44 Autenticación y autorización (tipo de                  0….4        + Resumir situación actual
+       controles de seguridad de               firma digital utilizada; almacenamiento de                       - Identificar deficiencias
+       información en los sistemas             los certificados digitales emitidos).
+       de información del TC.           P.45 Acceso privilegiado (quién tiene acceso                0….4        + Resumir situación actual
+                                                   privilegiado a las bases de datos del SIGEF                  - Identificar deficiencias
+                                                   y a las plataformas del sistema
+                                                   interbancario)
+                                         P.46      Seguridad e integridad de datos                  0….4        + Resumir situación actual
+                                                   (soluciones para transferencia de datos                      - Identificar deficiencias
+                                                   segura y encriptación de datos en
+                                                   tránsito).
+                                         P.47      Firewalls de red y de aplicaciones web           0….4        + Resumir situación actual
+                                                   (soluciones para la revisión de registros,                   - Identificar deficiencias
+                                                   restricción de acceso).
+                                         P.48      Claves de acceso (password) para todo            0….4        +   Resumir situación actual
+                                                   tipo de usuario.                                             -   Identificar deficiencias
+                                         P.49      Seguridad física (control de acceso y            0….4        +   Resumir situación actual
+                                                   seguridad del centro de datos).                              -   Identificar deficiencias
+
+
+
+
+                                                                                          20
+            Componentes de la
+Ref.                                   P. Ref.             Preguntas/Enunciados                Calificación                            Comentarios
+           Evaluación de la CUT
+                                       P.50      Copia de seguridad (backup) y                    0….4        + Resumir situación actual
+                                                 almacenamiento (todas las transacciones                      - Identificar deficiencias
+                                                 de los últimos 5 años archivadas
+                                                 activamente en las bases de datos; los
+                                                 registros más antiguos se almacenan en
+                                                 archivos comprimidos; quién mantiene los
+                                                 registros CUT).
+
+4.2    Controles de seguridad de la información del Banco Central
+       Se utilizan activamente los     P.51      Autenticación y autorización (tipo de            0….4        + Resumir situación actual
+       controles de seguridad de la              firma digital utilizada; almacenamiento de                   - Identificar deficiencias
+       información en los sistemas               los certificados digitales emitidos).
+       de información del Banco
+       Central                         P.52      Acceso privilegiado (quién tiene acceso          0….4        + Resumir situación actual
+                                                 privilegiado a las bases de datos CUT y                      - Identificar deficiencias
+                                                 plataformas del sistema interbancario).
+
+                                       P.53      Seguridad e integridad de datos                  0….4        + Resumir situación actual
+                                                 (soluciones para transferencia segura de                     - Identificar deficiencias
+                                                 datos y encriptación de datos en tránsito).
+
+                                       P.54      Firewalls de red de aplicaciones web             0….4        + Resumir situación actual
+                                                 (soluciones para la revisión de registros,                   - Identificar deficiencias
+                                                 restricción de acceso).
+
+                                       P.55      Claves de acceso (password) para todo            0….4        + Resumir situación actual
+                                                 tipo de usuario.                                             - Identificar deficiencias
+
+                                       P.56      Seguridad física (control de acceso y            0….4        + Resumir situación actual
+                                                 seguridad del centro de datos).                              - Identificar deficiencias
+
+                                       P.57      Copia de seguridad (backup) y                    0….4        + Resumir situación actual
+                                                 almacenamiento (las transacciones de los                     - Identificar deficiencias
+                                                 últimos 5 años archivadas activamente en
+                                                 las bases de datos; los registros más
+                                                 antiguos se almacenan en archivos
+                                                 comprimidos; quién mantiene los
+                                                 registros CUT).
+
+                                                                                         21
+           Componentes de la
+Ref.                                    P. Ref.             Preguntas/Enunciados                 Calificación                              Comentarios
+          Evaluación de la CUT
+5      Mecanismos de Fiscalización G                                                                X5 %
+5.1    La Tesorería Central está        P.58      Auditoría financiera/de cumplimiento de           0….4        +   Resumir situación actual
+       sujeta a revisión periódica                las operaciones de la Tesorería Central.                      -   Identificar deficiencias
+       por medio de aditoría            P.59      Auditoría TI de los sistemas de                   0….4        +   Resumir situación actual
+       interna, auditoría externa o               información de la TC (SIGEF y centro de                       -   Identificar deficiencias
+       por sus auditores pares.                   pagos electrónicos).
+5.2    Banco Central está sujeto a      P.60      Auditoría financiera/de cumplimiento de           0….4        +   Resumir situación actual
+       revisión periódica a través de             las operaciones del Banco Central.                            -   Identificar deficiencias
+       auditoría interna, auditoría     P.61      Auditoría de TI de los sistemas de                0….4        +   Resumir situación actual
+       externa o por auditores                    información del Banco Central (sistemas                       -   Identificar deficiencias
+       pares.                                     de pago y contabilidad).
+5.3    Evaluación de Salvaguardas       P.62      El marco de gobernanza del Banco                  0….4        + Resumir situación actual
+       que realiza periódicamente el              Central está acorde a los estándares                          - Identificar deficiencias
+       FMI del marco de gobernanza                según lo evidencia la Evaluación de
+       del Banco Central.                         Salvaguardas del FMI.
+5.4    Se realiza evaluación PEFA       P.63      Las operaciones de la CUT y prácticas de la       0….4        + Resumir situación actual
+       como una evaluación central                TC/Banco Central se revisan durante la                        - Identificar deficiencias
+       de la revisión de la GFP                   evaluación PEFA, y evaluaciones
+       general y el desempeño de la               relacionadas se utilizan para monitorear el
+       rendición de cuentas.                      progreso.
+5.5    Se revisan periódicamente los    P.64      El informe de riesgo y controles se               0….4        + Resumir situación actual
+       riesgos y controles                        prepara anualmente, describiendo la                           - Identificar deficiencias
+       financieros y se anexan a las              evaluación general de los sistemas de
+       revisiones anuales del                     información de la TC, los controles y
+       sistema financiero del Banco               cualquier deficiencia.
+       Central y la TC.                 P.65      El informe de riesgo y controles se               0….4        + Resumir situación actual
+                                                  prepara anualmente, describiendo la                           - Identificar deficiencias
+                                                  evaluación general de los sistemas de
+                                                  información del Banco Central, los
+                                                  controles y cualquier deficiencia.
+                                                        Calificación general del diagnóstico :      XX %
+
+
+
+
+                                                                                         22
+Notas:
+A
+   Con respecto a la P.1, una característica clave a considerar podría ser si el MdF/Tesorería puede definir estándares
+   o normas para los sistemas utilizados en la gestión financiera (y la cobertura de esta aprobación – e incluyen las
+   entidades extra-presupuestarias) y qué responsabilidades se les otorga a los funcionarios responsables en los
+   Ministerios por mantener sistemas de gestión financiera y marcos de control interno efectivos y por ende una
+   arquitectura SIGEF). Cuáles garantías debe proveer el MdF/Tesorería con respecto a las operaciones del SIGEF para
+   que estos funcionarios responsables se sientan cómodos en el descargo de sus responsabilidades, y a la inversa,
+   qué requerimientos se demanda de los funcionarios responsables para utilizar el SIGEF (por ejemplo mantener las
+   actualizaciones del sistema operativo y de protección de virus en todas las estaciones de trabajo conectadas a la
+   red que conecta con el SIGEF; seguridad de la red – firewalls, logs de monitoreo y mantenimiento; no compartir
+   nombres de usuario y claves de acceso a la red y al SIGEF con nadie más). Si existe una red o intranet seguro para
+   uso de todo el gobierno, estas características deben ser abordadas para pertenecer a esta red (que puede ser
+   manejada por una entidad distinta al MdF/Tesorería). Sin embargo, en muchos países la implementación del SIGEF
+   está más adelantada que la red segura para uso de todo el gobierno y estos asuntos se abordan durante la
+   implementación del SIGEF.
+
+    P.4 y P.8: Esto tendrá impacto independientemente de si los procedimientos pueden ser totalmente
+    automatizados a través del sistema, o si la transmisión de documentos de respaldo/autorizaciones impresas se
+    necesitan aún junto con los mensajes transmitidos dentro del SIGEF y del SIGEF al banco pagador. Si la legislación
+    que rige las transacciones y comunicaciones electrónicas existe (o está en proceso de redacción), el diseño del
+    SIGEF y el interface bancario deben estar conformes con esta legislación para garantizar que las transmisiones
+    electrónicas tengan igual legitimidad legal que las autorizaciones impresas. Por ejemplo, si la legislación establece
+    una infraestructura de clave pública, puede existir el requerimiento de que la autoridad que certifica sea aprobada
+    por un organismo regulatorio central y por lo tanto el SIGEF debe desplegar certificados de una autoridad de
+    certificación aprobada. Si existen brechas en el sustento legal de las firmas electrónicas y no hay bases legales para
+    firmas electrónicas basadas en claves públicas, puede que los procesos centralizados de la CUT requieran incluir
+    controles adicionales para abordar este tema. Por ejemplo, la transmisión del archivo de pagos desde Tesorería al
+    MdF puede implicar un proceso adicional mediante el cual información clave sobre el archivo (i.e. valor total de los
+    pagos, número de pagos y un total hash (suma resumen de comprobación) elaborado a partir de la suma de los
+    números de cuenta en el archivo) se intercambie a través de una ruta distinta (i.e. correo electrónico, teléfono)
+    entre la Tesorería y el Banco Central antes de que el banco Central apruebe el archivo a ser ejecutado a través del
+    sistema de pago.
+
+    P.2 and P.5: En algunos casos, estos pueden ser cubiertos en un acuerdo único (el acuerdo puede desarrollarse con
+    el tiempo – inicialmente es importante contar con un acuerdo relacionado con los servicios que el BC
+    proporcionará o no.
+B
+    Cláusulas claves en la Legislación Bancaria, Regulaciones y Circulares que tienen impacto en el diseño de la CUT
+    (custodia y estructura de cuentas bancarias, y procesos de ingresos y desembolsos) incluyen:
+    • La Ley que regula al Banco Central puede especificar que el BC tiene custodia de las cuentas de Tesorería o es
+       un agente bancario/fiscal del gobierno;
+    • La Ley del BC puede especificar que los beneficios del BC sean transferidos al Gobierno y que el BC sea
+       recapitalizado por el Gobierno en caso de una pérdida (por ende menor riesgo si la CUT reside en el BC);
+    • La disponibilidad de crédito desde el Banco Central al Gobierno;
+    • Los roles y responsabilidades del Banco Central y del Gobierno con respecto a la emisión y servicio de la deuda
+       doméstica y externa;
+    • Horas de operación del sistema de pago;
+    • Periodos de compensación de cheques;
+    • Periodos de compensación de transacciones electrónicas (ACH y RTGS);
+
+
+                                                           23
+    • Periodos de tiempo para devolver transacciones no válidas (i.e. crédito a la cuenta de cliente no válida en el
+       banco receptor);
+    • Manejo de transacciones dirigidas incorrectamente (i.e. crédito a una cuenta de cliente válida pero incorrecta);
+    • Requerimiento de los bancos comerciales y otras instituciones financieras de reportar sobre las cuentas del
+       gobierno, saldos y transacciones al MdF/Tesorería Central (según se indica arriba, esto también tiene impacto
+       en la capacidad del MdF de preparar efectivamente un inventario de cuentas bancarias existentes).
+C
+    P.13: Las funciones de control de pago no se limitan a cumplir con los límites presupuestales, y deberán también
+    considerarse otros aspectos importantes de los controles del gasto público (i.e. funciones de contrataciones,
+    controles de nómina, registro de proveedores, monitoreo de las cuentas bancarias de anticipos de las unidades
+    ejecutoras de gastos). Si un paquete Comercial Disponible para la Venta (Commercial Off-the-Shelf – COTS) se
+    despliega como la base del SIGEF, estos controles pueden resultar relativamente sofisticados de configurar y
+    mantener. Por lo tanto, la instalación debería estar claramente documentada, y la responsabilidad del
+    mantenimiento de los roles de usuario en el sistema debería ser claramente asignados para todos los controles.
+    Similarmente, para un software desarrollado localmente, el ambiente de control debe ser incorporado de manera
+    adecuada en la funcionalidad del software y el modelo de datos asociado.
+
+    P.14: Las funciones de control de pagos realizadas por el BC están principalmente relacionadas con la verificación
+    de pagos no válidos e instrucciones de devolución o reintegro y el valor de crédito dentro de los plazos de tiempo
+    especificados en la legislación/reglas de participantes.
+
+    P.15 y P.16: Si la TC está realizando conciliaciones, la TC debe mantener libros de caja para todas las cuentas
+    bancarias CUT en el procesamiento de las transacciones. En los países donde se ha utilizado una estructura de
+    cuentas bancarias para el registro de las transacciones, el mantenimiento de libros de caja y la conciliación pueden
+    ser débiles (y en algunos casos, puede que los libros de caja que se presentan para auditoría sean simplemente el
+    estado bancario con los DR/CR revertidos, en lugar de que se mantengan dichos libros). Los flujos diarios deben ser
+    registrados independientemente tanto por la TC como por el BC como respaldo de las conciliaciones.
+
+    P.17: Aunque la supervisión de los sistemas de pago es generalmente una función del Banco Central, en algunos
+    países, el marco institucional establece que una entidad independiente del BC es directamente responsable de la
+    supervisión de las instituciones financieras y/o de la supervisión del sistema de pago (aunque por supuesto el BC
+    será siempre un participante interesado). También, las características disponibles en los sistemas de pago
+    nacionales (en lugar de la automatización de la supervisión de estos sistemas) tendrá impacto en el diseño de los
+    procesos y políticas de la CUT (por ejemplo, puede el Gobierno realizar recaudos y pagos a una cuenta de dinero
+    móvil mediante telecomunicación). [Nota del traductor: Se refiere a aplicaciones para teléfonos inteligentes que
+    pueden ser utilizados para pagos en línea (como los servicios ofrecidos por AT&T, T-Mobile, Western Union, etc.).
+    A estos sistemas también se les denomina billeteras electrónicas. Esta pregunta mide la capacidad del gobierno
+    para cobrar o hacer transferencias desde y hacia este tipo de dispositivos móviles/aplicaciones.]
+D
+    P.23: Los informes de transacción pueden ser provistos a partir del RTGS y ACH, mientras que los estados
+    bancarios se generan desde el sistema bancario central del BC. También, sería preferible que los estados
+    estuviesen disponibles en línea, en tiempo real en lugar de ser transmitidos diariamente.
+
+    P.25: Sírvase notar que la arquitectura de sistema de algunos paquetes COTS considera la conciliación bancaria
+    como un módulo separado, o como parte del módulo de gestión de efectivo o tesorería, en lugar de estar dentro
+    del módulo del Libro Mayor General (GL). Es importante garantizar que los registros de libro de caja utilizados en el
+    proceso de conciliación bancaria estén completos para cualquier posteo de los activos bancarios en el GL.
+E
+    P.27-P.31: Existen varios niveles de “pistas de auditoría” que serán requeridas para rastrear cualquier transacción
+    (en la propia base de datos, así como también en el software de aplicación del SIGEF y en los registros de acceso a
+    la red). Esta evaluación se enfoca principalmente en las “pistas de auditoría” de las bases de datos relevantes. Una
+    pregunta clave es si los auditores internos y externos están completamente al tanto de la pista de auditoría (base
+    de datos y software y también auditoría TI para los registros de red), y pueden utilizarlas para rastrear el
+                                                           24
+    procesamiento de transacciones – en algunos países, únicamente el administrador del sistema SIGEF comprende
+    cómo utilizar la función de pista de auditoría para rastrear transacciones (y por lo tanto nadie tiene la capacidad de
+    rastrear las acciones de administración del sistema). Otra pregunta clave es si un gobierno tiene acceso
+    (internamente o a través de firmas locales/regionales) a una capacidad de contabilidad “forense” que sea capaz de
+    rastrear cualquier transacción o entrada de datos realizada a través del SIGEF. Debería tomarse nota de estos
+    importantes aspectos para una evaluación más exhaustiva, cuando sea aplicable.
+F
+    Los controles de seguridad de la información enumerados en esta parte se concentran en los procesos de pagos
+    electrónicos. En la práctica, esto se extiende desde el inicio de órdenes de compra en las agencias o entidades
+    ejecutoras y los cambios realizados en nómina/empleados (ya que estos son los pagos de primera fase que serán
+    procesados a través de la CUT). Como se expone arriba, donde el MdF ha implementado la red para el SIGEF y
+    permite conexiones a otras redes locales que mantienen las agencias o entidades ejecutoras, los controles de
+    seguridad de la información deben ser aplicados a todos los elementos (incluyendo las redes de agencias o
+    entidades ejecutoras que el MdF no tiene la responsabilidad directa de mantener), no únicamente en la TC o el
+    BC.
+G
+    Sírvase notar que el Diagnóstico de Salvaguardas del FMI se requiere únicamente en los países que utilizan
+    recursos del Fondo, aunque se incentiva a los países a utilizar también un programa monitoreado por el personal.
+
+
+
+
+                                                           25
+Anexo 1.        Referencias
+
+
+1.   Ali Hashim and Allister J. Moon, “Treasury Diagnostic Toolkit”, World Bank Working Paper # 19, 2004
+2.   Biagio Bossone and Massimo Cirasino, “The Oversight of the Payments Systems: A Framework for the
+     Development and Governance of Payment Systems in Emerging Economies”, World Bank Report, July 2001
+3.   BIS-CPSS, “Central Bank Oversight of Payment and Settlement Systems”, Bank for International
+     Settlements (BIS) - Committee on Payment and Settlement Systems (CPSS), July 2005
+4.   Cem Dener, Joanna Watkins, and William Dorotinsky, “Financial management information systems : 25
+     years of World Bank experience on what works and what doesn't”, World Bank Study, April 2011
+5.   COBIT: Control Objectives for Information and related Technology
+6.   European Court of Auditors, “The Financial and Compliance Audit Manual (FCAM)”, May 2012
+7.   European Court of Auditors, “The Performance Audit Manual”, May 2007
+8.   IMF, “Safeguards Assessments of Central Banks” Factsheet, March 2012
+9.   ITIL: Information Technology Infrastructure Library
+10. Public Expenditure and Financial Accountability (PEFA) Framework, May 2006
+11. Sailendra Pattanayak and Israel Fainboim, “Treasury Single Account: Concept, Design and
+    Implementation Issues”, IMF WP/10/143, May 2010
+12. The World Bank, “Payment Systems Worldwide – Outcomes of the Global Payment Systems Survey
+    2008”, FPD Payment Systems Development Group, 2009
+13. The World Bank, “General Guidelines for the Development of Government Payment Programs”, FPD
+    Payment Systems Development Group, August 2012
+
+
+
+
+                                                     26
+Anexo 2.         Plantilla (template) para el Informe de Evaluación Rápida de la CUT
+
+Luego de concluir la revisión de las operaciones de la CUT utilizando el cuestionario, se debe preparar un
+informe de evaluación rápida para resumir los principales hallazgos y compartir las conclusiones y
+recomendaciones con los funcionarios correspondientes. Puede utilizarse la siguiente plantilla de informe
+para presentar los resultados de manera consistente.
+
+Contenido Sugerido de un Informe de Evaluación Rápida de la CUT
+
+1. Antecedentes                           (resumen de operaciones de CUT existente, si alguna, o planes de
+                                          establecer una CUT)
+2. Objetivos                              (expectativas del Evaluación Rápida de la CUT)
+3. Prerrequisitos de la CUT               (situación actual de los prerrequisitos de la CUT, utilizando la plantilla
+                                          provista)
+4. Roles y responsabilidades de la CUT    (utilizando la plantilla provista)
+5. Enfoque                                (autoevaluación o evaluación conjunta, describir los pasos seguidos)
+6. Prinicipales Hallazgos                 (resumir los principales hallazgos en las cinco categorías examinadas)
+7. Conclusiones                           (resumir las fortalezas y debilidades)
+8. Recomendaciones                        (enumere las recomendaciones específicas para responder a los
+                                          desafíos técnicos y adaptativos)
+
+Apéndice 1.   Funcionarios que participaron en el Evaluación Rápida de la CUT
+Apéndice 2.   Lista de documentos examinados (provistos por las autoridades) durante el Evaluación Rápida
+de la CUT
+Apéndice 3.   Resumen de los requerimientos de la CUT incluidos en el contrato SIGEF (si alguno)
+Apéndice 4.   Documentos de muestra e imágenes obtenidas de los sistemas de pagos interbancarios (RTGS
+y ACH)
+     •   Orden de Pago (OP) Estándar utilizada para transacciones de gastos e ingresos (vía SIGEF).
+     •   Orden de Pago (OP) creada por la TC a través de la estación de trabajo RTGS del BC.
+     •   Tipos de informes disponibles en la estación de trabajo RTGS del BC.
+     •   Informe de muestra sobre las transacciones RTGS.
+     •   Formato de mensaje (MT103, como una versión ampliada del SWIFT original) para transferir las
+         instrucciones de pago de la TC al sistema RTGS.
+     •   Detalles de una instrucción de pago de la terminal de monitoreo ACH del BC.
+     •   El sistema de monitoreo del BC para manejar las liquidaciones ACH diarias.
+     •   Los detalles de las transacciones ACH diarias.
+
+
+
+
+                                                    27
+Anexo 3.        Visión General de una CUT Centralizada y de Sistemas Electrónicos de
+                Pago
+
+Los acuerdos de implementación de la Cuenta Única de Tesorería (CUT) pueden agruparse de forma
+general en dos categorías: centralizados y distribuidos. El acuerdo CUT centralizado se diseña para capturar
+todas las transacciones de ingresos y gastos a través de una estructura consolidada de cuentas bancarias en
+una única institución financiera, generalmente el Banco Central. Cuando las operaciones GFP están muy
+descentralizadas y las unidades ejecutoras de gastos presupuestarios se les permiten conservar sus cuentas
+de transacciones por separado, los acuerdos de CUT distribuidos pueden contribuir a capturar los flujos de
+estas cuentas haciendo un barrido (sweeping) de saldos hacia la cuenta principal de la CUT al final de cada
+día. Sin embargo, resulta relativamente difícil capturar los detalles de transacciones en una CUT
+descentralizada. Por lo tanto, en muchos países se están estableciendo estructuras centralizadas para
+mejorar la eficiencia y efectividad de las operaciones de la CUT a través del procesamiento centralizado de
+transacciones. Los avances en las aplicaciones basadas en la web y la rápida expansión de los sistemas de
+pago electrónico son elementos conducentes claves para apoyar las operaciones centralizadas de la CUT.
+
+Los Sistemas de Pago Electrónico (EPS, por sus siglas en inglés) o la Transferencia Electrónica de Fondos
+(EFT, por sus siglas en inglés) operan sobre la base de dos sistemas:
+  •   El sistema de cámara de compensación es donde se registran las transacciones entre miembros de
+      un canal de compensación.
+  •   La liquidación es la transferencia de fondos de la cuenta de un ordenante a la cuenta de un
+      beneficiario. Esto solo puede ocurrir entre bancos. El Banco Central de cada país actúa usualmente
+      como el agente primario de liquidación. La liquidación puede ocurrir inmediatamente sobre una base
+      bruta (RTGS) o ser retrasada sobre una base neta (ACH).
+Los sistemas de Liquidación Bruta en Tiempo Real (RTGS) son sistemas de transferencia de fondos en los
+cuales la transferencia de dinero ocurre de un banco a otro en “tiempo real” y en una base “bruta” (Gráfica
+1). La liquidación en tiempo real significa que una transacción de pago no está sujeta a ningún periodo de
+espera. Las transacciones son liquidadas tan pronto como son procesadas. “Liquidación bruta” significa que
+la transacción es liquidada sobre una base individual sin agrupamiento (bunching) o compensación
+(netting) con cualquier otra transacción. Una vez procesados, los pagos son finales e irrevocables. En
+términos de liquidez y riesgos sistémicos, los sistemas de pago de alto valor son los más importantes
+debido al gran valor y a la naturaleza sensible con respecto al tiempo de los pagos. Las soluciones RTGS son
+en su mayoría implementadas por los bancos centrales. Las cámaras de compensación del sector privado
+utilizan el modelo Sistema Interbancario de Compensación de Pagos (CHIPS, por sus siglas en inglés).
+
+
+
+
+                                                    28
+                          Gráfica A3.1: Operaciones del Sistema Centralizado de Pagos Electrónicos
+
+                                                 Instrucciones                            Estados CUT
+                                             3   de Pago                           6      recibidos
+                       MdH                                                                              Banco Central     ACH
+       SIGEF                                                     VPN Seguro
+                  Tesorería Central                                                                                       RTGS
+           Conciliación                    >> EFT (archivos en lote; XML)         << Estados
+                                                                                                                                 Mensaje
+       7   automática                                                                                        CUT              4 de Pago
+                                                               EPS Centralizado              SWIFT
+                                                         Detalles de todos los pagos (e
+                  Red de Tesorería                         ingresos) recibidos por el              Red del Sistema Bancario
+                                                          Banco Central diariamente
+
+                                       Requisición de pago                                 HQ Banco                    HQ Banco
+                                  2    aprobada                                           Comercial #1                Comercial #X
+                Oficinas de Tesorería
+                      Distritales
+                                                                       Pago directo        Red del Banco              Red del Banco
+                                       Orden de Pago y                 a cuenta            Comercial #1               Comercial #X
+                                  1    Factura
+                                                                  5    beneficiaria
+                                       prpresentada
+                                      Unidades de                                      Sucursales del Banco          Sucursales del
+           Fondos                        Gasto                                            Comercial # 1            Banco Comercial #X
+           Información
+
+
+El sistema de Cámara de Compensación Automática (ACH, por sus siglas en inglés) es un sistema de pago
+para valores menores. El ACH procesa grandes volúmenes de transacciones de crédito y débito en lotes y a
+un bajo costo. Las transacciones de crédito ACH incluyen pagos de nómina, pensiones, y jubilaciones. Las
+transacciones de débito ACH incluyen pagos de facturas de consumidor, tales como facturas de servicios
+públicos, facturas de teléfono, y primas de seguro. ACH es operado principalmente por los bancos
+centrales. En algunos países los sistemas ACH son de propiedad y operación privada, pero autorizados y
+regulados por los bancos centrales.
+La Sociedad para las Telecomunicaciones Financieras Interbancarias Mundiales, (SWIFT, por sus siglas en
+inglés) es una red de telecomunicaciones global. Provee un formato de mensaje estricto para el
+intercambio de información financiera entre instituciones financieras. Los mensajes pasan a través de
+enlaces electrónicos establecidos entre SWIFT y los sistemas de compensación electrónica locales en
+diferentes países.
+
+El SWIFT tiene dos componentes claves:
+
+   •   La red SWIFT, que se utiliza para transmitir datos entre los miembros SWIFT (bancos y otras
+       instituciones financieras); y
+   •   El formato estándar de mensajes SWIFT que son los estándares reconocidos internacionalmente
+       para los mensajes bancarios y financieros.
+
+Los mensajes en formato SWIFT pueden ser desplegados en los procesos de pago de la CTU (y se
+recomienda ya que el uso de formatos con estándar internacional facilitará los cambios futuros en las
+aplicaciones de software utilizadas), aunque no pueden ser necesariamente transmitidos vía la red SWIFT,
+pero si vía otras redes de sistema de pago nacional, o a través de un enlace directo entre el SIGEF y el
+sistema electrónico de pago y el banco central. Sin embargo, la red SWIFT será generalmente el único
+método para las Transferencias Telegráficas Internacionales.
+
+                                                                      29
+Anexo 4.        Preguntas sobre los Prerrequisitos y Riesgos de la CUT
+
+Para verificar la existencia de un sistema interbancario confiable, se debe solicitar a los funcionarios de la
+TC y del Banco Central una serie de aclaraciones, que se enumeran a continuación:
+ 1.   ¿Cómo capturan los sistemas de información del Banco Central los datos a nivel de transacción de
+      todos los movimientos que afectan la CUT (para ingresos y egresos)?
+ 2.   ¿Cómo mantiene y protege el Banco Central los datos de la CUT a nivel de transacción para que
+      estén disponibles en cualquier punto en el futuro para fines de reporte y auditoría?
+ 3.   ¿Qué procedimiento se establecerá para proveer estados bancarios diarios para conciliación, y quién
+      los preparará?
+ 4.   ¿Cuáles son los mecanismos de supervisión establecidos para monitorear las operaciones bancarias
+      del Banco Central, así como las operaciones de tesorería/CUT de la TC (cuál entidad audita las
+      operaciones de tesorería y bancarias, y con qué periodicidad?
+ 5.   ¿Se realizó recientemente alguna Auditoría de Seguridad de Tecnología de la Información (TI) en los
+      sistemas de información del Banco Central y la TC por parte de un auditor de TI certificado?
+ 6.   ¿Cuál marco de auditoría se utilizó para evaluar los sistemas de información (COBIT, ITIL, ISO 27001,
+      etc.)?
+ 7.   ¿Está habilitada la “pista de auditoría” en las bases de datos relevantes durante las operaciones
+      diarias del Banco Central y la TC?
+ 8.   ¿Cuáles controles de seguridad de la información se utilizan activamente en los sistemas de
+      información del Banco Central y la TC:
+      • Autenticación y autorización (tipo de firma digital utilizada; almacenamiento de los certificados
+          digitales emitidos)
+      • Acceso privilegiado (quién tiene acceso privilegiado a las bases de datos de la CUT y a las
+          plataformas del sistema interbancario)
+      • Seguridad e integridad de datos (soluciones para la transferencia segura de datos + encriptación
+          de datos en tránsito)
+      •   Firewalls de la red y la aplicación web (soluciones para revisar registros, restringir acceso)
+      •   Claves de acceso para todos los tipos de usuarios
+      •   Seguridad física (control de acceso y seguridad del centro de datos)
+      •  Copia de seguridad y almacenamiento (todas las transacciones por los últimos 5 años
+         almacenadas activamente en bases de datos; registros antiguos son archivados; quién mantiene
+         los registros de la CUT).
+ 9. ¿Existe un proceso automatizado para reflejar todas las transacciones diarias (ingresos + gastos) en
+     el Mayor General del SIGEF (cómo rastrear las transacciones del sistema interbancario del Banco
+     Central en el Mayor General del SIGEF con identificadores únicos)?
+ 10. ¿Cuál es la situación operativo del centro de pagos electrónicos de la TC (número de funcionarios
+     autorizados del MdF/TC para ejecutar los pagos, y el mecanismo de supervisión?
+ 11. Diagramas de flujo de datos para procesar transacciones de gastos e ingresos a través del SIGEF y los
+     sistemas de información el Banco Central para operaciones de la CUT (describiendo varios pasos a
+     ser sustentados por el SIGEF de TC, el Centro de Pagos Electrónicos de la TC, el servidor de Acceso
+     del Banco Central, las plataformas RTGS/ACH del Banco Central y el Mayor General del Banco
+     Central).
+                                                       30
+ 12. Lista de todos los formatos de mensaje (para RTGS y ACH por separado) a ser implementados para
+     registrar / reportar todos los gastos e ingresos presupuestales, junto con una justificación de su
+     propósito.
+ 13. La versión más reciente del protocolo CUT y sus anexos (incluyendo controles financieros y de
+     seguridad de la información).
+ 14. El Plan de Acción para la implementación del sistema CUT (incluyendo responsabilidades de
+     TC/Banco Central y FB).
+
+
+
+Se incluyó una revisión de riesgo y controles como parte de este diagnóstico para analizar los sistemas de
+información, los procedimientos y el marco operativo del NBKR y la TC.
+
+Los Factores de riesgo que se tomaron en cuenta en esta revisión incluyen:
+    a) La susceptibilidad de los sistemas de pago y el interface de la CUT ante el fraude o la distracción de
+         fondos;
+    b) La complejidad de las transacciones de la CUT, o grado de confiabilidad en el sistema para que
+         contabilice y concilie correctamente;
+    c) El grado de intervención manual, y el potencial de error relacionado presente en el sistema;
+    d) La complejidad de los perfiles de seguridad de usuarios:
+    e) Los Interfaces con cualquier sistema de terceros; y
+    f) La confianza por parte de las empresas en la disponibilidad continua del sistema.
+Controles:
+Algunas de las áreas de control críticas incluidas en esta revisión se relacionaban con la aplicación de los
+controles, sistemas de información, e infraestructura de TIC conforme se enumeran a continuación:
+    a) El acceso a los sistemas de pago del BC y las operaciones de la CUT (Centro de pago electrónico de
+       la TC) están restringidos únicamente al personal cuyas responsabilidades requieren que tengan
+       este acceso.
+    b) La segregación de funciones claves de la CUT y del sistema de pago se monitorean y evalúan
+       periódicamente.
+    c) La validación de las entradas para garantizar que la entrada de datos es autorizada, correcta y
+       completa.
+    d) Verificaciones periódicas es para garantizar que todas las transacciones son procesadas
+       correctamente.
+    e) Revisiones de los productos para garantizar que la información reportada sea completa, fiel y válida
+       y que las pistas de auditoría sean adecuadas.
+    f)   Las transacciones diarias se registran y reportan desde ambos extremos del interface de la CUT
+         (sistemas de información del BC y la TC) consistentemente.
+    g) Los interfaces de la CUT están diseñados y probados para proteger la integridad del intercambio de
+       datos.
+    h) Las aplicaciones de la CUT son totalmente comprendidas por el personal y cumplen con la
+       legislación.
+
+                                                      31
+i)   Las aplicaciones de la CUT se monitorean rutinariamente y se evalúan adecuadamente.
+j)   La seguridad física para proveer un entorno que proteja el hardware y el software de daños debido
+     a accesos no autorizados y efectos medioambientales (i.e. agua, temperaturas extremas, fuego).
+k) Copia de seguridad (backup) de datos y almacenamiento remoto (offsite) para la recuperación de la
+   operación del sistema.
+l)   Recuperación de las operaciones informáticas en caso de desastre.
+
+
+
+
+                                                32
+    Anexo 5.            Muestra de Documentos e Imágenes Relacionados con las Operaciones y el Sistema de pago de la CUT
+                              Gráfica A5.1: Orden de Pago (PO) Estándar utilizada para transacciones de gastos e ingresos (República de Kyrgyz)
+
+                                                                  ID Unico de la OP
+
+
+    Codigo de Instit.
+     Presupuestaria
+Identificador de
+Contribuyente                                                                                                           Payer’s Bank Account   Number
+                                                                                                                        # Cta. Bancaria del Pagador u Ordenante
+       ID de Registro
+    del Fondo Social                                                                                                       Pagador
+         Código de
+     Identificación
+Bancario Code (BIC)
+
+
+                                                                       BENEFICIARIO
+
+                                                                                                                       # Cta. Bancaria del Beneficiario
+
+
+
+
+    Monto en Soms
+
+
+    Código de Pago
+      (Clasificación
+        Económica)
+
+        Descripción
+
+
+
+
+                                                                                      33
+Gráfica A5.2: Orden de Pago (OP) creada por la Tesorería Central (TC) a través de la estación de trabajo RTGS del Banco Central (modo de acceso directo)
+
+
+
+
+                                                                          34
+Figure A5.3: Tipos de reporte disponible desde la estación de trabajo RTGS del Banco Central (modo de acceso directo)
+
+
+
+
+                                                         35
+Gráfica A5.4: Informe modelo de las transacciones RTGS (posteadas manualmente por la oficina de pago de la TC)
+
+
+
+
+                                                     36
+Gráfica A5.5: Formato de mensaje (MT103, como una versión ampliada del formato SWIFT original) para transferir las instrucciones de pago de la TC al sistema RTGS
+
+
+
+
+                                                                               37
+Figure A5.6: Detalles de una instrucción de pago de la terminal de monitoreo ACH del Banco Central
+
+
+
+
+                                               38
+Gráfica A5.7: El sistema de monitoreo del Banco Central para manejar las liquidaciones diarias ACH
+
+
+
+
+                                               39
+Gráfica A5.8: Los detalles de las transacciones ACH diarias
+
+
+
+
+                            40
+

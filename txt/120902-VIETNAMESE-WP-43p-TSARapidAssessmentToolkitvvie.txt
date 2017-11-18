@@ -1,0 +1,1352 @@
+Bộ công cụ đánh giá nhanh
+Tài khoản kho bạc duy nhất
+           (TSA)
+
+
+
+
+                   Cem Dener
+
+          Phiên bản 2.0 tháng 2/2014
+
+
+
+
+         https://eteam.worldbank.org/fmis
+
+    http://www.worldbank.org/publicfinance/fmis
+Lời cám ơn
+Bộ công cụ này ban đầu được xây dựng nhằm đáp ứng yêu cầu của Nhóm Cải cách Thể chế và Khu vực
+Công (ECSP4), Khu vực Trung Á và Châu Âu (ECA) về đánh giá hoạt động Tài khoản kho bạc duy nhất
+(TSA) tại Kư- giếc vào tháng 10/2012. Việc chuyển đổi thành bộ công cụ chung nhằm đánh giá nhanh Tài
+khoản kho bạc duy nhất (TSA) được sự hỗ trợ của Bộ phận Thông lệ Điều hành và Quản lý Khu vực Công
+(PRMPS) thuộc Mạng lưới Quản lý Kinh tế và Giảm nghèo (PREM) của Ngân hàng Thế giới. Bộ công cụ
+này đã được chia sẻ với nhiều quan chức chính phủ, các nhóm dự án để thử nghiệm tại thực địa, và cũng
+nhận được thêm phản hồi để có thể cải thiện hơn nữa kể từ đó.
+
+Tác giả của tài liệu kỹ thuật này, Cem Dener (PRMPS, World Bank), mong được cám ơn rất nhiều cán bộ
+Ngân hàng Thế giới và quan chức chính phủ đã góp ý cho bộ công cụ này kể từ khi được áp dụng năm
+2012. Tài liệu này cũng nhận được góp ý từ các thành viên Cộng đồng Hành nghề về Hệ thống Thông tin
+Quản lý Tài chinh (FMIS CoP). Các ý kiện nhận xét và làm rõ của bà Megan Gray đã đóng góp đáng kể
+trong phiên bản thứ hai của bộ công cụ này. Bộ công cụ này sẽ được được đăng tải trên trang web của
+IFMIS Cop (https://eteam.worldbank.org/FMIS) để tiếp tục nhận thêm góp ý và kiến nghị và được quản
+lý bằng cách cập nhật thường xuyên nhằm phải ánh những thay đổi về thông lệ Tài khoản kho bạc duy
+nhất (TSA) hoặc nhu cầu của các quốc gia trong tương lai. Các kết quả, diễn giả và kết luận phản ánh
+trong tài liệu này không nhất thiết phản ánh quan điểm của Ngân hàng Thế giới (WB).
+
+
+
+
+Bản quyền và cho phép
+
+
+
+
+Sản phẩm này thuộc bản quyền nêu danh đối với các sản phẩm sáng tạo chung “Creative Commons
+Attribution 3.0 Unported license” (CC BY 3.0) http://creativecommons.org/licenses/by/3.0. Theo
+bản quyền nêu danh các sản phẩm sáng tạo chung, người đọc được tự do sao chép, phân phối, chuyển
+giao, phỏng theo sản phẩm này, bao gồm cho cả các mục đích thương mại, theo các điều kiện sau:
+Nêu danh khi trích dẫn: Đề nghị trích dẫn sản phẩm như sau:
+    Dener, Cem, 2013. Công cụ Đánh giá Nhanh các Hệ thống Thanh toán và Hoạt động của Tài khoản
+    Kho bạc Duy nhất (TSA). Washington, DC. Ngân hàng Thế giới. Bản quyền: Nêu danh đối với các
+    sản phẩm sáng tạo chung CC BY 3.0
+                                                                            Mục lục
+
+Giới thiệu ........................................................................................................................................................... 2
+Các nguyên tắc về Tài khoản kho bạc duy nhất (TSA)........................................................................................ 3
+Các điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA) ............................................................................ 4
+Vai trò và trách nhiệm về Tài khoản kho bạc duy nhất (TSA) ............................................................................ 7
+Độ tin cậy và trung thực của thông tin trong Tài khoản kho bạc duy nhất (TSA) .............................................. 7
+Phương pháp luận............................................................................................................................................. 9
+Cách thức tổ chức đánh giá nhanh Tài khoản kho bạc duy nhất (TSA) ........................................................... 12
+Bảng câu hỏi đánh giá nhanh Tài khoản kho bạc duy nhất (TSA) và Hệ thống thanh toán ............................. 13
+Phụ lục 1. Tham                                                                                                                                                       khảo
+......................................................................................................................................................................... 25
+Phụ lục 2. Mẫu Báo cáo đánh giá nhanh Tài khoản kho bạc duy nhất (TSA)
+......................................................................................................................................................................... 26
+Phụ lục 3. Tổng quan về Tài khoản kho bạc Duy nhất (TSA) tập trung và các Hệ thống thanh toán điện tử
+......................................................................................................................................................................... 27
+Phụ lục 4. Các câu hỏi về điều kiện ban đầu của Tài khoản kho bạc duy nhất (TSA) và rủi ro
+......................................................................................................................................................................... 29
+Phụ lục 5. Chứng từ mẫu và hình ảnh liên quan đến các hoạt động Tài khoản kho bạc duy nhất (TSA) và các
+hệ thống thanh toán ........................................................................................................................................ 32
+
+
+
+
+                                                                                    1
+                      Công cụ Đánh giá Nhanh
+Các Hệ thống Thanh toán và Hoạt động của Tài khoản Kho bạc Duy nhất
+                               (TSA)
+
+                                          Tháng 10 năm 2013
+
+Giới thiệu
+Tài khoản kho bạc duy nhất (TSA) là một trong những thông lệ đã được minh chứng về khả năng cải thiện
+các hệ thống thu chi ngân quỹ, và kiểm soát chi tiêu công theo hướng tập trung hoá số dư nhàn rỗi tại các
+tài khoản ngân hàng của chính phủ. Cấu trúc Tài khoản kho bạc duy nhất (TSA) thường được triển khai
+trong quá trình triển khai các giải pháp Hệ thống Thông tin Quản lý Tài chính (FMIS).
+Bộ công cụ đánh giá nhanh này được thiết kế để hỗ trợ các quan chức chính phủ làm rõ tình trạng hiện tại
+trong hoạt động của Tài khoản kho bạc duy nhất (TSA), xác định những khả năng cải thiện về quy
+trình/thông lệ, văn bản pháp quy, an ninh thông tin và các hệ thống thanh toán. Mục tiêu chính của hoạt
+động này là đảm bảo những cải cách về Quản lý Tài chính Công (QLTCC) được sự hỗ trợ bởi các hoạt động
+hiện hành về triển khai hệ thống FMIS có quan tâm đầy đủ đến việc thiết kế các quy trình cơ bản của Tài
+khoản kho bạc duy nhất (TSA) nhằm cải thiện về quản lý ngân quỹ.
+Mặc dù có những khác biệt đặc thù giữa các quốc gia, hoạt động Tài khoản kho bạc duy nhất (TSA) thường
+được quản lý bởi Kho bạc trung ương (KBTW) hoặc bộ phận Tổng kế toán (TKT) thuộc Bộ Tài chính. Giữa hệ
+thống IFMIS và hệ thống của Ngân hàng trung ương (NHTW) có một giao diện an toàn được sử dụng để tự
+động hoá các hoạt động của Tài khoản kho bạc duy nhất (TSA), trên cơ sở một khuôn khổ pháp lý và pháp
+quy cụ thể. Các tài khoản thuộc Tài khoản kho bạc duy nhất (TSA) và các hệ thống thanh toán liên ngân
+hàng thường được quản lý bởi Ngân hàng trung ương/quốc gia. Các ngân hàng thương mại và các đơn vị
+khác của chính phủ cũng có thể tham gia vào hoạt động của Tài khoản kho bạc duy nhất (TSA). Mặc dù bộ
+công cụ này tập trung vào mô hình Tài khoản kho bạc duy nhất (TSA) tập trung, nhưng phương pháp luận
+đề xuất có thể được áp dụng cho các cơ chế Tài khoản kho bạc duy nhất (TSA) phi tập trung. Đồng thời, cơ
+cấu thể chế của Bộ Tài chính chưa chắc đã bao gồm một đơn vị chuyên trách (như Kho bạc trung ương) chịu
+trách nhiệm về toàn bộ các chức năng lõi (thu ngân, giải ngân, đối chiếu và quản lý ngân quỹ). Trong những
+trường hợp đó, bộ công cụ đánh giá này có thể được thực hiện bởi tất cả các đơn vị liên quan nhằm làm rõ
+về tình trạng hiện tại, còn lãnh đạo Bộ Tài chính có thể mong muốn cân nhắc khả năng cải thiện tại các cơ
+cấu phân tán đó (để tách bạch nhiệm vụ một cách hiệu quả) trong quá trình cải cách Quản lý Tài chính Công
+(QLTCC).
+Bộ công cụ này bao gồm 65 câu hỏi theo năm phần là các chỉ số chính về độ tin cậy, độ trung thực trong các
+hoạt động của Tài khoản kho bạc duy nhất (TSA), và các hệ thống thanh toán nền tảng của chính phủ. Nội
+dung đánh giá về rủi ro và kiểm soát cũng được lồng trong công cụ đánh giá này để phân tích về các hệ
+thống thông tin, thủ tục và môi trường tác nghiệp. Một số hướng dẫn/chuẩn mực về an ninh thông tin và
+tài chính được sử dụng làm tham chiếu khi xây dựng bộ công cụ này (Phụ lục 1), bên cạnh kiến thức và kinh
+nghiệm của các chuyên gia hành nghề trong lĩnh vực thiết kế và triển khai các hoạt động Tài khoản kho bạc
+duy nhất (TSA) tại các dự án FMIS của Ngân hàng Thế giới (WB). Các đặc tính được cho điểm nhằm đo
+lường tình trạng hiện tại trong các hoạt động của Tài khoản kho bạc duy nhất (TSA) và để xác định ra những
+                                                  2
+thiếu sót một cách nhất quán. Bộ câu hỏi đánh giá này (danh mục kiểm tra) dự kiến nhằm phản hồi nhanh
+cho các bên liên quan tham gia vào các khía cạnh chính trong hoạt động của Tài khoản kho bạc duy nhất
+(TSA). Tuy nhiên, những thảo luận về từng đặc điểm trong đó để tìm hiểu về tác động của Hệ thống FMIS và
+Tài khoản kho bạc duy nhất (TSA) đối với quản lý thu ngân, thanh toán và hỗ trợ những cải thiện về quản lý
+ngân quỹ có vai trò còn quan trọng hơn cả điểm số.
+Các nguyên tắc và điều kiện ban đầu của Tài khoản kho bạc duy nhất (TSA), phương pháp luận đánh giá
+nhanh, và các phương án có thể áp dụng để thực hiện đánh giá này được trình bày trong các chương dưới
+đây. Các bảng biểu dùng để đánh giá hiện trạng hoạt động của Tài khoản kho bạc duy nhất (TSA) và biểu
+mẫu có thể được dùng để lập báo cáo đánh giá nhanh, cũng đã được giải thích. Cuối cùng, một số mẫu
+được trình bày dưới hình thức các phụ lục để làm rõ các loại tài liệu và hệ thống được xem xét khi đánh giá.
+
+Các nguyên tắc về Tài khoản kho bạc duy nhất (TSA)
+Mục đích chính của việc triển khai Tài khoản kho bạc duy nhất (TSA) là nhằm tận dụng tối đa các nguồn lực
+ngân quỹ qua việc tập trung và giảm chi phí ngân quỹ trôi nổi. Các giải pháp về Tài khoản kho bạc duy nhất
+(TSA) được thiết kế để nắm bắt những thông tin chi tiết về các nguồn lực ngân quỹ của chính phủ cũng như
+chi tiêu trên cơ sở hàng ngày. Tuy nhiên, sẽ là chưa đủ nếu ta chỉ đơn thuần nắm bắt thông tin kịp thời về
+số tồn ngân và lưu chuyển ngân quỹ, nếu như các số tồn ngân đó không ngay lập tức sẵn có tại Kho bạc (do
+thiếu thẩm quyền chính thức hoặc do mất thời gian hạch toán, và quy trình điều chuyển/thanh toán). Đồng
+thời, khả năng dự báo về các dòng tiền ra vào và kết quả tốn ngân tại Tài khoản kho bạc duy nhất (TSA)
+đóng vai trò thiết yếu nhằm cải thiện về quản lý ngân quỹ. Ta cần lưu ý rằng nền tảng hệ thống FMIS có thể
+cung cấp thông tin đáng tin cậy qua các giao diện được thiết kế hợp lý cho Tài khoản kho bạc duy nhất (TSA)
+về các khía cạnh quan trọng đó.
+Có nhiều cách để triển khai Tài khoản kho bạc duy nhất (TSA) tuỳ theo điều kiện cụ thể của từng quốc gia
+(các quy định, hệ thống ngân hàng, cơ chế hệ thống thanh toán điện tử (EPS, v.v.). Tại nhiều quốc gia, “Tài
+khoản kho bạc duy nhất (TSA) tập trung” được là mô hình mong muốn để giám sát số thu số chi hàng ngày
+nhanh chóng và hiệu quả kinh tế (Phụ lục 3). Để đạt được điều đó, ta cần thiết lập cơ sở hạ tầng đáng tin
+cậy1 cho Tài khoản kho bạc duy nhất (TSA) trước khi triển khai các giải pháp hệ thống FMIS (vì sau khi đã
+phát triển FMIS, việc triển khai Tài khoản kho bạc duy nhất (TSA) thường khó hơn và tốn kém hơn), trên cơ
+sở Quy ước về Tài khoản kho bạc duy nhất (TSA)2 được thống nhất chung (giữa Kho bạc trung ương (KBTW)
+và Ngân hàng trung ương (NHTW)). Việc trao đổi dữ liệu hàng ngày qua các kết nối an toàn với hệ thống
+ngân hàng và hoạt động thanh toán điện tử (EPS) đóng vai trò quan trọng để đảm bảo báo cáo kịp thời và
+
+
+
+1
+    Thuật ngữ ‘cơ sở hạ tầng TSA’ nghĩa là cấu trúc các tài khoản ngân hàng trong mô hình Tài khoản kho bạc duy nhất
+    (TSA) các luồng thu ngân và giải ngân thực hiện qua các tài khoản đó, cùng các giao diện hệ thống cần thiết và các
+    hợp phần CNTT&TT liên quan. Khuyến nghị đưa ra là mô hình này cần được quyết định trước khi cấu hình hệ thống
+    FMIS, và các thủ tục hỗ trợ Tài khoản kho bạc duy nhất (TSA) được triển khai song song với triển khai hệ thống
+    FMIS.
+2
+    Ban đầu, quy ước đó có thể bao gồm thiết kế các quy trình thu ngân và giải ngân dựa trên đánh giá về các dịch vụ
+    ngân hàng theo đòi hỏi của chính phủ, và xác định ra những dịch vụ nào Ngân hàng trung ương (NHTW) có thể
+    cung cấp cho Chính phủ. Quy ướcnày có thể được mở rộng qua một thủ tục lặp – các quy trình thu ngân và giải
+    ngân đề xuất sẽ xác định ra các dịch vụ ngân hàng mà Chính phủ cần, và ngược lại nó sẽ định hướng về mô hình Tài
+    khoản kho bạc duy nhất (TSA) phù hợp cũng như cấu trúc các tài khoản ngân hàng phù hợp. Đồng thời, thời gian
+    cần để đàm phán đầy đủ thoả thuận giữa Ngân hàng trung ương (NHTW) và Chính phủ về tất cả các khía cạnh
+    không nên được đánh giá thấp.
+                                                          3
+đáng tin cậy về tất cả các khoản thu chi của chín phủ. Phạm vi mạng lưới chi nhánh của Ngân hàng trung
+ương (NHTW) cũng là một yếu tố quan trọng cần cân nhắc.
+Trong mô hình Tài khoản kho bạc duy nhất (TSA) tập trung, Ngân hàng trung ương (NHTW) dự kiến sẽ cung
+cấp một loạt các dịch vụ thanh toán (giải ngân cho đối tượng thụ hưởng qua Hệ thống thanh toán gộp theo
+thời gian thực (RTGS) và/hoặc bù trừ điện tử (ACH), truy cập bảng kê tài khoản theo thời gian thực), ngoài
+việc chỉ đơn thuần là nơi nắm giữ các tài khoản Tài khoản kho bạc duy nhất (TSA) và các dịch vụ chuyển vốn
+hàng loạt. Trong một số trường hợp, Ngân hàng trung ương (NHTW) có thể mong muốn giải ngân các khoản
+thanh toán giá trị cao, ít thường xuyên qua RTGS, nhưng không muốn xử lý các tệp ACH (v.d. trả lương)
+hoặc in séc. Do vậy, mô hình Tài khoản kho bạc duy nhất (TSA) có thể sẽ bao gồm cả các tài khoản phân
+phối tại ngân hàng thương mại cho các khoản thanh toán giá trị thấp.3 Các dịch vụ ngân hàng khác có thể
+được cân nhắc bao gồm: cung cấp bảng kê ngân hàng/ truy cập trực tuyến vào dữ liệu giao dịch và số dư tài
+khoản; thanh toán bằng ngoại tệ - tìm nguồn ngoại tệ yêu cầu và cung cấp cho đối tượng thụ hưởng
+(thường ở nước ngoài); các chương trình mua sắm hoặc thẻ thanh toán đối với các khoản thanh toán giá trị
+thấp (tiền tiêu vặt, thẻ xăng dầu, v.v.). Tại một số quốc gia, Ngân hàng trung ương (NHTW) còn có thể thực
+hiện vai trò “gần như” quản lý ngân quỹ thay mặt cho chính phủ, và cung cấp các công cụ cho vay ngắn hạn
+hoặc thấu chi cho chính phủ. Điều này có thể làm phức tạp những đàm phán về cơ chế Tài khoản kho bạc
+duy nhất (TSA).
+Nói chung, Kho bạc trung ương (KBTW) vận hành Tài khoản kho bạc duy nhất (TSA) để quản lý toàn bộ chi
+tiêu công theo phương thức “tài khoản của khách hàng”, trong đó Ngân hàng trung ương (NHTW) thực hiện
+tất cả các khoản thanh toán (tham gia gián tiếp) thay mặt cho Kho bạc trung ương. Ngược lại, Kho bạc trung
+ương trở thành thành viên trực tiếp của các hệ thống liên ngân hàng (RTGS4 và ACH5) do Ngân hàng trung
+ương vận hành (phương thức “tài khoản giao dịch”), nếu các điều kiện cụ thể có thể được đáp ứng (về an
+ninh thông tin, thủ tục, người có thẩm quyền, các cơ chế giám sát). Để giám sát việc hành thu, Kho bạc
+trung ương thường nhận thông tin hàng ngày từ ngân hàng (thương mại đại lý (đôi khi qua Ngân hàng trung
+ương), hoặc (các) cơ quan thu về chi tiết các giao dịch qua các giao diện giữa nền tảng hệ thống FMIS và các
+hệ thống bên ngoài đó.
+
+Các điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA)
+Các điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA) được tổng hợp dưới đây (Bảng 1). Bảng này có
+thể được dùng để trình bày tổng quan tình trạng hiện tại của Tài khoản kho bạc duy nhất (TSA) trong báo
+cáo đánh giá nhanh. Những thách thức về kỹ thuật và tính thích ứng (phi kỹ thuật) có thể được liệt kê theo
+tám nội dung ở đây để chỉ ra những ưu tiên trong việc xây dựng hoặc cải thiện cơ sở hạ tầng Tài khoản kho
+bạc duy nhất (TSA).
+                              Bảng 1: Điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA)
+    #            Điều kiện ban đầu về TSA                                Tình trạng hiện tại
+    1     Các yêu cầu pháp lý và pháp quy cho          + Liệt kê các văn bản quy phạm. Giữa Kho bạc trung
+          hoạt động của Tài khoản kho bạc duy            ương (KBTW) và Ngân hàng trung ương (NHTW) đã
+          nhất (TSA)                                     có quy ước về Tài khoản kho bạc duy nhất (TSA)
+
+3
+        Nếu Ngân hàng trung ương không muốn cung cấp một vài hoặc tất cả các dịch vụ đó, ta có thể xác định ra một
+        ngân hàng thương mại hoặc quốc gia đứng ra nắm giữ Tài khoản kho bạc duy nhất (với đầy đủ các biện pháp quản
+        lý rủi ro và thế chấp để giảm thiểu rủi ro thất thoát công quỹ).
+4
+        RTGS = Hệ thống thanh toán gộp theo thời gian thực (tham khảo Phụ lục 3).
+5
+        ACH = Giải pháp bù trừ tự động (tham khảo Phụ lục 3).
+                                                          4
+                                                         chưa?
+                                                       - Chỉ ra những nội dung cần cải thiện.
+    2     Các yêu cầu kỹ thuật / cơ sở hạ tầng         + Liệt kê các trung tâm dữ liệu hiện hành của Kho bạc
+          CNTT&TT đáng tin cậy                           trung ương (KBTW) và Ngân hàng trung ương
+                                                         (NHTW) để hỗ trợ hoạt động an toàn hàng ngày.
+                                                       - Liệt kê toàn bộ những cải thiện có thể thực hiện.
+    3     Các hệ thống thanh toán liên ngân hàng       + Hệ thống bù trừ tự động (ACH) vận hành từ khi
+          vận hành đầy đủ                                nào? Hệ thống thanh toán gộp theo thời gian thực
+                                                         (RTGS) vận hành từ khi nào?
+                                                       + Đơn vị nào vận hành các hệ thống đó?
+                                                       - Những cải thiện trong hoạt động của hệ thống liên
+                                                         ngân hàng.
+    4     Giao diện giữa hệ thống của Kho bạc          + Tình trạng kết nối mạng và giao diện của Tài khoản
+          trung ương (KBTW/FMIS) và các hệ               kho bạc duy nhất (TSA).
+          thống thông tin của Ngân hàng trung          - Những cải thiện có thể thực hiện về trung tâm
+          ương (RTGS/ACH)                                thanh toán của Kho bạc trung ương (KBTW).
+    5     Kế toán đồ toàn diện (CoA) có thể nắm        + Tình trạng của Kế toán đồ (CoA) thống nhất nhằm
+          bắt các chi tiết liên quan một cách nhất       hỗ trợ Tài khoản kho bạc duy nhất (TSA) tập trung.
+          quán                                         - Khả năng cải thiện về Kế toán đồ (CoA) để phục vụ
+                                                         hoạt động của Tài khoản kho bạc duy nhất (TSA).
+    6     Kiểm kê các tài khoản ngân hàng hiện         + Sự tồn tại của cơ sở dữ liệu chia sẻ về tài khoản
+          hành được sử dụng trong FMIS và hoạt           ngân hàng của thành viên được quản lý bởi Kho bạc
+          động của Tài khoản kho bạc duy nhất            trung ương (và Ngân hàng trung ương).
+          (TSA)                                        - Những thiếu sót bất kỳ trong việc xây dựng cơ sở
+                                                         dữ liệu.
+    7     Xây dựng năng lực cho người sử dụng          + Năng lực đầy đủ của Bộ Tài chính/ Kho bạc trung
+          Tài khoản kho bạc duy nhất (TSA)               ương.
+                                                       - Nhu cầu đào tạo và năng lực bổ sung.
+    8     Báo cáo cấp chính trị                        + Quản lý sự tham gia của (các) ngân hàng đại lý tại
+                                                         Tài khoản kho bạc duy nhất (TSA).
+                                                       - Những rủi ro trong việc đảm bảo sự cam kết của cấp
+                                                         cao đối với Tài khoản kho bạc duy nhất (TSA).
+Nguồn: Dữ liệu của Ngân Hàng Thế giới.
+Ghi chú: Các điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA) được soạn thảo dựa trên mô hình khuyến nghị
+tại Pattanayak, 2010.
+
+Cần lưu ý rằng vấn đề quan trọng phải cân nhắc là thẩm quyền pháp lý cho phép mở các tài khoản ngân
+hàng chính thức6 (cũng đóng vai trò quan trọng trong việc xác định khả năng lập và duy trì một cấu trúc tài
+khoản ngân hàng đáng tin cậy). Một vấn đề nữa cần cân nhắc là thẩm quyền pháp lý đó (bao gồm cả luật và
+quy định về mua sắm) có hỗ trợ để Kho bạc mua sắm tập trung các dịch vụ ngân hàng hay không.
+Liên quan đến cơ sở hạ tầng CNTT&TT, đánh giá ban đầu này cũng có thể được sử dụng để chỉ ra những hạn
+chế về tính bền vững (vd. Năng lực của các nhóm cán bộ CNTT trong việc nắm bắt được tình hình và các
+nguy cơ phát sinh; tồn tại kế hoạch bảo trì cơ sở hạ tầng CNTT&TT và vốn ngân sách đảm bảo cho việc đó).
+
+
+
+
+6
+        Tài liệu của IMF cho biết các điều kiện bay đầu này không đề cạp đến các Luật về Hệ thống Thanh toán và Ngân
+        hàng, mà chỉ đề cập về khuôn khổ QLTCC (v.d. thẩm quyền pháp lý để mở tài khoản ngân hàng chính thức thuộc về
+        Bộ Tài chính).
+                                                            5
+Hệ thống thông tin căn bản của Ngân hàng trung ương (NHTW) là Hệ thống ngân hàng lõi. Mặc dù các hệ
+thống thanh toán (RTGS và ACH) cung cấp báo cáo về các giao dịch, nhưng mục đích chính của chúng chỉ là
+chuyển vốn. Vấn đề chính trong việc thiết kế giao diện giữa hệ thống FMIS và Ngân hàng trung ương là giao
+diện đó có phải chỉ là giao diện giữa FMIS và Hệ thống ngân hàng lõi của Ngân hàng trung ương (NHTW) hay
+không (trong đó hệ thống ngân hàng lõi của NHTW được giao diện với RTGS/ACH), hoặc có giao diện trực
+tiếp giữa FMIS với RTGS và/hoặc ACH (trong đó, với thông tin giao dịch từ các hệ thống này được phản hồi
+lại vào Hệ thống Ngân hàng Lõi của Ngân hàng trung ương để theo dõi thông tin về tình hình tài khoản cũng
+như lập bảng kê ngân hàng cho các tài khoản của Chính phủ) hay không).
+Một điều quan trọng nữa cần lưu ý là cơ chế Tài khoản kho bạc duy nhất (TSA) cũng đã được hoàn thành
+mà không cần giao diện tự động hoá đầy đủ giữa FMIS và các hệ thống của Ngân hàng trung ương (NHTW)
+ở một số quốc gia.7
+Liên quan đến Tài khoản kho bạc duy nhất (TSA), đặc điểm chính của Kế toán đồ (CoA) là bất kỳ thông tin
+nào hiện đang được cung cấp qua các bảng kê ngân hàng hiện cần được báo cáo qua cấu trúc phân loại của
+Kế toán đồ (CoA). Điều này phải được ghi nhận ngay từ đầu khi thiết kế Kế toán đồ (CoA) cho hệ thống
+FMIS. Kế toán đồ (CoA) cần hỗ trợ cho cấu trúc theo tầng bậc để cấp trên thực hiện kiểm soát ngân sách và
+để quản lý toàn bộ chi tiêu thuộc trách nhiệm giải trình của cấp dưới.
+Danh mục kiểm kê các tài khoản ngân hàng cần bao gồm tất cả các tài khoản, kể cả các tài khoản sẽ bị đóng
+trong quá trình triển khai Tài khoản kho bạc duy nhất (TSA). Khả năng của Bộ Tài chính trong việc kiểm kê
+toàn diện phụ thuộc vào khuôn khổ pháp lý cũng như liệu thẩm quyền mở tài khoản ngân hàng có phải của
+riêng Bộ Tài chính hay không. Nếu không thể tổng hợp được danh mục kiểm kê các tài khoản ngân hàng
+một cách đáng tin cậy, thì chính điều đó lý do phải tiến hành cải cách về Tài khoản kho bạc duy nhất (TSA)
+(việc chính phủ có các tài khoản ngân hàng bị dấu hoặc Bộ Tài chính không biết đến là một vấn đề quan
+trọng về minh bạch có thể gây ra yếu kém về dữ liệu tài khoá). Cần có các quy trình mới nhằm đảm bảo vốn
+không được chuyển vào các tài khoản ngân hàng bị dấu hoặc không ai biết đến của Chính phủ, mà chỉ được
+chuyển vào các tài khoản được công nhận là một phần của Tài khoản kho bạc duy nhất (TSA).
+Việc xây dựng năng lực của người sử dụng Tài khoản kho bạc duy nhất (TSA) cần bắt đầu ngay từ các giai
+đoạn bắt đầu cải cách, và phải tiếp tục được thực hiện trong và sau khi cải cách.
+Sự ủng hộ của cấp chính trị là vấn đề liên tục trong quá trình triển khai Tài khoản kho bạc duy nhất (TSA) và
+cần phải có một chiến lược truyền thông để duy trì sự ủng hộ chính trị trong suốt quá trình triển khai, để
+vượt qua những trở ngại do thẩm quyền phát sinh từ việc kiểm soát các tài khoản ngân hàng riêng.
+Cũng như về bản quy ước với Ngân hàng trung ương (NHTW), nhiều điều kiện ban đầu nêu trên có thể gợi ý
+về những cải cách liên quan cần thực hiện để cải thiện cơ chế Tài khoản kho bạc duy nhất (TSA). Tuy nhiên,
+ta không nên để điều đó gây trở ngại trong việc thúc đẩy tiến triển trong việc triển khai tập trung hoá ngân
+quỹ qua các giải pháp về Tài khoản kho bạc duy nhất (TSA).
+
+
+
+
+7
+    Một ví dụ về mô hình này là Áp-ga-nít-xtan – các đề nghị giấy được in ra từ FMIS và được cán bộ Kho bạc ký để gửi
+    sang Ngân hàng trung ương (NHTW). Danh sách kiểm tra các khoản thanh toán cũng được gửi riêng cho Ngân hàng
+    trung ương (NHTW), và toàn bộ các đề nghị nhận được được thẩm định theo danh sách kiểm tra trước khi xử lý.
+    Mặc dù giao diện tự động đảm bảo tối ưu việc ngăn ngừa rủi ro sai sót, Tài khoản kho bạc duy nhất (TSA) tập trung
+    vẫn có thể triển khai mà không cần giao diện nhưu vậy – thường thì đối chiếu ngân hàng và xử lý kịp thời những
+    khác biệt (ở bất kỳ mô hình nào) vẫn là vấn đề hết sức quan trọng.
+                                                        6
+Vai trò và trách nhiệm về Tài khoản kho bạc duy nhất (TSA)
+Cho dù Tài khoản kho bạc duy nhất (TSA) hoạt động theo phương thức nào (tham gia trực tiếp/ gián tiếp),
+ta vẫn cần có sự tách bạch rõ ràng về vai trò và trách nhiệm của kho bạc, ngân hàng và các chức năng kế
+toán, cũng như chức năng giám sát thanh toán. Biểu mẫu dưới đây được sử dụng để làm rõ các vai trò và
+trách nhiệm cụ thể của từng quốc gia (Bảng 2) đối với mô hình Tài khoản kho bạc duy nhất (TSA) tập trung
+để đưa vào báo cáo đánh giá nhanh. Đối với các mô hình Tài khoản kho bạc duy nhất (TSA) phi tập trung,
+các bên liên quan chính cũng cần được xem xét (như đơn vị hành thu, đơn vị chi tiêu, cũng như chức năng
+quản lý nợ, nếu nằm ngoài Kho bạc trung ương).
+        Bảng 2: Vai trò/ trách nhiệm của các chức năng chính liên quan đến Tài khoản kho bạc duy nhất (TSA)
+                                                                Kho bạc trung ương/        Ngân hàng trung
+ Chức năng so với trách nhiệm về TSA
+                                                                   Tổng kế toán             ương/ quốc gia
+ Hoạt động Kho bạc (Quản lý thanh toán)                            KBTW (FMIS)                     -
+                                                                                          NHTW (RTGS / ACH)
+                                                                    KBTW (FMIS)
+ Chức năng ngân hàng (kiểm soát thanh toán và thanh toán)                                  Các hệ thống liên
+                                                                    Giao diện TSA
+                                                                                              ngân hàng
+ Kế toán (đối chiếu và báo cáo)                                  KBTW (Sổ cái FMIS)         NHTW (Sổ cái)
+ Giám sát thanh toán và các hệ thống thanh toán (kiểm soát
+                                                                Kiểm toán bên ngoài             NHTW
+ an ninh thông tin + tài chính)
+Nguồn: Dữ liệu của Ngân hàng thế giới
+
+Độ tin cậy và trung thực của thông tin trong Tài khoản kho bạc duy nhất (TSA)
+Độ tin cậy và trung thực trong hoạt động của Tài khoản kho bạc duy nhất (TSA) phụ thuộc vào một số yêu
+cầu chính liên quan đến hoạt động ghi chép / báo cáo hàng ngày toàn bộ số thu (thu ngân) và số chi (thanh
+toán):
+
+  Bảng kê ngân hàng chứa đựng toàn bộ chi tiết về dòng vốn tại Tài khoản kho bạc duy nhất phải
+      được lập trực tiếp từ các hệ thống thông tin của Ngân hàng Trung ương, độc lập so với Kho bạc
+      trung ương (tương tự như tổ chức quản lý thanh toán). Các bảng kê ngân hàng đó phải sẵn có tại Kho
+      bạc trung ương (KBTW) để đối chiếu tự động hàng ngày qua mô-đun Sổ cái Tổng hợp của FMIS. Nếu
+      Kho bạc trung ương KBTW) là thành viên trực tiếp của các hệ thống thanh toán liên ngân hàng, cần
+      phải có sự đảm bảo tuyệt đối rằng các bảng kê ngân hàng đó được lập trực tiếp từ các hệ thống
+      thanh toán liên ngân hàng, với sự hỗ trợ bằng thông tin nhất quán lấy từ Sổ cái tổng hợp của Ngân
+      hàng trung ương (NHTW).
+  Mô-đun kế toán (Sổ cái tổng hợp) của FMIS cần duy trì đầy đủ thông tin sổ quỹ đối với các tài
+      khoản ngân hàng thuộc Tài khoản kho bạc duy nhất (TSA). Toàn bộ các giao dịch của Tài khoản kho
+      bạc duy nhất (TSA) phải được hạch toán tại FMIS theo nguồn phù hợp (v.d. có thể cơ quan hành thu,
+      chứ không phải Kho bạc trung ương là nơi nhập liệu giao dịch về các khoản thu gửi vào tài khoản tạm
+      thu dở dang chờ xử lý tại các ngân hàng thương mại, rồi sau đó về các tài khoản của Kho bạc trung
+      ương (KBTC) để chuyển số dư từ các tài khoản trung gian đó vào các tài khoản tại Ngân hàng trung
+      ương (NHTW).
+  Mỗi giao dịch của Tài khoản kho bạc duy nhất cần phải có mã số nhận dạng duy nhất có thể được
+      sử dụng để gắn kết giữa khoản thanh toán hoặc thu ngân với các bút toán kế toán tại Sổ cái tổng
+      hợp của FMIS tại Kho bạc trung ương (KBTW). Kho bạc trung ương (KBTW) cần có khả năng đối chiếu
+      các bảng kê của Ngân hàng trung ương (NHTW) với các số dư tài khoản ngân hàng của Kho bạc trung
+                                                        7
+     ương và dữ liệu sổ cái FMIS, thường xuyên (hàng ngày), nhanh chóng, trên cơ sở các hệ thống nền
+     tảng.
+  Không can thiệp thủ công. Tất cả các quy trình (từ khi khởi đầu đến khâu thanh toán cuối cùng và đối
+     chiếu) cần được tự động hoá và chạy trên các nền tảng an toàn.
+Các yêu cầu này cần được kiểm tra trên cơ sở thường xuyên.
+Một số câu hỏi chinh liên quan đến điều kiện ban đầu về Tài khoản kho bạc duy nhất (TSA) cũng như những
+rủi ro và biện pháp kiểm soát được liệt kê tại Phụ lục 4.
+
+
+
+
+                                                 8
+Phương pháp luận
+Bộ công cụ đánh giá Tài khoản kho bạc duy nhất (TSA) gồm 65 câu hỏi được nhóm lại theo năm nội dung:
+   1. Khuôn khổ pháp lý và pháp quy về hoạt động của Tài khoản kho bạc duy nhất (TSA) (11 câu hỏi)
+   2. Các quy trình Tài khoản kho bạc duy nhất (TSA) và các hệ thống liên ngân hàng (25 câu hỏi)
+   3. Năng lực và khả năng (7 câu hỏi)
+   4. Kiểm soát an ninh thông tin (14 câu hỏi)
+   5. Các cơ chế giám sát (8 câu hỏi)
+Thang điểm đơn giản (0 đến 4) được sử dụng cho tất cả các câu hỏi/ tuyên bố, và tổng điểm được chuyển
+đổi thành điểm số (0 đến 100) để chỉ báo về hiệu quả hoạt động của Tài khoản kho bạc duy nhất (TSA)/ các
+hệ thống thanh toán của quốc gia.
+Mức điểm: 0 = Không tồn tại (Thiếu quy trình bất kỳ có thể công nhận. Các hoạt động chưa được xác
+          định/lên kế hoạch)
+           1 = Ban đầu / mang tính vụ việc (Vấn đề được công nhận. Hoạt động được lên kế hoạch và phê
+           duyệt để triển khai)
+           2 = Quy trình được xác định (Hoạt động được triển khai chưa đầy đủ)
+           3 = Có quản lý và được đo lường (Hoạt động vận hành hiệu quả)
+           4 = Được tối ưu hoá (Hoạt động được tinh chỉnh tới mức thông lệ tốt trên quốc tế)
+
+Hướng dẫn cho điểm
+• Điểm “4” nghĩa là hoạt động đối tượng liên quan đến các quy trình Tài khoản kho bạc duy nhất (TSA) và
+   các hệ thống thanh toán liên ngân hàng đã được tinh chỉnh tới mức thông lệ quốc tế tốt trên quốc tế
+   với sự giám sát và cải thiện liên tục. Các hệ thống thông tin: Có giải pháp FMIS tích hợp để tự động hoá
+   mọi khía cạnh quan trọng trong chấp hành ngân sách, bao gồm cả Tài khoản kho bạc duy nhất (TSA) và
+   giám sát hiệu quả hoạt động, cung cấp công cụ để cải thiện chất lượng và hiệu quả trong quản lý tài
+   chính công (QLTCC).
+
+• Điểm “3” cho thấy có những nội dung quốc gia đang thực hiện tốt về các hệ thống thanh toán liên ngân
+   hàng và TSA. Quốc gia có thể giám sát và đo lường mức độ tuân thủ đối với các thủ tục và có biện pháp
+   nếu thấy các quy trình hoạt động chưa hiệu quả. Các quy trình được cải thiện ổn định. Trên góc độ hệ
+   thống thông tin, FMIS hỗ trợ đầy đủ cho hoạt động của Tài khoản kho bạc duy nhất (TSA).
+
+• Điểm “2” cho thấy có những nội dung cần cải thiện. Chính phủ cần cân nhắc dành đủ nguồn lực nhằm
+   đảm bảo những cải thiện đó được thực hiện nhanh chóng đồng thời xây dựng chiến lược để triển khai
+   hiệu quả những cải thiện cần thiết. Hiện đã có các thủ tục chuẩn (tự động hoá các thông lệ hiện hành)
+   được truyền thông qua đào tạo. Tuy nhiên, việc thực hiện vẫn tuỳ thuộc và các cá nhân liên quan, và
+   khác biệt khó có thể được phát hiện. Hệ thống FMIS hỗ trợ được một phần các hoạt động của Tài khoản
+   kho bạc duy nhất (TSA) (ví dụ giám sát số dư tài khoản, nhưng chưa hỗ trợ thanh toán tự động).
+
+• Điểm “1” nghĩa là đơn vị công nhận có các vấn đề còn tồn tại và cần được xử lý. Hiện chưa có các quy
+   trình chuẩn; thay vào đó, cách tiếp cận mang tính vụ việc, có xu hướng áp dụng theo cá nhân hoặc theo
+   từng vụ việc. Chính phủ cần cân nhắc dành đủ nguồn lực để đảm bảo những cải thiện đó được nhanh
+                                                    9
+    chóng thực hiện, đồng thời xây dựng chiến lược để triển khai một cách hiệu quả. Trên góc độ hệ thống
+    thông tin, năng lực hiện có còn hạn chế để có thể tự động hoá các quy trình.
+
+• Điểm “0” cho biết, các quy trình bất kỳ có thể được công nhận vẫn chưa có. Hoạt động này đòi hỏi có
+    sự quan tâm cấp thiết và chiến lược rõ ràng với sự cam kết của lãnh đạo cấp chính trị. Mặc dù điểm số
+    thấp không nhất thiết hàm ý rằng các hệ thống quản lý tài chính công (QLTCC) của chính phủ còn yếu
+    kém, nhưng đó thường là chỉ báo về quan ngại đòi hỏi phải có sự quan tâm tức thời.
+
+• Điểm “chưa rõ” có nghĩa là hoạt động này không thể đo lường hoặc không thể cho điểm. Trong các
+    trường hợp đó, cần phải làm rõ và các hoạt động đó không được xem xét trong tính toán điểm số.
+
+Đánh giá hiệu quả hoạt động
+Cách tính điểm gợi ý trong đánh giá này nhằm hỗ trợ các quốc gia xác định ra những điểm mạnh và điểm
+yếu của mình trong năm nội dung cụ thể nêu trên.
+Điểm số theo tỷ lệ (0 đến 100) cho mỗi nội dung (trừ các điểm “chưa rõ”) được tính như sau:
+                                                       ∑ Điểm số gán cho nội dung đó
+       Đ������ể������ ������ộ������ ������������������������ =                                                                                            ∗ 100
+                                 (# ������á������ ℎ������ạ������ độ������������ ������������������������������ ������ộ������ ������������������������ – ������ổ������������ ������ố # đ������ể������ "������ℎư������ ������õ) ∗ 4
+
+
+Tổng điểm được tính bằng cách cộng các điểm số (trừ điểm “chưa rõ”) của cả năm nội dung 0 tới 100):
+                                                ∑ Điểm số được gán cho các nội dung
+                            ������ổ������������ đ������ể������ =                                             ∗ 100
+                                                 (65 − ������ổ������������ ������ố đ������ể������ "chưa rõ") ∗ 4
+Các mức điểm dưới đây được dùng để chỉ ra hiệu quả hoạt động tổng thể theo tổng điểm:
+    Rất yếu           dưới 30%
+    Y ếu              30% - 49,9 %
+    Trung bình        50% - 69,9 %
+    Tố t              70% - 89,9%
+    Xuất sắc          trên 90%
+Điểm tối thiểu đối với hiệu quả hoạt động có thể chấp nhận được là điểm “Trung bình”, theo thang điểm
+nêu trên.
+Cuối cùng, để giúp người đọc hiểu rõ hơn, thông tin bổ sung có thể được đưa ra trong cột “Nhận xét” tại
+bảng câu hỏi:
+•   Những thách thức mà quốc gia gặp phải trong một nội dung cụ thể;
+•   Nguồn thông tin (URL) của một chủ đề cụ thể;
+•   Những cải cách liên quan hoặc những cải thiện dự kiến;
+•   Các bên liên quan chính tham gia; và
+•   Những thông tin liên quan khác.
+
+
+
+
+                                                                10
+Các phần còn lại của báo cáo này sẽ mô tả về phương thức đánh giá nhanh Tài khoản kho bạc duy nhất
+(TSA) và danh mục các tuyên bố/câu hỏi nhằm thẩm định về quy trình và các biện pháp kiểm soát8.
+
+
+
+
+8
+    Các biện pháp kiểm soát được xác định là các chính sách, thủ tục, thông lệ và cơ cấu tổ chức được thiết kế để đảm
+    bảo một cách hợp lý là mục tiêu nghiệp vụ được hoàn thành và các sự kiện không mong muốn được ngăn ngừa
+    hoặc được phát hiện và chỉnh sửa (theo định nghĩa tại CoBIT).
+                                                         11
+Cách thức tổ chức đánh giá nhanh Tài khoản kho bạc duy nhất (TSA)
+Đánh giá nhanh có thể thực hiện theo hai cách:
+
+ Tự đánh giá (thường trong hai ngày),
+ Đánh giá phối hợp (một tuần) về hoạt động Tài khoản kho bạc duy nhất qua thăm thực địa, trao đổi với
+   các bộ phận tại Kho bạc trung ương (KBTW) và Ngân hàng trung ương (NHTW), và tổ chức hội thảo để
+   thảo luận kết quả với sự hỗ trợ của nhóm Ngân hàng Thế giới (WB).
+Trong cả hai trường hợp, hai nhóm chuyên trách của Kho bạc trung ương/ Bộ Tài chính và Ngân hàng trung
+ương/ quốc gia (đôi khi các ngân hàng thương mại và các nhà cung cấp giải pháp tham gia vào Tài khoản
+kho bạc duy nhất (TSA) cũng được mời tham dự) dự kiến sẽ gặp gỡ và cùng nhau rà soát các câu hỏi, thu
+thập bằng chứng về các nội dung cụ thể (khuôn khổ pháp lý, thông lệ, năng lực, an ninh thông tin, và giám
+sát), sau đó phối hợp đánh giá tình hình để đưa ra một báo cáo đánh giá được nhất trí chung. Nhóm Ngân
+hàng Thế giới (WB) có thể tham gia hỗ trợ quá trình này, và cung cấp hướng dẫn nếu cần thiết.
+
+Cách tiếp cận khuyến nghị
+
+   1. Xác định thành viên nhóm tham gia đánh giá nhanh hoạt động Tài khoản kho bạc duy nhất (TSA)
+      (các cán bộ quản lý, các cán bộ tác nghiệp, các chuyên gia kỹ thuật, v.v.) và chỉ định trưởng nhóm từ
+      phía Bộ Tài chính/Kho bạc và Ngân hàng Trung ương/Quốc gia (bao gồm cả danh sách tất cả các
+      thành viên tham gia vào báo cáo đánh giá nhanh).
+   2. Nếu hợp đồng triển khai FMIS đang được thực hiện (việc triển khai Tài khoản kho bạc duy nhất
+      (TSA) đang được thực hiện), các nhóm dự kiến sẽ phải rà soát các yêu cầu chức năng và yêu cầu kỹ
+      thuật về giao diện và hoạt động của Tài khoản kho bạc duy nhất (TSA), được đề ra trong hợp đồng
+      FMIS (đồng thời kèm theo các yêu cầu đó vào báo cáo đánh giá nhanh). Đại diện nhà cung cấp FMIS
+      có thể được mời tham gia các thảo luận liên quan trong quá trình này.
+   3. Tuỳ thuộc vào cách đánh giá (tự đánh giá hay đánh giá phối hợp), cần tổ chức một buổi khai mạc
+      với các nhóm nhằm giải thích về các bước, giới thiệu bảng câu hỏi, và kết quả mong đợi. Lập ra kế
+      hoạch công việc để thực hiện đánh giá và tổ chức các buổi làm việc cần thiết khác nếu cần.
+   4. Thu thập thông tin và bằng chứng cần thiết qua trao đổi với các đơn vị/quan chức liên quan. Điền
+      vào bảng câu hỏi, trả lời tất cả các câu hỏi và cho điểm dựa trên bằng chứng. Ghi nhận lại toàn bộ
+      các kết quả thu được và bằng chứng liên quan trong phần nhận xét của từng câu hỏi.
+   5. Tổ chức hội thảo với sự tham gia của tất cả các bên liên quan tham gia đánh giá nhanh để thảo luận
+      về kết luận và kiến nghị.
+   6. Sau khi hoàn tất quá trình đánh giá bằng cách giải quyết toàn bộ 65 câu hỏi trong bảng câu hỏi, Báo
+      cáo Đánh giá nhanh Tài khoản Kho bạc Duy nhất (TSA) có thể được lập dựa trên biểu mẫu kèm theo
+      tại Phụ lục 2 của tài liệu hướng dẫn này.
+Hoạt động đánh giá nhanh Tài khoản kho bạc duy nhất (TSA) nhằm đánh giá chung một số điều kiện quan
+trọng, dự kiến phải được đáp ứng để căn bản đảm bảo giao diện Tài khoản kho bạc duy nhất (TSA) được
+vận hành đầy đủ và đáng tin cậy. Năng lực kỹ thuật hầu hết có thể được xây dựng trong thời gian tương đối
+ngắn trong quá trình triển khai hệ thống FMIS. Tuy nhiên, cam kết chính trị ở cấp cao là đòi hỏi để có thể
+giải quyết những thách thức (phi kỹ thuật) mang tính thích ứng liên quan đến triển khai Tài khoản kho bạc
+duy nhất (TSA) tại nhiều nền kinh tế.
+                                                  12
+                        Bảng câu hỏi đánh giá nhanh Tài khoản kho bạc duy nhất (TSA) và Hệ thống thanh toán
+
+Kết quả đánh giá nhanh được trình bày dưới đây theo năm nội dung. Cột “Nhận xét” bao gồm đường dẫn tới các trang web liên quan, hoặc để tổng hợp kết quả
+chính hoặc những thiếu sót thấy được.
+                                                    Bảng 3: Bảng câu hỏi đánh giá nhanh Tài khoản kho bạc duy nhất (TSA)
+
+                                              Mã câu
+ Ref.      Các nội dung đánh giá về TSA                           Câu hỏi/ nhận định            Điểm                                 Nhận xét
+                                                hỏi
+        Khuôn khổ pháp lý và pháp quy về hoạt động của Tài khoản kho bạc duy nhất (TSA)
+ 1                                                                                              X1 %
+        operations
+        Văn bản quy pham pháp luật về Kho
+ 1.1                                                                                                          Đề nghị chỉ ra URL của Kho bạc trung ương ở đây
+        bạc trung ương A
+        Khuôn khổ pháp lý và pháp quy rõ       Q.1     Khuôn khổ pháp lý và pháp quy về hoạt    0…4         + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+        ràng về hoạt động Tài khoản kho bạc            động của hệ thống FMIS hiện đã có.                  công khai)
+        duy nhất (TSA) đã được xác định với                                                                 - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+        các biện pháp xử lý vi phạm hiệu quả                                                               (nếu chưa có luật)
+        và phù hợp.                            Q.2     Quy ước (ràng buộc pháp lý) về Tài khoản 0…4         + Văn bản quy ước hiện hành (mã số, ngày ban hành và URL
+                                                       kho bạc duy nhất (TSA) đã được ký kết               nếu đã công khai)
+                                                       giữa Kho bạc trung ương và Ngân hàng                 - Hiện đã có dự thảo quy ước hoặc kế hoạch dự thảo nào?
+                                                       trung ương.                                         (nếu chưa có quy ước)
+                                               Q.3     Thông tư/hướng dẫn về Tài khoản kho bạc 0…4          + Các văn bản hướng dẫn về Tài khoản kho bạc duy nhất (TSA)
+                                                       duy nhất (TSA) mô tả chi tiết quy trình             hiện hành (mã số, ngày ban hành và URL nếu đã công khai)
+                                                       thu/chi hiện đã có.                                  - Hiện đã có dự thảo hướng dẫn hoặc kế hoạch dự thảo nào?
+                                                                                                           (nếu chưa có văn bản hướng dẫn)
+                                              Q.4       Cơ sở pháp lý về hoạt động của Trung tâm    0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+                                                        thanh toán điện tử (EPC) hiện đã có.               công khai)
+                                                                                                            - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+                                                                                                           (nếu chưa có luật)
+                                              Q.5       Thoả thuận với Ngân hàng trung ương về      0…4     + Các thoả thuận về Tài khoản kho bạc duy nhất (TSA) hiện
+                                                        duy trì các tài khoản ngân hàng thuộc Tài          hành (mã số, ngày ban hành và URL nếu đã công khai)
+                                                        khoản kho bạc duy nhất (TSA) của Kho                - Hiện đã có dự thảo thoả thuận hoặc kế hoạch dự thảo nào?
+                                                        bạc trung ương hiện đã có.                         (nếu chưa có thoả thuận)
+                                              Q.6       Thoả thuận giữa Kho bạc trung ương và       0…4     + Các thoả thuận về Tài khoản kho bạc duy nhất (TSA) hiện
+                                                        (các) ngân hàng đại lý về hoạt động Tài            hành (mã số, ngày ban hành và URL nếu đã công khai)
+                                                        khoản kho bạc duy nhất (TSA) hiện đã có.            - Hiện đã có dự thảo thoả thuận hoặc kế hoạch dự thảo nào?
+                                                                                                           (nếu chưa có thoả thuận)
+        Văn bản quy phạm pháp luật về Ngân
+ 1.2                                                                                                          Đề nghị chỉ ra URL của Ngân hàng trung ương ở đây
+        hàng trung ương B
+        Khuôn khổ pháp lý và pháp quy rõ      Q.7       Luật ngân hàng và các văn bản pháp quy      0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+        ràng về các hệ thống liên ngân hàng             hiện đã có.                                        công khai)
+                                                                                     13
+                                               Mã câu
+Ref.       Các nội dung đánh giá về TSA                            Câu hỏi/ nhận định                Điểm                             Nhận xét
+                                                hỏi
+       đã được xác định với các biện pháp                                                                    - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+       xử lý vi phạm hiệu quả và phù hợp.                                                                   (nếu chưa có luật)
+                                               Q.8      Luật/quy định về chữ ký điện tử hiện đã      0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+                                                        có.                                                 công khai)
+                                                                                                             - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+                                                                                                            (nếu chưa có luật)
+                                               Q.9      Luật/quy định về Thanh toán gộp theo         0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+                                                        thời gian thực (RTGS) hiện đã có.                   công khai)
+                                                                                                             - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+                                                                                                            (nếu chưa có luật)
+                                               Q.10     Luật/quy định về Bù trừ tự động (ACH         0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+                                                        (BCS)) hiện đã có.                                  công khai)
+                                                                                                             - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+                                                                                                            (nếu chưa có luật)
+                                               Q.11     Luật/quy định về giám sát các hệ thống chi   0…4     + (Các) luật hiện hành (mã số, ngày ban hành và URL nếu đã
+                                                        trả và thanh toán hiện đã có.                       công khai)
+                                                                                                             - Hiện đã có dự thảo luật hoặc kế hoạch dự thảo luật nào?
+                                                                                                            (nếu chưa có luật)
+       Các quy trình Tài khoản kho bạc duy
+2      nhất (TSA) và các hệ thống liên ngân                                                          X2 %
+       hàng
+       Tách biệt các chức năng chính của Tài
+2.1
+       khoản kho bạc duy nhất (TSA) C
+                                               Q.12     Các chức năng quản lý thanh toán được        0…4     + Tổng hợp về các quy trình quản lý thanh toán hiện hành
+       Sự tách biệt các nhiệm vụ chính của              Kho bạc trung ương (KBTW) thực hiện                 - Xác định những thiếu sót
+       Tài khoản kho bạc duy nhất (TSA)                 qua các quy trình tự động với sự hỗ trợ
+       (quản lý chi trả và kiểm soát, thanh             của hệ thống FMIS.
+       toán, kế toán/đối chiếu) được thực      Q.13     Các chức năng kiểm soát thanh toán           0…4     + Tổng hợp về các quy trình kiểm soát thanh toán hiện hành
+       thi hiệu lực qua cơ cấu tổ chức, truy            được Kho bạc trung ương (KBTW) thực                 - Xác định những thiếu sót
+       cập của người sử dụng vào các hệ                 hiện qua các quy trình tự động với sự hỗ
+       thống thanh toán/kho bạc và các văn              rợ của hệ thống FMIS.
+       bản về thủ tục.                         Q.14     Các chức năng kiểm soát thanh toán để        0…4     + Tổng hợp về các quy trình hiện hành
+                                                        kiểm tra tuân thủ với các luật và quy định          - Xác định những thiếu sót
+                                                        về ngân hàng được Ngân hàng trung
+                                                        ương (NHTW) thực hiện qua các quy
+                                                        trình tự động với sự hỗ trợ của các hệ
+                                                        thống thông tin của NHTW.
+
+
+                                                                                     14
+                                              Mã câu
+Ref.       Các nội dung đánh giá về TSA                         Câu hỏi/ nhận định                  Điểm                             Nhận xét
+                                               hỏi
+                                              Q.15   Các chức năng kế toán cho hoạt động Tài        0…4     + Tổng hợp về các quy trình hiện hành
+                                                     khoản kho bạc duy nhất (TSA) (đối chiếu               - Xác định những thiếu sót
+                                                     và báo cáo) được Kho bạc trung ương
+                                                     (KBTW) thực hiện qua các quy trình tự
+                                                     động với sự hỗ trợ của hệ thống FMIS.
+                                              Q.16   Việc kế toán các hoạt động Tài khoản kho       0…4     + Tổng hợp về các quy trình hiện hành
+                                                     bạc duy nhất (TSA) (ghi chép các dòng                 - Xác định những thiếu sót
+                                                     tiền hàng ngày và cung cấp bảng kê ngân
+                                                     hàng hàng ngày) được Ngân hàng trung
+                                                     ương (NHTW) thực hiện qua các quy
+                                                     trình tự động với sự hỗ trợ của các hệ
+                                                     thống thông tin của NHTW.
+                                              Q.17   Chức năng giám sát thanh toán và các hệ        0…4     + Tổng hợp về các quy trình hiện hành
+                                                     thống thanh toán (kiểm soát an ninh                   - Xác định những thiếu sót
+                                                     thông tin + tài chính) do Ngân hàng trung
+                                                     ương (NHTW) thực hiện qua các quy
+                                                     trình tự động hóa.
+
+2.2    Ghi chép và báo cáo hàng ngày các giao dịch qua Tài khoản kho bạc duy nhất (TSA) D
+       Mọi giao dịch qua Tài khoản kho bạc   Q.18      Hệ thống RTGS có khả năng ghi chép/          0…4     + Tổng hợp về các quy trình hiện hành
+       duy nhất (TSA) liên quan đến thu ngân           báo cáo chi tiết toàn bộ các khoản chi trả          - Xác định những thiếu sót
+       sách (thu ngân) và chi ngân sách (chi           chi trả qua Tài khoản kho bạc duy nhất
+       trả) được ghi chép và báo cáo qua các           (TSA) trên cơ sở hàng ngày.
+       hệ thống thanh toán và chi trả của    Q.19      Hệ thống bù trừ tự động (ACH (BCS)) có       0…4     + Tổng hợp về các quy trình hiện hành
+       Ngân hàng trung ương (NHTW) và giải             khả năng ghi chép/báo cáo chi tiết toàn             - Xác định những thiếu sót
+       pháp FMIS của Bộ Tài chính trên cơ sở           bộ các khoản chi trả qua Tài khoản kho
+       hàng ngày.                                      bạc duy nhất (TSA) trên cơ sở hàng ngày.
+                                             Q.20      Sổ cái tổng hợp của Ngân hàng trung          0…4     + Tổng hợp về các quy trình hiện hành
+                                                       ương (NHTW) nắm bắt toàn bộ các luồng               - Xác định những thiếu sót
+                                                       tiền qua các tài khoản ngân hàng của Tài
+                                                       khoản kho bạc duy nhất (TSA) qua hệ
+                                                       thống kế toán/sổ cái tổng hợp trên cơ sở
+                                                       hàng ngày.
+                                              Q.21     Các ngân hàng đại lý chuyển toàn bộ số       0…4     + Tổng hợp về các quy trình hiện hành
+                                                       thu vào tài khoản ngân hàng Tài khoản               - Xác định những thiếu sót
+                                                       kho bạc duy nhất (TSA) được Kho bạc
+                                                       trung ương (KBTW) chỉ định tại Ngân
+                                                       hàng trung ương (NHTW) trên cơ sở hàng
+                                                       ngày qua kết nối trực tuyến với
+                                                                                    15
+                                              Mã câu
+Ref.       Các nội dung đánh giá về TSA                           Câu hỏi/ nhận định                 Điểm                             Nhận xét
+                                               hỏi
+                                                       RTGS/ACH.
+
+
+
+
+                                              Q.22     Kho bạc trung ương (KBTW) gửi toàn bộ         0…4     + Tổng hợp về các quy trình hiện hành
+                                                       yêu cầu thanh toán theo biểu mẫu yêu                 - Xác định những thiếu sót
+                                                       cầu qua giao diện Tài khoản kho bạc duy
+                                                       nhất (TSA) giữa KBTW-NHTW từ trung
+                                                       tâm thanh toán điện tử bảo mật qua các
+                                                       quy trình tự động với sự hỗ trợ của hệ
+                                                       thống FMIS trên cơ sở hàng ngày.
+                                              Q.23     Ngân hàng trung ương (NHTW) gửi bảng          0…4     + Tổng hợp về các quy trình hiện hành
+                                                       kê ngân hàng từ RTGS và ACH gồm chi                  - Xác định những thiếu sót
+                                                       tiết tất cả các giao dịch Tài khoản kho bạc
+                                                       duy nhất (TSA) qua các quy trình tự động
+                                                       trên cơ sở hàng ngày.
+                                              Q.24     Ngân hàng trung ương (NHTW) gửi bảng          0…4     + Tổng hợp về các quy trình hiện hành
+                                                       kê ngân hàng từ sổ cái tổng hợp của                  - Xác định những thiếu sót
+                                                       Ngân hàng trung ương (NHTW) gồm tất
+                                                       các các dòng tiền qua các tài khoản ngân
+                                                       hàng thuộc Tài khoản kho bạc duy nhất
+                                                       (TSA) qua các quy trình tự động trên cơ
+                                                       sở hàng ngày.
+                                              Q.25     Đối chiếu các bảng kê ngân hàng giữa          0…4     + Tổng hợp về các quy trình hiện hành
+                                                       Ngân hàng trung ương (NHTW) (và các                  - Xác định những thiếu sót
+                                                       ngân hàng đại lý) được Kho bạc trung
+                                                       ương (KBTW) thực hiện qua mô-đun sổ
+                                                       cái tổng hợp tại FMIS trên cơ sở hàng
+                                                       ngày.
+                                              Q.26     Mỗi giao dịch Tài khoản kho bạc duy nhất      0…4     + Tổng hợp về các quy trình hiện hành
+                                                       (TSA) phải có mã số nhận dạng duy nhất               - Xác định những thiếu sót
+                                                       có thể dùng để kết nối thu chi ngân quỹ
+                                                       với các bút toán kế toán tại sổ cái tổng
+                                                       hợp tại FMIS của Kho bạc trung ương
+                                                       (KBTW).
+2.3    Bút tích kiểm toán E
+       Bút tích kiểm toán được kích hoạt và   Q.27     "Bút tích kiểm toán" được kích hoạt tại       0…4     + Tổng hợp về tình trạng hiện hành
+       sử dụng hiệu quả trong các hệ thống             các cơ sở dữ liệu FMIS thuộc Kho bạc                 - Xác định những thiếu sót
+
+                                                                                     16
+                                               Mã câu
+Ref.       Các nội dung đánh giá về TSA                           Câu hỏi/ nhận định                Điểm                             Nhận xét
+                                                hỏi
+       thông tin của Kho bạc trung ương                 trung ương (KBTW) và được sử dụng hiệu
+       (KBTW) và Ngân hàng trung ương                   quả.
+       (NHTW).                                 Q.28     "Bút tích kiểm toán" được kích hoạt         0…4     + Tổng hợp về tình trạng hiện hành
+                                                        trong các cơ sở dữ liệu của Trung tâm              - Xác định những thiếu sót
+                                                        thanh toán điện tử (EPC) của Kho bạc
+                                                        trung ương (KBTW) (trong trường hợp
+                                                        tham gia trực tiếp) và được sử dụng hiệu
+                                                        quả.
+                                               Q.29     "Bút tích kiểm toán" được kích hoạt tại     0…4     + Tổng hợp về tình trạng hiện hành
+                                                        nền tảng nền tảng RTGS của Ngân hàng               - Xác định những thiếu sót
+                                                        trung ương (NHTW) và được sử dụng
+                                                        hiệu quả.
+                                               Q.30     "Bút tích kiểm toán" được kích hoạt tại     0…4     + Tổng hợp về tình trạng hiện hành
+                                                        nền tảng bù trừ tự động (ACH (BCS)) của            - Xác định những thiếu sót
+                                                        Ngân hàng trung ương (NHTW) và được
+                                                        sử dụng hiệu quả.
+                                               Q.31     "Bút tích kiểm toán" được kích hoạt         0…4     + Tổng hợp về tình trạng hiện hành
+                                                        trong hoạt động kế toán/sổ cái tổng hợp            - Xác định những thiếu sót
+                                                        của Ngân hàng trung ương (NHTW) và
+                                                        được sử dụng hiệu quả.
+2.4    Kiểm kê tài khoản ngân hàng
+       Bảng kiểm kê các tài khoản ngân hàng    Q.32     Hệ thống FMIS của Kho bạc trung ương        0…4     + Tổng hợp về tình trạng hiện hành
+       hiện hành sử dụng trong hoạt động                (KBTW) có bảng kiểm kê toàn bộ các tài             - Xác định những thiếu sót
+       của Tài khoản kho bạc duy nhất (TSA)             khoản ngân hàng sử dụng trong hoạt
+       và FMIS có tồn tại và được cập nhật              động của Tài khoản kho bạc duy nhất
+       đều đặn.                                         (TSA) và được đồng bộ hóa với bảng
+                                                        kiểm kê của Ngân hàng trung ương
+                                                        (NHTW).
+                                               Q.33     Ngân hàng trung ương (NHTW) có bảng         0…4     + Tổng hợp về tình trạng hiện hành
+                                                        kiểm kê tất cả các tài khoản ngân hàng sử          - Xác định những thiếu sót
+                                                        dụng trong hoạt động của TSA.
+2.5    Kiểm soát cấp độ giao dịch
+       Kiểm soát cấp độ giao dịch được thực    Q.34     Ngân hàng trung ương (NHTW) có danh         0…4     + Tổng hợp về tình trạng hiện hành
+       hiện toàn bộ qua vai trò giám sát chi            sách kiểm tra hệ thống thanh toán                  - Xác định những thiếu sót
+       trả và thanh toán.                               RTGS/BCS được quản lý bằng các quy
+                                                        trình tự động và báo cáo kết quả toàn bộ
+                                                        các giao dịch theo các định dạng chuẩn
+
+                                                                                    17
+                                              Mã câu
+Ref.       Các nội dung đánh giá về TSA                           Câu hỏi/ nhận định                Điểm                             Nhận xét
+                                               hỏi
+                                                       (SWIFT).
+
+
+
+
+                                              Q.35     Kiểm soát thanh toán qua RTGS và ACH         0…4     + Tổng hợp về tình trạng hiện hành
+                                                       bao gồm kiểm tra các tài khoản so sánh              - Xác định những thiếu sót
+                                                       với “danh mục đen” của Ngân hàng trung
+                                                       ương (NHTW).
+                                              Q.36     Kho bạc trung ương (KBTW) chuyển toàn        0…4     + Tổng hợp về tình trạng hiện hành
+                                                       bộ các đề nghị thanh toán điện tử từ hệ             - Xác định những thiếu sót
+                                                       thống FMIS sang RTGS/ACH, mà không
+                                                       có can thiệp thủ công. Ngân hàng trung
+                                                       ương (NHTW) vô hiệu quả tính năng
+                                                       nhập thủ công của Kho bạc trung ương
+                                                       (KBTW).
+3      Năng lực và khả năng                                                                         X3 %
+       Năng lực của Kho bạc trung ương
+3.1
+       (KBTW)
+       Các bộ phận của Kho bạc trung ương     Q.37     Đối với mỗi vị trí liên quan đến TSA, có     0…4     + Tổng hợp về tình trạng hiện hành
+       (KBTW) (hệ thống thanh toán điện tử             một bản mô tả công việc cụ thể hóa các              - Xác định những thiếu sót
+       và tin học) có đủ số cán bộ được đào            nhiệm vụ của vị trí đó, các kênh báo cáo,
+       tạo để quản lý các hoạt động TSA                thẩm quyền được giao và yêu cầu trình
+                                                       độ.
+                                              Q.38     Tổng số nhân sự có thẩm quyền để quản        0…4     + Tổng hợp về tình trạng hiện hành
+                                                       lý các hoạt động Tài khoản kho bạc duy              - Xác định những thiếu sót
+                                                       nhất (TSA) là đủ so với số lượng giao dịch
+                                                       và cường độ công việc.
+                                              Q.39     Cán bộ Kho bạc trung ương (KBTW) có          0…4     + Tổng hợp về tình trạng hiện hành
+                                                       kinh nghiệm trong vận hành hệ thống                 - Xác định những thiếu sót
+                                                       thanh toán điện tử (EPS) và có thể thực
+                                                       hiện các giao dịch Tài khoản kho bạc duy
+                                                       nhất (TSA) trên hệ thống thanh toán liên
+                                                       ngân hàng một cách an toàn.
+       Năng lực của Ngân hàng trung ương
+3.2
+       (NHTW)
+
+
+                                                                                    18
+                                               Mã câu
+Ref.       Các nội dung đánh giá về TSA                          Câu hỏi/ nhận định                  Điểm                             Nhận xét
+                                                hỏi
+       Các bộ phận của Ngân hàng In-đô-nê-     Q.40   Đối với mỗi vị trí công việc liên quan đến     0…4     + Tổng hợp về tình trạng hiện hành
+       sia (hệ thống thanh toán và tin học )          hệ thống thanh toán liên ngân hàng, có                - Xác định những thiếu sót
+       có đủ số cán bộ được đào tạo để                một bản mô tả công việc cụ thể hóa các
+       quản lý các hệ thống thanh toán liên           nhiệm vụ của vị trí đó, các kênh báo cáo,
+       ngân hàng                                      thẩm quyền được giao và yêu cầu trình
+                                                      độ.
+                                               Q.41   Tổng số cán bộ có thẩm quyền quản lý           0…4     + Tổng hợp về tình trạng hiện hành
+                                                      các hệ thống thanh toán là đủ so với khối             - Xác định những thiếu sót
+                                                      lượng giao dịch và cường độ công việc.
+
+
+3.3    Cơ sở hạ tầng CNTT&TT
+       Cơ sở hạ tầng CNTT&TT có đủ năng        Q.42     Trung tâm dữ liệu của Kho bạc trung          0…4     + Tổng hợp về tình trạng hiện hành
+       lực xử lý khối lượng công việc để hỗ             ương (KBTW) sẵn sàng xử lý các giao dịch            - Xác định những thiếu sót
+       trợ hoạt động Tài khoản kho bạc duy              Tài khoản kho bạc duy nhất (TSA) và lưu
+       nhất (TSA) tập trung với quy mô đầy              trữ những chi tiết liên quan.
+       đủ.                                     Q.43     Trung tâm dữ liệu của Ngân hàng trung        0…4     + Tổng hợp về tình trạng hiện hành
+                                                        ương (NHTW) sẵn sàng xử lý các giao                 - Xác định những thiếu sót
+                                                        dịch của Tài khoản kho bạc duy nhất
+                                                        (TSA) và lưu trữ các chi tiết liên quan.
+4      Kiểm soát an ninh thông tin F                                                                 X4 %
+       Kiểm soát an ninh thông tin của Kho
+4.1
+       bạc trung ương (KBTW)
+       Kiểm soát an ninh thông tin được chủ    Q.44     Xác thực và cấp thẩm quyền (loại hình        0…4     + Tổng hợp về tình trạng hiện hành
+       động áp dụng trong các hệ thống                  chữ ký điện tử được sử dụng; lưu trữ các            - Xác định những thiếu sót
+       thông tin của Kho bạc trung ương                 xác nhận điện tử được ban hành).
+       (KBTW)
+                                               Q.45     Truy cập đặc quyền (ai có quyền truy cập     0…4     + Tổng hợp về tình trạng hiện hành
+                                                        đặc quyền vào các cơ sở dữ liệu của FMIS            - Xác định những thiếu sót
+                                                        và trung tâm thanh toán điện tử)
+                                               Q.46     An ninh và toàn vẹn dữ liệu (các giải pháp   0…4     + Tổng hợp về tình trạng hiện hành
+                                                        chuyển thông tin an toàn + mã hóa dữ                - Xác định những thiếu sót
+                                                        liệu đang chuyển)
+                                               Q.47     Tường lửa ứng dụng web và mạng (các          0…4     + Tổng hợp về tình trạng hiện hành
+                                                        giải pháp rà soát, hạn chế truy cập).               - Xác định những thiếu sót
+
+
+
+
+                                                                                     19
+                                              Mã câu
+Ref.       Các nội dung đánh giá về TSA                        Câu hỏi/ nhận định                  Điểm                             Nhận xét
+                                               hỏi
+                                              Q.48   Mật khẩu cho tất cả các đối tượng người       0…4     + Tổng hợp về tình trạng hiện hành
+                                                     sử dụng                                              - Xác định những thiếu sót
+                                              Q.49    An ninh vật lý (kiểm soát tiếp cận và an     0…4     + Tổng hợp về tình trạng hiện hành
+                                                      ninh trung tâm dữ liệu)                             - Xác định những thiếu sót
+                                              Q.50    Lưu trữ và sao lưu (toàn bộ các giao dịch    0…4     + Tổng hợp về tình trạng hiện hành
+                                                      trong 5 năm qua được lưu trữ chủ động               - Xác định những thiếu sót
+                                                      tại các cơ sở dữ liệu, các hồ sơ cũ hơn
+                                                      được đưa vào niêm cất; người nào duy
+                                                      trì các hồ sơ tài liệu TSA)
+       Kiểm soát an ninh thông tin của Ngân
+4.2
+       hàng trung ương (NHTW)
+       Kiểm soát an ninh thông tin được chủ   Q.51    Xác thực và cấp thẩm quyền (loại hình        0…4     + Tổng hợp về tình trạng hiện hành
+       động áp dụng trong các hệ thống                chữ ký điện tử được sử dụng; lưu trữ các            - Xác định những thiếu sót
+       thông tin của Ngân hàng trung ương             xác nhận điện tử được ban hành).
+       (NHTW)                                 Q.52    Truy cập đặc quyền (ai có quyền truy cập     0…4     + Tổng hợp về tình trạng hiện hành
+                                                      đặc quyền vào các cơ sở dữ liệu Tài                 - Xác định những thiếu sót
+                                                      khoản kho bạc duy nhất (TSA) và các nền
+                                                      tảng hệ thống liên ngân hàng)
+                                              Q.53    An ninh và toàn vẹn dữ liệu (các giải pháp   0…4     + Tổng hợp về tình trạng hiện hành
+                                                      chuyển thông tin an toàn + mã hóa dữ                - Xác định những thiếu sót
+                                                      liệu đang chuyển).
+                                              Q.54    Tường lửa ứng dụng web và mạng (các          0…4     + Tổng hợp về tình trạng hiện hành
+                                                      giải pháp rà soát, hạn chế truy cập).               - Xác định những thiếu sót
+
+                                              Q.55    Mật khẩu cho tất cả các đối tượng người      0…4     + Tổng hợp về tình trạng hiện hành
+                                                      sử dụng.                                            - Xác định những thiếu sót
+                                              Q.56    An ninh vật lý (kiểm soát tiếp cận và an     0…4     + Tổng hợp về tình trạng hiện hành
+                                                      ninh trung tâm dữ liệu).                            - Xác định những thiếu sót
+                                              Q.57    Lưu trữ và sao lưu (toàn bộ các giao dịch    0…4     + Tổng hợp về tình trạng hiện hành
+                                                      trong 5 năm qua được lưu trữ chủ động               - Xác định những thiếu sót
+                                                      tại các cơ sở dữ liệu, các hồ sơ cũ hơn
+                                                      được đưa vào niêm cất; người nào duy
+                                                      trì các hồ sơ tài liệu TSA).
+5      Các cơ chế giám sát G                                                                       X5 %
+5.1    Kho bạc trung ương (KBTW) được         Q.58    Kiểm toán tài chính/tuân thủ các hoạt        0…4     + Tổng hợp về tình trạng hiện hành
+       đánh giá thường xuyên bởi kiểm toán            động của Kho bạc trung ương (KBTW)                  - Xác định những thiếu sót
+
+                                                                                    20
+                                                Mã câu
+Ref.       Các nội dung đánh giá về TSA                           Câu hỏi/ nhận định               Điểm                             Nhận xét
+                                                 hỏi
+       nội bộ, kiểm toán bên ngoài và các       Q.59   Kiểm toán CNTT cho các hệ thống thông       0…4     + Tổng hợp về tình trạng hiện hành
+       đồng sự.                                        tin của Kho bạc trung ương (KBTW) (FMIS            - Xác định những thiếu sót
+                                                       và trung tâm thanh toán điện tử)
+5.2    Ngân hàng trung ương (NHTW) được         Q.60   Kiểm toán tài chính/tuân thủ các hoạt       0…4     + Tổng hợp về tình trạng hiện hành
+       đánh giá thường xuyên bởi kiểm toán             động của Ngân hàng trung ương (NHTW)               - Xác định những thiếu sót
+       nội bộ, kiểm toán bên ngoài và các       Q.61    Kiểm toán CNTT cho các hệ thống thông      0…4     + Tổng hợp về tình trạng hiện hành
+       đồng sự.                                         tin của Ngân hàng trung ương (NHTW)               - Xác định những thiếu sót
+                                                        (các hệ thống thanh toán và kế toán)
+5.3    Đánh giá đảm bảo an toàn của IMF         Q.62    Khuôn khổ điều hành của Ngân hàng          0…4     + Tổng hợp về tình trạng hiện hành
+       được thực hiện thường xuyên qua đó               trung ương (NHTW) đáp ứng các chuẩn               - Xác định những thiếu sót
+       đánh giá được khuôn khổ điều hành                mực qua các bằng chứng tại đánh giá
+       của Ngân hàng trung ương (NHTW)                  đảm bảo an toàn của IMF.
+
+5.4    Đánh giá PEFA được thực hiện dưới        Q.63    Hoạt động Tài khoản kho bạc duy nhất       0…4     + Tổng hợp về tình trạng hiện hành
+       hình thức chuẩn đoán cơ bản để                   (TSA) và thông lệ quan hệ giữa Kho bạc            - Xác định những thiếu sót
+       đánh giá hiệu quả hoạt động tổng thể             trung ương (KBTW)/ Ngân hàng trung
+       về quản lý tài chính công và trách               ương (NHTW) được rà soát qua đánh giá
+       nhiệm giải trình                                 PEFA, và những kết quả đánh giá liên
+                                                        quan được sử dụng để giám sát tiến độ.
+5.5    Rủi ro tài chính và các biện pháp kiểm   Q.64    Báo cáo rủi ro và kiểm soát được lập       0…4     + Tổng hợp về tình trạng hiện hành
+       soát được đánh giá thường xuyên gắn              hàng năm, mô tả kết quả đánh giá tổng             - Xác định những thiếu sót
+       liền với đánh giá hệ thống tài chính             thể về các hệ thống thông tin, các biện
+       hàng năm của Kho bạc trung ương                  pháp kiểm soát và những thiếu sót nếu
+       (KBTW) và Ngân hàng trung ương                   có của Kho bạc trung ương (KBTW).
+       (NHTW).                                  Q.65    Báo cáo rủi ro và kiểm soát được lập       0…4     + Tổng hợp về tình trạng hiện hành
+                                                        hàng năm, mô tả kết quả đánh giá tổng             - Xác định những thiếu sót
+                                                        thể về các hệ thống thông tin, các biện
+                                                        pháp kiểm soát và những thiếu sót nếu
+                                                        có của Ngân hàng trung ương (NHTW).
+
+
+                                                                            Tổng điểm đánh giá :   XX %
+
+
+
+
+                                                                                     21
+Ghi chú:
+A
+   Về câu hỏi Q.1, đặc điểm chính cần xem xét là Bộ Tài chính/Kho bạc đã xác định ra các chuẩn mực cho các hệ thống về quản lý tài chính (và phạm vi phê duyệt – như các đơn
+   vị ngoài ngân sách có đưa vào phạm vi không) ay chưa, và những trách nhiệm nào được giao cho các cán bộ chịu trách nhiệm tại các Bộ nhằm duy trì các khuôn khổ kiểm soát
+   nội bộ và hệ thống tài chính hiệu quả (cũng như trong kiến trúc FMIS). Bộ Tài chính và kho bạc phải đảm bảo gì cho hoạt động của FMIS để tạo thuận lợi cho các cán bộ chịu
+   trách nhiệm đó thực hiện các nhiệm vụ của mình, và ngược lại, những yêu cầu nào được đặt ra cho các cán bộ chịu trách nhiệm đó khi sử dụng FMIS (v.d. duy trì hệ điều
+   hành và cập nhật phần mềm chống vi-rút tại tất cả các trạm làm việc kết nối với mạng lưới kết nối vào FMIS; an ninh mạng – tường lửa’ giám sát và duy trì các bản ghi theo
+   dõi; không chia sẻ mật khẩu truy cập vào cả mạng và hệ thống FMIS với bất kỳ người nào khác). Nếu có mạng nội bộ hoặc mạng toàn chính phủ an toàn, các đặc điểm này có
+   thể được xử lý trong quan hệ thành viên của mạng này (có thể được quản lý bởi một đơn vị khác với Bộ Tài chính/Kho bạc). Tuy nhiên, tại nhiều quốc gia, FMIS được triển
+   khai trước khi có mạng an toàn toàn chính phủ và các vấn đề đó được giải quyết trong quá trình triển khai FMIS .
+
+    Câu hỏi Q.4 và Q.8: Điều này sẽ tác động đến chuyện các thủ tục có được tự động hoá đầy đủ qua hệ thống hay không hoặc việc chuyển chứng từ hỗ trợ/ quyết định bằng
+    bản cứng vẫn cần thực hiện song song với thông tin truyền gửi trong FMIS và từ FMIS tới ngân hàng thanh toán. Nếu văn bản pháp luật quy định về giao dịch và giao tiếp điện
+    tử đã có (hoặc đang được soạn thảo), thiết kế FMIS và giao diện với ngân hàng cần tuân thủ theo văn bản pháp luật này để đảm bảo thông tin truyền gửi điện tử cũng có giá
+    trị pháp lý tương tự như thẩm quyền bằng giấy. Ví dụ, nếu luật quy định về cơ sở hạ tầng về chìa khoá công cộng, có thể có yêu cầu việc xác nhận thẩm quyền cần được phê
+    duyệt bởi một cơ quan quản lý nhà nước ở trung ương và do đó FMIS phải triển khai các giấy xác nhận từ cơ quan xác nhận được phê duyệt đó. Nếu có thiếu sót về hỗ trợ
+    pháp lý đối với chữ ký điện tử, và không có cơ sở pháp lý về chữ ký điện tử dựa trên chìa khoá công cộng, các quy trình Tài khoản kho bạc duy nhất (TSA) tập trung có thể cần
+    phải có thêm các biện pháp kiểm soát bổ sung để xử lý vấn đề này. Chẳng hạn việc chuyển hồ sơ thanh toán từ Kho bạc sang Bộ Tài chính có thể bao gồm một quy trình bổ
+    sung trong đó thông tin chính về hồ sơ đó (v.d. tổng giá trị thanh toán, số khoản thanh toán vàtổng chi tiết từ tổng các số tài khoản trong hồ sơ đó) được trao đổi bằng một
+    tuyến riêng (v.d. thư điện tử, điện thoại) giữa Kho bạc và Ngân hàng trung ương trước khi Ngân hàng trung ương phê duyệt hồ sơ đó để xử lý qua hệ thống thanh toán.
+
+    Câu hỏi Q.2 và Q.5: Trong một số trường hợp, các vấn đề này có thể được đề cập trong một thoả thuận duy nhất (thoả thuận này có thể được xây dựng dần – ban đầu, điều
+    quan trọng là phải có thoả thuận về các dịch vụ ngân hàng mà Ngân hàng trung ương (NHTW) sẽ triển khai hoặc sẽ không triển khai).
+B
+    Các điều khoản chính trong Luật, Quy định và Thông tư về ngân hàng có tác động đến thiết kế Tài khoản kho bạc duy nhất (TSA) (việc lưu giữ và cấu trúc các tài khoản ngân
+    hàng, các quy trình thu chi ngân quỹ) bao gồm:
+    • Luật về Ngân hàng trung ương (NHTW) có thể quy dịnh rằng Ngân hàng trung ương (NHTW) nắm giữa các tài khoản của Kho bạc hoặc là đại lý ngân hàng/ đại lý tài khoá
+       cho Chính phủ;
+    • Luật về Ngân hàng trung ương (NHTW) có thể quy định rằng lợi nhuận của Ngân hàng trung ương (NHTW) được chuyển cho Chính phủ và Ngân hàng trung ương (NHTW)
+       được Chính phủ tái vốn hoá trong trường hợp thua lỗ (do đó giảm rui ro nếu Ngân hàng trung ương (NHTW) nắm giữ TSA) ;
+    • Khả năng Ngân hàng trung ương (NHTW) sẵn sàng cấp tín dụng cho Chính phủ ;
+    • Vai trò và trách nhiệm của Ngân hàng trung ương (NHTW) và Chính phủ về phát hành và trả nợ trong nước và nước ngoài ;
+    • Giờ vận hành hệ thống thanh toán;
+    • Các giai đoạn bù trừ séc;
+    • Các giao đoạn bù trừ đối với giao dịch điện tử (ACH và RTGS );
+    • Giai đoạn thời gian để trả lại giao dịch không hợp lệ (v.d. ghi có tài khoản khách hàng không hợp lệ tại ngân hàng tiếp nhận );
+    • Xử lý các giao dịch sang hướng (v.d. ghi có tài khoản của khách hàng hợp lệ nhưng không chính xác );
+
+
+                                                                                       22
+    • Yêu cầu đối với các ngân hàng thương mại và các tổ chức tài chính khác phải báo cáo về các tài khoản, số dư và giao dịch của Chính phủ cho Bộ Tài chính/ Kho bạc trung
+       ương (KBTW) (như nêu trên, điều này cũng ảnh hưởng đenes khả năng để Bộ Tài chính lập bảng kiểm kê các tài khoản ngân hàng hiện hành một cách hiệu quả).
+C
+    Câu hỏi Q.13: Các chức năng kiểm soát thanh toán không chỉ hạn chế về tuân thủ với các hạn mức ngân sách mà còn phải xem xét cả các khía cạnh quan trọng khác về kiểm
+    soát chi tiêu công (v.d. các chức năng mua sắm đấu thầu, kiểm soát lương, đăng ký nhà cung cấp, giám sát tài khoản ngân hàng ứng trước cho các đơn vị chi tiêu). Nếu gói
+    phần mềm thương mại mua sắm (COTS) được sử dụng làm cơ sở triển khai hệ thống FMIS, các tính năng kiểm soát này tương đối tinh vi để có thể cấu hình và duy trì. Do đó,
+    cơ chế cần phải được ghi nhận rõ ràng, và trách nhiệm đảm bảo các vai trò của người sử dụng trong hệ thống cần được gán rõ ràng đối với tất cả các hình thức kiểm soát.
+    Tương tự, đối với phần mềm xây dựng trong nước, môi trường kiểm soát cần phải được lồng ghép một cách hợp lý vào tính năng phần mềm và mô hình dữ liệu liên quan.
+
+    Câu hỏi Q.14: Các chức năng kiểm soát thanh toán do NHTW thực hiện chủ yếu liên quan đến kiểm tra các khoản thanh toán hợp lệ, trả lại đề nghị và giá trị ghi có trong
+    khung thời gian quy định bởi văn bản pháp luật/ quy tắc tham gia .
+
+    Câu hỏi Q.15 và Q.16: Nếu KBTW thực hiện đối chiếu, KBTW cần quản lý sổ ngân quỹ cho tất cả các tài khoản ngân hàng thuộc Tài khoản kho bạc duy nhất (TSA) trong quá
+    trình xử lý các giao dịch. Tại các quốc gia nơi sử dụng một cấu trúc các tài khoản ngân hàng để hạch toán giao dịch, việc duy trì sổ ngân quỹ và đối chiếu có thể có những yếu
+    kém (trong một số trường hợp (sổ quỹ được trình kiểm toán chỉ đơn giản là bảng kê ngân hàng với các số ghi nợ/ghi có bị đảo ngược, thay vì duy trì sổ theo dõi ngân quỹ).
+    Các dòng tiền hàng ngày cần đwcj ghi chép độc lập bởi KBTW và NHTW để hỗ trợ việc đối chiếu .
+
+    Câu hỏi Q.17: Mặc dù việc giám sát các hệ thống thanh toán nhìn chung là chức năng của NHTW, tại một số quốc gia, khuôn khổ thể chế cho phép một đơn vị độc lập với
+    NHTW trực tiếp chịu trách nhiệm giám sát các tổ chức tài chính và/hoặc giám sát các hệ thống thanh toán (mặc dù dĩ nhiên NHTW luôn là bên liên quan được quan tâm).
+    Đồng thời, các đặc điểm sẵn có tại các hệ thống thanh toán trong ước (thay vì giám sát tự động các hệ thống đó) sẽ có tác động đến thiết kế các quy trình và chính sách của
+    Tài khoản kho bạc duy nhất (TSA) (v.d. Liệu Chính phủ có thể thu tiền từ và chi trả vào một tài khoản tiền di động bằng phương tiện viễn thông hay không ?).
+D
+    Câu hỏi Q.23: Các báo cáo giao dịch có thể lấy từ RTGS và ACH, trong khi bảng kê ngân hàng có thể được lập từ hệ thống ngân hàng lõi của NHTW. Đồng thời, các bảng kê đó
+    cần sẵn có trực tuyến theo thời gian thực chứ không nên chỉ được chuyển hàng ngày.
+
+    Câu hỏi Q.25: Đề nghị lưu lý rằng kiến trúc hệ thống của một số gói phần mềm thương mại mua sẵn (COTS) có thể cho phép đối chiếu ngân hàng được thực hiện như một
+    mô-đun tách riêng, hoặc một phần của mô-đun quản lý ngân quỹ, chứ không phải thuộc về mô-đun sổ cái tổng hợp. Điều quan trọng là phải đảm bảo rằng sổ ngan quỹ dùng
+    trong quy trình đối chiếu ngân hàng phải ghi chép đầy đủ những bút toán vào sổ phần tài sản ngân hàng của sổ cái tổng hợp.
+E
+    Câu hỏi Q.27-Q.31: Có một số cấp độ “bút tích kiểm toán” cần có để truy tìm hiệu quả một giao dịch bất kỳ (trên cơ sở dữ liệu cũng như trên phần mềm ứng dụng FMIS và
+    bản ghi truy cập mạng). Đánh giá này chủ yếu tập trung vào “bút tích kiểm toán” tại các cơ sở dữ liệu liên quan. Vấn đề chính là liệu các cán bộ kiểm toán nội bộ và bên ngoài
+    có được biết đầy đủ về các bút tích kiểm toán đó hay không (trên cơ sở dữ liệu và phân mềm, và cả kiểm toán CNTT đối với các bản ghi sử dụng mạng), và có khả năng sử
+    dụng chúng để truy vết việc xử lý giao dịch hay không – tại một số quốc gia, chủ có quản trị hệ thống FMIS mới hiểu được cách sử dụng chức năng bút tích kiểm toán để truy
+    vết các giao dịch (và do vậy không ai có khả năng truy vết các hành động của quản trị hệ thống). Một câu hỏi quan trọng nữa là liệu chính phủ có được tiếp cận (nội bộ hoặc
+    qua công ty trong nước/khu vực) đến năng lực kiểm toán “giám định” để có khả năng truy vết các giao dịch hoặc dữ liệu bất kỳ được nhập qua FMIS hay không. Những khía
+    cạnh này cũng cần dượ ghi nhận cho một đánh giá toàn diện hơn, nếu phù hợp.
+F
+    Các biện pháp kểm soát về an ninh thông tin được liệt kê trong phần này tập trung và quy trình thanh toán điện tử. Trong thực tế, vấn đề này còn được liên hệ ngược tới việc
+    các đơn vị chi tiêu khởi tạo đơn đặt hàng và thay đổi về lương/nhân sự (vì đây là khâu đầu tiên khoản thanh toán được xử lý qua TSA). Như đã thảo luận ở trên, khi mạng
+    dành cho FMIS được Bộ Tài chính triển khai và cho phép kết nối với các mạng cục bộ khác do các đơn vị chi tiêu quản lý, các biện pháp kiểm soát an ninh thông tin phải được
+    áp dụng cho tất cả các yêu stoos (bao gồm cả các mạng cở đơn vị chi tiêu mà Bộ Tài chính không trực tiếp chịu trách nhiêm duy trì), chứ không chỉ tại NHTW và KBTW.
+                                                                                       23
+G
+    Đề nghị lưu ý rằng Đánh giá đảm bảo an toàn của IMF chỉ dành cho các quốc gia đang sử dụng nguồn lực của quỹ, mặc dù được khuyến khích sử dụng cả cho các quốc gia
+    đang thực hiện chương trình cán bộ giám sát.
+
+
+
+
+.
+
+
+
+
+                                                                                  24
+Phụ lục 1.      Tham khảo
+
+1.   Ali Hashim và Allister J. Moon, Bộ công cụ đánh giá chuẩn đoán kho bạc “Treasury Diagnostic Toolkit”,
+     Tài liệu không chính thức của Ngân hàng thế giới (WB) # 19, 2004
+2.   Biagio Bossone và Massimo Cirasino, Giám sát các hệ thống thanh toán: Khuôn khổ phát tiêrn và điều hành
+     các hệ thống thanh toán tại các quốc gia mới nổi “The Oversight of the Payments Systems: A Framework for
+     the Development and Governance of Payment Systems in Emerging Economies”, Báo cáo của Ngân hàng
+     thế giới (WB), tháng 7/2001
+3.   BIS-CPSS, Giám sát của NHTW đối với các hệ thống thanh toán và chi trả “Central Bank Oversight of
+     Payment and Settlement Systems”, Ngân hàng Tái thiết Quốc tế (BIS) – Uỷ ban về các Hệ thống Thanh
+     toán và Chi trả, tháng 7/2005
+4.   Cem Dener, Joanna Watkins, và William Dorotinsky, Hệ thống thông tin quản lý tài chính: 25 năm kinh
+     nghiệm của Ngân hàng thế giới (WB) về những gì có và không có tác dụng “Financial management
+     information systems : 25 years of World Bank experience on what works and what doesn't”, Nghiên
+     cứu của Ngân hàng thế giới (WB), tháng 4/2011
+5.   COBIT: Các mục tiêu kiểm soát đối với CNTT và liên quan “Control Objectives for Information and
+     related Technology”
+6.   Toà kiểm toán châu Âu, Cẩm nang kiểm toán hiệu quả hoạt động “The Performance Audit Manual”,
+     tháng 5/2007
+7.   Toà kiểm toán châu Âu, Cẩm nang kiểm toán tài chính và tuân thủ “The Financial and Compliance Audit
+     Manual (FCAM)”, tháng 5/2012
+8.   IMF, Đánh giá đảm bảo an toàn cho các ngân hàng trung ương “Safeguards Assessments of Central
+     Banks” Tài liệu thông tin thực tế, tháng 3/ 2012
+9.   ITIL: Thư viện cơ sở hạ tầng CNTT
+10. PEFA, Public Expenditure and Financial Accountability (PEFA) Framework, Tháng 5/2006
+11. Sailendra Pattanayak và Israel Fainboim, Tài khoản kho bạc duy nhất: Khái niệm, thiết kế và các vấn đề
+    khi triển khai “Treasury Single Account: Concept, Design and Implementation Issues”, IMF WP/10/143,
+    tháng 5/2010
+12. Ngân hàng thế giới (WB), Các hệ thống thanh toán trên toàn thế giới – kết quả khảo sát các hệ thống
+    thanh toán toàn cầu 2008 “Payment Systems Worldwide – Outcomes of the Global Payment Systems
+    Survey 2008”, Nhóm Phát triển các hệ thống thanh toán “FPD Payment Systems Development Group”,
+    2009
+13. Ngân hàng thế giới (WB), Hướng dẫn chung về phát triển các chương trình thanh toán của chính phủ
+    “General Guidelines for the Development of Government Payment Programs”, Nhóm Phát triển các hệ
+    thống thanh toán “FPD Payment Systems Development Group”, tháng 8/2012
+
+
+
+
+                                                    25
+Phụ lục 2.        Mẫu Báo cáo đánh giá nhanh Tài khoản kho bạc duy nhất (TSA)
+
+Sau khi kết thúc đánh giá các hoạt động Tài khoản kho bạc duy nhất (TSA) qua sử dụng bảng câu hỏi báo
+cáo đánh giá nhanh sẽ được lập để tổng hơp lại các kết quả chính, chia sẻ kế luận và khuyến nghị đối với
+các quan chức liên quan. Mẫu báo cáo dưới đây có thể được sử dụng để trình bày kết quả cho thống nhất.
+
+Nội dung khuyến nghị trong Báo cáo đánh giá nhanh Tài khoản kho bạc duy nhất (TSA)
+
+1. Bối cảnh                       (Tổng hợp các hoạt động TSA hiện tại, nếu có hoặc kế hoạch thiết lập TSA)
+2. Mục tiêu                       (mong đời qua đánh giá nhanh TSA)
+3. Điều kiện ban đầu của TSA      (Tình trạng hiện tại của các điều kiện ban đầu của TSA, sử dụng mẫu cung
+                                  cấp)
+4.   Vai trò và trách nhiệm trong TSA (sử dụng mẫu cung cấp)
+5.   Cách tiếp cận                (Tự đánh giá hoặc đánh giá chung, mô tả các bước thực hiện)
+6.   Các kết quả chính            (Tổng hợp các kết quả chính theo năm nội dung đánh giá)
+7.   Kết luận                     (Tổng hợp các điểm mạnh và điểm yếu)
+8.   Khuyến nghị                  (Liệt kê các khuyến nghị cụ thể để giải quyết những thách thức về kỹ thuật
+                                  và tính thích ứng)
+Phụ lục 1. Các cán bộ tham gia đánh giá nhanh TSA
+Phụ lục 2. Liệt kê các tài liệu được nghiên cứu (do các cơ quan có thẩm quyền cung cấp) trong đánh giá
+nhanh TSA
+Phụ lục 3. Tổng hợp các yêu cầu về TSA được đưa vào hợp đồng FMIS (nếu có)
+Phụ lục 4. Các chứng từ và hình ảnh mẫu lấy được từ các hệ thống thanh toán liên ngân hàng (RTGS và
+ACH)
+       •   Đề nghị thanh toán chuẩn (PO) sử dụng cho các giao dịch thu chi (qua FMIS).
+       •   Đề nghị thanh toán (PO) do KBTW tạo lập từ máy trạm RTGS của NHTW.
+       •   Các loại báo cáo có sẵn tại máy trạm RTGS của NHTW.
+       •   Báo cáo mẫu về các giao dịch RTGS.
+       •   Định dạng thông điệp (MT103, phiên bản mở rộng của SWIFT gốc) để chuyển hướng dẫn thanh
+           toán từ KBTW vào hệ thống RTGS.
+       •   Chi tiết một hướng dẫn thanh toán tại màn hình đầu cuối bù trừ tự động ACH của NHTW.
+       •   Hệ thống giám sát của NHTW để quản lý việc thanh toán bù trừ tự động ACH hàng ngày.
+       •   Các chi tiết về giao dịch bù trừ tự động ACH hàng ngày.
+
+
+
+
+                                                     26
+Phụ lục 3. Tổng quan về Tài khoản kho bạc Duy nhất (TSA) tập trung và các Hệ
+thống thanh toán điện tử
+
+Tài khoản kho bạc duy nhất (TSA), về cơ chế triển khai có thể được gộp thành hai nhóm là tập trung và
+phân tán. Cơ chế Tài khoản kho bạc duy nhất (TSA) tập trung được thiết kế để nắm bắt toàn bộ các giao
+dịch thu chi qua một cấu trúc hợp nhất các tài khoản ngân hàng tại một tổ chức tài chính duy nhất, thường
+là ngân hàng trung ương. Khi các hoạt động quản lý tài chính công có tính phân cấp cao và các đơn vị chi
+tiêu ngân sách được phép duy trì các tài khoản giao dịch riêng, cơ chế Tài khoản kho bạc duy nhất (TSA)
+phân tán có thể giúp nắm bắt dòng tiền tại các tài khoản này bằng cách kết chuyển số dư lên tài khoản
+chính của Tài khoản kho bạc duy nhất (TSA) vào cuối mỗi ngày. Tuy nhiên, việc nắm bắt các chi tiêu giao
+dịch tại Tài khoản kho bạc duy nhất (TSA) phi tập trung tương đối khó. Do vậy, cấu trúc tập trung hiện đang
+được thiết lập tại nhiều quốc gia để cải thiện hiệu suất và hiệu quả hoạt động của Tài khoản kho bạc duy
+nhất (TSA) qua xử lý giao dịch tập trung. Những tiến bộ về ứng dụng cơ sở web và sự phát triển nhanh
+chóng của các hệ thống thanh toán điện tử là điều kiện chính cho phép hỗ trợ các hoạt động Tài khoản kho
+bạc duy nhất (TSA) tập trung.
+Các hệ thống thanh toán điện tử (EPS) hoặc Chuyển tiền điện tử (EFT) vận hành trên cơ sở hai hệ thống:
+•   Hệ thống trung tâm bù trừ trong đó các giao dịch giữa các thành viên của một kênh bù trừ được ghi
+    chép.
+    •   Thanh toán là khâu hoàn tất việc chuyển vốn là là động thái hoàn tất các nghĩa vụ của ngân hàng về
+        chuyển vốn giữa các tài khoản của người gửi. Ngân hàng trung ương (NHTW) tại mỗi quốc gia
+        thường đóng vai trò là đại lý thanh toán chính. Thanh toán có thể diễn ra tức thời trên cơ sở gộp
+        (RTGS) hoặc có độ trễ trên cơ sở ròng (bù trừ tự động).
+Thanh toán gộp thời gian thực (RTGS) là các hệ thống chuyển tiền, trong đó việc chuyển tiền diễn ra từ
+ngân hàng này đến ngân hàng khác trên cơ sở “thời gian thực”và trên cơ sở “gộp” (Hình 1). Thanh toán
+theo “thời gian thực” nghĩa là giao dịch thanh toán không phải chịu khoảng thời gian chờ đợi bất kỳ. Các
+giao dịch được thanh toán với nhau ngay khi được xử lý. “Thanh toán gộp” có nghĩa là các giao dịch được
+thanh toán trên cơ sở từng giao dịch mà không phải số tổng theo nhóm hoặc bù trừ lấy số ròng với bất kỳ
+giao dịch nào khác. Sau khi xử lý, các khoản thanh toán được kết thúc và không thể huỷ. Về rủi ro thanh
+khoản và rủi ro hệ thống, các hệ thống thanh toán giá trị cao là quan trong nhất vì tính chất giá trị cao và
+nhạy cảm về thời gian của khoản thanh toán. Các giải pháp RTGS hầu hết thường được triển khai tại các
+ngân hàng trung ương. Các trung tâm bù trừ của khu vực tư nhân sử dụng mô hình Hệ thống thanh toán bù
+trừ liên ngân hàng (CHIPS).
+
+        Hình A3.1: Hoạt động Tài khoản kho bạc duy nhất (TSA) tập trung và các Hệ thống thanh toán điện tử
+
+                                                 Hướng dẫn                         Các bảng kê TSA
+                                             3   thanh toán                    6   nhận được
+                      Bộ Tài chính                                                               Ngân hàng TW          ACH
+        FMIS                                                  VPN an toàn
+                      Kho bạc TW                                                                                       RTGS
+            Đối chiếu tự                   >> EFT (Hồ sơ theo lô;                 << Các bảng kê
+                                                                                                                             Thông
+        7   động                           XML)                                                            TSA           4
+                                                       Thanh toán điện tử tập trung        SWIFT                             điệp
+                                                         Chi tiết các khoản thu (chi)                                        thanh
+                            Mạng                         ngân quỹ nhận được hàng                 Mạng hệ thống ngân hàng     toán
+                           kho bạc                              ngày từ NHTW
+
+
+                                 2
+                                       Yêu cầu thanh toán                          Hội sở NHTM #1              Hội sở NHTM #X
+                                       được phê duyệt
+                     Các cơ quan
+                    Kho bạc huyện
+                                                                  Thanh toán        Mạng NHTM #1                Mạng NHTM #X
+                                       Trình Đề nghị thanh        trực tiếp vào       Network
+                                 1     toán và hoá đơn
+                                                                5 tài khoản
+                                                                 27
+                                                                  người thụ
+                                     Các đơn vị chi               hưởng            Chi nhánh NHTM               Chi nhánh NHTM
+                                          tiêu                                            #1                           #X
+           Vốn
+           Thông tin
+
+
+Nguồn: Dữ liệu Ngân hàng Thế giới (Dener và đồng sự, 2011).
+
+
+
+
+Bù trừ tự động (ACH) là hệ thống dành cho các khoản thanh toán có giá trị thấp. Hệ thống bù trừ tự động
+(ACH) xử lý khối lượng lớn các giao dịch ghi có và ghi nợ theo lô với chi phí thấp. Các giao dịch ghi có qua bù
+trừ tự động (ACH) bao gồm các khoản trả lương, lương hưu, và hưu bổng theo niên kim kỳ hạn. Các giao
+dịch ghi có qua bù trừ tự động (ACH) bao gồm chi trả hoá đơn của người tiêu dùng, như các hoá đơn điện
+nước, hoá đơn điện thoại, đóng phí bảo hiểm. Hệ thống bù trừ tự động chủ yếu được vận hành bởi các
+ngân hàng trung ương. Tại một số nước, hệ thống bù trừ tự động (ACH) thuộc sở hữu của tư nhân và được
+tư nhân vận hành, nhưng được các ngân hàng trung ương cấp phép và quản lý hoạt động.
+Hiệp hội Viễn thông Tài chính Liên Ngân hàng (SWIFT) là một mạng lưới viễn thông toàn cầu. Hiệp hội này
+quy định chặt chẽ về định dạng thông điệp để trao đổi thông tin tài chính giữa các tổ chức tài chính. Các
+thông điệp được tự động chuyển qua các kết nối điện tử được xây dựng giữa SWIFT và các hệ thống bù trừ
+điện tử trong nước của các quốc gia khác nhau.
+SWIFT có hai yếu tố chính:
+    •   Mạng lưới SWIFT, được sử dụng để truyền tải thông điệp giữa các thành viên của SWIFT (các ngân
+        hàng và các tổ chức tài chính khác); và
+    •   Định dạng thông điệp chuẩn của SWIFT được quốc tế công nhận là định dạng chuẩn cho các thông
+        điệp tài chính và ngân hàng.
+Các thông điệp theo định dạng SWIFT có thể được triển khai áp dụng trong quy trình thanh toán Tài khoản
+kho bạc duy nhất (TSA) (và được khuyến nghị vì sử dụng các định dạng chuẩn của quốc tế sẽ tạo điều kiện
+dễ dàng khi thay đổi ứng dụng phần mềm sau này), mặc dù không nhất thiết phải truyền tải qua mạng
+SWIFT mà chỉ qua các mạng của hệ thống thanh toán khác trong nước, hoặc qua kết nối trực tiếp giữa hệ
+thống FMIS hoặc hệ thống thanh toán điện tử và ngân hàng trung ương. Tuy nhiên, mạng SWIFT nói chung
+sẽ là phương thức duy nhất để Chuyển Điện tín Quốc tế.
+
+
+
+
+                                                      28
+Phụ lục 4.     Các câu hỏi về điều kiện ban đầu của Tài khoản kho bạc duy nhất (TSA)
+và rủi ro
+
+Để thẩm tra sự tồn tại về hoạt động đáng tin cậy của Tài khoản kho bạc duy nhất (TSA) và các hệ thống liên
+ngân hàng, nhiều vấn đề cần phải hỏi rõ đối với các quan chức Kho bạc trung ương (KBTW) và Ngân hàng
+trung ương (NHTW) trước hoặc sau đánh giá nhanh để có thể hoàn tất bảng câu hỏi trên:
+ 1.   Các hệ thống thông tin của Ngân hàng trung ương (NHTW) nắm bắt dữ liệu cấp giao dịch của những
+      biến động ảnh hưởng đến Tài khoản kho bạc duy nhất (TSA) (thu và chi) như thế nào)?
+ 2.   Ngân hàng trung ương (NHTW) duy trì và đảm bảo an toàn cho dữ liệu Tài khoản kho bạc duy nhất
+      (TSA) như thế nào để vào bất kỳ thời điểm nào trong tương lai cũng có thể báo cáo hoặc phục vụ mục
+      đích kiểm toán?
+ 3.   Những thủ tục nào sẽ có để cung cấp các bảng kê ngân hàng hàng ngày phục vụ đối chiếu và ai là
+      người lập các bảng kê đó?
+ 4.   Các cơ chế giám sát nào được thiết lập để giám sát các hoạt động ngân hàng của Ngân hàng trung
+      ương (NHTW), cũng như các hoạt động của Tài khoản kho bạc duy nhất (TSA)/ ngân khố của Kho bạc
+      trung ương (KBTW) (đơn vị nào kiểm toán các hoạt động ngân hàng và kho bạc, vào lúc nào)?
+ 5.   Gầy đây, đã bao giờ kiểm toán an ninh CNTT&TT được thực hiện đối với các hệ thống thông tin của
+      Ngân hàng trung ương (NHTW) và Kho bạc trung ương (KBTW) bởi kiểm toán viên CNTT có bằng cấp
+      hay chưa?
+ 6.   Khuôn khổ nào được sử dụng để đánh giá các hệ thống thông tin (COBIT, ITIL, ISO 27001, v.v.)?
+ 7.   “Bút tích kiểm toán” có được kích hoạt tại các cơ sở dữ liệu liên quan trong hoạt động hàng ngày của
+      Ngân hàng trung ương (NHTW) và Kho bạc trung ương (KBTW) hay không?
+ 8.   Các biện pháp kiểm soát an ninh thông tin này được chủ động sử dụng trong các hệ thống thông tin
+      của Ngân hàng trung ương (NHTW) và Kho bạc trung ương (KBTW):
+      • Xác thực và cấp thẩm quyền (loại hình chữ ký điện tử được sử dụng; ưu trữ các xác nhận điện tử
+         được phát hành)
+      • Đặc quyền truy cập (ai được truy cập đặc quyền vào các cơ sở dữ liệu Tài khoản kho bạc duy nhất
+         (TSA) và các nền tảng hệ thống liên ngân hàng)
+      • An ninh và toàn vẹn dữ liệu (các giải pháp chuyển dữ liệu an toàn + mã hoá dữ liệu đang chuyển)
+      • Tường lửa mạng và ứng dụng web (các giải pháp rà soát và hạn chế truy cập)
+      • Mật khẩu cho mọi đối đượng sử dụng
+      • An ninh vật lý (kiểm soát tiếp cận và an ninh trung tâm dữ liệu)
+      • Sao lưu và lưu trữ (mọi giao dịch trước đó 5 năm được lưu giữ chủ động tại các cơ sở dữ liệu; các
+         tài liệu cũ hơn được đưa vào niêm cất; ai là người duy trì các hồ sơ của Tài khoản kho bạc duy
+         nhất (TSA))
+ 9.   Có quy trình tự động phản ánh mọi giao dịch hàng ngày (thu + chi) vào sổ cái tổng hợp của FMIS (để
+      truy vết các giao dịch hệ thống liên ngân hàng của Ngân hàng trung ương (NHTW) trong sổ cái tổng
+      hợp của FMIS bằng mã số nhận dạng duy nhất không)?
+ 10. Tình trạng hoạt động của trung tâm thanh toán điện tử của Kho bạc trung ương (KBTW) là gì (số cán
+     bộ Kho bạc trung ương/ Bộ Tài chính được cấp quyền thực hiện thanh toán, và cơ chế giám sát)?
+                                                    29
+ 11. Sơ đồ luồng dữ liệu để xử lý các giao dịch thu và chi qua hệ thống FMIS và các hệ thống thông tin của
+     Ngân hàng trung ương (NHTW) cho hoạt động Tài khoản kho bạc duy nhất (mô tả các bước khác
+     nhau để hỗ trợ hệ thống FMIS của Kho bạc trung ương, Trung tâm thanh toán điện tử của Kho bạc
+     trung ương, Máy chủ truy cập của Ngân hàng trung ương, các nền tảng RTGS/ACH của Ngân hàng
+     trung ương và Sổ cái tổng hợp của Ngân hàng trung ương).
+ 12. Liệt kê toàn bộ các định dạng thông điệp (riêng cho RTGS và ACH) cần triển khai để ghi chép/ báo cáo
+     về toàn bộ thu chi ngân sách, cùng biện minh về mục đích của chúng.
+ 13. Phiên bản mới nhất của quy ước về Tài khoản kho bạc duy nhất (TSA) và các tài liệu đính kèm (bao
+     gồm cả các biện pháp kiểm soát an ninh thông tin và tài chính).
+ 14. Kế hoạch hành động để triển khai hệ thống Tài khoản kho bạc duy nhất (TSA) (bao gồm trách nhiệm
+     của Kho bạc trung ương/ Ngân hàng trung ương và các ngân hàng FB).
+
+Phần đánh giá về rủi ro và kiểm soát cũng cần đưa vào đánh giá này để phân tích về các thủ tục, môi trường
+vận hành, các hệ thống thông tin của Ngân hàng trung ương (NHTW) và Kho bạc trung ương (KBTW).
+Các yếu tố rủi ro đượ cân nhắc trong đánh giá này bao gồm:
+   a) Nguy cơ dễ bị gian lận và tham ô của các hệ thống thanh toán và giao diện của Tài khoản kho bạc
+      duy nhất (TSA);
+   b) Độ phức tạp của các giao dịch qua Tài khoản kho bạc duy nhất (TSA), hoặc mức độ phụ thuộc vào
+      hệ thống để có thể hạch toán và đối chiếu chính xác;
+   c) Mức độ can thiệp thủ công, và khả năng sai sót liên quan trong hệ thống;
+   d) Mức độ phức tạp về hồ sơ an ninh người sử dụng;
+   e) Các giao diện với các hệ thống bên thứ ba; và
+   f)   Sự phụ thuộc của nghiệp vụ vào sự sẵn sàng liên tục của hệ thống.
+Các biện pháp kiểm soát:
+Một số nội dung kiểm soát quan trọng được đưa vào đánh giá này liên quan đến các biện pháp kiểm soát
+dựa trên ứng dụng, hệ thống thông tin và cơ sở hạ tầng CNTT&TT được liệt kê dưới đây:
+   a) Khả năng truy cập các hệ thống thanh toán của NHTW và hoạt động của Tài khoản kho bạc duy nhất
+      (TSA) (trung tâm thanh toán điện tử của Kho bạc trung ương (KBTW)) chỉ hạn chế ở những cán bộ
+      có trách nhiệm cần truy cập.
+   b) Sự tách bạch giữa các chứng năng chính của Tài khoản kho bạc duy nhất (TSA) và hệ thống thanh
+      toán được giám sát và đánh giá định kỳ.
+   c) Xác nhận đầu vào để đảm bảo nhập liệu đúng thẩm quyền, chính xác và đầy đủ.
+   d) Thường xuyên kiểm tra để đảm bảo các giao dịch được xử lý hợp lý.
+   e) Rà soát đầu ra để đảm bảo mức độ đầy đủ, chính xác và hợp lệ của thông tin được báo cáo cũng
+      như mức độ đầy đủ của các bút tích kiểm toán.
+   f)   Các giao dịch hàng ngày được ghi chép và báo cáo ở cả hai bên của giao diện Tài khoản kho bạc duy
+        nhất (TSA) (các hệ thống thông tin của Kho bạc trung ương (KBTW) và Ngân hàng trung ương
+        (NHTW)) một cách nhất quán.
+
+                                                  30
+g) Các giao diện hệ thống Tài khoản kho bạc duy nhất (TSA) được thiết kế và kiểm thử để bảo vệ tính
+   toàn vẹn trong trao đổi dữ liệu.
+h) Các ứng dụng Tài khoản kho bạc duy nhất (TSA) được cán bộ hiểu rõ và tuân thủ với quy định pháp
+   luật.
+i)   Các ứng dụng Tài khoản kho bạc duy nhất (TSA) được giám sát thường kỳ và đánh giá đầy đủ.
+j)   An ninh vật lý nhằm đảm bảo môi trường để bảo vệ phần cứng và phần mềm không bị tổn hại do
+     tiếp cận không đúng thẩm quyền và tác động của môi trường (v.d. nước, thời tiết khắc nghiệt, hoả
+     hoạn).
+k) Sao lưu dữ liệu và lưu trữ bên ngoài để phục hồi hoạt động hệ thống.
+l)   Phục hồi hoạt động máy tínnh trong trường hợp thiên tai.
+
+
+
+
+                                                31
+  Phụ lục 5. Chứng từ mẫu và hình ảnh liên quan đến các hoạt động Tài khoản kho bạc duy nhất (TSA) và các hệ thống
+  thanh toán
+
+                           Hình A5.1: Mẫu đề nghị thanh toán chuẩn (PO) dùng cho các giao dịch chi tiêu (Cộng hoà Kư- giếc)
+
+                                                     Mã số duy nhất của đề nghị thanh toán
+
+
+Mã đơn vị sử dụng
+       ngân sách
+
+       Mã số thuế
+                                                                                                           Payer’s Bank Account Number
+   Mã đăng ký bảo
+      hiểm xã hội                                                                                            PAYER
+Mã nhận dạng ngân
+   hàng cho KBTW
+
+
+
+                                                           BENEFICIARY
+
+                                                                                                          Beneficiary Bank Account Number
+
+
+
+
+      Tổng số tiền
+
+
+      Mã số thanh
+    toán (nội dung
+           kinh tế)
+
+            Mô tả
+
+
+
+
+                                                                         32
+Hình A5.2: Đề nghị thanh toán (PO) do KBTW lập qua máy trạm RTGS của NHTW (phương thức truy cập trực tiếp)
+
+
+
+
+                                                   33
+Hình A5.3: Các loại báo cáo sẵn có trên máy trạm RTGS của NHTW (phương thức truy cập trực tiếp)
+
+
+
+
+                                             34
+HÌnh A5.4: Báo cáo mẫu về các giao dịch RTGS
+
+
+
+
+                    35
+Hình A5.5: Định dạng thông điệp (MT103, là phiên bản mở rộng của định dạng SWIFT gốc) để chuyển các yêu cầu thanh toán của KBTW vào hệ thống RTGS
+
+
+
+
+                                                                      36
+Hình A5.6: Chi tiết yêu cầu thanh toán từ màn hình đầu cuối hệ thống bù trừ điện tử của Ngân hàng trung ương (NHTW)
+
+
+
+
+                                                        37
+Hình A5.7: Hệ thống giám sát của Ngân hàng trung ương (NHTW) để quản lý các giao dịch bù trừ điện tử (ACH)
+
+
+
+
+                                                   38
+Hình A5.8: Chi tiết các giao dịch bù trừ điện tử (ACH) hàng ngày
+
+
+
+
+                              39
+

@@ -1,0 +1,1613 @@
+Implementing nature-
+based flood protection
+Principles and implementation guidance
+©2017 The World Bank
+
+The International Bank for Reconstruction and Development
+
+
+The World Bank Group
+
+1818 H Street, NW                                                                   List of acronyms
+
+Washington, D.C. 20433, USA
+                                                                                    CEDA      Central Dredging Association
+
+Internet: www.worldbank.org                                                         DHI       Danish Hydraulic Institute
+This work, including this document and the nature-based solutions online
+platform, was co-financed by the Program on Forests (PROFOR), the Global            FEEM      Fondazione Eni Enrico Mattei
+Facility for Disaster Reduction and Recovery (GFDRR), and Deltares.
+                                                                                    FRM       Flood Risk Management
+The online platform that provides up-to-date implementation guidance
+                                                                                    GCCA+     Global Climate Change Alliance
+and a database of nature-based solutions projects can be accessed at:
+naturebasedsolutions.org                                                            GCF       Green Climate Fund
+
+                                                                                    GEF       Global Environment Facility
+Attribution
+Please cite the work as follows: World Bank. 2017. Implementing                     GFDRR     Global Facility for Disaster
+nature-based flood protection: Principles and implementation guidance.                        Reduction and Recovery
+Washington, DC: World Bank.
+                                                                                    GIZ       Deutsche Gesellschaft für
+                                                                                              Internationale Zusammenarbeit
+Disclaimer
+This document is the product of work performed by the World Bank and                IFI       International Financial Institution
+GFDRR with external contributions. The findings, interpretations and
+conclusions expressed in this document do not necessarily reflect the views         IPCC      Intergovernmental Panel on
+of any individual partner organizations of the World Bank, GFDRR, the                         Climate Change
+Executive Directors of the World Bank, or the governments they represent.
+                                                                                    IUCN      International Union for
+                                                                                              Conservation of Nature
+The World Bank does not guarantee the accuracy of the data included in
+this work. The boundaries, colors, denomination, and other information              M&E       Monitoring and Evaluation
+shown in any map in this work do not imply any judgment on the part
+of The World Bank concerning the legal status of any territory or the               MRV       Monitoring, Reporting and
+endorsement or acceptance of such boundaries.                                                 Verification
+
+                                                                                    NBS       Nature-Based Solutions
+The contents of this report are the result of (scientific) research and should
+be interpreted related to this (scientific) research only. Use of the information   NGO       Non-Governmental Organization
+is at your own expense and risk.
+                                                                                    NOAA      National Oceanic and
+Rights and Permissions                                                                        Atmospheric Administration
+The material in this work is subject to copyright. Because The World Bank
+encourages dissemination of its knowledge, this work may be reproduced,             PEDRR
+in whole or in part, for noncommercial purposes as long as full attribution                   Partnership for Environment and
+to this work is given.                                                                        Disaster Risk Reduction
+
+                                                                                    SIDS      Small Island Developing States
+Any queries on rights and licenses, including subsidiary rights, should
+be addressed to the Office of the Publisher, The World Bank, 1818 H                 SUDS      Sustainable Urban Drainage
+Street NW, Washington, DC 20433, USA; fax: 202-522-2422; e-mail:                              Systems
+pubrights@worldbank.org.
+                                                                                    UNDP      United Nations Development
+Photo credits                                                                                 Programme
+Building with Nature Indonesia is a program by Ecoshape partners and
+the Indonesian Ministry of Marine Affairs and Fisheries (MMAF), and the             UNEP      United Nations Environment
+Indonesian Ministry of Public Work and Human Settlement (PU)                                  Programme
+
+University & Research Centre, UNESCO-IHE, Blue Forests, and Von                     UNISDR    United Nations Office for Disaster
+Lieberman, with support from the Diponegoro University, and local                             Risk Reduction
+communities; p4, p5, p6, p17, p27 and p30
+Adobestock; p18 and p31
+                                                                                    UNU       United Nations University
+Stefan Verschure; p6 and p7                                                         USACE     U.S. Army Corps of Engineers
+Thinckstock; cover and p8, p20, p23, p28
+Clipart Panda; p10                                                                  VIA       Vulnerability Impact Assessment
+Guus Schooneville; p12
+Van beek images.com; p14 and p25
+                                                                                    WBCSD     World Business Council for
+                                                                                              Sustainable Development
+
+                                                                                    WRI       World Resources Institute
+Implementing nature-
+based flood protection
+Principles and implementation guidance
+Acknowledgements
+This guideline is a product of collective effort by Deltares, the Global Facility for Disaster Reduction and
+Recovery (GFDRR), the Program for Forests (PROFOR) at the World Bank, Ecoshape, and the United
+Nations Development Programme (UNDP). Furthermore, this document could not have been made without
+the input from all participants of the workshop on scaling up nature-based flood risk reduction, held on
+April 11th and 12th 2017 at Deltares (NL).
+
+
+
+Authors:
+Deltares:	               Bregje K. van Wesenbeeck, Stéphanie IJff
+GFDRR:	                  Brenden Jongman, Simone Balog , Stefanie Kaupa, Lauren 	
+	Bosche
+World Bank:	             Glenn-Marie Lange, Niels Holm-Nielsen
+Ecoshape:	               Henk Nieboer
+UNDP:	                   Yusuke Taishi, Pradeep Kurukulasuriya
+Independent consultant:	 Imen Meliane
+
+Contributors and reviewers:
+
+The Water Institute of the Gulf:	        Denise Reed
+HR Wallingford:	                         Jonathan Simm
+US Army Corps of Engineers:	             Todd S. Bridges
+Deltares:	                               Stephanie Janssen, Karen Meijer
+IH Cantabria:	                           Inigo Losada
+The Nature Conservancy &
+University of California, Santa Cruz:	   Borja G. Reguero
+
+Royal Haskoning-DHV:	                    Petra Dankers
+The Nature Conservancy:	                 Adam Whelchel
+Wetlands International:	                 Marie-Jose Vervest, Susanna Tol
+Environmental Defense Fund:	             Natalie Peyronnin, Shannon Cunniff
+University of Western Australia:	        Ryan Lowe
+Delft University of Technology:	         Stefan Aarninkhof
+UN Environment/IUCN CEM:	                Karen Sudmeier
+UN Environment:	                         Marisol Estrella
+UNU Institute for Environment and
+Human Security:	                         Fabrice Renaud
+
+Design and Layout:
+Deltares: 	                              Welmoed Jilderda
+                                 This document is drafted based upon comments and
+                                 remarks from the following workshop participants:
+
+
+
+                                 Name                      Organisation
+                                 Abdi Yusuf                United Nations Development
+                                                           Programme (UNDP)
+                                 Ap van Dongeren           Deltares
+                                 Armando Guzman            The World Bank
+                                 Bastiaan Lammers          Boskalis
+                                 Bontje Zaengerling        The World Bank
+                                 Boris van Zanten          Wolfs Company
+                                 Carrie de Wilde           Ecoshape
+                                 Cees van de Guchte        Deltares
+                                 Christophe Briere         Deltares
+                                 Claire Jeuken             Deltares
+                                 Ellis Penning             Deltares
+                                 Els van Lavieren          Conservation International
+                                 Femke Schasfoort          Deltares
+                                 Fokko van der Goot        Ecoshape
+                                 Hans Pietersen            Rijkswaterstaat
+                                 Hessel Winsemius          Deltares
+                                 Jaap Kwadijk              Deltares
+                                 Jaap van Thiel de Vries   Boskalis
+                                 Luca Sittoni              Ecoshape
+                                 Madhuvi Kisoen            Ministry of Public Works Suriname
+                                 Marcel Stive              Delft University of Technology
+                                 Mary Bryant               US Army Corps of Engineers
+                                 Mathias Bertram           Deutsche Gesellschaft für Internationale
+                                                           Zusammenarbeit (GIZ)
+                                 Mathijs van Ledden        GFDRR
+                                 Melisa October            Ministry of Agriculture, Guyana
+                                 Mindert de Vries          Deltares
+                                 Minke van Rees            Turing Foundation
+                                 Monica Altamirano         Deltares
+                                 Natasja van den Berg      Tertium
+                                 Nicolas Desramaut         The World Bank
+                                 Nigel Pontee              Halcrow Group Ltd
+                                 Dionisio Perez Blanco     Fondazione Eni Enrico Mattei (FEEM)
+                                 Peter Goodwin             University of Idaho
+                                 Pieter van Eijk           Wetlands International
+                                 Quirijn Lodder            Rijkswaterstaat
+                                 Remment ter Hofstede      Van Oord
+                                 Robert McCall             Deltares
+                                 Salah Dahir               United Nations Development
+                                                           Programme (UNDP)
+                                 Saskia Marijnissen        United Nations Development
+                                                           Programme (UNDP)
+                                 Stefan Aarninkhof         Delft University of Technology
+                                 Susanna Tol               Wetlands International
+                                 Vincent Vuik              Delft University of Technology
+Drone picture of Demak showing
+sediment accumulation behind
+                                 Wouter Gotje              Witteveen + Bos
+permeable grids
+1
+    INTRODUCTION
+
+
+
+    1
+    Introduction
+            Floods are the most frequent and damaging of all natural
+            hazards globally. Between 1994 and 2013, floods accounted
+            for 43% of all recorded natural events, affecting nearly 2.5
+            billion people1. During exceptional years such as 1998 and
+            2010, total losses due to flooding have exceeded $40 billion.
+            In the coming decades with climate change, urbanization,
+            and demographic growth, the impact of coastal, fluvial, and
+            pluvial flooding is expected to increase significantly. Effective
+            flood risk management is critical to protect people and their
+            livelihoods from flooding and to limit future losses. Nature-
+            based measures and their ability to address flood risk are
+            receiving increasing attention.
+
+
+
+
+    Failing sea wall
+
+
+
+
+6
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Until recently, most flood risk management involved           implemented on an ad-hoc basis. While there have
+conventional engineering measures. These measures are         been significant advances in the design and testing
+sometimes referred to as “hard” engineering or “gray”         protocols for ecosystems and their role in risk mitigation,
+infrastructure. Examples include building embankments,        these solutions have yet to be fully evaluated and
+dams, levees, and channels to control flooding. Recently      standardized. As a result, some nature-based projects
+the concept of “nature-based solutions”, “ecosystem-          for climate adaptation and disaster risk reduction have
+based adaptation”, “eco-DRR” or “green infrastructure”        not been designed properly, leading to ineffective and
+has emerged as a good alternative or complement to            unsustainable results. As is the case for engineering
+traditional gray approaches. Nature-based solutions           solutions, there is no ‘one size fits all’ approach given
+make use of natural processes and ecosystem services          that climatic, ecological, and hazard characteristics are
+for functional purposes, such as decreasing flood risk        variable and are often poorly understood. However,
+or improving water quality. These interventions can be        the sector of traditional infrastructure has a long
+completely “green” (i.e. consisting of only ecosystem         history in which they have fully developed protocols
+elements) or “hybrid” (i.e. a combination of ecosystem        and standards, whereas nature-based solutions are
+elements and hard engineering approaches).                    emerging approaches that need the same level of
+                                                              investigation of lessons learned and development of
+Nature-based solutions can help mitigate flood (the           standards. Therefore, guidance and standards need
+focus of this document), drought, erosion and landslide.      to be developed for nature-based solutions which
+In addition, they may help decrease vulnerability to          can aid project designers, implementers, funders,
+climate change while also creating multiple benefits          evaluators and others and others involved in project
+to the environment and local communities. These               development. Guidance also facilitates achieving a
+include sustaining livelihoods, improving food security,      common understanding of likely effectiveness and risk
+and sequestering carbon. Such solutions can be                reduction outcomes. This document attempts to be one
+applied to river basins (e.g. reforestation and green         step towards standardized guidelines for all nature-
+embankments), coastal zones (e.g. mangroves and               based solutions.
+wetlands), and cities (e.g. urban parks).
+                                                              The objective of this document is to present five
+There is increasing momentum for the use of nature-           principles and implementation guidance for planning,
+based solutions as part of resilience-building strategies,    such as evaluation, design, and implementation of
+sustainable adaptation, and disaster risk management          nature-based solutions for flood risk management as
+portfolios. Awareness of nature-based solutions from          an alternative to or complementary to conventional
+communities, donors, and policy- and decision-makers          engineering measures. The potential users of these
+                                                              principles and implementation steps are professionals
+     This document attempts to be one step                    in risk management and climate adaptation, NGOs,
+                                                              donors, and international organizations. This guidance
+     towards standardized guidelines for all                  was developed in cooperation with a large and diverse
+              nature-based solutions.                         group of international funding agencies, research
+                                                              institutes, NGOs, governmental organizations, and
+                                                              engineering firms.
+is growing. Further, investors and the insurance industry
+are increasingly interested in nature-based solutions.        This document has two parts:
+From a climate change perspective, ecosystem-based
+adaptation has been highlighted as a priority investment      1.	   Principles, describing key considerations to consider
+area in global funds such as the Global Environment                 when planning nature-based solutions
+Facility or the Green Climate Fund.                           2.	   Implementation guidance, describing the timeline
+                                                                    and activities needed to implement nature-based
+As with conventional engineering solutions, the                     solutions
+effective application of nature-based solutions requires
+a comprehensive assessment and implementation
+                                                              1.	 UNISDR, C. (2015). The human cost of natural disasters 2015:
+process. However, nature-based solutions are often                A global perspective.
+
+
+
+                                                                                                                                 7
+    PRINCIPLES
+
+
+
+    1
+    Introduction
+      A number of pilot projects and technical reports have
+      recently been released on the implementation of nature-
+      based solutions for flood risk management. Five basic
+      principles to guide future nature-based project development
+      have come out of these pilot projects—both during design,
+      implementation, and maintenance—and reports on the
+      topic. The main purpose of these principles is to promote
+      best practices and prevent common pitfalls in the use of
+      nature-based solutions. As such, these principles are meant
+      as guidance for project development and initiation and not
+      as a specific design manual. For more detailed information
+      on design, existing technical guidelines (including the
+      US National Oceanic and Atmospheric Administration
+      (NOAA)2, the US Army Corps of Engineers (USACE)3, and
+      Ecoshape4) and guidelines under development (USACE) can
+      be consulted.
+
+
+
+
+8
+                                             Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Principle 1: System-scale perspective                                 of nature-based solutions for flood risk reduction, these
+Addressing nature-based solutions for climate change                  solutions should be considered from the outset in terms
+adaptation and disaster risk reduction should start with              of their potential over large spatial scales.
+a system-wide analysis of the local socio-economic,
+environmental, and institutional conditions.                          Time scale
+                                                                      In addition to considering appropriate spatial scales, a
+Spatial scale                                                         long time frame should be adopted to exploit the full
+The physical landscape of coastal systems, rivers, and                potential of nature-based solutions. Ideally, time frames
+deltas has been shaped by the interaction between                     of 20 to 50 years or longer should be applied. For
+sediments, hydrodynamics, and ecology. Often these                    shoreline communities affected by flooding, the threat
+systems are strongly influenced by both riverine and                  is increasing due to changes in watershed land use,
+coastal processes, but also human use and existing                    more intense precipitation, sea-level rise, siltation of
+infrastructure play a role. System integrity is influenced            river mouths, increased storminess, and possible failure
+by fluxes of sediment, nutrients, and fresh and salt                  of conventional risk reduction structures (when present).
+water occurring at different scales. Any change in these              Risk reduction strategies also need to reflect the range of
+fluxes will trigger other processes that induce changes               conditions that can occur and how systems change over
+in landscape morphology and ecology. A change in                      time. Consideration of the scale of the problem and
+fluxes could result in the reduction of sediment input                how it will change over time is essential5. Ecosystems
+or the alteration of currents. For example, alteration of             evolve over decades or even centuries, which means
+upstream sediment loads may influence downstream                      that the benefits they provide also change over time.
+coastline stability and in this way determine the success             One of these benefits is that they can adapt to changing
+and feasibility of downstream or coastal interventions.               environmental and risk conditions6, thereby potentially
+The planning of nature-based measures should take                     exceeding the design lifetime of engineered structures.
+into account these processes at various spatial scales,               Awareness-raising amongst coastal residents and other
+starting with the largest scale at which they play a role or          stakeholders that their system is changing, sea level is
+can be influenced. Ideally, planning of a conventional                rising, and that each storm is different in terms of track,
+engineering structure would take the same approach.                   size, and intensity is crucial7.
+However, whereas these large-scale considerations
+optimize functionality and avoid unforeseen effects for               Local socio-economic and institutional context
+engineering structures, they are indispensable for the                In addition to an evaluation of effects and feasibility on
+success of nature-based solutions.                                    the environmental system, each infrastructure solution
+                                                                      should be rooted in the local socio-economic and
+Ecosystems are highly dependent on the larger enabling                institutional context. Because nature-based solutions
+environmental processes. Often, ecosystems cannot be                  for flood risk are less common than traditional
+sustained by managing individual sites in isolation. The              measures, their implementation in the local socio-
+integrity and health of ecosystems at landscape scales                economic and institutional context can be a challenge.
+determine the potential of nature-based solutions to                  For example, there is relatively little documentation
+limit flood risk. If evaluated on small spatial scales,               of their effectiveness, costs, and benefits. Therefore,
+the impact of nature-based solutions on risk reduction                nature-based solutions may require a more integral
+may seem trivial, whereas on larger scales the presence               perspective to ensure a common understanding
+and integrity of ecosystems may make an enormous                      of their role, including the integration of opinions
+difference on the overall impact of flood events.
+Therefore, to appreciate and fully develop the potential
+                                                                      5.	 Groves, D. G., Panis, T., & Sanchez, R. (2017). 2017 Coastal
+                                                                          Master Plan: Appendix D: Planning Tool. Version Final. Baton
+                                                                          Rouge, Louisiana: Coastal Protection and Restoration Authority.
+2.	 NOAA (2015). A Guide to Assessing Green Infrastructure Costs      6.	 van Wesenbeeck, B. K., de Boer, W., Narayan, S., van der Star, W.
+    and Benefits for Flood Reduction. https://coast.noaa.gov/data/        R., & de Vries, M. B. (2016). Coastal and riverine ecosystems as
+    docs/digitalcoast/gi-cost-benefit.pdf                                 adaptive flood defenses under a changing climate. Mitigation and
+                           .W., Burks-Copes, K.A. et al. (2015).
+3.	 Bridges, T.S., Wagner, P                                              Adaptation Strategies for Global Change, 1-8
+    Use of Natural and Nature-Based Features (NNBF) for Coastal       7.	 Clipp, A., Gentile, B., Green, M., Galinski, A., Harlan, R., Rosen,
+    Resilience. ERDC SR-15-1. Vicksburg, MS. U.S. Army Engineer           Z., Saucier, M. (2017). 2017 Coastal Master Plan: Appendix B:
+    Research and Development Center.                                      People and the Landscape. Version Final. Baton Rouge, Louisiana:
+4.	https://www.ecoshape.org/en/design-guidelines/                         Coastal Protection and Restoration Authority.
+
+
+                                                                                                                                                9
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+                                                                                    When planning nature-based solutions, it is
+                                                                                    important to take a system scale perspective.
+
+
+
+ and objectives of stakeholders. A larger array of                          target which results in an acceptable level of residual
+ stakeholders needs to be involved consistently in order                    risk. Secondly, the assessment is an important basis
+ to increase the legitimacy of the measures. Achieving                      for analyzing the effectiveness of the various measures
+ broad acceptance for a nature-based solution may be                        available for risk reduction.
+ complex and time consuming. This will pay off in later
+ project stages. Ideally, such broad acceptance should                      Risk assessments are not always conducted in nature-
+ also be obtained for conventional engineering projects.                    based projects despite their importance for successfully
+                                                                            implementing a flood risk reduction measure. Lack of
+ Principle 2: Risk and benefit assessment                                   an appropriate risk assessment may result in a lack of
+ of full range of solutions                                                 understanding of the project’s risk reduction capabilities.
+ A thorough assessment of risks and benefits of the                         Additionally, the broad portfolio of measures that
+ full range of possible measures should be conducted,                       could be used for flood risk reduction is not always
+ covering risk reduction benefits as well as social and                     taken into account. This may lead to implementation
+ environmental effects.                                                     of suboptimal solutions in critical locations or to ill-
+                                                                            fitted risk management strategies with potential long-
+ Flood risk management projects generally start with                        term negative impacts for risk, ecosystems or other
+ the identification of the three elements of risk: hazard,                  community interests.
+ exposure, and vulnerability8,9. Conducting a risk
+ assess­­
+       ment has two purposes. Firstly, the assessment                       Although traditional risk assessment methods can
+ provides a baseline understanding of what is at stake.                     be applied to nature-based solutions, they do not
+ It enables the decision-maker to define a risk reduction                   incorporate the full range of benefits generated by
+                                                                            nature-based projects. To fully appreciate the potential
+                                                                            of nature-based measures, risk assessments should
+ 8.	 IPCC (2014). Climate Change 2014: Synthesis Report.                    be extended with a benefit assessment to quantify
+     Contribution of Working Groups I, II and III to the Fifth Assessment   their ecosystem and socio-economic benefits. These
+     Report of the Intergovernmental Panel on Climate Change
+     [Core Writing Team, R.K. Pachauri and L.A. Meyer (eds.)]. IPCC,        additional benefits also need to be a standard element
+     Geneva, Switzerland, 151 pp.                                           of cost-benefit analyses. This will enable a more holistic
+ 9.	 UNISDR (2015). Sendai Framework for Disaster Risk Reduction            comparison to traditional engineering approaches
+     2015-2030. United Nations Office for Disaster Risk Reduction:
+     Geneva, Switzerland.                                                   that incorporates a project’s long term sustainability.
+
+
+10
+                                      Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Finally, risk assessments should incorporate projections       Systematic knowledge development to fill these gaps is
+of future changes in risk as a consequence of climatic,        necessary to advance uptake of nature-based solutions.
+socio-economic, and institutional changes. Assessments         Developing and applying quantifiable engineering
+should account for the dynamic nature of the risk              protocols for ecosystems will require close collaboration
+reduction functions of natural ecosystems including the
+evolution of ecosystem services over time.
+                                                                       To fully appreciate the potential of
+Principle 3: Standardized performance
+                                                                   nature-based measures, risk assessments
+evaluation
+Nature-based solutions for flood risk management need                  should be extended with a benefit
+to be tested, designed, and evaluated using quantitative            assessment to quantify their ecosystem
+criteria.
+                                                                           and socio-economic benefits.
+There are international standards and guidelines for
+engineered flood management structures, such as
+the International Levee Handbook10 and the Coastal             between ecologists, or specialists with a strong
+Engineering Manual11. These standards and guidelines           understanding of the natural systems, and engineers.
+are adopted for design, testing, and construction. They        This will increase our understanding of the role that
+not only provide guidance for implementation but               ecosystems can play in risk reduction. Ultimately, it
+also for evaluating the effectiveness of such measures.        allows for impartial comparison of effectiveness, costs,
+Similar standards for nature-based structures are not          and benefits of different types of solutions.
+yet available. Consequently, the uptake of nature-based
+solutions would be facilitated by an open and transparent      Principle 4: Integration with ecosystem
+process to determine performance standards. This will          conservation and restoration
+allow for standardized quantification of their effectiveness   Nature-based solutions for flood risk management
+in reducing hazard or exposure. A transparent process          should make use of existing ecosystems, native
+ensures that uncertainties are considered as part of the       species, and comply with basic principles of ecological
+design. Further, such standards will enable comparison         restoration and conservation.
+with conventional engineering interventions.
+                                                               Restoration, conservation, and management of eco­
+Numerous documents are currently available that can            systems are crucial elements of the implementation
+inform designers. For example, for wave attenuation            of nature-based solutions for flood risk management.
+by vegetation there are numerous peer-reviewed                 Ecological conservation and restoration, and morphology
+papers documenting the latest advances in numerical            (the study of natural processes including hydrodynamics
+models12,13. These numerical models can be used                and sediment transport) are scientific disciplines with
+to make integrated designs as long as conservative             large bodies of theory and practice that will advance
+estimates for vegetation parameters are adopted in             proper implementation of nature-based solutions. For
+order to avoid overestimating the performance of               example, it is known that ecosystems that are more
+such measures. At the same time, there are several             diverse are also more productive and more resilient
+knowledge gaps regarding the performance of nature-
+based interventions for flood risk management. These
+gaps are mostly related to their performance under                CIRIA (2013) The International Levee Handbook. CIRIA, London,
+                                                               10.	
+                                                                  United Kingdom, 1332 pp.
+extreme storm conditions or tsunamis. Although
+                                                                  U.S. Army Corps of Engineers (2002). Coastal Engineering
+                                                               11.	
+numerical models are used to investigate performance              Manual (CEM), Engineer Manual 1110-2-1100. U.S. Army Corps
+of vegetated ecosystems under storm conditions,                   of Engineers, Washington, D.C. (6 volumes).
+                                                                  van Wesenbeeck, B. K., de Boer, W., Narayan, S., van der Star, W.
+                                                               12.	
+validation data from experiments or from the field is             R., & de Vries, M. B. (2016). Coastal and riverine ecosystems as
+often lacking.                                                    adaptive flood defenses under a changing climate. Mitigation and
+                                                                  Adaptation Strategies for Global Change, 1-8.
+                                                                  Vuik, V., Jonkman, S. N., Borsje, B. W., & Suzuki, T. (2016).
+                                                               13.	
+Knowledge gaps also exist related to their persistence            Nature-based flood protection: the efficiency of vegetated
+over longer time scales and subject to multiple events.           foreshores for reducing wave loads on coastal dikes. Coastal
+                                                                  engineering, 116, 42-56.
+
+
+
+                                                                                                                                      11
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ Experimental facilities such as this Delta Flume can be used to test vegetation performance under extreme conditions
+
+
+ to disturbances14. Further, there is ample evidence                   restoring it. Sometimes conditions are altered to such an
+ that restoration by planting of a single crop or exotic               extent that returning to original states is not realistic. This
+ species leads to adverse effects and therefore restoration            may warrant restoration to another type of ecosystem
+ efforts better focus on reconstructing proper abiotic                 and adjustment of restoration targets. In addition, climate
+ conditions15. However, this knowledge is not always                   change impacts on ecosystems may result in transitions
+ reflected in on-the-ground flood risk reduction projects.             between ecosystems. It is important to understand the
+ Large-scale mangrove planting efforts, for example, are               risk reduction value of the current ecosystem and how
+                                                                       that risk profile will change as the ecosystem changes.
+
+           System evaluations help identify                            Leveraging available knowledge on ecosystem
+           opportunities and constraints for                           restoration and management will not only reduce the
+                                                                       risk of failure in project implementation, but also avoid
+       effective conservation and restoration                          undesirable side effects such as the replacement or
+                      of ecosystems.                                   destruction of other valuable ecosystems. For example,
+                                                                       mangroves are often considered crucial for reduction
+                                                                       of waves generated by coastal storms. However,
+ often conducted with unsuitable species in unsuitable                 previous mangrove habitats (the high intertidal zone)
+ areas and therefore fail unnecessarily. Moreover, poorly              are often already used for aquaculture, agriculture, or
+ planned restoration and planting efforts may result in                habitation. As a consequence, mangrove restoration is
+ unanticipated effects on other valuable ecosystems                    often conducted in the lower intertidal zone. Restoration
+ such as intertidal flats and sea grass beds. As for risk              in this zone can negatively impact shellfish, birds, sea
+ assessments, restoration practices should start with a                grasses, and dugongs. Such tradeoffs need to be
+ system evaluation to determine the pre-existing types of              anticipated so that communities are aware of risk
+ ecosystems and abiotic processes. System evaluations                  reduction outcomes, including the implications for food
+ help identify opportunities and constraints for effective             security and ecosystems. Guidelines for restoration of
+ conservation and restoration of ecosystems. Present                   ecosystems can be found on the Ecoshape wiki pages16.
+ and future conditions should be taken into account to                 A good manual for informed mangrove restoration is
+ determine the target ecosystem and the feasibility of                 also available17.
+
+
+
+12
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Principle 5: Adaptive management
+Nature-based solutions for flood risk management need
+adaptive management based on long-term monitoring.
+This ensures their sustainable performance.
+
+As nature-based solutions evolve over time, they
+require continuous management and monitoring
+of their effectiveness. The management of nature-
+based solutions should strongly draw on knowledge
+of ecosystem management, which requires a proper
+understanding of ecosystem dynamics. One example of
+an adaptive management strategy is the nourishment
+of extra sediment, as sometimes practiced in beach
+and dune systems. Another example is the exclusion of
+grazers or predators if these limit ecosystem recovery.
+The dynamic nature of ecosystems combined with long-             1.	Plan: Defining the desired goals and objectives
+term trends necessitates adaptive management of any                 evaluating alternative actions and selecting a
+ecosystem-based strategy. Implementation of nature-                 preferred strategy with recognition of sources of
+based solutions should therefore be accompanied by an               uncertainty;
+adaptive management plan.                                       2.	 Design: Identifying or designing a flexible
+                                                                    management action to address the challenge;
+Adaptive management is a systematic approach that               3.	 Implement: Implementing the selected action
+facilitates flexible decision-making18. It is an iterative          according to its design;
+process in which management actions are followed by             4.	 Monitor: Monitoring the results or outcomes of
+targeted monitoring and assessment. As outcomes from                the management action;
+current and future management actions become better             5.	 Evaluate: Evaluating the system response in
+understood, the decision-making and management                Adaptive Management
+                                                                    relation        Process
+                                                                             to specified   (CEDA,
+                                                                                          goals and2015)
+                                                                                                    objectives; and
+can be refined. The adaptive management cycle is                6.	 Adapt: Adapting (adjusting upward or
+built on a predictive outcome or target. It consists of             downward) the action if necessary to achieve the
+implementation, monitoring, data evaluation, decision-              stated goals and objectives.
+making, and adjustment of possible management
+measures. This cycle should be repeated at a regular
+                                                              Adaptive Management Process (CEDA, 2015)
+interval over the lifetime of the measure. Adaptive
+management activities should be defined in a specific
+plan, with funding made available over time. Such
+activities include multiple management scenarios should
+the measure not perform as expected. Assessment of the
+flood risk reduction potential may include modeling and       14.	van Wesenbeeck, B.K., Griffin, J.N., van Koningsveld, M., Gedan,
+                                                                  K.B., McCoy, M.W., Silliman, B.R. (2017) Nature-Based Coastal
+monitoring, while the system should meet the criteria for         Defenses: Can Biodiversity Help? Reference Module of Life
+risk reduction whenever a hazard occurs. The adaptive             Sciences 2017.
+management cycle ensures consistent management                15.	Lewis Iii, R. R. (2005). Ecological engineering for successful
+                                                                  management and restoration of mangrove forests. Ecological
+after the project implementation, but also provides               Engineering 24:403-418.
+a basis to develop lessons learned for future project         16.	https://publicwiki.deltares.nl/display/BWN1/EDD+-+Building+wi
+                                                                  th+Nature+Building+Blocks
+implementation. Similarly, the cycle should include
+                                                              17.	Lewis, R.R. and Brown, B. (2014). Ecological Mangrove
+documentation of effective measures and management                Rehabilitation. A field manual for practitioners. http://www.
+methods. Flexibility in the donor requirements helps to           mangroverestoration.com/pdfs/Final%20PDF%20-%20Whole%20
+                                                                  EMR%20Manual.pdf
+enable adaptive management of nature-based solutions          18.	CEDA (2015). Integrating Adaptive Environmental Management
+for flood risk management.                                        into Dredging Projects. http://www.dredging.org/media/
+                                                                  ceda/org/documents/resources/cedaonline/2015-01-ceda_
+                                                                  positionpaper-integrating_adaptive_environmental_management_
+                                                                  into_dredging_projects.pdf
+
+
+
+                                                                                                                                     13
+2
+     IMPLEMENTATION GUIDANCE
+
+
+
+
+     1
+      The five principles outlined some general ‘rules’ for
+      sustainable and effective nature-based solutions for
+
+
+     Introduction
+      flood risk management. This section of the guidance
+      summarizes the steps needed for the planning,
+      assessment, design, implementation, monitoring,
+      management, and evaluation of nature-based
+      solutions for flood risk management. It follows
+      the general cycle of a flood risk management
+      project and therefore are also applicable for gray
+      measures. However, it provides more information
+      and detail on specific aspects that need further
+      attention when implementing nature-based solutions.         STEP 1            STEP 2
+                                                              Define Problem,       Develop
+      These guidelines build and expand upon existing
+                                                               Project Scope,      Financing
+      guidance developed by other organizations,              and Objectives       Strategy
+
+      including NOAA, USACE, and Ecoshape. This
+      document attempts to cover the entire project cycle
+                                                              Scale of natural        Local
+      from preparation to monitoring and evaluation.          system suitable    investment in
+                                                                for problem      interventions,
+                                                                   solving           green
+                                                                                   financing
+
+
+                                                              • Stakeholder     • Budget
+                                                                 needs              estimate
+                                                              • Maps of area    • Overview of
+                                                                 of interest        resources
+                                                              • Project
+                                                                 objectives
+
+
+
+
+14
+                                       Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+                                                                 Projects that aim to implement nature-based solutions
+                                                                 must consider biophysical and socio-economic
+                                                                 processes on different scales in space and time. This
+                                                                 calls for the engagement of experts from different
+                                                                 disciplines such as hydrology, engineering, ecology,
+                                                                 economics, and social sciences. As with other risk
+                                                                 management projects, the design and implementation
+                                                                 of nature-based solutions should be done in a
+                                                                 participatory manner with full engagement of all
+                                                                 relevant stakeholders. This is particularly important
+                                                                 as nature-based solutions present an opportunity
+                                                                 to address flood risks by aligning conservation,
+                                                                 development, and poverty alleviation objectives. This
+                                                                 can create new synergies and collaborations between
+                                                                 governments, local communities, and NGOs, but also
+                                                                 relevant private sector stakeholders.
+
+
+
+                     Ecosystem
+                                    Outputs
+                      aspects
+
+
+   STEP 3           STEP 4             STEP 5                 STEP 6                  STEP 7                 STEP 8
+  Conduct          Develop             Estimate             Select and          Implement and             Monitor and
+ Ecosystem,        Nature­            the Costs,            Design the            Construct              Inform Future
+  Hazard,         based Risk        Benefits, and          Intervention                                     Practices
+  and Risk       Management         Effectiveness
+Assessments        Strategy
+
+  Ecosystem         Ecosystem       Effectiveness           Green and             Conservation,           Monitoring
+  presence,         potential,      of ecosystem           hybrid option           restoration,            ecosystem
+ health, and          option          measure                 design                  and/or             performance,
+ functioning      identification                                                  establishment            resilience,
+                                                                                  of ecosystem            and stability
+                                                                                    elements
+
+•H  azard and     ist of
+                 •L                • Cost-benefit       •D esign of            • Intervention        • Monitoring
+   risk maps      measures            analysis             measures                 lifetime               reports
+• Ecosystem       trategy map
+                 •S                • Impact             •Monitoring plan       • Regulatory          • Actions if
+   and land-                          assessment         • Maintenance             frameworks             needed
+   use maps                        • Risk assess­          plan                 • Implemented         • Share lessons
+•F  lood zone                        ment with                                     measures               learned
+   maps                               inverventions
+
+
+
+                  Project implementation timeline
+
+
+
+                        Feedback activities
+
+
+                                                                                                                             15
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ Step 1: Define problem, project scope,                           3.	Set project objectives considering the full targeted
+ and objectives                                                       range of benefits
+ Broadly identify the flood hazard, relevant stakeholders,        Define quantitative project objectives and the main
+ and beneficiaries. The scope of the problem needs to be          reason of your initiatives. Any general constraints on
+ identified within the larger context, forming the basis          project options need to be identified. Potential barriers
+ of further analyses in the subsequent steps. Project             may include legal constraints, fundraising problems,
+ objectives encompassing the necessitated flood risk              or an uneven distribution of the benefits19. Stakeholder
+ mitigation and additional benefits need to be defined.           interviews can be used to identify the full range of
+                                                                  desired benefits that should be taken into account.
+ 1.	Identify the study area, problem, key                         Potential benefits are flood risk reduction and erosion
+    stakeholders, and beneficiaries                               control, but may also include other services such as
+ Identify the direct area of interest and the main flood          enhanced ecosystem quality, positive impact on the
+ hazard(s) and risk(s) that the project intends to address.       livelihood of local communities, and opportunities for
+ Possible stakeholders and beneficiaries inside and               recreation.
+ outside of the intervention area should be identified.
+ Meetings should be held with these stakeholders in
+ order to understand their needs. Tradeoffs between                  Outputs
+ stakeholders need to be acknowledged.                               1.	Documentation of stakeholder needs
+                                                                     2. Maps of area of interest depicting main risks
+ 2.	Define the project scope and set boundaries                         and root causes to these risks
+ Define the scope of the problem within the greater                  3. Measurable project objectives
+ physical, social, and environmental context. Determine
+ the limits of boundaries of the project’s physical
+ intervention area that is suitable for addressing the
+ problem (as stated in principle 1, e.g. watershed, ridge            Deltares (2015). A framework for sandy strategy development.
+                                                                  19.	
+ to reef, estuary, etc.). Institutional and legal constraints,    	 55 pp. http://www.dezandmotor.nl/uploads/2016/09/sand-
+ and opportunities should also be identified.                        motor-businesscase-def.pdf
+
+
+
+
+     Step 1: Best practice example and additional resources
+
+     Example project
+     The Ecoshape consortium consists of engineering companies, contractors, research institutes, and
+     NGOs. It implements a large-scale project on restoration of eroding mangrove coasts in Central Java,
+     Indonesia. The project is conducted in joint operation with the Ministry of Agriculture, Fisheries and
+     Food, and the Ministry of Public Works and Housing. It entails a unique combination of engineering
+     and water management knowledge with an intensive community-based approach. The objective of the
+     project is to halt coastal erosion through the construction of permeable bamboo dams that mitigate
+     wave energy and increase elevation by trapping sediment. These measures create suitable conditions
+     for mangrove recovery. The project continues to work on rehabilitation of aquaculture ponds, including
+     the creation of alternative income sources. Clear targets are defined for different coastal stretches in the
+     design and engineering plan. Each year, a new design and implementation process begins. This is based
+     on community consultation and on monitoring results from previous years. Before project initiation,
+     commitment from local communities and governmental organizations on national and local level was
+     sought.
+
+     Read more: Tonneijck et al. “Building with Nature Indonesia: Securing Eroding Delta Coastlines. Design
+     and Engineering Plan.” (2015): https://www.ecoshape.org/uploads/sites/2/2016/07/Ecoshape-2015-
+     Result-1-5-Design-Engineering-Plan-v7-0-LAYOUT-Nature-style_2.pdf. Additional information on the
+     Building with Nature project in Indonesia: www.indonesia.buildingwithnature.nl
+
+
+
+
+16
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+                                                                                           Building permable dams
+
+
+  More information
+  Specific guidance on how to conduct a stakeholder analysis can be found on the Ecoshape website:
+  https://publicwiki.deltares.nl/display/BWN1/Tool+-+Stakeholder+analysis
+
+  More information on involvement of local communities using a field school approach can be found
+  with Blue Forests (http://blue-forests.org/). Blue Forests is a local NGO based in Indonesia focused
+  on empowering local communities to rehabilitate and maintain sustainable use of coastal ecosystem
+  resources. Blue Forests provide environmental education, ecological mangrove rehabilitation, coastal
+  field schools, and coastal business schools.
+
+
+
+Step 2: Develop Financing strategy                            the measures. Consider non grant-based funding such
+Evaluate financing options for the proposed measures          as environmental taxation or payments for ecosystem
+and secure green finance opportunities, if possible.          services. These types of funding can influence behavior,
+                                                              spur autonomous adaptation, and subsequently affect
+1.	Identify funding sources                                   cost-effectiveness and cost-efficiency of the project.
+Identify the financing sources available to implement
+nature-based solutions. Investigate the availability of       2.	Assess project timeline, risk, and feasibility in light
+national and local government financing and related              of financing
+implementation capacities. Check how international            Assess requirements of financing sources regarding
+financing sources, including International Financial          implementation of the project, including environmental
+Institutions (IFIs), link to national frameworks related to   and social safeguards. Recognize that nature-based
+environmental solutions. Consider leveraging green or         solutions may be different than conventional solutions
+climate-related financing, such as the Green Climate          in terms of disbursement, performance, and risk
+Fund and the Global Environment Facility. Recognize           timelines. This applies to the implementation as well
+that financing follows value creation and that the            as the monitoring and evaluation phases. Consider
+benefit streams (types and recipients of benefits) will       institutional feasibility and adaptability, given the (large)
+typically drive the financing sources available. However,     investments in capital necessary to make nature-based
+creation of added value or additional revenue streams         solutions successful.
+can potentially be used to attract the private sector
+to invest in nature-based solutions. Consider the             3.	Check for (adverse) incentives
+availability of co-financing by local stakeholders, which     Realize that traditional financing sources may
+can help support local commitment to the success of           incentivize conventional solutions rather than hybrid
+
+
+
+                                                                                                                           17
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ or green measures. This relates to the better known              based solutions may be commissioned by the ministry
+ project structures, possible shorter timelines, or larger        of environment or fisheries. Meet with all potential
+ disbursement amounts. Also be aware that financing               stakeholders. Then, consider how the social and
+ sources for traditional infrastructure and nature-               environmental aspects can benefit each other. Results
+ based solutions may go through different programs                of the vulnerability and opportunity mapping may bring
+ or institutions. For example gray solutions tend to go           forward different benefits for multiple stakeholders
+ through the ministry of infrastructure whereas nature-           and hence, multiple ongoing incentives. A cost-
+
+
+
+     Step 2: Best practice example and additional resources
+
+     Example project
+     In 2000, The Nature Conservancy in collaboration with the U.S. Agency for International Development
+     established a water fund. This fund directs money from water users to improve protection of the Condor
+     Biosphere Reserve in Ecuador. In 2004 the fund managed $2.1 million, financed by the Quito Municipal
+     Water and Sewage Agency, the Quito Electricity Company, and the Andina Beer Company. The project
+     reports successes on both social and ecological fronts. The nearly $5 million raised for conservation
+     action have been used to plant 3.5 million trees, hire nine new park guards that provide new jobs
+     and increase enforcement, build local capacity for monitoring and conflict resolution, fund hydrologic
+     modeling and monitoring, and provide environmental education to children. Financial support for
+     conservation came from an appreciation of the role that healthy forests play in supplying and regulating
+     the availability of clean water. A key to the success of this project may have been a long record of flow
+     and sedimentation monitoring data collected during hydropower operations. This data provided a clear
+     signal of a degrading ecosystem service before any catastrophic event.
+
+
+
+
+                                                                                           Condor Biosphere Reserve
+
+
+     Read more: Tallis, Heather, et al. "An ecosystem services framework to support both practical conservation
+     and economic development." Proceedings of the National Academy of Sciences 105.28 (2008): 9457-
+     9464. URL: http://waterfunds.org/esp/the-quito-water-conservation-fund-fonag/
+
+     More information
+     The Global Climate Change Alliance (GCCA+) offers a searchable repository of 47 sources of technical
+     and financial support in Africa, Asia, Caribbean and Pacific regions in GCCA+ priority areas:
+     http://www.gcca.eu/technical-and-financial-support
+
+     The Global Environment Facility (GEF) provides guidance on payment schemes for ecosystem services:
+     https://www.thegef.org/sites/default/files/publications/28252nomarks_0.pdf
+
+
+
+18
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+benefit analysis could be leveraged to overcome these         strategies, laws, municipal development plans), relevant
+incentives. Consider how the complexity of the project        institutes, and stakeholders. Stakeholders are defined
+matches the transaction costs and desired project size of     as people, groups, and entities affected by current
+the funding sources. It should also be explored whether       and future flooding events as well as those benefiting
+the implementation of this project can be bundled with        or negatively affected by the proposed risk reduction
+other development interventions and programs in order         measures. These types of data can be difficult to collect
+to reach a ‘sizable project’ that can be part of an IFI       as they tend to be available in a wide range of places,
+pipeline.                                                     for example across governmental organizations. In
+                                                              data scarce regions, the risk assessment often needs
+                                                              to rely on remote sensing or other globally available
+  Outputs                                                     data products. If these are not available or sufficient
+  1. First budget estimate for project                        to conduct a risk assessment, more effort needs to be
+  2. Overview of available and possible future                invested in local data collection.
+     resources
+                                                              3.	Assess current ecosystem extent, condition, and
+                                                                 functioning
+Step 3: Conduct ecosystem, hazard, and                        Analyze if there are ecosystems that currently play a role
+risk assessments                                              in flood protection. Understand how these ecosystems
+Conduct an assessment of the type and intensity of            can further contribute to reducing flood risk. Ecosystem
+the flood hazard, including the effects on population,        health should be measured by indicators such as
+assets, and infrastructure with specific attention to the     species diversity, abundance, and biomass. Historical
+role of the ecosystem.                                        changes and trends in the ecosystem should be
+                                                              researched with the objective to obtain a first impression
+1.	Conduct an integrated system assessment of the             of the ecosystem’s stability and resilience, and to gain
+    intervention area                                         understanding of its original regulatory and provisioning
+Outline the direct area of interest (based on step 1)         services. At the same time, future trends that may
+and assess the wider socio-economic environmental             influence these conditions should be anticipated. The
+and institutional systems. This should include an             role of ecosystems in reducing risk can be identified by
+assessment of the biophysical systems, the ecosystem,         examining their role in: reducing or regulating hazards
+and provided ecosystem services. Further detail the           (e.g. wave attenuation, current reduction), reducing
+main flood hazard type affecting the study area and           the exposure of people and assets to hazards (e.g. by
+its source (started in step 1). River, coastal, and pluvial   keeping people out of dangerous zones), and reducing
+flooding can be driven by a range of factors such as          vulnerability (e.g. through supporting livelihoods and
+extreme local rainfall, high river discharge, or coastal      economies, and providing key services). Qualitatively
+storm surge. Broadly define the various ecosystem types       articulate what the potential is for expanding the risk
+in the area and their risk reduction potential. Note that     reduction potential of ecosystems by conservation or
+the area relevant from an ecosystem management                restoration efforts.
+perspective may be much larger than the area at direct
+risk of flooding (see Principle 1).                           4.	Model current and future flood hazard
+                                                              Conduct a probabilistic hydrological and hydraulic
+2.	Gather data                                                modeling assessment and map flood zones with the
+Collect data that can be used for the risk assessment.        potential intensity and location of all relevant types
+This includes data for hazard (e.g. rainfall, river           of flooding. This should result in potential inundation
+discharge, sea level, and elevation data), exposure           maps for a range of return periods and appropriate
+(e.g. population density and distribution, infrastructure     planning horizons.
+location), and vulnerability (e.g. building typology,
+poverty). To assess the political dimensions of the system,   5.	Quantify current and future flood exposure and risk
+collect information on the governance of relevant             Combine the flood hazard maps with exposure and
+resources. This specifically applies to the strategic,        vulnerability information to produce estimates of
+legal, and regulatory framework (national or regional         human and economic impact. Future scenarios should
+
+
+
+                                                                                                                           19
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ be developed using climate change scenarios affecting            ones. Local or national policies may affect government
+ flood hazard, deterioration scenarios for any flood              prioritization of ecological or engineering interventions.
+ management infrastructure, and socio-economic                    Assess the dependence of communities on the ecosystem
+ scenarios informed by expected changes in population,            and how this may be influenced by interventions.
+ land-use, and urbanization.
+                                                                     Outputs
+ 6.	Identify opportunities and barriers to                           1. Maps indicating current and future hazard,
+    implementation in the socio-political setting                       exposure, and vulnerability
+ Assess the legal, regulatory, financing, socio-economic,            2. Maps and analysis showing land use, ecosystem
+ and political context and their effects on the feasibility             presence and health, and importance of
+ of implementing various risk reduction interventions.                  ecosystem for disaster risk reduction
+ Consider opportunities for enforcement of existing                  3. Maps (with model results) indicating flood zones
+ regulations or laws or possibility of development of new               for different return periods
+
+
+
+     Step 3: Best practice example and additional resources
+
+     Example project
+     The European Commission and United Nations Environment Programme (UNEP) led a Coastal Partners
+     project in Port Salut, Haiti. National and community baseline assessments were undertaken in local
+     hilly, coastal, and sea environments. The objective was to identify exposed or vulnerable areas and
+     select appropriate reforestation interventions to reduce the risk of floods, storms, and soil erosion.
+     Through marine and terrestrial field surveys, remote sensing, and GIS modeling, detailed baseline maps
+     were developed. Exposure under current and future ecosystem management scenarios was modeled.
+     Interviews, multi-stakeholder focus group discussions, and participatory mapping also contributed to the
+     baseline assessments.
+
+     Read more: UNEP (2016). Coastal Partners: Applying ecosystem-based disaster risk reduction
+     (Eco-DRR) through a ridge-to-reef approach in Port Salut, Haiti. URL http://wedocs.unep.org/
+     handle/20.500.11822/14211
+
+     More information
+     1.	 NOAA Guidance for Assessing the Costs and Benefits of Green Infrastructure: https://coast.noaa.
+         gov/data/docs/digitalcoast/gi-cost-benefit.pdf
+     2.	 Methodologies for assessing dynamic risk: https://www.gfdrr.org/sites/default/files/publication/
+         Riskier%20Future.pdf
+     3.	 Open-source hazard data and screening: www.thinkhazard.org
+     4.	 WRI Global Flood Analyzer: http://floods.wri.org
+     5.	 Information on finding data for risk assessments at Open Data for Resilience Initiative (OpenDRI):
+         https://opendri.org
+     6.	 UNEP’s Risk and Vulnerability Assessment Methodology Project (RiVAMP): http://www.unep.org/
+         disastersandconflicts/news/rivamp-jamaica
+
+
+
+
+       Urban river park
+
+
+
+
+20
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Step 4: Develop nature-based risk management strategy
+Identify possible strategies to reduce flood risk and         Then, more active intervention and creation of
+evaluate whether nature-based solutions are a good            ecosystems is another option. Working with natural
+alternative or valuable addition to conventional              processes and green solutions both represent nature-
+options. Wherever possible, prioritize nature-based           based flood risk management solutions. Green-
+solutions by respecting the following sequence when           gray solutions refer to hybrid solutions that combine
+evaluating intervention options. ‘No intervention’ is         traditional infrastructure such as dikes with ecosystem
+taken as a starting point and followed by considering         restoration or other natural solutions. Only if there is
+management options, which are non-structural measures         no other option available, traditional (gray) solutions
+such as early warning systems or spatial planning.            can be selected.
+Then consider if working with natural processes
+only will achieve desired safety levels. This option
+constitutes working with present natural processes and
+ecosystems, hence managing the present ecosystem.
+
+
+
+
+    onsider the socio-political context, existing
+1. C                                                          to opt for no-regret strategies is always preferable.
+   strategies and plans                                       Specify indicators related to the risk reduction target
+Consult and build on national and regional                    based on the risk assessment such as prevented flood
+development plans and strategies. For the selection of        damages or affected people.
+targets and measures, consider land tenure and the
+overall governance of resources in the intervention area.     3.	Identify green or hybrid options with similar
+Identify opportunities and roadblocks to implementation          performance as, or value addition to,
+over the expected project duration. Certain projects             conventional options
+may benefit from state-led, top-down governance and           Based on the ecosystem analysis and flood risk
+leadership to ensure sustainability of the intervention,      assessment, identify possible green or hybrid solutions
+while others will thrive under the leadership of the civil    to address the specific flood risk issue. Consider that
+society or a public-private coalition. Assess the local       non-structural measures (such as early warning systems
+capacity to build and maintain desired interventions,         and spatial planning) and various combinations of
+which is needed to select effective and realistic measures    green, conventional, and non-structural measures
+later in the process.                                         may be needed to address the specific flood risk issue.
+                                                              Consider how conservation, expansion of an existing
+2.	Select a flood reduction target                            ecosystem, or restoration of a destroyed ecosystem
+Identify the acceptable level of risk considering             can contribute to reduce flood risk. Look at previous
+stakeholder interaction from Step 1 and the                   projects and possible green solutions for lessons
+realistic investments available for risk reduction            and preliminary cost estimates. Assess which factors
+measures. Clearly identify the time horizon for the           may influence the stability and performance of vital
+risk management approach. Engineering structures              ecosystems. Also assess how they can be integrated into
+generally have a lifetime time frame of 50 years.             the wider system management. Construct a portfolio of
+Therefore, a time horizon of at least 50 years is             feasible strategies and accompanying measures.
+desirable. However, time frame may depend on the
+amount of future uncertainty and available budget.            There are various sources of information on the
+For example, with very uncertain futures short-term           range of possible nature-based flood management
+benefits may outweigh long-term planning. However,            solutions and their pros and cons, including the UNEP
+
+
+
+                                                                                                                           21
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ Green Infrastructure Guide20, the WWF Flood Green                6.	Discuss risk reduction targets and possible
+ Guide21, the Nature Conservancy22, and the Panorama                 strategies with stakeholders
+ platform23. However, while general information may               Hold interactive stakeholder consultations to present
+ be available on effectiveness and unit costs of nature-          and discuss potential intervention areas as well as
+ based solutions, the feasibility of each option will             potential intervention strategies. Discuss risk reduction
+ strongly depend on the local circumstances.                      targets and the (potential) role of ecosystems in reducing
+                                                                  risk, using information from the risk and ecosystem
+     ssess integration of measure(s) with
+ 4. A                                                             assessments. Aim to understand stakeholder interests
+    conservation/restoration of existing ecosystems               and preferences without raising expectations. Readjust
+ Analyze to what extent the selected measures can be              risk reduction priorities if necessary.
+ implemented by conserving and restoring existing
+ ecosystems. In addition, analyze to what extent new              7.	Shortlist technically feasible and socially
+ ecosystem creation or engineering is required and                   accepted interventions for further analysis
+ what methods can be used. The ecosystem assessment               Hold stakeholder meetings to discuss possible strategies
+ performed under Step 3 can form a basis to select                and phasing. To proceed with further analysis, select
+ proper methods for conservation, restoration, and                options that are technically feasible, economically
+ management of ecosystems. Analyses of factors                    viable, and desirable from a range of stakeholder
+ impeding or jeopardizing ecosystem health and                    perspectives. Integrate the full range of benefits
+ resilience can be expanded here to steer selection of            produced by an intervention in the shortlisting process
+ appropriate measures. Make use of existing knowledge             as well as stakeholder priorities.
+ in restoration ecology. Use the guiding principles
+ outlined above to apply proper restoration methods
+ and not negatively impact other ecosystems in the area.
+ Perform a full assessment on how the new measures                   Outputs
+ may impact existing ecosystems. Analyze regulations                 1. Overview of feasible measures to reduce risk,
+ and development plans contributing to the preservation                 their estimated effects and implementation steps
+ or restoration of ecosystems; also include the degree in            2. Outline of different strategies and their possible
+ which they are enforced.                                               phasing in time with a focus on no-regret and
+                                                                        less costly strategies first
+ 5.	Adjust financing strategy
+ With an estimation of project costs for risk reduction
+ strategies comprising different sets of options,
+ begin finalizing the funding strategy. Criteria for
+ consideration should include the available grant size,
+ application procedures, and mission of the donor. Be
+ aware of lengthy application procedures and other
+ requirements. Secure (co-)financing from stakeholders,
+ governments, and the private sector to foster buy-in to
+ the intervention, if possible.
+
+
+                                                                  20.	UNEP (2014). The Green Infrastructure Guide for Water
+                                                                      Management: Ecosystem-based Management Approaches for
+                                                                      Water-Related Infrastructure Projects. http://www.unep.org/
+                                                                      ecosystems/resources/publications/green-infrastructure-guide-
+                                                                      water-management
+                                                                  21.	WWF (2017). Natural & Nature-based Flood Management: A
+                                                                      Green Guide. http://envirodm.org/flood-management
+                                                                  22.	Nature Conservancy (2014). A Flood of Benefits. Using
+                                                                      Green Infrastructure to Reduce Flood Risks. https://www.
+                                                                      conservationgateway.org/ConservationPractices/Freshwater/
+                                                                      HabitatProtectionandRestoration/Documents/A%20Flood%20
+                                                                      of%20Benefits%20-%20J.Opperman%20-%20May%202014.pdf
+                                                                  23.	http://panorama.solutions/en
+
+
+
+
+22
+                                      Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Step 4: Best practice example and additional resources
+
+Example project
+UNEP’s project “Building Capacity for Coastal Ecosystem-based Adaptation in Small Island Developing
+States” is being implemented in Grenada and the Seychelles. In Grenada, social and ecological
+vulnerability impact assessments (VIAs) were conducted in three local sites (Lauriston Beach, Windward,
+and Grand Anse Bay). The VIA process focused on modelling and analyzing the impacts of climate
+change in terms of extreme events such as hurricanes and tropical storms. The focus was also on the
+impact of sea level rise on coastal communities and coastal/marine habitats, highlighting the problem
+of beach erosion in all three areas. Human activities such as building construction on beaches were also
+examined. Various coastal adaptation options were proposed based on the identified vulnerabilities.
+This included coral reef and mangrove restoration, locally managed marine areas, beach nourishment,
+breakwaters and stone revetments, among others.
+
+
+
+
+Coral reefs play an important role in protecting Small Island Developing States (SIDS) against impacts of climate change.
+
+
+Read more: Day et al. (2016). Building Capacity for Coastal Ecosystem-based Adaptation in Small
+Island Developing States (SIDS). Assessing Climate Vulnerability in Grenada and Responding with Coastal
+Ecosystem-based Adaptation Action. URL: http://www.intasave.pecreative.co.uk/documents/Publications/
+Climate-Change-Science,-Policy-and-Practice/CARIBSAVE/BCCEbA-SIDS.pdf
+
+More information
+1.	 Decision tree on whether nature-based solutions can be effective for your project: http://www.
+    naturalinfrastructureforbusiness.org/tools/#tree
+2.	 An overview of possible green measures for flood risk management by The Nature
+    Conservancy (2014): https://www.conservationgateway.org/ConservationPractices/Freshwater/
+    HabitatProtectionandRestoration/Documents/A%20Flood%20of%20Benefits%20-%20J.
+    Opperman%20-%20May%202014.pdf
+3.	 UNEP  , Danish Hydraulic Institute, IUCN and The Nature Conservancy’s Green Infrastructure Guide
+    for Water Management:
+    http://www.medspring.eu/sites/default/files/Green-infrastructure-Guide-UNEP    .pdf
+4.	 For planning and strategy building including long-term uncertainty: https://www.deltares.nl/en/
+    adaptive-pathways/
+5.	 Model tool of the Natural Capital Project for integrated valuation of ecosystem services and tradeoffs
+    (InVEST): https://www.naturalcapitalproject.org/invest/
+
+
+
+                                                                                                                            23
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ Step 5: Estimate the costs, benefits, and                        3.	Assess the social and environmental impacts
+ effectiveness                                                    Assess social and environmental impacts of the selected
+ Quantify the effect of the possible measures on                  measure(s) and check whether remedial action is
+ project objectives, including a cost-benefit analysis to         required under national or international law or agreed
+ compare the costs of construction and maintenance of             guidance. For example, an intervention may require
+ the measure against the range of (co-)benefits it will           the involuntary resettlement of people or may have
+ provide. This analysis should also address performance           an impact on the existing ecosystem. Ensure costs are
+ of measures in relation to the risk reduction target as          included for any impacts which must be mitigated
+ defined in Step 4. The results can be used to identify the       as part of the project. If applicable, ensure that the
+ most cost-effective measure. Depending on the progress           proposed project implementation will be in compliance
+ of the development of the project and the evolving               with laws and safeguard standards of the respective
+ nature of the stakeholder interaction described in Step          country and organization(s) involved.
+ 6 below, these analyses may need to be repeated with
+ progressively increasing levels of detail.                       4.	Identify additional benefits associated with risk
+                                                                     reduction measures
+ 1.	Model current and future flood risk with                      Identify the full range of benefits of interventions and
+    traditional, hybrid, and nature-based options                 their value added to society and environment for all
+ Integrate the feasible green and hybrid solutions                options under consideration. Socio-economic and
+ identified in Step 4 into the risk model developed in Step       environmental benefits, monetized or not, should
+ 3. Assess the flood hazard, exposure, and risk in the            be presented for consideration in decision-making.
+ current situation as well as under the climate and socio-        Determine how various benefit streams may increase or
+ economic projections with the possible options in place.         decrease over time. Quantify and monetize benefits as
+ Methodologies and models for quantitatively assessing            much as possible using tools for ecosystem valuation.
+ the effectiveness of green measures for reducing hazard          An example is ecosystem goods and services such as an
+ intensity are constantly under development. Critically           increase in fish stocks or recreational value. Quantify
+ enquire about the methodologies and assumptions                  the uncertainty in benefit estimation. Benefits for which
+ used for this assessment. Use models wisely, where               monetization is not desirable or achievable must find
+ appropriate, adopting conservative parameter settings            adequate representation in qualitative narratives.
+ for deterministic models and appropriately broad
+ parameter distributions in probabilistic models. Apply           Nature-based solutions can have a range of benefits
+ a sensitivity analysis to gain insight into future tipping       beyond flood risk reduction, such as biodiversity
+ points that may occur under changing boundary                    conservation, job creation (e.g. in agriculture and
+ conditions (e.g. sediment loads, subsidence levels, fresh        fisheries), recreation, tourism, and public health.
+ water input) and that are relevant for the sustainability        Describe these various expected benefits as thoroughly
+ of nature-based measures. Quantify the uncertainty in            as possible, ideally in economic terms. Non-monetizable
+ the model outputs.                                               benefits should be adequately described and included
+                                                                  in the decision-making process. Any potential negative
+ 2.	Quantify risk reduction costs and benefits                    effects should also be described and quantified.
+ Compute the per-unit and total investment and
+ maintenance costs for each of the possible solutions.            5.	Perform full cost-benefit and effectiveness analysis
+ Compare the model damages without interventions to               Perform a complete quantitative cost-benefit analysis
+ the damages with possible solutions in place to estimate         of each possible solution, including the target risk
+ the primary risk reduction benefits, i.e. the difference         reduction benefits as well as all other benefits. In
+ between the situation with and without the intervention          order to make a fair comparison of costs and benefits,
+ now and in the future. In the calculations, consider the         monetary values should be discounted and converted
+ time it takes for the solution to finalize construction          to net present value. Costs are paid in the early years of
+ or become effective, as nature-based solutions may               a project while benefits are realized year by year over
+ require years to realize their full risk reduction potential.    a number of decades. Describe the distribution of the
+                                                                  costs and each benefit stream.
+
+
+
+
+24
+                                   Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Outputs
+1. Cost-benefit analysis including the full range of
+   values
+2. Social and environmental impact assessments
+3. Risk assessment with interventions
+
+
+
+Step 5: Best practice example and additional resources
+
+Example project
+1.	The rivers and coastlines of Lami Town in the Republic of the Fiji Islands are prone to flash and surge
+   flooding. This town was the focus of an economic analysis of nature-based, hybrid, and conventional
+   solutions. A comprehensive analysis of installation, maintenance, labor, and opportunity costs was
+   conducted for each of four options. The costs of inaction were also calculated. The economic analysis
+   was conducted using avoided damage estimates and incorporated ecosystem service benefits. Lastly,
+   a sensitivity analysis was included based on time, discount rate, and estimated percent of damage
+   avoidance.
+
+	 Read more: Rao, Nalini S. An Economic Analysis of Ecosystem-based Adaptation and Engineering
+  Options for Climate Change Adaptation in Lami Town, Republic of the Fiji Islands: Technical Report.
+  2013. http://ian.umces.edu/pdfs/ian_report_392.pdf
+
+
+
+
+River in rural area of Fiji
+
+2.	Despite a dyke that provides the primary flood protection of the area, Koh Mueng, Thailand
+   experiences flooding. To assess green and conventional infrastructure, an evaluation of the most
+   effective flood mitigation measures was pursued through hydrodynamic simulations and evaluation
+   of economic viability using cost-benefit analysis. The solution options were evaluated for flood risk
+   reduction effectiveness using assessments of flood hazards, physical and economic vulnerability,
+   and ecosystem service values. The cost-benefit analysis evaluated direct and indirect losses through
+   physical and economic vulnerability of the building stock, infrastructure, cultural artifacts, and tourism
+   industry.
+
+	 Read more: Vojinovic, Zoran, et al. "Combining Ecosystem Services with Cost-Benefit Analysis for
+  Selection of Green and Grey Infrastructure for Flood Protection in a Cultural Setting." Environments 4.1
+  (2016). http://www.mdpi.com/2076-3298/4/1/3
+
+
+
+
+                                                                                                                         25
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+     More information
+     1.	The NOAA Guidance for Assessing the Costs and Benefits of Green Infrastructure outlines
+        methodologies for assessing the effectiveness of green solutions: https://coast.noaa.gov/data/docs/
+        digitalcoast/gi-cost-benefit.pdf
+     2.	The World Business Council for Sustainable Development (WBCSD) produced a report on the
+        business case for natural infrastructure: http://www.naturalinfrastructureforbusiness.org/wp-content/
+        uploads/2016/02/WBCSD_BusinessCase_jan2016.pdf
+     3.	ProjectSelect, also produced by WBCSD, is a free cost-benefit analysis that allows users to evaluate
+        the long-term financial costs and benefits of natural and conventional solutions, as well as account for
+        the non-financial co-benefits: http://www.naturalinfrastructureforbusiness.org/projectselect-tm/
+     4.	The Economics of Ecosystems and Biodiversity (TEEB), a global initiative to mainstream the values of
+        biodiversity and ecosystem services into decision-making: http://www.teebweb.org/
+
+
+
+ Step 6: Select and design the intervention                       methods. Engineering designs should be based on
+ Select the most effective and most appropriate option,           detailed flood hazard and effectiveness modeling.
+ based on the problem definition, the cost-benefit                These designs should explicitly encompass both the
+ analyses, and the local needs and capacity. Develop a            ecosystem and engineering aspects in the case of
+ detailed design and implementation plan.                         hybrid interventions. There are various technical design
+                                                                  guidelines for nature-based interventions available, for
+ 1.	Select effective and feasible measure(s) in                   example through the Ecoshape consortium.
+    collaboration with stakeholders
+ Discuss cost-benefit and effectiveness analyses with             4. Draft maintenance plan
+ stakeholders in (an) interactive session(s). Identify those      To secure the flood risk reduction effectiveness of the
+ stakeholders that should be involved to ensure the long-         measure over time, a maintenance plan should be drafted
+ term commitment to plans and strategies.                         as part of the selection and design phase. Maintenance
+                                                                  costs can play a role in the selection process, and will
+ 2. Design a robust monitoring system, starting with              influence the optimal design. Furthermore, it is important
+    baseline monitoring                                           to decide who will be responsible for the maintenance
+ To ensure the success of the project, conduct baseline           and how the long-term financing will be arranged. Also
+ monitoring and identify in an early stage how the                think about embedding maintenance and protection in
+ project will be monitored and evaluated. There are               local laws and regulations.
+ many kinds of evaluation systems, and it is not yet
+ clear which system is appropriate for nature-based
+ solutions. A different type of monitoring system may                Outputs
+ be required, e.g. monitoring and evaluation (M&E),                  1. Design of measures
+ or monitoring, reporting and verification (MRV) with                2. Monitoring plan containing indicators,
+ costs and responsibilities assigned. Logical framework                 target values, roles and responsibilities, and
+ and results-based management approaches are the                        monitoring method and duration
+ most common frameworks. Monitoring and evaluation                   3. Maintenance plan
+ should be tailored to each project. Decide upon the
+ roles and responsibilities of the organizations who will
+ do this follow-up work after the project is implemented.
+
+ 3. Draft engineering design study                                                                             Q
+                                                                                                                      R
+
+
+ Produce a draft engineering design and feasibility study                                                             R
+
+
+ of the selected measure(s), including detailed material                                                       1:0    H
+
+ and labor requirements. The engineering design should
+                                                                                             B
+ be informed by the risk reduction target, the required
+ integration of the measure in the existing ecosystem and         By reducing wave height, mangrove trees can reduce the dike
+                                                                  height that is needed to meet the safety standards and reduce
+ by identified ecosystem management and restoration               maintenance costs.
+
+
+
+26
+                                Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+Step 6: Best practice example and additional resources
+
+Example project
+As part of the Mozambique Cities and Climate Change Project, the World Bank is creating urban parks
+in the city of Beira. The objective is to increase the resilience of the city to floods by improving and
+safeguarding the natural drainage capacity of the Chiveve River. The first phase of the project included
+the rehabilitation of the riverbed, the construction of an outlet, the dredging of the fishing port, and
+the planting of 2,200 mangrove trees with active flood mitigation function. The second phase, which
+is being implemented at the time of writing, will focus on the further development of a multi-purpose
+green infrastructure solution along the stretch of the Chiveve River in Beira. This solution will include
+the creation of a large park along the river, public spaces, cycling paths, and overall green landscape
+planning.
+
+Read more: http://projects.worldbank.org/P153544?lang=en
+
+More information
+1.	 Designing nature-based solutions: Building with Nature Guidelines: https://publicwiki.deltares.nl/
+    display/BWN1/Building+with+Nature
+2.	 Information on design characteristics of green solutions for flood risk management, The Nature
+    Conservancy (2014): https://www.conservationgateway.org/ConservationPractices/Freshwater/
+    HabitatProtectionandRestoration/Documents/A%20Flood%20of%20Benefits%20-%20J.
+    Opperman%20-%20May%202014.pdf
+3.	 Incentives for Natural Infrastructure, the World Business Council for Sustainable Development
+    (2017): http://www.wbcsd.org/Clusters/Water/Natural-Infrastructure-for-Business/Resources/
+    Incentives-for-Natural-Infrastructure
+
+
+
+
+                                                                                               Beira, Mozambique
+
+
+
+
+                                                                                                                      27
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ Step 7: Implement and construct                                  aspects are implemented in harmony as per the design
+ Implement the project in consultation with stakeholders;         plan.
+ ensure compliance with social and environmental
+ standards.                                                       3.	Continuous stakeholder and community
+                                                                     interaction during implementation
+ 1.	Revisit social and environmental impact                       Continuously inform and consult the key stakeholders
+    assessment                                                    as identified in the previous steps. Ensure stakeholder
+ Revisit the social and environmental impact assessment,          ownership and involvement. In communications,
+ including the standards and safeguards relevant to               be sensitive to both the short-term impacts and
+ the project. Start planning any required involuntary             expected long-term impacts, but also on the gains for
+ resettlement of inhabitants and preparing the                    communities and environment. Monitor impacts of
+ implementation area to limit environmental impacts.              the construction and rehabilitation work on the local
+                                                                  stakeholders. Flexibly adjust the implementation of the
+ 2.	Consideration of ecosystem structure, species                 project where required based on changing stakeholder
+    diversity, and ecosystem functioning                          needs and emerging information.
+ Implement the engineering and ecosystem aspects
+ of the project in accordance to the Principles. Also
+ include the ecosystem integration as assessed in the                Outputs
+ previous steps. Closely monitor ecosystem functioning               1. Agreement on lifetime of intervention
+ and impacts during the implementation phase. Any                    2. Regulatory frameworks to sustain and
+ unexpected impacts on ecosystem structure, species                     maintain intervention
+ and functioning should be flagged. For hybrid solutions,            3. Implemented measures
+ ensure that the engineering works and ecosystem
+
+
+
+     Step 7: Best practice example and additional resources
+
+     Example project
+     A good example of a participatory design process is the storm water management system of the city of
+     Malmö, Sweden. The city experienced socio-economic decline and floods from overflowing drainage.
+     A collaborative solution aimed to retrofit the area with Sustainable Urban Drainage Systems (SUDS) as
+     part of a broader regeneration project. The objective was to create a more sustainable neighborhood
+     and to benefit biodiversity. An extensive and iterative process of stakeholder engagement was initiated
+     during the design and execution of this project. The process involved a series of consultations with local
+     residents, representatives from the local school, practitioners, city staff, and many others. The idea
+     behind these consultations was to build awareness about the SUDS retrofit, its benefits and costs, and to
+     obtain public perspectives on the desired design. This included regular meetings, community workshops,
+     and informal gatherings. The approach became increasingly open and consultative, with approximately
+     one-fifth of the tenants in the area having participated in dialogue meetings about the project. Amongst
+     other topics, safety issues related to open water areas (e.g. retention pools) were discussed with residents
+     as well as the potential loss of particular recreational opportunities in the area. In many cases, comments
+     and concerns from stakeholders were taken into account and addressed in redesigned SUDS plans.
+
+
+
+
+                                                                                                      Urban flood
+                                                                                                      prevention via
+                                                                                                      green infra­
+                                                                                                      structure in Mälmo
+
+
+
+28
+                                     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+  Read more: http://www.panorama.solutions/en/building-block/engaging-stakeholders-raise-
+  awareness-and-support
+
+  More information
+  1	 The Natural Hazards - Nature-based Solutions platform details projects from around the world:
+  	http://naturebasedsolutions.org
+  2	 NOAA Guidance for Assessing the Costs and Benefits of Green Infrastructure: https://coast.noaa.gov/
+     data/docs/digitalcoast/gi-cost-benefit.pdf
+  3	 The WWF Flood Green Guide: http://envirodm.org/flood-management
+  4	 What Will Adaptation Cost? An Economic Framework for Coastal Community Infrastructure (NOAA
+     2013): https://coast.noaa.gov/data/digitalcoast/pdf/adaptation-report.pdf
+
+
+
+
+Step 8: Monitor and inform future actions                     3. Continuous community involvement
+Monitoring activities during and after the implementation     The sustainability of a nature-based solution depends
+of a nature-based solution are needed to maintain its         on community willingness and commitment. If the
+effectiveness and to grow an evidence base. They are          community is not involved and does not see the value of
+also needed to record lessons learned for future use.         the restored or created ecosystem, they may knowingly
+                                                              or unknowingly contribute to its decline. It is crucial to
+Monitor physical system, ecosystem status, species            involve all social groups in the community by conducting
+diversity, and ecosystem functioning                          meetings to explain the project and its benefits.
+Carefully monitor the development of the ecosystem in the     Practical guidance should be provided on the use and
+area of implementation, as well as the larger landscape.      protection of vital ecosystems. It is important to ensure
+The aim is to assess how the intervention has affected        that project representatives listen to the community.
+the area, how the ecosystem flood protection functions        Sufficient time should be spent on addressing their
+are developing and whether ecosystem restoration is           concerns. Community commitment can be increased in
+progressing according to plan. Monitor species diversity      case of new employment opportunities derived from the
+and density over time to determine whether the ecosystem      ecosystem. There are several documented examples of
+develops through different successional stages. Also assess   nature-based solutions that were implemented with
+if these stages are occurring on the expected timelines.      strong community involvement that can be used as
+                                                              guidance24.
+1.	Monitor risk reduction effectiveness
+Refer to the monitoring system (see Step 6.3) to              4. Review, evaluate, and act
+assess how the components of the project have been            Monitoring and evaluation should generate insights on
+implemented. The extent to which the restoration and          what works, what doesn’t work, and why. Monitoring
+creation of ecosystem elements are providing a growing        also strongly informs maintenance and other necessary
+contribution to the risk reduction effectiveness should       actions. Review all project components with special
+also be assessed. If monitoring results show significant      attention to risk reduction effectiveness, community
+(and unexpected) physical changes, re-run the hazard          impact, and environmental impacts. This monitoring
+and risk model with the evolved interventions in place        and review process should include developments
+to assess the effect on damages.                              outside the project area that may influence the
+                                                              effectiveness of measures. Decide if structural and
+2.	Policy and regulatory framework development                functional performance meet previously set standards
+   and adjustment                                             and project objectives. If not, decide on follow up
+As the benefits of nature-based solutions can be realized
+over many decades, it is important to understand the
+regulatory environment. Does it change over time? This           For example, see EPA (2017). Green Infrastructure in Parks: A
+                                                              24.	
+will allow the project to adapt to forthcoming policies          Guide to Collaboration, Funding, and Community Engagement:
+                                                                 https://www.epa.gov/sites/production/files/2017-05/documents/
+before they negatively impact the solution.                      gi_parksplaybook_2017-05-01_508.pdf
+
+
+
+                                                                                                                                 29
+     Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+ actions, regarding maintenance or even implementation
+ of additional interventions.
+
+ To enable scaling-up and improvement of global
+ best practices, publish evaluations and share insights
+ with other implementing organizations. Investigate
+ possibilities for scaling up successful approaches in
+ other areas. While the documenting of lessons should
+ be done throughout the project, it is important for the
+ success of other nature-based projects to capture and
+ report these lessons in a way that is accessible more
+ broadly. We encourage you to report your projects and
+ lessons learned on the online platform ‘Natural Hazards
+ – Nature-based Solutions’25.
+
+
+
+     Outputs
+     1. Monitoring reports that discuss how the
+        monitoring meets the target
+     2. Actions to change or improve the project, if
+        needed                                                    Monitoring activities by members of the Coastal Field School -
+     3. Sharing of lessons learned                                Blue Forest
+
+                                                                  25.	http://naturebasedsolutions.org/
+
+
+
+
+     Step 8: Best practice example and additional resources
+
+     Example project
+     New Zealand’s coastal parks have recently focused on restorative techniques focused on the use of
+     indigenous sand-binding species, for example in the management of dune ecosystems in Christchurch.
+     A collaborative and community-based vision for the area was established and management objectives
+     were identified. These included a specific restoration plan for the dune system at the site, together with
+     a monitoring plan. Other initiatives included the promotion of education on the area and the dune
+     restoration initiative. A monitoring program was developed to measure the success of the key actions and
+     provide useful information for future management decisions. The monitoring program has clearly shown
+     changes in the dune system in response to the new management activities.
+
+     Read more: https://www.iucn.org/sites/dev/files/2014-038.pdf
+
+     More information
+     There are numerous online communities that support the advancement of nature-based solutions through
+     a variety of approaches. These resources offer an opportunity to review and evaluate projects and share
+     your own experiences to inform the development of future projects.
+
+     The European Commission’s Oppla is a new knowledge marketplace; a place where the latest thinking on
+     ecosystem services, natural capital, and nature-based solutions is brought together. http://www.oppla.eu
+
+     The Partnership for Environment and Disaster Risk Reduction (PEDRR) is a global alliance of UN agencies,
+     NGOs and specialist institutes. PEDRR seeks to promote and scale-up implementation of ecosystem-based
+     disaster risk reduction and ensure it is mainstreamed in development planning at global, national, and
+     local levels. http://pedrr.org
+
+
+
+
+30
+                                   Implementing nature-based flood protection I Principles and implementation guidance
+
+
+
+
+  The Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) and IUCN host the PANORAMA
+  platform. This is a partnership initiative to document and promote inspiring, replicable solutions across
+  a range of conservation and development topics. This enables cross-sectoral learning and inspiration.
+  http://panorama.solutions/en
+
+  The Natural Infrastructure for Business platform developed by WBCSD, CH2M (with support from The
+  Nature Conservancy) and other member companies is designed to introduce business leaders and
+  practitioners to natural infrastructure. http://www.naturalinfrastructureforbusiness.org
+
+  Stockholm Environment Institute’s weADAPT is a collaborative platform on climate adaptation issues.
+  It allows practitioners, researchers, and policy-makers to access credible, high-quality information. The
+  platform also facilitates new connections between these stakeholders. https://www.weadapt.org
+
+  GIZ hosts an Adaptation Community which offers an inventory of methods for adaptation to climate
+  change. It also serves as a platform for the exchange of experience among practitioners. http://www.
+  adaptationcommunity.net
+
+  Building Ecological Solutions to Coastal Community Hazards. A Guide for New Jersey Coastal
+  Communities. National Wildlife Federation (2017). https://www.nwf.org/CoastalSolutionsGuideNJ
+
+  The Natural Hazards – Nature-based Solutions platform, managed by the Global Facility for Disaster
+  Reduction and Recovery (GFDRR), the World Bank, and Deltares, provides a global overview of the
+  nature-based or hybrid solutions projects implemented by a variety of organizations. The platform also
+  houses these Principles and Implementation Guidance that are updated with lessons learned.
+  http://naturebasedsolutions.org/
+
+
+
+
+Conclusions                                                 forms an addition to other more specific initiatives
+The five principles and implementation document             such as detailed guidance on implementation (e.g.
+presented in this guidance make a case for a structured     the WWF Flood Green Guide26; and USACE design
+approach to the planning, evaluation, design, and           guidelines that are currently in preparation), training
+implementation of nature-based solutions for flood          programs (e.g. the NOAA Green Infrastructure for
+risk management. They aim to support disaster risk          Coastal Resilience course27), and international networks
+management and climate adaptation professionals             (such as the Partnership for Environment and Disaster
+who plan flood risk management interventions, NGOs          Risk Reduction, PEDRR28). As such, we have tried to
+that implement nature-based solutions, as well as           reference such specific further resources throughout the
+staff of donor and international agencies who design,       guidance. Also, we encourage others to build from this
+review, or fund such projects. Using the growing            framework to provide further detailed information that
+momentum for the use of nature-based solutions              is needed for successful implementation.
+as part of resilience-building strategies and disaster
+risk reduction, these guidelines offer a step-by-step       We hope that ‘Implementing nature-based flood
+approach for implementing successful nature-based           protection: Principles and implementation guidance’
+solutions for flood risk management.                        streamlines and accelerates the process of knowledge
+                                                            development, evaluation, and standardization of
+This document is one building block towards a system in     design and testing protocols. That way, we can continue
+which nature-based solutions for flood risk management      to improve and promote nature-based adaptation as a
+are widely accepted and implemented as an alternative       sustainable flood risk management solution.
+or complement to conventional engineering measures.
+However, the document is not meant to form an all-
+                                                            26.	WWF (2017). Natural & Nature-based Flood Management:
+encompassing guide. Rather, it aims to set out the          	 A Green Guide. http://envirodm.org/flood-management
+framework for nature-based flood management, and            27.	https://coast.noaa.gov/digitalcoast/training/green.html
+                                                            28.	http://pedrr.org/
+
+
+
+
+                                                                                                                          31
+
